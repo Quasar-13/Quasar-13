@@ -2,7 +2,7 @@
 /datum/species/human/felinid
 	name = "Felinid"
 	id = "felinid"
-	say_mod = "meows"
+	say_mod = "nyas"
 	limbs_id = "human"
 
 	mutant_bodyparts = list("tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
@@ -13,6 +13,9 @@
 	species_language_holder = /datum/language_holder/felinid
 	var/original_felinid = TRUE //set to false for felinids created by mass-purrbation
 	payday_modifier = 0.75
+	liked_food = MEAT | RAW | DAIRY
+	disliked_food = GROSS
+	toxic_food = FRUIT | VEGETABLES | DAIRY
 	ass_image = 'icons/ass/asscat.png'
 
 //Curiosity killed the cat's wagging tail.

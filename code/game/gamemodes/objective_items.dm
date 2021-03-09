@@ -62,6 +62,12 @@
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/hypo
+	name = "the quartermaster's stamp."
+	targetitem = /obj/item/stamp/qm
+	difficulty = 5
+	excludefromjob = list("Quartermaster")
+
+/datum/objective_item/steal/stamp
 	name = "the hypospray."
 	targetitem = /obj/item/reagent_containers/hypospray/cmo
 	difficulty = 5

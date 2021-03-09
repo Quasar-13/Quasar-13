@@ -1,6 +1,7 @@
 /obj/structure/closet/secure_closet/quartermaster/Initialize()
 	new /obj/item/clothing/shoes/sneakers/brown/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/cargo/head(src)
+	new /obj/item/gun/energy/disabler/head(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
