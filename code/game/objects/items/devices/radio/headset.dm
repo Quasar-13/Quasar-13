@@ -171,6 +171,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/headset_com
 
+/obj/item/radio/headset/headset_sct
+	name = "secretary radio headset"
+	desc = "A headset able to get everyone at your beck and call."
+	icon_state = "com_headset"
+	keyslot = new /obj/item/encryptionkey/headset_sct
+
 /obj/item/radio/headset/heads
 	command = TRUE
 

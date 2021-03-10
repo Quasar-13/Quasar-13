@@ -373,7 +373,7 @@
 			return "Code Scotch"
 
 /proc/get_all_jobs()
-	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
+	return list("Assistant", "Captain", "Secretary", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
 				"Deputy", "Void Technician", // Tegustation Deputy edit: Add all Tegu-only jobs here!
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Chemist", "Geneticist", "Virologist", "Psychologist",
