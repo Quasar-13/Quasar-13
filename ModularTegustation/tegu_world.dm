@@ -15,7 +15,7 @@
 	if(config)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
-			s += "<b>[server_name]</b>\] &#8212; " // Tegustation: added "\]" so we close the name with a ]  This looks clean!
+			s += "<b>BungalowStation</b>\] &#8212; " // Tegustation: added "\]" so we close the name with a ]  This looks clean!
 		features += "[CONFIG_GET(flag/norespawn) ? "no " : ""]respawn"
 		if(CONFIG_GET(flag/allow_vote_mode))
 			features += "vote"
@@ -37,7 +37,7 @@
 	s += ")<br>"
 
 	// Tegu Description
-	s += "<br><b>Updated Fulpstation codebase</b>"
+	s += "<br><b>MRP server, updated Tegucode.</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
 	if(GLOB.master_mode)
 		s += "<br>Mode: \[<b>" + (GLOB.master_mode == "secret_extended" ? "secret" : GLOB.master_mode) + "</b>"//\]" // TEGUSTATION: What's the point in making it secret if it's going to just say the actual mode (extended)?
