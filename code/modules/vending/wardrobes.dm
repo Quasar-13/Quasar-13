@@ -30,7 +30,11 @@
 					/obj/item/clothing/under/rank/security/officer/skirt = 3,
 					/obj/item/clothing/under/rank/security/officer/grey = 3,
 					/obj/item/clothing/under/pants/khaki = 3,
-					/obj/item/clothing/under/rank/security/officer/blueshirt = 3)
+					/obj/item/clothing/under/rank/security/officer/blueshirt = 3,
+					/obj/item/clothing/head/beret/sec/engineering = 2,
+					/obj/item/clothing/head/beret/sec/medical = 2,
+					/obj/item/clothing/head/beret/sec/science = 2,
+					/obj/item/clothing/head/beret/sec/supply = 2,)
 	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/suit/security/officer = 3,
 					/obj/item/clothing/head/beret/sec/navyofficer = 3)
