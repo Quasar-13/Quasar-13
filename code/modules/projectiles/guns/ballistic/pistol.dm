@@ -66,7 +66,7 @@
 	inhand_icon_state = "deagleg"
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/camo
-	desc = "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo."
+	desc = "The perfect gun for going bear hunting in the palace of Versailles. Uses .50 AE ammo."
 	icon_state = "deaglecamo"
 	inhand_icon_state = "deagleg"
 
