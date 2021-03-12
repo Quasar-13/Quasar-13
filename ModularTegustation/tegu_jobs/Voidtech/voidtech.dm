@@ -2,8 +2,8 @@
 	title = "Void Technician"
 	department_head = list("Chief Engineer")
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 2
+	spawn_positions = 1
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
 	exp_requirements = 60
@@ -11,7 +11,7 @@
 
 	outfit = /datum/outfit/job/voidtech
 
-	access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP,ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM)
+	access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP,ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM, ACCESS_ATMOSPHERICS, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP,ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
