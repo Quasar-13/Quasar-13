@@ -15,7 +15,7 @@
 	if(config)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
-			s += "<b>BungalowStation</b>\] &#8212; " // Tegustation: added "\]" so we close the name with a ]  This looks clean!
+			s += "<b>BungalowStation</b>\] &#8212; " // Bungalowstation: added "\]" so we close the name with a ]  This looks clean!
 		features += "[CONFIG_GET(flag/norespawn) ? "no " : ""]respawn"
 		if(CONFIG_GET(flag/allow_vote_mode))
 			features += "vote"
