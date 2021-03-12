@@ -19,10 +19,13 @@
 	var/strength = 0
 	var/powered = FALSE
 
+/* Fix this eventually
 /obj/machinery/particle_accelerator/control_box/Initialize()
 	. = ..()
 	wires = new /datum/wires/particle_accelerator/control_box(src)
 	connected_parts = list()
+*/
+
 
 /obj/machinery/particle_accelerator/control_box/Destroy()
 	if(active)
