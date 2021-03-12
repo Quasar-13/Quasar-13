@@ -37,7 +37,7 @@
 	s += ")<br>"
 
 	// Tegu Description
-	s += "<br><b>True MRP server, updated old f*lpcode. Check the discord for event runtimes!</b>"
+	s += "<br><b>True MRP server. Check the discord for event runtimes!</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
 	if(GLOB.master_mode)
 		s += "<br>Mode: \[<b>" + (GLOB.master_mode == "secret_extended" ? "secret" : GLOB.master_mode) + "</b>"//\]" // TEGUSTATION: What's the point in making it secret if it's going to just say the actual mode (extended)?

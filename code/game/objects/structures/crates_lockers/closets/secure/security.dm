@@ -28,7 +28,7 @@
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
 	new /obj/item/clothing/gloves/color/captain(src)
-	new /obj/item/storage/belt/sabre(src)
+	new /obj/item/choice_beacon/sabre(src)
 	new /obj/item/choice_beacon/captain(src)
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/card/id/captains_spare(src)
