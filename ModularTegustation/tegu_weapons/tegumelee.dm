@@ -62,7 +62,7 @@
 	force = 12
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	block_chance = 70
+	block_chance = 40
 	armour_penetration = 90
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("stabs", "slashes")
