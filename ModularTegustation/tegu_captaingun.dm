@@ -44,9 +44,6 @@
 	new /obj/item/gun/ballistic/automatic/pistol/PL14(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
 
 
 
@@ -56,7 +53,6 @@
 
 /obj/item/storage/box/captain/revolver/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/sw500(src)
-	new /obj/item/ammo_box/a357(src)
 
 
 
