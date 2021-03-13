@@ -58,12 +58,14 @@
 
 /obj/item/storage/box/captain/rifle
 	name = "Mosin Nagant"
-	desc = "FOR THE GLORIOUS COMMISSAR"
+	desc = "HAIL THE GLORIOUS COMMISSAR"
 
 /obj/item/storage/box/captain/rifle/PopulateContents()
 	new /obj/item/gun/ballistic/rifle/boltaction(src)
 	new /obj/item/clothing/under/costume/soviet(src)
+	new /obj/item/clothing/suit/armor/vest/russian_coat(src)
 	new /obj/item/clothing/head/ushanka(src)
+	new /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
