@@ -387,6 +387,8 @@ Behavior that's still missing from this component that original food items had t
 			food_taste_reaction = FOOD_DISLIKED
 		else if(foodtypes & H.dna.species.liked_food)
 			food_taste_reaction = FOOD_LIKED
+/*		else if(foodtypes & H.dna.species.toxicliked_food)
+			food_taste_reaction = FOOD_TOXICLIKED	 For later*/
 
 	switch(food_taste_reaction)
 		if(FOOD_TOXIC)
@@ -401,6 +403,13 @@ Behavior that's still missing from this component that original food items had t
 			to_chat(H,"<span class='notice'>I love this taste!</span>")
 			H.adjust_disgust(-5 + -2.5 * fraction)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "fav_food", /datum/mood_event/favorite_food)
+
+/* for later ;)
+		if(FOOD_TOXICLIKED)
+			to_chat(H,"<span class='notice'>I love this taste! But my stomach....</span>")
+			H.adjust_disgust(25 + -2.5 * fraction)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "fav_food", /datum/mood_event/favorite_food)
+			*/
 
 ///Delete the item when it is fully eaten
 /datum/component/edible/proc/On_Consume(mob/living/eater, mob/living/feeder)

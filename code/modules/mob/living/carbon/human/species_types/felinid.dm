@@ -13,9 +13,15 @@
 	species_language_holder = /datum/language_holder/felinid
 	var/original_felinid = TRUE //set to false for felinids created by mass-purrbation
 	payday_modifier = 0.75
+	speedmod = -0.15
+	brutemod = 1.1
+	attack_verb = "swipes"
+	attack_sound = 'sound/weapons/slash.ogg'
+	miss_sound = 'sound/weapons/slashmiss.ogg'
 	liked_food = MEAT | RAW | DAIRY
 	disliked_food = GROSS
-	toxic_food = FRUIT | VEGETABLES | DAIRY
+	toxic_food = FRUIT | VEGETABLES
+//	toxicliked_food = DAIRY				For later
 	ass_image = 'icons/ass/asscat.png'
 
 //Curiosity killed the cat's wagging tail.
