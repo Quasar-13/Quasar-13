@@ -355,6 +355,14 @@
 	else
 		tesla_zap(closest_atom, next_range, power, zap_flags, shocked_targets)
 
+
+
+
+
+
+
+
+
 #undef BIKE
 #undef COIL
 #undef ROD
