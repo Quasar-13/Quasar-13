@@ -31,7 +31,7 @@
 	armor = list(MELEE = 25, BULLET = 20, LASER = 30, ENERGY = 15, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	max_temperature = 25000
 	leg_overload_coeff = 80
-	force = 25
+	force = 14
 	wreckage = /obj/structure/mecha_wreckage/gygax
 	internal_damage_threshold = 35
 	max_equip = 2
@@ -44,6 +44,7 @@
 	icon_state = "clarke"
 	base_icon_state = "clarke"
 	max_temperature = 65000
+	force = 13
 	max_integrity = 100
 	movedelay = 1.20
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
