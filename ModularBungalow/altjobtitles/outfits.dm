@@ -80,7 +80,7 @@
 /datum/outfit/job/engineer/maintenancetechnician
 	name = "Station Engineer (Maintenance Technician)"
 	uniform = /obj/item/clothing/under/color/grey
- 	suit = /obj/item/clothing/suit/hazardvest
+	suit = /obj/item/clothing/suit/hazardvest
 	r_pocket = /obj/item/stack/cable_coil
 	l_pocket = /obj/item/flashlight
 	l_hand = /obj/item/storage/bag/construction
