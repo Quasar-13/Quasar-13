@@ -149,8 +149,13 @@
 	//Equip the rest of the gear
 	H.dna.species.before_equip_job(src, H, visualsOnly)
 
+if(outfit && preference_source && preference_source.prefs && preference_source.prefs.alt_titles_preferences[title])//bungalow alt job titles start
+ 		var/outfitholder = "[outfit]/[replacetext(lowertext(preference_source.prefs.alt_titles_preferences[title]), " ", "")]"
+ 		if(text2path(outfitholder) || !outfitholder)
+ 			outfit = text2path(outfitholder)//bungalow end
+
 	if(outfit_override || outfit)
-		H.equipOutfit(outfit_override ? outfit_override : outfit, visualsOnly)
+		H.equipOutfit(outfit_override ? outfit_override : outfit, visualsOnly, preference_source)//bungalow edit - alt job titles
 
 	H.dna.species.after_equip_job(src, H, visualsOnly)
 
@@ -269,7 +274,7 @@
 		holder = "[uniform]"
 	uniform = text2path(holder)
 
-/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source = null)//bungalow edit - alt job titles
 	if(visualsOnly)
 		return
 
