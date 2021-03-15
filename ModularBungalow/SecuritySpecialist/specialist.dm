@@ -16,6 +16,7 @@
 	new choice(get_turf(M))
 	to_chat(M, "<span class='hear'>Good luck, Soldier.</span>")
 
+//Wetwork
 /obj/item/storage/backpack/duffelbag/sec/spec
 	name = "wetwork kit"
 	desc = "A large duffel bag containing a sniper rifle loaded in 50 cal and a magazine of sleeping shots. Comes with thermal goggles"
@@ -26,12 +27,12 @@
 	new /obj/item/clothing/glasses/thermal(src)
 
 
-
+//Intelligence
 /obj/item/storage/backpack/duffelbag/sec/spec/intel
 	name = "intelligence kit"
 	desc = "A large duffel bag containing stolen syndicate gear for going undercover."
 
-//encryption key
+	//encryption key
 /obj/item/encryptionkey/intel
 	name = "\proper intelligence officer's encryption key"
 	icon_state = "cap_cypherkey"
@@ -45,6 +46,9 @@
 	new /obj/item/clothing/suit/chameleon(src)
 	new /obj/item/encryptionkey/intel(src)
 
+
+
+//Blueshield
 /obj/item/storage/backpack/duffelbag/sec/spec/blueshield
 	name = "blueshield kit"
 	desc = "A large duffel bag containing all you need to keep an important individual alive."
@@ -56,4 +60,18 @@
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/sensor_device(src)
 
+
+//Mech Pilot
+/obj/item/storage/backpack/duffelbag/sec/spec/pilot
+	name = "mech pilot kit"
+	desc = "A large duffel bag containing all you need for armored support."
+
+/obj/item/storage/backpack/duffelbag/sec/spec/pilot/PopulateContents()
+	new /obj/item/choice_beacon/mech(src)
+	new /obj/item/mecha_parts/mecha_equipment/weapon/energy/disabler(src)
+	new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang(src)
+	new /obj/item/clothing/under/costume/mech_suit(src)
+	new /obj/item/clothing/under/costume/mech_suit/white(src)
+	new /obj/item/clothing/under/costume/mech_suit/blue(src)
+	new /obj/item/clothing/suit/jacket/miljacket(src)
 
