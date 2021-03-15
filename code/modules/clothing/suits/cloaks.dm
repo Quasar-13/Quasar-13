@@ -49,6 +49,13 @@
 	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
 
+
+/obj/item/clothing/neck/cloak/healercloak
+	name = "master surgeon cloak"
+	desc = "Worn by a very famous, very skilled doctor."
+	icon_state = "healercloak"
+
+
 /obj/item/clothing/suit/hooded/cloak/goliath
 	name = "goliath cloak"
 	icon_state = "goliath_cloak"
