@@ -578,7 +578,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["all_quirks"]			, all_quirks)
 
 	//Alt job titles - bungalow
- 	WRITE_FILE(S["alt_titles_preferences"]		,alt_titles_preferences)
+	WRITE_FILE(S["alt_titles_preferences"]		,alt_titles_preferences)
 
 	return TRUE
 
