@@ -34,7 +34,7 @@
 	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 16
-	throwforce = 50
+	throwforce = 43
 	armour_penetration = 10
 	throw_speed = 5
 	throw_range = 7
