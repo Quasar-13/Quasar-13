@@ -34,9 +34,9 @@
 	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 16
-	throwforce = 58
+	throwforce = 50
 	armour_penetration = 10
-	throw_speed = 15
+	throw_speed = 5
 	throw_range = 7
 	bare_wound_bonus = 7
 	sharpness = SHARP_POINTY
@@ -44,6 +44,7 @@
 	attack_verb_continuous = list("stabs", "pierces", "slashes")
 	attack_verb_simple = list("stab", "pierces", "slash")
 	hitsound = 'sound/weapons/bladeslice.ogg'
+	embedding = list("embed_chance" = 100, "fall_chance" = 0)
 	max_integrity = 200
 
 
