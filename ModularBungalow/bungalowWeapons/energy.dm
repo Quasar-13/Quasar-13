@@ -1,7 +1,7 @@
 //X-02 Pulse Disabler Rifle
 
 /obj/item/gun/energy/e_gun/hos2
-	name = "\improper X-02 Pulse Disabler Rifle"
+	name = "\improper X-02 Disabler Beam Rifle"
 	desc = "A classic, the successor to the X-01 Multiphase, this rifle trades the ion and kill modes for a concentrated, but weak disabler beam."
 	cell_type = /obj/item/stock_parts/cell/hos_gun
 	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
@@ -9,7 +9,7 @@
 	inhand_icon_state = "energydisable3"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 5
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/disabler/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/disabler)
 	ammo_x_offset = 2
 
 
@@ -20,6 +20,7 @@
 	e_cost = 100
 	fire_sound = 'sound/weapons/taser2.ogg'
 	harmful = FALSE
+
 
 //Heavy Disabler
 /obj/projectile/beam/disabler/beam
