@@ -1,4 +1,3 @@
-
 //This is varied code for many random space ruins for Tegustation
 /*
 
@@ -316,8 +315,14 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	name = "Bio Sphere"
 	description = "Nanotrasen holding facility, rumored to be the MOST humane in the entire galaxy! Is it though?"
 
-/datum/map_template/ruin/space/oldshuttle 
+/datum/map_template/ruin/space/oldshuttle
 	id = "oldcode-nukeops"
 	suffix = "oldcodeops.dmm"
 	name = "Strange Infiltrator"
 	description = "A nuclear operative's ship, drifing along the stars. This thing looks like it belongs in ancient times."
+
+/datum/map_template/ruin/space/teg
+	id = "teg-ruin"
+	suffix = "tegruin.dmm"
+	name = "TEG Ruin"
+	description = "An old "
