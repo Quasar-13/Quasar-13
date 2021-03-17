@@ -67,3 +67,9 @@
 	name = "Hang In There"
 	desc = "A poster advising you to stay sane. Stay on that branch, little kitty!"
 	icon_state = "poster48_legit"
+
+/obj/structure/sign/poster/contraband/abs
+	name = "Picture of a Goddess"
+	desc = "A poster of an unknown woman's buff abs. You feel like just looking at this fills you with determination."
+	icon_state = "poster49"
+

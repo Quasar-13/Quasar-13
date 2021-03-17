@@ -143,13 +143,13 @@
 	tastes = list("tomato" = 1, "squirming" = 1)
 	foodtypes = MEAT | GROSS
 
-/obj/item/food/soup/milo
-	name = "milosoup"
-	desc = "The universes best soup! Yum!!!"
-	icon_state = "milosoup"
+/obj/item/food/soup/miso
+	name = "miso soup"
+	desc = "The classic japanese breakfast soup."
+	icon_state = "misosoup"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/protein = 8, /datum/reagent/water = 5, /datum/reagent/consumable/nutriment/vitamin = 4)
-	tastes = list("milo" = 1) // wtf is milo
-	foodtypes = VEGETABLES
+	tastes = list("miso" = 1) // wtf is milo
+	foodtypes = VEGETABLES | BREAKFAST
 
 /obj/item/food/soup/mushroom
 	name = "chantrelle soup"
