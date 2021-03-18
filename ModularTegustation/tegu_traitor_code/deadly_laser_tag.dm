@@ -241,6 +241,7 @@
 	select_name = "kill"
 	harmful = TRUE
 
+
 //RED LASER AMMO CASINGS
 
 /obj/item/ammo_casing/energy/laser/redtag/stun

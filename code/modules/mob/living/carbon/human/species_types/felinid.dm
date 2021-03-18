@@ -15,7 +15,7 @@
 	speedmod = -0.12
 	brutemod = 1.2
 	payday_modifier = 1
-	attack_verb = "swip"
+	attack_verb = "claw"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	liked_food = MEAT | RAW | DAIRY
