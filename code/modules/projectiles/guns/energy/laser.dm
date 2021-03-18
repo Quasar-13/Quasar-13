@@ -36,7 +36,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire)
 
 /obj/item/gun/energy/laser/captain
-	name = "antique laser gun"
+	name = "X-00 Self-Charging Laser Rifle"
 	icon_state = "caplaser"
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = null

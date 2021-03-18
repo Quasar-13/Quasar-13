@@ -1,4 +1,3 @@
-
 //This is varied code for many random space ruins for Tegustation
 /*
 
@@ -335,3 +334,9 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	suffix = "oldcodeops.dmm"
 	name = "Strange Infiltrator"
 	description = "A nuclear operative's ship, drifing along the stars. This thing looks like it belongs in ancient times."
+
+/datum/map_template/ruin/space/teg
+	id = "teg-ruin"
+	suffix = "tegruin.dmm"
+	name = "TEG Ruin"
+	description = "An old outpost featuring a broken TEG and a derelict robotics lab."
