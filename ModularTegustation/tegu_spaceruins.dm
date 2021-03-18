@@ -325,4 +325,4 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	id = "teg-ruin"
 	suffix = "tegruin.dmm"
 	name = "TEG Ruin"
-	description = "An old "
+	description = "An old outpost featuring a broken TEG and a derelict robotics lab."
