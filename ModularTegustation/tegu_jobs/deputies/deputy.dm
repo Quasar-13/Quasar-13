@@ -1,3 +1,4 @@
+/* 	We don't need this anymore
 /datum/job/tegu/deputy
 	title = "Deputy"
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
@@ -24,6 +25,7 @@
 
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 	bounty_types = CIV_JOB_SEC
+*/
 
 /obj/item/clothing/under/rank/security/mallcop
 	name = "deputy shirt"
@@ -78,6 +80,9 @@
 	icon_state = "beret_supply"
 	tegu_item = TRUE
 
+
+/*	More things
+
 /datum/outfit/job/deputy
 	name = "Deputy"
 	jobtype = /datum/job/tegu/deputy
@@ -99,6 +104,7 @@
 	box = /obj/item/storage/box/survival
 
 	implants = list(/obj/item/implant/mindshield)
+
 
 GLOBAL_LIST_INIT(available_deputy_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SCIENCE, SEC_DEPT_SUPPLY))
 
@@ -220,3 +226,6 @@ GLOBAL_LIST_INIT(available_deputy_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MED
 	. = ..()
 	var/turf/T = get_turf(src)
 	new /obj/effect/landmark/start/deputy(T)
+
+
+*/
