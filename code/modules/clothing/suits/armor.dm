@@ -95,6 +95,21 @@
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	dog_fashion = null
 
+
+/obj/item/clothing/suit/armor/vest/capcarapace/ancient
+	name = "ancient captain's carapace"
+	desc = "An old carapace from Space Station 12. Seems to still be holding up. Offers great bullet resistance at the cost of melee resistance"
+	icon_state = "centcom"
+	inhand_icon_state = "armor"
+	body_parts_covered = CHEST|GROIN
+	armor = list(MELEE = 10, BULLET = 55, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 5)
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+
+	dog_fashion = null
+	resistance_flags = FIRE_PROOF
+
 /obj/item/clothing/suit/armor/vest/capcarapace
 	name = "captain's carapace"
 	desc = "A fireproof armored chestpiece reinforced with ceramic plates and plasteel pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest, although it does chafe your nipples."
@@ -112,9 +127,10 @@
 
 /obj/item/clothing/suit/armor/vest/capcarapace/alt
 	name = "captain's parade jacket"
-	desc = "For when an armoured vest isn't fashionable enough."
+	desc = "A blue parade jacket woven to stop slash and cut damage to the tissue. Has significantly less laser resistance "
 	icon_state = "capformal"
 	inhand_icon_state = "capspacesuit"
+	armor = list(MELEE = 65, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 40)
 
 /obj/item/clothing/suit/armor/riot
 	name = "riot suit"
@@ -304,3 +320,11 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+
+/obj/item/clothing/suit/armor/vest/centcom_formal
+	name = "\improper CentCom Formal Coat"
+	desc = "A stylish coat given to CentCom Commanders. Perfect for sending ERTs to suicide missions with style!"
+	icon_state = "centcom_formal"
+	inhand_icon_state = "centcom"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list(MELEE = 35, BULLET = 60, LASER = 50, ENERGY = 50, BOMB = 35, BIO = 10, RAD = 10, FIRE = 10, ACID = 60)

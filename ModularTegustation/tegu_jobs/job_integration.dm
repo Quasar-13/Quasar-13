@@ -14,8 +14,11 @@
 
 // Used in overwrites to assign the ID card's icon.
 /obj/item/card/id/proc/return_icon_job()
+
+/*
 	if (!linkedJobType || assignment == "Deputy") // Using the global list here breaks Tegu Job's ID Card Overlays.
 		return 'ModularTegustation/Teguicons/cards.dmi'
+*/
 
 	if (!linkedJobType || assignment == "Void Technician") // Using the global list here breaks Tegu Job's ID Card Overlays.
 		return 'ModularTegustation/Teguicons/cards.dmi'

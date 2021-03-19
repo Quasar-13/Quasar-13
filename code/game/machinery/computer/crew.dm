@@ -77,7 +77,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 
 		// Tegustation Roles; 150 - 200
 		"TerraGov Official" = 150, // Tegustation TerraGov edit
-		"Deputy" = 151, // Tegustation Deputy edit: Add all tegu-only jobs here!
+	//	"Deputy" = 151, // Tegustation Deputy edit: Add all tegu-only jobs here!
 
 		// Tegustation Syndicate roles; 160 - 199
 		"Syndicate Overlord" = 160,

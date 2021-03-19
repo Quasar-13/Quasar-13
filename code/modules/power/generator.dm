@@ -42,7 +42,7 @@
 			. += "teg-oc[lastcirc]"
 
 
-#define GENRATE 800		// generator output coefficient from Q
+#define GENRATE 80		// generator output coefficient from Q
 
 /obj/machinery/power/generator/process_atmos()
 
@@ -62,7 +62,7 @@
 
 
 			if(delta_temperature > 0 && cold_air_heat_capacity > 0 && hot_air_heat_capacity > 0)
-				var/efficiency = 0.65
+				var/efficiency = 0.02
 
 				var/energy_transfer = delta_temperature*hot_air_heat_capacity*cold_air_heat_capacity/(hot_air_heat_capacity+cold_air_heat_capacity)
 
@@ -94,7 +94,7 @@
 
 /obj/machinery/power/generator/process()
 	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
-	var/power_output = round(lastgen / 10)
+	var/power_output = round(lastgen / 30)
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output

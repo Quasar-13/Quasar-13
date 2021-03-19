@@ -1,4 +1,3 @@
-
 //This is varied code for many random space ruins for Tegustation
 /*
 
@@ -276,6 +275,20 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	name = "Bio Sphere Female Dormitories"
 	icon_state = "dorms_female"
 
+//TEG ruin
+
+/area/ruin/has_grav/teg
+	name = "Abandoned TEG Room"
+	icon_state = "engine"
+
+/area/ruin/has_grav/teg/storage
+	name = "Abandoned TEG Facility Storage"
+	icon_state = "cargo_warehouse"
+
+/area/ruin/has_grav/teg/eva
+	name = "Abadoned TEG Facility EVA"
+	icon_state = "eva"
+
 //DATU
 
 /datum/map_template/ruin/space/tegu_asteroid
@@ -316,8 +329,14 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	name = "Bio Sphere"
 	description = "Nanotrasen holding facility, rumored to be the MOST humane in the entire galaxy! Is it though?"
 
-/datum/map_template/ruin/space/oldshuttle 
+/datum/map_template/ruin/space/oldshuttle
 	id = "oldcode-nukeops"
 	suffix = "oldcodeops.dmm"
 	name = "Strange Infiltrator"
 	description = "A nuclear operative's ship, drifing along the stars. This thing looks like it belongs in ancient times."
+
+/datum/map_template/ruin/space/teg
+	id = "teg-ruin"
+	suffix = "tegruin.dmm"
+	name = "TEG Ruin"
+	description = "An old outpost featuring a broken TEG and a derelict robotics lab."

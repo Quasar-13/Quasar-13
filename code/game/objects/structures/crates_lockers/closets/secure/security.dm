@@ -21,6 +21,7 @@
 	new /obj/item/clothing/suit/armor/vest/capcarapace/alt(src)
 	new /obj/item/clothing/head/caphat/parade(src)
 	new /obj/item/clothing/suit/captunic(src)
+//	new /obj/item/clothing/suit/armor/vest/capcarapace/ancient(src)
 	new /obj/item/clothing/head/crown/fancy(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
@@ -28,8 +29,8 @@
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
 	new /obj/item/clothing/gloves/color/captain(src)
-	new /obj/item/storage/belt/sabre(src)
-	new /obj/item/gun/energy/e_gun(src)
+	new /obj/item/choice_beacon/sabre(src)
+	new /obj/item/choice_beacon/captain(src)
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/card/id/captains_spare(src)
 	new /obj/item/storage/photo_album/captain(src)
@@ -121,6 +122,7 @@
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
+	new /obj/item/choice_beacon/spec(src)
 	new /obj/item/door_remote/head_of_security(src)
 
 /obj/structure/closet/secure_closet/security

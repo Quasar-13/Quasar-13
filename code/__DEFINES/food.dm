@@ -56,3 +56,4 @@
 #define FOOD_LIKED 1
 #define FOOD_DISLIKED 2
 #define FOOD_TOXIC 3
+#define FOOD_TOXICLIKED 4

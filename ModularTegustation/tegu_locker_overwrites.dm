@@ -3,6 +3,7 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/cargo/head(src)
 	new /obj/item/gun/energy/disabler/head(src)
 	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/clothing/under/misc/qmparade(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
@@ -18,6 +19,7 @@
 	new /obj/item/clothing/shoes/sneakers/brown/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/head(src)
 	new /obj/item/gun/energy/disabler/head(src)
+	new /obj/item/gun/syringe/rapidsyringe(src)
 	new /obj/item/storage/lockbox/medal/cmo(src)
 	. = ..()
 
@@ -34,11 +36,13 @@
 /obj/structure/closet/secure_closet/hop/Initialize()
 	new /obj/item/clothing/shoes/laceup/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/captain/hop(src)
+	new /obj/item/clothing/under/misc/hopparade(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	new /obj/item/clothing/shoes/digicombat(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/security/head(src)
+	new /obj/item/gun/energy/e_gun/hos2(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/warden/Initialize()
