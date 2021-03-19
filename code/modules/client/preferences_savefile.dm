@@ -392,8 +392,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences)
 	if(SSjob)
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
-			if(alt_titles_preferences[job.title] && !(alt_titles_preferences[job.title] in job.alt_titles))
-				alt_titles_preferences.Remove(job.title) //tegu end
+			if(alt_titles_preferences[job.title])
+				if(!((alt_titles_preferences[job.title] in job.alt_titles) || (alt_titles_preferences[job.title] == job.senior_title)))
+					alt_titles_preferences.Remove(job.title) // Tegu end
 
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
 		features["tail_human"] = "none"
