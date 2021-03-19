@@ -22,11 +22,9 @@
 	jobtype = /datum/job/tegu/secretary
 
 	id = /obj/item/card/id/silver
-	l_pocket = /obj/item/pda/captain
 	ears = /obj/item/radio/headset/headset_sct
 	uniform = /obj/item/clothing/under/suit/black_really
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	skillchips = list(/obj/item/skillchip/disk_verifier)
-	pda_slot = ITEM_SLOT_LPOCKET
+	belt = /obj/item/pda/captain
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced/command = 1, /obj/item/workplacecapsule/command = 1)
-
