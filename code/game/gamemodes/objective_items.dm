@@ -26,19 +26,19 @@
 	return ..()
 
 /datum/objective_item/steal/caplaser
-	name = "the captain's antique laser gun."
+	name = "the captain's X-00 antique laser gun."
 	targetitem = /obj/item/gun/energy/laser/captain
 	difficulty = 5
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/hoslaser
-	name = "the head of security's personal laser gun."
+	name = "the head of security's X-01 multiphase laser gun."
 	targetitem = /obj/item/gun/energy/e_gun/hos
 	difficulty = 10
 	excludefromjob = list("Head Of Security")
 
 /datum/objective_item/steal/hos2laser
-	name = "the head of security's special beam rifle."
+	name = "the head of security's X-02 disabler beam rifle."
 	targetitem = /obj/item/gun/energy/e_gun/hos2
 	difficulty = 10
 	excludefromjob = list("Head Of Security")
