@@ -28,3 +28,9 @@
 	shelter_id = "workplace_chemistry"
 	description = "A workplace with a gardening tools and machinery. Some seeds are included."
 	mappath = "_maps/templates/workplace_chemistry.dmm"
+
+/datum/map_template/shelter/command
+	name = "Command"
+	shelter_id = "workplace_command"
+	description = "A small workplace for an unimportant person. Comes with a comms relay and a communications console as well as living quarters."
+	mappath = "_maps/templates/workplace_command.dmm"
