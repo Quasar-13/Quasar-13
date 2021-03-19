@@ -25,6 +25,7 @@
 
 	id = /obj/item/card/id/silver
 	l_pocket = /obj/item/pda/captain
+	r_pocket = /obj/item/kitchen/knife/letter_opener
 	ears = /obj/item/radio/headset/headset_sct
 	uniform = /obj/item/clothing/under/suit/black
 	shoes = /obj/item/clothing/shoes/sneakers/black
