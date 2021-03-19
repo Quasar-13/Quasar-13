@@ -228,9 +228,9 @@
 		var/obj/item/clothing/suit/space/hardsuit/HS = H.wear_suit
 		HS.ToggleHelmet()
 
-	post_equip(H, visualsOnly)
+	post_equip(H, visualsOnly, preference_source)//bungalow edit - alt job titles
 
-	if(!visualsOnly, preference_source)//bungalow edit - alt job titles
+	if(!visualsOnly)
 		apply_fingerprints(H)
 		if(internals_slot)
 			H.internal = H.get_item_by_slot(internals_slot)
