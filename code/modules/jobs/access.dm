@@ -375,8 +375,8 @@
 /proc/get_all_jobs()
 	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
-				"Deputy", // Tegustation Deputy edit: Add all Tegu-only jobs here!
-				"Void Technician", //Bungalowstation edit
+//				"Deputy", // Tegustation Deputy edit: Add all Tegu-only jobs here!
+				"Void Technician", "Secretary", //Bungalowstation edit
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Chemist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
 
@@ -384,7 +384,7 @@
 	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official") //Tegu edit right there
 
 /proc/get_all_centcom_jobs()
-	return list("Central Command","VIP Guest","Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","Admiral","CentCom Commander","CentCom Bartender","Private Security Force")
+	return list("Central Command","VIP Guest", "Surgeon General", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","Admiral","CentCom Commander","CentCom Bartender","Private Security Force")
 
 /proc/get_all_syndicate_jobs()
 	return list("Syndicate Overlord", "Syndicate Mastermind", "Syndicate Admiral", "Syndicate Official", "Syndicate", "Syndicate Commander", "Syndicate Ship Captain")
