@@ -60,7 +60,7 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/techweb_node/adv_mining
+/datum/techweb_node/bluespace_mining
 	id = "bluespace_mining"
 	display_name = "Bluespace Mining Technology"
 	description = "Harness the power of bluespace to make materials out of nothing. Slowly."
