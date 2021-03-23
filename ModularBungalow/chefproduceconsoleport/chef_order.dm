@@ -1,5 +1,5 @@
 
- /obj/machinery/computer/chef_order
+/obj/machinery/computer/chef_order
 	name = "Produce Orders Console"
 	desc = "An interface for ordering fresh produce and other. A far more expensive option than the botanists, but oh well."
 	icon_screen = "request"
