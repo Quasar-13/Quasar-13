@@ -121,7 +121,7 @@
 /datum/orderable_item/fillet
  	name = "Fish Fillet"
  	category_index = CATEGORY_MILK_EGGS
- 	item_instance = /obj/item/food/fishmeat
+ 	item_instance = /obj/item/food/carpmeat/icantbeliveitsnotcarp
  	cost_per_order = 12
 
 /datum/orderable_item/spider_eggs
