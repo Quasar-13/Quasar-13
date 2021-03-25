@@ -934,7 +934,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else
 				rank_title_line = "<a href='?_src_=prefs;preference=job;task=alt_title;job_title=[job.title]'>[rank_title_line]</a>"//tegu - alt title
 				HTML += rank_title_line//tegu - alt title
-				HTML += "<span class='dark'>[rank]</span>"
 
 			HTML += "</td><td width='40%'>"
 
