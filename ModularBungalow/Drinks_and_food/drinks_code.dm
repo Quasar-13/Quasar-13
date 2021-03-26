@@ -1,4 +1,3 @@
-//
 /datum/reagent/consumable/ethanol/pisco
 	name = "Pisco"
 	description = "Burns with every sip."
@@ -21,7 +20,6 @@
 	glass_icon_state = "piscolaglass"
 	glass_name = "piscola"
 	glass_desc = "Simple and yet, effective"
-
 
 /datum/reagent/consumable/ethanol/terremoto
 

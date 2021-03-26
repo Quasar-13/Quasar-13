@@ -8,7 +8,7 @@
 	            /datum/reagent/consumable/ethanol/pisco = 60)
 	category = CAT_DRINK
 
-//FOOD
+//BURGERS
 /datum/crafting_recipe/food/catburger
 	name = "Catperson burger"
 	reqs = list(
@@ -20,6 +20,7 @@
 	result = /obj/item/food/burger/catburger
 	subcategory = CAT_BURGER
 
+//BREADS
 /datum/crafting_recipe/food/meatbread
 	name = "Sausage bread"
 	reqs = list(
@@ -29,6 +30,7 @@
 	result = /obj/item/food/bread/sausage
 	subcategory = CAT_BREAD
 
+//EGGS
 /datum/crafting_recipe/food/friedegg
 	name = "Egg with sausage"
 	reqs = list(
