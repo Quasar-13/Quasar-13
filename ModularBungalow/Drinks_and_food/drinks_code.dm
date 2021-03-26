@@ -57,3 +57,21 @@
 			M.dropItemToGround(I)
 			to_chat(M, "<span class='notice'>Your hands shake like in a earthquake and you drop what you were holding!</span>")
 			M.Jitter(10)
+
+/datum/reagent/consumable/tula
+	name = "Tula"
+	description = "Surprisingly it dosnt taste weird!"
+	color = "##8bcc41"
+	quality = DRINK_VERYGOOD
+	taste_description = "the 00s in Chile"
+	glass_icon_state = "glass_green"
+	glass_name = "glass of Tula"
+	glass_desc = "Surprisingly it dosnt taste weird!"
+
+/datum/reagent/consumable/tula/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.dizziness +=1
+	M.drowsyness = 0
+	M.AdjustSleeping(-40)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, M.get_body_temp_normal())
+	..()
