@@ -1,3 +1,4 @@
+// ==You need to add the icons in "icons/obj/drinks.dmi" or you will have problems with the broken glass==
 /datum/reagent/consumable/ethanol/pisco
 	name = "Pisco"
 	description = "Burns with every sip."
