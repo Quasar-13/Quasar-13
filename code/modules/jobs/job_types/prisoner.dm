@@ -1,3 +1,6 @@
+/*
+This job was so full of self-antaggers. not really what we want here
+
 /datum/job/prisoner
 	title = "Prisoner"
 	department_head = list("The Security Team")
@@ -9,11 +12,11 @@
 	paycheck = PAYCHECK_PRISONER
 	outfit = /datum/outfit/job/prisoner
 
-	display_order = JOB_DISPLAY_ORDER_PRISONER
+	display_order = JOB_DISPLAY_ORDER_PRISONER	*/
 
 /datum/outfit/job/prisoner
 	name = "Prisoner"
-	jobtype = /datum/job/prisoner
+//	jobtype = /datum/job/prisoner
 
 	uniform = /obj/item/clothing/under/rank/prisoner
 	shoes = /obj/item/clothing/shoes/sneakers/orange

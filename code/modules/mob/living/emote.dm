@@ -222,6 +222,14 @@
 			else
 				return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
 
+		if(H.dna.species.id == "felinid" && (!H.mind || !H.mind.miming))
+			if(user.gender == FEMALE)
+				return pick('ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyaha.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha1.ogg',
+					'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha2.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahehe.ogg')
+			else
+				return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
+
+
 /datum/emote/living/look
 	key = "look"
 	key_third_person = "looks"
