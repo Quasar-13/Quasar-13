@@ -310,3 +310,10 @@
 	id = "bounty_pad_control"
 	build_path = /obj/item/circuitboard/computer/bountypad
 	category = list("Computer Boards")
+
+/datum/design/board/chefproduce
+	name = "Computer Design (Chef Produce Console)"
+	desc = "A computer which the chef can use to order food via cargo, because botanists are a myth."
+	id = "chefproduce"
+	build_path = /obj/machinery/computer/chef_order
+	category = list("Computer Boards")
