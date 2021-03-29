@@ -34,3 +34,9 @@
 	shelter_id = "workplace_command"
 	description = "A small workplace for an unimportant person. Comes with a comms relay as well as living quarters."
 	mappath = "_maps/templates/workplace_command.dmm"
+
+/datum/map_template/shelter/engineering
+	name = "Engineering"
+	shelter_id = "workplace_engineering"
+	description = "A workplace with a small amount of engineering gear and some space for atmospherics."
+	mappath = "_maps/templates/workplace_engineering.dmm"
