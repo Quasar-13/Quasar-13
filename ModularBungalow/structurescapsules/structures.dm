@@ -8,6 +8,13 @@
 		The room is powered and contains their own gravity generator."
 	mappath = "_maps/templates/shelter_purplebath.dmm"
 
+/datum/map_template/shelter/cabin
+	name = "Wood Cabin"
+	shelter_id = "shelter_cabin"
+	description = "A simple house with some meat, a guitar, and basically everything you need to have a good time."
+	mappath = "_maps/templates/shelter_cabin.dmm"
+
+
 
 //Workplaces
 
