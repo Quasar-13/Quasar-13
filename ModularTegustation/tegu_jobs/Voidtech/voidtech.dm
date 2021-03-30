@@ -43,4 +43,4 @@
 //Spawn Point
 /obj/effect/landmark/start/voidtech
 	name = "Void Technician"
-	icon_state = "Station Engineer"
+	icon_state = "Void Technician"
