@@ -1,5 +1,5 @@
 //looc ported from citadel and fulp
-GLOBAL_VAR_INIT(LOOC_COLOR, null)//If this is null, use the CSS for OOC. Otherwise, use a custom colour.
+GLOBAL_VAR_INIT(LOOC_COLOR, "#e597e8")//If this is null, use the CSS for OOC. Otherwise, use a custom colour.
 GLOBAL_VAR_INIT(normal_looc_colour, "#e597e8")
 
 /client/verb/looc(msg as text)
