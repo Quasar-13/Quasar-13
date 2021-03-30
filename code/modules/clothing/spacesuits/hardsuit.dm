@@ -221,6 +221,16 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine
 	resistance_flags = FIRE_PROOF
 
+
+	//Fake version for traitors
+/obj/item/clothing/suit/space/hardsuit/engine/fake
+	armor = list(MELEE = 30, BULLET = 5, LASER = 10, ENERGY = 20, BOMB = 10, BIO = 100, RAD = 40, FIRE = 100, ACID = 75, WOUND = 10)
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine/fake
+
+/obj/item/clothing/head/helmet/space/hardsuit/engine/fake
+	armor = list(MELEE = 30, BULLET = 5, LASER = 10, ENERGY = 20, BOMB = 10, BIO = 100, RAD = 40, FIRE = 100, ACID = 75, WOUND = 10)
+
+
 	//Atmospherics
 /obj/item/clothing/head/helmet/space/hardsuit/engine/atmos
 	name = "atmospherics hardsuit helmet"

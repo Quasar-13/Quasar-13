@@ -456,7 +456,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \
 			organic host as a home base and source of fuel. Holoparasites come in various types and share damage with their host."
 	item = /obj/item/storage/box/syndie_kit/guardian
-	cost = 18
+	cost = 22
 	surplus = 0
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
 	player_minimum = 25
@@ -502,7 +502,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 8-round magazines and is compatible \
 			with suppressors."
 	item = /obj/item/gun/ballistic/automatic/pistol
-	cost = 7
+	cost = 6
 	exclude_modes = list(/datum/game_mode/nuclear/clown_ops)
 
 /datum/uplink_item/dangerous/aps
@@ -572,7 +572,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A manual that teaches a single user tactical Close-Quarters Combat before self-destructing."
 	item = /obj/item/book/granter/martial/cqc
 	include_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
-	cost = 13
+	cost = 15
 	surplus = 0
 
 /datum/uplink_item/stealthy_weapons/dart_pistol
@@ -616,7 +616,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	of bolts, but takes time to automatically recharge after each shot."
 	item = /obj/item/gun/energy/kinetic_accelerator/crossbow
 	player_minimum = 25
-	cost = 10
+	cost = 11
 	surplus = 50
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
 
@@ -625,7 +625,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "This box contains a guide on how to craft masterful works of origami, allowing you to transform normal pieces of paper into \
 			perfectly aerodynamic (and potentially lethal) paper airplanes."
 	item = /obj/item/storage/box/syndie_kit/origami_bundle
-	cost = 14
+	cost = 13
 	surplus = 0
 	exclude_modes = list(/datum/game_mode/nuclear) //clown ops intentionally left in, because that seems like some s-tier shenanigans.
 
@@ -642,7 +642,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			On death, these nodules take control of the dead body, causing limited revivification, \
 			along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
-	cost = 25
+	cost = 40
 	cant_discount = TRUE
 
 /datum/uplink_item/stealthy_weapons/sleepy_pen
@@ -1303,7 +1303,20 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
 			sightings, however."
 	item = /obj/item/storage/box/syndie_kit/space
-	cost = 4
+	cost = 3
+
+/datum/uplink_item/suits/mining
+	name = "NT Mining Space Suit"
+	desc = "We've stolen a mining hardsuit from NT and produced them ourselves. Perfect for drawing suspicion away."
+	item = /obj/item/clothing/suit/space/hardsuit/mining
+	cost = 6
+
+/datum/uplink_item/suits/engi
+	name = "NT Engineering Space Suit"
+	desc = "We've stolen an engineering hardsuit from NT and produced them ourselves. Perfect for drawing suspicion away.\
+			This one however... lacks the shielding of the original"
+	item = /obj/item/clothing/suit/space/hardsuit/engine/fake
+	cost = 5
 
 /datum/uplink_item/suits/hardsuit
 	name = "Syndicate Hardsuit"
