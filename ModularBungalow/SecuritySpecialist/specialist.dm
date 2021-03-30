@@ -22,8 +22,7 @@
 	desc = "A large duffel bag containing a sniper rifle loaded in 50 cal and a magazine of sleeping shots. Comes with thermal goggles"
 
 /obj/item/storage/backpack/duffelbag/sec/spec/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/sniper_rifle(src)
-	new /obj/item/ammo_box/magazine/sniper_rounds/soporific(src)
+	new /obj/item/gun/energy/sniper/security(src)
 	new /obj/item/clothing/glasses/thermal(src)
 
 

@@ -9,7 +9,7 @@
 	fire_sound = 'sound/weapons/laser3.ogg'
 	fire_sound_volume = 90
 	vary_fire_sound = FALSE
-	pin = null
+	pin = /obj/item/firing_pin
 	cell_type = /obj/item/stock_parts/cell/energy_sniper
 	weapon_weight = WEAPON_HEAVY
 	can_flashlight = FALSE
@@ -27,7 +27,7 @@
 	fire_delay = 30
 
 /obj/item/gun/energy/sniper/pin
-	pin = /obj/item/firing_pin
+	name = "NT energy rifle"
 
 /obj/item/ammo_casing/energy/sniper
 	projectile_type = /obj/projectile/beam/laser/sniper
