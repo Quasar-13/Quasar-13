@@ -65,6 +65,10 @@
 	template_id = "shelter_purplebath"
 
 
+/obj/item/structurecapsule/cabin
+	name = "cabin structure capsule"
+	desc = "A shelter for your home away from home."
+	template_id = "shelter_cabin"
 
 
 //Workplaces here !
