@@ -468,13 +468,3 @@
 	materials = list(/datum/material/iron=3000, /datum/material/glass = 2000)
 	construction_time = 200
 	category = list("Exosuit Equipment")
-
-/datum/design/mech_medical_beamgun
-	name = "Exosuit Medical (Medical Beamgun)"
-	desc = "Equipment for medical exosuits. A mounted medical nanite projector which will treat patients with a focused beam."
-	id = "mech_medi_beam"
-	build_type = MECHFAB
-	materials = list(/datum/material/iron = 15000, /datum/material/glass = 8000, /datum/material/plasma = 3000, /datum/material/gold = 8000, /datum/material/diamond = 2000)
-	construction_time = 250
-	build_path = /obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam
-	category = list("Exosuit Equipment")

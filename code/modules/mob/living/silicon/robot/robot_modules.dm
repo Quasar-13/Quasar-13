@@ -563,7 +563,6 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/stack/medical/gauze,
-		/obj/item/gun/medbeam,
 		/obj/item/organ_storage)
 
 	cyborg_base_icon = "synd_medical"
