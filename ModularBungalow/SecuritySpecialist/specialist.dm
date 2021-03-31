@@ -81,19 +81,20 @@
 
 
 //Combat Medic
+
 //Revival first aid
 /obj/item/storage/firstaid/tactical/spec
 	name = "revival first aid kit"
 	desc = "A first aid kit with the ability to quickly revive people in an emergency"
 
-/obj/item/storage/firstaid/toxin/PopulateContents()
+obj/item/storage/firstaid/tactical/spec/PopulateContents()
 	if(empty)
 		return
 	var/static/items_inside = list(
+		/obj/item/clothing/glasses/healthsec = 1,
 		/obj/item/reagent_containers/pill/patch/synthflesh = 5,
 		/obj/item/reagent_containers/syringe/syriniver = 2)
 	generate_items_inside(items_inside,src)
-
 
 //Actual duffel
 /obj/item/storage/backpack/duffelbag/sec/spec/medic
@@ -104,6 +105,8 @@
 	new /obj/item/gun/medbeam(src)
 	new /obj/item/defibrillator/compact(src)
 	new /obj/item/storage/firstaid/tactical/spec(src)
+	new /obj/item/clothing/suit/armor/labcoat(src)
+	new /obj/item/clothing/head/beret/sec/medical(src)
 
 
 
