@@ -5116,10 +5116,14 @@
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "and" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -4
 	},
-/obj/effect/loot_site_spawner,
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -1;
+	pixel_y = 8
+	},
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "ane" = (
@@ -15107,6 +15111,7 @@
 	dir = 1;
 	name = "Engineering Station"
 	},
+/obj/effect/landmark/start/secretary,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aSy" = (
@@ -15125,6 +15130,7 @@
 	dir = 1;
 	name = "Command Station"
 	},
+/obj/effect/landmark/start/secretary,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aSz" = (
@@ -15166,6 +15172,7 @@
 	dir = 1;
 	name = "Crew Station"
 	},
+/obj/effect/landmark/start/secretary,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aSE" = (
@@ -15963,6 +15970,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
+/obj/effect/landmark/start/secretary,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aVh" = (
@@ -16017,6 +16025,7 @@
 	dir = 1;
 	name = "Logistics Station"
 	},
+/obj/effect/landmark/start/secretary,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aVt" = (
@@ -24445,7 +24454,7 @@
 "buG" = (
 /obj/machinery/door/airlock/medical{
 	name = "Medbay";
-	req_access_txt = "5;9"
+	req_one_access_txt = "9;5"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/blue{
@@ -26384,7 +26393,22 @@
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "bAq" = (
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = 2;
+	pixel_y = -5
+	},
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -1;
+	pixel_y = 8
+	},
 /obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = 4
+	},
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "bAr" = (
@@ -27661,6 +27685,7 @@
 /area/crew_quarters/heads/hor)
 "bEd" = (
 /obj/machinery/light/small,
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "bEf" = (
@@ -32061,7 +32086,12 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bSu" = (
-/mob/living/simple_animal/hostile/retaliate/clown/mutant/glutton,
+/mob/living/simple_animal/hostile/retaliate/clown/mutant/glutton{
+	health = 1200;
+	melee_damage_lower = 24;
+	melee_damage_upper = 27;
+	movespeed_modification = -10
+	},
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "bSv" = (
@@ -42955,6 +42985,10 @@
 /obj/structure/bed/roller,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
+"eLt" = (
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/plating,
+/area/maintenance/fore/secondary)
 "eLO" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -44748,6 +44782,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden)
+"hcZ" = (
+/obj/structure/table,
+/obj/item/broken_bottle,
+/turf/open/floor/plating,
+/area/science/research/abandoned)
 "hec" = (
 /obj/structure/bed/dogbed/renault,
 /mob/living/simple_animal/pet/fox/renault,
@@ -45687,8 +45726,19 @@
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
 "ipX" = (
-/turf/closed/wall,
-/area/medical/abandoned)
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/bananium{
+	pixel_x = -4
+	},
+/turf/open/floor/plating,
+/area/maintenance/fore/secondary)
 "iqb" = (
 /obj/effect/turf_decal/trimline/green/filled/corner{
 	dir = 4
@@ -46157,6 +46207,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/effect/landmark/start/voidtech,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "iZd" = (
@@ -46368,6 +46419,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"jpx" = (
+/obj/effect/landmark/start/voidtech,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
 "jqJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -48116,6 +48171,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
+"lLU" = (
+/obj/structure/chair/office,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
 "lME" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/plasteel/dark,
@@ -48653,6 +48712,10 @@
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
+"mxK" = (
+/obj/structure/closet,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
 "myb" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Prison Laundry"
@@ -49471,6 +49534,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/cmo)
+"nBQ" = (
+/obj/structure/table,
+/turf/open/floor/plating,
+/area/science/research/abandoned)
 "nCl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -49669,7 +49736,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical{
 	name = "Medical Genetics";
-	req_access_txt = "9;40"
+	req_one_access_txt = "9;40"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -50221,6 +50288,13 @@
 	},
 /turf/open/floor/engine,
 /area/science/misc_lab)
+"oHV" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/closet/radiation,
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
 "oIG" = (
 /obj/machinery/flasher{
 	id = "visitorflash";
@@ -53119,6 +53193,9 @@
 "sKP" = (
 /obj/structure/table,
 /obj/item/circuitboard/computer/security,
+/obj/structure/sign/poster/contraband/abs{
+	pixel_x = -32
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/bridge)
 "sLy" = (
@@ -54265,6 +54342,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/science/mixing)
+"uqg" = (
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/machinery/door/airlock/science{
+	name = "Cloning lab"
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "urf" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -54511,6 +54595,8 @@
 /obj/effect/spawner/lootdrop/space/syndiecosmetic,
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/maintenance/six,
+/obj/item/clothing/suit/space/hardsuit/voidtech,
+/obj/effect/spawner/lootdrop/space/syndiecosmetic,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "uMF" = (
@@ -54865,6 +54951,7 @@
 /area/engine/engineering)
 "vlz" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "vme" = (
@@ -80746,7 +80833,7 @@ aaa
 gXs
 aaa
 mzQ
-hDI
+oHV
 rKL
 crm
 mzQ
@@ -89744,9 +89831,9 @@ ccw
 cpI
 ccw
 cDL
-cgR
+mxK
 cpq
-cgR
+jpx
 gTs
 isi
 aaa
@@ -90260,7 +90347,7 @@ cig
 cDN
 jEP
 iYB
-cgR
+lLU
 mOF
 isi
 aaa
@@ -90517,7 +90604,7 @@ aaa
 cDN
 coZ
 huH
-cgR
+jpx
 liy
 isi
 aaa
@@ -91704,9 +91791,9 @@ ahn
 ahn
 ahn
 ahn
-and
+ahn
 aqj
-jkt
+ahn
 jkt
 apx
 ary
@@ -91960,10 +92047,10 @@ anF
 ahn
 wyS
 sLy
-ipX
+mTj
 ahn
 aqj
-jkt
+ahn
 aoK
 apw
 aqp
@@ -92220,7 +92307,7 @@ hZy
 mTj
 ahn
 aqj
-jkt
+ahn
 aoL
 apy
 aqq
@@ -92477,7 +92564,7 @@ ahn
 oNL
 ahn
 aqj
-jkt
+ahn
 jkt
 jkt
 jkt
@@ -93239,7 +93326,7 @@ aaa
 gXs
 ahn
 bzU
-anF
+and
 bAr
 kiX
 anF
@@ -93500,7 +93587,7 @@ bSu
 anF
 kiX
 anF
-anF
+eLt
 anF
 ahn
 anF
@@ -93754,7 +93841,7 @@ gXs
 ahn
 bAr
 anF
-anF
+ipX
 kiX
 anF
 ahn
@@ -94276,7 +94363,7 @@ aaa
 vgv
 qlL
 hyL
-hyL
+nBQ
 alP
 arr
 aqu
@@ -94533,7 +94620,7 @@ eNJ
 vgv
 gtt
 hyL
-hyL
+hcZ
 alP
 arr
 aqu
@@ -95048,7 +95135,7 @@ vgv
 lfv
 hyL
 hyL
-npt
+uqg
 arr
 aqu
 aro
@@ -97109,8 +97196,8 @@ anf
 anf
 anf
 aqy
-anf
-anf
+avD
+avD
 awF
 anf
 anf
@@ -97362,7 +97449,7 @@ aaf
 aaf
 nkZ
 alP
-anf
+awF
 apC
 apC
 apC
