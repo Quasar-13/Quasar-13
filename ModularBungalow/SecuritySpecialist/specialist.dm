@@ -87,7 +87,7 @@
 	name = "revival first aid kit"
 	desc = "A first aid kit with the ability to quickly revive people in an emergency"
 
-obj/item/storage/firstaid/tactical/spec/PopulateContents()
+/obj/item/storage/firstaid/tactical/spec/PopulateContents()
 	if(empty)
 		return
 	var/static/items_inside = list(
