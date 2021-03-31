@@ -26,7 +26,7 @@
 /obj/structure/closet/secure_closet/research_director/Initialize()
 	new /obj/item/clothing/shoes/laceup/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/science/head(src)
-	new /obj/item/gun/energy/disabler/head(src)
+	new /obj/item/gun/energy/e_gun/homedef(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/captains/Initialize()
