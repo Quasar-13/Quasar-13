@@ -94,7 +94,7 @@
 
 //Supply
 /datum/job/mining
-	alt_titles = list("Explorer", "Godslayer")
+	alt_titles = list("Space Miner", "Hunter")
 	senior_title = "Senior Miner"
 
 /datum/job/cargo_tech
@@ -103,13 +103,15 @@
 
 //Command
 /datum/job/qm
-	alt_titles = list("Supply Chief", "Requisitions Officer")
+	alt_titles = list("Supply Chief")
+	senior_title = "Requisitions Officer"
 
 /datum/job/hos
 	alt_titles = list("Security Commander", "Chief of Security")
 
 /datum/job/cmo
 	alt_titles = list("Medical Director", "Head Surgeon")
+	senior_title = "Senior Medical Officer"
 
 /datum/job/rd
 	alt_titles = list("Research Supervisor", "Head Scientist", "Chief Researcher")
@@ -119,7 +121,7 @@
 	alt_titles = list("Chief Atmoshperics Technician", "Chief Electrical Technician")
 
 /datum/job/tegu/secretary
-	alt_titles = list("Off-station Coordinator")
+	alt_titles = list("Staff Officer")
 
 /datum/job/hop
 	alt_titles = list("Executive Officer")
