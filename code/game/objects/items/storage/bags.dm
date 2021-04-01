@@ -475,7 +475,7 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/circuitboard,
 		/obj/item/electronics,
-		/obj/item/wallframe/camera
+		/obj/item/wallframe
 		))
 
 /obj/item/storage/bag/harpoon_quiver

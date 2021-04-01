@@ -65,16 +65,20 @@
 	template_id = "shelter_purplebath"
 
 
+/obj/item/structurecapsule/cabin
+	name = "cabin structure capsule"
+	desc = "A shelter for your home away from home."
+	template_id = "shelter_cabin"
 
 
 //Workplaces here !
 /obj/item/workplacecapsule
-	name = "workplacecapsule"
-	desc = "A bluespace capsule that stores a schematic of a building."
+	name = "engineering capsule"
+	desc = "A workplace capsule for all of your engineering and atmospheric needs.."
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
-	var/template_id = "shelter_alpha"
+	var/template_id = "workplace_engineering"
 	var/datum/map_template/shelter/template
 	var/used = FALSE
 
