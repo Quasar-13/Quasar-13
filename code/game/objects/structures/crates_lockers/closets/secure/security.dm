@@ -289,6 +289,17 @@
 	for(var/i in 1 to 3)
 		new /obj/item/gun/energy/laser(src)
 
+/obj/structure/closet/secure_closet/armory4
+	name = "lethal shells locker"
+	req_access = list(ACCESS_ARMORY)
+	icon_state = "armory"
+
+/obj/structure/closet/secure_closet/armory4/PopulateContents()
+	..()
+	for(var/i in 1 to 3)
+		new /obj/item/storage/box/lethalshot(src)
+
+
 /obj/structure/closet/secure_closet/tac
 	name = "armory tac locker"
 	req_access = list(ACCESS_ARMORY)
