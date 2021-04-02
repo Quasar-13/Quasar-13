@@ -1208,9 +1208,13 @@
 /turf/open/floor/plasteel/chapel,
 /area/chapel)
 "ajo" = (
-/obj/structure/bookcase/random/reference,
-/turf/open/floor/carpet/purple,
-/area/library)
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "ajp" = (
 /turf/open/floor/carpet/purple,
 /area/library)
@@ -1880,7 +1884,11 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
 "amY" = (
-/obj/structure/filingcabinet/employment,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/taperecorder,
+/obj/item/clothing/glasses/sunglasses/big,
+/obj/item/clothing/glasses/sunglasses/big,
+/obj/structure/table/wood,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "amZ" = (
@@ -2685,6 +2693,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/vacant_room/office)
 "atj" = (
@@ -4867,6 +4876,11 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
+"cRX" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/east,
+/turf/open/floor/plasteel,
+/area/storage/tech)
 "cVG" = (
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/plasteel,
@@ -5887,12 +5901,6 @@
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "eIo" = (
-/obj/structure/rack,
-/obj/item/storage/briefcase{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/storage/secure/briefcase,
 /obj/machinery/light/small{
 	brightness = 3;
 	dir = 8
@@ -6038,8 +6046,12 @@
 /turf/open/floor/plating,
 /area/maintenance/department/chapel)
 "eVf" = (
-/obj/machinery/power/apc/auto_name/east,
-/obj/structure/cable,
+/obj/structure/rack,
+/obj/item/storage/briefcase{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/storage/secure/briefcase,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "eVm" = (
@@ -7982,6 +7994,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/science/storage)
+"iqq" = (
+/obj/structure/transit_tube/curved,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/science/mixing)
 "iro" = (
 /obj/structure/table/wood/fancy/blue,
 /turf/open/floor/wood,
@@ -8471,19 +8488,7 @@
 /turf/open/floor/plasteel/dark,
 /area/hydroponics)
 "jkz" = (
-/obj/structure/table/wood,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "lawshut";
-	name = "Privacy Button";
-	pixel_x = 27;
-	pixel_y = -6
-	},
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/item/toy/figure/lawyer,
+/obj/structure/cable,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "jlN" = (
@@ -8619,11 +8624,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "jzG" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -24
-	},
-/obj/structure/cable,
+/obj/machinery/photocopier,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "jAk" = (
@@ -9002,7 +9003,8 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
 "knW" = (
-/obj/machinery/photocopier,
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "koj" = (
@@ -10345,6 +10347,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"mFf" = (
+/obj/structure/transit_tube,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/science/mixing)
 "mFP" = (
 /obj/machinery/light{
 	dir = 1
@@ -11257,11 +11264,6 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
-"nYK" = (
-/obj/structure/transit_tube,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/science/mixing)
 "nYY" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
@@ -13302,10 +13304,14 @@
 /turf/open/space,
 /area/space)
 "riv" = (
-/obj/effect/spawner/structure/window,
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/locker_room)
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Law Office";
+	req_access_txt = "38"
+	},
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/lawoffice)
 "rja" = (
 /obj/machinery/research/explosive_compressor,
 /turf/open/floor/mineral/titanium,
@@ -13860,9 +13866,13 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/locker_room)
 "rZf" = (
-/obj/structure/cable,
-/turf/open/floor/holofloor/wood,
-/area/lawoffice)
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/storage/eva)
 "sai" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/transit_tube,
@@ -14044,6 +14054,10 @@
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/engine/engineering)
+"ssP" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel,
+/area/mine)
 "ssW" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access_txt = "1;4;38;12"
@@ -14135,6 +14149,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "szl" = (
@@ -15265,6 +15282,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
+"udU" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/turf_decal/delivery,
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
+	},
+/obj/machinery/light,
+/turf/open/floor/plasteel,
+/area/storage/eva)
 "ufg" = (
 /obj/structure/lattice,
 /turf/open/space,
@@ -15401,7 +15428,6 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/lawyer,
-/obj/structure/cable,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "urE" = (
@@ -15664,14 +15690,11 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "uSd" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock{
-	name = "Law Office";
-	req_access_txt = "38"
-	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/lawoffice)
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light,
+/turf/open/floor/plasteel,
+/area/storage/eva)
 "uSe" = (
 /turf/open/floor/plating/airless,
 /area/science/test_area)
@@ -15915,10 +15938,19 @@
 /turf/open/floor/carpet/purple,
 /area/library)
 "vrd" = (
-/obj/structure/cable,
-/obj/machinery/camera/autoname{
-	dir = 4
+/obj/structure/table/wood,
+/obj/machinery/light/small{
+	dir = 8
 	},
+/obj/machinery/button/door{
+	id = "lawshut";
+	name = "Privacy Button";
+	pixel_x = -24;
+	pixel_y = -6
+	},
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/toy/figure/lawyer,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "vrR" = (
@@ -16091,6 +16123,9 @@
 /obj/structure/window/reinforced{
 	dir = 4;
 	layer = 2.9
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/storage/eva)
@@ -16351,11 +16386,7 @@
 /turf/open/floor/engine,
 /area/engine/atmos)
 "whp" = (
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder,
-/obj/item/clothing/glasses/sunglasses/big,
-/obj/item/clothing/glasses/sunglasses/big,
-/obj/structure/table/wood,
+/obj/structure/filingcabinet/employment,
 /turf/open/floor/holofloor/wood,
 /area/lawoffice)
 "whQ" = (
@@ -16405,11 +16436,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
-"wlM" = (
-/obj/structure/transit_tube/curved,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/science/mixing)
 "wmI" = (
 /obj/item/assembly/timer{
 	pixel_x = 5;
@@ -36809,8 +36835,8 @@ aaa
 aaa
 aaa
 qLM
-wlM
-nYK
+iqq
+mFf
 sai
 dHJ
 voZ
@@ -48580,7 +48606,7 @@ cKe
 arw
 jqV
 arw
-uSd
+ggD
 vrd
 jzG
 whp
@@ -48840,8 +48866,8 @@ bwj
 ggD
 jNv
 urt
-rZf
-rZf
+cnC
+cnC
 cnC
 bIl
 oZn
@@ -49093,8 +49119,8 @@ nVb
 nVb
 nVb
 hya
-bwj
-ggD
+ajo
+riv
 jkz
 knW
 amY
@@ -49866,11 +49892,11 @@ hya
 hya
 bwj
 wdO
-xWR
+rZf
 dHP
 oFT
 oFT
-xWR
+uSd
 wdO
 oZn
 rhf
@@ -50172,7 +50198,7 @@ jxL
 hYW
 hYW
 hYW
-riv
+vnx
 vnx
 lkh
 rkx
@@ -50641,7 +50667,7 @@ vDw
 dHP
 kCZ
 lDa
-vDw
+udU
 wdO
 oZn
 rhf
@@ -53024,7 +53050,7 @@ nzO
 ilY
 bSH
 aiI
-ajo
+ajp
 ajF
 akl
 akD
@@ -57089,7 +57115,7 @@ jRN
 yeO
 mfL
 yeO
-yeO
+mgs
 mkx
 mkx
 mkx
@@ -57350,7 +57376,7 @@ mfL
 mfL
 mfL
 wTk
-yeO
+mgs
 mkx
 eqU
 fDn
@@ -58367,7 +58393,7 @@ pnY
 pnY
 pnY
 tml
-poy
+cRX
 poy
 tdX
 jRN
@@ -66679,7 +66705,7 @@ aqm
 anT
 anT
 aoT
-apa
+ssP
 anT
 anT
 anT
