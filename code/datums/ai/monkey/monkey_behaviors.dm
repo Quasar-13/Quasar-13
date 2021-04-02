@@ -178,8 +178,6 @@
 
 	living_pawn.face_atom(target)
 
-	living_pawn.set_combat_mode(TRUE)
-
 	// attack with weapon if we have one
 	if(weapon)
 		weapon.melee_attack_chain(living_pawn, target)
