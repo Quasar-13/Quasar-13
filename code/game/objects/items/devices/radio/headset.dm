@@ -271,8 +271,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = null
 	keyslot2 = null
 
-/obj/item/radio/headset/headset_cent/commander
+/obj/item/radio/headset/heads/headset_cent/commander
+	name = "\improper CentCom Commander headset"
+	desc = "A headset used by NT Commanders themselves."
+	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/heads/captain
+	keyslot2 = new /obj/item/encryptionkey/headset_cent
 
 /obj/item/radio/headset/headset_cent/alt
 	name = "\improper CentCom bowman headset"

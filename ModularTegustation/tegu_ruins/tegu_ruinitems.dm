@@ -26,11 +26,10 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/glass/bottle/fentanyl = 1,
-		/obj/item/reagent_containers/syringe = 1,
 		/obj/item/healthanalyzer/advanced = 1,
 		/obj/item/clothing/head/bio/kirie = 1,
 		/obj/item/defibrillator/compact/combat/loaded = 1,
-		/obj/item/reagent_containers/pill/patch/synthflesh = 3,
-		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+		/obj/item/hemostat/supermatter = 1,
+		/obj/item/scalpel/supermatter = 1,
 		/obj/item/clothing/neck/cloak/healercloak = 1)
 	generate_items_inside(items_inside,src)

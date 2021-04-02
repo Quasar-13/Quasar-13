@@ -46,7 +46,7 @@
 
 //Disabler Beam
 /obj/projectile/beam/disabler/beam
-	name = "heavy disabler beam"
+	name = "disabler beam"
 	icon_state = "omnilaser"
 	hitscan = TRUE
 	damage = 20
@@ -64,6 +64,7 @@
 	impact_light_range = 2.5
 	impact_light_color_override = COLOR_CYAN
 
+
 // Svet's Disabler
 /obj/item/gun/energy/disabler/svet_disabler
 	name = "Brass Ray"
@@ -79,3 +80,40 @@
 	flight_y_offset = 10
 	selfcharge = 1
 	w_class = WEIGHT_CLASS_SMALL
+
+
+//Wetwork Energy Sniper
+/obj/item/gun/energy/sniper/security
+	name = "wetwork sniper rifle"
+	desc = "An advanced piece of weaponry forged by NT to terminate troublemakers."
+	ammo_type = list(/obj/item/ammo_casing/energy/sniper, /obj/item/ammo_casing/energy/sniper/disable)
+
+/obj/item/gun/energy/sniper/security/Initialize()
+	. = ..()
+	fire_delay = 30
+
+/obj/item/ammo_casing/energy/sniper/disable
+	projectile_type = /obj/projectile/beam/laser/sniper/disable
+	select_name = "anti-personnel"
+	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/obj/projectile/beam/laser/sniper/disable
+	name = "heavy disabler beam"
+	icon_state = "omnilaser"
+	light_color = COLOR_CYAN
+	hitscan = TRUE
+	damage = 80
+	damage_type = STAMINA
+	flag = ENERGY
+	hitsound = 'sound/weapons/tap.ogg'
+	eyeblur = 0
+	hitscan_light_intensity = 2
+	hitscan_light_range = 0.75
+	hitscan_light_color_override = COLOR_CYAN
+	muzzle_flash_intensity = 4
+	muzzle_flash_range = 2
+	muzzle_flash_color_override = COLOR_CYAN
+	impact_light_intensity = 6
+	impact_light_range = 2.5
+	impact_light_color_override = COLOR_CYAN
+
