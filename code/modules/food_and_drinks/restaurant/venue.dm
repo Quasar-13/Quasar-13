@@ -54,7 +54,6 @@
 	if (initial(customer_type.is_unique))
 		customer_types -= customer_type
 
-	var/mob/living/simple_animal/robot_customer/new_customer = new /mob/living/simple_animal/robot_customer(get_turf(restaurant_portal), customer_type, src)
 
 /datum/venue/proc/order_food(mob/living/simple_animal/robot_customer/customer_pawn, datum/customer_data/customer_data)
 	return
