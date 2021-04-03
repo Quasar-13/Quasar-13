@@ -44,6 +44,9 @@
 /datum/customer_data/proc/get_overlays(mob/living/simple_animal/robot_customer/customer)
 	return
 
+/datum/customer_data/proc/get_underlays(mob/living/simple_animal/robot_customer/customer)
+	return
+
 /datum/customer_data/american
 	nationality = "Space-American"
 	orderable_objects = list(
