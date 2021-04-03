@@ -73,6 +73,7 @@
 		/datum/customer_data/italian = 30,
 		/datum/customer_data/italian/godfather = 30,
 		/datum/customer_data/french = 30,
+		/datum/customer_data/mexican = 40
 	)
 
 /datum/venue/bar/order_food(mob/living/simple_animal/robot_customer/customer_pawn, datum/customer_data/customer_data)
