@@ -146,7 +146,7 @@
 /area/mine/eva)
 "ei" = (
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "ej" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Mining Station Mech Bay";
@@ -255,11 +255,11 @@
 /obj/structure/sign/warning/docking,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "eS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "eT" = (
 /obj/item/beacon,
 /obj/effect/turf_decal/tile/purple{
@@ -268,15 +268,17 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "eU" = (
+/obj/machinery/airalarm{
+	pixel_y = 23
+	},
+/obj/machinery/computer/shuttle/mining{
+	req_access = null
+	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
-	},
-/obj/structure/chair/stool,
-/obj/machinery/airalarm{
-	pixel_y = 23
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -411,10 +413,10 @@
 	width = 7
 	},
 /turf/open/floor/plasteel,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "ft" = (
 /turf/open/floor/plasteel,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "fu" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -2378,13 +2380,21 @@
 	width = 7
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/underground/unexplored/rivers)
+/area/mine/explored)
 "Bl" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
 	name = "Lavaland Shuttle Airlock"
+	},
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 3;
+	height = 7;
+	id = "lavaland_common_away";
+	name = "Mining base public dock";
+	width = 7
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -2559,6 +2569,12 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
+/area/mine/living_quarters)
+"CO" = (
+/obj/machinery/computer/shuttle/mining/common{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
 /area/mine/living_quarters)
 
 (1,1,1) = {"
@@ -10754,7 +10770,7 @@ kI
 jc
 vW
 xn
-kI
+CO
 xn
 kB
 BB
@@ -13570,7 +13586,7 @@ ak
 ak
 ak
 ak
-ak
+jc
 jc
 jc
 jc
@@ -13827,7 +13843,7 @@ ak
 ak
 ak
 ak
-ak
+jc
 jz
 mj
 on
@@ -14084,7 +14100,7 @@ ak
 ak
 ak
 ak
-ak
+jc
 jA
 jJ
 jJ
@@ -14341,7 +14357,7 @@ ak
 ak
 ak
 ak
-ak
+jc
 jC
 mn
 ou
