@@ -37,7 +37,7 @@
 	///Base icon for the customer
 	var/base_icon = "amerifat"
 	///Sound to use when this robot type speaks
-	var/speech_sound = 'sound/creatures/tourists/tourist_talk.ogg'
+	var/speech_sound = 'sound/creatures/tourist/tourist_talk.ogg'
 	/// Is this unique once per venue?
 	var/is_unique = FALSE
 
@@ -111,7 +111,7 @@
 	leave_mad_lines = list("Sacre bleu!", "Merde! This place is shittier than the Rhine!")
 	leave_happy_lines = list("Hon hon hon.", "A good effort.")
 	wait_for_food_lines = list("Hon hon hon")
-	speech_sound = 'sound/creatures/tourists/tourist_talk_french.ogg'
+	speech_sound = 'sound/creatures/tourist/tourist_talk_french.ogg'
 	friendly_pull_line = "Your filthy hands on my outfit? Yegh, fine."
 	first_warning_line = "Get your hands off of me!"
 	second_warning_line = "Do not touch me you filthy animal, last warning!"
