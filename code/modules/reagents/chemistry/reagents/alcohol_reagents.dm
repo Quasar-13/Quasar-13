@@ -163,6 +163,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "glass of whiskey"
 	glass_desc = "The silky, smokey whiskey goodness inside the glass makes the drink look very classy."
 	shot_glass_icon_state = "shotglassbrown"
+	glass_price = DRINK_PRICE_STOCK
 
 /datum/reagent/consumable/ethanol/whiskey/kong
 	name = "Kong"
@@ -355,6 +356,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "glass of tequila"
 	glass_desc = "Now all that's missing is the weird colored shades!"
 	shot_glass_icon_state = "shotglassgold"
+	glass_price = DRINK_PRICE_STOCK
 
 /datum/reagent/consumable/ethanol/vermouth
 	name = "Vermouth"
