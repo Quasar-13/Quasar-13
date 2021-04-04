@@ -21,7 +21,7 @@
 	subcategory = CAT_BURGER
 
 //BREADS
-/datum/crafting_recipe/food/meatbread
+/datum/crafting_recipe/food/sausagebread
 	name = "Sausage bread"
 	reqs = list(
 		/obj/item/food/bread/plain = 1,
@@ -31,7 +31,7 @@
 	subcategory = CAT_BREAD
 
 //EGGS
-/datum/crafting_recipe/food/friedegg
+/datum/crafting_recipe/food/sausagedegg
 	name = "Egg with sausage"
 	reqs = list(
 		/obj/item/food/sausage = 1,
