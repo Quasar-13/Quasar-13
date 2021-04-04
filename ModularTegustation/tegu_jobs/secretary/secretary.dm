@@ -29,3 +29,10 @@
 	belt = /obj/item/pda/captain
 	r_pocket = /obj/item/kitchen/knife/letter_opener
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced/command = 1, /obj/item/workplacecapsule/command = 1)
+
+
+
+/obj/effect/landmark/start/secretary
+	name = "Secretary"
+	icon_state = "Secretary"
+
