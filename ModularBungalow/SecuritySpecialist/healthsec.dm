@@ -40,4 +40,3 @@
 /obj/item/clothing/glasses/healthsec/Destroy()
 	remove_sensors()
 	return ..()
-
