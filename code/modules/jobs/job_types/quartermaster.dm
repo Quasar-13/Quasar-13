@@ -2,7 +2,7 @@
 	title = "Quartermaster"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list("Captain")
-	head_announce = list(RADIO_CHANNEL_SERVICE)
+	head_announce = list(RADIO_CHANNEL_SUPPLY)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
