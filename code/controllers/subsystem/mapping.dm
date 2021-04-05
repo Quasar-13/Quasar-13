@@ -279,6 +279,9 @@ Used by the AI doomsday and the self-destruct nuke.
 	else if(config.minetype == "icemoon")
 		LoadGroup(FailedZs, "Icemoon", "map_files/Mining", "Icemoon.dmm", default_traits = ZTRAITS_ICEMOON)
 
+	else if(config.minetype == "jungle")
+		LoadGroup(FailedZs, "Jungle", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
+
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif
