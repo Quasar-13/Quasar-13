@@ -1060,25 +1060,11 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/machinery/airalarm{
-	pixel_y = 23
-	},
-/obj/machinery/iv_drip,
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
+/obj/structure/closet/crate/freezer,
+/obj/effect/spawner/lootdrop/memeorgans,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "dm" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
@@ -1086,17 +1072,12 @@
 /area/mine/living_quarters)
 "dn" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/item/storage/firstaid/toxin,
+/obj/item/healthanalyzer,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "do" = (
@@ -1233,10 +1214,16 @@
 /area/mine/living_quarters)
 "dE" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular{
+	pixel_x = -3
+	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
+	},
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid{
+	pixel_x = 3
 	},
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
@@ -4093,6 +4080,20 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/mine/laborcamp/security)
+"zs" = (
+/obj/machinery/airalarm{
+	pixel_y = 23
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/structure/bed/roller,
+/obj/machinery/iv_drip,
+/turf/open/floor/plasteel/white,
+/area/mine/living_quarters)
 "zT" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/loading_area{
@@ -4396,12 +4397,6 @@
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
 "Ho" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
@@ -4535,6 +4530,15 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+/area/mine/living_quarters)
+"Ln" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "Lu" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -4733,6 +4737,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+"Qm" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/structure/table/optable,
+/turf/open/floor/plasteel/white,
+/area/mine/living_quarters)
 "Qo" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -4877,6 +4891,18 @@
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
+/area/mine/living_quarters)
+"TD" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "TJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5259,6 +5285,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+"ZR" = (
+/obj/structure/cable,
+/obj/effect/spawner/randomarcade{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/mine/living_quarters)
 
 (1,1,1) = {"
 aa
@@ -10883,7 +10916,7 @@ cG
 QQ
 Hd
 qt
-rj
+ZR
 Gn
 cM
 VY
@@ -13964,7 +13997,7 @@ aj
 aj
 aj
 ab
-ab
+cM
 cQ
 cQ
 cQ
@@ -14219,10 +14252,10 @@ aD
 aj
 aj
 aj
-aj
-aj
+ab
 ab
 cM
+zs
 dl
 dB
 cM
@@ -14476,10 +14509,10 @@ aD
 aD
 aj
 aj
-aj
-aj
+ab
 ab
 cR
+Ln
 dm
 dC
 dQ
@@ -14733,10 +14766,10 @@ aD
 aD
 aj
 aj
-aj
-aj
+ab
 ab
 cR
+Qm
 Ho
 dD
 dR
@@ -14990,10 +15023,10 @@ aD
 aD
 aD
 aj
-aj
-ai
 ad
+ab
 cM
+TD
 dn
 dE
 dQ
@@ -15248,7 +15281,7 @@ aD
 aD
 aj
 aj
-ai
+ab
 cM
 cM
 cM
