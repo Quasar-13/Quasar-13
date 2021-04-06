@@ -201,6 +201,18 @@
 	set_vehicle_dir_offsets(EAST, -18, 0)
 	set_vehicle_dir_offsets(WEST, -18, 0)
 
+/datum/component/riding/vehicle/fighter
+	vehicle_move_delay = 0.5
+	override_allow_spacemove = TRUE
+	ride_check_flags = RIDER_NEEDS_LEGS | RIDER_NEEDS_ARMS | UNBUCKLE_DISABLED_RIDER
+
+/datum/component/riding/vehicle/fighter/handle_specials()
+	. = ..()
+	set_vehicle_dir_offsets(NORTH, -32, -32)
+	set_vehicle_dir_offsets(SOUTH, -32, -32)
+	set_vehicle_dir_offsets(EAST, -32, -32)
+	set_vehicle_dir_offsets(WEST, -32, -32)
+
 /datum/component/riding/vehicle/speedwagon
 	vehicle_move_delay = 0
 
