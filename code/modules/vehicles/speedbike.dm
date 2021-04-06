@@ -21,6 +21,27 @@
 	icon_state = "speedbike_red"
 	overlay_state = "cover_red"
 
+
+//Fighter
+/obj/vehicle/ridden/fighter
+	name = "Fighterjet"
+	icon = 'icons/obj/car.dmi'
+	icon_state = "jet"
+	layer = LYING_MOB_LAYER
+	pixel_y = -48
+	pixel_x = -48
+
+/obj/vehicle/ridden/fighter/Initialize()
+	. = ..()
+	AddElement(/datum/element/ridable, /datum/component/riding/vehicle/speedbike)
+
+/obj/vehicle/ridden/fighter/Move(newloc,move_dir)
+	if(has_buckled_mobs())
+		new /obj/effect/temp_visual/dir_setting/speedbike_trail(loc,move_dir)
+	return ..()
+
+
+
 //BM SPEEDWAGON
 
 /obj/vehicle/ridden/speedwagon
