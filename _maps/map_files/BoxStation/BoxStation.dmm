@@ -6251,8 +6251,12 @@
 /area/space/nearstation)
 "aqJ" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/airlock/external{
+	name = "Port Docking Bay 1";
+	safety_mode = 1
+	},
 /turf/open/floor/plating,
-/area/maintenance/port/fore)
+/area/space/nearstation)
 "aqK" = (
 /obj/structure/chair/stool,
 /obj/effect/decal/cleanable/dirt,
@@ -7350,10 +7354,6 @@
 /area/maintenance/starboard/fore)
 "auz" = (
 /obj/structure/table,
-/obj/item/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
 /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
@@ -24138,6 +24138,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
 "buu" = (
@@ -24236,6 +24239,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
@@ -44111,7 +44117,7 @@
 /area/science/mixing)
 "gCG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/closed/wall/material,
+/turf/closed/wall,
 /area/science/nanite)
 "gDe" = (
 /obj/machinery/light{
@@ -44267,6 +44273,14 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/chapel/office)
+"gKG" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "gLd" = (
 /obj/machinery/door/airlock/research{
 	name = "Nanites Lab";
@@ -44275,11 +44289,8 @@
 /turf/open/floor/plasteel/white,
 /area/science/nanite)
 "gLH" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
+/turf/open/space/basic,
+/area/space/nearstation)
 "gMc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -45544,7 +45555,7 @@
 /area/engine/atmos)
 "ioD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/closed/wall/material,
+/turf/closed/wall,
 /area/science/nanite)
 "ioS" = (
 /obj/structure/sign/departments/cargo,
@@ -47778,7 +47789,7 @@
 	pixel_x = -20
 	},
 /obj/structure/cable,
-/turf/closed/wall/material,
+/turf/closed/wall,
 /area/science/nanite)
 "lxD" = (
 /obj/machinery/firealarm{
@@ -48346,8 +48357,18 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "mfk" = (
-/turf/closed/wall/material,
-/area/science/nanite)
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/machinery/door/airlock/external{
+	name = "Port Docking Bay 1";
+	safety_mode = 1
+	},
+/obj/machinery/navbeacon/wayfinding{
+	location = "Arrival Shuttle"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "mgy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48579,6 +48600,7 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "myr" = (
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/space/nearstation)
 "myx" = (
@@ -49560,6 +49582,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"nPp" = (
+/obj/structure/table,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "nPr" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -57052,7 +57078,7 @@
 /area/security/prison)
 "yiW" = (
 /obj/structure/disposalpipe/segment,
-/turf/closed/wall/material,
+/turf/closed/wall,
 /area/science/nanite)
 "yjr" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -69780,7 +69806,7 @@ aaa
 aaf
 aaf
 aaf
-aaf
+gLH
 alU
 atJ
 amC
@@ -70036,8 +70062,8 @@ aaa
 aaa
 aaa
 myr
-alU
-alU
+ali
+ali
 alU
 aCW
 amC
@@ -70292,10 +70318,10 @@ aaa
 aaa
 aaa
 aaa
-myr
 aqJ
 amC
-gLH
+mfk
+amC
 aol
 aol
 aol
@@ -101391,9 +101417,9 @@ aaa
 alO
 apD
 aEl
-gta
-xVz
-gta
+anf
+arx
+anf
 anf
 alP
 alP
@@ -101648,10 +101674,10 @@ aaa
 alP
 bLf
 anf
-auz
+gKG
 bey
 bey
-gta
+anf
 alP
 vae
 anf
@@ -101905,10 +101931,10 @@ aaf
 alO
 aoQ
 anf
-asA
+nPp
 awC
-aya
-gta
+nPp
+anf
 alP
 aIG
 anf
@@ -102162,9 +102188,9 @@ alP
 alP
 alP
 aqB
-xVz
-gta
-gta
+arx
+anf
+anf
 anf
 alP
 aNN
@@ -104774,7 +104800,7 @@ bnk
 bpo
 bvg
 bBD
-mfk
+dYq
 gwd
 hZk
 hZk
