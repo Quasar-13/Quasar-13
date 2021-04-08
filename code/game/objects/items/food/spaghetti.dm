@@ -8,13 +8,12 @@
 	microwaved_type = /obj/item/food/spaghetti/boiledspaghetti
 	tastes = list("pasta" = 1)
 	foodtypes = GRAIN
-	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/spaghetti/Initialize()
 	. = ..()
 	if(!microwaved_type) // This isn't cooked, why would you put uncooked spaghetti in your pocket?
 		var/list/display_message = list(
-			"<span class='notice'>Something wet falls out of their pocket and hits the ground. Is that... [name]?</span>",//TG coders are fucking lunatics keeping spaghetti in their pockets
+			"<span class='notice'>Something wet falls out of their pocket and hits the ground. Is that... [name]?</span>",
 			"<span class='warning'>Oh shit! All your pocket [name] fell out!</span>")
 		AddComponent(/datum/component/spill, display_message, 'sound/effects/splat.ogg')
 

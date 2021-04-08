@@ -8,8 +8,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 7, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("leaves" = 1)
 	foodtypes = VEGETABLES
-	eatverbs = list("devour","nibble","gnaw","gobble","chomp") //what the fuck
-	venue_value = FOOD_PRICE_NORMAL
+	eatverbs = list("devour","nibble","gnaw","gobble","chomp") //who the fuck gnaws and devours on a salad
 
 /obj/item/food/salad/aesirsalad
 	name = "\improper Aesir salad"
