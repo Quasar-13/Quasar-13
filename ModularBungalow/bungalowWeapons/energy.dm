@@ -19,6 +19,19 @@
 	selfcharge = 1
 
 
+//Miner's Laser pistol
+/obj/item/gun/energy/e_gun/miner
+	name = "\improper E-224 Mining Pistol"
+	desc = "Nanotrasen’s standard issue mining beam pistol."
+	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
+	icon_state = "mining"
+	inhand_icon_state = "gun"
+	pin = /obj/item/firing_pin/explorer
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun, /obj/item/ammo_casing/energy/kinetic)
+	w_class = WEIGHT_CLASS_SMALL
+	cell_type = /obj/item/stock_parts/cell/mini_egun
+	selfcharge = 1
+
 
 //X-02 Pulse Disabler Rifle
 
