@@ -84,7 +84,7 @@
 
 //Wetwork Energy Sniper
 /obj/item/gun/energy/sniper/security
-	name = "wetwork sniper rifle"
+	name = "X-36 Anti-Personnel Rifle"
 	desc = "An advanced piece of weaponry forged by NT to terminate troublemakers."
 	ammo_type = list(/obj/item/ammo_casing/energy/sniper, /obj/item/ammo_casing/energy/sniper/disable)
 
@@ -94,7 +94,7 @@
 
 /obj/item/ammo_casing/energy/sniper/disable
 	projectile_type = /obj/projectile/beam/laser/sniper/disable
-	select_name = "anti-personnel"
+	select_name = "sleep"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/projectile/beam/laser/sniper/disable
