@@ -18,7 +18,7 @@
 
 
 /obj/item/storage/box/captain
-	name = "Energy Gun, Standard Issues"
+	name = "Energy Gun, Standard Issue"
 	desc = "The classic energy weapon used for ages by NT captains."
 
 /obj/item/storage/box/captain/PopulateContents()

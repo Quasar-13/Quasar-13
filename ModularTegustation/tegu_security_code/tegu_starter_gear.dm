@@ -179,7 +179,7 @@
 
 // Tegustation Heads of Staff edit: Adding the gun here instead of a /TG/ file
 /obj/item/gun/energy/disabler/head
-	name = "miniature disabler"
+	name = "L-623 Disabler Revolver"
 	desc = "A small disabler meant for the protection of the Heads of Staff."
 	icon_state = "mini"
 	inhand_icon_state = "gun"

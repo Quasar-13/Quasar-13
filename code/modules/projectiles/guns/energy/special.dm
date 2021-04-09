@@ -1,5 +1,5 @@
 /obj/item/gun/energy/ionrifle
-	name = "ion rifle"
+	name = "L-691 Ion Rifle"
 	desc = "A man-portable anti-armor weapon designed to disable mechanical threats at range."
 	icon_state = "ionrifle"
 	inhand_icon_state = null	//so the human update icon uses the icon_state instead.
@@ -17,7 +17,7 @@
 	return
 
 /obj/item/gun/energy/ionrifle/carbine
-	name = "ion carbine"
+	name = "L-791 Ion Carbine"
 	desc = "The MK.II Prototype Ion Projector is a lightweight carbine version of the larger ion rifle, built to be ergonomic and efficient."
 	icon_state = "ioncarbine"
 	w_class = WEIGHT_CLASS_BULKY
@@ -303,7 +303,7 @@
 	return
 
 /obj/item/gun/energy/temperature
-	name = "temperature gun"
+	name = "L-795 Temperature Rifle"
 	icon_state = "freezegun"
 	desc = "A gun that changes temperatures. Comes with a collapsible stock."
 	w_class = WEIGHT_CLASS_NORMAL
@@ -312,7 +312,7 @@
 	pin = null
 
 /obj/item/gun/energy/temperature/security
-	name = "security temperature gun"
+	name = "L-795 Temperature Rifle"
 	desc = "A weapon that can only be used to its full potential by the truly robust."
 	pin = /obj/item/firing_pin
 
