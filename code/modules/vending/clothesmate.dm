@@ -116,6 +116,7 @@
 					/obj/item/clothing/accessory/armband/purple = 4,
 					/obj/item/clothing/accessory/armband/green = 4,
 					/obj/item/clothing/accessory/armband/pink = 4,
+					/obj/item/clothing/accessory/armband = 4,
 		            /obj/item/clothing/shoes/sandal/digitigrade = 1,  // Tegustation digitigrade edit: Adding the clothing to vending machines
 					/obj/item/clothing/shoes/sneakers/brown/digitigrade = 3,  // Tegustation digitigrade edit: Adding the clothing to vending machines
 		            /obj/item/clothing/suit/toggle/suspenders/gray = 2)
