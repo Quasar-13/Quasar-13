@@ -118,9 +118,11 @@
 	var/mask_type = /obj/item/clothing/mask/breath
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
+	var/light_type = /obj/item/flashlight/glowstick
 
 /obj/item/storage/box/survival/PopulateContents()
 	new mask_type(src)
+	new light_type(src)
 	if(!isnull(medipen_type))
 		new medipen_type(src)
 
@@ -144,6 +146,7 @@
 // Engineer survival box
 /obj/item/storage/box/survival/engineer
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
+	light_type = /obj/item/flashlight
 
 /obj/item/storage/box/survival/engineer/radio/PopulateContents()
 	..() // we want the regular items too.
