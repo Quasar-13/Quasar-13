@@ -166,7 +166,7 @@
 		var/has_department = FALSE
 		for(var/department in departments)
 			var/list/jobs = departments[department]
-			if(rank in jobs || (t.fields["truerank"] && (t.fields["truerank"] in jobs)))//bungalow edit - alt job titles
+			if((rank in jobs) || (truerank in jobs))//bungalow edit - alt job titles
 				if(!manifest_out[department])
 					manifest_out[department] = list()
 				manifest_out[department] += list(list(
@@ -229,11 +229,11 @@
 		else
 			assignment = "Unassigned"
 
-//Tegu edit - Alt job titles
-		if(C && C.prefs && C.prefs.alt_titles_preferences[assignment])
-			trueassignment = assignment
-			assignment = C.prefs.alt_titles_preferences[assignment]
-//Tegu edit end
+//Bungalow edit - Alt job titles
+	trueassignment = assignment
+	if(C && C.prefs && C.prefs.alt_titles_preferences[assignment])
+		assignment = C.prefs.alt_titles_preferences[assignment]
+//Bungalow edit end
 
 		var/static/record_id_num = 1001
 		var/id = num2hex(record_id_num++,6)
