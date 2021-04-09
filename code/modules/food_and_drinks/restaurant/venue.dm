@@ -35,25 +35,8 @@
 
 ///Spawns a new customer at the portal
 /datum/venue/proc/create_new_customer()
-	var/list/customer_types_to_choose = customer_types
-	var/datum/customer_data/customer_type
-
-	// In practice, the list will never run out, but this is for sanity.
-	while (customer_types_to_choose.len)
-		customer_type = pickweight(customer_types_to_choose)
-
-		var/datum/customer_data/customer = SSrestaurant.all_customers[customer_type]
-		if (customer.can_use(src))
-			break
-
-		// Only copy the list once, so that we're not mutating ourselves.
-		if (customer_types_to_choose == customer_types)
-			customer_types_to_choose = customer_types.Copy()
-			customer_types_to_choose -= customer_type
-
-	if (initial(customer_type.is_unique))
-		customer_types -= customer_type
-
+	var/mob/living/simple_animal/robot_customer/new_customer = new /mob/living/simple_animal/robot_customer(get_turf(restaurant_portal), pickweight(customer_types), src)
+	current_visitors += new_customer
 
 /datum/venue/proc/order_food(mob/living/simple_animal/robot_customer/customer_pawn, datum/customer_data/customer_data)
 	return
