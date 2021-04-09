@@ -230,9 +230,9 @@
 			assignment = "Unassigned"
 
 //Bungalow edit - Alt job titles
-	trueassignment = assignment
-	if(C && C.prefs && C.prefs.alt_titles_preferences[assignment])
-		assignment = C.prefs.alt_titles_preferences[assignment]
+		if(C && C.prefs && C.prefs.alt_titles_preferences[assignment])
+			trueassignment = assignment
+			assignment = C.prefs.alt_titles_preferences[assignment]
 //Bungalow edit end
 
 		var/static/record_id_num = 1001
