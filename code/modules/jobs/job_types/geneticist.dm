@@ -1,10 +1,10 @@
 /datum/job/geneticist
 	title = "Geneticist"
-	department_head = list("Research Director or the Chief Medical Officer, depending on which department you reside in")
+	department_head = list("Research Director")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the research director"
+	supervisors = "the research director or the chief medical officer, depending on which department you reside in"
 	selection_color = "#ffeeff"
 	exp_type = EXP_TYPE_CREW
 	exp_requirements = 60
