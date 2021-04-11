@@ -747,6 +747,13 @@
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stock_parts/capacitor = 1)
 
+
+//Newbox exclusive
+/obj/item/circuitboard/machine/stasis/old
+	name = "\improper Lifeform Stasis Unit (Machine Board)"
+	build_path = /obj/machinery/stasis/old
+
+
 /obj/item/circuitboard/machine/medipen_refiller
 	name = "Medipen Refiller (Machine Board)"
 	icon_state = "medical"
@@ -1189,6 +1196,12 @@
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stock_parts/matter_bin = 2)
 	needs_anchored = FALSE
+
+/obj/item/circuitboard/machine/restaurant_portal
+	name = "Restaurant Portal"
+	icon_state = "service"
+	build_path = /obj/machinery/restaurant_portal
+	needs_anchored = TRUE
 
 /obj/item/circuitboard/machine/abductor
 	name = "alien board (Report This)"

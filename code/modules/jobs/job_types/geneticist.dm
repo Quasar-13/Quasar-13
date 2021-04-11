@@ -4,7 +4,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the research director"
+	supervisors = "the research director or the chief medical officer, depending on which department you reside in"
 	selection_color = "#ffeeff"
 	exp_type = EXP_TYPE_CREW
 	exp_requirements = 60
@@ -24,7 +24,7 @@
 	jobtype = /datum/job/geneticist
 
 	belt = /obj/item/pda/geneticist
-	ears = /obj/item/radio/headset/headset_sci
+	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/rnd/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit =  /obj/item/clothing/suit/toggle/labcoat/genetics

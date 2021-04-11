@@ -281,6 +281,36 @@
 	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white and blue."
 	icon_state = "medblueband"
 
+/obj/item/clothing/accessory/armband/black
+	name = "black armband"
+	desc = "A fancy black armband!"
+	icon_state = "blackband"
+
+/obj/item/clothing/accessory/armband/blue
+	name = "blue armband"
+	desc = "A fancy blue armband!"
+	icon_state = "blueband"
+
+/obj/item/clothing/accessory/armband/yellow
+	desc = "A fancy yellow armband!"
+	icon_state = "cargoband"
+
+/obj/item/clothing/accessory/armband/white
+	desc = "A fancy white armband!"
+	icon_state = "medband"
+
+/obj/item/clothing/accessory/armband/purple
+	desc = "A fancy purple armband!"
+	icon_state = "rndband"
+
+/obj/item/clothing/accessory/armband/green
+	desc = "A fancy green armband!"
+	icon_state = "greenband"
+
+/obj/item/clothing/accessory/armband/pink
+	desc = "A fancy pink armband!"
+	icon_state = "pinkband"
+
 //////////////
 //OBJECTION!//
 //////////////

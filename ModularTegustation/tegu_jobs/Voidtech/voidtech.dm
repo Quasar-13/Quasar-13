@@ -25,7 +25,7 @@
 	name = "Void Technician"
 	jobtype = /datum/job/tegu/voidtech
 
-	belt = /obj/item/storage/belt/utility/full/engi
+	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/pda/engineering
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
@@ -43,9 +43,4 @@
 //Spawn Point
 /obj/effect/landmark/start/voidtech
 	name = "Void Technician"
-	icon_state = "Station Engineer"
-
-/obj/effect/landmark/start/station_engineer/Initialize()
-	. = ..()
-	var/turf/T = get_turf(src)
-	new /obj/effect/landmark/start/voidtech(T)
+	icon_state = "Void Technician"

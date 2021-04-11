@@ -18,7 +18,7 @@
 
 
 /obj/item/storage/box/captain
-	name = "Energy Gun, Standard Issues"
+	name = "Energy Gun, Standard Issue"
 	desc = "The classic energy weapon used for ages by NT captains."
 
 /obj/item/storage/box/captain/PopulateContents()
@@ -42,18 +42,17 @@
 
 /obj/item/storage/box/captain/pl/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/PL14(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-
 
 
 /obj/item/storage/box/captain/revolver
-	name = "S&W 500 Magnum."
-	desc = "The gun for a bombastic captain that loves to shoot to kill. Captain Smith and his 7 commandos take no prisoners."
+	name = "Chiappa Rhino."
+	desc = "The gun for a bombastic captain that loves to shoot to kill. Captain Chiappa and his 6 commandos take no prisoners."
 
 /obj/item/storage/box/captain/revolver/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/sw500(src)
-
+	new /obj/item/gun/ballistic/revolver/rhino(src)
+	new /obj/item/ammo_box/c38(src)
+	new /obj/item/ammo_box/c38(src)
+	new /obj/item/ammo_box/c38(src)
 
 
 /obj/item/storage/box/captain/rifle
@@ -66,9 +65,6 @@
 	new /obj/item/clothing/suit/armor/vest/russian_coat(src)
 	new /obj/item/clothing/head/ushanka(src)
 	new /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)

@@ -128,6 +128,10 @@
 			return get_all_centcom_access()
 		if("CentCom Commander")
 			return get_all_centcom_access()
+		if("Surgeon General")
+			return get_all_centcom_access()
+		if("Intelligence Officer")
+			return get_all_centcom_access()
 		if("Emergency Response Team Commander")
 			return get_ert_access("commander")
 		if("Security Response Officer")
@@ -384,7 +388,7 @@
 	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official") //Tegu edit right there
 
 /proc/get_all_centcom_jobs()
-	return list("Central Command","VIP Guest", "Surgeon General", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","Admiral","CentCom Commander","CentCom Bartender","Private Security Force")
+	return list("Central Command","VIP Guest", "Surgeon General", "Intelligence Officer", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","Admiral","CentCom Commander","CentCom Bartender","Private Security Force")
 
 /proc/get_all_syndicate_jobs()
 	return list("Syndicate Overlord", "Syndicate Mastermind", "Syndicate Admiral", "Syndicate Official", "Syndicate", "Syndicate Commander", "Syndicate Ship Captain")

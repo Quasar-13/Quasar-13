@@ -7,7 +7,7 @@
 	ammo_x_offset = 3
 
 /obj/item/gun/energy/tesla_revolver
-	name = "tesla gun"
+	name = "L-893 Tesla Revolver"
 	desc = "An experimental gun based on an experimental engine, it's about as likely to kill its operator as it is the target."
 	icon_state = "tesla"
 	inhand_icon_state = "tesla"
@@ -33,7 +33,7 @@
 	return
 
 /obj/item/gun/energy/disabler
-	name = "disabler"
+	name = "L-603 Disabler Magnum"
 	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
 	icon_state = "disabler"
 	inhand_icon_state = null

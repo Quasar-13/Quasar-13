@@ -1,5 +1,5 @@
 /obj/item/gun/energy/e_gun
-	name = "energy gun"
+	name = "X-06 Energy Rifle"
 	desc = "A basic hybrid energy gun with two settings: disable and kill."
 	icon_state = "energy"
 	w_class = WEIGHT_CLASS_BULKY
@@ -13,7 +13,7 @@
 	dual_wield_spread = 60
 
 /obj/item/gun/energy/e_gun/mini
-	name = "miniature energy gun"
+	name = "X-26 Energy Pistol"
 	desc = "A small, pistol-sized energy gun with a built-in flashlight. It has two settings: disable and kill."
 	icon_state = "mini"
 	inhand_icon_state = "gun"
@@ -31,14 +31,14 @@
 	return ..()
 
 /obj/item/gun/energy/e_gun/stun
-	name = "tactical energy gun"
+	name = "XX-01 Tactical Energy Rifle"
 	desc = "Military issue energy gun, is able to fire stun rounds."
 	icon_state = "energytac"
 	ammo_x_offset = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode/spec, /obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser)
 
 /obj/item/gun/energy/e_gun/old
-	name = "prototype energy gun"
+	name = "NT-P 01 Protoype energy gun"
 	desc = "NT-P:01 Prototype Energy Gun. Early stage development of a unique laser rifle that has multifaceted energy lens allowing the gun to alter the form of projectile it fires on command."
 	icon_state = "protolaser"
 	ammo_x_offset = 2
@@ -92,7 +92,7 @@
 	ammo_x_offset = 2
 
 /obj/item/gun/energy/e_gun/nuclear
-	name = "advanced energy gun"
+	name = "X-06N Nuclear Energy Rifle"
 	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
 	icon_state = "nucgun"
 	inhand_icon_state = "nucgun"

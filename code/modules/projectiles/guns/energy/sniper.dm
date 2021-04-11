@@ -1,5 +1,5 @@
 /obj/item/gun/energy/sniper
-	name = "energy sniper rifle"
+	name = "M76 Laser Rifle"
 	desc = "An advanced piece of weaponry forged on Mars in 40th Millenia."
 	icon_state = "sniper"
 	inhand_icon_state = "sniper"
@@ -9,7 +9,7 @@
 	fire_sound = 'sound/weapons/laser3.ogg'
 	fire_sound_volume = 90
 	vary_fire_sound = FALSE
-	pin = null
+	pin = /obj/item/firing_pin
 	cell_type = /obj/item/stock_parts/cell/energy_sniper
 	weapon_weight = WEAPON_HEAVY
 	can_flashlight = FALSE
@@ -27,11 +27,11 @@
 	fire_delay = 30
 
 /obj/item/gun/energy/sniper/pin
-	pin = /obj/item/firing_pin
+	name = "M76 Laser Rifle"
 
 /obj/item/ammo_casing/energy/sniper
 	projectile_type = /obj/projectile/beam/laser/sniper
-	select_name = "anti-vehicle"
+	select_name = "anti-personnel"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/projectile/beam/laser/sniper

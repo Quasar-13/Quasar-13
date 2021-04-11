@@ -185,7 +185,7 @@
 	suit = null
 	gloves = /obj/item/clothing/gloves/combat
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/night
-	r_hand = /obj/item/gun/energy/sniper/pin
+	r_hand = /obj/item/gun/energy/sniper
 	back = /obj/item/storage/backpack/cultpack
 	backpack_contents = list(/obj/item/storage/book/bible/omnissiah, /obj/item/book/granter/spell/omnissiah, /obj/item/organ/heart/cybernetic/tier4)
 
@@ -335,7 +335,7 @@
 	id = "mars_tech"
 	display_name = "Marsian Technology"
 	description = "A complicated technology, used by Marsian scientists and soldiers alike."
-	boost_item_paths = list(/obj/item/gun/energy/sniper, /obj/item/gun/energy/sniper/pin, /obj/item/organ/heart/cybernetic/tier4, /obj/item/organ/lungs/cybernetic/tier4, /obj/item/organ/cyberimp/chest/reviver/plus, /obj/item/organ/cyberimp/arm/surgery/plus)
+	boost_item_paths = list(/obj/item/gun/energy/sniper, /obj/item/gun/energy/sniper, /obj/item/organ/heart/cybernetic/tier4, /obj/item/organ/lungs/cybernetic/tier4, /obj/item/organ/cyberimp/chest/reviver/plus, /obj/item/organ/cyberimp/arm/surgery/plus)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	hidden = TRUE
 
