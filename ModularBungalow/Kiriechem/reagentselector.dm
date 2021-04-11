@@ -1,5 +1,8 @@
 /datum/chemical_reaction/chemre
-	var/part1 = pick(
+	var/part1
+	var/part2
+
+	part1 = pick(
 		/datum/reagent/acetone,
 		/datum/reagent/ammonia,
 		/datum/reagent/ash,
@@ -8,7 +11,8 @@
 		/datum/reagent/silver,
 		/datum/reagent/saltpetre)
 
-	var/part2 = pick(
+
+	part2 = pick(
 		/datum/reagent/acetone,
 		/datum/reagent/ammonia,
 		/datum/reagent/ash,
@@ -16,7 +20,6 @@
 		/datum/reagent/fuel/oil,
 		/datum/reagent/silver,
 		/datum/reagent/saltpetre)
-
 
 /datum/chemical_reaction/chemre/omnizine
 	results = list(/datum/reagent/medicine/omnizine = 2)
