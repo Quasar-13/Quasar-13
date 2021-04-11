@@ -61,6 +61,11 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	///the holodeck can load onto this turf if TRUE
 	var/holodeck_compatible = FALSE
 
+	/// If this turf contained an RCD'able object (or IS one, for walls)
+	/// but is now destroyed, this will preserve the value.
+	/// See __DEFINES/construction.dm for RCD_MEMORY_*.
+	var/rcd_memory
+
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list("x", "y", "z")
 	if(var_name in banned_edits)
