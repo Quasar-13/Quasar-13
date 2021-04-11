@@ -31,11 +31,19 @@
 	variance = 25
 	select_name = "scatter"
 
-/obj/item/ammo_casing/energy/laser/scatter/disabler
-	projectile_type = /obj/projectile/beam/disabler
+/obj/item/ammo_casing/energy/laser/scatter/close
+	projectile_type = /obj/projectile/beam/scatter
 	pellets = 3
 	variance = 15
+	select_name = "scatter"
+
+/obj/item/ammo_casing/energy/laser/scatter/disabler
+	projectile_type =/obj/projectile/beam/disabler/pellet
+	pellets = 7
+	variance = 20
+	e_cost = 150
 	harmful = FALSE
+	select_name = "blast"
 
 /obj/item/ammo_casing/energy/laser/heavy
 	projectile_type = /obj/projectile/beam/laser/heavylaser
