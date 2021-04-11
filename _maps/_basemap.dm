@@ -14,6 +14,7 @@
 		#include "map_files\PackedStation\PackedStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\OutpostStation\OutpostStation.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
