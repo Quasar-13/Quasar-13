@@ -1,6 +1,6 @@
 /datum/job/geneticist
 	title = "Geneticist"
-	department_head = list("Research Director")
+	department_head = list("Research Director or the Chief Medical Officer, depending on which department you reside in")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
