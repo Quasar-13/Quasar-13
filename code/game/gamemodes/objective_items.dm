@@ -37,11 +37,11 @@
 	difficulty = 10
 	excludefromjob = list("Head Of Security")
 
-/datum/objective_item/steal/hos2laser
-	name = "the head of security's X-02 disabler beam rifle."
-	targetitem = /obj/item/gun/energy/e_gun/hos2
+/datum/objective_item/steal/hoplaser
+	name = "the head of personnel's X-02 disabler shotgun."
+	targetitem = /obj/item/gun/energy/e_gun/hop
 	difficulty = 10
-	excludefromjob = list("Head Of Security")
+	excludefromjob = list("Head Of Personnel")
 
 /datum/objective_item/steal/handtele
 	name = "a hand teleporter."

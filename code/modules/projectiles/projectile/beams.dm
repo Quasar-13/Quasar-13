@@ -68,7 +68,7 @@
 /obj/projectile/beam/scatter
 	name = "laser pellet"
 	icon_state = "scatterlaser"
-	damage = 5
+	damage = 7
 
 /obj/projectile/beam/xray
 	name = "\improper X-ray beam"
@@ -98,6 +98,11 @@
 	tracer_type = /obj/effect/projectile/tracer/disabler
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
+
+/obj/projectile/beam/disabler/pellet
+	name = "disabler pellet"
+	icon_state = "scatterdisabler"
+	damage = 7
 
 /obj/projectile/beam/pulse
 	name = "pulse"
