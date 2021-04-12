@@ -1032,6 +1032,16 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
+/area/office/clown
+	name = "Clown's office"
+	icon_state = "clown"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/office/mime
+	name = "Mime's office"
+	icon_state ="mime"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
 /area/quartermaster/sorting
 	name = "Delivery Office"
 	icon_state = "cargo_delivery"
