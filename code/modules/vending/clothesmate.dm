@@ -109,6 +109,14 @@
 		            /obj/item/clothing/suit/apron/purple_bartender = 2,
 		            /obj/item/clothing/under/rank/civilian/bartender/purple = 2,
 		            /obj/item/clothing/suit/toggle/suspenders/blue = 2,
+		            /obj/item/clothing/accessory/armband/black = 4,
+					/obj/item/clothing/accessory/armband/blue = 4,
+					/obj/item/clothing/accessory/armband/yellow = 4,
+					/obj/item/clothing/accessory/armband/white = 4,
+					/obj/item/clothing/accessory/armband/purple = 4,
+					/obj/item/clothing/accessory/armband/green = 4,
+					/obj/item/clothing/accessory/armband/pink = 4,
+					/obj/item/clothing/accessory/armband = 4,
 		            /obj/item/clothing/shoes/sandal/digitigrade = 1,  // Tegustation digitigrade edit: Adding the clothing to vending machines
 					/obj/item/clothing/shoes/sneakers/brown/digitigrade = 3,  // Tegustation digitigrade edit: Adding the clothing to vending machines
 		            /obj/item/clothing/suit/toggle/suspenders/gray = 2)

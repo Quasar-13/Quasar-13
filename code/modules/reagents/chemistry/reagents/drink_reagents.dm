@@ -313,6 +313,7 @@
 	glass_icon_state = "arnold_palmer"
 	glass_name = "Arnold Palmer"
 	glass_desc = "You feel like taking a few golf swings after a few swigs of this."
+	glass_price = DRINK_PRICE_EASY
 
 /datum/reagent/consumable/tea/arnold_palmer/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
