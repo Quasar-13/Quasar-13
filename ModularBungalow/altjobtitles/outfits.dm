@@ -62,6 +62,7 @@
 /datum/outfit/job/doctor/nurse
  	name = "Medical Doctor (Nurse)"
  	head = /obj/item/clothing/head/nursehat
+ 	uniform = /obj/item/clothing/under/rank/medical/doctor/nurse
  	suit = null
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
@@ -84,3 +85,10 @@
 	r_pocket = /obj/item/stack/cable_coil
 	l_pocket = /obj/item/flashlight
 	l_hand = /obj/item/storage/bag/construction
+
+//Captain
+/datum/outfit/job/captain/commodore
+	name = "Captain (Commodore)"
+	head = /obj/item/clothing/head/centhat
+	uniform = /obj/item/clothing/under/rank/centcom/commander
+	suit = /obj/item/clothing/suit/armor/vest/centcom_formal
