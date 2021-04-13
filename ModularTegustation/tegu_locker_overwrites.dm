@@ -37,12 +37,12 @@
 	new /obj/item/clothing/shoes/laceup/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/captain/hop(src)
 	new /obj/item/clothing/under/misc/hopparade(src)
+	new /obj/item/gun/energy/e_gun/hop(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	new /obj/item/clothing/shoes/digicombat(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/security/head(src)
-	new /obj/item/gun/energy/e_gun/hos2(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/warden/Initialize()

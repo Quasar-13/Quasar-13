@@ -176,7 +176,7 @@
 
 
 /obj/item/organ/cyberimp/arm/gun/laser
-	name = "arm-mounted laser implant"
+	name = "Cybersun 'Dragon' laser-gun implant"
 	desc = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
 	icon_state = "arm_laser"
 	contents = newlist(/obj/item/gun/energy/laser/mounted)
@@ -191,7 +191,7 @@
 	laserphasergun.icon_state = icon_state
 
 /obj/item/organ/cyberimp/arm/gun/taser
-	name = "arm-mounted taser implant"
+	name = "Cybersun 'Stinger' taser-gun implant"
 	desc = "A variant of the arm cannon implant that fires electrodes and disabler shots. The cannon emerges from the subject's arm and remains inside when not in use."
 	icon_state = "arm_taser"
 	contents = newlist(/obj/item/gun/energy/e_gun/advtaser/mounted)
@@ -216,7 +216,7 @@
 	return 0
 
 /obj/item/organ/cyberimp/arm/esword
-	name = "arm-mounted energy blade"
+	name = "Cybersun 'Armblade' energy-sword implant"
 	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly blade of concentrated energy."
 	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight)
 
