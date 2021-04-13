@@ -25,18 +25,16 @@
 	name = "Chemical Researcher"
 	jobtype = /datum/job/tegu/chemre
 
-	l_pocket = /obj/item/pda/geneticist
-	ears = /obj/item/radio/headset/medsci
+	belt = /obj/item/pda/geneticist
+	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/research/chem
-	shoes = /obj/item/clothing/shoes/workboots
-	suit = /obj/item/clothing/suit/space/hardsuit/voidtech
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	suit = /obj/item/clothing/suit/toggle/labcoat/chemre
 
-	backpack = /obj/item/storage/backpack/industrial
-	satchel = /obj/item/storage/backpack/satchel/eng
-	duffelbag = /obj/item/storage/backpack/duffelbag/engineering
-	box = /obj/item/storage/box/survival/engineer
-	pda_slot = ITEM_SLOT_LPOCKET
-	backpack_contents = list(/obj/item/stack/rods/fifty)
+	backpack = /obj/item/storage/backpack/chemistry
+	satchel = /obj/item/storage/backpack/satchel/chem
+	duffelbag = /obj/item/storage/backpack/duffelbag/chemistry
+	box = /obj/item/storage/box/survival/medical
 
 
 //Spawn Point
