@@ -191,7 +191,7 @@
 
 
 /datum/chemical_reaction/beesplosion
-	required_reagents = list(/datum/reagent/consumable/honey = 1, /datum/reagent/medicine/strange_reagent = 1, /datum/reagent/uranium/radium = 1)
+	required_reagents = list(/datum/reagent/consumable/honey = 1, /datum/reagent/medicine/verafore = 1, /datum/reagent/uranium/radium = 1)
 
 /datum/chemical_reaction/beesplosion/on_reaction(datum/reagents/holder, created_volume)
 	var/location = holder.my_atom.drop_location()
