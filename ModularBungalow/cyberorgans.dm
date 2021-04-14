@@ -9,8 +9,8 @@
 	if(!organ)
 		organ = pick(ORGAN_SLOT_HEART, ORGAN_SLOT_LIVER, ORGAN_SLOT_LUNGS, ORGAN_SLOT_STOMACH, ORGAN_SLOT_TONGUE, ORGAN_SLOT_EARS, ORGAN_SLOT_EYES)
 	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/bodypart/old_part = H.get_bodypart(organ)
-	var/obj/item/bodypart/prosthetic
+	var/obj/item/organ/old_part = H.getorganslot(organ)
+	var/obj/item/organ/prosthetic
 	switch(organ)
 		if(ORGAN_SLOT_HEART)
 			prosthetic = new/obj/item/organ/heart/cybernetic(quirk_holder)
@@ -33,7 +33,7 @@
 		if(ORGAN_SLOT_EYES)
 			prosthetic = new/obj/item/organ/eyes/robotic/basic(quirk_holder)
 			slot_string = "eyes"
-	prosthetic.replace_limb(H)
+	prosthetic.Insert(H)
 	qdel(old_part)
 	H.regenerate_icons()
 
