@@ -114,8 +114,7 @@
 	qdel(src)
 
 /obj/item/weldingtool/attack(mob/living/carbon/human/H, mob/user)
-	if(!istype(H))
-		return ..()
+	return ..()
 
 /obj/item/weldingtool/afterattack(atom/O, mob/user, proximity)
 	. = ..()
