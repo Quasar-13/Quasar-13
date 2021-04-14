@@ -22,5 +22,12 @@
 	fire_sound = 'sound/weapons/taser2.ogg'
 	harmful = FALSE
 
+/obj/item/ammo_casing/energy/disabler/scatter
+	projectile_type = /obj/projectile/beam/disabler/pellet
+	select_name  = "blast"
+	e_cost = 50
+	fire_sound = 'sound/weapons/taser2.ogg'
+	harmful = FALSE
+
 /obj/item/ammo_casing/energy/disabler/hos
 	e_cost = 60

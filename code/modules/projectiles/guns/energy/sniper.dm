@@ -1,5 +1,5 @@
 /obj/item/gun/energy/sniper
-	name = "energy sniper rifle"
+	name = "M76 Laser Rifle"
 	desc = "An advanced piece of weaponry forged on Mars in 40th Millenia."
 	icon_state = "sniper"
 	inhand_icon_state = "sniper"
@@ -27,11 +27,11 @@
 	fire_delay = 30
 
 /obj/item/gun/energy/sniper/pin
-	name = "NT energy rifle"
+	name = "M76 Laser Rifle"
 
 /obj/item/ammo_casing/energy/sniper
 	projectile_type = /obj/projectile/beam/laser/sniper
-	select_name = "anti-vehicle"
+	select_name = "anti-personnel"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/projectile/beam/laser/sniper
