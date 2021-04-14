@@ -34,10 +34,10 @@
 
 //Verafore
 /datum/chemical_reaction/randomized/kiriechem/verafore
-	min_input_reagents = 10
-	max_input_reagents = 10
+	min_input_reagents = 7
+	max_input_reagents = 7
 
-	results = list(/datum/reagent/medicine/verafore = 10)
+	results = list(/datum/reagent/medicine/verafore = 7)
 
 //Giadone
 /datum/chemical_reaction/randomized/kiriechem/giadone
@@ -72,5 +72,5 @@
 	min_input_reagents = 6
 	max_input_reagents = 6
 
-	results = list(/datum/reagent/mutationtoxin = 4)
+	results = list(/datum/reagent/mutationtoxin = 6)
 
