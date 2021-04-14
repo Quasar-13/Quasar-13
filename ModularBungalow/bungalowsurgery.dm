@@ -10,6 +10,7 @@
 	lying_required = FALSE
 	self_operable = TRUE
 	possible_locs = list(BODY_ZONE_CHEST, BODY_ZONE_HEAD)
+	requires_bodypart_type = BODYPART_ROBOTIC
 
 //brute
 /datum/surgery/healing/brute/prosthetic
