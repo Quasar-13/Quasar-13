@@ -41,6 +41,10 @@
 	fair_market_price = 5 // He nodded, because he knew I was right. Then he swiped his credit card to pay me for arresting him.
 	payment_department = ACCOUNT_MED
 
+	//Variables for malfunction chances
+	var/failchance
+	var/successchance
+
 /obj/machinery/clonepod/Initialize()
 	. = ..()
 
@@ -73,6 +77,9 @@
 		efficiency += S.rating
 	for(var/obj/item/stock_parts/manipulator/P in component_parts)
 		speed_coeff += P.rating
+	for(var/obj/item/stock_parts/micro_laser/M in component_parts)
+		failchance = 25 / M.rating
+		successchance = 100 - failchance
 	heal_level = (efficiency * 15) + 10
 	if(heal_level < MINIMUM_HEAL_LEVEL)
 		heal_level = MINIMUM_HEAL_LEVEL
@@ -293,6 +300,8 @@
 			progress += (100 - MINIMUM_HEAL_LEVEL)
 			var/milestone = CLONE_INITIAL_DAMAGE / flesh_number
 			var/installed = flesh_number - unattached_flesh.len
+			if(prob(failchance*0.1))
+				traumatize(mob_occupant)
 
 			if((progress / milestone) >= installed)
 				// attach some flesh
@@ -300,10 +309,14 @@
 				if(isorgan(I))
 					var/obj/item/organ/O = I
 					O.organ_flags &= ~ORGAN_FROZEN
-					O.Insert(mob_occupant)
+					if(prob(successchance))
+						O.Insert(mob_occupant)
+						return
 				else if(isbodypart(I))
 					var/obj/item/bodypart/BP = I
-					BP.attach_limb(mob_occupant)
+					if(prob(successchance))
+						BP.attach_limb(mob_occupant)
+						return
 
 			use_power(7500) //This might need tweaking.
 
@@ -318,10 +331,14 @@
 				if(isorgan(i))
 					var/obj/item/organ/O = i
 					O.organ_flags &= ~ORGAN_FROZEN
-					O.Insert(mob_occupant)
+					if(prob(successchance))
+						O.Insert(mob_occupant)
+						return
 				else if(isbodypart(i))
 					var/obj/item/bodypart/BP = i
-					BP.attach_limb(mob_occupant)
+					if(prob(successchance))
+						BP.attach_limb(mob_occupant)
+						return
 
 			go_out()
 			log_cloning("[key_name(mob_occupant)] completed cloning cycle in [src] at [AREACOORD(src)].")
