@@ -5051,7 +5051,9 @@
 /turf/open/floor/plasteel/white,
 /area/science/research)
 "cmN" = (
-/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_access_txt = "47"
+	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -5348,6 +5350,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "cFJ" = (
@@ -8891,8 +8894,9 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "fDs" = (
-/turf/open/floor/plating,
-/area/hallway/secondary/entry)
+/obj/machinery/vending/wardrobe/sec_wardrobe,
+/turf/open/floor/plasteel,
+/area/security)
 "fDP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -16857,7 +16861,9 @@
 /turf/open/floor/plasteel,
 /area/security)
 "mJt" = (
-/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_access_txt = "29"
+	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -17102,8 +17108,6 @@
 /turf/open/space,
 /area/solar/port)
 "mUz" = (
-/obj/structure/cable,
-/obj/structure/cable,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 8
@@ -17440,10 +17444,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/storage/eva)
-"niE" = (
-/obj/effect/loot_site_spawner,
-/turf/open/floor/plating,
-/area/hallway/secondary/entry)
 "niR" = (
 /obj/machinery/button/door{
 	id = "cargounload";
@@ -18559,8 +18559,8 @@
 /turf/open/floor/circuit,
 /area/science/server)
 "obP" = (
-/turf/open/floor/plating,
-/area/space)
+/turf/closed/wall/r_wall,
+/area/lawoffice)
 "ocX" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -19686,6 +19686,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/machinery/vending/security,
 /turf/open/floor/plasteel,
 /area/security)
 "pev" = (
@@ -20551,7 +20552,7 @@
 "pJA" = (
 /obj/structure/shuttle/engine/heater,
 /turf/closed/wall,
-/area/space/nearstation)
+/area/maintenance/aft/secondary)
 "pJW" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 8
@@ -26064,8 +26065,9 @@
 /turf/open/floor/plasteel,
 /area/security/processing)
 "uir" = (
-/turf/open/floor/plating,
-/area/space/nearstation)
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/port)
 "ujc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -26213,6 +26215,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 10
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
 "unq" = (
@@ -27886,9 +27889,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security)
-"vSK" = (
-/turf/closed/wall,
-/area/space)
 "vSS" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -28333,7 +28333,7 @@
 "wny" = (
 /obj/effect/loot_site_spawner,
 /turf/open/floor/plating,
-/area/space/nearstation)
+/area/maintenance/aft/secondary)
 "wnI" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -61348,7 +61348,7 @@ fqo
 iYT
 jQR
 sbD
-jap
+fDs
 jap
 bhN
 jap
@@ -61614,7 +61614,7 @@ cKe
 arw
 jqV
 xcb
-ggD
+obP
 vrd
 azX
 whp
@@ -62956,7 +62956,7 @@ bkL
 bkL
 gVD
 mMG
-bkL
+uir
 bkL
 bkL
 kDo
@@ -67091,7 +67091,7 @@ hnM
 hnM
 akG
 hnM
-niE
+wny
 akY
 alk
 akY
@@ -67348,7 +67348,7 @@ hnM
 akq
 akH
 hnM
-fDs
+tyL
 akY
 alo
 akY
@@ -67605,8 +67605,8 @@ hnM
 akt
 akI
 hnM
-obP
-vSK
+tyL
+hdF
 aaa
 aaa
 aaa
@@ -67862,8 +67862,8 @@ hnM
 hnM
 hnM
 hnM
-uir
-ldt
+tyL
+hdF
 aaa
 aaa
 aaa
@@ -68118,9 +68118,9 @@ tRz
 tyL
 tyL
 tyL
-uir
-uir
-ldt
+tyL
+tyL
+hdF
 aaa
 aaa
 aaa
@@ -68375,9 +68375,9 @@ hdF
 hdF
 hdF
 hdF
-uir
-ldt
-ldt
+tyL
+hdF
+hdF
 aaa
 aaa
 aaa
@@ -68632,7 +68632,7 @@ iLy
 bbw
 hiP
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -68889,7 +68889,7 @@ dOr
 dOr
 wBR
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -69146,7 +69146,7 @@ qRb
 dOr
 eCx
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -69403,7 +69403,7 @@ mWH
 dOr
 oWz
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -69660,7 +69660,7 @@ bOw
 dOr
 lQb
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -69917,7 +69917,7 @@ eZh
 aaM
 pkD
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -70174,7 +70174,7 @@ qEs
 qEs
 qEs
 qEs
-uir
+tyL
 pJA
 ski
 aaa
@@ -70431,7 +70431,7 @@ rvM
 sNt
 gqm
 kQk
-uir
+tyL
 pJA
 ski
 aaa
@@ -70688,7 +70688,7 @@ xeh
 hGm
 sGb
 kQk
-uir
+tyL
 pJA
 ski
 aaa
