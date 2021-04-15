@@ -349,6 +349,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "captain"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
+/area/crew_quarters/office/secretary
+	name = "secretary office"
+	icon_state = "secretary"
+	sound_environment = SOUND_AREA_WOODFLOOR
+
 /area/crew_quarters/heads/captain/private
 	name = "Captain's Quarters"
 	icon_state = "captain_private"
@@ -587,6 +592,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/engine/engineering
 	name = "Engineering"
 	icon_state = "engine"
+
+/area/engine/voidtech
+	name = "void tech"
+	icon_state = "voidtech"
 
 /area/engine/atmos
 	name = "Atmospherics"
