@@ -37,7 +37,7 @@
 	qdel(old_part)
 	H.regenerate_icons()
 
-/datum/quirk/prosthetic_limb/post_add()
+/datum/quirk/cyberorgan/post_add()
 	to_chat(quirk_holder, "<span class='boldannounce'>Your [slot_string] has been replaced with a cybernetic replacement. It cannot heal over time, and will not be healed by chemicals.</span>")
 	if(slot_string == "eyes")
 		to_chat(quirk_holder, "<span class='boldannounce'>Additionally, your eyes are weak to flashes, and will not be protected by sunglasses or welding visors.</span>")
