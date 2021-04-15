@@ -8,13 +8,15 @@
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
 		#include "map_files\Deltastation\DeltaStation2.dmm"
-		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\MetaStation\MetaStation.dmm"
-		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\PackedStation\PackedStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\PhoboStation\PhoboStation.dmm"
+		//Admin only maps
 		#include "map_files\HelioStation\HelioStation.dmm"
+		#include "map_files\KiloStation\KiloStation.dmm"
+		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
