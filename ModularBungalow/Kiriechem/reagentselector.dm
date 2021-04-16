@@ -135,6 +135,12 @@
 	min_input_reagents = 5
 	max_input_reagents = 5
 
-	results = list(/datum/reagentlube/superlube = 5)
+	results = list(/datum/reagent/lube/superlube = 5)
 
+//Determination
+/datum/chemical_reaction/randomized/kiriechem/determination
+	min_input_reagents = 5
+	max_input_reagents = 5
+
+	results = list(/datum/reagent/determination = 5)
 
