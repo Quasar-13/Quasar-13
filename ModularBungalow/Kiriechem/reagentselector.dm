@@ -74,3 +74,52 @@
 
 	results = list(/datum/reagent/mutationtoxin = 6)
 
+//Ventrite
+/datum/chemical_reaction/randomized/kiriechem/ventrite
+	min_input_reagents = 2
+	max_input_reagents = 2
+
+	results = list(/datum/reagent/medicine/ventrite = 2)
+
+//Spirozrite
+/datum/chemical_reaction/randomized/kiriechem/spirozrite
+	min_input_reagents = 2
+	max_input_reagents = 2
+
+	results = list(/datum/reagent/medicine/spirozrite = 2)
+
+//Citisrite
+/datum/chemical_reaction/randomized/kiriechem/citisrite
+	min_input_reagents = 2
+	max_input_reagents = 2
+
+	results = list(/datum/reagent/medicine/citisrite = 2)
+
+//Purgrite
+/datum/chemical_reaction/randomized/kiriechem/purgrite
+	min_input_reagents = 2
+	max_input_reagents = 2
+
+	results = list(/datum/reagent/medicine/purgrite = 2)
+
+//Sanguirite
+/datum/chemical_reaction/randomized/kiriechem/sanguirite
+	min_input_reagents = 2
+	max_input_reagents = 2
+
+	results = list(/datum/reagent/medicine/coagulant = 2)
+
+//Mint Toxin
+/datum/chemical_reaction/randomized/kiriechem/mint
+	min_input_reagents = 5
+	max_input_reagents = 5
+
+	results = list(/datum/reagent/toxin/minttoxin = 5)
+
+//Tirizine
+/datum/chemical_reaction/randomized/kiriechem/tirizine
+	min_input_reagents = 4
+	max_input_reagents = 4
+
+	results = list(/datum/reagent/toxin/staminatoxin = 4)
+
