@@ -23,6 +23,17 @@
 	var/scan_state = "" //Holder for the image we display when we're pinged by a mining scanner
 	var/defer_change = 0
 
+	//xenoarch stuff i think
+	var/datum/geosample/geologic_data
+	var/excavation_level = 0
+	var/list/finds
+	var/next_rock = 0
+	var/archaeo_overlay = ""
+	var/excav_overlay = ""
+	var/obj/item/last_find
+	var/datum/artifact_find/artifact_find
+	var/image/ore_overlay
+
 /turf/closed/mineral/Initialize()
 	. = ..()
 	var/matrix/M = new
@@ -152,6 +163,44 @@
 		if(1)
 			gets_drilled(null, FALSE)
 	return
+
+/turf/closed/mineral/on_update_icon(var/update_neighbors)
+	if(!istype(mineral))
+		name = initial(name)
+		icon_state = "rock"
+	else
+		name = "[mineral.ore_name] deposit"
+
+	overlays.Cut()
+
+	for(var/direction in GLOB.cardinal)
+		var/turf/turf_to_check = get_step(src,direction)
+		if(update_neighbors && istype(turf_to_check,/turf/simulated/floor/asteroid))
+			var/turf/simulated/floor/asteroid/T = turf_to_check
+			T.updateMineralOverlays()
+		else if(istype(turf_to_check,/turf/space) || istype(turf_to_check,/turf/simulated/floor))
+			var/image/rock_side = image(icon, "rock_side", dir = turn(direction, 180))
+			rock_side.turf_decal_layerise()
+			switch(direction)
+				if(NORTH)
+					rock_side.pixel_y += world.icon_size
+				if(SOUTH)
+					rock_side.pixel_y -= world.icon_size
+				if(EAST)
+					rock_side.pixel_x += world.icon_size
+				if(WEST)
+					rock_side.pixel_x -= world.icon_size
+			overlays += rock_side
+
+	if(ore_overlay)
+		overlays += ore_overlay
+
+	if(excav_overlay)
+		overlays += excav_overlay
+
+	if(archaeo_overlay)
+		overlays += archaeo_overlay
+
 
 /turf/closed/mineral/random
 	var/list/mineralSpawnChanceList = list(/obj/item/stack/ore/uranium = 5, /obj/item/stack/ore/diamond = 1, /obj/item/stack/ore/gold = 10,
