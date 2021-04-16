@@ -123,3 +123,18 @@
 
 	results = list(/datum/reagent/toxin/staminatoxin = 4)
 
+//Hellwater
+/datum/chemical_reaction/randomized/kiriechem/hellwater
+	min_input_reagents = 6
+	max_input_reagents = 6
+
+	results = list(/datum/reagent/hellwater = 6)
+
+//Super Lube
+/datum/chemical_reaction/randomized/kiriechem/superlube
+	min_input_reagents = 5
+	max_input_reagents = 5
+
+	results = list(/datum/reagentlube/superlube = 5)
+
+
