@@ -11,7 +11,7 @@
 
 /datum/chemical_reaction/adminordrazine
 	results = list(/datum/reagent/medicine/adminordrazine/quantum_heal = 1)
-	required_reagents = list(/datum/reagent/medicine/omnizidrite = 10, /datum/chemical_reaction/tricordizine = 10, /datum/reagent/medicine/verafore = 10, /datum/reagent/hellwater = 10, /datum/reagent/lube/superlube = 10, /datum/reagent/medicine/omnizine/godblood = 10)
+	required_reagents = list(/datum/reagent/medicine/omnizidrite = 10, /datum/reagent/medicine/tricordizine = 10, /datum/reagent/medicine/verafore = 10, /datum/reagent/hellwater = 10, /datum/reagent/lube/superlube = 10, /datum/reagent/medicine/omnizine/godblood = 10)
 	mix_message = "????"
 
 
