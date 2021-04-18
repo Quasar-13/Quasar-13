@@ -139,16 +139,13 @@
 /turf/open/floor/plating,
 /area/ai_monitored/security/armory)
 "abf" = (
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/docking_port/stationary/random{
+	dir = 4;
+	id = "pod_lavaland4";
+	name = "lavaland"
 	},
-/obj/machinery/camera{
-	c_tag = "Xenobiology Test Chamber";
-	name = "xenobiology camera";
-	network = list("ss13","rd","xeno")
-	},
-/turf/open/floor/engine,
-/area/science/xenobiology)
+/turf/open/space,
+/area/space/nearstation)
 "abm" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -3131,18 +3128,8 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "aLH" = (
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/science/xenobiology)
+/turf/open/space/basic,
+/area/space/nearstation)
 "aLI" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -3237,7 +3224,14 @@
 /area/science/xenobiology)
 "aNX" = (
 /obj/structure/window/reinforced{
-	dir = 4
+	dir = 1;
+	pixel_y = 1
+	},
+/obj/machinery/camera{
+	c_tag = "Xenobiology - Killroom Chamber";
+	dir = 9;
+	name = "xenobiology camera";
+	network = list("ss13","xeno","rd")
 	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -5122,9 +5116,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
-"cpa" = (
-/turf/closed/wall/r_wall,
-/area/maintenance/department/engine)
 "cqo" = (
 /obj/item/target,
 /obj/structure/window/reinforced{
@@ -5953,6 +5944,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/space)
+"dkI" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/plating,
+/area/engine/atmos)
 "dlC" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -6254,6 +6249,21 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
+"dzM" = (
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/door/window,
+/obj/structure/window{
+	dir = 8
+	},
+/obj/structure/window{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
 "dzO" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /obj/structure/sign/warning/fire,
@@ -6375,13 +6385,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "dIe" = (
-/obj/docking_port/stationary/random{
-	dir = 4;
-	id = "pod_lavaland4";
-	name = "lavaland"
-	},
-/turf/open/space,
-/area/space/nearstation)
+/obj/structure/window,
+/turf/open/floor/engine,
+/area/science/xenobiology)
 "dIz" = (
 /obj/machinery/computer/nanite_chamber_control,
 /obj/structure/extinguisher_cabinet{
@@ -8597,21 +8603,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
-"frF" = (
-/obj/machinery/hydroponics/constructable,
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/machinery/door/window,
-/obj/structure/window{
-	dir = 8
-	},
-/obj/structure/window{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/hydroponics)
 "frN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -10322,6 +10313,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"gQY" = (
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/door/window,
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
 "gRz" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -14086,10 +14086,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
-"koD" = (
-/obj/machinery/portable_atmospherics/canister,
-/turf/open/floor/plating,
-/area/engine/atmos)
 "koU" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -16645,15 +16641,6 @@
 /obj/structure/lattice,
 /turf/closed/wall,
 /area/space/nearstation)
-"mys" = (
-/obj/machinery/hydroponics/constructable,
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/machinery/door/window,
-/turf/open/floor/plasteel/dark,
-/area/hydroponics)
 "myL" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -22852,6 +22839,18 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/brig)
+"rDs" = (
+/obj/docking_port/stationary{
+	dheight = 1;
+	dir = 8;
+	dwidth = 12;
+	height = 17;
+	id = "syndicate_ne";
+	name = "northeast of station";
+	width = 23
+	},
+/turf/open/space,
+/area/space)
 "rDH" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -25806,17 +25805,8 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "tUt" = (
-/obj/docking_port/stationary{
-	dheight = 1;
-	dir = 8;
-	dwidth = 12;
-	height = 17;
-	id = "syndicate_ne";
-	name = "northeast of station";
-	width = 23
-	},
-/turf/open/space,
-/area/space/nearstation)
+/turf/closed/wall/r_wall,
+/area/maintenance/department/engine)
 "tUQ" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer{
@@ -28590,7 +28580,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/obj/structure/closet/firecloset,
+/obj/machinery/monkey_recycler,
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "wwa" = (
@@ -30747,6 +30737,9 @@
 /area/engine/engineering)
 "ylI" = (
 /obj/structure/closet/l3closet/scientist,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/mineral/titanium/purple,
 /area/science/xenobiology)
 "ymd" = (
@@ -59408,7 +59401,7 @@ afM
 vfX
 sOi
 aOw
-aLH
+wEY
 fqs
 fnO
 wEY
@@ -59666,7 +59659,7 @@ ksE
 aJr
 dKY
 aLI
-sII
+dIe
 sII
 aoj
 abz
@@ -59922,8 +59915,8 @@ aiO
 sII
 pbT
 dKY
-aLI
-sII
+aNX
+dIe
 sII
 aoj
 abA
@@ -60180,8 +60173,8 @@ sII
 pbT
 dKY
 wEY
-abf
-aNX
+fnO
+fqs
 wEY
 mfr
 dKY
@@ -66120,7 +66113,7 @@ mFc
 knF
 dHD
 toP
-frF
+dzM
 xAd
 uzS
 wIP
@@ -66377,7 +66370,7 @@ bZb
 nos
 eId
 toP
-mys
+gQY
 xAd
 kZg
 bwO
@@ -67179,14 +67172,14 @@ alk
 akY
 aaa
 aaa
-dIe
+abf
 aaa
 aaa
 aaa
 aaa
 aaa
 aaa
-dIe
+abf
 aaa
 aaa
 aaa
@@ -68426,8 +68419,8 @@ gzq
 tfs
 gEJ
 wrC
-cpa
-cpa
+tUt
+tUt
 blE
 hFc
 wwa
@@ -68683,8 +68676,8 @@ fqz
 oMK
 gEJ
 wrC
-koD
-koD
+dkI
+dkI
 blE
 rQm
 niY
@@ -72488,7 +72481,7 @@ aaa
 aaa
 aaa
 aaa
-dIe
+abf
 aaa
 aaa
 aaa
@@ -76600,7 +76593,7 @@ aaa
 aaa
 aaa
 aaa
-tUt
+aLH
 aaa
 aaa
 aaa
@@ -78458,7 +78451,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+rDs
 aaa
 aaa
 aaa
