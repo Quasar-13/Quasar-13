@@ -17,7 +17,7 @@
 		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\PhoboStation\PhoboStation.dmm"
-		#include "map_files\rbmktest\rbmktest" //remorastation from kiriestation crappily edited
+		#include "map_files\rbmktest\rbmktest.dmm" //remorastation from kiriestation crappily edited
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
