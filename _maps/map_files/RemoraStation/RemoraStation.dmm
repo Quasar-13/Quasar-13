@@ -4595,12 +4595,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -28
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer2{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -5122,6 +5122,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"cpa" = (
+/turf/closed/wall/r_wall,
+/area/maintenance/department/engine)
 "cqo" = (
 /obj/item/target,
 /obj/structure/window/reinforced{
@@ -5874,6 +5877,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/door/window,
 /turf/open/floor/plasteel/dark,
 /area/hydroponics)
 "diG" = (
@@ -6371,8 +6375,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "dIe" = (
-/turf/closed/wall/r_wall,
-/area/space)
+/obj/docking_port/stationary/random{
+	dir = 4;
+	id = "pod_lavaland4";
+	name = "lavaland"
+	},
+/turf/open/space,
+/area/space/nearstation)
 "dIz" = (
 /obj/machinery/computer/nanite_chamber_control,
 /obj/structure/extinguisher_cabinet{
@@ -6820,6 +6829,9 @@
 "eaD" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/layer_manifold/visible,
+/obj/structure/fireaxecabinet{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "ebv" = (
@@ -7127,7 +7139,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	name = "External Docking Port"
+	name = "External Docking Port";
+	req_access_txt = "19"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -8584,6 +8597,21 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
+"frF" = (
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/door/window,
+/obj/structure/window{
+	dir = 8
+	},
+/obj/structure/window{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
 "frN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -14058,6 +14086,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
+"koD" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/plating,
+/area/engine/atmos)
 "koU" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -16613,6 +16645,15 @@
 /obj/structure/lattice,
 /turf/closed/wall,
 /area/space/nearstation)
+"mys" = (
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/door/window,
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
 "myL" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -18021,7 +18062,7 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel,
-/area/maintenance/aft/secondary)
+/area/engine/storage_shared)
 "nFO" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -19421,9 +19462,7 @@
 /area/security)
 "oSz" = (
 /obj/structure/closet/secure_closet/research_director,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/plasma/reinforced/spawner/north,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hor)
 "oSR" = (
@@ -25195,6 +25234,13 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/machinery/door/window,
+/obj/structure/window{
+	dir = 8
+	},
+/obj/structure/window{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/hydroponics)
 "tBp" = (
@@ -25760,10 +25806,17 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "tUt" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/turf/closed/wall/r_wall,
-/area/engine/atmos)
+/obj/docking_port/stationary{
+	dheight = 1;
+	dir = 8;
+	dwidth = 12;
+	height = 17;
+	id = "syndicate_ne";
+	name = "northeast of station";
+	width = 23
+	},
+/turf/open/space,
+/area/space/nearstation)
 "tUQ" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer{
@@ -29385,7 +29438,8 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "External Docking Port"
+	name = "External Docking Port";
+	req_access_txt = "19"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -66066,7 +66120,7 @@ mFc
 knF
 dHD
 toP
-uzS
+frF
 xAd
 uzS
 wIP
@@ -66323,7 +66377,7 @@ bZb
 nos
 eId
 toP
-uzS
+mys
 xAd
 kZg
 bwO
@@ -67125,14 +67179,14 @@ alk
 akY
 aaa
 aaa
+dIe
 aaa
 aaa
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+dIe
 aaa
 aaa
 aaa
@@ -68371,10 +68425,10 @@ gzq
 gzq
 tfs
 gEJ
-gEJ
-gEJ
-gEJ
-hFc
+wrC
+cpa
+cpa
+blE
 hFc
 wwa
 hFc
@@ -68629,8 +68683,8 @@ fqz
 oMK
 gEJ
 wrC
-blE
-blE
+koD
+koD
 blE
 rQm
 niY
@@ -69414,7 +69468,7 @@ xTM
 vDg
 vDg
 vDg
-tUt
+vDg
 nbY
 nbY
 nbY
@@ -71210,7 +71264,7 @@ qMF
 ryQ
 hHf
 xTM
-kYQ
+xQW
 fFw
 pnS
 vAA
@@ -71406,7 +71460,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+iGL
 aaa
 aaa
 aaa
@@ -71467,7 +71521,7 @@ lhN
 bnu
 lhN
 xTM
-kYQ
+xQW
 kYQ
 vAA
 kYQ
@@ -71724,7 +71778,7 @@ boF
 bnu
 boF
 pCZ
-kYQ
+xQW
 dSY
 vpT
 eib
@@ -71981,7 +72035,7 @@ vDg
 tON
 vDg
 aaa
-kYQ
+xQW
 gFF
 vcP
 oap
@@ -72238,7 +72292,7 @@ vDg
 wSH
 vDg
 aaa
-kYQ
+xQW
 bEt
 sVx
 tsI
@@ -72434,7 +72488,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+dIe
 aaa
 aaa
 aaa
@@ -72752,11 +72806,11 @@ vDg
 vDg
 vDg
 aaa
-aaa
-dIe
-dIe
-dIe
-aaa
+xQW
+xQW
+xQW
+xQW
+xQW
 aaa
 aaa
 aaa
@@ -73179,7 +73233,7 @@ aaa
 aaa
 aaa
 aaa
-ajk
+aaa
 aaa
 aaa
 aaa
@@ -73434,10 +73488,10 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73691,9 +73745,9 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73949,7 +74003,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+ajk
 aaa
 aaa
 aaa
@@ -74204,10 +74258,10 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -74461,9 +74515,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -74979,8 +75033,8 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75237,9 +75291,9 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75495,9 +75549,9 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75752,8 +75806,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -76010,9 +76064,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -76268,9 +76322,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -76546,7 +76600,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+tUt
 aaa
 aaa
 aaa
@@ -77563,8 +77617,8 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -77819,10 +77873,10 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -78076,8 +78130,8 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -78320,14 +78374,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 ajk
 ajk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -78576,6 +78630,9 @@ aaa
 aaa
 aaa
 aaa
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -78584,9 +78641,6 @@ aaa
 aaa
 ajk
 ajk
-ajk
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -78834,6 +78888,7 @@ aaa
 aaa
 aaa
 aaa
+ajk
 aaa
 aaa
 aaa
@@ -78841,10 +78896,9 @@ aaa
 aaa
 aaa
 ajk
-aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -79098,8 +79152,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+ajk
+ajk
 aaa
 aaa
 aaa
@@ -79887,8 +79941,8 @@ aaa
 aaa
 aaa
 aaa
-ajk
-ajk
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -80136,17 +80190,17 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 ajk
 ajk
-ajk
-ajk
-ajk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -80391,20 +80445,20 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 ajk
 ajk
 ajk
 ajk
 ajk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -80649,11 +80703,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+ajk
+ajk
+ajk
+ajk
+ajk
 aaa
 aaa
 aaa
