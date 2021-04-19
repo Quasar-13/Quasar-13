@@ -30,7 +30,7 @@
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
 	shoes = /obj/item/clothing/shoes/workboots
-	suit = /obj/item/clothing/suit/space/hardsuit/voidtech
+	l_hand = /obj/item/clothing/suit/space/hardsuit/voidtech
 
 	backpack = /obj/item/storage/backpack/industrial
 	satchel = /obj/item/storage/backpack/satchel/eng
