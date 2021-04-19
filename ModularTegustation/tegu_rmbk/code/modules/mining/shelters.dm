@@ -4,4 +4,4 @@
 	name = "RBMK Reactor"
 	shelter_id = "reactor"
 	description = "A reactor core, coolant and moderator loop not included."
-	mappath = "_maps/templates/reactor_1.dmm"
+	mappath = "_maps/templates/rbmk_1.dmm"
