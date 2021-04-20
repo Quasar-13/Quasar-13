@@ -14,7 +14,7 @@
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 		//Admin only maps
 		#include "map_files\HelioStation\HelioStation.dmm"
-		#include "map_files\IssuessStation\IssuessStation.dmm"
+		#include "map_files\ChimeraStation\ChimeraStation.dmm"
 		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\PhoboStation\PhoboStation.dmm"
