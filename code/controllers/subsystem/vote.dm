@@ -139,6 +139,14 @@ SUBSYSTEM_DEF(vote)
 			if("map")
 				SSmapping.changemap(global.config.maplist[.])
 				SSmapping.map_voted = TRUE
+				//BUNGALOW EDIT - TRANSFERVOTE
+			if("transfer")
+				if(. == "Initiate Crew Transfer")
+					SSshuttle.autoEnd()
+					var/obj/machinery/computer/communications/C = locate() in GLOB.machines
+					if(C)
+						C.post_status("shuttle")
+			//BUNGALOW EDIT END
 	if(restart)
 		var/active_admins = FALSE
 		for(var/client/C in GLOB.admins)
@@ -209,6 +217,10 @@ SUBSYSTEM_DEF(vote)
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
+			//BUNGALOW EDIT - TRANSFERVOTE
+			if("transfer")
+				choices.Add("Initiate Crew Transfer","Continue Playing")
+			//BUNGALOW EDIT END
 			else
 				return FALSE
 		mode = vote_type
@@ -290,6 +302,13 @@ SUBSYSTEM_DEF(vote)
 			. += "\t(<a href='?src=[REF(src)];vote=toggle_map'>[avmap ? "Allowed" : "Disallowed"]</a>)"
 
 		. += "</li>"
+		//BUNGALOW EDIT - TRANSFERVOTE
+		if(trialmin)
+			. += "<a href='?src=[REF(src)];vote=transfer'>Transfer</a>"
+		else
+			. += "<font color='grey'>Transfer (Disallowed)</font>"
+		. += "</li>"
+		//BUNGALOW EDIT END
 		//custom
 		if(trialmin)
 			. += "<li><a href='?src=[REF(src)];vote=custom'>Custom</a></li>"
@@ -338,6 +357,10 @@ SUBSYSTEM_DEF(vote)
 		if("custom")
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)
+		//BUNGALOW EDIT - TRANSFERVOTE
+		if("transfer")
+			initiate_vote("transfer",usr.key)
+		//BUNGALOW EDIT END
 		else
 			submit_vote(round(text2num(href_list["vote"])))
 	usr.vote()
