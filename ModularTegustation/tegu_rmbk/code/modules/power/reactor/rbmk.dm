@@ -276,7 +276,8 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	var/power_modifier = 0
 
 	moderator_input.assert_gas(/datum/gas/oxygen)
-	power_modifier = max((moderator_input.gases[/datum/gas/oxygen][MOLES] / moderator_input.total_moles() * 10), 1) //You can never have negative IPM. For now.
+	if(moderator_input.total_moles()>0)
+		power_modifier = max((moderator_input.gases[/datum/gas/oxygen][MOLES] / moderator_input.total_moles() * 10), 1) //You can never have negative IPM. For now.
 	moderator_input.garbage_collect()
 	if(total_fuel_moles >= minimum_coolant_level) //You at least need SOME fuel.
 		var/power_produced = max((total_fuel_moles / moderator_input.total_moles() * 10), 1)
@@ -337,7 +338,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		depletion_modifier += total_degradation_moles / 15 //Oops! All depletion. This causes your fuel rods to get SPICY.
 		playsound(src, pick('sound/machines/sm/accent/normal/1.ogg','sound/machines/sm/accent/normal/2.ogg','sound/machines/sm/accent/normal/3.ogg','sound/machines/sm/accent/normal/4.ogg','sound/machines/sm/accent/normal/5.ogg'), 100, TRUE)
 	//From this point onwards, we clear out the remaining gasses.
-	moderator_input.remove() //Woosh. And the soul is gone.
+	moderator_input.remove(moderator_input.total_moles()) //Woosh. And the soul is gone.
 	K += total_fuel_moles / 1000
 	var/fuel_power = 0 //So that you can't magically generate K with your control rods.
 	if(!has_fuel())  //Reactor must be fuelled and ready to go before we can heat it up boys.
