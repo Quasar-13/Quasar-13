@@ -495,7 +495,6 @@
 "abe" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
@@ -2673,7 +2672,7 @@
 /area/hallway/primary/fore)
 "afD" = (
 /turf/closed/wall/r_wall,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "afE" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -6165,6 +6164,12 @@
 /obj/machinery/chem_master/condimaster,
 /turf/open/floor/plasteel/grimy,
 /area/crew_quarters/bar)
+"amU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
 "amV" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/yellow{
@@ -7003,7 +7008,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "aoE" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/tile/purple{
@@ -8313,17 +8318,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/aft)
-"aqT" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/westright{
-	dir = 2;
-	name = "Security Checkpoint";
-	req_access_txt = "1"
-	},
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
 "aqU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
@@ -8508,17 +8502,15 @@
 /area/hallway/primary/central)
 "arl" = (
 /obj/machinery/light,
-/obj/machinery/computer/security{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	pixel_y = -30
 	},
 /obj/machinery/light_switch{
 	pixel_y = -23
 	},
+/obj/machinery/cryopod,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "arm" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 1
@@ -8624,11 +8616,9 @@
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = -30
 	},
-/obj/machinery/computer/card{
-	dir = 1
-	},
+/obj/machinery/cryopod,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "arA" = (
 /obj/machinery/door/airlock/external{
 	name = "Solar Maintenance";
@@ -9661,7 +9651,7 @@
 /area/maintenance/port/fore)
 "atP" = (
 /turf/closed/wall,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "atQ" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -12360,14 +12350,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "ayV" = (
-/obj/machinery/door/airlock/security{
-	name = "Security Checkpoint";
-	req_access_txt = "1"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "ayW" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
@@ -12517,7 +12502,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "azm" = (
 /obj/machinery/status_display/ai,
 /turf/closed/wall/r_wall,
@@ -12878,10 +12863,6 @@
 /area/medical/virology)
 "azV" = (
 /obj/machinery/light,
-/obj/structure/closet/secure_closet/security,
-/obj/item/radio/off,
-/obj/item/crowbar,
-/obj/item/assembly/flash/handheld,
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -24
@@ -12890,8 +12871,9 @@
 	c_tag = "Security Checkpoint";
 	dir = 1
 	},
+/obj/machinery/cryopod,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "azW" = (
 /obj/structure/chair/pew/left{
 	dir = 8
@@ -13127,20 +13109,11 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai)
 "aAA" = (
-/obj/machinery/button/door{
-	id = "arr1";
-	name = "Outside Control Button";
-	pixel_x = -24;
-	pixel_y = 6
-	},
-/obj/machinery/button/door{
-	id = "arr2";
-	name = "Inside Control Button";
-	pixel_x = -24;
-	pixel_y = -6
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
 	},
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "aAB" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -14042,7 +14015,6 @@
 "aCr" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/aft)
@@ -14722,13 +14694,6 @@
 	},
 /turf/open/floor/wood,
 /area/library)
-"aDM" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
-/obj/effect/landmark/event_spawn,
-/turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
 "aDN" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/decal/cleanable/dirt,
@@ -16771,12 +16736,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
-"aOo" = (
-/obj/machinery/computer/secure_data{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
 "aOr" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16805,8 +16764,9 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aOH" = (
+/obj/machinery/cryopod,
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "aOJ" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4
@@ -17533,7 +17493,7 @@
 "aTD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "aTE" = (
 /obj/structure/sink{
 	dir = 4;
@@ -22568,17 +22528,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/research)
-"fWD" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/maintenance/aft)
 "fWH" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -22880,6 +22829,12 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
 /area/science/explab)
+"gxM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
 "gxY" = (
 /obj/structure/fans/tiny/invisible,
 /obj/structure/closet/emcloset{
@@ -22909,6 +22864,9 @@
 "gzW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
@@ -22950,6 +22908,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
+"gDx" = (
+/obj/structure/lattice,
+/obj/structure/disposaloutlet{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/space,
+/area/space/nearstation)
 "gDy" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -24058,6 +24026,9 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"hNa" = (
+/turf/open/floor/plasteel,
+/area/commons/cryopods)
 "hNf" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -27590,6 +27561,14 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
+"mbx" = (
+/obj/machinery/suit_storage_unit,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#d1dfff"
+	},
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 "mce" = (
 /obj/structure/toilet{
 	dir = 4
@@ -31303,6 +31282,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "qKS" = (
@@ -31452,6 +31433,10 @@
 /obj/item/stack/rods/fifty,
 /obj/item/stack/rods/fifty,
 /obj/item/stack/rods/fifty,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#d1dfff"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "qVb" = (
@@ -32367,6 +32352,13 @@
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/plasteel/white,
 /area/science/research)
+"rYM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
 "sah" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -32545,6 +32537,9 @@
 /area/maintenance/aft)
 "smn" = (
 /obj/structure/closet,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "snd" = (
@@ -32714,7 +32709,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/security/checkpoint/auxiliary)
+/area/commons/cryopods)
 "szX" = (
 /obj/item/wrench/medical,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -61440,7 +61435,7 @@ axn
 anT
 aTD
 aAA
-aOH
+hNa
 azV
 afD
 aAD
@@ -61695,10 +61690,10 @@ lZy
 iKi
 axp
 anT
-aqT
-aDM
+aTD
 aOH
-aOo
+hNa
+aOH
 afD
 aCw
 hYU
@@ -63536,7 +63531,7 @@ aaa
 fOx
 nYL
 fOx
-aaS
+gDx
 aaS
 aaS
 aaS
@@ -63793,7 +63788,7 @@ fOx
 fOx
 vLz
 fOx
-fOx
+amU
 aaS
 dXD
 aaS
@@ -64050,7 +64045,7 @@ pHr
 fYi
 xZC
 yhH
-fOx
+amU
 uZF
 uZF
 uZF
@@ -64307,7 +64302,7 @@ pHr
 gEj
 eat
 yhH
-pHr
+rYM
 aaS
 aaS
 aaS
@@ -64563,8 +64558,8 @@ aaa
 pHr
 qTt
 cGK
-yhH
-pHr
+mbx
+rYM
 aaa
 aaa
 aaa
@@ -64821,7 +64816,7 @@ fOx
 fOx
 dVR
 fOx
-fOx
+amU
 bry
 fQn
 fQn
@@ -65078,7 +65073,7 @@ pHr
 thR
 ryW
 qKA
-fOx
+gxM
 axZ
 sfL
 jvX
@@ -75069,7 +75064,7 @@ sah
 aNI
 sQZ
 els
-fWD
+fQH
 arK
 arX
 asy
