@@ -109,6 +109,14 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 	var/last_user = null
 	var/current_desired_k = null
+	///Internal radio
+	var/obj/item/radio/radio
+	///The key our internal radio uses
+	var/radio_key = /obj/item/encryptionkey/headset_eng
+	///The engineering channel
+	var/engineering_channel = "Engineering"
+	///The common channel
+	var/common_channel = null
 
 //Use this in your maps if you want everything to be preset.
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/preset
@@ -205,6 +213,10 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	gas_absorption_effectiveness = rand(5, 6)/10 //All reactors are slightly different. This will result in you having to figure out what the balance is for K.
 	gas_absorption_constant = gas_absorption_effectiveness //And set this up for the rest of the round.
 	STOP_PROCESSING(SSmachines, src) //We'll handle this one ourselves.
+	radio = new(src)
+	radio.keyslot = new radio_key
+	radio.listening = 0
+	radio.recalculateChannels()
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/Crossed(atom/movable/AM, oldloc)
 	. = ..()
@@ -236,7 +248,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		last_heat_delta = heat_delta
 		temperature += heat_delta
 		coolant_output.merge(coolant_input) //And now, shove the input into the output.
-		coolant_input.remove() //Clear out anything left in the input gate.
+		coolant_input.remove(coolant_output.total_moles()) //Clear out anything left in the input gate.
 		color = null
 	else
 		if(has_fuel())
@@ -276,15 +288,14 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		moderator_input.garbage_collect()
 		var/turf/T = get_turf(src)
 		if(power >= 20)
-			if(coolant_output.gases == /datum/gas/nitryl)
-				coolant_output.gases[/datum/gas/nitryl][MOLES] += total_fuel_moles/50 //Shove out nitryl into the air when it's fuelled. You need to filter this off, or you're gonna have a bad time.
-			else
-				coolant_output.add_gas(/datum/gas/nitryl)
+			coolant_output.assert_gas(/datum/gas/nitryl)
+			coolant_output.gases[/datum/gas/nitryl][MOLES] += total_fuel_moles/50 //Shove out nitryl into the air when it's fuelled. You need to filter this off, or you're gonna have a bad time.
 		var/obj/structure/cable/C = T.get_cable_node()
 		if(!C || !C.powernet)
 			return
 		else
-			C.powernet.newavail += last_power_produced
+			if(last_power_produced>0)
+				C.powernet.newavail += last_power_produced
 	var/total_control_moles = 0
 
 	moderator_input.assert_gas(/datum/gas/nitrogen)
@@ -449,8 +460,9 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		playsound(loc, 'sound/machines/clockcult/steam_whoosh.ogg', 100, TRUE)
 		var/turf/T = get_turf(src)
 		T.atmos_spawn_air("water_vapor=[pressure/100];TEMP=[CELSIUS_TO_KELVIN(temperature)]")
-		vessel_integrity -= (pressure/200)
-		if(vessel_integrity <= pressure/200) //It wouldn't be able to tank another hit.
+		vessel_integrity -= (pressure/500)
+		radio_alert()
+		if(vessel_integrity <= pressure/500) //It wouldn't be able to tank another hit.
 			investigate_log("Reactor blowout at [pressure] PSI with desired criticality at [desired_k]", INVESTIGATE_SINGULO)
 			blowout()
 			return
@@ -541,6 +553,14 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	set_light(10)
 	var/startup_sound = pick('ModularTegustation/Tegusounds/rmbk/startup.ogg', 'ModularTegustation/Tegusounds/rmbk/startup2.ogg')
 	playsound(loc, startup_sound, 100)
+
+/obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/radio_alert()
+	if(vessel_integrity<120)
+		radio.talk_into(src, "REACTOR MELTDOWN IMMINENT. Integrity: [vessel_integrity/4]%", common_channel)
+	else
+		radio.talk_into(src, "Danger! Vessel integrity faltering! Integrity: [vessel_integrity/4]%", engineering_channel)
+	if(pressure>=RBMK_PRESSURE_CRITICAL)
+		radio.talk_into(src, "Warning: Critical coolant pressure reached.", engineering_channel)
 
 //Shuts off the fuel rods, ambience, etc. Keep in mind that your temperature may still go up!
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/shut_down()
