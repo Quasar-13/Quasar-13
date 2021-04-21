@@ -31,7 +31,7 @@
 	subcategory = CAT_BREAD
 
 //EGGS
-/datum/crafting_recipe/food/eggsausage
+/datum/crafting_recipe/food/sausagedegg
 	name = "Egg with sausage"
 	reqs = list(
 		/obj/item/food/sausage = 1,

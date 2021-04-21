@@ -3,13 +3,13 @@
 	if(locate(/obj/structure/table/optable, T))
 		return 1
 	else if(locate(/obj/machinery/stasis, T))
-		return 0.9
-	else if(locate(/obj/structure/table, T))
-		return 0.8
-	else if(locate(/obj/structure/bed, T))
-		return 0.7
-	else
 		return 0.5
+	else if(locate(/obj/structure/table, T))
+		return 0.7
+	else if(locate(/obj/structure/bed, T))
+		return 0.6
+	else
+		return 0.4
 
 
 /proc/get_location_accessible(mob/M, location)
