@@ -77,7 +77,7 @@
 
 	var/mob/living/living_pawn = controller.pawn
 
-	victim.visible_message("<span class='warning'>[living_pawn] starts trying to take [target] from [controller.current_movement_target]!</span>", "<span class='danger'>[living_pawn] tries to take [target]!</span>")
+	victim.visible_message("<span class='warning'>[living_pawn] starts trying to take [target] from [victim]!</span>", "<span class='danger'>[living_pawn] tries to take [target]!</span>")
 
 	controller.blackboard[BB_MONKEY_PICKPOCKETING] = TRUE
 
@@ -138,7 +138,7 @@
 	if(!target || target.stat != CONSCIOUS)
 		finish_action(controller, TRUE) //Target == owned
 
-	if(living_pawn.Adjacent(target) && isturf(target.loc) && !IS_DEAD_OR_INCAP(living_pawn))	// if right next to perp
+	if(living_pawn.Adjacent(target) && isturf(target.loc) && !IS_DEAD_OR_INCAP(living_pawn)) // if right next to perp
 		// check if target has a weapon
 		var/obj/item/W
 		for(var/obj/item/I in target.held_items)
@@ -216,7 +216,6 @@
 
 	if(target.pulledby != living_pawn && !HAS_AI_CONTROLLER_TYPE(target.pulledby, /datum/ai_controller/monkey)) //Dont steal from my fellow monkeys.
 		if(living_pawn.Adjacent(target) && isturf(target.loc))
-			living_pawn.a_intent = INTENT_GRAB
 			target.grabbedby(living_pawn)
 		return //Do the rest next turn
 

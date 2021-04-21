@@ -165,6 +165,7 @@ have ways of interacting with a specific mob and control it.
 	else if(L.a_intent == INTENT_DISARM && prob(MONKEY_RETALIATE_DISARM_PROB))
 		retaliate(L)
 
+
 /datum/ai_controller/monkey/proc/on_attack_paw(datum/source, mob/living/L)
 	SIGNAL_HANDLER
 	if(L.a_intent == INTENT_HARM && prob(MONKEY_RETALIATE_HARM_PROB))
@@ -219,3 +220,4 @@ have ways of interacting with a specific mob and control it.
 	// chance of monkey retaliation
 	if(prob(MONKEY_CUFF_RETALIATION_PROB))
 		retaliate(user)
+

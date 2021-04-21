@@ -56,9 +56,9 @@
 	new /obj/item/clothing/suit/armor/vest/alt(src)
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
-	new /obj/item/gun/energy/e_gun(src)
+//	new /obj/item/gun/energy/e_gun(src)
 	new /obj/item/clothing/neck/petcollar(src)
-	new /obj/item/pet_carrier(src)
+//	new /obj/item/pet_carrier(src)
 	new /obj/item/door_remote/civilian(src)
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
 	new /obj/item/storage/photo_album/hop(src)
@@ -288,6 +288,17 @@
 		new /obj/item/gun/energy/e_gun(src)
 	for(var/i in 1 to 3)
 		new /obj/item/gun/energy/laser(src)
+
+/obj/structure/closet/secure_closet/armory4
+	name = "lethal shells locker"
+	req_access = list(ACCESS_ARMORY)
+	icon_state = "armory"
+
+/obj/structure/closet/secure_closet/armory4/PopulateContents()
+	..()
+	for(var/i in 1 to 3)
+		new /obj/item/storage/box/lethalshot(src)
+
 
 /obj/structure/closet/secure_closet/tac
 	name = "armory tac locker"

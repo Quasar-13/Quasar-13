@@ -453,6 +453,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Recreation Area"
 	icon_state = "rec"
 
+/area/commons/cryopods
+	name = "Cryopod Room"
+	icon_state = "cryopod"
+
 /area/crew_quarters/cafeteria
 	name = "Cafeteria"
 	icon_state = "cafeteria"
@@ -855,7 +859,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "exam_room"
 
 /area/medical/genetics
-	name = "Genetics Lab"
+	name = "Medical Genetics"
 	icon_state = "genetics"
 
 /area/medical/sleeper

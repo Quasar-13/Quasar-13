@@ -98,6 +98,19 @@
 	new /obj/item/storage/photo_album/cmo(src)
 	new /obj/item/storage/box/skillchips/quicker(src)
 
+
+/obj/structure/closet/secure_closet/spareparts
+	name = "\proper chief medical officer's wacky parts locker"
+	req_access = list(ACCESS_CMO)
+	icon_state = "cmo"
+
+/obj/structure/closet/secure_closet/spareparts/PopulateContents()
+	..()
+	new /obj/item/assembly/signaler(src)
+	for(var/i in 1 to 3)
+		new /obj/effect/spawner/lootdrop/memeorgans(src)
+
+
 /obj/structure/closet/secure_closet/animal
 	name = "animal control"
 	req_access = list(ACCESS_SURGERY)

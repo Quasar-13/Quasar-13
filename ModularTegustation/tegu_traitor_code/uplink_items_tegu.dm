@@ -13,9 +13,9 @@
 			The only downside is that it requires about a minute to recharge. This one allows user to input a message straight into device, \
 			removing the need to say anything after using it on your target."
 	item = /obj/item/assembly/flash/hypnotic/adv
-	cost = 10
+	cost = 26
 	cant_discount = FALSE
-	restricted_roles = list("Psychologist")
+	restricted_roles = list("Captain")
 	limited_stock = 1
 
 /datum/uplink_item/role_restricted/symptom_box
@@ -50,7 +50,7 @@
 			Includes smelly old man robes, snazzy red light saber and genuine Sith sacred texts \
 			describing the secrets of saber fighting, force lightning and force push."
 	item = /obj/item/storage/box/syndicate/bundle_sith
-	cost = 19
+	cost = 25
 	restricted_roles = list("Chaplain", "Curator")
 
 /datum/uplink_item/role_restricted/laser_tag_kit_red

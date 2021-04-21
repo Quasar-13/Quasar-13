@@ -157,4 +157,14 @@
 /obj/machinery/stasis/nap_violation(mob/violator)
 	unbuckle_mob(violator, TRUE)
 
+/obj/machinery/stasis/old
+	icon_state = "stasisold"
+	mattress_state = "stasisold_on"
+
+/obj/machinery/stasis/old/update_icon_state()
+	if(machine_stat & BROKEN)
+		icon_state = "stasis_broken"
+		return
+	icon_state = "stasisold"
+
 #undef STASIS_TOGGLE_COOLDOWN

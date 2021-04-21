@@ -25,12 +25,12 @@
 	name = "Void Technician"
 	jobtype = /datum/job/tegu/voidtech
 
-	belt = /obj/item/storage/belt/utility/full/engi
+	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/pda/engineering
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
 	shoes = /obj/item/clothing/shoes/workboots
-	suit = /obj/item/clothing/suit/space/hardsuit/voidtech
+	l_hand = /obj/item/clothing/suit/space/hardsuit/voidtech
 
 	backpack = /obj/item/storage/backpack/industrial
 	satchel = /obj/item/storage/backpack/satchel/eng

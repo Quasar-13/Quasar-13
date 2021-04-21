@@ -1266,6 +1266,7 @@
 	if(methods & VAPOR)
 		exposed_mob.drowsyness += max(round(reac_volume, 1), 2)
 
+
 /datum/reagent/nitrous_oxide/on_mob_life(mob/living/carbon/M)
 	M.drowsyness += 2
 	if(ishuman(M))
@@ -1274,6 +1275,7 @@
 	if(prob(20))
 		M.losebreath += 2
 		M.set_confusion(min(M.get_confusion() + 2, 5))
+
 	..()
 
 /datum/reagent/stimulum
