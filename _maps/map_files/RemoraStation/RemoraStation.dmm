@@ -3128,7 +3128,16 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "aLH" = (
-/turf/open/space/basic,
+/obj/docking_port/stationary{
+	dheight = 1;
+	dir = 8;
+	dwidth = 12;
+	height = 17;
+	id = "syndicate_ne";
+	name = "northeast of station";
+	width = 23
+	},
+/turf/open/space,
 /area/space/nearstation)
 "aLI" = (
 /obj/structure/window/reinforced{
@@ -5322,10 +5331,6 @@
 /area/crew_quarters/dorms/barracks)
 "cDR" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/syringe,
-/obj/item/reagent_containers/glass/bottle/morphine{
-	pixel_y = 6
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
 	},
@@ -5335,6 +5340,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/storage/backpack/duffelbag/sec/surgery,
 /turf/open/floor/plasteel/white,
 /area/security/prison)
 "cEb" = (
@@ -5722,6 +5728,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
+"cZG" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/pump/on{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/engine/atmos)
 "cZJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -5787,6 +5803,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
+"dce" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/atmospherics/components/binary/pump/on,
+/turf/open/floor/plating,
+/area/engine/atmos)
 "dcY" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/nitrogen_input{
 	dir = 1
@@ -8661,6 +8684,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "ftO" = (
@@ -10873,6 +10897,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"hrT" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 5
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "hsM" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/virologist,
@@ -14818,6 +14854,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/white,
 /area/science/research)
+"law" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "laH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/plasteel,
@@ -16893,10 +16934,9 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "mIl" = (
-/obj/structure/bed,
-/obj/item/bedsheet/black,
-/turf/open/floor/plasteel,
-/area/crew_quarters/dorms/barracks)
+/obj/machinery/cryopod,
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "mJb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -17757,6 +17797,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "nrm" = (
@@ -21095,6 +21136,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/processing)
+"qgy" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "qhj" = (
 /obj/machinery/status_display/ai,
 /turf/closed/wall/r_wall,
@@ -25961,7 +26006,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom{
-	dir = 1
+	dir = 1;
+	target_temperature = 120
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
@@ -29966,6 +30012,14 @@
 "xBG" = (
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
+"xBH" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable,
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "xCa" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access_txt = "35;28;12"
@@ -30555,6 +30609,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/misc_lab)
+"ygE" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/cryopod,
+/turf/open/floor/plasteel/checker,
+/area/commons/cryopods)
 "ygS" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
@@ -58654,8 +58715,8 @@ hFX
 tgA
 ieX
 qVX
-aFD
-wqt
+law
+hrT
 mIl
 ieX
 tgA
@@ -58911,9 +58972,9 @@ hFX
 tgA
 ieX
 iEt
-ieX
-qRV
-ryS
+qgy
+xBH
+ygE
 ieX
 tgA
 fAW
@@ -61126,7 +61187,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aLH
 aaa
 aaa
 aaa
@@ -68156,7 +68217,7 @@ tHB
 eZd
 bff
 eZd
-tHB
+dce
 lZH
 lZH
 lZH
@@ -69188,7 +69249,7 @@ kMk
 bFF
 wfO
 qMF
-pkj
+cZG
 bUj
 sAF
 vwv
@@ -69959,7 +70020,7 @@ lAU
 icO
 thD
 fWH
-pkj
+cZG
 bUj
 ntj
 ubA
@@ -76581,7 +76642,7 @@ aaa
 aaa
 aaa
 aaa
-aLH
+aaa
 aaa
 aaa
 aaa
