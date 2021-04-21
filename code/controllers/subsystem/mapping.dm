@@ -282,6 +282,10 @@ Used by the AI doomsday and the self-destruct nuke.
 	else if(config.minetype == "jungle")
 		LoadGroup(FailedZs, "Jungle", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
 
+	else if(config.minetype == "rockplanet")
+		LoadGroup(FailedZs, "Rockplanet", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
+
+
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif
