@@ -138,7 +138,7 @@
 // Mining survival box
 /obj/item/storage/box/survival/mining
 	mask_type = /obj/item/clothing/mask/gas/explorer
-	light_type = null
+	light_type = ""
 
 /obj/item/storage/box/survival/mining/PopulateContents()
 	..()
@@ -162,7 +162,7 @@
 // Security survival box
 /obj/item/storage/box/survival/security
 	mask_type = /obj/item/clothing/mask/gas/sechailer
-	light_type = null
+	light_type = ""
 
 /obj/item/storage/box/survival/security/radio/PopulateContents()
 	..() // we want the regular stuff too
