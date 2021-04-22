@@ -2073,13 +2073,15 @@
 /turf/open/floor/plating,
 /area/maintenance/department/science/xenobiology)
 "aRw" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/secondary/command)
+/area/bridge)
 "aRy" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4109,7 +4111,6 @@
 /area/maintenance/department/engine)
 "bOo" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/three_course_meal,
 /obj/effect/spawner/lootdrop/three_course_meal,
 /obj/machinery/light{
 	dir = 1
@@ -6961,6 +6962,13 @@
 /obj/effect/spawner/lootdrop/glowstick,
 /turf/open/floor/plating,
 /area/maintenance/department/security)
+"dcN" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel/dark,
+/area/hallway/secondary/command)
 "dcQ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -9536,6 +9544,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/lobby)
+"ejA" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/bottle/cognac,
+/turf/open/floor/wood,
+/area/crew_quarters/heads/captain/private)
 "ejF" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -9993,14 +10006,9 @@
 /turf/open/floor/grass,
 /area/hydroponics)
 "evR" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command/glass{
-	id_tag = null;
-	name = "Bridge";
-	req_access_txt = "19"
-	},
+/obj/structure/table/wood,
 /turf/open/floor/plasteel/dark,
-/area/bridge)
+/area/hallway/secondary/command)
 "evW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
@@ -11235,10 +11243,12 @@
 /turf/open/floor/bronze,
 /area/chapel/main)
 "eWP" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/bottle/cognac,
-/turf/open/floor/wood,
-/area/crew_quarters/heads/captain/private)
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/open/floor/plasteel/dark,
+/area/bridge)
 "eWZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -13626,7 +13636,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/bridge)
+/area/hallway/secondary/command)
 "gdU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/holopad,
@@ -14877,8 +14887,10 @@
 /turf/open/floor/plasteel,
 /area/engine/lobby)
 "gHT" = (
-/obj/structure/window{
-	dir = 1
+/obj/machinery/door/window{
+	dir = 1;
+	name = "Disposals Access";
+	req_access_txt = "12"
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
@@ -16920,10 +16932,13 @@
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "hIN" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/three_course_meal,
-/turf/open/floor/carpet/executive,
-/area/crew_quarters/heads/captain)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/dark,
+/area/bridge)
 "hJe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -18773,9 +18788,12 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "iAr" = (
-/obj/structure/fireaxecabinet{
-	pixel_x = -30
+/obj/machinery/door/airlock/command/glass{
+	id_tag = null;
+	name = "Bridge";
+	req_access_txt = "19"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "iAw" = (
@@ -20554,6 +20572,14 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/lobby)
+"jry" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "Captainroom";
+	name = "Captain quarters shutters"
+	},
+/turf/open/floor/plating,
+/area/crew_quarters/heads/captain/private)
 "jrB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -23111,6 +23137,14 @@
 /obj/structure/bed/dogbed,
 /turf/open/floor/grass,
 /area/hallway/secondary/exit/departure_lounge)
+"kAr" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/obj/item/banner/command,
+/turf/open/floor/plasteel/dark,
+/area/hallway/secondary/command)
 "kAt" = (
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/plating,
@@ -32840,7 +32874,7 @@
 	network = list("ss13","command")
 	},
 /turf/open/floor/plasteel/dark,
-/area/bridge)
+/area/hallway/secondary/command)
 "oQa" = (
 /obj/machinery/light{
 	dir = 4
@@ -33249,10 +33283,12 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/door/airlock/command/glass{
+	id_tag = null;
+	name = "Bridge";
+	req_access_txt = "19"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "paz" = (
@@ -37588,6 +37624,11 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
+"qWZ" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/three_course_meal,
+/turf/open/floor/carpet/executive,
+/area/crew_quarters/heads/captain)
 "qXi" = (
 /obj/machinery/light{
 	dir = 1
@@ -43742,6 +43783,10 @@
 	name = "Bridge Camera";
 	network = list("ss13","command")
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge/meeting_room)
 "tOY" = (
@@ -43812,6 +43857,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "tPS" = (
@@ -44312,13 +44358,14 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
 "ucq" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/item/banner/command,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/dark,
-/area/bridge)
+/obj/machinery/button/door{
+	id = "Captainroom";
+	name = "Captain quarters shutters";
+	pixel_x = -25;
+	req_access_txt = "19"
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/heads/captain/private)
 "ucz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /obj/machinery/camera{
@@ -45202,7 +45249,7 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/junction,
 /turf/open/floor/plasteel/dark,
-/area/bridge)
+/area/hallway/secondary/command)
 "uxI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -47381,7 +47428,7 @@
 /area/security/prison)
 "vwE" = (
 /obj/machinery/door/poddoor/massdriver_trash,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/maintenance/disposal)
 "vwS" = (
 /obj/structure/table/wood,
@@ -48143,6 +48190,9 @@
 	dir = 4;
 	name = "Bridge Camera";
 	network = list("ss13","command")
+	},
+/obj/structure/fireaxecabinet{
+	pixel_x = -30
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -65219,9 +65269,9 @@ iVz
 wAc
 wAc
 wAc
-wAc
-wAc
-wAc
+xtM
+xtM
+xtM
 vwE
 wAc
 vdx
@@ -87473,9 +87523,9 @@ eNu
 eNu
 eNu
 eNu
-eNu
-eNu
-eNu
+jry
+jry
+jry
 eNu
 eNu
 eNu
@@ -87729,13 +87779,13 @@ eNu
 vuV
 uDQ
 qaH
+ucq
 weZ
-weZ
-weZ
+ejA
 hQI
 abZ
 lie
-eWP
+weZ
 eNu
 svK
 svK
@@ -89776,7 +89826,7 @@ iVz
 iVz
 ybu
 ybu
-eMa
+aRw
 phJ
 ocZ
 klX
@@ -89790,8 +89840,8 @@ btt
 vEa
 dmU
 lCQ
+qWZ
 lFp
-hIN
 hRf
 hwU
 svK
@@ -91068,7 +91118,7 @@ mrR
 pfI
 mbs
 gmH
-gmH
+eWP
 hRf
 hRf
 hRf
@@ -91327,12 +91377,12 @@ mbs
 gmH
 gmH
 pak
-iAr
+ojV
 oPW
 gdO
-gmH
-evR
 ojV
+ojV
+dcN
 eou
 sIg
 eIQ
@@ -91583,17 +91633,17 @@ gmH
 wVW
 wgF
 mFX
-wgF
-wgF
-wgF
+hIN
+kAr
+aMW
 uxB
-ucq
-aRw
+aMW
+aMW
 aMW
 dTT
 rlF
 tBL
-ojV
+jWM
 kBG
 ojV
 jWM
@@ -91840,11 +91890,11 @@ gmH
 gmH
 gmH
 hOZ
-gmH
-gmH
-gmH
-gmH
-gmH
+iAr
+ojV
+ojV
+ojV
+ojV
 evR
 ojV
 uTR
