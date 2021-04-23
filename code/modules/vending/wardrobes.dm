@@ -404,7 +404,7 @@
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
 					/obj/item/storage/backpack/chemistry = 2,
-					/obj/item/storage/backpack/satchel/chem = 2,
+					/obj/item/storage/backpack/satchel/chem = 4,
 					/obj/item/storage/backpack/duffelbag/chemistry = 2,
 					/obj/item/storage/bag/chemistry = 2)
 	contraband = list(/obj/item/reagent_containers/spray/syndicate = 2)
