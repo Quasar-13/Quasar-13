@@ -33,3 +33,4 @@
 ///type of info the centcom report has on this trait, if any.
 /datum/station_trait/proc/get_report()
 	return "[name] - [report_message]"
+	
