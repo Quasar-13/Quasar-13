@@ -339,7 +339,7 @@
 	reqs = list(
 		/obj/item/food/cheesewheel = 1,
 		/obj/item/clothing/head/crown = 1,
-		/datum/reagent/medicine/strange_reagent = 5,
+		/datum/reagent/protofore = 5,
 		/datum/reagent/toxin/mutagen = 5
 	)
 	result = /obj/item/food/royalcheese

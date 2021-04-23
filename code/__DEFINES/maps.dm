@@ -37,6 +37,11 @@ require only minor tweaks.
 #define ZTRAIT_LAVA_RUINS "Lava Ruins"
 #define ZTRAIT_ICE_RUINS "Ice Ruins"
 #define ZTRAIT_ICE_RUINS_UNDERGROUND "Ice Ruins Underground"
+//Bungalow Extra mining
+#define ZTRAIT_JUNGLE_RUINS "Jungle Ruins"
+#define ZTRAIT_ROCK_RUINS "Rock Ruins"
+
+
 #define ZTRAIT_ISOLATED_RUINS "Isolated Ruins" //Placing ruins on z levels with this trait will use turf reservation instead of usual placement.
 
 // boolean - weather types that occur on the level
@@ -80,6 +85,8 @@ require only minor tweaks.
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
 
+
+//Bungalow extra mining
 #define ZTRAITS_ICEMOON list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_SNOWSTORM = TRUE, \
@@ -90,12 +97,13 @@ require only minor tweaks.
 #define ZTRAITS_JUNGLE list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_ACIDRAIN = TRUE, \
+	ZTRAIT_JUNGLE_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/dirt/jungle)
 
 #define ZTRAITS_ROCKPLANET list(\
 	ZTRAIT_MINING = TRUE, \
-	ZTRAIT_LAVA_RUINS = TRUE, \
+	ZTRAIT_ROCK_RUINS = TRUE, \
 	ZTRAIT_VOIDSTORM = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 4, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)

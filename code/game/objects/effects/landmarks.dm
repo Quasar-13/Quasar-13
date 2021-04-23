@@ -158,8 +158,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Scientist"
 
 /obj/effect/landmark/start/chemist
-	name = "Chemist"
-	icon_state = "Chemist"
+	name = "Pharmacist"
+	icon_state = "Pharmacist"
 
 /obj/effect/landmark/start/roboticist
 	name = "Roboticist"
