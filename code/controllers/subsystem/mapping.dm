@@ -19,6 +19,11 @@ SUBSYSTEM_DEF(mapping)
 	var/list/ice_ruins_templates = list()
 	var/list/ice_ruins_underground_templates = list()
 
+	//Bungalowstation mining
+	var/list/rock_ruins_templates = list()
+	var/list/jungle_ruins_templates = list()
+
+
 	var/datum/space_level/isolated_ruins_z //Created on demand during ruin loading.
 
 	var/list/shuttle_templates = list()
@@ -113,6 +118,17 @@ SUBSYSTEM_DEF(mapping)
 		for (var/ice_z in ice_ruins_underground)
 			spawn_rivers(ice_z, 4, level_trait(ice_z, ZTRAIT_BASETURF), /area/icemoon/underground/unexplored/rivers)
 
+
+	//Bungalow Mining Ruins
+	var/list/jungle_ruins = levels_by_trait(ZTRAIT_JUNGLE_RUINS)
+	if (jungle_ruins.len)
+		seedRuins(jungle_ruins, CONFIG_GET(number/jungle_budget), list(/area/mine/junglegeneration), jungle_ruins_templates)
+
+	var/list/rock_ruins = levels_by_trait(ZTRAIT_ROCK_RUINS)
+	if (rock_ruins.len)
+		seedRuins(rock_ruins, CONFIG_GET(number/rock_budget), list(/area/rockplanet/surface/outdoors/unexplored), rock_ruins_templates)
+
+
 	// Generate deep space ruins
 	var/list/space_ruins = levels_by_trait(ZTRAIT_SPACE_RUINS)
 	if (space_ruins.len)
@@ -187,6 +203,12 @@ Used by the AI doomsday and the self-destruct nuke.
 	lava_ruins_templates = SSmapping.lava_ruins_templates
 	ice_ruins_templates = SSmapping.ice_ruins_templates
 	ice_ruins_underground_templates = SSmapping.ice_ruins_underground_templates
+
+	//Bungalow Mining
+	jungle_ruins_templates = SSmapping.jungle_ruins_templates
+	rock_ruins_templates = SSmapping.rock_ruins_templates
+
+
 	shuttle_templates = SSmapping.shuttle_templates
 	shelter_templates = SSmapping.shelter_templates
 	unused_turfs = SSmapping.unused_turfs
@@ -276,6 +298,8 @@ Used by the AI doomsday and the self-destruct nuke.
 	if(config.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
 
+		//Bungalow Edit Start
+
 	else if(config.minetype == "icemoon")
 		LoadGroup(FailedZs, "Icemoon", "map_files/Mining", "Icemoon.dmm", default_traits = ZTRAITS_ICEMOON)
 
@@ -284,6 +308,11 @@ Used by the AI doomsday and the self-destruct nuke.
 
 	else if(config.minetype == "rockplanet")
 		LoadGroup(FailedZs, "Rockplanet", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
+
+	else if(config.minetype == "tidalmoon")
+		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
+
+		//Bungalow Edit End
 
 
 	else if (!isnull(config.minetype) && config.minetype != "none")
@@ -414,6 +443,8 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	var/list/banned = generateMapList("[global.config.directory]/lavaruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/spaceruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/iceruinblacklist.txt")
+	banned += generateMapList("[global.config.directory]/jungleruinblacklist.txt")
+	banned += generateMapList("[global.config.directory]/rockruinblacklist.txt")
 
 	for(var/item in sortList(subtypesof(/datum/map_template/ruin), /proc/cmp_ruincost_priority))
 		var/datum/map_template/ruin/ruin_type = item
@@ -436,6 +467,15 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			ice_ruins_templates[R.name] = R
 		else if(istype(R, /datum/map_template/ruin/space))
 			space_ruins_templates[R.name] = R
+
+			//Bungalow additions
+
+		else if(istype(R, /datum/map_template/ruin/jungle))
+			jungle_ruins_templates[R.name] = R
+
+		else if(istype(R, /datum/map_template/ruin/rockplanet))
+			rock_ruins_templates[R.name] = R
+
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("[global.config.directory]/unbuyableshuttles.txt")

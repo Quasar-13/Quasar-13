@@ -1140,6 +1140,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Xenobiology Lab"
 	icon_state = "xenobio"
 
+/area/science/chem
+	name = "Chemical Research"
+	icon_state = "scichem"
+
 /area/science/cytology
 	name = "Cytology Lab"
 	icon_state = "cytology"

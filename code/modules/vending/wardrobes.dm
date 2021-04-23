@@ -66,6 +66,7 @@
 					/obj/item/clothing/under/rank/medical/doctor/purple = 4,
 					/obj/item/clothing/under/rank/medical/doctor = 4,
 					/obj/item/clothing/suit/toggle/labcoat = 4,
+					/obj/item/clothing/suit/doc = 4,
 					/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
 					/obj/item/clothing/shoes/sneakers/white = 4,
 					/obj/item/clothing/head/soft/paramedic = 4,
@@ -399,12 +400,13 @@
 	icon_state = "chemdrobe"
 	product_ads = "Our clothes are 0.5% more resistant to acid spills! Get yours now!"
 	vend_reply = "Thank you for using the ChemDrobe!"
-	products = list(/obj/item/clothing/under/rank/medical/chemist = 2,
-					/obj/item/clothing/under/rank/medical/chemist/skirt = 2,
+	products = list(/obj/item/clothing/under/rank/medical/pharmacist = 2,
+					/obj/item/clothing/under/rank/medical/pharmacist/skirt = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
-					/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
+					/obj/item/clothing/suit/toggle/labcoat/pharmacist = 2,
+					/obj/item/clothing/suit/pharm = 2,
 					/obj/item/storage/backpack/chemistry = 2,
-					/obj/item/storage/backpack/satchel/chem = 2,
+					/obj/item/storage/backpack/satchel/chem = 4,
 					/obj/item/storage/backpack/duffelbag/chemistry = 2,
 					/obj/item/storage/bag/chemistry = 2)
 	contraband = list(/obj/item/reagent_containers/spray/syndicate = 2)
