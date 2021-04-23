@@ -17,3 +17,4 @@
 						ANNOUNCER_SHUTTLEDOCK = 'sound/ai/default/shuttledock.ogg',
 						ANNOUNCER_SHUTTLERECALLED = 'sound/ai/default/shuttlerecalled.ogg',
 						ANNOUNCER_SPANOMALIES = 'sound/ai/default/spanomalies.ogg')
+						
