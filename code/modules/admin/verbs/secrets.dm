@@ -567,8 +567,9 @@
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Anarchy Mode"))
 			message_admins("[key_name_admin(holder)] started an anarcho-communist society.")
 			change_command_name(pick("Free Territory", "Independent Space Coalition", "United Commune", "Anarchist Union", "Galactic Defense Council"))
-			priority_announce("The Nanotrasen has been disbanded in the recent anarchist uprising. You are now free, workers!", null, SSstation.announcer.get_rand_report_sound())
-			SSeconomy.pack_price_modifier *= 0.2 // ALMOST free stuff.
+			priority_announce("The Nanotrasen has been disbanded in the recent anarchist uprising. You are now free, workers!")
+			//priority_announce("The Nanotrasen has been disbanded in the recent anarchist uprising. You are now free, workers!", null, SSstation.announcer.get_rand_report_sound())
+			//SSeconomy.pack_price_modifier *= 0.2 // ALMOST free stuff.
 			for (var/job_name in GLOB.command_positions + GLOB.security_positions) // Nuh-uh. No gods, no masters.
 				var/datum/job/job = SSjob.GetJob(job_name)
 				job.allow_bureaucratic_error = FALSE
