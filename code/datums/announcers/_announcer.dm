@@ -21,3 +21,4 @@
 
 /datum/centcom_announcer/proc/get_rand_report_sound()
 	return pick(command_report_sounds)
+	
