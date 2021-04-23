@@ -172,7 +172,7 @@
 
 /datum/chemical_reaction/anacea2
 	results = list(/datum/chemical_reaction/anacea = 2)
-	required_reagents = list(/datum/reagent/medicine/pen_acid = 1, /datum/chemical_reaction/synthflesh = 1)
+	required_reagents = list(/datum/reagent/medicine/pen_acid = 1, /datum/reagent/medicine/c2/synthflesh = 1)
 
 /datum/chemical_reaction/sal_acid
 	results = list(/datum/reagent/medicine/sal_acid = 5)
