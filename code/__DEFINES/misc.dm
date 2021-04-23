@@ -166,7 +166,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define TURF_WET_PERMAFROST	(1<<1)
 #define TURF_WET_ICE 		(1<<2)
 #define TURF_WET_LUBE		(1<<3)
-#define TURF_WET_SUPERLUBE	(1<<4)
+#define TURF_WET_SUPERLUBE	(1<<15)
 
 #define IS_WET_OPEN_TURF(O) O.GetComponent(/datum/component/wet_floor)
 

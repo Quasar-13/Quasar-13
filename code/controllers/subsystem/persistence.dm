@@ -353,7 +353,7 @@ SUBSYSTEM_DEF(persistence)
 			R.GenerateRecipe()
 
 		if(!R.HasConflicts()) //Might want to try again if conflicts happened in the future.
-			add_chemical_reaction(R)
+			R.GenerateRecipe()
 		else
 			log_game("Randomized recipe [randomized_type] resulted in conflicting recipes.")
 

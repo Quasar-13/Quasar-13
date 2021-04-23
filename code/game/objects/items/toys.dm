@@ -1288,7 +1288,7 @@
 	toysay = " I'll make you into a burger!"
 
 /obj/item/toy/figure/chemist
-	name = "Chemist action figure"
+	name = "Pharmacist action figure"
 	icon_state = "chemist"
 	toysay = "Get your pills!"
 
