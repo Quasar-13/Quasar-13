@@ -1287,7 +1287,7 @@
 	icon_state = "chef"
 	toysay = " I'll make you into a burger!"
 
-/obj/item/toy/figure/pharmacist
+/obj/item/toy/figure/chemist
 	name = "Pharmacist action figure"
 	icon_state = "chemist"
 	toysay = "Get your pills!"
