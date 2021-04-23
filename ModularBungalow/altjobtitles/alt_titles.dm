@@ -78,9 +78,9 @@
 	alt_titles = list("Emergency Medical Technician")
 	senior_title = "Field Medic"
 
-/datum/job/chemist
-	alt_titles = list("Pharmacist", "Pharmacologist")
-	senior_title = "Chemical Engineer"
+/datum/job/pharmacist
+	alt_titles = list("Pharmacologist")
+	senior_title = "Pharmacy Co-Ordinator"
 
 /datum/job/virologist
 	alt_titles = list("Pathologist", "Microbiologist", "Epidemiologist", "Serologist")
@@ -140,4 +140,4 @@
 /datum/job/captain
 	alt_titles = list("Commanding Officer", "Centcom Representative")
 	senior_title = "Commodore"
-	
+

@@ -34,7 +34,7 @@
 	icon_state = "geneticist_envirosuit"
 	inhand_icon_state = "geneticist_envirosuit"
 
-/obj/item/clothing/under/plasmaman/chemist
+/obj/item/clothing/under/plasmaman/pharmacist
 	name = "chemistry plasma envirosuit"
 	desc = "A plasmaman envirosuit designed for chemists."
 	icon_state = "chemist_envirosuit"

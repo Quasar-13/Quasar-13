@@ -178,7 +178,7 @@
 	icon_state = "virologist_envirohelm"
 	inhand_icon_state = "virologist_envirohelm"
 
-/obj/item/clothing/head/helmet/space/plasmaman/chemist
+/obj/item/clothing/head/helmet/space/plasmaman/pharmacist
 	name = "chemistry plasma envirosuit helmet"
 	desc = "A plasmaman envirosuit designed for chemists, two orange stripes going down its face."
 	icon_state = "chemist_envirohelm"
