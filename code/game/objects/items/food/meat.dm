@@ -382,7 +382,7 @@
 	name = "gorilla cube"
 	desc = "A Waffle Co. brand gorilla cube. Now with extra molecules!"
 	bite_consumption = 20
-	food_reagents = list(/datum/reagent/monkey_powder = 30, /datum/reagent/medicine/verafore = 5)
+	food_reagents = list(/datum/reagent/monkey_powder = 30, /datum/reagent/protofore = 5)
 	tastes = list("the jungle" = 1, "bananas" = 1, "jimmies" = 1)
 	spawned_mob = /mob/living/simple_animal/hostile/gorilla
 

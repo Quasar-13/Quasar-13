@@ -127,3 +127,20 @@
 	reagent_state = LIQUID
 
 
+//Kiriechem Mixers
+/datum/reagent/protofore
+	name = "Protofore"
+	description = "A strange, probably harmful chemical"
+	color = "#262626" // rgb: 236	236	141
+	taste_description = "rot."
+	reagent_state = LIQUID
+
+/datum/reagent/protofore/on_mob_life(mob/living/M)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.3*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, 0.3*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, 0.3*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, 0.3*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_EARS, 0.3*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, 0.3*REM)
+	M.adjustCloneLoss(4*REM)
+

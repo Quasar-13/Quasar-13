@@ -800,7 +800,7 @@
 		exposed_mob.do_jitter_animation(10)
 		return
 	exposed_mob.visible_message("<span class='warning'>[exposed_mob]'s body starts convulsing!</span>")
-	exposed_mob.notify_ghost_cloning("Your body is being revived with Strange Reagent!")
+	exposed_mob.notify_ghost_cloning("Your body is being revived with Verafore!")
 	exposed_mob.do_jitter_animation(10)
 	var/excess_healing = 5*(reac_volume-amount_to_revive) //excess reagent will heal blood and organs across the board
 	addtimer(CALLBACK(exposed_mob, /mob/living/carbon.proc/do_jitter_animation, 10), 40) //jitter immediately, then again after 4 and 8 seconds
