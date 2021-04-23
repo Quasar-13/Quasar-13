@@ -250,6 +250,7 @@
 		lootcount = FLOOR(lootcount * 0.5, 1)
 
 
+
 /obj/effect/spawner/lootdrop/maintenance/Initialize(mapload)
 	loot = GLOB.maintenance_loot
 	. = ..()

@@ -66,7 +66,7 @@
 	weight = 5
 	show_in_report = TRUE
 	report_message = "Prices are low in this system, BUY BUY BUY!"
-    	blacklist = list(/datum/station_trait/distant_supply_lines)
+	blacklist = list(/datum/station_trait/distant_supply_lines)
 
 
 /datum/station_trait/strong_supply_lines/on_round_start()
@@ -118,9 +118,9 @@
 	weight = 5
 	show_in_report = TRUE
 	report_message = "Due to proximity to our supply station, the cargo shuttle will have a quicker flight time to your cargo department/"
-	blacklist = list(/datum/station_trait/slow_shuttle)
+//	blacklist = list(/datum/station_trait/slow_shuttle) Broken
 
 /datum/station_trait/quick_shuttle/on_round_start()
 	. = ..()
 	SSshuttle.supply.callTime *= 0.5
-	
+

@@ -19,7 +19,7 @@
 	weight = 5
 	show_in_report = TRUE
 	report_message = "For experimental purposes, this station AI might show divergence from default lawset. Do not meddle with this experiment."
-    	trait_to_give = STATION_TRAIT_UNIQUE_AI
+	trait_to_give = STATION_TRAIT_UNIQUE_AI
 
 /datum/station_trait/ian_adventure
 	name = "Ian's Adventure"
@@ -62,4 +62,4 @@
 /datum/station_trait/announcement_intern/New()
 	. = ..()
 	SSstation.announcer = /datum/centcom_announcer/intern
-	
+

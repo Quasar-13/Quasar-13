@@ -33,7 +33,7 @@ PROCESSING_SUBSYSTEM_DEF(station)
 	var/neutral_trait_count = pick(5;0, 10;1, 3;2)
 	var/negative_trait_count = pick(12;0, 5;1, 1;2)
 
-pick_traits(STATION_TRAIT_POSITIVE, positive_trait_count)
+	pick_traits(STATION_TRAIT_POSITIVE, positive_trait_count)
 	pick_traits(STATION_TRAIT_NEUTRAL, neutral_trait_count)
 	pick_traits(STATION_TRAIT_NEGATIVE, negative_trait_count)
 
@@ -50,4 +50,4 @@ pick_traits(STATION_TRAIT_POSITIVE, positive_trait_count)
 		for(var/i in picked_trait.blacklist)
 			var/datum/station_trait/trait_to_remove = i
 			selectable_traits_by_types[initial(trait_to_remove.trait_type)] -= trait_to_remove
-			
+

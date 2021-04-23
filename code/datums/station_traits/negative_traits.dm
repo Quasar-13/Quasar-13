@@ -79,9 +79,10 @@
 	SIGNAL_HANDLER
 	SSjob.set_overflow_role(chosen_job)
 
+/*
 /datum/station_trait/slow_shuttle
     name = "Slow Shuttle"
-	trait_type = STATION_TRAIT_NEUTRAL
+	trait_type = STATION_TRAIT_NEGATIVE
 	weight = 5
 	show_in_report = TRUE
 	report_message = "Due to distance to our supply station, the cargo shuttle will have a slower flight time to your cargo department."
@@ -90,4 +91,6 @@
 /datum/station_trait/slow_shuttle/on_round_start()
 	. = ..()
 	SSshuttle.supply.callTime *= 1.5
-	
+	Shit ain't working RN*/
+
+
