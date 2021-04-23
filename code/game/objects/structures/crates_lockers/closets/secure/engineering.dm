@@ -91,3 +91,23 @@
 	new /obj/item/clothing/head/hardhat/atmos(src)
 	new /obj/item/clothing/glasses/meson/engine/tray(src)
 	new /obj/item/extinguisher/advanced(src)
+
+//Bungalowstation Edit
+
+/obj/structure/closet/secure_closet/void
+	name = "void technician's locker"
+	req_access = list(ACCESS_ENGINE_EQUIP)
+	icon_state = "void"
+
+/obj/structure/closet/secure_closet/void/PopulateContents()
+	..()
+	new /obj/item/survivalcapsule(src)
+	new /obj/item/gps(src)
+	new /obj/item/tank/jetpack/oxygen/harness(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/clothing/glasses/meson(src)
+	new /obj/item/storage/firstaid(src)
+	new /obj/item/gun/energy/e_gun/void(src)
+	new /obj/item/stack/rods/fifty(src)
+	new /obj/item/stack/rods/fifty(src)
+
