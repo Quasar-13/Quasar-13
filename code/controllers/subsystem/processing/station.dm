@@ -50,3 +50,4 @@ pick_traits(STATION_TRAIT_POSITIVE, positive_trait_count)
 		for(var/i in picked_trait.blacklist)
 			var/datum/station_trait/trait_to_remove = i
 			selectable_traits_by_types[initial(trait_to_remove.trait_type)] -= trait_to_remove
+			
