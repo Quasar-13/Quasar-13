@@ -3,8 +3,8 @@
 	department_head = list("Research Director")
 	faction = "Station"
 	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the research director, or the Chief medical officer, depending on which department you reside in."
+	spawn_positions = 1
+	supervisors = "the research director, or the chief medical officer, depending on which department you reside in."
 	selection_color = "#ffeeff"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
