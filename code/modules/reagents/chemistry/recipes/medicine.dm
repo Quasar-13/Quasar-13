@@ -180,7 +180,7 @@
 
 /datum/chemical_reaction/oxandrolone
 	results = list(/datum/reagent/medicine/oxandrolone = 6)
-	required_reagents = list(/datum/reagent/carbon = 3, /datum/reagent/phenol = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1, datum/reagent/medicine/c2/lenturi = 5)
+	required_reagents = list(/datum/reagent/carbon = 3, /datum/reagent/phenol = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1, /datum/reagent/medicine/c2/lenturi = 5)
 
 /datum/chemical_reaction/salbutamol
 	results = list(/datum/reagent/medicine/salbutamol = 5)
