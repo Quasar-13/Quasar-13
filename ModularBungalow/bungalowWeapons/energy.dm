@@ -45,7 +45,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	pin = /obj/item/firing_pin/explorer
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/close, /obj/item/ammo_casing/energy/kinetic)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_BULKY
 	selfcharge = 1
 

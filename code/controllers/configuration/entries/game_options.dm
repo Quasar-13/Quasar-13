@@ -336,6 +336,18 @@
 	integer = FALSE
 	min_val = 0
 
+//Bungalow edit
+/datum/config_entry/number/jungle_budget
+	config_entry_value = 60
+	integer = FALSE
+	min_val = 0
+
+/datum/config_entry/number/rock_budget
+	config_entry_value = 60
+	integer = FALSE
+	min_val = 0
+//bungalow edit end
+
 /datum/config_entry/number/space_budget
 	config_entry_value = 16
 	integer = FALSE
