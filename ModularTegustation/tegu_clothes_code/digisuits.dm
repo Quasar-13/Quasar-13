@@ -74,7 +74,7 @@
 /obj/item/clothing/under/rank/medical/doctor
 	mutantrace_variation = MUTANTRACE_VARIATION
 	tegu_digisuit = TRUE
-/obj/item/clothing/under/rank/medical/chemist
+/obj/item/clothing/under/rank/medical/pharmacist
 	mutantrace_variation = MUTANTRACE_VARIATION
 	tegu_digisuit = TRUE
 /obj/item/clothing/under/rank/rnd/research_director
@@ -174,7 +174,7 @@
 /obj/item/clothing/under/rank/medical/doctor/skirt
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	tegu_digisuit = FALSE
-/obj/item/clothing/under/rank/medical/chemist/skirt
+/obj/item/clothing/under/rank/medical/pharmacist/skirt
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	tegu_digisuit = FALSE
 /obj/item/clothing/under/rank/rnd/research_director/skirt

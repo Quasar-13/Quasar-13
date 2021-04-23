@@ -120,7 +120,7 @@
 		/obj/item/organ/tail/cat = 1,
 		/obj/item/food/meat/slab = 3,
 		/datum/reagent/blood = 50,
-		/datum/reagent/medicine/strange_reagent = 5
+		/datum/reagent/protofore = 5
 	)
 	result = /mob/living/simple_animal/pet/cat/breadcat
 	subcategory = CAT_BREAD
