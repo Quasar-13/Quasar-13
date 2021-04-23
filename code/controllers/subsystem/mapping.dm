@@ -276,11 +276,22 @@ Used by the AI doomsday and the self-destruct nuke.
 	if(config.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
 
+		//Bungalow Edit Start
+
 	else if(config.minetype == "icemoon")
 		LoadGroup(FailedZs, "Icemoon", "map_files/Mining", "Icemoon.dmm", default_traits = ZTRAITS_ICEMOON)
 
 	else if(config.minetype == "jungle")
 		LoadGroup(FailedZs, "Jungle", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
+
+	else if(config.minetype == "rockplanet")
+		LoadGroup(FailedZs, "Rockplanet", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
+
+	else if(config.minetype == "tidalmoon")
+		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
+
+		//Bungalow Edit End
+
 
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")

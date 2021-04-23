@@ -5,6 +5,9 @@
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
 		#include "map_files\Mining\Lavaland.dmm"
+		#include "map_files\Mining\Icemoon.dmm"
+		#include "map_files\Mining\Rockplanet.dmm"
+		#include "map_files\Mining\Jungle.dmm"
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
 		#include "map_files\Deltastation\DeltaStation2.dmm"
@@ -13,6 +16,7 @@
 		#include "map_files\RemoraStation\RemoraStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+
 		//Admin only maps
 		#include "map_files\HelioStation\HelioStation.dmm"
 		#include "map_files\KiloStation\KiloStation.dmm"

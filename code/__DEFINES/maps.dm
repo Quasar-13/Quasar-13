@@ -71,6 +71,8 @@ require only minor tweaks.
 #define ZTRAITS_CENTCOM list(ZTRAIT_CENTCOM = TRUE)
 #define ZTRAITS_STATION list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_STATION = TRUE)
 #define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_SPACE_RUINS = TRUE)
+
+//Mining Maps
 #define ZTRAITS_LAVALAND list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_ASHSTORM = TRUE, \
@@ -90,6 +92,22 @@ require only minor tweaks.
 	ZTRAIT_ACIDRAIN = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/dirt/jungle)
+
+#define ZTRAITS_ROCKPLANET list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_LAVA_RUINS = TRUE, \
+	ZTRAIT_VOIDSTORM = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 4, \
+	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
+
+#define ZTRAITS_TIDALMOON list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_LAVA_RUINS = TRUE, \
+	ZTRAIT_ICE_RUINS = TRUE, \
+	ZTRAIT_ICE_RUINS_UNDERGROUND = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
+
 
 #define DL_NAME "name"
 #define DL_TRAITS "traits"
