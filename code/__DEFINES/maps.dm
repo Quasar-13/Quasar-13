@@ -100,6 +100,14 @@ require only minor tweaks.
 	ZTRAIT_BOMBCAP_MULTIPLIER = 4, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
 
+#define ZTRAITS_TIDALMOON list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_LAVA_RUINS = TRUE, \
+	ZTRAIT_ICE_RUINS = TRUE, \
+	ZTRAIT_ICE_RUINS_UNDERGROUND = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
+
 
 #define DL_NAME "name"
 #define DL_TRAITS "traits"
