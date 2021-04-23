@@ -55,18 +55,6 @@
 	results = list(/datum/reagent/medicine/pen_acid = 6)
 	required_reagents = list(/datum/reagent/fuel = 1, /datum/reagent/chlorine = 1, /datum/reagent/ammonia = 1, /datum/reagent/toxin/formaldehyde = 1, /datum/reagent/sodium = 1, /datum/reagent/toxin/cyanide = 1)
 
-/datum/chemical_reaction/sal_acid
-	results = list(/datum/reagent/medicine/sal_acid = 5)
-	required_reagents = list(/datum/reagent/sodium = 1, /datum/reagent/phenol = 1, /datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/toxin/acid = 1)
-
-/datum/chemical_reaction/oxandrolone
-	results = list(/datum/reagent/medicine/oxandrolone = 6)
-	required_reagents = list(/datum/reagent/carbon = 3, /datum/reagent/phenol = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1)
-
-/datum/chemical_reaction/salbutamol
-	results = list(/datum/reagent/medicine/salbutamol = 5)
-	required_reagents = list(/datum/reagent/medicine/sal_acid = 1, /datum/reagent/lithium = 1, /datum/reagent/aluminium = 1, /datum/reagent/bromine = 1, /datum/reagent/ammonia = 1)
-
 /datum/chemical_reaction/ephedrine
 	results = list(/datum/reagent/medicine/ephedrine = 4)
 	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/fuel/oil = 1, /datum/reagent/hydrogen = 1, /datum/reagent/diethylamine = 1)
@@ -179,3 +167,23 @@
 	var/location = get_turf(holder.my_atom)
 	for(var/i in 1 to created_volume)
 		new /obj/item/stack/medical/poultice(location)
+
+//Bungalow C3 Rebalance
+
+/datum/chemical_reaction/anacea2
+	results = list(/datum/chemical_reaction/anacea = 2)
+	required_reagents = list(/datum/reagent/medicine/pen_acid = 1, /datum/chemical_reaction/synthflesh = 1)
+
+/datum/chemical_reaction/sal_acid
+	results = list(/datum/reagent/medicine/sal_acid = 5)
+	required_reagents = list(/datum/reagent/sodium = 1, /datum/reagent/phenol = 1, /datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/toxin/acid = 1, /datum/reagent/medicine/c2/probital = 5)
+
+/datum/chemical_reaction/oxandrolone
+	results = list(/datum/reagent/medicine/oxandrolone = 6)
+	required_reagents = list(/datum/reagent/carbon = 3, /datum/reagent/phenol = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1, datum/reagent/medicine/c2/lenturi = 5)
+
+/datum/chemical_reaction/salbutamol
+	results = list(/datum/reagent/medicine/salbutamol = 5)
+	required_reagents = list(/datum/reagent/medicine/sal_acid = 1, /datum/reagent/lithium = 1, /datum/reagent/aluminium = 1, /datum/reagent/bromine = 1, /datum/reagent/ammonia = 1)
+	required_temp = 776
+
