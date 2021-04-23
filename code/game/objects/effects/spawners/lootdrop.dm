@@ -243,11 +243,11 @@
 	name = "maintenance loot spawner"
 	// see code/_globalvars/lists/maintenance_loot.dm for loot table
 
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_FILLED_MAINT))
-		lootcount = FLOOR(lootcount * 1.5, 1)
+/*	if(HAS_TRAIT(SSstation, STATION_TRAIT_FILLED_MAINT))
+		lootcount = FLOOR(lootcount * 1.5,1)
 
 	else if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT))
-		lootcount = FLOOR(lootcount * 0.5, 1)
+		lootcount = FLOOR(lootcount * 0.5,1)  Trait also not working*/
 
 
 
