@@ -11,3 +11,9 @@
 	description = "a nice little outpost."
 	suffix = "rockplanet_soviet.dmm"
 
+/datum/map_template/ruin/rockplanet/heirophant
+	name = "Ancient Heirophant"
+	id = "rockheiro"
+	description = "something dangerous"
+	suffix = "rockplanet_heirophant.dmm"
+
