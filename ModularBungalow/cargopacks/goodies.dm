@@ -1,3 +1,21 @@
+/datum/supply_pack/goody/paperbundle
+	name = "Bundle of 30 Papers"
+	desc = "A bundle of paper for either bureaucracy uses or Japanese architecture. Did you know that you can snip a bundle with something sharp to spill paper and make paper frames with wood ?"
+	cost = PAYCHECK_MINIMAL * 2.5
+	contains = list(/obj/item/paper_bin/bundlenatural)
+
+/datum/supply_pack/goody/flarebox
+	name = "Box of 7 Flares"
+	desc = "A box filled with seven flares. Either for emergency or for other questionnable recipes."
+	cost = PAYCHECK_MEDIUM * 4
+	contains = list(/obj/item/storage/box/flares)
+
+/datum/supply_pack/goody/glowsticks
+	name = "Box of 7 Glowsticks"
+	desc = "A box filled with different colorfull glowsticks. Either for emergency or for partying hard."
+	cost = PAYCHECK_MEDIUM * 5
+	contains = list(/obj/item/storage/box/glowsticks)
+
 /datum/supply_pack/goody/structurebeacon
 	name = "Bluespace structure beacon"
 	desc = "A beacon that orders a bluespace structure capsule, holding a schematic for a functional building. Contains shelters and small houses."
