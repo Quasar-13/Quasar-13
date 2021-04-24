@@ -90,11 +90,13 @@
 			H.stop_sound_channel(CHANNEL_HEARTBEAT)
 			beat = BEAT_NONE
 
- 	if(organ_flags & ORGAN_FAILING && !(HAS_TRAIT(src, TRAIT_STABLEHEART))) //heart broke, stopped beating, death imminent... unless you have veins that pump blood without a heart		if(owner.stat == CONSCIOUS)
+ if(organ_flags & ORGAN_FAILING && !(HAS_TRAIT(src, TRAIT_STABLEHEART))) //heart broke, stopped beating, death imminent... unless you have veins that pump blood without a heart
+		if(owner.stat == CONSCIOUS)
 			owner.visible_message("<span class='danger'>[owner] clutches at [owner.p_their()] chest as if [owner.p_their()] heart is stopping!</span>", \
 				"<span class='userdanger'>You feel a terrible pain in your chest, as if your heart has stopped!</span>")
 		owner.set_heartattack(TRUE)
 		failed = TRUE
+
 
 /obj/item/organ/heart/get_availability(datum/species/S)
 	return !(NOBLOOD in S.species_traits)
