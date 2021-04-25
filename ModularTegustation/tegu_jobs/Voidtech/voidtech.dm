@@ -39,6 +39,8 @@
 	pda_slot = ITEM_SLOT_LPOCKET
 	backpack_contents = list(/obj/item/stack/rods/fifty)
 
+	skillchips = list(/obj/item/skillchip/job/engineer)
+
 
 //Spawn Point
 /obj/effect/landmark/start/voidtech
