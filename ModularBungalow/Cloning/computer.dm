@@ -1,27 +1,32 @@
-#define AUTOCLONING_MINIMAL_LEVEL 3
-
 /obj/machinery/computer/cloning
 	name = "cloning console"
 	desc = "Used to clone people and manage DNA."
 	icon_screen = "dna"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/computer/cloning
-	req_access = list(ACCESS_GENETICS) //for modifying records
-	var/obj/machinery/dna_scannernew/scanner //Linked scanner. For scanning.
-	var/list/pods //Linked cloning pods
+	req_access = list(ACCESS_GENETICS)
+	/// Linked scanner. For scanning.
+	var/obj/machinery/dna_scannernew/scanner
+	/// Linked cloning pods
+	var/list/pods
 	var/temp = "Inactive"
 	var/scantemp_ckey
 	var/scantemp = "Ready to Scan"
-	var/menu = 1 //Which menu screen to display
+	/// Which menu screen to display
+	var/menu = 1
 	var/list/records = list()
+	/// Incompatible format to genetics machine
 	var/datum/data/record/active_record
-	var/obj/item/disk/data/cloning/diskette //Incompatible format to genetics machine
-	//select which parts of the diskette to load
-	var/include_se = FALSE //mutations
-	var/include_ui = FALSE //appearance
-	var/include_ue = FALSE //blood type, UE, and name
-
-	var/loading = FALSE // Nice loading text
+	/// Select which parts of the diskette to load
+	var/obj/item/disk/data/cloning/diskette
+	/// Mutations
+	var/include_se = FALSE
+	/// Appearance
+	var/include_ui = FALSE
+	/// Blood type, UE, and name
+	var/include_ue = FALSE
+	/// Loading text
+	var/loading = FALSE
 	var/autoprocess = FALSE
 
 	light_color = LIGHT_COLOR_BLUE
@@ -132,19 +137,19 @@
 	pod.connected = null
 	LAZYREMOVE(pods, pod)
 
-/obj/machinery/computer/cloning/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/disk/data)) //INSERT SOME DISKETTES
+/obj/machinery/computer/cloning/attackby(obj/item/tool, mob/user, params)
+	if(istype(tool, /obj/item/disk/data))
 		if (!diskette)
-			if (!user.transferItemToLoc(W,src))
+			if (!user.transferItemToLoc(tool,src))
 				return
-			diskette = W
-			to_chat(user, "<span class='notice'>You insert [W].</span>")
+			diskette = tool
+			to_chat(user, "<span class='notice'>You insert [tool].</span>")
 			playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, FALSE)
 			updateUsrDialog()
-	else if(W.tool_behaviour == TOOL_MULTITOOL)
-		if(!multitool_check_buffer(user, W))
+	else if(tool.tool_behaviour == TOOL_MULTITOOL)
+		if(!multitool_check_buffer(user, tool))
 			return
-		var/obj/item/multitool/P = W
+		var/obj/item/multitool/P = tool
 
 		if(istype(P.buffer, /obj/machinery/clonepod))
 			if(get_area(P.buffer) != get_area(src))
