@@ -32,3 +32,4 @@
 			qdel(src)
 		else
 			energy -= 1
+			
