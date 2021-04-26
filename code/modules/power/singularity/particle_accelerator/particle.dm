@@ -69,3 +69,4 @@
 	else
 		sleep(speed)
 		move()
+		
