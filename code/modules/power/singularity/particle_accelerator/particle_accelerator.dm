@@ -175,3 +175,4 @@
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
 	icon_state = "fuel_chamber"
 	reference = "fuel_chamber"
+	
