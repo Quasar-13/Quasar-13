@@ -58,9 +58,14 @@
 	icon_state = "void-rifle"
 	inhand_icon_state = "gun"
 	pin = /obj/item/firing_pin/explorer
-	ammo_type = list(/obj/item/ammo_casing/energy/lasergun, /obj/item/ammo_casing/energy/kinetic)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
 	w_class = WEIGHT_CLASS_NORMAL
 	selfcharge = 1
+<<<<<<< Updated upstream
+=======
+	fire_delay = 2
+	burst_size = 3
+>>>>>>> Stashed changes
 
 
 //X-02 Pulse Disabler Rifle

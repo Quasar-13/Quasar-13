@@ -45,6 +45,16 @@
 	harmful = FALSE
 	select_name = "blast"
 
+<<<<<<< Updated upstream
+=======
+/obj/item/ammo_casing/energy/laser/scatter/rapid
+	projectile_type = /obj/projectile/beam/scatter
+	pellets = 1
+	variance = 0
+	select_name = "rapid"
+	e_cost = 25
+
+>>>>>>> Stashed changes
 /obj/item/ammo_casing/energy/laser/heavy
 	projectile_type = /obj/projectile/beam/laser/heavylaser
 	select_name = "anti-vehicle"
