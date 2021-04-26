@@ -107,7 +107,7 @@
 	new /obj/item/tank/internals/emergency_oxygen/engi(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/storage/firstaid(src)
-	new /obj/item/gun/energy/e_gun/void(src)
+	new /obj/item/kitchen/knife/combat/survival(src)
 	new /obj/item/stack/rods/fifty(src)
 	new /obj/item/stack/rods/fifty(src)
 
