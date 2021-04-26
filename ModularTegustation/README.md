@@ -161,7 +161,7 @@ Codewords to search PRs by:
 
 // Tegustation digitigrade - Lizard digitigrade support
 
-// Tegustation Mediborg Improvements - Mediborg improvements
+// Tegustation Medical Improvements - Medical Improvements
 
 // Tegustation Bodycameras - Security bodycameras
 
