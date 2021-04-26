@@ -1,3 +1,4 @@
+/*
 /obj/item/skillchip/job/qm
 	name = "Crate Lugger skillchip"  // bork bork bork
 	desc = "A skillchip meant to give the use the ability to haul crates."
@@ -19,3 +20,4 @@
 /obj/item/skillchip/job/qm/on_deactivate(mob/living/carbon/user, silent = FALSE)
 	style.remove(user)
 	return ..()
+*/
