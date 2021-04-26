@@ -119,7 +119,7 @@
 	/* TEGU EDIT - ???
 	if(source.mob.throw_mode)
 		return
-	*/ //TEGU EDIT END
+	*/ //TEGU EDIT
 	if(!isturf(source.mob.loc)) //No firing inside lockers and stuff.
 		return
 	if(get_dist(source.mob, _target) < 2) //Adjacent clicking.
