@@ -88,7 +88,7 @@
 			intensity = 120
 			lube_flags = SLIDE_ICE | GALOSHES_DONT_HELP
 		if(TURF_WET_SUPERLUBE)
-			intensity = 120
+			intensity = 300
 			lube_flags = SLIDE | GALOSHES_DONT_HELP | SLIP_WHEN_CRAWLING
 		else
 			qdel(parent.GetComponent(/datum/component/slippery))

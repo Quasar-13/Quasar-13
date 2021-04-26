@@ -144,3 +144,9 @@
 
 	results = list(/datum/reagent/determination = 5)
 
+//Eigenswap
+/datum/chemical_reaction/randomized/kiriechem/eigenswap
+	min_input_reagents = 3
+	max_input_reagents = 3
+
+	results = list(/datum/reagent/eigenswap = 3)

@@ -144,3 +144,22 @@
 	M.adjustOrganLoss(ORGAN_SLOT_EYES, 0.3*REM)
 	M.adjustCloneLoss(4*REM)
 
+//Fermichem Ports
+
+/datum/reagent/eigenswap
+	name = "Eigenswap"
+	description = "This reagent is known to swap the handedness of a patient."
+
+/datum/reagent/impurity/eigenswap/on_mob_life(mob/living/carbon/carbon_mob)
+	. = ..()
+	var/list/cached_hand_items = carbon_mob.held_items
+	var/index = 1
+	for(var/thing in cached_hand_items)
+		index++
+		if(index > length(cached_hand_items))//If we're past the end of the list, go back to start
+			index = 1
+		if(!thing)
+			continue
+		carbon_mob.put_in_hand(thing, index, forced = TRUE, ignore_anim = TRUE)
+		playsound(carbon_mob, 'sound/effects/phasein.ogg', 20, TRUE)
+
