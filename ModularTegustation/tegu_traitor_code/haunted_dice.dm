@@ -1,3 +1,4 @@
+/* /// Removed - Currently broken.
 /obj/item/dice/encounter/d20
 	dice_spawn = /mob/living/simple_animal/hostile/poison/bees
 	name = "d20"
@@ -76,3 +77,4 @@
 		for(var/obj/item/dice/encounter/D in contents)
 			if(!D.owner)
 				D.owner = H
+*/
