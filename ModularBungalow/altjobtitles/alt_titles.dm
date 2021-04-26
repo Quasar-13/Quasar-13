@@ -18,7 +18,7 @@
 //Service
 /datum/job/assistant
 	alt_titles = list("Civilian", "Visitor", "Businessman", "Entertainer")
-	senior_title = list("Medical Assistant", "Mechanical Assistant", "Research Assistant")
+	senior_title = list("Medical Assistant", "Mechanical Assistant", "Research Assistant", "Assistinator")
 
 /datum/job/cook
 	alt_titles = list("Butcher", "Grillmaster")
