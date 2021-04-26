@@ -404,6 +404,7 @@
 					/obj/item/clothing/under/rank/medical/pharmacist/skirt = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/pharmacist = 2,
+					/obj/item/clothing/suit/chemre = 2,
 					/obj/item/clothing/suit/pharm = 2,
 					/obj/item/storage/backpack/chemistry = 2,
 					/obj/item/storage/backpack/satchel/chem = 4,
@@ -425,6 +426,7 @@
 					/obj/item/clothing/under/rank/rnd/geneticist/skirt = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/genetics = 2,
+					/obj/item/clothing/suit/gene = 2,
 					/obj/item/storage/backpack/genetics = 2,
 					/obj/item/storage/backpack/satchel/gen = 2,
 					/obj/item/storage/backpack/duffelbag/genetics = 2)
@@ -443,6 +445,7 @@
 					/obj/item/clothing/under/rank/medical/virologist/skirt = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/virologist = 2,
+					/obj/item/clothing/suit/viro = 2,
 					/obj/item/clothing/mask/surgical = 2,
 					/obj/item/storage/backpack/virology = 2,
 					/obj/item/storage/backpack/satchel/vir = 2,
