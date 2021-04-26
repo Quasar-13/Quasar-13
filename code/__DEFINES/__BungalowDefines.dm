@@ -33,6 +33,9 @@
 #define POLL_IGNORE_DEFECTIVECLONE "defective_clone"
 #define AUTOCLONING_MINIMAL_LEVEL 3
 
+/// Bungalow CQC
+#define MARTIALART_QM "Close Quarters Crateing"
+
 /*
  * # Flags
  */
