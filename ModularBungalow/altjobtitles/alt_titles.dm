@@ -5,11 +5,11 @@
 //Engineering
 /datum/job/engineer
 	alt_titles = list("Maintenance Technician", "Engine Technician", "Mechanic", "Electrician", "Telecommunications Technician")
-	senior_title = "Senior Engineer"
+	senior_title = "Project Co-ordinator"
 
 /datum/job/atmos
-	alt_titles = list("Firefighter", "Life Support Specialist", "Vapor Chemist")
-	senior_title = "Senior Atmospheric Technician"
+	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
+	senior_title = "Fusion Technician"
 
 /datum/job/tegu/voidtech
 	alt_titles = list("Space Explorer", "Salvager")
@@ -18,7 +18,7 @@
 //Service
 /datum/job/assistant
 	alt_titles = list("Civilian", "Visitor", "Businessman", "Entertainer")
-	senior_title = list("Medical Assistant", "Mechanical Assistant", "Research Assistant", "Assistinator")
+	senior_title = list("Assistinator", "Assistant 2")
 
 /datum/job/cook
 	alt_titles = list("Butcher", "Grillmaster")
@@ -62,12 +62,16 @@
 	senior_title = "Research Associate"
 
 /datum/job/roboticist
-	alt_titles = list("Biomechanical Engineer", "Robotical Engineer")
+	alt_titles = list("Biomechanical Engineer", "Robotical Engineer", "Computer Engineer")
 	senior_title = "Mecha Pilot"
 
 /datum/job/geneticist
 	alt_titles = list("Geneologist", "Medical Geneticist")
 	senior_title = "Genetic Engineer"
+
+/datum/job/tegu/chemre
+	alt_titles = list("Chemical Researcher", "Chemical Scientist")
+	senior_title = "Chemical Engineer"
 
 //Medical
 /datum/job/doctor
@@ -96,7 +100,7 @@
 	senior_title = "Staff Sergant"
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy")
+	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
 	senior_title = "Blueshield Officer"
 
 //Supply
