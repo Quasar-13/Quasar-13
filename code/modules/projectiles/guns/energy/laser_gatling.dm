@@ -21,7 +21,7 @@
 /obj/item/minigunpack/Initialize()
 	. = ..()
 	gun = new(src)
- 	battery = new(src)
+	battery = new(src)
 	START_PROCESSING(SSobj, src)
 
 /obj/item/minigunpack/Destroy()
