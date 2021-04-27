@@ -598,7 +598,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "engine"
 
 /area/engine/voidtech
-	name = "void tech"
+	name = "Void technician's Office"
 	icon_state = "voidtech"
 
 /area/engine/atmos
