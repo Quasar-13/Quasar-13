@@ -13,7 +13,7 @@
 		/obj/item/assembly/signaler,
 	)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 10, FIRE = 20, ACID = 0)
-	hoodtype = /obj/item/clothing/head/hooded/winterhood/engineering
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/engineering/tcomms
 	species_exception = list(/datum/species/golem/uranium)
 
 /obj/item/clothing/head/hooded/winterhood/engineering/tcomms
