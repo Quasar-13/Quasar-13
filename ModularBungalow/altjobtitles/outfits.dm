@@ -86,6 +86,10 @@
 	l_pocket = /obj/item/flashlight
 	l_hand = /obj/item/storage/bag/construction
 
+/datum/outfit/job/engineer/signaltechnician
+	name = "Station Engineer (Signal Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/signal_tech
+
 //Captain
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
