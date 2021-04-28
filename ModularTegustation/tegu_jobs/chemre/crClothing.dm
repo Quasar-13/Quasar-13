@@ -11,62 +11,12 @@
 
 
 //Researcher labcoat
-/obj/item/clothing/suit/chemre
+/obj/item/clothing/suit/neocoat/chemre
 	name = "Chemist's labcoat"
 	desc = "A beautiful purple and orange labcoat for the resarchers to wear. has outstanding acid resistance."
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
 	icon_state = "labcoat_chemre"
-	inhand_icon_state = "labcoat"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
-
-//Doc Alternate
-/obj/item/clothing/suit/doc
-	name = "doctor's long labcoat"
-	desc = "A long white labcoat used by doctors occasionally"
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
-	icon_state = "labcoat_doc_alt"
-	inhand_icon_state = "labcoat"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
-
-//Viro Alternate
-/obj/item/clothing/suit/viro
-	name = "virologist's long labcoat"
-	desc = "A long labcoat with green hues used by doctors occasionally"
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
-	icon_state = "labcoat_viro_alt"
-	inhand_icon_state = "labcoat"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
-
-//Geneticist Alternate
-/obj/item/clothing/suit/gene
-	name = "geneticist's long labcoat"
-	desc = "A long labcoat with a blue sleeve used by geneticists occasionally"
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
-	icon_state = "labcoat_gene_alt"
-	inhand_icon_state = "labcoat"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
-
-//CMO Alternate
-/obj/item/clothing/suit/cmo
-	name = "cmo's long labcoat"
-	desc = "A long labcoat with gold buttons. The CMO can be seen with it sometimes."
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
-	icon_state = "labcoat_cmo_alt"
-	inhand_icon_state = "labcoat"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
-
-//Pharmacist new
-/obj/item/clothing/suit/pharm
-	name = "pharmacist's labcoat"
-	desc = "A beautiful orange labcoat for the pharamcists to wear. has outstanding acid resistance."
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/chemre.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/kirie_stuff/chemreworn.dmi'
-	icon_state = "labcoat_chem"
 	inhand_icon_state = "labcoat"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
 
