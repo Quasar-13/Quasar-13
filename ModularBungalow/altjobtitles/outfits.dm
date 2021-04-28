@@ -89,6 +89,8 @@
 /datum/outfit/job/engineer/signaltechnician
 	name = "Station Engineer (Signal Technician)"
 	uniform = /obj/item/clothing/under/rank/engineering/signal_tech
+	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms
+	head = null
 
 //Captain
 /datum/outfit/job/captain/commodore
