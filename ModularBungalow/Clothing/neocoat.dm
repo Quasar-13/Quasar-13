@@ -50,8 +50,8 @@
 	inhand_icon_state = "labcoat"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
 
-//Robotics white
-/obj/item/clothing/suit/neocoat/robowhite
+//Robotics Black
+/obj/item/clothing/suit/neocoat/roboblack
 	name = "roboticist's black labcoat"
 	desc = "A beautiful black and red labcoat for the roboticists to wear."
 	icon = 'ModularBungalow/zbungalowicons/clothing/newlabcoats.dmi'
