@@ -34,12 +34,18 @@
 	name = "pharmacist's labcoat"
 	desc = "A beautiful orange labcoat for the pharamcists to wear. has outstanding acid resistance."
 	icon_state = "labcoat_chem"
+
+//Sci Alternate
+/obj/item/clothing/suit/neocoat/sci
+	name = "scientist's long labcoat"
+	desc = "A beautiful purple labcoat for the scientists to wear."
+	icon_state = "labcoat_sci"
+
 //Robotics Black
 /obj/item/clothing/suit/neocoat/roboblack
 	name = "roboticist's black labcoat"
 	desc = "A beautiful black and red labcoat for the roboticists to wear."
 	icon_state = "labcoat_roboblack"
-
 
 //Robotics white
 /obj/item/clothing/suit/neocoat/robowhite
