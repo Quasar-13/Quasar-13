@@ -328,3 +328,9 @@
 	inhand_icon_state = "centcom"
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list(MELEE = 35, BULLET = 60, LASER = 50, ENERGY = 50, BOMB = 35, BIO = 10, RAD = 10, FIRE = 10, ACID = 60)
+
+/obj/item/clothing/suit/armor/vest/centcom_formal/cap
+	name = "\improper CentCom Formal Coat"
+	desc = "A stylish coat given to CentCom Commodores. Perfect for sending ERTs to suicide missions with style!"
+	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+

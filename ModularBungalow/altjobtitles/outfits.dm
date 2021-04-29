@@ -91,5 +91,5 @@
 	name = "Captain (Commodore)"
 	head = /obj/item/clothing/head/centhat
 	uniform = /obj/item/clothing/under/rank/centcom/commander
-	suit = /obj/item/clothing/suit/armor/vest/centcom_formal
-	
+	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
+

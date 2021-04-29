@@ -58,9 +58,10 @@
 	icon_state = "void-rifle"
 	inhand_icon_state = "gun"
 	pin = /obj/item/firing_pin/explorer
-	ammo_type = list(/obj/item/ammo_casing/energy/lasergun, /obj/item/ammo_casing/energy/kinetic)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
 	w_class = WEIGHT_CLASS_NORMAL
 	selfcharge = 1
+	fire_delay = 2
 
 
 //X-02 Pulse Disabler Rifle
@@ -127,9 +128,9 @@
 
 //Wetwork Energy Sniper
 /obj/item/gun/energy/sniper/security
-	name = "X-36 Anti-Personnel Rifle"
+	name = "L-733 Anti-Personnel Rifle"
 	desc = "An advanced piece of weaponry forged by NT to terminate troublemakers."
-	ammo_type = list(/obj/item/ammo_casing/energy/sniper, /obj/item/ammo_casing/energy/sniper/disable)
+	ammo_type = list(/obj/item/ammo_casing/energy/sniper/disable)
 
 /obj/item/gun/energy/sniper/security/Initialize()
 	. = ..()
