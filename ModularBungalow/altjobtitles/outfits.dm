@@ -90,6 +90,7 @@
 	name = "Station Engineer (Signal Technician)"
 	uniform = /obj/item/clothing/under/rank/engineering/signal_tech
 	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms
+	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
 //Captain
