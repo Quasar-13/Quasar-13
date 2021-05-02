@@ -84,6 +84,8 @@
 #define ACCESS_TOXINS_STORAGE 71
 /// Room and launching.
 #define ACCESS_AUX_BASE 72
+#define ACCESS_TCOM_ADMIN 82	// BUNGALOW EDIT ADD - NTSL
+
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
