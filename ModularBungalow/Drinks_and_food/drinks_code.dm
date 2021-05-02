@@ -31,7 +31,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	quality = DRINK_NICE
 	overdose_threshold = 60
-	addiction_threshold = 30
+	addiction_types = list(/datum/addiction/alcohol = 4)
 	taste_description = "earthquake"
 	glass_icon_state = "terremotoglass"
 	glass_name = "Terremoto"

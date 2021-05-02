@@ -624,7 +624,7 @@
 	if(world.time > next_process)
 		next_process = world.time + process_interval
 		var/deleted = QDELETED(reagent_instance)
-				var/missing_addiction = FALSE
+		var/missing_addiction = FALSE
 		for(var/addiction_type in reagent_instance.addiction_types)
 			if(!LAZYACCESS(H.mind.active_addictions, addiction_type))
 				missing_addiction = TRUE

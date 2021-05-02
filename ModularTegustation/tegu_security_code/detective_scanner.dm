@@ -22,12 +22,12 @@
 				reagent_report += "<span class='notice'>Subject contains no reagents.<br></span>"
 			if(istype(A, /mob/living))
 				var/mob/living/M = A
-				if(M.reagents.addiction_list.len)
-					reagent_report +="<span class='boldannounce'>Subject is addicted to the following reagents:<br></span>"
-					for(var/datum/reagent/R in M.reagents.addiction_list)
+				if(M.mind.active_addictions.len)
+					reagent_report +="<span class='boldannounce'>Subject is addicted to the following:<br></span>"
+					for(var/datum/reagent/R in M.mind.active_addictions)
 						reagent_report += "<span class='alert'>[R.name]</span><br>"
 				else
-					reagent_report += "<span class='notice'>Subject is not addicted to any reagents.<br></span>"
+					reagent_report += "<span class='notice'>Subject is not addicted to any drugs.<br></span>"
 			add_log(reagent_report.Join())
 			scanning = FALSE
 
