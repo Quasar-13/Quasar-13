@@ -231,9 +231,9 @@
 
 /obj/structure/closet/wardrobe/chemistry_white/PopulateContents()
 	var/static/items_inside = list(
-		/obj/item/clothing/under/rank/medical/chemist = 2,
+		/obj/item/clothing/under/rank/medical/pharmacist = 2,
 		/obj/item/clothing/shoes/sneakers/white = 2,
-		/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
+		/obj/item/clothing/suit/toggle/labcoat/pharmacist = 2,
 		/obj/item/storage/backpack/chemistry = 2,
 		/obj/item/storage/backpack/satchel/chem = 2,
 		/obj/item/storage/backpack/duffelbag/chemistry = 2,

@@ -194,7 +194,7 @@
 				heirloom_type = /obj/item/storage/firstaid/ancient/heirloom
 			if("Psychologist")
 				heirloom_type = /obj/item/storage/pill_bottle
-			if("Chemist")
+			if("Pharmacist")
 				heirloom_type = /obj/item/book/manual/wiki/chemistry
 			if("Virologist")
 				heirloom_type = /obj/item/reagent_containers/syringe

@@ -529,7 +529,7 @@
 
 /datum/reagent/drug/maint/powder
 	name = "Maintenance Powder"
-	description = "An unknown powder that you most likely gotten from an assistant, a bored chemist... or cooked yourself. It is a refined form of tar that enhances your mental ability, making you learn stuff a lot faster."
+	description = "An unknown powder that you most likely gotten from an assistant, a bored pharmacist... or cooked yourself. It is a refined form of tar that enhances your mental ability, making you learn stuff a lot faster."
 	reagent_state = SOLID
 	color = "#ffffff"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -556,7 +556,7 @@
 
 /datum/reagent/drug/maint/sludge
 	name = "Maintenance Sludge"
-	description = "An unknown sludge that you most likely gotten from an assistant, a bored chemist... or cooked yourself. Half refined, it fills your body with itself, making it more resistant to wounds, but causes toxins to accumulate."
+	description = "An unknown sludge that you most likely gotten from an assistant, a bored pharmacist... or cooked yourself. Half refined, it fills your body with itself, making it more resistant to wounds, but causes toxins to accumulate."
 	reagent_state = LIQUID
 	color = "#203d2c"
 	metabolization_rate = 2 * REAGENTS_METABOLISM
@@ -590,7 +590,7 @@
 
 /datum/reagent/drug/maint/tar
 	name = "Maintenance Tar"
-	description = "An unknown tar that you most likely gotten from an assistant, a bored chemist... or cooked yourself. Raw tar, straight from the floor. It can help you with escaping bad situations at the cost of liver damage."
+	description = "An unknown tar that you most likely gotten from an assistant, a bored pharmacist... or cooked yourself. Raw tar, straight from the floor. It can help you with escaping bad situations at the cost of liver damage."
 	reagent_state = LIQUID
 	color = "#000000"
 	overdose_threshold = 30

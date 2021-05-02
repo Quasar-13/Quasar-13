@@ -1,4 +1,4 @@
-//Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
+/// Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
 /obj/machinery/clonepod/experimental
 	name = "experimental cloning pod"
 	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
@@ -8,14 +8,14 @@
 	circuit = /obj/item/circuitboard/machine/clonepod/experimental
 	internal_radio = FALSE
 
-//Start growing a human clone in the pod!
+/// Start growing a human clone in the pod!
 /obj/machinery/clonepod/experimental/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance)
 	if(panel_open)
 		return NONE
 	if(mess || attempting)
 		return NONE
 
-	attempting = TRUE //One at a time!!
+	attempting = TRUE
 	countdown.start()
 
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
@@ -32,15 +32,17 @@
 		if(ismob(M))
 			H = M
 
-	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
+	/// Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
+	H.silent = 20
 	occupant = H
 
-	if(!clonename)	//to prevent null names
+	/// To prevent null names
+	if(!clonename)
 		clonename = "clone ([rand(1,999)])"
 	H.real_name = clonename
 
 	icon_state = "pod_1"
-	//Get the clone body ready
+	/// Get the clone body ready
 	maim_clone(H)
 	ADD_TRAIT(H, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
@@ -59,8 +61,9 @@
 		H.grab_ghost()
 		to_chat(H, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
 
+	/// Only does anything if they were still in their old body and not already a ghost
 	if(grab_ghost_when == CLONER_MATURE_CLONE)
-		H.ghostize(TRUE)	//Only does anything if they were still in their old body and not already a ghost
+		H.ghostize(TRUE)
 		to_chat(H.get_ghost(TRUE), "<span class='notice'>Your body is beginning to regenerate in a cloning pod. You will become conscious when it is complete.</span>")
 
 	if(H)
@@ -70,21 +73,24 @@
 
 		H.set_suicide(FALSE)
 	attempting = FALSE
-	return CLONING_DELETE_RECORD | CLONING_SUCCESS //so that we don't spam clones with autoprocess unless we leave a body in the scanner
+	/// So that we don't spam clones with autoprocess unless we leave a body in the scanner
+	return CLONING_DELETE_RECORD | CLONING_SUCCESS
 
 
-//Prototype cloning console, much more rudimental and lacks modern functions such as saving records, autocloning, or safety checks.
+/// Prototype cloning console, much more rudimental and lacks modern functions such as saving records, autocloning, or safety checks.
 /obj/machinery/computer/prototype_cloning
 	name = "prototype cloning console"
 	desc = "Used to operate an experimental cloner."
 	icon_screen = "dna"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/computer/prototype_cloning
-	var/obj/machinery/dna_scannernew/scanner = null //Linked scanner. For scanning.
-	var/list/pods //Linked experimental cloning pods
+	/// Linked scanner. For scanning.
+	var/obj/machinery/dna_scannernew/scanner = null
+	/// Linked experimental cloning pods
+	var/list/pods
 	var/temp = "Inactive"
 	var/scantemp = "Ready to Scan"
-	var/loading = FALSE // Nice loading text
+	var/loading = FALSE
 
 	light_color = LIGHT_COLOR_BLUE
 
