@@ -33,8 +33,8 @@
 	desc = "A suit that protects against minor chemical spills. Has a blue stripe on the shoulder."
 	icon_state = "labcoat_gen"
 
-/obj/item/clothing/suit/toggle/labcoat/chemist
-	name = "chemist labcoat"
+/obj/item/clothing/suit/toggle/labcoat/pharmacist
+	name = "pharmacist labcoat"
 	desc = "A suit that protects against minor chemical spills. Has an orange stripe on the shoulder."
 	icon_state = "labcoat_chem"
 

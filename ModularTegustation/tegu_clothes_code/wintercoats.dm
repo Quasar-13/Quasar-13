@@ -146,7 +146,7 @@
 	icon_state = "winterhood_bar"
 
 /obj/item/clothing/suit/hooded/wintercoat/medical/chem
-	name = "\improper Chemist's winter coat"
+	name = "\improper Pharmacist's winter coat"
 	desc = "This is a winter coat made to protect from minor chemical spills and to have a stylish orange theme."
 	icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoats_icons.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoats.dmi'
