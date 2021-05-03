@@ -9199,6 +9199,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/medical/medbay/central)
 "fQr" = (
@@ -13523,6 +13526,20 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/pharmacy)
+"jyt" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Medbay Hallway";
+	req_access_txt = "5"
+	},
+/obj/effect/mapping_helpers/airlock/unres,
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/medical/medbay/lobby)
 "jyu" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -14937,7 +14954,7 @@
 "kOZ" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Telecommunications";
-	req_access_txt = "61"
+	req_one_access_txt = "61;19"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -16939,6 +16956,7 @@
 	dir = 1;
 	pixel_y = 23
 	},
+/obj/item/multitool,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "mBf" = (
@@ -24584,6 +24602,9 @@
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/medical/medbay/central)
 "sKS" = (
@@ -27860,8 +27881,9 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/chief)
 "vDa" = (
-/obj/structure/table,
-/obj/item/multitool,
+/obj/machinery/computer/telecomms/traffic{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "vDd" = (
@@ -28677,6 +28699,21 @@
 /obj/effect/loot_site_spawner,
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
+"wnF" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Medbay Hallway";
+	req_access_txt = "5"
+	},
+/obj/effect/mapping_helpers/airlock/unres,
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/medical/medbay/lobby)
 "wnI" = (
 /turf/closed/wall,
 /area/lawoffice)
@@ -30701,6 +30738,7 @@
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/medical/medbay/lobby)
 "xSg" = (
@@ -31021,6 +31059,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/medical/medbay/lobby)
 "ygw" = (
@@ -64006,7 +64045,7 @@ cNa
 yfJ
 qkp
 vYN
-yfJ
+wnF
 fUm
 fUm
 fUm
@@ -64520,7 +64559,7 @@ qBd
 xRV
 wgL
 ujc
-xRV
+jyt
 iUc
 iUc
 qZz
