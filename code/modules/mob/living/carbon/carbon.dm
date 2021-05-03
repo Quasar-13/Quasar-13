@@ -862,8 +862,8 @@
 	if(reagents)
 		reagents.clear_reagents()
 		if(mind)
-		for(var/addiction_type in subtypesof(/datum/addiction))
-			mind.remove_addiction_points(addiction_type, MAX_ADDICTION_POINTS) //Remove the addiction!
+			for(var/addiction_type in subtypesof(/datum/addiction))
+				mind.remove_addiction_points(addiction_type, MAX_ADDICTION_POINTS) //Remove the addiction!
 	for(var/O in internal_organs)
 		var/obj/item/organ/organ = O
 		organ.setOrganDamage(0)
