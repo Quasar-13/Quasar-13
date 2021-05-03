@@ -30503,7 +30503,6 @@
 	name = "Station Intercom (Telecomms)";
 	pixel_y = 26
 	},
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bOp" = (
@@ -30658,6 +30657,8 @@
 "bOM" = (
 /obj/structure/table,
 /obj/item/paper_bin,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bON" = (
@@ -31333,7 +31334,7 @@
 "bQK" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Control Room";
-	req_access_txt = "19; 61"
+	req_one_access_txt = "19"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -33100,7 +33101,7 @@
 "bWu" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Telecommunications";
-	req_access_txt = "61"
+	req_one_access_txt = "61;19"
 	},
 /obj/machinery/navbeacon/wayfinding,
 /obj/structure/cable,
@@ -33175,7 +33176,6 @@
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
 "bWH" = (
-/obj/structure/table,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
@@ -33185,8 +33185,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/north,
+/obj/machinery/computer/telecomms/traffic{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bWI" = (
@@ -43873,12 +43874,9 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
 "glP" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
 /obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/tcommsat/computer)
+/turf/open/floor/plasteel/dark/telecomms,
+/area/tcommsat/server)
 "gny" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 6
@@ -82352,7 +82350,7 @@ bVI
 bWD
 bXA
 bYB
-bYz
+glP
 cai
 cSF
 ccg
@@ -82610,8 +82608,8 @@ bWC
 bXz
 bYA
 bXC
-bXC
 bWB
+bXC
 ccf
 cdc
 cdZ
@@ -82868,7 +82866,7 @@ bXC
 bXC
 bXC
 cak
-bWB
+bXC
 bWB
 bWB
 cec
@@ -83123,9 +83121,9 @@ bVI
 bWE
 bXB
 bYC
+bWB
+bWB
 bXC
-bWB
-bWB
 cch
 cde
 ceb
@@ -83382,7 +83380,7 @@ bXD
 bYz
 bYz
 bWB
-bYz
+glP
 bYz
 cdf
 ced
@@ -84406,7 +84404,7 @@ bNI
 bHE
 bVJ
 bOo
-glP
+bOD
 bQb
 bZv
 bSd
