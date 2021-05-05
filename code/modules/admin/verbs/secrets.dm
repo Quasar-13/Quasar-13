@@ -574,8 +574,7 @@
 				var/datum/job/job = SSjob.GetJob(job_name)
 				job.allow_bureaucratic_error = FALSE
 				job.total_positions = 0
-			for(var/i in GLOB.player_list)
-				var/mob/living/carbon/human/H = i
+			for(var/mob/living/carbon/human/H in GLOB.player_list)
 				// Jumpsuit
 				var/olduniform = H.w_uniform
 				var/obj/item/clothing/under/newuniform = new /obj/item/clothing/under/color/black
@@ -601,11 +600,12 @@
 				H.equip_to_slot_or_del(newshoes, ITEM_SLOT_FEET)
 
 				// ID
-				var/obj/item/card/id/LEID = H.get_idcard(TRUE)
-				LEID.access = get_all_accesses()
-				LEID.assignment = "Assistant"
-				LEID.desc = "An identification card of a FREE man! Has full access everywhere on the station."
-				LEID.update_label()
+				if(H.get_idcard(TRUE))
+					var/obj/item/card/id/LEID = H.get_idcard(TRUE)
+					LEID.access = get_all_accesses()
+					LEID.assignment = "Assistant"
+					LEID.desc = "An identification card of a FREE man! Has full access everywhere on the station."
+					LEID.update_label()
 
 	if(E)
 		E.processing = FALSE
