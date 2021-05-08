@@ -50,4 +50,3 @@
 			icon = sect_to_altar.altar_icon
 		if(sect_to_altar.altar_icon_state)
 			icon_state = sect_to_altar.altar_icon_state
-		update_appearance() //Light the candles!
