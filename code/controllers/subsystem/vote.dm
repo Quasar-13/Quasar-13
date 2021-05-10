@@ -294,15 +294,14 @@ SUBSYSTEM_DEF(vote)
 	. = ..()
 	if(.)
 		return
-		/* You get commented out till I figure out what to do with you
-		//BUNGALOW EDIT - TRANSFERVOTE
+		/*//BUNGALOW EDIT - TRANSFERVOTE
 		if(upper_admin)
 			. += "<a href='?src=[REF(src)];vote=transfer'>Transfer</a>"
 		else
 			. += "<font color='grey'>Transfer (Disallowed)</font>"
 		. += "</li>"
 		//BUNGALOW EDIT END
-*/
+	*/ //I don't know how to fix this
 	var/upper_admin = FALSE
 	if(usr.client.holder)
 		if(check_rights_for(usr.client, R_ADMIN))
@@ -338,12 +337,11 @@ SUBSYSTEM_DEF(vote)
 		if("vote") // idk what do
 			submit_vote(round(text2num(params["index"])))
 	return TRUE
-		/* //BUNGALOW EDIT - TRANSFERVOTE
+		/*//BUNGALOW EDIT - TRANSFERVOTE
 		if("transfer")
 			initiate_vote("transfer",usr.key)
 		//BUNGALOW EDIT END
 */
-
 /datum/controller/subsystem/vote/proc/remove_action_buttons()
 	for(var/v in generated_actions)
 		var/datum/action/vote/V = v
