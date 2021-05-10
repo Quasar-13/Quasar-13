@@ -303,7 +303,7 @@ SUBSYSTEM_DEF(vote)
 		. += "</li>"
 		//BUNGALOW EDIT END
 */
-		var/upper_admin = FALSE
+	var/upper_admin = FALSE
 	if(usr.client.holder)
 		if(check_rights_for(usr.client, R_ADMIN))
 			upper_admin = TRUE
@@ -343,9 +343,6 @@ SUBSYSTEM_DEF(vote)
 			initiate_vote("transfer",usr.key)
 		//BUNGALOW EDIT END
 */
-		else
-			submit_vote(round(text2num(href_list["vote"])))
-	usr.vote()
 
 /datum/controller/subsystem/vote/proc/remove_action_buttons()
 	for(var/v in generated_actions)
