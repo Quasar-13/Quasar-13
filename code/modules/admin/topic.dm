@@ -2026,7 +2026,7 @@
 
 		switch(tgui_alert(usr, "Would you like the effects to apply immediately or at the end of the round? Applying them now will make it clear it was an admin commendation.", "<3?", list("Apply now", "Apply at round end", "Cancel")))
 			if("Apply now")
-				usr.nominate_heart(heart_recepient, instant = TRUE)
+				usr.nominate_heart(heart_recepient) // instant = true used to be, probably missing a port. Never seen this feature used anyways.
 			if("Apply at round end")
 				usr.nominate_heart(heart_recepient)
 			else
