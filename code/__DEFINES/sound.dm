@@ -94,7 +94,6 @@
 #define SOUND_AREA_ICEMOON SOUND_ENVIRONMENT_CAVE
 #define SOUND_AREA_WOODFLOOR SOUND_ENVIRONMENT_CITY
 
-/* fix after station traits merge
 ///Announcer audio keys
 #define ANNOUNCER_AIMALF "announcer_aimalf"
 #define ANNOUNCER_ALIENS "announcer_aliens"
