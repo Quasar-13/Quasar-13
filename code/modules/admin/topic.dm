@@ -47,6 +47,114 @@
 			to_chat(usr, "<span class='danger'>ERROR: Mob not found.</span>", confidential = TRUE)
 			return
 		cmd_show_exp_panel(M.client)
+
+	else if(href_list["toggleexempt"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/client/C = locate(href_list["toggleexempt"]) in GLOB.clients
+		if(!C)
+			to_chat(usr, "<span class='danger'>ERROR: Client not found.</span>", confidential = TRUE)
+			return
+		toggle_exempt_status(C)
+
+	else if(href_list["makeAntag"])
+		if(!check_rights(R_ADMIN))
+			return
+		if (!SSticker.mode)
+			to_chat(usr, "<span class='danger'>Not until the round starts!</span>", confidential = TRUE)
+			return
+		switch(href_list["makeAntag"])
+			if("traitors")
+				if(src.makeTraitors())
+					message_admins("[key_name_admin(usr)] created traitors.")
+					log_admin("[key_name(usr)] created traitors.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create traitors. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create traitors.")
+			if("changelings")
+				if(src.makeChangelings())
+					message_admins("[key_name(usr)] created changelings.")
+					log_admin("[key_name(usr)] created changelings.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create changelings. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create changelings.")
+			if("revs")
+				if(src.makeRevs())
+					message_admins("[key_name(usr)] started a revolution.")
+					log_admin("[key_name(usr)] started a revolution.")
+				else
+					message_admins("[key_name_admin(usr)] tried to start a revolution. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to start a revolution.")
+			if("cult")
+				if(src.makeCult())
+					message_admins("[key_name(usr)] started a cult.")
+					log_admin("[key_name(usr)] started a cult.")
+				else
+					message_admins("[key_name_admin(usr)] tried to start a cult. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to start a cult.")
+			if("wizard")
+				message_admins("[key_name(usr)] is creating a wizard...")
+				if(src.makeWizard())
+					message_admins("[key_name(usr)] created a wizard.")
+					log_admin("[key_name(usr)] created a wizard.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a wizard. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create a wizard.")
+			if("nukeops")
+				message_admins("[key_name(usr)] is creating a nuke team...")
+				if(src.makeNukeTeam())
+					message_admins("[key_name(usr)] created a nuke team.")
+					log_admin("[key_name(usr)] created a nuke team.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a nuke team. Unfortunately, there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create a nuke team.")
+			if("ninja")
+				message_admins("[key_name(usr)] spawned a ninja.")
+				log_admin("[key_name(usr)] spawned a ninja.")
+				src.makeSpaceNinja()
+			if("aliens")
+				message_admins("[key_name(usr)] started an alien infestation.")
+				log_admin("[key_name(usr)] started an alien infestation.")
+				src.makeAliens()
+			if("deathsquad")
+				message_admins("[key_name(usr)] is creating a death squad...")
+				if(src.makeDeathsquad())
+					message_admins("[key_name(usr)] created a death squad.")
+					log_admin("[key_name(usr)] created a death squad.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a death squad. Unfortunately, there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create a death squad.")
+			if("blob")
+				var/strength = input("Set Blob Resource Gain Rate","Set Resource Rate",1) as num|null
+				if(!strength)
+					return
+				message_admins("[key_name(usr)] spawned a blob with base resource gain [strength].")
+				log_admin("[key_name(usr)] spawned a blob with base resource gain [strength].")
+				new/datum/round_event/ghost_role/blob(TRUE, strength)
+			if("centcom")
+				message_admins("[key_name(usr)] is creating a CentCom response team...")
+				if(src.makeEmergencyresponseteam())
+					message_admins("[key_name(usr)] created a CentCom response team.")
+					log_admin("[key_name(usr)] created a CentCom response team.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a CentCom response team. Unfortunately, there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create a CentCom response team.")
+			if("abductors")
+				message_admins("[key_name(usr)] is creating an abductor team...")
+				if(src.makeAbductorTeam())
+					message_admins("[key_name(usr)] created an abductor team.")
+					log_admin("[key_name(usr)] created an abductor team.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create an abductor team. Unfortunately there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create an abductor team.")
+			if("revenant")
+				if(src.makeRevenant())
+					message_admins("[key_name(usr)] created a revenant.")
+					log_admin("[key_name(usr)] created a revenant.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a revenant. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create a revenant.")
+
 	else if(href_list["forceevent"])
 		if(!check_rights(R_FUN))
 			return
@@ -510,6 +618,12 @@
 			return
 		cmd_admin_mute(href_list["mute"], text2num(href_list["mute_type"]))
 
+	else if(href_list["c_mode"])
+		return HandleCMode()
+
+	else if(href_list["f_secret"])
+		return HandleFSecret()
+
 	else if(href_list["f_dynamic_roundstart"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -555,6 +669,113 @@
 			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
 
 		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_centre"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+
+		var/new_centre = input(usr,"Change the centre of the dynamic mode threat curve. A negative value will give a more peaceful round ; a positive value, a round with higher threat. Any number between -5 and +5 is allowed.", "Change curve centre", null) as num
+		if (new_centre < -5 || new_centre > 5)
+			return alert(usr, "Only values between -5 and +5 are allowed.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the distribution curve center to [new_centre].")
+		message_admins("[key_name(usr)] changed the distribution curve center to [new_centre]", 1)
+		GLOB.dynamic_curve_centre = new_centre
+		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_width"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+
+		var/new_width = input(usr,"Change the width of the dynamic mode threat curve. A higher value will favour extreme rounds ; a lower value, a round closer to the average. Any Number between 0.5 and 4 are allowed.", "Change curve width", null) as num
+		if (new_width < 0.5 || new_width > 4)
+			return alert(usr, "Only values between 0.5 and +2.5 are allowed.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the distribution curve width to [new_width].")
+		message_admins("[key_name(usr)] changed the distribution curve width to [new_width]", 1)
+		GLOB.dynamic_curve_width = new_width
+		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_latejoin_min"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+		var/new_min = input(usr,"Change the minimum delay of latejoin injection in minutes.", "Change latejoin injection delay minimum", null) as num
+		if(new_min <= 0)
+			return alert(usr, "The minimum can't be zero or lower.", null, null, null, null)
+		if((new_min MINUTES) > GLOB.dynamic_latejoin_delay_max)
+			return alert(usr, "The minimum must be lower than the maximum.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the latejoin injection minimum delay to [new_min] minutes.")
+		message_admins("[key_name(usr)] changed the latejoin injection minimum delay to [new_min] minutes", 1)
+		GLOB.dynamic_latejoin_delay_min = (new_min MINUTES)
+		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_latejoin_max"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+		var/new_max = input(usr,"Change the maximum delay of latejoin injection in minutes.", "Change latejoin injection delay maximum", null) as num
+		if(new_max <= 0)
+			return alert(usr, "The maximum can't be zero or lower.", null, null, null, null)
+		if((new_max MINUTES) < GLOB.dynamic_latejoin_delay_min)
+			return alert(usr, "The maximum must be higher than the minimum.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the latejoin injection maximum delay to [new_max] minutes.")
+		message_admins("[key_name(usr)] changed the latejoin injection maximum delay to [new_max] minutes", 1)
+		GLOB.dynamic_latejoin_delay_max = (new_max MINUTES)
+		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_midround_min"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+		var/new_min = input(usr,"Change the minimum delay of midround injection in minutes.", "Change midround injection delay minimum", null) as num
+		if(new_min <= 0)
+			return alert(usr, "The minimum can't be zero or lower.", null, null, null, null)
+		if((new_min MINUTES) > GLOB.dynamic_midround_delay_max)
+			return alert(usr, "The minimum must be lower than the maximum.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the midround injection minimum delay to [new_min] minutes.")
+		message_admins("[key_name(usr)] changed the midround injection minimum delay to [new_min] minutes", 1)
+		GLOB.dynamic_midround_delay_min = (new_min MINUTES)
+		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_roundstart_midround_max"])
+		if(!check_rights(R_ADMIN))
+			return
+		if(SSticker?.mode)
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+		var/new_max = input(usr,"Change the maximum delay of midround injection in minutes.", "Change midround injection delay maximum", null) as num
+		if(new_max <= 0)
+			return alert(usr, "The maximum can't be zero or lower.", null, null, null, null)
+		if((new_max MINUTES) > GLOB.dynamic_midround_delay_max)
+			return alert(usr, "The maximum must be higher than the minimum.", null, null, null, null)
+
+		log_admin("[key_name(usr)] changed the midround injection maximum delay to [new_max] minutes.")
+		message_admins("[key_name(usr)] changed the midround injection maximum delay to [new_max] minutes", 1)
+		GLOB.dynamic_midround_delay_max = (new_max MINUTES)
+		dynamic_mode_options(usr)
+
 	else if(href_list["f_dynamic_force_extended"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -578,6 +799,19 @@
 		log_admin("[key_name(usr)] set 'no_stacking' to [GLOB.dynamic_no_stacking].")
 		message_admins("[key_name(usr)] set 'no_stacking' to [GLOB.dynamic_no_stacking].")
 		dynamic_mode_options(usr)
+
+	else if(href_list["f_dynamic_classic_secret"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		if(!SSticker.is_mode("dynamic"))
+			return alert(usr, "The game mode has to be dynamic mode!", null, null, null, null)
+
+		GLOB.dynamic_classic_secret = !GLOB.dynamic_classic_secret
+		log_admin("[key_name(usr)] set 'classic_secret' to [GLOB.dynamic_classic_secret].")
+		message_admins("[key_name(usr)] set 'classic_secret' to [GLOB.dynamic_classic_secret].")
+		dynamic_mode_options(usr)
+
 	else if(href_list["f_dynamic_stacking_limit"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -608,6 +842,38 @@
 		log_admin("[key_name(usr)] set 'forced_threat_level' to [GLOB.dynamic_forced_threat_level].")
 		message_admins("[key_name(usr)] set 'forced_threat_level' to [GLOB.dynamic_forced_threat_level].")
 		dynamic_mode_options(usr)
+
+	else if(href_list["c_mode2"])
+		if(!check_rights(R_ADMIN|R_SERVER))
+			return
+
+		if (SSticker.HasRoundStarted())
+			if (tgui_alert(usr, "The game has already started. Would you like to save this as the default mode effective next round?", "Save mode", list("Yes", "Cancel"), timeout = 0) == "Yes")
+				SSticker.save_mode(href_list["c_mode2"])
+			HandleCMode()
+			return
+		GLOB.master_mode = href_list["c_mode2"]
+		log_admin("[key_name(usr)] set the mode as [GLOB.master_mode].")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] set the mode as [GLOB.master_mode].</span>")
+		to_chat(world, "<span class='adminnotice'><b>The mode is now: [GLOB.master_mode]</b></span>", confidential = TRUE)
+		Game() // updates the main game menu
+		if (tgui_alert(usr, "Would you like to save this as the default mode for the server?", "Save mode", list("Yes", "No"), timeout = 0) == "Yes")
+			SSticker.save_mode(GLOB.master_mode)
+		HandleCMode()
+
+	else if(href_list["f_secret2"])
+		if(!check_rights(R_ADMIN|R_SERVER))
+			return
+
+		if(SSticker.HasRoundStarted())
+			return alert(usr, "The game has already started.", null, null, null, null)
+		if(GLOB.master_mode != "secret")
+			return alert(usr, "The game mode has to be secret!", null, null, null, null)
+		GLOB.secret_force_mode = href_list["f_secret2"]
+		log_admin("[key_name(usr)] set the forced secret mode as [GLOB.secret_force_mode].")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] set the forced secret mode as [GLOB.secret_force_mode].</span>")
+		Game() // updates the main game menu
+		HandleFSecret()
 
 	else if(href_list["monkeyone"])
 		if(!check_rights(R_SPAWN))
@@ -2049,3 +2315,30 @@
 		if(!check_rights(R_ADMIN))
 			return
 		GLOB.interviews.ui_interact(usr)
+
+/datum/admins/proc/HandleCMode()
+	if(!check_rights(R_ADMIN))
+		return
+
+	var/dat = {"<B>What mode do you wish to play?</B><HR>"}
+	for(var/mode in config.modes)
+		dat += {"<A href='?src=[REF(src)];[HrefToken()];c_mode2=[mode]'>[config.mode_names[mode]]</A><br>"}
+	dat += {"<A href='?src=[REF(src)];[HrefToken()];c_mode2=secret'>Secret</A><br>"}
+	dat += {"<A href='?src=[REF(src)];[HrefToken()];c_mode2=random'>Random</A><br>"}
+	dat += {"Now: [GLOB.master_mode]"}
+	usr << browse(dat, "window=c_mode")
+
+/datum/admins/proc/HandleFSecret()
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(SSticker.HasRoundStarted())
+		return alert(usr, "The game has already started.", null, null, null, null)
+	if(GLOB.master_mode != "secret")
+		return alert(usr, "The game mode has to be secret!", null, null, null, null)
+	var/dat = {"<B>What game mode do you want to force secret to be? Use this if you want to change the game mode, but want the players to believe it's secret. This will only work if the current game mode is secret.</B><HR>"}
+	for(var/mode in config.modes)
+		dat += {"<A href='?src=[REF(src)];[HrefToken()];f_secret2=[mode]'>[config.mode_names[mode]]</A><br>"}
+	dat += {"<A href='?src=[REF(src)];[HrefToken()];f_secret2=secret'>Random (default)</A><br>"}
+	dat += {"Now: [GLOB.secret_force_mode]"}
+	usr << browse(dat, "window=f_secret")
