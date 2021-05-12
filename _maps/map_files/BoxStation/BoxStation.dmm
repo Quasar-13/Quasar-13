@@ -6489,7 +6489,8 @@
 /turf/open/floor/plasteel,
 /area/maintenance/department/bridge)
 "arw" = (
-/obj/structure/closet/wardrobe/miner,
+/obj/item/blackmarket_uplink,
+/obj/structure/closet,
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "arx" = (
@@ -10001,6 +10002,7 @@
 	pixel_y = 20
 	},
 /obj/structure/cable,
+/obj/item/blackmarket_uplink,
 /turf/open/floor/plasteel,
 /area/storage/primary)
 "aDo" = (
@@ -18351,6 +18353,7 @@
 "bcK" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance,
+/obj/item/blackmarket_uplink,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bcL" = (
@@ -30503,7 +30506,6 @@
 	name = "Station Intercom (Telecomms)";
 	pixel_y = 26
 	},
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bOp" = (
@@ -30658,6 +30660,8 @@
 "bOM" = (
 /obj/structure/table,
 /obj/item/paper_bin,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bON" = (
@@ -31333,7 +31337,7 @@
 "bQK" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Control Room";
-	req_access_txt = "19; 61"
+	req_one_access_txt = "19"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -31446,6 +31450,7 @@
 /area/maintenance/port/aft)
 "bRf" = (
 /obj/structure/table/wood,
+/obj/item/blackmarket_uplink,
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
 	},
@@ -33100,7 +33105,7 @@
 "bWu" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Telecommunications";
-	req_access_txt = "61"
+	req_one_access_txt = "61;19"
 	},
 /obj/machinery/navbeacon/wayfinding,
 /obj/structure/cable,
@@ -33175,7 +33180,6 @@
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
 "bWH" = (
-/obj/structure/table,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
@@ -33185,8 +33189,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/north,
+/obj/machinery/computer/telecomms/traffic{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bWI" = (
@@ -41734,6 +41739,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"dtv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/blackmarket_uplink,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "dtD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
@@ -42167,6 +42177,11 @@
 /obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"dSe" = (
+/obj/structure/table,
+/obj/item/blackmarket_uplink,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "dTa" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Incinerator Output Pump";
@@ -43848,6 +43863,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/cryo)
+"gkK" = (
+/obj/structure/table,
+/obj/item/blackmarket_uplink,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "gkS" = (
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/engine,
@@ -43873,12 +43893,9 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
 "glP" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
 /obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/tcommsat/computer)
+/turf/open/floor/plasteel/dark/telecomms,
+/area/tcommsat/server)
 "gny" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 6
@@ -48990,6 +49007,11 @@
 "mTj" = (
 /turf/open/floor/plating,
 /area/medical/abandoned)
+"mTl" = (
+/obj/structure/closet/emcloset,
+/obj/item/blackmarket_uplink,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "mUo" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 10
@@ -51020,7 +51042,6 @@
 "pBO" = (
 /obj/effect/spawner/lootdrop/space/syndiecosmetic,
 /obj/item/clothing/under/costume/swagoutfit,
-/obj/vehicle/ridden/bicycle,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "pBV" = (
@@ -54792,6 +54813,7 @@
 /obj/item/clothing/suit/space/hardsuit/voidtech,
 /obj/effect/spawner/lootdrop/space/syndiecosmetic,
 /obj/item/clothing/under/syndicate/bloodred,
+/obj/item/blackmarket_uplink,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "uMF" = (
@@ -78426,7 +78448,7 @@ amH
 ano
 anL
 aoo
-aoX
+mTl
 alU
 aqQ
 aqQ
@@ -82352,7 +82374,7 @@ bVI
 bWD
 bXA
 bYB
-bYz
+glP
 cai
 cSF
 ccg
@@ -82610,8 +82632,8 @@ bWC
 bXz
 bYA
 bXC
-bXC
 bWB
+bXC
 ccf
 cdc
 cdZ
@@ -82868,7 +82890,7 @@ bXC
 bXC
 bXC
 cak
-bWB
+bXC
 bWB
 bWB
 cec
@@ -83123,9 +83145,9 @@ bVI
 bWE
 bXB
 bYC
+bWB
+bWB
 bXC
-bWB
-bWB
 cch
 cde
 ceb
@@ -83382,7 +83404,7 @@ bXD
 bYz
 bYz
 bWB
-bYz
+glP
 bYz
 cdf
 ced
@@ -84406,7 +84428,7 @@ bNI
 bHE
 bVJ
 bOo
-glP
+bOD
 bQb
 bZv
 bSd
@@ -102072,7 +102094,7 @@ aaf
 alO
 aoQ
 anf
-nPp
+dSe
 awC
 nPp
 anf
@@ -102678,7 +102700,7 @@ aaa
 aaa
 mtK
 cwy
-cmn
+dtv
 cmn
 cOT
 aaa
@@ -108056,7 +108078,7 @@ cad
 cbi
 cNW
 ccW
-cdV
+gkK
 cOe
 cNW
 cgy
