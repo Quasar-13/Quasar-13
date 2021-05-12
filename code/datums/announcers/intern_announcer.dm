@@ -1,4 +1,3 @@
-/* Fuck the Intern Announcer
 /datum/centcom_announcer/intern
 	welcome_sounds = list('sound/ai/intern/welcome/1.ogg',
 		'sound/ai/intern/welcome/2.ogg',
@@ -45,4 +44,4 @@
 		ANNOUNCER_SPANOMALIES = 'sound/ai/intern/spanomalies.ogg')
 
 	custom_alert_message = "<br><span class='alert'>Please stand by for an important message from our new intern.</span><br>"
-	*/
+
