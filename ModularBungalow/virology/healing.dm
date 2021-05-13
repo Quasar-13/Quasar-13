@@ -50,7 +50,7 @@
 	return FALSE
 
 
-/*
+
 /datum/symptom/heal/food
 	name = "Photosynthesis"
 	desc = "The virus is able to convert light into food"
@@ -60,6 +60,10 @@
 	transmittable = 0
 	level = 3
 	passive_message = "<span class='notice'>You feel rather leafy.</span>"
+
+/datum/symptom/heal/light/Start(datum/disease/advance/A)
+	if(!..())
+		return
 
 /datum/symptom/heal/light/CanHeal(datum/disease/advance/A)
 	var/mob/living/M = A.affected_mob
@@ -75,7 +79,10 @@
 	if(prob(5))
 		to_chat(M, "<span class='notice'>You feel a little fuller.</span>")
 	return 1
-*/
+
+/datum/symptom/heal/light/passive_message_condition(mob/living/M)
+	return TRUE
+
 
 
 
