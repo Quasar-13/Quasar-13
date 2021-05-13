@@ -9,7 +9,7 @@
 	else if(locate(/obj/structure/bed, T))
 		return 0.6
 	else
-		return 0.4
+		return 0.5
 
 
 /proc/get_location_accessible(mob/M, location)

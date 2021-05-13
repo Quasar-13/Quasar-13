@@ -1,3 +1,5 @@
+//Diurnal Regeneration
+
 /datum/symptom/heal/light
 	name = "Diurnal Regeneration"
 	desc = "The virus is able to mend the host's flesh when in conditions of high light, but skin begins to break down in low light"
@@ -27,7 +29,7 @@
 			return power
 
 /datum/symptom/heal/light/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	var/heal_amt = 2 * actual_power
+	var/heal_amt = 0.6 * actual_power
 
 	var/list/parts = M.get_damaged_bodyparts(1,1, null, BODYPART_ORGANIC)
 
@@ -38,7 +40,7 @@
 		to_chat(M, "<span class='notice'>The light soothes and mends your wounds.</span>")
 
 	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len * 0.1, null, BODYPART_ORGANIC)) //more effective on brute
+		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len * 0.5, null, BODYPART_ORGANIC)) //more effective on brute
 			M.update_damage_overlays()
 	return 1
 
@@ -49,29 +51,41 @@
 
 
 
-/datum/symptom/heal/cold
-	name = "Freezing Grace"
-	desc = "The virus repairs cells while it's in your body."
-	stealth = -2
-	resistance = 0
-	stage_speed = -3
-	transmittable = -1
+/datum/symptom/heal/booze
+	name = "Alcoholic Affinity"
+	desc = "This virus takes alcohol, of any kind, and uses it to mend your wounds."
+	stealth = 0
+	resistance = -1
+	stage_speed = 0
+	transmittable = 1
 	level = 6
-	passive_message = "<span class='notice'>Your skin feels a little too hot.</span>"
+	passive_message = "<span class='notice'>You are really craving a drink...</span>"
 	var/absorption_coeff = 1
 	threshold_descs = list(
+		"Resistance 5" = "Alcohol is consumed at a much slower rate.",
+		"Stage Speed 7" = "Increases healing speed.",
 	)
 
+/datum/symptom/heal/booze/Start(datum/disease/advance/A)
+	if(!..())
+		return
+	if(A.properties["stage_rate"] >= 7)
+		power = 2
+	if(A.properties["resistance"] >= 5)
+		absorption_coeff = 0.25
 
-
-/datum/symptom/heal/cold/CanHeal(datum/disease/advance/A)
+/datum/symptom/heal/booze/CanHeal(datum/disease/advance/A)
 	. = 0
 	var/mob/living/M = A.affected_mob
-		power = -0.00003 * (M.bodytemperature ** 2)
+	if(M.fire_stacks < 0)
+		M.set_fire_stacks(min(M.fire_stacks + 1 * absorption_coeff, 0))
 		. += power
+	else if(M.reagents.has_reagent(/datum/reagent/consumable/ethanol, needs_metabolizing = FALSE))
+		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol, 0.5 * absorption_coeff)
+		. += power * 0.5
 
-/datum/symptom/heal/cold/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	var/heal_amt = 1 * actual_power
+/datum/symptom/heal/booze/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
+	var/heal_amt = 3 * actual_power
 
 	var/list/parts = M.get_damaged_bodyparts(1,1, null, BODYPART_ORGANIC) //more effective on burns
 
@@ -79,7 +93,7 @@
 		return
 
 	if(prob(5))
-		to_chat(M, "<span class='notice'>The cold air soothes your skin.</span>")
+		to_chat(M, "<span class='notice'>You feel your wounds mending.</span>")
 
 	for(var/obj/item/bodypart/L in parts)
 		if(L.heal_damage(heal_amt/parts.len * 0.5, heal_amt/parts.len, null, BODYPART_ORGANIC))
@@ -87,8 +101,11 @@
 
 	return 1
 
-/datum/symptom/heal/cold/passive_message_condition(mob/living/M)
+/datum/symptom/heal/booze/passive_message_condition(mob/living/M)
 	if(M.getBruteLoss() || M.getFireLoss())
 		return TRUE
+	return FALSE
+
+
 
 
