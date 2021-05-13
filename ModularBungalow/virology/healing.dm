@@ -50,6 +50,34 @@
 	return FALSE
 
 
+/*
+/datum/symptom/heal/food
+	name = "Photosynthesis"
+	desc = "The virus is able to convert light into food"
+	stealth = 1
+	resistance = 0
+	stage_speed = 1
+	transmittable = 0
+	level = 3
+	passive_message = "<span class='notice'>You feel rather leafy.</span>"
+
+/datum/symptom/heal/light/CanHeal(datum/disease/advance/A)
+	var/mob/living/M = A.affected_mob
+	var/light_amount = 0
+	if(isturf(M.loc)) //else, there's considered to be no light
+		var/turf/T = M.loc
+		light_amount = min(1,T.get_lumcount()) - 0.5
+		if(light_amount > SHADOW_SPECIES_LIGHT_THRESHOLD)
+			return power
+
+/datum/symptom/heal/light/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
+	M.adjust_nutrition(0.3)
+	if(prob(5))
+		to_chat(M, "<span class='notice'>You feel a little fuller.</span>")
+	return 1
+*/
+
+
 
 /datum/symptom/heal/booze
 	name = "Alcoholic Affinity"
