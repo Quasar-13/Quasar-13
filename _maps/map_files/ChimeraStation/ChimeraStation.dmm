@@ -3133,7 +3133,7 @@
 	name = "Cryo APC";
 	pixel_y = 24
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/maintenance/department/medical/morgue)
 "bkK" = (
 /obj/structure/table,
@@ -5766,7 +5766,7 @@
 	name = "Medbay morgue maint APC";
 	pixel_y = 24
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/maintenance/department/medical/morgue)
 "clA" = (
 /turf/closed/wall,
@@ -7497,6 +7497,16 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/bar)
+"cYc" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/department/medical/morgue)
 "cYA" = (
 /obj/structure/cable,
 /turf/open/floor/circuit,
@@ -8545,11 +8555,9 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "dtk" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/costume,
-/turf/open/floor/plasteel,
-/area/maintenance/port)
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/maintenance/fore/upper)
 "dtu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -8769,6 +8777,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmospherics_engine)
+"dxh" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/plasteel,
+/area/maintenance/port)
 "dxn" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -10439,6 +10452,13 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
+"egZ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
 "eha" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
@@ -14022,6 +14042,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
+"fDw" = (
+/obj/structure/table,
+/obj/item/storage/toolbox/emergency{
+	pixel_y = -2
+	},
+/obj/item/storage/toolbox/drone,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 3
+	},
+/obj/item/storage/toolbox/artistic{
+	pixel_y = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/port)
 "fDD" = (
 /obj/structure/cable,
 /obj/machinery/airalarm{
@@ -19084,6 +19118,11 @@
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/office/secretary)
+"hDp" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/plasteel,
+/area/maintenance/port)
 "hDs" = (
 /obj/machinery/computer/telecomms/monitor{
 	dir = 4;
@@ -21013,6 +21052,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
+"isx" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/turf/open/floor/plasteel,
+/area/maintenance/department/medical/morgue)
 "isH" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
@@ -21549,8 +21594,9 @@
 /area/crew_quarters/heads/captain/private)
 "iET" = (
 /obj/structure/table,
-/turf/open/floor/plating,
-/area/maintenance/port)
+/obj/item/reagent_containers/food/drinks/bottle/holywater,
+/turf/open/floor/plasteel,
+/area/maintenance/department/chapel)
 "iEW" = (
 /obj/structure/chair/wood,
 /obj/structure/disposalpipe/segment{
@@ -23352,6 +23398,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/lounge)
+"jrB" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Bar maint";
+	req_access_txt = "25"
+	},
+/turf/open/floor/plating,
+/area/maintenance/department/crew_quarters/bar)
 "jrI" = (
 /obj/structure/bookcase/random/adult,
 /obj/machinery/camera{
@@ -26752,7 +26805,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/crew_quarters/bar)
+/area/maintenance/department/crew_quarters/bar)
 "kJL" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -31567,12 +31620,12 @@
 /turf/open/floor/plasteel,
 /area/maintenance/department/chapel)
 "mJn" = (
-/obj/machinery/vending/snack/orange,
 /obj/machinery/camera{
 	c_tag = "Bar north east";
 	dir = 6;
 	name = "Bar camera"
 	},
+/obj/effect/spawner/randomsnackvend,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "mJz" = (
@@ -33841,7 +33894,9 @@
 "nEr" = (
 /obj/structure/table/wood,
 /obj/item/storage/book/bible,
-/obj/item/storage/book/bible/omnissiah,
+/obj/item/storage/book/bible/omnissiah{
+	pixel_x = 7
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/chapel)
 "nEM" = (
@@ -35564,7 +35619,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/maintenance/department/medical/morgue)
 "osx" = (
 /turf/closed/wall/r_wall,
@@ -38354,6 +38409,7 @@
 /area/engine/storage)
 "pwX" = (
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/department/chapel)
 "pxa" = (
@@ -38452,7 +38508,7 @@
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
-/obj/effect/spawner/lootdrop/decorative_material,
+/obj/effect/spawner/lootdrop/maintenance/four,
 /turf/open/floor/plating,
 /area/security/brig)
 "pzB" = (
@@ -41421,6 +41477,7 @@
 "qMd" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/glowstick,
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/maintenance/port)
 "qMo" = (
@@ -44929,6 +44986,12 @@
 	c_tag = "Bar south east";
 	dir = 9;
 	name = "Bar camera"
+	},
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/revolver/russian,
+/obj/item/clothing/mask/cigarette/cigar,
+/obj/item/clothing/mask/cigarette/cigar{
+	pixel_x = 5
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
@@ -48700,6 +48763,10 @@
 	},
 /turf/open/floor/plating,
 /area/hydroponics)
+"tHd" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/maintenance/department/medical/morgue)
 "tHA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -50609,6 +50676,7 @@
 /area/engine/atmos)
 "utr" = (
 /obj/structure/closet/cabinet,
+/obj/item/reagent_containers/food/drinks/bottle/holywater,
 /turf/open/floor/plating,
 /area/maintenance/department/chapel)
 "utH" = (
@@ -53705,6 +53773,9 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore/upper)
+"vLc" = (
+/turf/open/floor/plasteel,
+/area/maintenance/department/medical/morgue)
 "vLd" = (
 /obj/machinery/camera{
 	c_tag = "Common Room south west";
@@ -54426,6 +54497,7 @@
 	dir = 4;
 	name = "Bar camera"
 	},
+/obj/machinery/vending/coffee,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "wca" = (
@@ -56628,6 +56700,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/storage)
+"wWi" = (
+/obj/effect/spawner/lootdrop/gross_decal_spawner,
+/turf/open/floor/plasteel,
+/area/maintenance/department/medical/morgue)
 "wWq" = (
 /obj/structure/reflector/double,
 /obj/structure/cable,
@@ -57179,15 +57255,15 @@
 /turf/open/floor/plasteel/grimy,
 /area/library)
 "xjt" = (
-/obj/machinery/door/window/eastright{
-	dir = 2;
-	name = "Bar Access";
-	req_access = null;
-	req_access_txt = "25"
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "bar";
 	name = "Bar Shutters"
+	},
+/obj/machinery/door/window/eastright{
+	dir = 1;
+	name = "Bar Access";
+	req_access = null;
+	req_access_txt = "25"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -57677,9 +57753,11 @@
 /turf/open/floor/plasteel,
 /area/construction/mining/aux_base)
 "xsO" = (
-/obj/structure/reagent_dispensers/beerkeg,
-/turf/open/floor/carpet,
-/area/crew_quarters/bar)
+/obj/structure/table,
+/obj/item/weldingtool,
+/obj/effect/spawner/lootdrop/maintenance/two,
+/turf/open/floor/plating,
+/area/maintenance/port)
 "xsT" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance/six,
@@ -78876,16 +78954,16 @@ dzT
 onq
 hox
 jdq
-rBe
+xsO
 irv
 prA
 irv
 irv
 irv
 irv
-rBe
+sem
 prA
-irv
+fKz
 cDF
 prA
 pcV
@@ -79110,7 +79188,7 @@ eYp
 oio
 kxl
 nEr
-uiF
+eow
 vce
 qCb
 qCb
@@ -79133,7 +79211,7 @@ dzT
 onq
 dzT
 jdq
-rBe
+fDw
 irv
 prA
 lZM
@@ -79367,7 +79445,7 @@ xxH
 ija
 rAd
 gcm
-uiF
+eow
 tOC
 ykv
 ykv
@@ -79624,7 +79702,7 @@ mIE
 cmT
 cmT
 hlO
-uiF
+eow
 hCQ
 ykv
 ykv
@@ -79881,7 +79959,7 @@ rxr
 utr
 xxH
 cmT
-uiF
+eow
 qbd
 lhD
 ykv
@@ -80138,7 +80216,7 @@ uiF
 uiF
 uiF
 msM
-uiF
+eow
 eow
 eow
 cmJ
@@ -80396,7 +80474,7 @@ xxH
 jAr
 ntp
 ntp
-ija
+iET
 eow
 eow
 rVA
@@ -80657,7 +80735,7 @@ xxH
 ija
 xxH
 xxH
-kge
+vOV
 lMU
 vOV
 spE
@@ -81708,7 +81786,7 @@ irv
 prA
 xql
 jbF
-iET
+xij
 tqa
 jqj
 irv
@@ -82218,7 +82296,7 @@ qVK
 hvS
 lZM
 rBe
-rBe
+irv
 prA
 taD
 taD
@@ -82474,18 +82552,18 @@ dzT
 onq
 dzT
 jdq
-rBe
+irv
 dXQ
 prA
 taD
 taD
 prA
+dxh
 rBe
-rBe
-rBe
-rBe
+irv
+hDp
 prA
-dtk
+tEq
 cVc
 xLZ
 npd
@@ -82738,7 +82816,7 @@ taD
 taD
 prA
 gpY
-rBe
+irv
 rBe
 sbm
 prA
@@ -82995,8 +83073,8 @@ taD
 taD
 prA
 gpY
-rBe
-rBe
+sem
+irv
 sbm
 prA
 nPz
@@ -87625,7 +87703,7 @@ mrJ
 mrJ
 mrJ
 xlG
-xjZ
+egZ
 awH
 nsu
 nsu
@@ -91731,7 +91809,7 @@ bII
 bhQ
 lfq
 uQP
-xsO
+kag
 hIN
 awH
 awH
@@ -91988,7 +92066,7 @@ awH
 awH
 awH
 awH
-awH
+jrB
 awH
 awH
 rPx
@@ -94768,9 +94846,9 @@ dFi
 dFi
 dFi
 dFi
-dFi
-dFi
-dFi
+dtk
+dtk
+dtk
 dFi
 dFi
 dFi
@@ -96124,8 +96202,8 @@ bEt
 bEt
 xbb
 whe
-gzQ
-pTz
+vLc
+cYc
 hlY
 lcx
 pce
@@ -97153,7 +97231,7 @@ bEt
 qEY
 hkI
 qkg
-pTz
+cYc
 hlY
 lcx
 hXg
@@ -97924,7 +98002,7 @@ bEt
 xbb
 dRR
 gzQ
-pTz
+cYc
 hlY
 tGL
 hXg
@@ -98181,7 +98259,7 @@ bEt
 kEO
 hkI
 gzQ
-pTz
+cYc
 hlY
 lcx
 hXg
@@ -98952,7 +99030,7 @@ ixG
 keZ
 hkI
 gzQ
-pTz
+cYc
 hlY
 hRU
 ohv
@@ -99209,7 +99287,7 @@ hkI
 hkI
 hkI
 gzQ
-pTz
+cYc
 hlY
 iLD
 wlV
@@ -99454,18 +99532,18 @@ mtF
 mtF
 gzQ
 kvv
+isx
 ndJ
-ndJ
-ndJ
-ndJ
-ndJ
+isx
+isx
+isx
 ndJ
 ohb
+isx
 ndJ
 ndJ
 ndJ
-ndJ
-ndJ
+isx
 gil
 hlY
 xbq
@@ -99708,20 +99786,20 @@ tyr
 mrN
 wCy
 ndJ
-ndJ
-ndJ
+isx
+isx
 osg
 gzQ
 cNL
 dmn
 pQc
-gzQ
+vLc
 gzQ
 hlY
 fJW
 dYG
-gzQ
-tqr
+vLc
+wWi
 gzQ
 gzQ
 hlY
@@ -99976,7 +100054,7 @@ hlY
 hlY
 hlY
 clw
-dYG
+tHd
 gYB
 gYB
 gYB
@@ -100747,7 +100825,7 @@ peI
 peI
 peI
 gzQ
-dYG
+tHd
 gYB
 nuP
 fBZ
@@ -102032,7 +102110,7 @@ nDQ
 nId
 mXP
 peI
-dYG
+tHd
 gYB
 vyE
 bSO
@@ -102289,7 +102367,7 @@ sDo
 aZT
 peI
 peI
-dYG
+tHd
 gYB
 vyE
 vtR
@@ -102546,7 +102624,7 @@ jSm
 mav
 peI
 dYG
-dYG
+tHd
 biw
 pmA
 rDU
@@ -102803,7 +102881,7 @@ peI
 peI
 peI
 dYG
-tqr
+wWi
 gYB
 chm
 pIO
@@ -103050,16 +103128,16 @@ rkc
 jdb
 dYG
 dYG
+tHd
+tHd
+tHd
 dYG
 dYG
 dYG
+tHd
 dYG
 dYG
-dYG
-dYG
-dYG
-dYG
-dYG
+tHd
 xkU
 gYB
 iYb
@@ -103305,17 +103383,17 @@ hod
 uUu
 shz
 fiR
-dYG
+tHd
 gzQ
 tqr
-gzQ
+vLc
 gzQ
 tky
+vLc
+vLc
+vLc
 gzQ
-gzQ
-gzQ
-gzQ
-gzQ
+vLc
 gzQ
 wmf
 gYB
@@ -111765,8 +111843,8 @@ iMe
 iMe
 iMe
 iMe
-iMe
-iMe
+qpx
+qpx
 xvX
 iMe
 sZQ
