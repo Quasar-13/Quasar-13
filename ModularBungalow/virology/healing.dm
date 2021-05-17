@@ -87,8 +87,8 @@
 
 
 /datum/symptom/heal/booze
-	name = "Alcoholic Affinity"
-	desc = "This virus takes alcohol, of any kind, and uses it to mend your wounds."
+	name = "Craft Beer Affinity"
+	desc = "This virus takes space beer, and uses it to mend your wounds."
 	stealth = 0
 	resistance = -1
 	stage_speed = 0
@@ -115,8 +115,8 @@
 	if(M.fire_stacks < 0)
 		M.set_fire_stacks(min(M.fire_stacks + 1 * absorption_coeff, 0))
 		. += power
-	else if(M.reagents.has_reagent(/datum/reagent/consumable/ethanol, needs_metabolizing = FALSE))
-		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol, 0.5 * absorption_coeff)
+	else if(M.reagents.has_reagent(/datum/reagent/consumable/ethanol/beer, needs_metabolizing = FALSE))
+		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol/beer, 0.5 * absorption_coeff)
 		. += power * 0.5
 
 /datum/symptom/heal/booze/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
