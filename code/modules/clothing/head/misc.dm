@@ -469,6 +469,16 @@
 	inhand_icon_state = "that"
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 
+
+//Bungalow edit
+/obj/item/clothing/head/cmoberet
+	name = "chief medical officer's beret"
+	desc = "The light blue beret of the poor Doctor"
+	icon_state = "cmoberet"
+	inhand_icon_state = "that"
+	armor = list(MELEE = 15, BULLET = 5, LASER = 10, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 100)
+
+
 /obj/item/clothing/head/jackbros
 	name = "frosty hat"
 	desc = "Hee-ho!"

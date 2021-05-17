@@ -33,6 +33,37 @@
 	selfcharge = 1
 
 
+//Miner's Laser Shotgun
+/obj/item/gun/energy/e_gun/miner/shotty
+	name = "\improper E-244 Mining Scattershot"
+	desc = "Nanotrasen’s standard issue mining scattershot."
+	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
+	icon_state = "mining-scatter"
+	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	inhand_icon_state = "shotgun"
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	pin = /obj/item/firing_pin/explorer
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/kinetic)
+	w_class = WEIGHT_CLASS_BULKY
+	selfcharge = 1
+
+
+//"Miner" Laser Rifle
+/obj/item/gun/energy/e_gun/void
+	name = "\improper E-204 Void Rifle"
+	desc = "Nanotrasen’s standard issue void beam rifle."
+	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
+	icon_state = "void-rifle"
+	inhand_icon_state = "gun"
+	pin = /obj/item/firing_pin/explorer
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
+	w_class = WEIGHT_CLASS_NORMAL
+	selfcharge = 1
+	fire_delay = 2
+
+
 //X-02 Pulse Disabler Rifle
 
 /obj/item/gun/energy/e_gun/hop
@@ -97,9 +128,9 @@
 
 //Wetwork Energy Sniper
 /obj/item/gun/energy/sniper/security
-	name = "X-36 Anti-Personnel Rifle"
+	name = "L-733 Anti-Personnel Rifle"
 	desc = "An advanced piece of weaponry forged by NT to terminate troublemakers."
-	ammo_type = list(/obj/item/ammo_casing/energy/sniper, /obj/item/ammo_casing/energy/sniper/disable)
+	ammo_type = list(/obj/item/ammo_casing/energy/sniper/disable)
 
 /obj/item/gun/energy/sniper/security/Initialize()
 	. = ..()

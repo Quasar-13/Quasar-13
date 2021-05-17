@@ -292,22 +292,27 @@
 	icon_state = "blueband"
 
 /obj/item/clothing/accessory/armband/yellow
+	name = "yellow armband"
 	desc = "A fancy yellow armband!"
 	icon_state = "cargoband"
 
 /obj/item/clothing/accessory/armband/white
+	name = "white armband"
 	desc = "A fancy white armband!"
 	icon_state = "medband"
 
 /obj/item/clothing/accessory/armband/purple
+	name = "purple armband"
 	desc = "A fancy purple armband!"
 	icon_state = "rndband"
 
 /obj/item/clothing/accessory/armband/green
+	name = "green armband"
 	desc = "A fancy green armband!"
 	icon_state = "greenband"
 
 /obj/item/clothing/accessory/armband/pink
+	name = "pink armband"
 	desc = "A fancy pink armband!"
 	icon_state = "pinkband"
 

@@ -86,10 +86,17 @@
 	l_pocket = /obj/item/flashlight
 	l_hand = /obj/item/storage/bag/construction
 
+/datum/outfit/job/engineer/signaltechnician
+	name = "Station Engineer (Signal Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/signal_tech
+	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms
+	l_pocket = /obj/item/pda/signal_tech
+	head = null
+
 //Captain
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
 	head = /obj/item/clothing/head/centhat
 	uniform = /obj/item/clothing/under/rank/centcom/commander
-	suit = /obj/item/clothing/suit/armor/vest/centcom_formal
-	
+	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
+

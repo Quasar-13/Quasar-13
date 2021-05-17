@@ -51,12 +51,16 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	//Radio freq/name display
 	var/freqpart = radio_freq ? "\[[get_radio_name(radio_freq)]\] " : ""
 	//Speaker name
+
+	var/realnamepart = "[speaker.GetVoice(TRUE)][speaker.get_alt_name()]" //BUNGALOW EDIT ADD - NTSL. For NTSL and AI tracking
+
 	var/namepart = "[speaker.GetVoice()][speaker.get_alt_name()]"
 	if(face_name && ishuman(speaker))
 		var/mob/living/carbon/human/H = speaker
 		namepart = "[H.get_face_name()]" //So "fake" speaking like in hallucinations does not give the speaker away if disguised
 	//End name span.
-	var/endspanpart = "</span>"
+	//var/endspanpart = "</span>"
+	var/endspanpart = "</span></a>"	//BUNGALOW EDIT CHANGE - NTSL
 
 	//Message
 	var/messagepart = " <span class='message'>[lang_treat(speaker, message_language, raw_message, spans, message_mods)]</span></span>"
@@ -66,13 +70,17 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	if(istype(D) && D.display_icon(src))
 		languageicon = "[D.get_icon()] "
 
-	return "[spanpart1][spanpart2][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]"
+	//BUNGALOW EDIT - NTSL
+	//return "[spanpart1][spanpart2][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]"
+	return "[spanpart1][spanpart2][freqpart][languageicon][compose_track_href(speaker, realnamepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]"
+	//BUNGALOW EDIT END
 
 /atom/movable/proc/compose_track_href(atom/movable/speaker, message_langs, raw_message, radio_freq)
 	return ""
 
 /atom/movable/proc/compose_job(atom/movable/speaker, message_langs, raw_message, radio_freq)
 	return ""
+
 
 /atom/movable/proc/say_mod(input, list/message_mods = list())
 	var/ending = copytext_char(input, -1)
@@ -98,6 +106,10 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	return "[say_mod(input, message_mods)], \"[spanned]\""
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, datum/language/language, raw_message, list/spans, list/message_mods = list(), no_quote = FALSE)
+	// BUNGALOW EDIT - NTSL - EDGE CASE LANG SANITIZING
+	if(isnum(language))
+		language = NTSL_LANG_TODATUM(language)
+	// BUNGALOW EDIT - NTSL - END
 	if(has_language(language))
 		var/atom/movable/AM = speaker.GetSource()
 		if(AM) //Basically means "if the speaker is virtual"
@@ -165,6 +177,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 //VIRTUALSPEAKERS
 /atom/movable/virtualspeaker
 	var/job
+	var/realvoice	//BUNGALOW EDIT ADD - NTSL. New UUID, basically, I guess
 	var/atom/movable/source
 	var/obj/item/radio/radio
 
@@ -175,6 +188,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 	source = M
 	if(istype(M))
 		name = radio.anonymize ? "Unknown" : M.GetVoice()
+		realvoice = M.GetVoice()	//BUNGALOW EDIT ADD - NTSL. New UUID, basically, I guess
 		verb_say = M.verb_say
 		verb_ask = M.verb_ask
 		verb_exclaim = M.verb_exclaim
@@ -206,8 +220,20 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 /atom/movable/virtualspeaker/GetJob()
 	return job
 
+//BUNGALOW EDIT ADD - NTSL. Returns the TRUE voice if bool is true
+/atom/movable/virtualspeaker/GetVoice(bool)
+	if(bool && realvoice)
+		return realvoice
+	else
+		return "[src]"
+/*
+// Commented out because this was causing NTSL to not properly be capable of editing verb_say & al.
+// However, I don't exactly know why it was even in here in the first place, so,
+// if there's some weird bugs involving virtualspeaker, check here first.
 /atom/movable/virtualspeaker/GetSource()
 	return source
+*/
+//BUNGALOW EDIT END
 
 /atom/movable/virtualspeaker/GetRadio()
 	return radio

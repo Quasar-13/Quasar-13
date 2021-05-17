@@ -112,11 +112,11 @@
 	uniform = /obj/item/clothing/under/plasmaman/viro
 	gloves = /obj/item/clothing/gloves/color/plasmaman/white
 
-/datum/outfit/plasmaman/chemist
-	name = "Chemist Plasmaman"
+/datum/outfit/plasmaman/pharmacist
+	name = "Pharmacist Plasmaman"
 
-	head = /obj/item/clothing/head/helmet/space/plasmaman/chemist
-	uniform = /obj/item/clothing/under/plasmaman/chemist
+	head = /obj/item/clothing/head/helmet/space/plasmaman/pharmacist
+	uniform = /obj/item/clothing/under/plasmaman/pharmacist
 	gloves = /obj/item/clothing/gloves/color/plasmaman/white
 
 /datum/outfit/plasmaman/genetics

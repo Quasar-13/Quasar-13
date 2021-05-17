@@ -1,3 +1,4 @@
+/* /// Removed - Currently doesn't work.
 /datum/uplink_item/role_restricted/bag_of_encounters
 	name = "Bag of Encounters"
 	desc = "An inconspicious bag of dice, recovered from a Space Wizard's dungeon. Each dice within will summon a challenge for the crew: 1d4 Bears, 1d6 Space Carp or 1d20 angry Bees!\
@@ -6,6 +7,7 @@
 	cost = 8
 	restricted_roles = list("Curator")
 	limited_stock = 1 //for testing at least
+*/
 
 /datum/uplink_item/role_restricted/hypnotic_flash/psych
 	name = "Advanced Hypnotic Flash"

@@ -25,6 +25,9 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 	alpha = 50
 
+	butcher_results = list(/obj/item/food/meat/slab/xeno = 2)
+	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/goliath_hide = 2)
+
 	footstep_type = FOOTSTEP_MOB_CLAW
 
 /mob/living/simple_animal/hostile/jungle/mega_arachnid/Life()

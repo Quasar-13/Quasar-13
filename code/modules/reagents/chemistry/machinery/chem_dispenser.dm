@@ -69,6 +69,7 @@
 		/datum/reagent/ash,
 		/datum/reagent/diethylamine,
 		/datum/reagent/fuel/oil,
+		/datum/reagent/silver,
 		/datum/reagent/saltpetre
 	)
 	var/list/emagged_reagents = list(
