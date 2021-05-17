@@ -57,42 +57,5 @@ datum/symptom/heart_restoration
 			heart.applyOrganDamage(-2)
 
 
-/datum/symptom/heal/watercoag
-	name = "Automatic Saline Production"
-	desc = "The virus automatically produces saline glucose out of water."
-	stealth = 0
-	resistance = 1
-	stage_speed = 1
-	transmittable = -1
-	level = 6
-	var/absorption_coeff = 1
-	threshold_descs = list(
-		"Resistance 5" = "Water is consumed at a much slower rate.",
-	)
-
-/datum/symptom/heal/watercoag/Start(datum/disease/advance/A)
-	if(!..())
-		return
-	if(A.properties["resistance"] >= 5)
-		absorption_coeff = 0.25
-
-/datum/symptom/heal/watercoag/CanHeal(datum/disease/advance/A)
-	. = 0
-	var/mob/living/M = A.affected_mob
-	if(M.fire_stacks < 0)
-		M.set_fire_stacks(min(M.fire_stacks + 1 * absorption_coeff, 0))
-		. += power
-	if(M.reagents.has_reagent(/datum/reagent/water/holywater, needs_metabolizing = FALSE))
-		M.reagents.remove_reagent(/datum/reagent/water/holywater, 0.5 * absorption_coeff)
-		. += power * 0.75
-	else if(M.reagents.has_reagent(/datum/reagent/water, needs_metabolizing = FALSE))
-		M.reagents.remove_reagent(/datum/reagent/water, 0.5 * absorption_coeff)
-		. += power * 0.5
-
-/datum/symptom/heal/water/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	var/heal_amt = 2 * actual_power
-	M.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 0.5 * heal_amt)
-	return 1
-
 
 
