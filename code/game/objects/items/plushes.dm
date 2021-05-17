@@ -611,10 +611,3 @@
 	attack_verb_continuous = list("hugs", "squeezes")
 	attack_verb_simple = list("hug", "squeeze")
 	squeak_override = list('sound/weapons/thudswoosh.ogg'=1)
-
-/obj/item/toy/plush/mcgriffplushie
-	name = "McGriff plushie"
-	icon_state = "mcgriffplush"
-	desc = "Plushie with the shape of a pug, on the back it has a label that says 'In memory of McGriff. Never forget.'"
-	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
-	inhand_icon_state = "mcgriff_plushie"
