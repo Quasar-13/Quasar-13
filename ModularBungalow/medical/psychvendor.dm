@@ -1,4 +1,4 @@
-//Created out of a necessity to get these dumb chems out of the medical tools vendor.
+//Created out of a necessity to get these dumb chems out of the psyche's pocket
 /obj/machinery/vending/psych
 	name = "\improper NanoMind Plus"
 	desc = "psychologist drugs dispenser."
@@ -16,7 +16,7 @@
 					/obj/item/storage/pill_bottle/synaptazine = 2,
 					/obj/item/storage/pill_bottle/haloperidol = 2,
 					/obj/item/storage/pill_bottle/morphine/small = 2)
-	default_price = 20
+	default_price = 40
 	extra_price = 680
 	payment_department = ACCOUNT_MED
 	refill_canister = /obj/item/vending_refill/psych
