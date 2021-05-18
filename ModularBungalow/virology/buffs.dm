@@ -31,7 +31,7 @@ Let this be a warning to anyone that wants to try this.
 		*/
 
 
-datum/symptom/heart_restoration
+/datum/symptom/heart_restoration
 	name = "Heart Restoration"
 	desc = "The virus stimulates the production and replacement of cardiac tissues, causing the host to regenerate the heart when damaged."
 	stealth = 0
