@@ -220,8 +220,8 @@
 	default_cartridge = /obj/item/cartridge/atmos
 	icon_state = "pda-atmos"
 
-/obj/item/pda/chemist
-	name = "chemist PDA"
+/obj/item/pda/pharmacist
+	name = "pharmacist PDA"
 	default_cartridge = /obj/item/cartridge/chemistry
 	icon_state = "pda-chemistry"
 

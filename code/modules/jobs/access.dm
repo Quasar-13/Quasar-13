@@ -380,8 +380,8 @@
 	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
 //				"Deputy", // Tegustation Deputy edit: Add all Tegu-only jobs here!
-				"Void Technician", "Secretary", //Bungalowstation edit
-				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Chemist", "Geneticist", "Virologist", "Psychologist",
+				"Void Technician", "Chemist", "Secretary", //Bungalowstation edit
+				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Pharmacist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
 
 /proc/get_all_job_icons() //For all existing HUD icons
@@ -402,6 +402,9 @@
 		return jobName
 	if(jobName in get_all_centcom_jobs()) //Return with the NT logo if it is a CentCom job
 		return "CentCom"
+	for(var/datum/job/J in SSjob.occupations)//bungalow alt job titles
+		if(jobName in J.alt_titles || jobName == J.senior_title)
+			return J.title//bungalow end
 	if(jobName in get_all_syndicate_jobs()) //Sets icon to Syndicate logo if from the list
 		return "Syndicate Official"
 	return "Unknown" //Return unknown if none of the above apply

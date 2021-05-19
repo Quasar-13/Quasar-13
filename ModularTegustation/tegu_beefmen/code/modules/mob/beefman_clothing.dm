@@ -45,8 +45,8 @@
 	name = "medical's sash"
 	icon_state = "medical"
 
-/obj/item/clothing/under/bodysash/chemist
-	name = "chemist's sash"
+/obj/item/clothing/under/bodysash/pharmacist
+	name = "pharmacist's sash"
 	icon_state = "chemist"
 
 /obj/item/clothing/under/bodysash/virologist

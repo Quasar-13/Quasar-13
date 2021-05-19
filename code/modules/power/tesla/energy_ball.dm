@@ -217,6 +217,13 @@
 										/obj/machinery/power/emitter,
 										/obj/machinery/field/generator,
 										/mob/living/simple_animal,
+										/obj/machinery/particle_accelerator/control_box,
+										/obj/structure/particle_accelerator/fuel_chamber,
+										/obj/structure/particle_accelerator/particle_emitter/center,
+										/obj/structure/particle_accelerator/particle_emitter/left,
+										/obj/structure/particle_accelerator/particle_emitter/right,
+										/obj/structure/particle_accelerator/power_box,
+										/obj/structure/particle_accelerator/end_cap,
 										/obj/machinery/field/containment,
 										/obj/structure/disposalpipe,
 										/obj/structure/disposaloutlet,
@@ -347,6 +354,14 @@
 		shocked_targets += shocked_copy
 	else
 		tesla_zap(closest_atom, next_range, power, zap_flags, shocked_targets)
+
+
+
+
+
+
+
+
 
 #undef BIKE
 #undef COIL

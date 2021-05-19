@@ -78,13 +78,13 @@
 /obj/item/storage/box/captain/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
 
-
+/* Super fucking busted, removed.
 
 /obj/item/storage/box/captain/taser
 	name = "Advanced Taser Gun"
 	desc = "The man who uses this gun fears nobody, and wants to flaunt it. Nonlethally, of course. "
 
 /obj/item/storage/box/captain/taser/PopulateContents()
-	new /obj/item/gun/energy/e_gun/advtaser(src)
+	new /obj/item/gun/energy/e_gun/advtaser(src)*/
 
 

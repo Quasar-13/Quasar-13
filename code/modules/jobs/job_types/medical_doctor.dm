@@ -27,7 +27,7 @@
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/medical/doctor
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	suit =  /obj/item/clothing/suit/toggle/labcoat
+	suit =  /obj/item/clothing/suit/neocoat
 	l_hand = /obj/item/storage/firstaid/medical
 	suit_store = /obj/item/flashlight/pen
 
@@ -36,6 +36,6 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
 	box = /obj/item/storage/box/survival/medical
 
-	skillchips = list(/obj/item/skillchip/entrails_reader, /obj/item/skillchip/quickcarry)
+	skillchips = list(/obj/item/skillchip/entrails_reader)
 
 	chameleon_extras = /obj/item/gun/syringe

@@ -56,8 +56,8 @@
 	desc = "A large duffel bag containing all you need to keep an important individual alive."
 
 /obj/item/storage/backpack/duffelbag/sec/spec/blueshield/PopulateContents()
-	new /obj/item/clothing/suit/armor/heavy(src)
-	new /obj/item/clothing/head/helmet/space/syndicate/blue(src)
+	new /obj/item/clothing/suit/armor/blueshield(src)
+	new /obj/item/clothing/under/misc/blueshield(src)
 	new /obj/item/gun/energy/e_gun/old(src)
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/sensor_device(src)

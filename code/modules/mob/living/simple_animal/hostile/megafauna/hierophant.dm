@@ -423,7 +423,7 @@ Difficulty: Hard
 	visible_message("<span class='hierophant_warning'>\"[pick(kill_phrases)]\"</span>")
 	visible_message("<span class='hierophant_warning'>[src] annihilates [L]!</span>","<span class='userdanger'>You annihilate [L], restoring your health!</span>")
 	adjustHealth(-L.maxHealth*0.5)
-	L.dust()
+	L.gib()
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/CanAttack(atom/the_target)
 	. = ..()

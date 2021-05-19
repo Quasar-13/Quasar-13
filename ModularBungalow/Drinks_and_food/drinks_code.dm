@@ -60,7 +60,7 @@
 
 /datum/reagent/consumable/tula
 	name = "Tula"
-	description = "Surprisingly it dosnt taste weird!"
+	description = "Surprisingly it doesnt taste weird!"
 	color = "##8bcc41"
 	quality = DRINK_VERYGOOD
 	taste_description = "the 00s in Chile"

@@ -82,17 +82,17 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	fitted = FEMALE_UNIFORM_TOP
 
-/obj/item/clothing/under/rank/medical/chemist
-	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
-	name = "chemist's jumpsuit"
+/obj/item/clothing/under/rank/medical/pharmacist
+	desc = "It's made of a special fiber that gives special protection against biohazards. It has a pharmacist rank stripe on it."
+	name = "pharmacist's jumpsuit"
 	icon_state = "chemistry"
 	inhand_icon_state = "w_suit"
 	permeability_coefficient = 0.5
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 10, RAD = 0, FIRE = 50, ACID = 65)
 
-/obj/item/clothing/under/rank/medical/chemist/skirt
-	name = "chemist's jumpskirt"
-	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
+/obj/item/clothing/under/rank/medical/pharmacist/skirt
+	name = "pharmacist's jumpskirt"
+	desc = "It's made of a special fiber that gives special protection against biohazards. It has a pharmacist rank stripe on it."
 	icon_state = "chemistrywhite_skirt"
 	inhand_icon_state = "w_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

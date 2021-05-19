@@ -56,7 +56,7 @@
 /datum/biome/water
 	turf_type = /turf/open/water/jungle
 	fauna_types = list( /mob/living/simple_animal/hostile/jungle/leaper = 1)
-	fauna_density = 0.1
+	fauna_density = 0.01
 
 /datum/biome/mountain
 	turf_type = /turf/closed/mineral/random/jungle
