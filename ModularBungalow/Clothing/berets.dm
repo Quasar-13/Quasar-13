@@ -143,7 +143,7 @@
 	strip_delay = 60
 
 //science berets
-/obj/item/clothing/head/beret/sci
+/obj/item/clothing/head/beret/science
 	name = "science beret"
 	desc = "A purple beret with a silver science department insignia emblazoned on it. It has that authentic burning plasma smell."
 	icon_state = "beret_sci"
