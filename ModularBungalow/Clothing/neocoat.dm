@@ -53,4 +53,9 @@
 	desc = "A beautiful white and red labcoat for the roboticists to wear."
 	icon_state = "labcoat_robowhite"
 
+//Brig Doctor
+/obj/item/clothing/suit/neocoat/brigdoc
+	name = "brig doctor's labcoat"
+	desc = "A beautiful red and black labcoat for deputized doctors to wear."
+	icon_state = "labcoat_brig"
 

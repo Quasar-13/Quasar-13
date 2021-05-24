@@ -48,6 +48,7 @@
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	body_parts_covered = CHEST|GROIN|ARMS
 
+/*	Why not just delete the whole file?
 /obj/item/clothing/head/beret/sec/engineering
 	name = "engineering deputy beret"
 	desc = "Perhaps the only thing standing between the supermatter and a station-wide explosive sabotage."
@@ -80,7 +81,7 @@
 	icon_state = "beret_supply"
 	tegu_item = TRUE
 
-
+*/	//end
 /*	More things
 
 /datum/outfit/job/deputy

@@ -18,7 +18,6 @@
 	new /obj/item/clothing/glasses/sunglasses/chemical(src)
 	new /obj/item/clothing/shoes/sneakers/brown/digitigrade(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/head(src)
-	new /obj/item/clothing/head/cmoberet(src)
 	new /obj/item/gun/syringe/rifle(src)
 	new /obj/item/storage/lockbox/medal/cmo(src)
 	. = ..()
