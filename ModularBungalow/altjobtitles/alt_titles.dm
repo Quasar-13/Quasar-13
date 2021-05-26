@@ -41,7 +41,7 @@
 	senior_title = "Jannie"
 
 /datum/job/lawyer
-	alt_titles = list("Attorney")
+	alt_titles = list("Attorney", "Nanotrasen Censor", "Human Resources Representative")
 	senior_title = "Ace Attorney"
 
 /datum/job/chaplain
