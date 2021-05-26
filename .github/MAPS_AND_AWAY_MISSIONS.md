@@ -9,11 +9,13 @@ In rotation:
 * Pubbystation
 * Packedstation
 * Remorastation
+* Chimerastation
 
 Admin only:
 * Heliostation
 * Iceboxstation
 * Kilostation
+* Phobosstation
 
 All maps have their own code file that is in the base of the _maps directory. Maps are loaded dynamically when the game starts. Follow this guideline when adding your own map, to your fork, for easy compatibility.
 
