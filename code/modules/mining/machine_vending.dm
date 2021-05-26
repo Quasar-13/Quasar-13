@@ -61,7 +61,11 @@
 		new /datum/data/mining_equipment("KA Range Increase",			/obj/item/borg/upgrade/modkit/range,								1000),
 		new /datum/data/mining_equipment("KA Damage Increase",			/obj/item/borg/upgrade/modkit/damage,								1000),
 		new /datum/data/mining_equipment("KA Cooldown Decrease",		/obj/item/borg/upgrade/modkit/cooldown,								1000),
-		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000)
+		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000),
+		new /datum/data/mining_equipment("E-224 Mining Pistol",			/obj/item/gun/energy/e_gun/miner,									500),
+		new /datum/data/mining_equipment("E-204 Mining Assault Rifle",	/obj/item/gun/energy/e_gun/miner/rifle,								1000),
+		new /datum/data/mining_equipment("E-244 Mining Scattershot",	/obj/item/gun/energy/e_gun/miner/shotty,							3500),
+		new /datum/data/mining_equipment("E-225 Mining Bolt Pistol",	/obj/item/gun/energy/e_gun/miner/bolter,							5000)
 	)
 
 /datum/data/mining_equipment
@@ -200,42 +204,6 @@
 
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
-
-/*fuck
-/obj/machinery/mineral/equipment_vendor/proc/RedeemVoucher(obj/item/mining_voucher/voucher, mob/redeemer)
-	var/items = list("Mining Shotgun", "Mining Rifle")
-
-	var/selection = input(redeemer, "Pick your equipment", "Mining Voucher Redemption") as null|anything in sortList(items)
-	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
-		return
-	var/drop_location = drop_location()
-	switch(selection)
-		if("Mining Shotgun")
-			new /obj/item/gun/energy/e_gun/miner(drop_location)
-			new /obj/item/gun/energy/e_gun/miner/shotty(drop_location)
-		if("Mining Rifle")
-			new /obj/item/gun/energy/e_gun/miner(drop_location)
-			new /obj/item/gun/energy/e_gun/miner/shotty(drop_location)
-		if("Minebot Kit")
-			new /mob/living/simple_animal/hostile/mining_drone(drop_location)
-			new /obj/item/weldingtool/hugetank(drop_location)
-			new /obj/item/clothing/head/welding(drop_location)
-			new /obj/item/borg/upgrade/modkit/minebot_passthrough(drop_location)
-		if("Extraction and Rescue Kit")
-			new /obj/item/extraction_pack(drop_location)
-			new /obj/item/fulton_core(drop_location)
-			new /obj/item/stack/marker_beacon/thirty(drop_location)
-		if("Crusher Kit")
-			new /obj/item/extinguisher/mini(drop_location)
-			new /obj/item/kinetic_crusher(drop_location)
-		if("Mining Conscription Kit")
-			new /obj/item/storage/backpack/duffelbag/mining_conscript(drop_location)
-		if("Space Exploration Kit") // Tegustation Space Exploration
-			new /obj/item/storage/backpack/duffelbag/space_exploration(drop_location)
-
-	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
-	qdel(voucher)
-*/
 
 /obj/machinery/mineral/equipment_vendor/ex_act(severity, target)
 	do_sparks(5, TRUE, src)
