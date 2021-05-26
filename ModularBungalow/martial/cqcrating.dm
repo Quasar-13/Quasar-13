@@ -180,7 +180,7 @@
 	to_chat(usr, "<span class='notice'>Toss</span>: Harm Grab Disarm. Toss your opponent really far.")
 	to_chat(usr, "<span class='notice'>Launch</span>: Harm Harm Harm. throw your whole body into your opponennt, knocking them away.")
 	to_chat(usr, "<span class='notice'>Heavyfist Punch</span>: Grab Disarm Harm. Throw your back into a hefty punch.")
-	to_chat(usr, "<span class='notice'>Cargo Special</span>: Harm Grab Harm Harm Grab. Spin your opponents and then send them far!.")
+	to_chat(usr, "<span class='notice'>Cargo Special</span>: Harm Grab Harm Harm Grab. Spin your opponents and then send them far!")
 
 
 

@@ -1,7 +1,7 @@
 //Hop Parade suit
 
 /obj/item/clothing/under/misc/hopparade
-	desc = "A black suit that belongs to the woman who will one day become the captain."
+	desc = "A black suit that belongs to they who will one day become the captain."
 	name = "hop's parade uniform"
 	icon = 'ModularBungalow/zbungalowicons/clothing/paradeicon.dmi'
 	icon_state = "spaceship_hop"
