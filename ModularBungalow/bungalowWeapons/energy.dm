@@ -47,21 +47,43 @@
 	pin = /obj/item/firing_pin/explorer
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_BULKY
+	cell_type = /obj/item/stock_parts/cell
 	selfcharge = 1
 
 
 //"Miner" Laser Rifle
-/obj/item/gun/energy/e_gun/void
-	name = "\improper E-204 Void Rifle"
-	desc = "Nanotrasen’s standard issue void beam rifle."
+/obj/item/gun/energy/e_gun/miner/rifle
+	name = "\improper E-204 Mining Assault Rifle"
+	desc = "Nanotrasen’s standard issue mining rifle."
 	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
-	icon_state = "void-rifle"
+	icon_state = "mining-rifle"
 	inhand_icon_state = "gun"
 	pin = /obj/item/firing_pin/explorer
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
-	w_class = WEIGHT_CLASS_NORMAL
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid, /obj/item/ammo_casing/energy/kinetic)
+	w_class = WEIGHT_CLASS_BULKY
+	cell_type = /obj/item/stock_parts/cell
 	selfcharge = 1
-	fire_delay = 2
+
+/obj/item/gun/energy/e_gun/miner/rifle/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.33 SECONDS)
+
+//Mining Bolter
+/obj/item/gun/energy/e_gun/miner/bolter
+	name = "\improper E-225 Mining Bolt Pistol"
+	desc = "Nanotrasen’s standard issue mining bolter."
+	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
+	icon_state = "mining-bolter"
+	inhand_icon_state = "gun"
+	pin = /obj/item/firing_pin/explorer
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid, /obj/item/ammo_casing/energy/kinetic)
+	selfcharge = 1
+	cell_type = /obj/item/stock_parts/cell/mini_egun
+
+/obj/item/gun/energy/e_gun/miner/bolter/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.10 SECONDS)
+
 
 
 //X-02 Pulse Disabler Rifle

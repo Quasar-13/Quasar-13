@@ -65,7 +65,11 @@
 		new /datum/data/mining_equipment("KA Range Increase",			/obj/item/borg/upgrade/modkit/range,								1000),
 		new /datum/data/mining_equipment("KA Damage Increase",			/obj/item/borg/upgrade/modkit/damage,								1000),
 		new /datum/data/mining_equipment("KA Cooldown Decrease",		/obj/item/borg/upgrade/modkit/cooldown,								1000),
-		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000)
+		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000),
+		new /datum/data/mining_equipment("E-224 Mining Pistol",			/obj/item/gun/energy/e_gun/miner,									500),
+		new /datum/data/mining_equipment("E-204 Mining Assault Rifle",	/obj/item/gun/energy/e_gun/miner/rifle,								1000),
+		new /datum/data/mining_equipment("E-244 Mining Scattershot",	/obj/item/gun/energy/e_gun/miner/shotty,							3500),
+		new /datum/data/mining_equipment("E-225 Mining Bolt Pistol",	/obj/item/gun/energy/e_gun/miner/bolter,							5000)
 	)
 
 /datum/data/mining_equipment
