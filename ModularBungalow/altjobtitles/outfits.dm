@@ -99,7 +99,6 @@
 	head = /obj/item/clothing/head/centhat
 	uniform = /obj/item/clothing/under/misc/comparade
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
-	id = /obj/item/card/id/commodore
 
 /datum/outfit/job/captain/marshal
 	name = "Captain (Marshal)"
@@ -107,32 +106,17 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	uniform = /obj/item/clothing/under/misc/marparade
 	suit = /obj/item/clothing/suit/armor/captain/marshal
-	id = /obj/item/card/id/marshal
 
 
 //They get a cool ID so this manages that
-/datum/outfit/job/captain/commodore/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(visualsOnly)
-		return
-
+/datum/outfit/job/captain/commodore/post_equip(mob/living/carbon/human/H)
 	var/obj/item/card/id/W = H.wear_id
-	W.access = get_all_accesses()
-	W.access = get_all_centcom_access()
-	W.assignment = "Commodore"
-	W.registered_name = H.real_name
-	W.update_label()
+	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
 	..()
 
-/datum/outfit/job/captain/marshal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(visualsOnly)
-		return
-
+/datum/outfit/job/captain/marshal/post_equip(mob/living/carbon/human/H)
 	var/obj/item/card/id/W = H.wear_id
-	W.access = get_all_accesses()
-	W.access = get_all_centcom_access()
-	W.assignment = "Marshal"
-	W.registered_name = H.real_name
-	W.update_label()
+	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
 	..()
 
 
