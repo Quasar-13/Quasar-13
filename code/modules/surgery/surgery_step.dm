@@ -75,7 +75,7 @@
 		speed_mod = tool.toolspeed
 
 	//Bungalow Medical rework
-	if(target!= CONSCIOUS)
+	if(target.stat != CONSCIOUS)
 		speed_mod = speed_mod*1.1
 	else
 		speed_mod = speed_mod*0.8
