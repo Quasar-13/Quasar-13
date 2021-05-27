@@ -527,6 +527,40 @@ update_label()
 	access = get_all_centcom_access()
 	. = ..()
 
+/obj/item/card/id/admiral
+	name = "\improper Admiral ID"
+	id_type_name = "\improper Admiral ID"
+	desc = "An ID from one of the very high up Admirals."
+	icon_state = "admiral"
+	registered_name = "Admiral"
+	assignment = "Admiral"
+	uses_overlays = FALSE
+	registered_age = null
+
+/obj/item/card/id/centcom/Initialize()
+	access = get_all_centcom_access()
+	. = ..()
+
+/obj/item/card/id/commodore
+	name = "\improper Commodore's ID"
+	id_type_name = "\improper Commodore's ID"
+	desc = "An ID used by only the most elite of all captains."
+	icon_state = "commodore"
+	registered_name = "Commodore"
+	assignment = "Commodore"
+	uses_overlays = FALSE
+	registered_age = null
+
+/obj/item/card/id/marshal
+	name = "\improper Marshal's ID"
+	id_type_name = "\improper Marshal's ID"
+	desc = "An ID used by only the most elite of all military captains."
+	icon_state = "marshal"
+	registered_name = "Marshal"
+	assignment = "Marshal"
+	uses_overlays = FALSE
+	registered_age = null
+
 /obj/item/card/id/ert
 	name = "\improper CentCom ID"
 	id_type_name = "\improper CentCom ID"

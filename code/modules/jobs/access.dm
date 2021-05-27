@@ -106,6 +106,10 @@
 	switch(job)
 		if("VIP Guest")
 			return list(ACCESS_CENT_GENERAL)
+		if("Commodore")
+			return list(ACCESS_CENT_GENERAL)
+		if("Marshal")
+			return list(ACCESS_CENT_GENERAL)
 		if("Custodian")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_STORAGE)
 		if("Thunderdome Overseer")
@@ -388,7 +392,7 @@
 	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official") //Tegu edit right there
 
 /proc/get_all_centcom_jobs()
-	return list("Central Command","VIP Guest", "Surgeon General", "Intelligence Officer", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","Admiral","CentCom Commander","CentCom Bartender","Private Security Force")
+	return list("Central Command","VIP Guest", "Surgeon General", "Intelligence Officer", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","CentCom Commander","CentCom Bartender","Private Security Force")
 
 /proc/get_all_syndicate_jobs()
 	return list("Syndicate Overlord", "Syndicate Mastermind", "Syndicate Admiral", "Syndicate Official", "Syndicate", "Syndicate Commander", "Syndicate Ship Captain")
@@ -398,13 +402,23 @@
 	if(!I)
 		return
 	var/jobName = I.assignment
+
+
+
+	//bungalow alt job titles
+	for(var/datum/job/J in SSjob.occupations)
+		if(jobName in J.alt_titles || jobName in J.senior_title)
+			return J.title//bungalow end
+
+	//specific jobs
+	if(jobName == "Admiral")
+		return "Admiral"
+
+
 	if(jobName in get_all_job_icons()) //Check if the job has a hud icon
 		return jobName
 	if(jobName in get_all_centcom_jobs()) //Return with the NT logo if it is a CentCom job
 		return "CentCom"
-	for(var/datum/job/J in SSjob.occupations)//bungalow alt job titles
-		if(jobName in J.alt_titles || jobName == J.senior_title)
-			return J.title//bungalow end
 	if(jobName in get_all_syndicate_jobs()) //Sets icon to Syndicate logo if from the list
 		return "Syndicate Official"
 	return "Unknown" //Return unknown if none of the above apply
