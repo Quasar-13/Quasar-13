@@ -30,7 +30,7 @@
 
 /datum/job/captain/announce(mob/living/carbon/human/H)
 	..()
-	var/displayed_rank = H.mind.assigned_role // Tegu Edit: Alt Titles
+//	var/displayed_rank = H.mind.assigned_role // Tegu Edit: Alt Titles
 //	if(H.client && H.client.prefs && H.client.prefs.alt_titles_preferences[H.mind.assigned_role])
 //		displayed_rank = H.client.prefs.alt_titles_preferences[H.mind.assigned_role]
 	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "[H.real_name] is now in command of the station!")) // Tegu Edit: Alt Titles end
