@@ -6,7 +6,7 @@
 	icon = 'ModularBungalow/clothing/icon/parade.dmi'
 	icon_state = "spaceship_hop"
 	inhand_icon_state = "black_suit"
-	icon = 'ModularBungalow/clothing/worn/parade.dmi'
+	worn_icon = = 'ModularBungalow/clothing/worn/parade.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
 
@@ -18,7 +18,7 @@
 	icon = 'ModularBungalow/clothing/icon/parade.dmi'
 	icon_state = "spaceship_qm"
 	inhand_icon_state = "black_suit"
-	icon = 'ModularBungalow/clothing/worn/parade.dmi'
+	worn_icon = = 'ModularBungalow/clothing/worn/parade.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
 // Marshal's jacket
@@ -27,6 +27,6 @@
 	name = "marshal's warcoat"
 	desc = "Only a distinctive captain has the experience to get this coat. Many stations lost, many battles won."
 	icon = 'ModularBungalow/clothing/icon/parade.dmi'
-	icon = 'ModularBungalow/clothing/worn/parade.dmi'
+	worn_icon = = 'ModularBungalow/clothing/worn/parade.dmi'
 	icon_state = "marshal_jacket"
 
