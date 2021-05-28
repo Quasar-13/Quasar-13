@@ -4,7 +4,7 @@
 
 /datum/wires/autolathe/New(atom/holder)
 	wires = list(
-		WIRE_HACK, WIRE_DISABLE, WIRE_ACTIVATE
+		WIRE_HACK, WIRE_DISABLE, WIRE_ACTIVATE,
 		WIRE_SHOCK, WIRE_ZAP
 	)
 	add_duds(5)
