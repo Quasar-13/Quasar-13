@@ -1419,6 +1419,10 @@
 /area/hallway/secondary/entry)
 "amd" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgewindows";
+	name = "Bridge View Blast door"
+	},
 /turf/open/floor/plating,
 /area/bridge)
 "amf" = (
@@ -6091,7 +6095,15 @@
 /area/maintenance/disposal)
 "dmA" = (
 /obj/structure/table/reinforced,
-/obj/machinery/keycard_auth,
+/obj/machinery/keycard_auth{
+	pixel_x = -5
+	},
+/obj/machinery/button/door{
+	id = "bridgewindows";
+	name = "Bridge View Blast doors";
+	pixel_x = 7;
+	req_access_txt = "19"
+	},
 /turf/open/floor/carpet/blue,
 /area/bridge)
 "dnb" = (
@@ -9340,8 +9352,8 @@
 /obj/machinery/button/door{
 	id = "rdoffice";
 	name = "Privacy Control";
-	pixel_x = -24;
-	pixel_y = 6;
+	pixel_x = -23;
+	pixel_y = 5;
 	req_access_txt = "30"
 	},
 /obj/structure/chair/comfy{
@@ -9357,7 +9369,7 @@
 	dir = 4
 	},
 /obj/structure/extinguisher_cabinet{
-	pixel_x = -27
+	pixel_x = -35
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hor)
@@ -13362,6 +13374,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
+"jHn" = (
+/obj/machinery/button/door{
+	id = "brigcelldoor";
+	name = "Cell Window Control";
+	pixel_x = -25;
+	pixel_y = 5;
+	req_access_txt = "63"
+	},
+/turf/open/floor/plasteel,
+/area/security/brig)
 "jKi" = (
 /obj/machinery/telecomms/hub/preset,
 /obj/machinery/light/small,
@@ -16286,6 +16308,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "rdoffice";
+	name = "Research Director's Shutters"
+	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "mpk" = (
@@ -18819,8 +18845,8 @@
 "oId" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
-	id = "cmoprivacy";
-	name = "CMO Office"
+	id = "centcomprivacy";
+	name = "CentCom Office"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -19213,6 +19239,13 @@
 /area/crew_quarters/heads/cmo)
 "oXS" = (
 /obj/machinery/light,
+/obj/machinery/button/door{
+	id = "brigcelldoor";
+	name = "Cell Window Control";
+	pixel_x = 1;
+	pixel_y = -25;
+	req_access_txt = "63"
+	},
 /turf/open/floor/plasteel,
 /area/security/warden)
 "oYc" = (
@@ -22013,6 +22046,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 5
 	},
+/obj/machinery/button/door{
+	id = "cmoprivacy";
+	name = "CMO Office Shutters";
+	pixel_x = 1;
+	pixel_y = -30;
+	req_access_txt = "40"
+	},
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/cmo)
 "rnn" = (
@@ -22431,7 +22471,7 @@
 	},
 /obj/effect/landmark/start/ai,
 /obj/machinery/button/door{
-	id = "AI Chamber entrance shutters";
+	id = "rdoffice";
 	name = "AI Core shutters control";
 	pixel_x = -24;
 	pixel_y = -10;
@@ -29201,6 +29241,15 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/security/prison)
+"xqU" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "centcomprivacy";
+	name = "Centcom Office"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/vacant_room/office)
 "xqX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -30067,6 +30116,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 5
+	},
+/obj/machinery/button/door{
+	id = "centcomprivacy";
+	name = "CentCom Office Shutters";
+	pixel_x = 1;
+	pixel_y = -30
 	},
 /turf/open/floor/carpet/green,
 /area/vacant_room/office)
@@ -61609,7 +61664,7 @@ eMw
 lFN
 mEb
 sti
-rDh
+jHn
 rDh
 rDh
 mfb
@@ -65980,7 +66035,7 @@ dCi
 rAb
 sEu
 hbV
-oId
+xqU
 uzW
 oUm
 xYs
