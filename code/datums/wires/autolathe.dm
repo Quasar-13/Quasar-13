@@ -4,10 +4,10 @@
 
 /datum/wires/autolathe/New(atom/holder)
 	wires = list(
-		WIRE_HACK, WIRE_DISABLE,
+		WIRE_HACK, WIRE_DISABLE, WIRE_ACTIVATE
 		WIRE_SHOCK, WIRE_ZAP
 	)
-	add_duds(6)
+	add_duds(5)
 	..()
 
 /datum/wires/autolathe/interactable(mob/user)
@@ -34,6 +34,8 @@
 		if(WIRE_DISABLE)
 			A.disabled = !A.disabled
 			addtimer(CALLBACK(A, /obj/machinery/autolathe.proc/reset, wire), 60)
+		if(WIRE_ACTIVATE)
+			A.begin_process()
 
 /datum/wires/autolathe/on_cut(wire, mend)
 	var/obj/machinery/autolathe/A = holder
