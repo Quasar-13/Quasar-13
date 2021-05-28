@@ -24,6 +24,7 @@
 		hostedby = CONFIG_GET(string/hostedby)
 
 	var/server_caption = CONFIG_GET(string/servercaption)
+	var/map_name = SSmapping.config?.map_name
 	s+= "<b>[server_caption]</b>" // SSETH FANS WELCOME! // "<b>The Problems of the Future, <i>Today!</i></b>"  // "<b>[station_name()]</b>";	// TEGUSTATION: We don't display the name of the Station anymore
 	s += " ("
 	//s += "<a href=\"[CONFIG_GET(string/forumurl)]\">"//Change this to wherever you want the hub to link to.
@@ -39,9 +40,7 @@
 	// Tegu Description
 	s += "<br><b>The best cuts this side of the Andromeda!</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
-	if(GLOB.master_mode)
-		s += "<br>Mode: \[<b>" + (GLOB.master_mode == "secret_extended" ? "secret" : GLOB.master_mode) + "</b>"//\]" // TEGUSTATION: What's the point in making it secret if it's going to just say the actual mode (extended)?
-		// NOTE: If this is the LAST THING to be added to the description, then it'll end with a ] anyway. So don't include it here
+	s += "<br>Map: [map_name]"
 
 	var/players = GLOB.clients.len
 
