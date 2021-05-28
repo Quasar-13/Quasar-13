@@ -869,9 +869,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	heart.beating = !status
 
 /// Drop items for the 'butterfingers' trait
-/mob/living/carbon/roll_random_drop(drop_chance = 20, jitter_amount = 10)
+/mob/living/carbon/proc/roll_random_drop(drop_chance = 20, jitter_amount = 10)
 	if(prob(drop_chance))
 		var/obj/item/I = get_active_held_item()
 		if(I && dropItemToGround(I))
-			to_chat(user, "<span class='notice'>Your hands slip and you drop what you were holding!</span>")
-			M.Jitter(jitter_amount)
+			to_chat(src, "<span class='notice'>Your hands slip and you drop what you were holding!</span>")
+			Jitter(jitter_amount)
