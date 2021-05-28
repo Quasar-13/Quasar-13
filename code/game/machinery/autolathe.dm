@@ -417,9 +417,9 @@
 			multiplier = item_queue[requested_design_id]["amount"]
 	multiplier = clamp(multiplier,1,50)
 
-			/////////////////
+	/////////////////
 
-			var/coeff = (is_stack ? 1 : prod_coeff) //stacks are unaffected by production coefficient
+	var/coeff = (is_stack ? 1 : prod_coeff) //stacks are unaffected by production coefficient
 	var/total_amount = 0
 
 	for(var/MAT in being_built.materials)
