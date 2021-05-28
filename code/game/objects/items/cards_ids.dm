@@ -527,6 +527,21 @@ update_label()
 	access = get_all_centcom_access()
 	. = ..()
 
+/obj/item/card/id/admiral
+	name = "\improper Admiral ID"
+	id_type_name = "\improper Admiral ID"
+	desc = "An ID from one of the very high up Admirals."
+	icon_state = "admiral"
+	registered_name = "Admiral"
+	assignment = "Admiral"
+	uses_overlays = FALSE
+	registered_age = null
+
+/obj/item/card/id/centcom/Initialize()
+	access = get_all_centcom_access()
+	. = ..()
+
+
 /obj/item/card/id/ert
 	name = "\improper CentCom ID"
 	id_type_name = "\improper CentCom ID"

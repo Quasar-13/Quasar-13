@@ -42,7 +42,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Detective" = 13,
 		// 20-29: Medbay
 		"Chief Medical Officer" = 20,
-		"Chemist" = 21,
+		"Pharmacist" = 21,
 		"Virologist" = 22,
 		"Medical Doctor" = 23,
 		"Paramedic" = 24,
@@ -51,6 +51,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Scientist" = 31,
 		"Roboticist" = 32,
 		"Geneticist" = 33,
+		"Chemist" = 34,
 		// 40-49: Engineering
 		"Chief Engineer" = 40,
 		"Station Engineer" = 41,
@@ -189,7 +190,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		if (id_card)
 			entry["name"] = id_card.registered_name
 			entry["assignment"] = id_card.assignment
-			entry["ijob"] = jobs[id_card.assignment]
+			entry["ijob"] = jobs[id_card.GetJobName()]//bungalow edit - alt job titles
 
 		// Binary living/dead status
 		if (sensor_mode >= SENSOR_LIVING)

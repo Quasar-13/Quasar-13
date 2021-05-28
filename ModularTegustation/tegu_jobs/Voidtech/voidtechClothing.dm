@@ -34,9 +34,9 @@
 	inhand_icon_state = "void_hardsuit"
 	lefthand_file = 'ModularTegustation/Teguicons/kirie_stuff/left.dmi'
 	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
-	armor = list(MELEE = 20, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 10, BIO = 100, RAD = 15, FIRE = 60, ACID = 30, WOUND = 10)
+	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 5, BOMB = 10, BIO = 100, RAD = 15, FIRE = 60, ACID = 30, WOUND = 10)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/voidtech
-	slowdown = 0.35
+	slowdown = 0.25
 
 
 //Special Subspace Headset
@@ -55,4 +55,4 @@
 	name = "void technicians radio encryption key"
 	icon_state = "eng_cypherkey"
 	channels = list(RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_ENGINEERING = 1)
-	
+

@@ -23,6 +23,10 @@
 	speed = 10
 	stat_attack = HARD_CRIT
 	robust_searching = 1
+
+	butcher_results = list(/obj/item/stack/ore/gold = 7, /obj/item/stack/ore/bananium = 2)
+	guaranteed_butcher_results = list(/obj/item/stack/ore/bluespace_crystal = 2)
+
 	var/hopping = FALSE
 	var/hop_cooldown = 0 //Strictly for player controlled leapers
 	var/projectile_ready = FALSE //Stopping AI leapers from firing whenever they want, and only doing it after a hop has finished instead

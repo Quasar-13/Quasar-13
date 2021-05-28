@@ -30,7 +30,7 @@
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
 	shoes = /obj/item/clothing/shoes/workboots
-	suit = /obj/item/clothing/suit/space/hardsuit/voidtech
+	l_hand = /obj/item/clothing/suit/space/hardsuit/voidtech
 
 	backpack = /obj/item/storage/backpack/industrial
 	satchel = /obj/item/storage/backpack/satchel/eng
@@ -38,6 +38,8 @@
 	box = /obj/item/storage/box/survival/engineer
 	pda_slot = ITEM_SLOT_LPOCKET
 	backpack_contents = list(/obj/item/stack/rods/fifty)
+
+	skillchips = list(/obj/item/skillchip/job/engineer)
 
 
 //Spawn Point

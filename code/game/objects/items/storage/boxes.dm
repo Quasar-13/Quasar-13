@@ -131,6 +131,10 @@
 	else
 		new /obj/item/tank/internals/plasmaman/belt(src)
 
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+		new /obj/item/flashlight/flare(src)
+		new /obj/item/radio/off(src)
+
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
 	new /obj/item/radio/off(src)
@@ -834,6 +838,10 @@
 	else
 		new /obj/item/tank/internals/plasmaman/belt(src)
 
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+		new /obj/item/flashlight/flare(src)
+		new /obj/item/radio/off(src)
+
 /obj/item/storage/box/rubbershot
 	name = "box of rubber shots"
 	desc = "A box full of rubber shots, designed for riot shotguns."
@@ -1251,29 +1259,6 @@
 /obj/item/storage/box/skillchips/engineering/PopulateContents()
 	new/obj/item/skillchip/job/engineer(src)
 	new/obj/item/skillchip/job/engineer(src)
-
-/obj/item/storage/box/skillchips/quick
-	name = "box of Ant Hauler skill chips"
-	desc = "Contains Ant Hauler skill chips."
-
-/obj/item/storage/box/skillchips/quick/PopulateContents()
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-	new/obj/item/skillchip/quickcarry(src)
-
-/obj/item/storage/box/skillchips/quicker
-	name = "box of RES-Q skill chips"
-	desc = "Contains RES-Q skill chips."
-
-/obj/item/storage/box/skillchips/quicker/PopulateContents()
-	new/obj/item/skillchip/quickercarry(src)
-	new/obj/item/skillchip/quickercarry(src)
-	new/obj/item/skillchip/quickercarry(src)
-	new/obj/item/skillchip/quickercarry(src)
 
 /obj/item/storage/box/swab
 	name = "box of microbiological swabs"

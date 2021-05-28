@@ -349,6 +349,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "captain"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
+/area/crew_quarters/office/secretary
+	name = "secretary office"
+	icon_state = "secretary"
+	sound_environment = SOUND_AREA_WOODFLOOR
+
 /area/crew_quarters/heads/captain/private
 	name = "Captain's Quarters"
 	icon_state = "captain_private"
@@ -453,6 +458,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Recreation Area"
 	icon_state = "rec"
 
+/area/commons/cryopods
+	name = "Cryopod Room"
+	icon_state = "cryopod"
+
 /area/crew_quarters/cafeteria
 	name = "Cafeteria"
 	icon_state = "cafeteria"
@@ -475,6 +484,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	mood_trait = TRAIT_EXTROVERT
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_WOODFLOOR
+
+/area/crew_quarters/bar/Initialize(mapload)
+	. = ..()
+	GLOB.bar_areas += src
 
 /area/crew_quarters/bar/atrium
 	name = "Atrium"
@@ -587,6 +600,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/engine/engineering
 	name = "Engineering"
 	icon_state = "engine"
+
+/area/engine/voidtech
+	name = "Void technician's Office"
+	icon_state = "voidtech"
 
 /area/engine/atmos
 	name = "Atmospherics"
@@ -1032,6 +1049,16 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
+/area/office/clown
+	name = "Clown's office"
+	icon_state = "clown"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/office/mime
+	name = "Mime's office"
+	icon_state ="mime"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
 /area/quartermaster/sorting
 	name = "Delivery Office"
 	icon_state = "cargo_delivery"
@@ -1116,6 +1143,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/science/xenobiology
 	name = "Xenobiology Lab"
 	icon_state = "xenobio"
+
+/area/science/chem
+	name = "Chemical Research"
+	icon_state = "scichem"
 
 /area/science/cytology
 	name = "Cytology Lab"

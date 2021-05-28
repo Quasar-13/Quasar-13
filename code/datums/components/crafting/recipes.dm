@@ -289,10 +289,10 @@
 	..()
 	blacklist += subtypesof(/obj/item/gun/energy/laser)
 
-/datum/crafting_recipe/teslarevolver
-	name = "Tesla Revolver"
+/datum/crafting_recipe/teslacannon
+	name = "Tesla Cannon"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	result = /obj/item/gun/energy/tesla_revolver
+	result = /obj/item/gun/energy/tesla_cannon
 	reqs = list(/obj/item/assembly/signaler/anomaly/flux = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/gunkit/tesla = 1)
@@ -857,14 +857,6 @@
 	parts = list(/obj/item/grown/log = 5)
 	blacklist = list(/obj/item/grown/log/steel)
 	result = /obj/structure/bonfire
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/skeleton_key
-	name = "Skeleton Key"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/bone = 5)
-	result = /obj/item/skeleton_key
-	always_available = FALSE
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/rake //Category resorting incoming

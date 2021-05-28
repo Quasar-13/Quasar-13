@@ -117,7 +117,7 @@
 	required_volume = 30
 
 /datum/bounty/reagent/chemical_simple/New()
-	// Chemicals that can be mixed by a single skilled Chemist.
+	// Chemicals that can be mixed by a single skilled pharmacist.
 	var/static/list/possible_reagents = list(\
 		/datum/reagent/medicine/leporazine,\
 		/datum/reagent/medicine/clonexadone,\
@@ -167,7 +167,7 @@
 		/datum/reagent/toxin/slimejelly,\
 		/datum/reagent/teslium/energized_jelly,\
 		/datum/reagent/toxin/mimesbane,\
-		/datum/reagent/medicine/strange_reagent,\
+		/datum/reagent/protofore,\
 		/datum/reagent/nitroglycerin,\
 		/datum/reagent/medicine/rezadone,\
 		/datum/reagent/toxin/zombiepowder,\

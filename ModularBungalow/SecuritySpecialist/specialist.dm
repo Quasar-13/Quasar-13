@@ -56,8 +56,8 @@
 	desc = "A large duffel bag containing all you need to keep an important individual alive."
 
 /obj/item/storage/backpack/duffelbag/sec/spec/blueshield/PopulateContents()
-	new /obj/item/clothing/suit/armor/heavy(src)
-	new /obj/item/clothing/head/helmet/space/syndicate/blue(src)
+	new /obj/item/clothing/suit/armor/blueshield(src)
+	new /obj/item/clothing/under/misc/blueshield(src)
 	new /obj/item/gun/energy/e_gun/old(src)
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/sensor_device(src)
@@ -107,7 +107,21 @@
 	new /obj/item/storage/firstaid/tactical/spec(src)
 	new /obj/item/clothing/suit/armor/labcoat(src)
 	new /obj/item/clothing/head/beret/sec/medical(src)
+	new /obj/item/card/sec_access_card(src)
 
+//ID
+/obj/item/card/sec_access_card
+	name = "security access card"
+	desc = "A small card, that when used on any ID, will add basic security access."
+	icon_state = "data_1"
+
+/obj/item/card/sec_access_card/afterattack(atom/movable/AM, mob/user, proximity)
+	. = ..()
+	if(istype(AM, /obj/item/card/id) && proximity)
+		var/obj/item/card/id/I = AM
+		I.access |=	ACCESS_BRIG
+		to_chat(user, "<span class='notice'>You upgrade [I] with basic security access.</span>")
+		qdel(src)
 
 
 //Paranormal
