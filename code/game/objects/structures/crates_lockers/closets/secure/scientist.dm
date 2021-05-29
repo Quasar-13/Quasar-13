@@ -28,6 +28,9 @@
 	new /obj/item/circuitboard/machine/techfab/department/science(src)
 	new /obj/item/storage/photo_album/rd(src)
 	new /obj/item/storage/box/skillchips/science(src)
+	/* START EDIT BUNGALOW */
+	new /obj/item/card/id/departmental_budget/sci(src)
+	/* END EDIT BUNGALOW */
 
 
 /obj/structure/closet/secure_closet/cytology

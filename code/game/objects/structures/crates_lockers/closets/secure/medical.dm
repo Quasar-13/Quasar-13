@@ -95,6 +95,9 @@
 	new /obj/item/wallframe/defib_mount(src)
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/cmo(src)
+	/* START EDIT BUNGALOW */
+	new /obj/item/card/id/departmental_budget/med(src)
+	/* END EDIT BUNGALOW */
 
 /obj/structure/closet/secure_closet/spareparts
 	name = "\proper chief medical officer's wacky parts locker"
