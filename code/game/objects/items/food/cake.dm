@@ -465,3 +465,22 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 1)
 	tastes = list("cake" = 4, "butter" = 2, "cream" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
+
+/obj/item/food/cake/heartfruit
+	name = "heart-fruit cake"
+	desc = "a cake full of love."
+	icon_state = "heartfruitcake"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/consumable/nutriment/vitamin = 10)
+	tastes = list("sweetness" = 2, "cake" = 5, "heartfruit" = 3)
+	foodtypes = GRAIN | DAIRY | SUGAR | FRUIT
+
+/obj/item/food/cake/orange/MakeProcessable()
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/heartfruitslice, 5, 30)
+
+/obj/item/food/cakeslice/heartfruitslice
+	name = "heart-fruit cake slice"
+	desc = "A slice of heart-fruit cake. the heart is broken, but the cake always can fix that."
+	icon_state = "heartfruitcake_slice"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("cake" = 3, "sweetness" = 2, "heartfruit" = 2)
+	foodtypes = GRAIN | DAIRY | VEGETABLES | SUGAR
