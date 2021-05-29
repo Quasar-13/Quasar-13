@@ -206,3 +206,12 @@
 	)
 	result = /mob/living/simple_animal/pet/cat/cak
 	subcategory = CAT_CAKE //Cat! Haha, get it? CAT? GET IT? We get it - Love Felines
+
+/datum/crafting_recipe/food/heartfruitcake
+	name = "heart-fruit cake"
+	reqs = list(
+		/obj/item/food/cake/plain = 1,
+		/obj/item/food/grown/heartfruit = 3
+	)
+	result = /obj/item/food/cake/heartfruit
+	subcategory = CAT_CAKE

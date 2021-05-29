@@ -3,14 +3,14 @@
 	desc = "These seeds grow into heart-fruit plants."
 	icon_state = "seed-heartfruit"
 	species = "heartfruit"
-	plantname = "Heart-Fruit Plants"
+	plantname = "Heart-fruit"
 	product = /obj/item/food/grown/heartfruit
 	maturation = 8
-	instability = 20
+	instability = 10
 	potency = 6
+	growthstages = 5
 	growing_icon = 'icons/obj/hydroponics/growing_fruits.dmi'
 	icon_grow = "heartfruit-grow"
-	icon_harvest = "heartfruit-harvest"
 	icon_dead = "heartfruit-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.03, /datum/reagent/consumable/nutriment = 0.1)
@@ -18,7 +18,7 @@
 /obj/item/food/grown/heartfruit
 	seed = /obj/item/seeds/heartfruit
 	name = "heart-fruit"
-	desc = "heart shape fruit."
+	desc = "a fruit that have a very similar shape of a heart	."
 	icon_state = "heartfruit"
 	bite_consumption_mod = 2
 	foodtypes = FRUIT
