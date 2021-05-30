@@ -210,7 +210,7 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
-			SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language, direct) //SKYRAT EDIT ADDITION - GUNPOINT
+	SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language, direct) //SKYRAT EDIT ADDITION - GUNPOINT
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language, message_mods)
 	return ITALICS | REDUCE_RANGE
 
