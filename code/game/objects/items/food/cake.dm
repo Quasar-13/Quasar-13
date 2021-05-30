@@ -484,4 +484,3 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("cake" = 3, "sweetness" = 2, "heartfruit" = 2)
 	foodtypes = GRAIN | DAIRY | VEGETABLES | SUGAR
-growthstages = 3

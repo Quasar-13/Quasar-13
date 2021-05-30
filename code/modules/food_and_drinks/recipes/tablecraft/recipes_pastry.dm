@@ -486,6 +486,8 @@
 	result = /obj/item/food/cookie/sugar
 	subcategory = CAT_PASTRY
 
+
+
 /datum/crafting_recipe/food/fortunecookie
 	time = 15
 	name = "Fortune cookie"
@@ -557,6 +559,16 @@
 	)
 	result = /obj/item/food/cookie/raisin
 	subcategory = CAT_PASTRY
+
+/datum/crafting_recipe/food/heartfruitcookie
+	name = "Heart-Fruit cookie"
+	reqs = list(
+		/obj/item/food/pastrybase = 1,
+		/obj/item/food/grown/heartfruit = 1
+	)
+	result = /obj/item/food/heartfruitcookie
+	subcategory = CAT_PASTRY
+
 
 /datum/crafting_recipe/food/cherrycupcake
 	name = "Cherry cupcake"

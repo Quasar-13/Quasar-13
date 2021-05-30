@@ -549,6 +549,16 @@
 	foodtypes = GRAIN | SUGAR
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/food/heartfruitcookie
+	name = "Heart-fruit cookie"
+	desc = ""
+	icon_state = "Heartfruitcookie"
+	bite_consumption = 1
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
+	tastes = list("cookie" = 1, "Heart-fruit" = 1)
+	foodtypes = GRAIN | SUGAR | FRUIT
+	w_class = WEIGHT_CLASS_SMALL
+
 /obj/item/food/cookie/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)

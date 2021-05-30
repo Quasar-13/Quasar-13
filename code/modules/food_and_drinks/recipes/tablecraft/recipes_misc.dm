@@ -344,3 +344,13 @@
 	)
 	result = /obj/item/food/royalcheese
 	subcategory = CAT_MISCFOOD
+
+/datum/crafting_recipe/food/heartfruitcaramel
+	name = "Candied apple"
+	reqs = list(
+		/datum/reagent/consumable/caramel = 5,
+		/obj/item/food/grown/heartfruit = 2,
+		/obj/item/stack/rods = 1
+	)
+	result = /obj/item/food/heartfruitcaramel
+	subcategory = CAT_MISCFOOD

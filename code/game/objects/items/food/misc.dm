@@ -111,6 +111,17 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 
+/obj/item/food/heartfruitcaramel
+	name = "candied heart-fruit"
+	desc = "A heart-fruit coated in sugary sweetness."
+	icon_state = "caramelheartfruit"
+	bite_consumption = 3
+	trash_type = /obj/item/stack/rods
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/caramel = 5)
+	tastes = list("heart-fruit" = 2, "caramel" = 3)
+	foodtypes = JUNKFOOD | FRUIT | SUGAR
+	w_class = WEIGHT_CLASS_SMALL
+
 /obj/item/food/fries/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
