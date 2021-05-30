@@ -1,12 +1,12 @@
-//Hop Parade suit
+//Sec Parade suit
 
-/obj/item/clothing/under/misc/hopparade
-	desc = "A black suit that belongs to they who will one day become the captain."
-	name = "hop's parade uniform"
+/obj/item/clothing/under/misc/secparade
+	desc = "A black suit blue trim. Worn by the lowly secretary"
+	name = "secretary's parade uniform"
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
-	icon_state = "spaceship_hop"
+	icon_state = "spaceship_sec"
 	inhand_icon_state = "black_suit"
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
@@ -22,6 +22,20 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
+
+
+//Hop Parade suit
+
+/obj/item/clothing/under/misc/hopparade
+	desc = "A black suit that belongs to they who will one day become the captain."
+	name = "hop's parade uniform"
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "spaceship_hop"
+	inhand_icon_state = "black_suit"
+	can_adjust = FALSE
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
+
 
 //Commodore Parade suit
 
