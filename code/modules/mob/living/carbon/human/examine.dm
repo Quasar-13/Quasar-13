@@ -443,7 +443,7 @@
 	if(length(gunpointed))
 		for(var/datum/gunpoint/GP in gunpointed)
 			. += "<span class='warning'><b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b></span>\n"
-  //SKYRAT EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 	. += "*---------*</span>"
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .)
