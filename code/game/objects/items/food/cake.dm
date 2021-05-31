@@ -505,7 +505,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 //female + female  cake
-	/obj/item/food/cake/weddingcake3
+/obj/item/food/cake/weddingcake3
 	name = "Wedding cake"
 	desc = "a cake."
 	icon_state = "weddingcake3"
