@@ -14,6 +14,7 @@
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\PackedStation\PackedStation.dmm"
 		#include "map_files\RemoraStation\RemoraStation.dmm"
+		#include "map_files\CasioStation\CasioStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 
