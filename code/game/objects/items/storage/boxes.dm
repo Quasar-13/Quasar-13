@@ -1329,3 +1329,13 @@
 		/obj/item/slimecross/stabilized/rainbow=1,\
 		)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/box/weddingbox
+	name = "box of groom and bride figures"
+	desc = "A box full of groom and bride figures"
+
+
+/obj/item/storage/box/weddingbox/PopulateContents()
+	for(var/i in 1 to 3)
+		new /obj/item/toy/figure/groom(src)
+		new /obj/item/toy/figure/bride(src)

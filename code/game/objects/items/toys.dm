@@ -1423,6 +1423,15 @@
 	icon_state = "warden"
 	toysay = "Seventeen minutes for coughing at an officer!"
 
+/obj/item/toy/figure/groom
+	name = "Groom figure"
+	icon_state = "groom"
+	toysay = "i do... i guess."
+
+/obj/item/toy/figure/bride
+	name = "Bride figure"
+	icon_state = "bride"
+	toysay = "i do."
 
 /obj/item/toy/dummy
 	name = "ventriloquist dummy"
