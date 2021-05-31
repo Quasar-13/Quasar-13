@@ -485,7 +485,7 @@
 	tastes = list("cake" = 3, "sweetness" = 2, "heartfruit" = 2)
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 
-//straigh cake
+//male + female cake
 /obj/item/food/cake/weddingcake1
 	name = "Wedding cake"
 	desc = "a cake."
@@ -495,7 +495,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 
-//gay cake
+//male + male  cake
 /obj/item/food/cake/weddingcake2
 	name = "Wedding cake"
 	desc = "a cake."
@@ -504,7 +504,7 @@
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
 
-//lesbian cake
+//female + female  cake
 	/obj/item/food/cake/weddingcake3
 	name = "Wedding cake"
 	desc = "a cake."
@@ -516,10 +516,10 @@
 /obj/item/food/cake/weddingcake1/MakeProcessable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
 
-	/obj/item/food/cake/weddingcake2/MakeProcessable()
+/obj/item/food/cake/weddingcake2/MakeProcessable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
 
-	/obj/item/food/cake/weddingcake3/MakeProcessable()
+/obj/item/food/cake/weddingcake3/MakeProcessable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
 
 /obj/item/food/cakeslice/weddingcakeslice
