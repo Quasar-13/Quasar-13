@@ -54,7 +54,6 @@ Let this be a warning to anyone that wants to try this.
 				heart.applyOrganDamage(-4, -4)
 			if(!heart) // only dealing with heart stuff from here on out
 				return
-			heart.applyOrganDamage(-2)
 
 
 

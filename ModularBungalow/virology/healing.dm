@@ -9,6 +9,7 @@
 	transmittable = 1
 	level = 6
 	passive_message = "<span class='notice'>You feel tingling on your skin as light passes over it.</span>"
+	var/heal_amt = 0
 	threshold_descs = list(
 		"Stage Speed 8" = "Doubles healing speed.",
 	)
@@ -26,11 +27,10 @@
 		var/turf/T = M.loc
 		light_amount = min(1,T.get_lumcount()) - 0.5
 		if(light_amount > SHADOW_SPECIES_LIGHT_THRESHOLD)
+			heal_amt = 0.6
 			return power
 
 /datum/symptom/heal/light/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	var/heal_amt = 0.6 * actual_power
-
 	var/list/parts = M.get_damaged_bodyparts(1,1, null, BODYPART_ORGANIC)
 
 	if(!parts.len)
@@ -60,22 +60,26 @@
 	transmittable = 0
 	level = 3
 	passive_message = "<span class='notice'>You feel rather leafy.</span>"
+	var/canheal = FALSE
 
-/datum/symptom/heal/light/Start(datum/disease/advance/A)
+/datum/symptom/heal/food/Start(datum/disease/advance/A)
 	if(!..())
 		return
 
-/datum/symptom/heal/light/CanHeal(datum/disease/advance/A)
+/datum/symptom/heal/food/CanHeal(datum/disease/advance/A)
 	var/mob/living/M = A.affected_mob
 	var/light_amount = 0
+
 	if(isturf(M.loc)) //else, there's considered to be no light
 		var/turf/T = M.loc
 		light_amount = min(1,T.get_lumcount()) - 0.5
 		if(light_amount > SHADOW_SPECIES_LIGHT_THRESHOLD)
+			canheal = TRUE
 			return power
 
-/datum/symptom/heal/light/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	M.adjust_nutrition(0.3)
+/datum/symptom/heal/food/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
+	if(canheal == TRUE)
+		M.adjust_nutrition(0.3)
 	if(prob(5))
 		to_chat(M, "<span class='notice'>You feel a little fuller.</span>")
 	return 1
