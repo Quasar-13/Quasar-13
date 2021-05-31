@@ -165,7 +165,7 @@
 
 /datum/chemical_reaction/polyethylide
 	results = list(/datum/reagent/mixer/polyethylide = 3)
-	required_reagents = list(/datum/reagent/diethylamine = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/ammonia = 1)
+	required_reagents = list(/datum/reagent/diethylamine = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/copper = 1)
 
 
 
