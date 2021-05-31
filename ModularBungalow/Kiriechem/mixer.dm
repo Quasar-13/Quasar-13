@@ -118,8 +118,8 @@
 /datum/reagent/mixer/dioxadide
 	name = "Dioxadide"
 
-/datum/chemical_reaction/mhebitide
-	results = list(/datum/reagent/mixer/mhebitide = 2)
+/datum/chemical_reaction/dioxadide
+	results = list(/datum/reagent/mixer/dioxadide = 2)
 	required_reagents = list(/datum/reagent/cryptobiolin = 1, /datum/reagent/impedrezene = 1)
 
 
@@ -177,11 +177,20 @@
 	required_reagents = list(/datum/reagent/acetaldehyde = 1, /datum/reagent/acetone_oxide = 1)
 
 
-/datum/reagent/mixer/haloride
-	name = "Haloride"
 
-/datum/chemical_reaction/haloride
-	results = list(/datum/reagent/mixer/haloride = 2)
-	required_reagents = list(/datum/reagent/acetaldehyde = 1, /datum/reagent/acetone_oxide = 1)
+/datum/reagent/mixer/meloride
+	name = "Meloride"
 
+/datum/chemical_reaction/meloride
+	results = list(/datum/reagent/mixer/meloride = 3)
+	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/acetone_oxide = 1, /datum/reagent/mercury = 1)
+
+
+
+/datum/reagent/mixer/caemide
+	name = "Caemide"
+
+/datum/chemical_reaction/caemide
+	results = list(/datum/reagent/mixer/caemide = 3)
+	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone_oxide = 1, /datum/reagent/cryptobiolin = 1)
 

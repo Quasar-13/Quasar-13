@@ -7,11 +7,12 @@
 	max_input_reagent_amount = 1
 	min_input_reagents = 5
 	max_input_reagents = 5
-	possible_reagents = list(/datum/reagent/ammonia, /datum/reagent/ash, /datum/reagent/acetone,
-						/datum/reagent/drug/space_drugs, /datum/reagent/toxin/cyanide, /datum/reagent/diethylamine, /datum/reagent/phenol,
-						/datum/reagent/saltpetre, /datum/reagent/lye, /datum/reagent/medicine/granibitaluri, /datum/reagent/acetaldehyde,
-						/datum/reagent/medicine/atropine, /datum/reagent/toxin/formaldehyde, /datum/reagent/toxin/fentanyl, /datum/reagent/drug/methamphetamine,
-						/datum/reagent/medicine/c2/libital, /datum/reagent/medicine/c2/aiuri, /datum/reagent/medicine/c2/multiver, /datum/reagent/medicine/c2/convermol)
+	possible_reagents = list(/datum/reagent/mixer, /datum/reagent/mixer/bicarbide, /datum/reagent/mixer/irimide, /datum/reagent/mixer/talcide,
+							/datum/reagent/mixer/helioside, /datum/reagent/mixer/selenide, /datum/reagent/mixer/kelaide, /datum/reagent/mixer/paraide,
+							/datum/reagent/mixer/sparaide, /datum/reagent/mixer/hebitide, /datum/reagent/mixer/uhebitide, /datum/reagent/mixer/mhebitide,
+							/datum/reagent/mixer/dioxadide, /datum/reagent/mixer/pensal, /datum/reagent/mixer/etheride, /datum/reagent/mixer/peroxidide,
+							/datum/reagent/mixer/meride, /datum/reagent/mixer/polyethylide, /datum/reagent/mixer/haloride, /datum/reagent/mixer/meloride,
+							/datum/reagent/mixer/caemide)
 
 	max_catalysts = 0
 
