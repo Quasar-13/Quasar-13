@@ -485,6 +485,7 @@
 	tastes = list("cake" = 3, "sweetness" = 2, "heartfruit" = 2)
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 
+//straigh cake
 /obj/item/food/cake/weddingcake1
 	name = "Wedding cake"
 	desc = "a cake."
@@ -493,7 +494,32 @@
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
 
+
+//gay cake
+/obj/item/food/cake/weddingcake2
+	name = "Wedding cake"
+	desc = "a cake."
+	icon_state = "weddingcake2"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5)
+	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
+	foodtypes = GRAIN | DAIRY | SUGAR
+
+//lesbian cake
+	/obj/item/food/cake/weddingcake3
+	name = "Wedding cake"
+	desc = "a cake."
+	icon_state = "weddingcake3"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5)
+	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
+	foodtypes = GRAIN | DAIRY | SUGAR
+
 /obj/item/food/cake/weddingcake1/MakeProcessable()
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
+
+	/obj/item/food/cake/weddingcake2/MakeProcessable()
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
+
+	/obj/item/food/cake/weddingcake3/MakeProcessable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/weddingcakeslice , 15, 45)
 
 /obj/item/food/cakeslice/weddingcakeslice
@@ -504,20 +530,3 @@
 	tastes = list("cake" = 3, "sweetness" = 2, "divorce" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
 
-/obj/item/food/cakeslice/weddingcakeslicegroom
-	name = "Groom wedding cake slice"
-	desc = "Groom slice"
-	icon_state = "weddingcakeslicegroom"
-	trash_type = /obj/item/toy/figure/groom
-	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 2)
-	tastes = list("cake" = 3, "sweetness" = 2, "divorce" = 1)
-	foodtypes = GRAIN | DAIRY | SUGAR
-
-/obj/item/food/cakeslice/weddingcakeslicebride
-	name = "Bride wedding cake slice"
-	desc = "Bride slice"
-	icon_state = "weddingslicebride"
-	trash_type = /obj/item/toy/figure/bride
-	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 2)
-	tastes = list("cake" = 3, "sweetness" = 2, "divorce" = 1)
-	foodtypes = GRAIN | DAIRY | SUGAR

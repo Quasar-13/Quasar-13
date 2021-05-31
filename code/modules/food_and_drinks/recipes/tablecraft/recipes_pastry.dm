@@ -486,8 +486,6 @@
 	result = /obj/item/food/cookie/sugar
 	subcategory = CAT_PASTRY
 
-
-
 /datum/crafting_recipe/food/fortunecookie
 	time = 15
 	name = "Fortune cookie"

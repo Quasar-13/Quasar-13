@@ -215,3 +215,33 @@
 	)
 	result = /obj/item/food/cake/heartfruit
 	subcategory = CAT_CAKE
+
+/datum/crafting_recipe/food/weddingcake1
+	name = "Wedding cake (male + female)"
+	reqs = list(
+		/obj/item/food/cake/plain = 3,
+		/obj/item/toy/figure/groom = 1,
+		/obj/item/toy/figure/bride = 1
+	)
+	result = /obj/item/food/cake/weddingcake1
+	subcategory = CAT_CAKE
+
+
+/datum/crafting_recipe/food/weddingcake2
+	name = "Wedding cake (male + male)"
+	reqs = list(
+		/obj/item/food/cake/plain = 3,
+		/obj/item/toy/figure/groom = 2
+	)
+	result = /obj/item/food/cake/weddingcake2
+	subcategory = CAT_CAKE
+
+/datum/crafting_recipe/food/weddingcake3
+	name = "Wedding cake (female + female)"
+	reqs = list(
+		/obj/item/food/cake/plain = 3,
+		/obj/item/toy/figure/bride = 2
+	)
+	result = /obj/item/food/cake/weddingcake3
+	subcategory = CAT_CAKE
+
