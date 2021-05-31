@@ -56,8 +56,8 @@
 	..()
 
 
-/datum/reagent/medicine/bicardite //bicardine
-	name = "Bicardite"
+/datum/reagent/medicine/bicarbital //bicardine but new
+	name = "Bicarbital"
 	description = "A bruise reliever that deals minor genetics damage."
 	color = "#A1240B" // rgb: 236	236	141
 	taste_description = "spicy"
