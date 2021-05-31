@@ -574,7 +574,7 @@
 		var/datum/station_goal/G = T
 		if(config_tag in initial(G.gamemode_blacklist))
 			continue
-			if(G.maptype == config.maptype)
+			if(G.maptype == roundmaptype)
 				possible += T
 	var/goal_weights = 0
 	while(possible.len && goal_weights < STATION_GOAL_BUDGET)

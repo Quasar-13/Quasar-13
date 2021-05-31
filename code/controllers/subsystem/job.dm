@@ -60,7 +60,7 @@ SUBSYSTEM_DEF(job)
 		if(!job.map_check())	//Even though we initialize before mapping, this is fine because the config is loaded at new
 			testing("Removed [job.type] due to map config")
 			continue
-		if(job.maptype != config.maptype)
+		if(job.maptype != roundmaptype)
 			if(job.maptype != "none")
 				continue
 		occupations += job

@@ -86,7 +86,7 @@
 			continue// by using someone else's crate
 		if(P.contraband && !contraband) // will you show me?
 			continue // i'd be right happy to
-		if(P.maptype != config.maptype)
+		if(P.maptype != roundmaptype)
 			if(P.maptype != "none")
 				continue
 		if(P.faction != config.faction)
