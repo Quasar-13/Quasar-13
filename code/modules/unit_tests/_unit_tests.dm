@@ -64,7 +64,7 @@
 #include "reagent_id_typos.dm"
 #include "reagent_mod_expose.dm"
 #include "reagent_mod_procs.dm"
-#include "reagent_recipe_collisions.dm" //Include if you are fucking with chemicals
+//#include "reagent_recipe_collisions.dm" Include if you are fucking with chemicals
 #include "resist.dm"
 #include "say.dm"
 #include "serving_tray.dm"
