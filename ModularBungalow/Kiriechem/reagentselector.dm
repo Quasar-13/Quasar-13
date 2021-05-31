@@ -145,3 +145,26 @@
 
 	results = list(/datum/reagent/determination = 5)
 
+
+//Bicardite
+/datum/chemical_reaction/randomized/kiriechem/bicardite
+	min_input_reagents = 3
+	max_input_reagents = 3
+
+	results = list(/datum/reagent/medicine/bicardite = 3)
+
+//Keluri
+/datum/chemical_reaction/randomized/kiriechem/keluri
+	min_input_reagents = 3
+	max_input_reagents = 3
+
+	results = list(/datum/reagent/medicine/keluri = 3)
+
+
+//Venadone
+/datum/chemical_reaction/randomized/kiriechem/venadone
+	min_input_reagents = 3
+	max_input_reagents = 3
+
+	results = list(/datum/reagent/medicine/venadone = 3)
+

@@ -1,4 +1,4 @@
-/datum/reagent/mixer //brings it back kinda
+/datum/reagent/mixer
 	name = "Mixide"
 	description = "one of many experimental mixers used."
 	color = "#252525"
