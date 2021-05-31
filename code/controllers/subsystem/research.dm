@@ -131,7 +131,7 @@ SUBSYSTEM_DEF(research)
 	var/list/returned = list()
 	for(var/path in subtypesof(/datum/techweb_node))
 		var/datum/techweb_node/TN = path
-		if(TN.maptype != roundmaptype)
+		if(TN.maptype != global/maptype)
 			continue
 		if(isnull(initial(TN.id)))
 			continue

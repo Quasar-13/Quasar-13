@@ -24,7 +24,7 @@
 
 	var/minetype = "lavaland"
 
-	var/global/roundmaptype = "station" //Bungalow - map types, defaults to station cause that's the most common for now
+	var/global/maptype = "station" //Bungalow - map types, defaults to station cause that's the most common for now
 	var/faction = "nanotrasen" //Netta wanted this for some reason
 
 	var/allow_custom_shuttles = TRUE
@@ -144,7 +144,7 @@
 		minetype = json["faction"]
 
 	if("maptype" in json)
-		roundmaptype = json["maptype"]
+		global/maptype = json["maptype"]
 
 	allow_custom_shuttles = json["allow_custom_shuttles"] != FALSE
 
