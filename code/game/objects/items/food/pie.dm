@@ -266,3 +266,22 @@
 	icon_state = "baklavaslice"
 	tastes = list("nuts" = 1, "pie" = 1)
 	foodtypes = GRAIN
+
+/obj/item/food/pie/lemon
+	name = "lemon pie"
+	desc = "desc."
+	icon_state = "lemonpie"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/lemonjuice = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
+	tastes = list("pie" = 2, "lemon" = 1, "sourness" = 1)
+	foodtypes = GRAIN | DAIRY | SUGAR
+
+/obj/item/food/pie/lemon/MakeProcessable()
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/lemon, 5, 20)
+
+/obj/item/food/pieslice/lemon
+	name = "lemon pie slice"
+	desc = "desc"
+	icon_state = "lemonpieslice"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	tastes = list("pie" = 1, "lemon" = 1,"sourness" = 1)
+	foodtypes = GRAIN | DAIRY | SUGAR

@@ -18,7 +18,7 @@
 /obj/item/food/grown/heartfruit
 	seed = /obj/item/seeds/heartfruit
 	name = "heart-fruit"
-	desc = "a fruit that have a very similar shape of a heart	."
+	desc = "a fruit that have a very similar shape of a heart."
 	icon_state = "heartfruit"
 	bite_consumption_mod = 2
 	foodtypes = FRUIT
