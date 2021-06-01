@@ -494,7 +494,6 @@
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
 
-
 //male + male  cake
 /obj/item/food/cake/weddingcake2
 	name = "Wedding cake"
