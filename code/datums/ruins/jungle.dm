@@ -23,4 +23,28 @@
 	description = "A rare seedling plant."
 	suffix = "jungle_seedling.dmm"
 
+/datum/map_template/ruin/jungle/demonoffices
+	name = "Demon Offices"
+	id = "demonoffices"
+	description = "A rare seedling plant."
+	suffix = "jungle_demonoffices.dmm"
+
+/datum/map_template/ruin/jungle/witch
+	name = "Witch house"
+	id = "witch"
+	description = "A witch hut hidden deep in the forest."
+	suffix = "jungle_witch.dmm"
+
+/datum/map_template/ruin/jungle/spiders
+	name = "Spider Nest"
+	id = "spiders"
+	description = "A spider nest that has claimed a victim."
+	suffix = "jungle_spiders.dmm"
+
+/datum/map_template/ruin/jungle/pirates
+	name = "Pirate ship"
+	id = "pirates"
+	description = "A pirate ship that is still well defended."
+	suffix = "jungle_pirates.dmm"
+
 

@@ -299,3 +299,10 @@
 	suffix = "hellfactory.dmm"
 	name = "Heck Brewery"
 	description = "An abandoned warehouse and brewing facility, which has been recently rediscovered. Reports claim that the security system entered an ultra-hard lockdown, but these reports are inconclusive."
+
+/datum/map_template/ruin/space/fakevault
+	id = "fakevault"
+	suffix = "fakevault.dmm"
+	name = "Fake Vault"
+	description = "An old vault that holds many 'secrets' "
+
