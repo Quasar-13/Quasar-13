@@ -468,7 +468,7 @@
 
 /obj/item/food/cake/heartfruit
 	name = "heart-fruit cake"
-	desc = "a cake full of love."
+	desc = "a cake full of lov- why is beating!?"
 	icon_state = "heartfruitcake"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/consumable/nutriment/vitamin = 10)
 	tastes = list("sweetness" = 2, "cake" = 5, "heartfruit" = 3)
@@ -488,8 +488,10 @@
 //male + female cake
 /obj/item/food/cake/weddingcake1
 	name = "Wedding cake"
-	desc = "a cake."
+	desc = "A wedding cake."
 	icon_state = "weddingcake1"
+	bite_consumption = 7
+	max_volume = 100
 	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	w_class = WEIGHT_CLASS_BULKY
@@ -498,8 +500,10 @@
 //male + male  cake
 /obj/item/food/cake/weddingcake2
 	name = "Wedding cake"
-	desc = "a cake."
+	desc = "A wedding cake."
 	icon_state = "weddingcake2"
+	bite_consumption = 7
+	max_volume = 100
 	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	w_class = WEIGHT_CLASS_BULKY
@@ -508,8 +512,10 @@
 //female + female  cake
 /obj/item/food/cake/weddingcake3
 	name = "Wedding cake"
-	desc = "a cake."
+	desc = "A wedding cake."
 	icon_state = "weddingcake3"
+	bite_consumption = 7
+	max_volume = 100
 	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
 	w_class = WEIGHT_CLASS_BULKY
@@ -531,4 +537,3 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("cake" = 3, "sweetness" = 2, "divorce" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
-
