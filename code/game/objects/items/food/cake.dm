@@ -490,8 +490,9 @@
 	name = "Wedding cake"
 	desc = "a cake."
 	icon_state = "weddingcake1"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
+	w_class = WEIGHT_CLASS_BULKY
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 //male + male  cake
@@ -499,8 +500,9 @@
 	name = "Wedding cake"
 	desc = "a cake."
 	icon_state = "weddingcake2"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
+	w_class = WEIGHT_CLASS_BULKY
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 //female + female  cake
@@ -508,8 +510,9 @@
 	name = "Wedding cake"
 	desc = "a cake."
 	icon_state = "weddingcake3"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/sugar = 15)
 	tastes = list("sweetness" = 2, "cake" = 5, "divorce" = 1)
+	w_class = WEIGHT_CLASS_BULKY
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 /obj/item/food/cake/weddingcake1/MakeProcessable()

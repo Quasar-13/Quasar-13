@@ -713,6 +713,17 @@
 	foodtypes = JUNKFOOD | SUGAR
 	w_class = WEIGHT_CLASS_TINY
 
+
+/obj/item/food/strawberrychocolate
+	name = "Strawberry covert in chocolate"
+	desc = "desc"
+	icon_state = "strawberrychcolate"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/coco = 2)
+	tastes = list("chocolate" = 1)
+	foodtypes = JUNKFOOD | SUGAR
+	w_class = WEIGHT_CLASS_TINY
+
+
 /obj/item/food/canned
 	name = "Canned Air"
 	desc = "If you ever wondered where air came from..."
@@ -791,7 +802,6 @@
 /obj/item/food/cornchips/MakeLeaveTrash()
 	if(trash_type)
 		AddElement(/datum/element/food_trash, trash_type, FOOD_TRASH_POPABLE)
-
 
 /obj/item/food/rationpack
 	name = "ration pack"

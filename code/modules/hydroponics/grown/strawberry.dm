@@ -19,7 +19,7 @@
 	seed = /obj/item/seeds/strawberry
 	name = "strawberry"
 	desc = "desc"
-	icon_state = "heartfruit"
+	icon_state = "strawberry"
 	bite_consumption_mod = 2
 	foodtypes = FRUIT
 	tastes = list ( "strawberry" = 1, "sweetness" = 1)
