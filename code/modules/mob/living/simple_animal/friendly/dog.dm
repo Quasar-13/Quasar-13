@@ -138,7 +138,7 @@
 /mob/living/simple_animal/pet/dog/pug/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PUG, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
-// perhaps not replace a dog with a poorly coded next time
+// perhaps not replace a dog with a poorly coded next time. This also this prevents errors from importing maps
 /mob/living/simple_animal/pet/dog/pug/mcgriff
 	name = "McGriff"
 	desc = "This dog can tell something smells around here, and that something is CRIME!"
