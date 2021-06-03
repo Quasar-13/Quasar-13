@@ -138,11 +138,11 @@
 /mob/living/simple_animal/pet/dog/pug/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PUG, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
-/* Just in case Annie gets any ideas.
+// perhaps not replace a dog with a poorly coded next time
 /mob/living/simple_animal/pet/dog/pug/mcgriff
 	name = "McGriff"
 	desc = "This dog can tell something smells around here, and that something is CRIME!"
-*/
+
 
 /mob/living/simple_animal/pet/dog/bullterrier
 	name = "\improper bull terrier"
