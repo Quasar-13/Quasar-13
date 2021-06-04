@@ -1,5 +1,5 @@
 /obj/effect/overlay/gunpoint_effect
-	icon = 'modular_skyrat/modules/gunpoint/icons/targeted.dmi'
+	icon = 'ModularBungalow/gunpoint/icons/targeted.dmi'
 	icon_state = "locking"
 	layer = FLY_LAYER
 	plane = GAME_PLANE
@@ -23,12 +23,12 @@
 
 	var/moved_counter = 0
 
-	var/static/radio_forbid = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_radio_forbid")
-	var/static/radio_allow = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_radio")
-	var/static/use_forbid = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_use_forbid")
-	var/static/use_allow = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_use")
-	var/static/move_forbid = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_move_forbid")
-	var/static/move_allow = image(icon = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_move")
+	var/static/radio_forbid = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_radio_forbid")
+	var/static/radio_allow = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_radio")
+	var/static/use_forbid = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_use_forbid")
+	var/static/use_allow = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_use")
+	var/static/move_forbid = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_move_forbid")
+	var/static/move_allow = image(icon = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi', icon_state = "radial_move")
 
 /datum/gunpoint/New(user, tar, gun)
 	source = user
@@ -91,7 +91,7 @@
 			return
 		locked = TRUE
 		log_combat(target, source, "locked onto with aiming")
-		playsound(get_turf(source), 'modular_skyrat/modules/gunpoint/sound/targeton.ogg', 50,1)
+		playsound(get_turf(source), 'ModularBungalow/gunpoint/sound/targeton.ogg', 50,1)
 		to_chat(source, "<span class='notice'><b>You lock onto [target.name]!</b></span>")
 		target.visible_message("<span class='warning'><b>[source.name] holds [target.name] at gunpoint with the [aimed_gun.name]!</b></span>", "<span class='userdanger'>[source.name] holds you at gunpoint with the [aimed_gun.name]!</span>")
 		if(target.gunpointed.len == 1)//First case
@@ -139,7 +139,7 @@
 
 /datum/gunpoint/proc/ClickDestroy()
 	if(locked)
-		playsound(get_turf(source), 'modular_skyrat/modules/gunpoint/sound/targetoff.ogg', 50,1)
+		playsound(get_turf(source), 'ModularBungalow/gunpoint/sound/targetoff.ogg', 50,1)
 	qdel(src)
 
 /datum/gunpoint/proc/SourceCC(datum/source, amount, update, ignore)
