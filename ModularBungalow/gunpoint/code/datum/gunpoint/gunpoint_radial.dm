@@ -1,7 +1,7 @@
 /datum/radial_menu/gunpoint
 	var/uniqueid
 	var/datum/callback/select_proc_callback
-	icon_path = 'modular_skyrat/modules/gunpoint/icons/radial_gunpoint.dmi'
+	icon_path = 'ModularBungalow/gunpoint/icons/radial_gunpoint.dmi'
 
 /datum/radial_menu/gunpoint/New()
 
