@@ -8,6 +8,7 @@
 	cold_protection = CHEST
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	resistance_flags = NONE
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/engineering/signal_tech/skirt
 	desc = "It's a green high jumpskirt worn by signal technicians. It is slightly warmer than most jumpskirts."
@@ -22,3 +23,4 @@
 	can_adjust = FALSE
 	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE

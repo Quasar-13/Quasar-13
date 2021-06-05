@@ -99,7 +99,8 @@
 	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/belt/utility/full/engi/PopulateContents()
-	new /obj/item/screwdriver/power(src)
+	new /obj/item/screwdriver(src)
+	new /obj/item/wrench(src)
 	new /obj/item/weldingtool/largetank(src)
 	new /obj/item/crowbar(src)
 	new /obj/item/wirecutters(src)
@@ -307,8 +308,7 @@
 		/obj/item/organ/regenerative_core,
 		/obj/item/wormhole_jaunter,
 		/obj/item/stack/marker_beacon,
-		/obj/item/key/lasso,
-		/obj/item/skeleton_key
+		/obj/item/key/lasso
 		))
 
 

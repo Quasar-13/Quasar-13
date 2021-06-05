@@ -58,3 +58,17 @@
 	name = "blood-red magboots"
 	icon_state = "syndiemag0"
 	magboot_state = "syndiemag"
+
+/obj/item/clothing/shoes/magboots/atmos
+	desc = "Atmospheric Technicians wear these magboots to stop them from getting tossed around in the wind."
+	name = "atmos magboots"
+	icon_state = "atmosmag0"
+	magboot_state = "atmosmag1"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/shoes/magboots/eva
+	desc = "EVA Magboots are for general use on and off station.."
+	name = "eva magboots"
+	icon_state = "evamag0"
+	magboot_state = "evamag1"
+	resistance_flags = FIRE_PROOF

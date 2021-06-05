@@ -14,7 +14,6 @@
 		//Debug Z Levels
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
-		#include "map_files\rbmktest\rbmktest.dmm" //remorastation from kiriestation crappily edited
 
 		//Rotation maps
 		#include "map_files\Deltastation\DeltaStation2.dmm"

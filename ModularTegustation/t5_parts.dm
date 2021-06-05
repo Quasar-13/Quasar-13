@@ -84,7 +84,7 @@
 	description = "Strange modified bluespace stock parts, with a dash of quantum physics mixed in."
 	design_ids = list("quantumscan","quantummanip","quantumbin","quantumbeaker")
 	prereq_ids = list("micro_bluespace")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 100000)
 
 /datum/techweb_node/quantum_tech_power
 	id = "quantum_tech_power"
@@ -93,7 +93,7 @@
 	description = "Quantum based power technologies, making apt use of newly discovered Bluespace Folds and Quantum Tears"
 	design_ids = list("quantumcap","quantumcell")
 	prereq_ids = list("bluespace_power")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 100000)
 
 /datum/techweb_node/quantum_tech_laser
 	id = "quantum_tech_laser"
@@ -102,7 +102,7 @@
 	description = "Improved quantum technologies that shake the foundations of the focal sciences. How far is too far?"
 	design_ids = list("quantumlaser")
 	prereq_ids = list("emp_super")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 100000)
 
 // OBJECT [XEON]
 

@@ -23,7 +23,7 @@
 
 	id = /obj/item/card/id/silver
 	ears = /obj/item/radio/headset/headset_sct
-	uniform = /obj/item/clothing/under/suit/black_really
+	uniform = /obj/item/clothing/under/misc/secparade
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 	belt = /obj/item/pda/captain
