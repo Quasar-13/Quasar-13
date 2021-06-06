@@ -131,9 +131,6 @@ SUBSYSTEM_DEF(research)
 	var/list/returned = list()
 	for(var/path in subtypesof(/datum/techweb_node))
 		var/datum/techweb_node/TN = path
-		if(TN.maptype != SSmaptype.maptype)
-			if(TN.maptype != "none")
-				continue
 		if(isnull(initial(TN.id)))
 			continue
 		TN = new path
