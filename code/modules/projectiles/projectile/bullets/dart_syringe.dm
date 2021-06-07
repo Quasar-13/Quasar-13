@@ -40,7 +40,7 @@
 
 /obj/projectile/bullet/dart/tranq/Initialize()
 	. = ..()
-	reagents.add_reagent(/datum/reagent/medicine/morphine, 7)
+	reagents.add_reagent(/datum/reagent/toxin/chloralhydrate, 4)
 
 /obj/projectile/bullet/dart/syringe
 	name = "syringe"
