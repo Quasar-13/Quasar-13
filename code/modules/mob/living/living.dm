@@ -1671,6 +1671,8 @@
 	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 
 
+
+
 /mob/living/set_stat(new_stat)
 	. = ..()
 	if(isnull(.))
@@ -1714,10 +1716,12 @@
 		if(UNCONSCIOUS)
 			if(. != HARD_CRIT)
 				become_blind(UNCONSCIOUS_TRAIT)
-			if(health <= crit_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
+			if(health <= crit_knockdown_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				ADD_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				REMOVE_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)

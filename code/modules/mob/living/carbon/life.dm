@@ -88,7 +88,12 @@
 			losebreath++  //You can't breath at all when in critical or when being choked, so you're going to miss a breath
 
 		else if(health <= crit_threshold)
-			losebreath += 0.25 //You're having trouble breathing in soft crit, so you'll miss a breath one in four times
+			losebreath += 0.50 //You're having trouble breathing in soft crit, so you'll miss a breath half the time
+			var drop_chance = 50
+			if(prob(drop_chance))
+				Knockdown(75)
+				Jitter(50)
+				to_chat(src, "<span class='notice'>You are too tired to keep going!</span>")
 
 	//Suffocate
 	if(losebreath >= 1) //You've missed a breath, take oxy damage
@@ -867,3 +872,11 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		return
 
 	heart.beating = !status
+
+/// Drop items for the 'butterfingers' trait
+/mob/living/carbon/proc/roll_random_drop(drop_chance = 20, jitter_amount = 10)
+	if(prob(drop_chance))
+		var/obj/item/I = get_active_held_item()
+		if(I && dropItemToGround(I))
+			to_chat(src, "<span class='notice'>Your hands slip and you drop what you were holding!</span>")
+			Jitter(jitter_amount)
