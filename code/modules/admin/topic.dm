@@ -402,6 +402,10 @@
 					newmob.equipOutfit(posttransformoutfit)
 			if("slime")
 				M.change_mob_type( /mob/living/simple_animal/slime , null, null, delmob )
+			if("adultslime")
+				var/mob/living/simple_animal/slime/baby_slime = M.change_mob_type( /mob/living/simple_animal/slime , null, null, delmob )
+				baby_slime.amount_grown = SLIME_EVOLUTION_THRESHOLD
+				baby_slime.Evolve()
 			if("monkey")
 				M.change_mob_type( /mob/living/carbon/human/species/monkey , null, null, delmob )
 			if("robot")
@@ -1575,7 +1579,7 @@
 			return
 		return DuplicateObject(marked_datum, perfectcopy=1, newloc=get_turf(usr))
 
-	else if(href_list["object_list"])			//this is the laggiest thing ever
+	else if(href_list["object_list"]) //this is the laggiest thing ever
 		if(!check_rights(R_SPAWN))
 			return
 
@@ -1965,28 +1969,6 @@
 		else
 			to_chat(usr, "You may only use this when the game is running.", confidential = TRUE)
 
-	else if(href_list["create_outfit_finalize"])
-		if(!check_rights(R_ADMIN))
-			return
-		create_outfit_finalize(usr,href_list)
-	else if(href_list["load_outfit"])
-		if(!check_rights(R_ADMIN))
-			return
-		load_outfit(usr)
-	else if(href_list["create_outfit_menu"])
-		if(!check_rights(R_ADMIN))
-			return
-		create_outfit(usr)
-	else if(href_list["delete_outfit"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/datum/outfit/O = locate(href_list["chosen_outfit"]) in GLOB.custom_outfits
-		delete_outfit(usr,O)
-	else if(href_list["save_outfit"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/datum/outfit/O = locate(href_list["chosen_outfit"]) in GLOB.custom_outfits
-		save_outfit(usr,O)
 	else if(href_list["set_selfdestruct_code"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -2304,9 +2286,17 @@
 			to_chat(usr, "<span class='warning'>The round must be in progress to use this!</span>")
 			return
 		var/mob/heart_recepient = locate(href_list["admincommend"])
-		if(tgui_alert(usr, "Are you sure you'd like to anonymously commend [heart_recepient.ckey]? NOTE: This is logged, please use this sparingly and only for actual kind behavior, not as a reward for your friends.", "<3?", list("Yes", "No")) == "No")
+		if(!heart_recepient?.ckey)
+			to_chat(usr, "<span class='warning'>This mob either no longer exists or no longer is being controlled by someone!</span>")
 			return
-		usr.nominate_heart(heart_recepient)
+/* instant = TRUE doesn't work, probably missing a port. Never seen this used anyways
+		switch(tgui_alert(usr, "Would you like the effects to apply immediately or at the end of the round? Applying them now will make it clear it was an admin commendation.", "<3?", list("Apply now", "Apply at round end", "Cancel")))
+			if("Apply now")
+				usr.nominate_heart(heart_recepient, instant = TRUE)
+			if("Apply at round end")
+				usr.nominate_heart(heart_recepient)
+			else
+				return*/
 
 	else if(href_list["force_war"])
 		if(!check_rights(R_ADMIN))
