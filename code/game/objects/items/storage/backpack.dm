@@ -343,12 +343,12 @@
 	desc = "A large duffel bag for holding extra things."
 	icon_state = "duffel"
 	inhand_icon_state = "duffel"
-	slowdown = 1
+	slowdown = 0.5
 
 /obj/item/storage/backpack/duffelbag/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_combined_w_class = 30
+	STR.max_combined_w_class = 36
 
 /obj/item/storage/backpack/duffelbag/cursed
 	name = "living duffel bag"
@@ -363,7 +363,7 @@
 
 /obj/item/storage/backpack/duffelbag/cursed/examine(mob/user)
 	. = ..()
-	
+
 	if(hunger > 25)
 		. += "<span class='danger'>The bag is growling for food...</span>"
 
