@@ -7,6 +7,7 @@
 #define CHANNEL_AMBIENCE 1019
 #define CHANNEL_BUZZ 1018
 #define CHANNEL_BICYCLE 1017
+#define CHANNEL_REACTOR_ALERT 1016
 
 ///Default range of a sound.
 #define SOUND_RANGE 17
@@ -23,7 +24,7 @@
 //THIS SHOULD ALWAYS BE THE LOWEST ONE!
 //KEEP IT UPDATED
 
-#define CHANNEL_HIGHEST_AVAILABLE 1015
+#define CHANNEL_HIGHEST_AVAILABLE 1014 //tegu rmbk sounds
 
 #define MAX_INSTRUMENT_CHANNELS (128 * 6)
 
@@ -92,3 +93,22 @@
 #define SOUND_AREA_LAVALAND SOUND_ENVIRONMENT_MOUNTAINS
 #define SOUND_AREA_ICEMOON SOUND_ENVIRONMENT_CAVE
 #define SOUND_AREA_WOODFLOOR SOUND_ENVIRONMENT_CITY
+
+
+///Announcer audio keys
+#define ANNOUNCER_AIMALF 			"announcer_aimalf"
+#define ANNOUNCER_ALIENS			"announcer_aliens"
+#define ANNOUNCER_ANIMES 			"announcer_animes"
+#define ANNOUNCER_GRANOMALIES 		"announcer_granomalies"
+#define ANNOUNCER_INTERCEPT 		"announcer_animes"
+#define ANNOUNCER_IONSTORM 			"announcer_ionstorm"
+#define ANNOUNCER_METEORS			"announcer_meteors"
+#define ANNOUNCER_OUTBREAK5			"announcer_outbreak5"
+#define ANNOUNCER_OUTBREAK7			"announcer_outbreak7"
+#define ANNOUNCER_POWEROFF			"announcer_poweroff"
+#define ANNOUNCER_POWERON			"announcer_poweron"
+#define ANNOUNCER_RADIATION			"announcer_radiation"
+#define ANNOUNCER_SHUTTLECALLED		"announcer_shuttlecalled"
+#define ANNOUNCER_SHUTTLEDOCK		"announcer_shuttledock"
+#define ANNOUNCER_SHUTTLERECALLED	"announcer_shuttlerecalled"
+#define ANNOUNCER_SPANOMALIES		"announcer_spanomalies"

@@ -64,7 +64,7 @@
 #include "reagent_id_typos.dm"
 #include "reagent_mod_expose.dm"
 #include "reagent_mod_procs.dm"
-#include "reagent_recipe_collisions.dm"
+//#include "reagent_recipe_collisions.dm" Removed for now
 #include "resist.dm"
 #include "say.dm"
 #include "serving_tray.dm"

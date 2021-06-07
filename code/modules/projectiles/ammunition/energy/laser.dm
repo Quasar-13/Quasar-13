@@ -45,6 +45,13 @@
 	harmful = FALSE
 	select_name = "blast"
 
+/obj/item/ammo_casing/energy/laser/scatter/rapid
+	projectile_type = /obj/projectile/beam/scatter
+	pellets = 1
+	variance = 0
+	select_name = "rapid"
+	e_cost = 25
+
 /obj/item/ammo_casing/energy/laser/heavy
 	projectile_type = /obj/projectile/beam/laser/heavylaser
 	select_name = "anti-vehicle"
@@ -81,3 +88,8 @@
 	projectile_type = /obj/projectile/beam/mindflayer
 	select_name = "MINDFUCK"
 	fire_sound = 'sound/weapons/laser.ogg'
+
+/obj/item/ammo_casing/energy/laser/minigun
+	select_name = "kill"
+	projectile_type = /obj/projectile/beam/weak/penetrator
+	variance = 0.8

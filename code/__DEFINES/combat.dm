@@ -72,7 +72,8 @@
 
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
-#define HEALTH_THRESHOLD_FULLCRIT -30
+#define HEALTH_THRESHOLD_CRIT_KNOCKDOWN -25
+#define HEALTH_THRESHOLD_FULLCRIT -40
 #define HEALTH_THRESHOLD_DEAD -100
 
 #define HEALTH_THRESHOLD_NEARDEATH -90 //Not used mechanically, but to determine if someone is so close to death they hear the other side
@@ -286,3 +287,16 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 
 /// If a carbon is thrown at a speed faster than normal and impacts something solid, they take extra damage for every extra speed up to this number (see [/mob/living/carbon/proc/throw_impact])
 #define CARBON_MAX_IMPACT_SPEED_BONUS	5
+
+//Autofire component
+/// Compatible firemode is in the gun. Wait until it's held in the user hands.
+#define AUTOFIRE_STAT_IDLE (1<<0)
+/// Gun is active and in the user hands. Wait until user does a valid click.
+#define AUTOFIRE_STAT_ALERT	(1<<1)
+/// Gun is shooting.
+#define AUTOFIRE_STAT_FIRING (1<<2)
+
+#define COMSIG_AUTOFIRE_ONMOUSEDOWN "autofire_onmousedown"
+	#define COMPONENT_AUTOFIRE_ONMOUSEDOWN_BYPASS (1<<0)
+#define COMSIG_AUTOFIRE_SHOT "autofire_shot"
+	#define COMPONENT_AUTOFIRE_SHOT_SUCCESS (1<<0)

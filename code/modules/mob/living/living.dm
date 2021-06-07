@@ -111,6 +111,22 @@
 					if(!(world.time % 5))
 						to_chat(src, "<span class='warning'>[L] is restraining [P], you cannot push past.</span>")
 					return TRUE
+				//BUNGALOW EDIT ADDITION BEGIN - GUNPOINT
+		if(L.gunpointed.len)
+			var/is_pointing = FALSE
+			for(var/datum/gunpoint/gp in L.gunpointed)
+				if(gp.source == src)
+					is_pointing = TRUE
+					break
+			if(!is_pointing)
+				if(!(world.time % 5))
+					to_chat(src, "<span class='warning'>[L] is being held at gunpoint, it's not wise to push him.</span>")
+				return TRUE
+		if(L.gunpointing)
+			if(!(world.time % 5))
+				to_chat(src, "<span class='warning'>[L] is holding someone at gunpoint, you cannot push past.</span>")
+			return TRUE
+		//BUNGALOW EDIT ADDITION END
 
 	if(moving_diagonally)//no mob swap during diagonal moves.
 		return TRUE
@@ -517,7 +533,7 @@
 /// Proc to append and redefine behavior to the change of the [/mob/living/var/resting] variable.
 /mob/living/proc/update_resting()
 	update_rest_hud_icon()
-
+	SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_RESTING, resting) //BUNGALOW EDIT ADDITION - GUNPOINT
 
 /mob/living/proc/get_up(instant = FALSE)
 	set waitfor = FALSE
@@ -1655,6 +1671,8 @@
 	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 
 
+
+
 /mob/living/set_stat(new_stat)
 	. = ..()
 	if(isnull(.))
@@ -1698,10 +1716,12 @@
 		if(UNCONSCIOUS)
 			if(. != HARD_CRIT)
 				become_blind(UNCONSCIOUS_TRAIT)
-			if(health <= crit_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
+			if(health <= crit_knockdown_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				ADD_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				REMOVE_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -1801,6 +1821,7 @@
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
+
 
 
 ///Proc to modify the value of num_hands and hook behavior associated to this event.

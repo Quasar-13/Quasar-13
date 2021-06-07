@@ -1,5 +1,3 @@
-#define isbeefman(A) (is_species(A,/datum/species/beefman))
-
 /datum/species
 	var/bruising_desc = "bruising"
 	var/burns_desc = "burns"
@@ -12,32 +10,51 @@
 	say_mod = "gurgles"
 	sexes = FALSE
 	default_color = "e73f4e"
-	species_traits = list(NOEYESPRITES, NO_UNDERWEAR, DYNCOLORS, AGENDER, EYECOLOR, HAS_FLESH, HAS_BONE)
+	species_traits = list(
+		NOEYESPRITES,
+		NO_UNDERWEAR,
+		DYNCOLORS,
+		AGENDER,
+		EYECOLOR,
+		HAS_FLESH,
+		HAS_BONE,
+		)
 	mutant_bodyparts = list("beefmouth", "beefeyes")
-	inherent_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_RESISTCOLD, TRAIT_EASYDISMEMBER, TRAIT_COLDBLOODED, TRAIT_SLEEPIMMUNE )
-	mutant_bodyparts = list("beefcolor" = "e73f4e","beefmouth" = "Smile1", "beefeyes" = "Olives")
+	inherent_traits = list(
+		TRAIT_ADVANCEDTOOLUSER,
+		TRAIT_RESISTCOLD,
+		TRAIT_EASYDISMEMBER,
+		TRAIT_COLDBLOODED,
+		TRAIT_SLEEPIMMUNE,
+		)
+	mutant_bodyparts = list("beefcolor" = "Medium Rare", "beefmouth" = "Smile1", "beefeyes" = "Olives")
 	offset_features = list(OFFSET_UNIFORM = list(0,2), OFFSET_ID = list(0,2), OFFSET_GLOVES = list(0,-4), OFFSET_GLASSES = list(0,3), OFFSET_EARS = list(0,3), OFFSET_SHOES = list(0,0), \
 						   OFFSET_S_STORE = list(0,2), OFFSET_FACEMASK = list(0,3), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,3), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,2), \
 						   OFFSET_SUIT = list(0,2), OFFSET_NECK = list(0,3))
 
-	skinned_type = /obj/item/food/meatball // NO SKIN //  /obj/item/stack/sheet/animalhide/human
-	meat = /obj/item/food/meat/slab //What the species drops on gibbing
+	skinned_type = /obj/item/food/meatball
+	meat = /obj/item/food/meat/slab
 	toxic_food = DAIRY | PINEAPPLE //NONE
 	disliked_food = VEGETABLES | FRUIT // | FRIED// GROSS | RAW
 	liked_food = RAW | MEAT // JUNKFOOD | FRIED
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	attack_verb = "meat"
-	payday_modifier = 0.75 //-- "Equality"
-	speedmod = -0.2	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
-	armor = -2		// overall defense for the race... or less defense, if it's negative.
-	punchdamagelow = 1       //lowest possible punch damage. if this is set to 0, punches will always miss
-	punchdamagehigh = 5 // 10      //highest possible punch damage
-	siemens_coeff = 0.7 // Due to lack of density.   //base electrocution coefficient
+	payday_modifier = 0.75
+	/// This affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
+	speedmod = -0.2
+	/// Overall defense for the race... or less defense, if it's negative.
+	armor = -2
+	/// Lowest possible punch damage. if this is set to 0, punches will always miss
+	punchdamagelow = 1
+	/// Highest possible punch damage
+	punchdamagehigh = 5
+	/// Base electrocution coefficient
+	siemens_coeff = 0.7 // Due to lack of density.
 	deathsound = 'ModularTegustation/tegu_beefmen/sounds/beef_die.ogg'
 	attack_sound = 'ModularTegustation/tegu_beefmen/sounds/beef_hit.ogg'
-	special_step_sounds = list('ModularTegustation/tegu_beefmen/sounds/footstep_splat1.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat2.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat3.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat4.ogg')//Sounds to override barefeet walkng
-	grab_sound = 'ModularTegustation/tegu_beefmen/sounds/beef_grab.ogg'//Special sound for grabbing
-	species_language_holder = /datum/language_holder/russian //--Speak Russian
+	special_step_sounds = list('ModularTegustation/tegu_beefmen/sounds/footstep_splat1.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat2.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat3.ogg','ModularTegustation/tegu_beefmen/sounds/footstep_splat4.ogg')
+	grab_sound = 'ModularTegustation/tegu_beefmen/sounds/beef_grab.ogg'
+	species_language_holder = /datum/language_holder/russian
 	bodytemp_normal = T20C
 
 	var/dehydrate = 0
@@ -197,6 +214,9 @@
 		// Captain
 		if("Captain")
 			newSash = new /obj/item/clothing/under/bodysash/captain()
+		// Secretary - Placeholder until actual ones are added
+		if("Secretary")
+			newSash = new /obj/item/clothing/under/bodysash/lawyer()
 		// Security
 		if("Head of Security")
 			newSash = new /obj/item/clothing/under/bodysash/hos()
@@ -248,14 +268,10 @@
 			newSash = new /obj/item/clothing/under/bodysash/cargo()
 		if("Shaft Miner")
 			newSash = new /obj/item/clothing/under/bodysash/miner()
-
-		// Clown
 		if("Clown")
 			newSash = new /obj/item/clothing/under/bodysash/clown()
-		// Mime
 		if("Mime")
 			newSash = new /obj/item/clothing/under/bodysash/mime()
-
 		if("Prisoner")
 			newSash = new /obj/item/clothing/under/bodysash/prisoner()
 		if("Cook")
@@ -279,11 +295,10 @@
 		else
 			newSash = new /obj/item/clothing/under/bodysash/civilian()
 
-	// Destroy Original Uniform (there probably isn't one though)
-
-	if (H.w_uniform)
+	/// Destroy Original Uniform (there probably isn't one though)
+	if(H.w_uniform)
 		qdel(H.w_uniform)
-	// Equip New
+	/// Equip New
 	H.equip_to_slot_or_del(newSash, ITEM_SLOT_ICLOTHING, TRUE) // TRUE is whether or not this is "INITIAL", as in startup
 	return ..()
 

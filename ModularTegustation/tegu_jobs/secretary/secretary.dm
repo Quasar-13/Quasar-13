@@ -11,8 +11,8 @@
 
 	outfit = /datum/outfit/job/secretary
 
-	access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH)
-	minimal_access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH)
+	access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT)
+	minimal_access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECRETARY
@@ -23,7 +23,7 @@
 
 	id = /obj/item/card/id/silver
 	ears = /obj/item/radio/headset/headset_sct
-	uniform = /obj/item/clothing/under/suit/black_really
+	uniform = /obj/item/clothing/under/misc/secparade
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 	belt = /obj/item/pda/captain
