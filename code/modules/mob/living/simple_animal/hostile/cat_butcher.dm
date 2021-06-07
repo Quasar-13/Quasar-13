@@ -41,7 +41,7 @@
 	if(iscarbon(target))
 		var/mob/living/carbon/human/C = target
 		if(C.getorgan(/obj/item/organ/ears/cat) && C.getorgan(/obj/item/organ/tail/cat) && C.has_trauma_type(/datum/brain_trauma/severe/pacifism))//he wont attack his creations
-			if(C.stat >= UNCONSCIOUS && (!HAS_TRAIT(C, TRAIT_NOMETABOLISM) || !istype(C.dna.species, /datum/species/ipc)))//unless they need healing
+			if(C.stat >= UNCONSCIOUS && (!HAS_TRAIT(C, TRAIT_NOMETABOLISM)))//unless they need healing
 				return ..()
 			else
 				return FALSE
@@ -84,11 +84,11 @@
 			L.adjustOxyLoss(-50)// do CPR first
 			if(L.blood_volume <= 500) //bandage them up and give em some blood if they're bleeding
 				L.blood_volume += 30
-				L.suppress_bloodloss(1800)
+				L.restore_blood()
 			if(L.getBruteLoss() >= 50)// first, did we beat them into crit? if so, heal that
 				var/healing = min(L.getBruteLoss(), 120)
 				L.adjustBruteLoss(-healing)
-				L.suppress_bloodloss(1800)//bandage their ass
+				L.restore_blood()//bandage their ass
 				return
 			else if(L.getFireLoss() >= 50) // are they still down from other damage? fix it, but not as fast as the burns
 				var/healing = min(L.getFireLoss(), 50)
