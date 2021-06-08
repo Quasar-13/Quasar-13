@@ -41,7 +41,7 @@
 	senior_title = "Jannie"
 
 /datum/job/lawyer
-	alt_titles = list("Attorney")
+	alt_titles = list("Attorney", "Nanotrasen Censor", "Human Resources Representative")
 	senior_title = "Ace Attorney"
 
 /datum/job/chaplain
@@ -93,15 +93,15 @@
 //Security
 /datum/job/warden
 	alt_titles = list("Brig Chief", "Sergant")
-	senior_title = "Sergant Major"
+	senior_title = "Sergeant Major"
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergant"
+	senior_title = "Staff Sergeant"
 
 /datum/job/officer
 	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
-	senior_title = "Blueshield Officer"
+	senior_title = "Man-at-Arms"
 
 //Supply
 /datum/job/mining
@@ -127,7 +127,7 @@
 
 /datum/job/rd
 	alt_titles = list("Research Supervisor", "Head of Research", "Chief Researcher")
-	senior_title = "Professor"
+	senior_title = "Chief Science Officer"
 
 /datum/job/chief_engineer
 	alt_titles = list("Chief Atmospherics Technician", "Chief Electrical Technician")
@@ -142,6 +142,6 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer", "Centcom Representative")
-	senior_title = "Commodore"
+	alt_titles = list("Commanding Officer")
+	senior_title = list("Commodore", "Marshal")
 

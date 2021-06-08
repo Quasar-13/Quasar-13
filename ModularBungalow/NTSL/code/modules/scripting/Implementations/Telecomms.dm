@@ -2,7 +2,7 @@
 
 
 /* --- Traffic Control Scripting Language --- */
-	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4
+	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu
 
 #define NTSL_LANG_APHASIA 1
 #define NTSL_LANG_BEACHBUM 2
@@ -27,7 +27,6 @@
 #define NTSL_LANG_UNCOMMON 21
 #define NTSL_LANG_VOLTAIC 22
 #define NTSL_LANG_XENOCOMMON 23
-// SKYRAT MODULAR LANGUAGES
 #define NTSL_LANG_DWARF 24
 #define NTSL_LANG_GUTTER 25
 #define NTSL_LANG_RUSSIAN 26

@@ -94,9 +94,37 @@
 	head = null
 
 //Captain
+
+/datum/outfit/job/captain/commandingofficer
+	name = "Captain (Commanding Officer)"
+	head = /obj/item/clothing/head/beret/captain
+	uniform = /obj/item/clothing/under/misc/coparade
+	suit = /obj/item/clothing/suit/armor/captain/co
+
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
 	head = /obj/item/clothing/head/centhat
-	uniform = /obj/item/clothing/under/rank/centcom/commander
+	uniform = /obj/item/clothing/under/misc/comparade
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
+
+/datum/outfit/job/captain/marshal
+	name = "Captain (Marshal)"
+	head = null
+	glasses = /obj/item/clothing/glasses/eyepatch
+	uniform = /obj/item/clothing/under/misc/marparade
+	suit = /obj/item/clothing/suit/armor/captain/marshal
+
+//They get a cool ID so this manages that
+/datum/outfit/job/captain/commodore/post_equip(mob/living/carbon/human/H)
+	var/obj/item/card/id/W = H.wear_id
+	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
+	..()
+
+/datum/outfit/job/captain/marshal/post_equip(mob/living/carbon/human/H)
+	var/obj/item/card/id/W = H.wear_id
+	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
+	..()
+
+
+
 

@@ -39,6 +39,9 @@
 			//Breathing, if applicable
 			handle_breathing(times_fired)
 
+		if(!client && key && stat != DEAD)//if you're disconnected, you're going to sleep
+			SetSleeping(40)
+
 		handle_diseases()// DEAD check is in the proc itself; we want it to spread even if the mob is dead, but to handle its disease-y properties only if you're not.
 
 		handle_wounds()
