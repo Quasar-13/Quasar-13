@@ -7,11 +7,6 @@
 #define STICKYBAN_MAX_ADMIN_MATCHES 1
 
 /world/IsBanned(key, address, computer_id, type, real_bans_only=FALSE)
-	var/list/underaged_kiddos = list(
-		"bootlegbow", "johnwillard", "fernandoj8",
-		)
-	if(key in underaged_kiddos)
-		return TRUE
 	debug_world_log("isbanned(): '[args.Join("', '")]'")
 	if (!key || (!real_bans_only && (!address || !computer_id)))
 		if(real_bans_only)
@@ -21,6 +16,13 @@
 
 	if (type == "world")
 		return ..() //shunt world topic banchecks to purely to byond's internal ban system
+
+	var/list/underaged_kiddos = list(
+		"bootlegbow", "johnwillard", "fernandoj8",
+		)
+	/// Placed here to ensure they have a Ckey first!
+	if(key in underaged_kiddos)
+		return TRUE
 
 	var/admin = FALSE
 	var/ckey = ckey(key)
