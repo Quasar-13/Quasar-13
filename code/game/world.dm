@@ -51,6 +51,7 @@ GLOBAL_VAR(restart_counter)
 
 	load_admins()
 	load_mentors() // Tegustation Mentorhelp edit: Load the mentors!
+	load_minors() // Load the list of smol beans. We can't allow kids to play that horrifying mess of a Space Station!
 
 	//SetupLogs depends on the RoundID, so lets check
 	//DB schema and set RoundID if we can
