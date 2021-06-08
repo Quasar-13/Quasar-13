@@ -7,7 +7,10 @@
 #define STICKYBAN_MAX_ADMIN_MATCHES 1
 
 /world/IsBanned(key, address, computer_id, type, real_bans_only=FALSE)
-	if(key == "bootlegbow" || key == "johnwillard" || key == "fernandoj8")
+	var/list/underaged_kiddos = list(
+		"bootlegbow", "johnwillard", "fernandoj8",
+		)
+	if(key in underaged_kiddos)
 		return TRUE
 	debug_world_log("isbanned(): '[args.Join("', '")]'")
 	if (!key || (!real_bans_only && (!address || !computer_id)))
