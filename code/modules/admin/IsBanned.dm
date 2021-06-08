@@ -17,12 +17,9 @@
 	if (type == "world")
 		return ..() //shunt world topic banchecks to purely to byond's internal ban system
 
-	var/list/underaged_kiddos = list(
-		"bootlegbow", "johnwillard", "fernandoj8",
-		)
-	/// Placed here to ensure they have a Ckey first!
-	if(key in underaged_kiddos)
-		return TRUE
+	/// Checking if the key is in the "blacklist"
+	if(key in GLOB.banned_kids)
+		return list("reason"="smol kid","desc"="You are a small bean. Come back when you are an adult!")
 
 	var/admin = FALSE
 	var/ckey = ckey(key)
