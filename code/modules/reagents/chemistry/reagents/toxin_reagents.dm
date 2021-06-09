@@ -2,8 +2,8 @@
 //////////////////////////Poison stuff (Toxins & Acids)///////////////////////
 
 /datum/reagent/toxin
-	name = "Toxin"
-	description = "A toxic chemical."
+	name = "Space Toxin"
+	description = "A spooky poisonous chemical."
 	color = "#CF3600" // rgb: 207, 54, 0
 	taste_description = "bitterness"
 	taste_mult = 1.2

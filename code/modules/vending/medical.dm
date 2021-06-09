@@ -77,3 +77,7 @@
 /obj/item/vending_refill/drugs
 	machine_name = "NanoDrug Plus"
 	icon_state = "refill_medical"
+
+
+
+
