@@ -16,19 +16,18 @@ GLOBAL_LIST_EMPTY(apostles)
 	friendly_verb_continuous = "stares down"
 	friendly_verb_simple = "stare down"
 	speak_emote = list("proclaims")
-	armour_penetration = 0
+	armour_penetration = 20
 	melee_damage_lower = 24
 	melee_damage_upper = 24
-	speed = 3
-	move_to_delay = 8
+	speed = 0
 	ranged = TRUE
 	pixel_x = -16
 	base_pixel_x = -16
 	pixel_y = -16
 	base_pixel_y = -16
 	del_on_death = TRUE
-	//crusher_loot = list()
 	loot = list(/obj/item/dark_bible) // Allows 6 people to use apostle weaponry.
+	crusher_loot = list(/obj/item/dark_bible, /obj/item/nullrod/scythe/apostle/guardian/light) // You managed to kill it with a crusher? Have this epic thing.
 	gps_name = "Pure Signal"
 	deathmessage = "evaporates in a moment, leaving heavenly light and feathers behind."
 	deathsound = 'ModularTegustation/Tegusounds/apostle/mob/apostle_death.ogg'
@@ -48,8 +47,8 @@ GLOBAL_LIST_EMPTY(apostles)
 	var/scream_power = 25
 	var/apostle_cooldown = 20 SECONDS //Cooldown for conversion and revival of non-apostles.
 	var/apostle_cooldown_base = 20 SECONDS
-	var/blink_cooldown = 7 SECONDS
-	var/blink_cooldown_base = 7 SECONDS
+	var/blink_cooldown = 6 SECONDS
+	var/blink_cooldown_base = 6 SECONDS
 	var/apostle_num = 1 //Number of apostles. Used for revival and finale.
 	var/apostle_line
 	var/apostle_prev //Used for previous apostle's name, to reference in next line.
@@ -60,6 +59,11 @@ GLOBAL_LIST_EMPTY(apostles)
 
 /mob/living/simple_animal/hostile/megafauna/apostle/ex_act(severity, target)
 	return //Resistant to explosions
+
+/mob/living/simple_animal/hostile/megafauna/apostle/bullet_act(obj/projectile/P)
+	if(istype(P, /obj/projectile/destabilizer)) // I hate you, miners.
+		visible_message("<span class='warning'>[src] absorbs [P]!</span>")
+		return BULLET_ACT_BLOCK
 
 /datum/action/small_sprite/megafauna/tegu
 	small_icon = 'ModularTegustation/Teguicons/megafauna.dmi'
@@ -231,8 +235,8 @@ GLOBAL_LIST_EMPTY(apostles)
 					armour_penetration += 5
 					melee_damage_lower += 2
 					melee_damage_upper += 2
-					maxHealth += 300
-					health += 300
+					maxHealth += 100
+					health = maxHealth
 					holy_revival_damage += 2 // More damage and healing from AOE spell.
 					scream_power += 2 // Deafen them all. Destroy their ears.
 					light_range += 1 // More light, because why not.
@@ -243,7 +247,6 @@ GLOBAL_LIST_EMPTY(apostles)
 					to_chat(H, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
 			else
 				if(H.stat == DEAD && H.mind)
-					H.set_species(/datum/species/human, 1)
 					H.regenerate_limbs()
 					H.regenerate_organs()
 					H.dna.species.GiveSpeciesFlight(H)

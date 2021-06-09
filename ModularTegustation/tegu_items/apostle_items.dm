@@ -134,17 +134,18 @@
 	wound_bonus = 10
 	bare_wound_bonus = 20
 	sharpness = SHARP_EDGED
+	var/faction_needed = "apostle"
 
 /obj/item/nullrod/scythe/apostle/attack_hand(mob/living/user)
 	. = ..()
-	if(!("apostle" in user.faction))
+	if(!(faction_needed in user.faction))
 		user.Paralyze(50)
 		user.dropItemToGround(src, TRUE)
 		user.visible_message("<span class='warning'>A powerful force shoves [user] away from [src]!</span>", \
 		"<span class='danger'>You shall not attempt to harm us</span>")
 
 /obj/item/nullrod/scythe/apostle/attack(mob/living/target, mob/living/carbon/human/user)
-	if("apostle" in target.faction)
+	if(faction_needed in target.faction)
 		to_chat(user, "<span class='userdanger'>Careful with the holy weapon...</span>")
 		return
 	if(target.health <= HEALTH_THRESHOLD_DEAD || target.stat == DEAD)
@@ -189,11 +190,35 @@
 	for(var/turf/open/K in target_turfs)
 		new /obj/effect/temp_visual/kinetic_blast(K)
 		for(var/mob/living/L in K.contents)
-			if(!("apostle" in L.faction) && !(L.health <= -200)) // Don't attack super-dead people. Preventing le funny dilation spikes.
+			if(!(faction_needed in L.faction) && !(L.health <= -200)) // Don't attack super-dead people. Preventing le funny dilation spikes.
 				shake_camera(L, 2, 1)
 				melee_attack_chain(user, L)
 	recharge_time = (world.time + recharge_base)
 	force = init_force
+
+/obj/item/nullrod/scythe/apostle/guardian/light // An overpowered piece of shit, granted to whoever defeats the apostle with a crusher.
+	name = "heavenly scythe"
+	desc = "A particle of light, obtained from the heart of the evil."
+	icon_state = "ap_scythe_light"
+	inhand_icon_state = "ap_scythe_light"
+	force = 45
+	throwforce = 24
+	armour_penetration = 60
+	block_chance = 40
+	recharge_base = 5 SECONDS
+	spell_radius = 2
+	spin_force = 90
+	faction_needed = "hero" // Yep. A hero.
+	var/bound = FALSE // If it's true - nobody can gain the faction required to use it.
+
+/obj/item/nullrod/scythe/apostle/guardian/light/attack_hand(mob/living/user)
+	if(!bound && !(faction_needed in user.faction))
+		user.faction |= faction_needed
+		to_chat(user, "<span class='userdanger'>[user.real_name]. You deserve it.</span>")
+		SEND_SOUND(user, 'ModularTegustation/Tegusounds/apostle/mob/apostle_bell.ogg')
+		flash_color(user, flash_color = "#FF4400", flash_time = 100)
+		bound = TRUE
+	. = ..()
 
 /obj/item/gun/magic/staff/apostle
 	name = "staff of light"
