@@ -74,6 +74,9 @@
 	/// Job's station type. Will affect what kinds of station the job spawns on. Spawns on all types if set to none.
 	var/maptype = "none"
 
+	///Job's faction, for maps like the starfury
+	var/faction = "nanotrasen"
+
 /datum/job/New()
 	. = ..()
 	var/list/jobs_changes = GetMapChanges()

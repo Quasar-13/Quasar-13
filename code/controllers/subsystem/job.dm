@@ -63,6 +63,9 @@ SUBSYSTEM_DEF(job)
 		if(job.maptype != SSmaptype.maptype)
 			if(job.maptype != "none")
 				continue
+		if(job.faction != SSmaptype.faction)
+			if(job.faction != "none")
+				continue
 		occupations += job
 		name_occupations[job.title] = job
 		type_occupations[J] = job
