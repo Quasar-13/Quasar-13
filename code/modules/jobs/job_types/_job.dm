@@ -75,7 +75,7 @@
 	var/maptype = "none"
 
 	///Job's faction, for maps like the starfury
-	var/faction = "nanotrasen"
+	var/corp = "nanotrasen"
 
 /datum/job/New()
 	. = ..()
