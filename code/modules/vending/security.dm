@@ -49,6 +49,7 @@
 	icon_deny = "wallcom"
 	light_mask = "wallmed-light-mask"
 	req_access = list(ACCESS_HEADS)
+	density = FALSE
 	products = list(/obj/item/pet_carrier = 7,
 					/obj/item/storage/photo_album = 7,
 					/obj/item/clothing/shoes/sneakers/brown/digitigrade = 7,
