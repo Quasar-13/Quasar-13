@@ -1,4 +1,6 @@
 /datum/job/tegu/commandant
+//The Commander of the Vessel.
+
 	title = "Commandant"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("Syndicate High Command")
@@ -25,11 +27,11 @@
 
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 
-/datum/job/captain/get_access()
+/datum/job/commandant/get_access()
 	return get_all_accesses()
 
 
-/datum/job/captain/announce(mob/living/carbon/human/H)
+/datum/job/commandant/announce(mob/living/carbon/human/H)
 	..()
 //	var/displayed_rank = H.mind.assigned_role // Tegu Edit: Alt Titles
 //	if(H.client && H.client.prefs && H.client.prefs.alt_titles_preferences[H.mind.assigned_role])
