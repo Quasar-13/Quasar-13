@@ -86,6 +86,9 @@
 			continue// by using someone else's crate
 		if(P.contraband && !contraband) // will you show me?
 			continue // i'd be right happy to
+		if(P.maptype != SSmaptype.maptype)
+			if(P.maptype != "none")
+				continue
 		meme_pack_data[P.group]["packs"] += list(list(
 			"name" = P.name,
 			"cost" = P.get_cost(),

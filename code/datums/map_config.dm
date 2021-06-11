@@ -137,6 +137,12 @@
 	if ("minetype" in json)
 		minetype = json["minetype"]
 
+	if("maptype" in json)
+		SSmaptype.maptype = json["maptype"]
+
+	if("faction" in json)
+		SSmaptype.faction = json["faction"]
+
 	allow_custom_shuttles = json["allow_custom_shuttles"] != FALSE
 
 	if ("job_changes" in json)
