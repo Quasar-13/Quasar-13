@@ -38,3 +38,4 @@
 /obj/effect/landmark/start/deckhand
 	name = "Deckhand"
 	icon_state = "Deckhand"
+	
