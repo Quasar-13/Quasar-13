@@ -1,7 +1,7 @@
 /datum/job/tegu/militarywarden
 	title = "Military Warden"
 	department_head = list("Commandant")
-	faction = "Syndicate"
+	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"

@@ -29,6 +29,7 @@
 		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\PhoboStation\PhoboStation.dmm"
+		#include "map_files\AndromedaStation\Andromeda.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

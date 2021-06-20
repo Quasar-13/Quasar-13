@@ -1,7 +1,7 @@
 /datum/job/tegu/ordinance_technician
 	title = "Ordinance Technician"
 	department_head = list("Logistics Officer")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the logistics officer"
