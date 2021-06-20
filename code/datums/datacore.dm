@@ -158,7 +158,14 @@
 		"Science" = GLOB.science_positions,
 		"Supply" = GLOB.supply_positions,
 		"Service" = GLOB.service_positions,
-		"Silicon" = GLOB.nonhuman_positions
+		"Silicon" = GLOB.nonhuman_positions,
+
+		//Syndiestation
+		"Syndicate Command" = GLOB.syncommand_positions,
+		"Triage" = GLOB.triage_positions,
+		"Operations" = GLOB.operations_positions,
+		"Logistics" = GLOB.logistics_positions,
+		"Police" = GLOB.police_positions
 	)
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

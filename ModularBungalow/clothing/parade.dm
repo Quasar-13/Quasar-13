@@ -16,10 +16,10 @@
 /obj/item/clothing/under/misc/qmparade
 	desc = "A black suit with bronze trim and a medal attached. The gaudy look must belong to the QM"
 	name = "qm's parade uniform"
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'
 	icon_state = "spaceship_qm"
 	inhand_icon_state = "black_suit"
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 

@@ -65,9 +65,9 @@ SUBSYSTEM_DEF(job)
 			if(job.maptype != "none")
 				continue
 
-/*		if(SSmaptype.maptype == "syndicate")	Shit's fucked
+		if(SSmaptype.maptype == "syndicate")	//Shit's fucked
 			if(job.maptype == "none")
-				continue	*/
+				continue
 
 
 		occupations += job

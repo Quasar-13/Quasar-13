@@ -67,7 +67,39 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	"Cyborg",
 	ROLE_PAI))
 
-// job categories for rendering the late join menu
+
+// This is not working. when I can make new departments, I will.
+GLOBAL_LIST_INIT(syncommand_positions, list(
+	"Commandant",
+	"First Officer",
+	"Medical Officer",
+	"Military Warden",
+	"Logistics Officer",
+	"Wing Commander"))
+
+GLOBAL_LIST_INIT(triage_positions, list(
+	"Medical Officer",
+	"Triage Technician",
+	"Triage Officer"))
+
+GLOBAL_LIST_INIT(operations_positions, list(
+	"Wing Commander",
+	"Pilot Officer",
+	"Staff Officer",
+	"Marine"))
+
+GLOBAL_LIST_INIT(logistics_positions, list(
+	"Logistics Officer",
+	"Requisitions Chief",
+	"Deckhand",
+	"Ordinance Technician",
+	"Mechanic"))
+
+GLOBAL_LIST_INIT(police_positions, list(
+	"Military Warden",
+	"Military Police"))
+
+
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_COMMAND = list("jobs" = command_positions, "color" = "#ccccff"),
 	EXP_TYPE_ENGINEERING = list("jobs" = engineering_positions, "color" = "#ffeeaa"),
@@ -76,7 +108,14 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_SERVICE = list("jobs" = service_positions, "color" = "#bbe291"),
 	EXP_TYPE_MEDICAL = list("jobs" = medical_positions, "color" = "#ffddf0"),
 	EXP_TYPE_SCIENCE = list("jobs" = science_positions, "color" = "#ffddff"),
-	EXP_TYPE_SECURITY = list("jobs" = security_positions, "color" = "#ffdddd")
+	EXP_TYPE_SECURITY = list("jobs" = security_positions, "color" = "#ffdddd"),
+
+//Syndiestation
+	EXP_TYPE_SYNDICATE = list("jobs" = syncommand_positions, "color" = "#ffddff"),
+	EXP_TYPE_OPERATIONS = list("jobs" = operations_positions, "color" = "#ffddff"),
+	EXP_TYPE_TRIAGE = list("jobs" = triage_positions, "color" = "#ffddff"),
+	EXP_TYPE_LOGISTICS = list("jobs" = logistics_positions, "color" = "#ffddff"),
+	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#ffddff")
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

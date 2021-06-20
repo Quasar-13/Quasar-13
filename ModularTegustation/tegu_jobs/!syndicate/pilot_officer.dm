@@ -1,33 +1,31 @@
-/datum/job/tegu/marine
-	title = "Marine"
-	department_head = list("Wing Commander", "Staff Officer")
+/datum/job/tegu/pilot_officer
+	title = "Pilot Officer"
+	department_head = list("Wing Commander")
 	faction = "Station"
-	total_positions = 28
-	spawn_positions = 18
-	supervisors = "the wing commander and staff officer"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the wing commander"
 	selection_color = "#884488"
 	exp_requirements = 60
-	exp_type = EXP_TYPE_OPERATIONS
+	exp_type = EXP_TYPE_CREW
 	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/marine
+	outfit = /datum/outfit/job/pilot_officer
 
 	access = list(ACCESS_ENGINE)
 	minimal_access = list(ACCESS_ENGINE)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
-
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
-
-	display_order = JOB_DISPLAY_ORDER_GENETICIST
+	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	bounty_types = CIV_JOB_ENG
 
-/datum/outfit/job/marine
-	name = "Marine"
-	jobtype = /datum/job/tegu/marine
+/datum/outfit/job/pilot_officer
+	name = "Pilot Officer"
+	jobtype = /datum/job/tegu/pilot_officer
 
 	id = /obj/item/card/id/black
-	belt = /obj/item/storage/belt/utility/full
+	belt = /obj/item/storage/belt/utility/syndicate/sbc
 	l_pocket = /obj/item/pda/engineering
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
@@ -45,6 +43,6 @@
 
 
 //Spawn Point
-/obj/effect/landmark/start/marine
-	name = "Marine"
-	icon_state = "Marine"
+/obj/effect/landmark/start/pilot_officer
+	name = "Pilot Officer"
+	icon_state = "pilot_officer"
