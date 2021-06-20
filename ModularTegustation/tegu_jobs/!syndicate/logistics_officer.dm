@@ -2,8 +2,8 @@
 	title = "Logistics Officer"
 	department_head = list("First Officer", "Commandant")
 	faction = "Station"
-	total_positions = 28
-	spawn_positions = 18
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the wing commander and staff officer"
 	selection_color = "#BBBB11"
 	exp_requirements = 60
@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/logistics_officer
 
-	access = list(ACCESS_ENGINE)
-	minimal_access = list(ACCESS_ENGINE)
+	access = list(ACCESS_SYNDICATE)
+	minimal_access = list(ACCESS_SYNDICATE)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
 

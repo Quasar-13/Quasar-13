@@ -2,8 +2,8 @@
 	title = "Deckhand"
 	department_head = list("Logistics Officer")
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the commandant"
 	selection_color = "#DDDD33"
 	exp_requirements = 60
@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/deckhand
 
-	access = list(ACCESS_ENGINE)
-	minimal_access = list(ACCESS_ENGINE)
+	access = list(ACCESS_SYNDICATE)
+	minimal_access = list(ACCESS_SYNDICATE)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)

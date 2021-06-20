@@ -25,6 +25,12 @@
 	dog_fashion = null
 
 
+/obj/item/clothing/head/beret/so
+	name = "staff officer's beret"
+	desc = "A purple beret for those in charge of the marines."
+	icon_state = "beret_rd"
+
+
 /obj/item/clothing/glasses/hud/health/syndicate
 	name = "triage scanner HUD"
 	desc = "A heads-up display that scans the humanoids in view and provides accurate data about their health status."
