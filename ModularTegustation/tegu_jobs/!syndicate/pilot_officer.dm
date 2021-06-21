@@ -25,11 +25,11 @@
 	jobtype = /datum/job/tegu/pilot_officer
 
 	id = /obj/item/card/id/black
-	glasses = /obj/item/clothing/glasses/aviators
+	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/blueshield
+	suit = /obj/item/clothing/suit/jacket
 	belt = null
 
 
