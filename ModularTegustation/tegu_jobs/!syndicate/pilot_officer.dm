@@ -25,12 +25,12 @@
 	jobtype = /datum/job/tegu/pilot_officer
 
 	id = /obj/item/card/id/black
+	glasses = /obj/item/clothing/glasses/aviators
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/space/syndicate/blue
+	suit = /obj/item/clothing/suit/armor/blueshield
 	belt = null
-	backpack_contents = list(/obj/item/clothing/head/helmet/space/syndicate/blue)
 
 
 

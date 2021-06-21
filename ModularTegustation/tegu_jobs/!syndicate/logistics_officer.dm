@@ -14,7 +14,7 @@
 
 	access = list(ACCESS_SYNDICATE)
 	minimal_access = list(ACCESS_SYNDICATE)
-	paycheck = PAYCHECK_MEDIUM
+	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)

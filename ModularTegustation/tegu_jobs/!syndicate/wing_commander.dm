@@ -14,7 +14,7 @@
 
 	access = list(ACCESS_SYNDICATE)
 	minimal_access = list(ACCESS_SYNDICATE)
-	paycheck = PAYCHECK_MEDIUM
+	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
 	display_order = JOB_DISPLAY_ORDER_RESEARCH_DIRECTOR
@@ -26,9 +26,10 @@
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader
+	glasses = /obj/item/clothing/glasses/sunglasses
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/space/syndicate/blue
+	suit = /obj/item/clothing/suit/armor/blueshield
 	belt = null
 	backpack_contents = list(/obj/item/clothing/head/helmet/space/syndicate/blue)
 
