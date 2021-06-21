@@ -11,6 +11,10 @@
 		#include "map_files\Mining\Jungle.dmm"
 		#include "map_files\Mining\Tidalmoon.dmm"
 
+		//SMC Missions
+		#include "map_files\Mining\mission_phobos.dmm"
+		#include "map_files\Mining\mission_ice.dmm"
+
 		//Debug Z Levels
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"

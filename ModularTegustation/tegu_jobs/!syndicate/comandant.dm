@@ -9,6 +9,7 @@
 	exp_requirements = 60
 	exp_type = EXP_TYPE_SYNDICATE
 	maptype = "syndicate"
+	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/commandant
 

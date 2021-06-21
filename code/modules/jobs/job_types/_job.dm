@@ -77,6 +77,9 @@
 	///Job's faction, for maps like the starfury
 	var/corp = "nanotrasen"
 
+	//To help with Whitelisting shit
+	var/trusted_only = FALSE
+
 /datum/job/New()
 	. = ..()
 	var/list/jobs_changes = GetMapChanges()

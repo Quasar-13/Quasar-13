@@ -141,6 +141,8 @@ SUBSYSTEM_DEF(job)
 		if(player.client.prefs.job_preferences[job.title] == level)
 			JobDebug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
+		if(job.trusted_only && !is_trusted_player(player.client))
+			return FALSE
 	return candidates
 
 /datum/controller/subsystem/job/proc/GiveRandomJob(mob/dead/new_player/player)
@@ -179,6 +181,9 @@ SUBSYSTEM_DEF(job)
 			JobDebug("GRJ Random job given, Player: [player], Job: [job]")
 			if(AssignRole(player, job.title))
 				return TRUE
+
+		if(job.trusted_only && !is_trusted_player(player.client))
+			JobDebug("FOC player is not trusted, Player: [player]")
 
 /datum/controller/subsystem/job/proc/ResetOccupations()
 	JobDebug("Occupations reset.")
@@ -227,6 +232,7 @@ SUBSYSTEM_DEF(job)
 			continue
 		var/mob/dead/new_player/candidate = pick(candidates)
 		AssignRole(candidate, command_position)
+
 
 /datum/controller/subsystem/job/proc/FillAIPosition()
 	var/ai_selected = FALSE

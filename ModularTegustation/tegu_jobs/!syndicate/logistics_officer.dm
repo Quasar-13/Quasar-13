@@ -34,7 +34,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head =/obj/item/clothing/head/hardhat/white
-	l_pocket = /obj/item/gun/ballistic/automatic/pistol/PL14
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/PL14
 
 
 //Spawn Point
