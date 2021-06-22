@@ -59,7 +59,7 @@
 	spread = 30
 	fire_delay = 0.5
 
-/obj/item/gun/ballistic/automatic/pistol/terragov/glock/fullauto/ComponentInitialize()
+/obj/item/gun/ballistic/automatic/pistol/glock/fullauto/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
