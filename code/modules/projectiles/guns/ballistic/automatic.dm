@@ -47,8 +47,8 @@
 		A.UpdateButtonIcon()
 
 /obj/item/gun/ballistic/automatic/proto
-	name = "\improper Nanotrasen Saber SMG"
-	desc = "A prototype full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
+	name = "\improper NT SABR SMG" //edit, changes the name of the nanotrasen  smg
+	desc = "A full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors. No longer a prototype, It's mostly sold to TerraGov now days for urban operations." //edit: adds some ketchup to the description
 	icon_state = "saber"
 	burst_size = 1
 	actions_types = list()

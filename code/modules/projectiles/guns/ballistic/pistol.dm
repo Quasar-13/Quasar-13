@@ -1,5 +1,5 @@
 /obj/item/gun/ballistic/automatic/pistol
-	name = "makarov pistol"
+	name = "Makarov PM"	//bungaedit: see below
 	desc = "A small, easily concealable 9mm handgun. Has a threaded barrel for suppressors."
 	icon_state = "pistol"
 	w_class = WEIGHT_CLASS_SMALL
@@ -32,8 +32,23 @@
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
 
+//bunga-edit: seperates makrovs into normal and syndicate versions. Why? I dunno, it sounds cool
+/obj/item/gun/ballistic/automatic/pistol/syndicate
+	name ='GM Makarov'
+	desc = "A small, easily concealable 9mm handgun with a barrel for suppressors. This one has the colors of the syndicate."
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+
+/obj/item/gun/ballistic/automatic/pistol/syndicate/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/syndicate/suppressed/Initialize(mapload)
+	. = ..()
+	var/obj/item/suppressor/S = new(src)
+	install_suppressor(S)
+//bungaedit end
+
 /obj/item/gun/ballistic/automatic/pistol/m1911
-	name = "\improper M1911"
+	name = "\improper Colt M1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL

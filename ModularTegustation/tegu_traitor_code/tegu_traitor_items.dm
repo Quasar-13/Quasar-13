@@ -68,7 +68,7 @@
 	new /obj/item/clothing/glasses/night(src)
 	new /obj/item/radio/headset/syndicate/alt(src)
 	new /obj/item/clothing/gloves/combat(src) //1 TC?
-	new /obj/item/gun/ballistic/automatic/pistol(src) //7 TC
+	new /obj/item/gun/ballistic/automatic/pistol/syndicate(src) //7 TC
 
 // Advanced hypno-flash. For psychologists.
 /obj/item/assembly/flash/hypnotic/adv

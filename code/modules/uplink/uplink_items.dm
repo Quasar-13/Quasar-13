@@ -501,7 +501,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Makarov Pistol"
 	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 8-round magazines and is compatible \
 			with suppressors."
-	item = /obj/item/gun/ballistic/automatic/pistol
+	item = /obj/item/gun/ballistic/automatic/pistol/syndicate
 	cost = 6
 	exclude_modes = list(/datum/game_mode/nuclear/clown_ops)
 

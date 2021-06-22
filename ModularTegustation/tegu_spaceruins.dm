@@ -165,7 +165,7 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	implants = list(/obj/item/implant/weapons_auth)
 	backpack_contents = list(/obj/item/storage/box/survival/syndie=1,\
 		/obj/item/tank/jetpack/oxygen/harness=1,\
-		/obj/item/gun/ballistic/automatic/pistol)
+		/obj/item/gun/ballistic/automatic/pistol/syndicate)
 
 /datum/outfit/syndicate_engineer/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE
