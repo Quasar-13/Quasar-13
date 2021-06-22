@@ -34,7 +34,7 @@
 
 //bunga-edit: seperates makrovs into normal and syndicate versions. Why? I dunno, it sounds cool
 /obj/item/gun/ballistic/automatic/pistol/syndicate
-	name ='GM Makarov'
+	name = "GM Makarov"
 	desc = "A small, easily concealable 9mm handgun with a barrel for suppressors. This one has the colors of the syndicate."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 

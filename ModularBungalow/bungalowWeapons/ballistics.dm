@@ -21,7 +21,6 @@
 /obj/item/gun/ballistic/automatic/pistol/beretta
 	name = "Beretta M9"
 	desc = "An Italian 9mm handgun. For use against pineapple-on-pizza lovers."
-	fire_sound = 'ModularTegustation/Tegusounds/weapons/guns/pistol.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "beretta"
 	can_suppress = FALSE
