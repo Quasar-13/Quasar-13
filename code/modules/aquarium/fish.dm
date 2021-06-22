@@ -148,7 +148,6 @@
 	desc = "Ordinarily in the wild, the Zagoskian moonfish is around the size of a tuna, however through selective breeding a smaller breed suitable for being kept as an aquarium pet has been created."
 	icon_state = "dwarf_moonfish"
 	required_fluid_type = AQUARIUM_FLUID_SALTWATER
-	stable_population = 2
 	fillet_type = /obj/item/food/fishmeat/moonfish
 
 /datum/aquarium_behaviour/fish/gunner_jellyfish
@@ -156,7 +155,6 @@
 	desc = "So called due to their resemblance to an artillery shell, the gunner jellyfish is native to Tizira, where it is enjoyed as a delicacy. Produces a mild hallucinogen that is destroyed by cooking."
 	icon_state = "gunner_jellyfish"
 	required_fluid_type = AQUARIUM_FLUID_SALTWATER
-	stable_population = 4
 	fillet_type = /obj/item/food/fishmeat/gunner_jellyfish
 
 /datum/aquarium_behaviour/fish/needlefish
@@ -164,7 +162,6 @@
 	desc = "A tiny, transparent fish which resides in large schools in the oceans of Tizira. A common food for other, larger fish."
 	icon_state = "needlefish"
 	required_fluid_type = AQUARIUM_FLUID_SALTWATER
-	stable_population = 12
 	fillet_type = null
 
 /datum/aquarium_behaviour/fish/armorfish
@@ -172,5 +169,4 @@
 	desc = "A small shellfish native to Tizira's oceans, known for its exceptionally hard shell. Consumed similarly to prawns."
 	icon_state = "armorfish"
 	required_fluid_type = AQUARIUM_FLUID_SALTWATER
-	stable_population = 10
 	fillet_type = /obj/item/food/fishmeat/armorfish

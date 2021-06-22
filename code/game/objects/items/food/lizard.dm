@@ -388,7 +388,6 @@
 	tastes = list("bread" = 1, "herb" = 1, "oil" = 1, "garlic" = 1)
 	slice_type = null
 	foodtypes = VEGETABLES | NUTS
-	boxtag = "Tiziran Flatbread"
 
 /obj/item/food/pizza/italic_flatbread
 	name = "\improper Italic flatbread"
@@ -399,7 +398,6 @@
 	tastes = list("bread" = 1, "herb" = 1, "oil" = 1, "garlic" = 1, "tomato" = 1, "meat" = 1)
 	slice_type = null
 	foodtypes = VEGETABLES | NUTS | MEAT
-	boxtag = "Italic Flatbread"
 
 /obj/item/food/pizza/imperial_flatbread
 	name = "\improper Imperial flatbread"
@@ -410,7 +408,6 @@
 	tastes = list("bread" = 1, "herb" = 1, "oil" = 1, "garlic" = 1, "tomato" = 1, "meat" = 1)
 	slice_type = null
 	foodtypes = VEGETABLES | MEAT | NUTS | GROSS
-	boxtag = "Imperial Victory Flatbread"
 
 //Sandwiches/Toast Dishes
 /obj/item/food/emperor_roll
