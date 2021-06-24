@@ -17,9 +17,9 @@
 	display_order = JOB_DISPLAY_ORDER_WARDEN
 	bounty_types = CIV_JOB_GROW
 
-/datum/outfit/job/militarypolice
+/datum/outfit/job/military_police
 	name = "Military Police"
-	jobtype = /datum/job/militarypolice
+	jobtype = /datum/job/military_police
 	glasses = /obj/item/clothing/glasses/hud/security/syndicate
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt
