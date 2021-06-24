@@ -164,7 +164,7 @@
 	var/list/departments
 
 	if(SSmaptype.maptype != "syndicate")
-	 departments = list(
+		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
 			"Engineering" = GLOB.engineering_positions,
@@ -175,7 +175,7 @@
 			"Silicon" = GLOB.nonhuman_positions)
 
 	if(SSmaptype.maptype == "syndicate")
-	 departments = list(
+		departments = list(
 		//Syndiestation
 			"Syndicate Command" = GLOB.syncommand_positions,
 			"Triage" = GLOB.triage_positions,
