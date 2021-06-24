@@ -26,7 +26,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
-	l_pocket = /obj/item/gun/ballistic/automatic/pistol
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/sig
 
 	belt = null
 

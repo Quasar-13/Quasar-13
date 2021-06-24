@@ -30,7 +30,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/jacket
-	belt = null
+	belt = /obj/item/gun/ballistic/automatic/pistol/ppk
 
 
 

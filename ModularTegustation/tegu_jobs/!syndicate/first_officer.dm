@@ -31,7 +31,7 @@
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/PL14
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/syndicate
 

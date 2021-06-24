@@ -30,7 +30,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/blueshield
-	belt = null
+	belt = /obj/item/gun/ballistic/automatic/pistol/PL14
 	backpack_contents = list(/obj/item/clothing/head/helmet/space/syndicate/blue)
 
 
