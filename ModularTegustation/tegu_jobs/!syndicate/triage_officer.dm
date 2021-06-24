@@ -22,7 +22,7 @@
 
 /datum/outfit/job/triage_officer
 	name = "Triage Officer"
-	jobtype = /datum/job/tegu/triage_officer
+	jobtype = /datum/job/triage_officer
 	belt = null
 
 	id = /obj/item/card/id/black

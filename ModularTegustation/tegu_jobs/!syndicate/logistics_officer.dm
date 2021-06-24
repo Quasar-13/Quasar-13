@@ -24,7 +24,7 @@
 
 /datum/outfit/job/logistics_officer
 	name = "Logistics Officer"
-	jobtype = /datum/job/tegu/logistics_officer
+	jobtype = /datum/job/logistics_officer
 
 	id = /obj/item/card/id/black
 	belt = /obj/item/storage/belt/utility/syndicate/sbc

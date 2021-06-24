@@ -24,7 +24,7 @@
 
 /datum/outfit/job/first_officer
 	name = "First Officer"
-	jobtype = /datum/job/tegu/first_officer
+	jobtype = /datum/job/first_officer
 	belt = null
 
 	id = /obj/item/card/id/black

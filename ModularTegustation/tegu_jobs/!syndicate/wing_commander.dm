@@ -22,7 +22,7 @@
 
 /datum/outfit/job/wing_commander
 	name = "Wing Commander"
-	jobtype = /datum/job/tegu/wing_commander
+	jobtype = /datum/job/wing_commander
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader

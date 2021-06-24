@@ -39,7 +39,7 @@
 	icon_state = "synhealthhud"
 	glass_colour_type = /datum/client_colour/glass_colour/green
 
-/obj/item/clothing/glasses/hud/security
+/obj/item/clothing/glasses/hud/security/syndicate
 	name = "military police scanner HUD"
 	worn_icon = 'ModularBungalow/clothing/worn/glassesw.dmi'
 	icon = 'ModularBungalow/clothing/icons/glasses.dmi'

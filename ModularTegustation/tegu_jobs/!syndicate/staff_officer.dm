@@ -22,7 +22,7 @@
 
 /datum/outfit/job/staff_officer
 	name = "Staff Officer"
-	jobtype = /datum/job/tegu/staff_officer
+	jobtype = /datum/job/staff_officer
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader

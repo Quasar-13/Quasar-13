@@ -22,7 +22,7 @@
 
 /datum/outfit/job/mechanic
 	name = "Mechanic"
-	jobtype = /datum/job/tegu/mechanic
+	jobtype = /datum/job/mechanic
 
 	id = /obj/item/card/id/black
 	belt = /obj/item/storage/belt/utility

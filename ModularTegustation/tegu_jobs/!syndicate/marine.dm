@@ -24,7 +24,7 @@
 
 /datum/outfit/job/marine
 	name = "Marine"
-	jobtype = /datum/job/tegu/marine
+	jobtype = /datum/job/marine
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt

@@ -22,7 +22,7 @@
 
 /datum/outfit/job/pilot_officer
 	name = "Pilot Officer"
-	jobtype = /datum/job/tegu/pilot_officer
+	jobtype = /datum/job/pilot_officer
 
 	id = /obj/item/card/id/black
 	glasses = /obj/item/clothing/glasses/sunglasses

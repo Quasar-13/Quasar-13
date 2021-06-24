@@ -24,7 +24,7 @@
 
 /datum/outfit/job/requisitions_chief
 	name = "Logistics Officer"
-	jobtype = /datum/job/tegu/requisitions_chief
+	jobtype = /datum/job/requisitions_chief
 
 	id = /obj/item/card/id/black
 	belt = null

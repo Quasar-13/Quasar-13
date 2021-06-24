@@ -22,7 +22,7 @@
 
 /datum/outfit/job/medical_officer
 	name = "Medical Officer"
-	jobtype = /datum/job/tegu/medical_officer
+	jobtype = /datum/job/medical_officer
 
 	id = /obj/item/card/id/black
 	belt = /obj/item/storage/belt/medical/surgeryfilled
