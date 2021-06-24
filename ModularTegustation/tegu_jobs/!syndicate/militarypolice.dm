@@ -1,32 +1,31 @@
-/datum/job/tegu/police
+/datum/job/tegu/militarypolice
 	title = "Military Police"
 	department_head = list("Military Warden")
-	faction = "Syndicate"
+	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the military warden"
-	selection_color = "#bbe291"
+	selection_color = "#77aaee"
+	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/police
+	outfit = /datum/outfit/job/militarypolice
 
-	access = list()
-	minimal_access = list()
-	paycheck = PAYCHECK_EASY
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
+	paycheck = PAYCHECK_HARD
 	paycheck_department = ACCOUNT_SRV
-	display_order = JOB_DISPLAY_ORDER_BOTANIST
+	display_order = JOB_DISPLAY_ORDER_WARDEN
 	bounty_types = CIV_JOB_GROW
 
-/datum/outfit/job/police
+/datum/outfit/job/militarypolice
 	name = "Military Police"
-	jobtype = /datum/job/tegu/police
+	jobtype = /datum/job/tegu/militarypolice
 
-	belt = /obj/item/pda/botanist
-	ears = /obj/item/radio/headset/headset_srv
-	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
-	suit = /obj/item/clothing/suit/apron
-	gloves  =/obj/item/clothing/gloves/botanic_leather
-	suit_store = /obj/item/plant_analyzer
+	id = /obj/item/card/id/black
+	ears = /obj/item/radio/headset/syndicate/alt
+	uniform = /obj/item/clothing/under/syndicate
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/color/black
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 
-	backpack = /obj/item/storage/backpack/botany
-	satchel = /obj/item/storage/backpack/satchel/hyd
-	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics
+	belt = null

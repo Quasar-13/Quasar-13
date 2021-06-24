@@ -899,6 +899,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 
+			//Syndiestation, REPLACE ASAP
+			if(SSmaptype.maptype == "syndicate")
+				if(job.maptype == "none")
+					continue
+
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
 				width += widthPerColumn
@@ -1002,7 +1007,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	popup.open(FALSE)
 
 /datum/preferences/proc/SetJobPreferenceLevel(datum/job/job, level)
-	if (!job)
+	if(!job)
 		return FALSE
 
 	if (level == JP_HIGH) // to high

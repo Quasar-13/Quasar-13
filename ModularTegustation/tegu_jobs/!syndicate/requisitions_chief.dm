@@ -1,16 +1,16 @@
-/datum/job/tegu/logistics_officer
-	title = "Logistics Officer"
-	department_head = list("First Officer", "Commandant")
+/datum/job/tegu/requisitions_chief
+	title = "Requisitions Chief"
+	department_head = list("First Officer", "Logistics Officer")
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the wing commander and staff officer"
-	selection_color = "#BBBB11"
+	supervisors = "the logistics officer and first officer"
+	selection_color = "#DDDD33"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_LOGISTICS
 	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/logistics_officer
+	outfit = /datum/outfit/job/requisitions_chief
 
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
@@ -22,22 +22,14 @@
 	display_order = JOB_DISPLAY_ORDER_CHIEF_ENGINEER
 	bounty_types = CIV_JOB_ENG
 
-/datum/outfit/job/logistics_officer
+/datum/outfit/job/requisitions_chief
 	name = "Logistics Officer"
-	jobtype = /datum/job/tegu/logistics_officer
+	jobtype = /datum/job/tegu/requisitions_chief
 
 	id = /obj/item/card/id/black
-	belt = /obj/item/storage/belt/utility/syndicate/sbc
+	belt = null
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/vest/alt
-	head =/obj/item/clothing/head/hardhat/white
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/PL14
-
-
-//Spawn Point
-/obj/effect/landmark/start/logistics_officer
-	name = "Logistics Officer"
-	icon_state = "Logistics Officer"

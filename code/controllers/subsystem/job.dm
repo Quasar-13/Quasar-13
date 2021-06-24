@@ -16,6 +16,8 @@ SUBSYSTEM_DEF(job)
 
 	var/list/level_order = list(JP_HIGH,JP_MEDIUM,JP_LOW)
 
+
+
 /datum/controller/subsystem/job/Initialize(timeofday)
 	SSmapping.HACK_LoadMapConfig()
 	if(!occupations.len)
@@ -33,6 +35,7 @@ SUBSYSTEM_DEF(job)
 	new_overflow.allow_bureaucratic_error = FALSE
 	new_overflow.spawn_positions = cap
 	new_overflow.total_positions = cap
+
 
 	if(new_overflow_role != overflow_role)
 		var/datum/job/old_overflow = GetJob(overflow_role)
@@ -65,9 +68,11 @@ SUBSYSTEM_DEF(job)
 			if(job.maptype != "none")
 				continue
 
-		if(SSmaptype.maptype == "syndicate")	//Shit's fucked
-			if(job.maptype == "none")
-				continue
+	//Add back the moment you fix the other bugs
+//		if(SSmaptype.maptype == "syndicate")
+//			if(job.maptype == "none")
+//				continue
+
 
 
 		occupations += job
@@ -123,6 +128,7 @@ SUBSYSTEM_DEF(job)
 	JobDebug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
 	var/list/candidates = list()
 	for(var/mob/dead/new_player/player in unassigned)
+
 		if(is_banned_from(player.ckey, job.title) || QDELETED(player))
 			JobDebug("FOC isbanned failed, Player: [player]")
 			continue
@@ -141,8 +147,12 @@ SUBSYSTEM_DEF(job)
 		if(player.client.prefs.job_preferences[job.title] == level)
 			JobDebug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
+
+		//Trusted players system
 		if(job.trusted_only && !is_trusted_player(player.client))
 			return FALSE
+
+
 	return candidates
 
 /datum/controller/subsystem/job/proc/GiveRandomJob(mob/dead/new_player/player)
@@ -298,6 +308,7 @@ SUBSYSTEM_DEF(job)
 
 	//People who wants to be the overflow role, sure, go on.
 	JobDebug("DO, Running Overflow Check 1")
+
 	var/datum/job/overflow = GetJob(SSjob.overflow_role)
 	var/list/overflow_candidates = FindOccupationCandidates(overflow, JP_LOW)
 	JobDebug("AC1, Candidates: [overflow_candidates.len]")
@@ -541,8 +552,13 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/proc/setup_officer_positions()
 	var/datum/job/J = SSjob.GetJob("Security Officer")
+
 	if(!J)
-		CRASH("setup_officer_positions(): Security officer job is missing")
+		if(SSmaptype.maptype == "syndicate")
+			J = SSjob.GetJob("First Officer")
+
+		if(SSmaptype.maptype != "syndicate")
+			CRASH("setup_officer_positions(): Security officer job is missing")
 
 	var/ssc = CONFIG_GET(number/security_scaling_coeff)
 	if(ssc > 0)
