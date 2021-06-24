@@ -33,7 +33,7 @@
 	gloves = /obj/item/clothing/gloves/color/latex
 	suit = /obj/item/clothing/suit/armor/labcoat/syndie
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
-
+	l_hand = /obj/item/storage/firstaid/regular
 
 
 //Spawn Point

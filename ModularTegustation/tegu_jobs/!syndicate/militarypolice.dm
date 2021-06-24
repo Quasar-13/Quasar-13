@@ -27,5 +27,6 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
+	r_pocket = /obj/item/restraints/handcuffs
 
 	belt = null

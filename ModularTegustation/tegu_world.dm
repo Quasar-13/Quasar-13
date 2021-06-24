@@ -38,7 +38,7 @@
 	s += ")<br>"
 
 	// Tegu Description
-	s += "<br><b>The best cuts this side of the Andromeda!</b>"
+	s += "<br><b>Now featuring Syndicate stations and operations! Look for 'Andromeda'!</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
 	s += "<br>Map: [map_name]"
 
