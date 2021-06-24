@@ -1,4 +1,4 @@
-/datum/job/tegu/requisitions_chief
+/datum/job/requisitions_chief
 	title = "Requisitions Chief"
 	department_head = list("First Officer", "Logistics Officer")
 	faction = "Station"

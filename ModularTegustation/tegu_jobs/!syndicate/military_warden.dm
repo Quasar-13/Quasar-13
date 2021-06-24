@@ -1,4 +1,4 @@
-/datum/job/tegu/militarywarden
+/datum/job/military_warden
 	title = "Military Warden"
 	department_head = list("Commandant")
 	faction = "Station"

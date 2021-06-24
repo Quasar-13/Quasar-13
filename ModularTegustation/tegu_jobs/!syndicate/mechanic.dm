@@ -1,4 +1,4 @@
-/datum/job/tegu/mechanic
+/datum/job/mechanic
 	title = "Mechanic"
 	department_head = list("Logistics Officer")
 	faction = "Station"

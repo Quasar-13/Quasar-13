@@ -394,7 +394,7 @@
 
 				//Bungalow Station Marine Corps
 				"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
-				"Medical Officer", "Triage Officer", "Triage Technician")
+				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden")
 
 
 

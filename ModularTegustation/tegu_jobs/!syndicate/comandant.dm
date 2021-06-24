@@ -1,4 +1,4 @@
-/datum/job/tegu/commandant
+/datum/job/commandant
 	title = "Commandant"
 	department_head = list("Cybersun Command")
 	faction = "Station"

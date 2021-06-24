@@ -1,4 +1,4 @@
-/datum/job/tegu/deckhand
+/datum/job/deckhand
 	title = "Deckhand"
 	department_head = list("Logistics Officer")
 	faction = "Station"
@@ -38,4 +38,4 @@
 /obj/effect/landmark/start/deckhand
 	name = "Deckhand"
 	icon_state = "Deckhand"
-	
+

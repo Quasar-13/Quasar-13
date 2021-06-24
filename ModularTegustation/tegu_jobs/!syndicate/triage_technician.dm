@@ -1,4 +1,4 @@
-/datum/job/tegu/triage_technician
+/datum/job/triage_technician
 	title = "Triage Technician"
 	department_head = list("Medical Officer")
 	faction = "Station"
