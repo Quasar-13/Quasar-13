@@ -8,7 +8,7 @@
 	selection_color = "#77aaee"
 	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/militarypolice
+	outfit = /datum/outfit/job/military_police
 
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
