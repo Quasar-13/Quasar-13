@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/first_officer
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
-	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_HEADS)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_HEADS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 

@@ -20,7 +20,7 @@
 /datum/outfit/job/militarypolice
 	name = "Military Police"
 	jobtype = /datum/job/tegu/militarypolice
-
+	glasses = /obj/item/clothing/glasses/hud/security
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt
 	uniform = /obj/item/clothing/under/syndicate

@@ -124,7 +124,9 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Deckhand" = 344,
 		//Military Police
 		"Military Warden" = 350,
-		"Military Police" = 351
+		"Military Police" = 351,
+		//Just assistants
+		"Survivor" = 998
 	)
 
 /datum/crewmonitor/ui_interact(mob/user, datum/tgui/ui)

@@ -84,7 +84,8 @@ GLOBAL_LIST_INIT(operations_positions, list(
 	"Wing Commander",
 	"Pilot Officer",
 	"Staff Officer",
-	"Marine"))
+	"Marine",
+	"Survivor"))
 
 GLOBAL_LIST_INIT(logistics_positions, list(
 	"Logistics Officer",
