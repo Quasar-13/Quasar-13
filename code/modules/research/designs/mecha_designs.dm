@@ -249,7 +249,7 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/disabler
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
-	category = list("Weapons")
+	category = list("Weapons", "Exosuit Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mech_grenade_launcher
