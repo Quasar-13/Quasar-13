@@ -8,7 +8,7 @@
 
 
 /obj/item/gun/ballistic/automatic/pistol/sig
-	name = "SIG Sauer"
+	name = "SIG Sauer P226"
 	desc = "A classic handgun with a larger than average magazine capacity."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 	spread = 15
