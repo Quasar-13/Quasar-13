@@ -9,6 +9,7 @@
 	liked_food = GROSS
 	mutanteyes = /obj/item/organ/eyes/fly
 	toxic_food = NONE
+	wings_icon = "fly"
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/fly
 	payday_modifier = 1
