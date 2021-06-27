@@ -27,6 +27,7 @@ Difficulty: Extremely Hard
 	rapid_melee = 4
 	speed = 20
 	move_to_delay = 20
+	gps_name = "Bloodchilling Signal"
 	ranged = TRUE
 	crusher_loot = list(/obj/effect/decal/remains/plasma, /obj/item/crusher_trophy/ice_block_talisman)
 	loot = list(/obj/effect/decal/remains/plasma)
