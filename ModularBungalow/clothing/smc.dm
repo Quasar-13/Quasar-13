@@ -7,6 +7,8 @@
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
+
+//Armor
 /obj/item/clothing/suit/armor/medical_officer
 	name = "medical officer's armor vest"
 	desc = "A heavy armor vest made to stop biohazards, bullets and energy attacks.worn by the Syndicate Medical Officer"
@@ -16,6 +18,28 @@
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 5, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
+
+/obj/item/clothing/suit/armor/wing
+	name = "wing commander's jacket"
+	desc = "A heavily armored purple jacket."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "wingcommander"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 10, BULLET = 70, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 30)
+
+
+/obj/item/clothing/suit/armor/staff
+	name = "staff officer's jacket"
+	desc = "A lightly armored purple jacket."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "wingcommander"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
+
+
+//Berets
 /obj/item/clothing/head/beret/mo
 	name = "medical officer's beret"
 	desc = "A robust beret with the syndicate triage insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection."
@@ -31,6 +55,7 @@
 	icon_state = "beret_rd"
 
 
+//Glasses
 /obj/item/clothing/glasses/hud/health/syndicate
 	name = "triage scanner HUD"
 	desc = "A heads-up display that scans the humanoids in view and provides accurate data about their health status."

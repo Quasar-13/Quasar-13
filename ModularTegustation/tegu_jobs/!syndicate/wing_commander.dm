@@ -29,9 +29,8 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/blueshield
+	suit = /obj/item/clothing/suit/armor/wing
 	belt = /obj/item/gun/ballistic/automatic/pistol/PL14
-	backpack_contents = list(/obj/item/clothing/head/helmet/space/syndicate/blue)
 
 
 //Spawn Point

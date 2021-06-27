@@ -32,7 +32,7 @@
 	head = /obj/item/clothing/head/beret/so
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
-	suit = /obj/item/clothing/suit/armor/vest/blueshirt
+	suit = /obj/item/clothing/suit/armor/staff
 
 	belt = null
 
