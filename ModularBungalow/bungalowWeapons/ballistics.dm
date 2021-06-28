@@ -9,12 +9,11 @@
 
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
-	desc = "A classic handgun with a larger than average magazine capacity."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."
 	spread = 15
 	icon_state = "sig"
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/m9mm
+	mag_type = /obj/item/ammo_box/magazine/sig
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/ppk
@@ -30,6 +29,7 @@
 	desc = "The well known austrian pistol. Commonly used by law enforcement."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 	icon_state = "glock"
+	mag_type = /obj/item/ammo_box/magazine/glock
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
@@ -42,3 +42,19 @@
 /obj/item/gun/ballistic/automatic/pistol/glock/fullauto/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto
+	name = "\improper M-90A Automatic Carbine"
+	desc = "An automatic 5.56 toploading carbine, designated 'M-90A'. Has an attached underbarrel grenade launcher which can be toggled on and off."
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	icon_state = "m90"
+	burst_size = 1
+	fire_delay = 2
+	pin = /obj/item/firing_pin
+	actions_types = list()
+
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
