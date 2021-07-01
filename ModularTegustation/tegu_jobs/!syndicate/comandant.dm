@@ -13,7 +13,7 @@
 
 	outfit = /datum/outfit/job/commandant
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_CAPTAIN, ACCESS_HEADS)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_CAPTAIN, ACCESS_HEADS)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_CAPTAIN, ACCESS_HEADS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
@@ -31,9 +31,11 @@
 	id = /obj/item/card/id/black
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber/red
 	r_pocket = /obj/item/melee/classic_baton/telescopic
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
+	suit = /obj/item/clothing/suit/armor/commandant
+	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/gun/ballistic/revolver/sw500
 	head = /obj/item/clothing/head/hos/syndicate
+	ears = /obj/item/radio/headset/syndicate/alt/leader
 	gloves = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	glasses = /obj/item/clothing/glasses/hud/eyepatch/admiral

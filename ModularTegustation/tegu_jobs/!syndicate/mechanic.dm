@@ -27,8 +27,7 @@
 	id = /obj/item/card/id/black
 	belt = /obj/item/storage/belt/utility
 	ears = /obj/item/radio/headset/syndicate
-	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/hazardvest
+	uniform = /obj/item/clothing/under/smc/mechanic
 	shoes = /obj/item/clothing/shoes/workboots
 	box = /obj/item/storage/box/survival/engineer
 

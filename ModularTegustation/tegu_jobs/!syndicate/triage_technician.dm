@@ -27,7 +27,8 @@
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate
-	uniform = /obj/item/clothing/under/syndicate
+	head = /obj/item/clothing/head/beret/triage
+	uniform = /obj/item/clothing/under/smc/triagetech
 	glasses = /obj/item/clothing/glasses/hud/health/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex

@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/staff_officer
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)

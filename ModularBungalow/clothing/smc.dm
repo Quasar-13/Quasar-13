@@ -1,20 +1,49 @@
+//Unders
+/obj/item/clothing/under/smc
+	can_adjust = FALSE
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "black_suit"
+
+
+/obj/item/clothing/under/smc/deckhand
+	desc = "A red overcoat with black pants"
+	name = "deckhand's uniform"
+	icon_state = "deckhand"
+
+/obj/item/clothing/under/smc/mechanic
+	desc = "A red and blackjumpsuit for syndicate engineers"
+	name = "mechanic's jumpsuit"
+	icon_state = "mechanic"
+
+/obj/item/clothing/under/smc/triagetech
+	desc = "A green medic's jumpsuit for shipside triage technicians"
+	name = "triage technician's jumpsuit"
+	icon_state = "triagetech"
+
+/obj/item/clothing/under/smc/logistics
+	desc = "A black and red jumpsuit for the ship's logistic's officer"
+	name = "logistic officer's jumpsuit"
+	icon_state = "logistics"
+
+
+//Armor
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	icon = 'ModularBungalow/zbungalowicons/clothing/coaticon.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "labcoat_syndie"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 
-//Armor
 /obj/item/clothing/suit/armor/medical_officer
-	name = "medical officer's armor vest"
+	name = "medical officer's armored labcoat"
 	desc = "A heavy armor vest made to stop biohazards, bullets and energy attacks.worn by the Syndicate Medical Officer"
-	icon = 'ModularBungalow/zbungalowicons/clothing/coaticon.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/coat.dmi'
-	icon_state = "armor_mo"
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "medicalofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 5, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
@@ -29,12 +58,43 @@
 	armor = list(MELEE = 10, BULLET = 70, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 30)
 
 
+/obj/item/clothing/suit/armor/firstofficer
+	name = "first officer's vest"
+	desc = "The First officer's vest. Nearly bulletproof."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "firstofficer"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 10, BULLET = 70, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 30)
+
+
+
+/obj/item/clothing/suit/armor/commandant
+	name = "commandant's jacket"
+	desc = "A nearly invincible jacket worn by the commandant. Made of many layers of telecrystal-infused kevlar."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "commandant"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 50, BULLET = 70, LASER = 20, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 30)
+
+
 /obj/item/clothing/suit/armor/staff
 	name = "staff officer's jacket"
 	desc = "A lightly armored purple jacket."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "wingcommander"
+	icon_state = "staffofficer"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
+
+
+/obj/item/clothing/suit/armor/pilot
+	name = "pilot officer's jacket"
+	desc = "A lightly armored military jacket."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "pilotofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
 
@@ -45,14 +105,17 @@
 	desc = "A robust beret with the syndicate triage insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection."
 	icon_state = "beret_mo"
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 30,"energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
-	strip_delay = 60
 	dog_fashion = null
-
 
 /obj/item/clothing/head/beret/so
 	name = "staff officer's beret"
 	desc = "A purple beret for those in charge of the marines."
 	icon_state = "beret_rd"
+
+/obj/item/clothing/head/beret/triage
+	name = "triage officer's beret"
+	desc = "A green beret for those in charge of the marines."
+	icon_state = "beret_serv"
 
 
 //Glasses

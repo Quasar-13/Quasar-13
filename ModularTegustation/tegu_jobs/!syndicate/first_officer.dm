@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/first_officer
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_HEADS)
-	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_HEADS)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_OFFICER, ACCESS_HEADS)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_OFFICER, ACCESS_HEADS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
@@ -30,7 +30,7 @@
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	glasses = /obj/item/clothing/glasses/sunglasses
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
+	suit = /obj/item/clothing/suit/armor/firstofficer
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/syndicate

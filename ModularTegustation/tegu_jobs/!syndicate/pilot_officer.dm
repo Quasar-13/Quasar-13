@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/pilot_officer
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
@@ -29,7 +29,7 @@
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/jacket
+	suit = /obj/item/clothing/suit/armor/pilot
 	belt = /obj/item/gun/ballistic/automatic/pistol/ppk
 
 

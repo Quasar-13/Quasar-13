@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/wing_commander
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)

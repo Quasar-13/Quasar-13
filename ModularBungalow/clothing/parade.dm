@@ -1,5 +1,4 @@
 //Sec Parade suit
-
 /obj/item/clothing/under/misc/secparade
 	desc = "A black suit blue trim. Worn by the lowly secretary"
 	name = "secretary's parade uniform"
