@@ -116,6 +116,16 @@
 	desc = "You've now ruined years of mythical storytelling."
 	database_id = BOSS_MEDAL_WENDIGO_CRUSHER
 
+/datum/award/achievement/boss/marine_kill
+	name = "Chaos Marine Killer"
+	desc = "Blood for the blood god"
+	database_id = BOSS_MEDAL_MARINE
+
+/datum/award/achievement/boss/marine_crusher
+	name = "Chaos Marine Crusher"
+	desc = "Blood for the blood god"
+	database_id = BOSS_MEDAL_MARINE_CRUSHER
+
 //should be removed soon
 /datum/award/achievement/boss/king_goat_kill
 	name = "King Goat Killer"
