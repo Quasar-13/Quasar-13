@@ -38,6 +38,10 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
+	can_be_held = TRUE
+	worn_slot_flags = ITEM_SLOT_HEAD
+	head_icon = 'icons/mob/pets_held.dmi'
+	held_state = "snake"
 
 /mob/living/simple_animal/hostile/retaliate/poison/snake/Initialize()
 	. = ..()
