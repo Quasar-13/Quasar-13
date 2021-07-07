@@ -415,7 +415,7 @@
 	var/list/department_categories = list()
 
 	if(SSmaptype.maptype != "syndicate")
-		department_categories = list("Command", "Service", "Supply", "Medical", "Science", "Security", "Silicon")
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
 	if(SSmaptype.maptype == "syndicate")
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")

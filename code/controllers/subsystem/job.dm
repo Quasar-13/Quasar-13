@@ -554,11 +554,7 @@ SUBSYSTEM_DEF(job)
 	var/datum/job/J = SSjob.GetJob("Security Officer")
 
 	if(!J)
-		if(SSmaptype.maptype == "syndicate")
-			J = SSjob.GetJob("First Officer")
-
-		if(SSmaptype.maptype != "syndicate")
-			CRASH("setup_officer_positions(): Security officer job is missing")
+		CRASH("setup_officer_positions(): Security officer job is missing")
 
 	var/ssc = CONFIG_GET(number/security_scaling_coeff)
 	if(ssc > 0)
