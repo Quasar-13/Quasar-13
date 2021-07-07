@@ -153,21 +153,3 @@
 	maxcharge = 500000
 	chargerate = 5000
 
-
-/obj/item/minigunpack/lesser
-	name = "backpack power source"
-	desc = "The massive external power source for the laser gatling gun."
-
-
-/obj/item/gun/energy/minigun/lesser
-	name = "laser gatling gun"
-	desc = "An advanced laser cannon with an incredible rate of fire. Requires a bulky backpack power source to use."
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
-
-/obj/item/gun/energy/minigun/lesser/Initialize()
-	if(!istype(loc, /obj/item/minigunpack)) //We should spawn inside an ammo pack so let's use that one.
-		return INITIALIZE_HINT_QDEL //No pack, no gun
-	ammo_pack = loc
-	AddElement(/datum/element/update_icon_blocker)
-	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
-
