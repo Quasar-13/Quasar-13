@@ -44,42 +44,42 @@
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "hammer1"
 	dig_amount = 1
-	dig_speed = 1 SECONDS
+	dig_speed = 0.5 SECONDS
 
 /obj/item/xenoarch/hammer/cm2
 	name = "Hammer (2cm)"
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "hammer2"
 	dig_amount = 2
-	dig_speed = 2 SECONDS
+	dig_speed = 1 SECONDS
 
 /obj/item/xenoarch/hammer/cm3
 	name = "Hammer (3cm)"
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "hammer3"
 	dig_amount = 3
-	dig_speed = 3 SECONDS
+	dig_speed = 1.5 SECONDS
 
 /obj/item/xenoarch/hammer/cm5
 	name = "Hammer (5cm)"
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "hammer5"
 	dig_amount = 5
-	dig_speed = 5 SECONDS
+	dig_speed = 2.5 SECONDS
 
 /obj/item/xenoarch/hammer/cm10
 	name = "Hammer (10cm)"
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "hammer10"
 	dig_amount = 10
-	dig_speed = 10 SECONDS
+	dig_speed = 5 SECONDS
 
 /obj/item/xenoarch/hammer/adv
 	name = "advanced hammer"
 	desc = "A hammer that can be used to remove dirt from strange rocks."
 	icon_state = "adv_hammer"
 	dig_amount = 1
-	dig_speed = 1
+	dig_speed = 0.5
 	advanced = TRUE
 
 // BRUSHES
@@ -87,12 +87,12 @@
 /obj/item/xenoarch/brush
 	name = "brush"
 	desc = "A brush that is used to uncover the secrets of the past from strange rocks."
-	var/dig_speed = 5 SECONDS
+	var/dig_speed = 3 SECONDS
 	icon_state = "brush"
 
 /obj/item/xenoarch/brush/adv
 	name = "advanced brush"
-	dig_speed = 5
+	dig_speed = 3
 	icon_state = "adv_brush"
 
 // MISC.
