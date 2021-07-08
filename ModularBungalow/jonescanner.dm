@@ -1,5 +1,5 @@
 /obj/item/healthanalyzer/paramed
-	name = "health analyzer (damage)"
+	name = "Paramedic analyzer"
 	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
 	icon_state = "healthmini"
 	inhand_icon_state = "healthanalyzer"
@@ -199,6 +199,8 @@
 			render_list += "<span class='alert ml-1'><b>Warning: [D.form] detected</b>\n\
 			<div class='ml-2'>Name: [D.name].\nType: [D.spread_text].\nStage: [D.stage]/[D.max_stages].\nPossible Cure: [D.cure_text]</div>\
 			</span>" // divs do not need extra linebreak
+
+	render_list+= "<span class='info'>Scan Complete."
 	to_chat(user, jointext(render_list, ""), trailing_newline = FALSE)
 
 
