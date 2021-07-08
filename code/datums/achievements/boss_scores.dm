@@ -52,3 +52,8 @@
 	name = "Wendigos Killed"
 	desc = "You've killed HOW many?"
 	database_id = WENDIGO_SCORE
+
+/datum/award/score/marine_score
+	name = "Chaos Marines Killed"
+	desc = "You've killed HOW many?"
+	database_id = MARINE_SCORE
