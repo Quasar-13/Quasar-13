@@ -1,6 +1,6 @@
 /obj/item/healthanalyzer/paramed
 	name = "health analyzer (damage)"
-	icon = 'MOdularBungalow/zbungalowicons/medical/scanners.dmi'
+	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
 	icon_state = "healthmini"
 	inhand_icon_state = "healthanalyzer"
 
@@ -209,7 +209,7 @@
 	icon_state = "chemscan"
 	inhand_icon_state = "healthanalyzer"
 
-/obj/item/healthanalyzer/paramed/attack(mob/living/M, mob/living/carbon/human/user)
+/obj/item/healthanalyzer/chem/attack(mob/living/M, mob/living/carbon/human/user)
 	flick("[icon_state]-scan", src)	//makes it so that it plays the scan animation upon scanning, including clumsy scanning
 
 	// Clumsiness/brain damage check
