@@ -504,8 +504,10 @@ GENE SCANNER
 		to_chat(user, jointext(render_list, ""))
 
 /obj/item/healthanalyzer/wound
-	name = "first aid analyzer"
-	icon_state = "adv_spectrometer"
+	name = "Wound analyzer"
+	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
+	icon_state = "wound"
+
 	desc = "A prototype MeLo-Tech medical scanner used to diagnose injuries and recommend treatment for serious wounds, but offers no further insight into the patient's health. You hope the final version is less annoying to read!"
 	var/next_encouragement
 	var/greedy
