@@ -235,6 +235,7 @@
 		"miner" = 'icons/UI_Icons/Achievements/Boss/miner.png',
 		"swarmer" = 'icons/UI_Icons/Achievements/Boss/swarmer.png',
 		"tendril" = 'icons/UI_Icons/Achievements/Boss/tendril.png',
+		"marine" = 'icons/UI_Icons/Achievements/Boss/marine.png',
 		"featofstrength" = 'icons/UI_Icons/Achievements/Misc/featofstrength.png',
 		"helbital" = 'icons/UI_Icons/Achievements/Misc/helbital.png',
 		"jackpot" = 'icons/UI_Icons/Achievements/Misc/jackpot.png',
