@@ -139,8 +139,8 @@ handles linking back and forth.
 		return 0
 
 	if (!mat_container)
- 		movable_parent.say("No access to material storage, please contact the quartermaster.")
- 		return 0
+		movable_parent.say("No access to material storage, please contact the quartermaster.")
+		return 0
 	if (on_hold())
 		movable_parent.say("Mineral access is on hold, please contact the quartermaster.")
 		return 0
