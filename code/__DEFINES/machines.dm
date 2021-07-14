@@ -141,3 +141,6 @@
 #define MASSDRIVER_CHAPEL "chapelgun"
 #define MASSDRIVER_DISPOSALS "trash"
 #define MASSDRIVER_SHACK "shack"
+
+/// For wiremod/integrated circuits. Uses various minerals.
+#define COMPONENT_PRINTER (1<<10)
