@@ -1,3 +1,5 @@
+#define NO_MAXVOTES_CAP -1
+
 SUBSYSTEM_DEF(autotransfer)
 	name = "Autotransfer Vote"
 	flags = SS_KEEP_TIMING | SS_BACKGROUND
@@ -5,17 +7,38 @@ SUBSYSTEM_DEF(autotransfer)
 
 	var/starttime
 	var/targettime
+	var/voteinterval
+	var/maxvotes
+	var/curvotes = 0
+	var/votename = null
 
 /datum/controller/subsystem/autotransfer/Initialize(timeofday)
-	starttime = world.time
-	targettime = starttime + CONFIG_GET(number/vote_autotransfer_initial)
-
-	if(!CONFIG_GET(flag/vote_autotransfer_enabled))
+	var/init_vote = CONFIG_GET(number/vote_autotransfer_initial)
+	if(!init_vote) //Autotransfer voting disabled.
 		can_fire = FALSE
+		return ..()
+	starttime = world.realtime // Skyrat edit
+	targettime = starttime + init_vote
+	voteinterval = CONFIG_GET(number/vote_autotransfer_interval)
+	maxvotes = CONFIG_GET(number/vote_autotransfer_maximum)
+	return ..()
 
-	. = ..()
+/datum/controller/subsystem/autotransfer/Recover()
+	starttime = SSautotransfer.starttime
+	voteinterval = SSautotransfer.voteinterval
+	curvotes = SSautotransfer.curvotes
 
 /datum/controller/subsystem/autotransfer/fire()
-	if(world.time > targettime)
-		SSvote.initiate_vote("transfer", null)
-		targettime = targettime + CONFIG_GET(number/vote_autotransfer_interval)
+	if(world.realtime < targettime) // Skyrat edit
+		return
+	if(maxvotes == NO_MAXVOTES_CAP || maxvotes > curvotes)
+		var/i = pick(1,100)
+		if(i == 1)
+			votename = "Jill Ness"
+		SSvote.initiate_vote("transfer", votename)
+		targettime = targettime + voteinterval
+		curvotes++
+	else
+		SSshuttle.autoEnd()
+#undef NO_MAXVOTES_CAP
+

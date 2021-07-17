@@ -929,3 +929,16 @@ SUBSYSTEM_DEF(shuttle)
 					var/set_purchase = alert(usr, "Do you want to also disable shuttle purchases/random events that would change the shuttle?", "Butthurt Admin Prevention", "Yes, disable purchases/events", "No, I want to possibly get owned")
 					if(set_purchase == "Yes, disable purchases/events")
 						SSshuttle.shuttle_purchased = SHUTTLEPURCHASE_FORCED
+
+/datum/controller/subsystem/shuttle/proc/autoEnd()
+	if(EMERGENCY_IDLE_OR_RECALLED)
+		SSshuttle.emergencyNoRecall = TRUE //Prevent Recall.
+		SSshuttle.emergency.request(noannounce = TRUE)
+		SSshuttle.emergencyNoRecall = TRUE //Prevent Recall.
+		priority_announce("The shift has come to an end and the shuttle called. [GLOB.security_level == SEC_LEVEL_RED ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [SSshuttle.emergency.timeLeft(600)] minutes.", null, ANNOUNCER_SHUTTLECALLED, "Priority")
+		log_game("The maximum amount of crew transfers reached, auto-calling.")
+		message_admins("The maximum amount of crew transfers reached, auto-calling.")
+
+		var/obj/machinery/computer/communications/C = locate() in GLOB.machines
+		if(C)
+			C.post_status("shuttle")
