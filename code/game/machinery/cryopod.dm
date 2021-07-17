@@ -24,9 +24,11 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	// Used for logging people entering cryosleep and important items they are carrying.
 	var/list/frozen_crew = list()
+	var/list/frozen_items = list()
 
 	var/storage_type = "crewmembers"
 	var/storage_name = "Cryogenic Oversight Control"
+	var/allow_items = TRUE
 
 /obj/machinery/computer/cryopod/Initialize()
 	. = ..()
@@ -56,7 +58,12 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 /obj/machinery/computer/cryopod/ui_data(mob/user)
 	var/list/data = list()
+	data["allow_items"] = allow_items
 	data["frozen_crew"] = frozen_crew
+	data["frozen_items"] = list()
+
+	if(allow_items)
+		data["frozen_items"] = frozen_items
 
 	var/obj/item/card/id/id_card
 	var/datum/bank_account/current_user
@@ -69,6 +76,50 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		data["account_name"] = current_user.account_holder
 
 	return data
+
+/obj/machinery/computer/cryopod/ui_act(action, params)
+	. = ..()
+	if(.)
+		return
+
+	var/mob/user = usr
+
+	add_fingerprint(user)
+
+	switch(action)
+		if("one_item")
+			if(!allowed(user))
+				to_chat(user, "<span class='warning'>Access Denied.</span>")
+				return
+
+			if(!allow_items) return
+
+			if(!params["item"])
+				return
+
+			var/obj/item/item = frozen_items[text2num(params["item"])]
+			if(!item)
+				to_chat(user, "<span class='notice'>[item] is no longer in storage.</span>")
+				return
+
+			visible_message("<span class='notice'>[src] beeps happily as it disgorges [item].</span>")
+			item.forceMove(get_turf(src))
+			frozen_items -= item
+
+		if("all_items")
+			if(!allowed(user))
+				to_chat(user, "<span class='warning'>Access Denied.</span>")
+				return
+
+			if(!allow_items) return
+
+			visible_message("<span class='notice'>[src] beeps happily as it disgorges the desired objects.</span>")
+
+			for(var/obj/item/item in frozen_items)
+				item.forceMove(get_turf(src))
+				frozen_items -= item
+
+	return TRUE
 
 // Cryopods themselves.
 /obj/machinery/cryopod
@@ -249,15 +300,22 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	visible_message("<span class='notice'>[src] hums and hisses as it moves [mob_occupant.real_name] into storage.</span>")
 
-#if MIN_COMPILER_VERSION >= 514
-	#warn Please replace the loop below this warning with an `as anything` loop.
-#endif
-	for(var/mob_content in mob_occupant)
-		var/obj/item/item_content = mob_content
-		if(!istype(item_content))
+	for(var/obj/item/item in mob_occupant.GetAllContents())
+		if(item.loc.loc && (item.loc.loc == loc || item.loc.loc == control_computer))
+			continue // means we already moved whatever this thing was in
+			// I'm a professional, okay
+
+		if(!should_preserve_item(item))
 			continue
 
-		mob_occupant.transferItemToLoc(item_content, drop_location(), force = TRUE, silent = TRUE)
+		if(control_computer && control_computer.allow_items)
+			control_computer.frozen_items += item
+			mob_occupant.transferItemToLoc(item, control_computer, TRUE)
+		else
+			mob_occupant.transferItemToLoc(item, loc, TRUE)
+
+	var/list/contents = mob_occupant.GetAllContents()
+	QDEL_LIST(contents)
 
 	// Ghost and delete the mob.
 	if(!mob_occupant.get_ghost(TRUE))
