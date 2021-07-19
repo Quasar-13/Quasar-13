@@ -47,12 +47,12 @@
 
 	results = list(/datum/reagent/medicine/giadone = 3)
 
-//Bicardine
-/datum/chemical_reaction/randomized/kiriechem/bicardine
+//Bicaridine
+/datum/chemical_reaction/randomized/kiriechem/bicaridine
 	min_input_reagents = 3
 	max_input_reagents = 3
 
-	results = list(/datum/reagent/medicine/bicardine = 3)
+	results = list(/datum/reagent/medicine/bicaridine = 3)
 
 //Kelotane
 /datum/chemical_reaction/randomized/kiriechem/kelotane
