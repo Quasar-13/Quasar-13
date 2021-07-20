@@ -14,7 +14,7 @@
 /obj/machinery/firealarm
 	name = "fire alarm"
 	desc = "<i>\"Pull this in case of emergency\"</i>. Thus, keep pulling it forever."
-	icon = 'icons/obj/monitors.dmi'
+	icon = 'whitesands/icons/obj/monitors.dmi'
 	icon_state = "fire0"
 	max_integrity = 250
 	integrity_failure = 0.4

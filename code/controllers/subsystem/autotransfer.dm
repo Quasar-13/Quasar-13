@@ -32,10 +32,10 @@ SUBSYSTEM_DEF(autotransfer)
 	if(world.realtime < targettime) // Skyrat edit
 		return
 	if(maxvotes == NO_MAXVOTES_CAP || maxvotes > curvotes)
-		var/i = pick(1,100)
-		if(i == 1)
+		prob(1)
 			votename = "Jill Ness"
 		SSvote.initiate_vote("transfer", votename)
+		votename = null
 		targettime = targettime + voteinterval
 		curvotes++
 	else
