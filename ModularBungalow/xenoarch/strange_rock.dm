@@ -23,7 +23,7 @@
 	var/hidden_item
 	///Whether the item has been measured, revealing the dug depth
 	var/measured = FALSE
-	///Whether the ite has been scanned, revealing the max and safe depth
+	///Whether the item has been scanned, revealing the max and safe depth
 	var/scanned = FALSE
 	///The scan state for when encountering the strange rock ore in mining.
 	var/scan_state = "rock_Strange"
@@ -34,7 +34,7 @@
 	create_depth()
 
 /obj/item/xenoarch/strange_rock/examine(mob/user)
-	. = ..()
+//	. = ..()
 	. to_chat(user, "[scanned ? "This item has been scanned. Max Depth: [max_depth] cm. Safe Depth: [safe_depth] cm." : "This item has not been scanned."]")
 	. to_chat(user, "[measured ? "This item has been measured. Dug Depth: [dug_depth]." : "This item has not been measured."]")
 	if(measured && dug_depth > item_depth)
