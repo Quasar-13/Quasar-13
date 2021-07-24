@@ -76,20 +76,7 @@ SUBSYSTEM_DEF(vote)
 						preferred_map = global.config.defaultmap.map_name
 					choices[preferred_map] += 1
 					greatest_votes = max(greatest_votes, choices[preferred_map])
-			else if(mode == "transfer")
-				var/factor = 1 // factor defines how non-voters are weighted towards calling the shuttle
-				switch(world.time / (1 MINUTES))
-					if(0 to 60)
-						factor = 0.5
-					if(61 to 120)
-						factor = 0.8
-					if(121 to 240)
-						factor = 1
-					if(241 to 300)
-						factor = 1.2
-					else
-						factor = 1.4
-				choices["Initiate Crew Transfer"] += round(non_voters.len * factor)
+	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)
 		for(var/option in choices)
@@ -144,17 +131,12 @@ SUBSYSTEM_DEF(vote)
 			if("map")
 				SSmapping.changemap(global.config.maplist[.])
 				SSmapping.map_voted = TRUE
-			if("transfer")
+			if("transfer") // bunga-edit: crew transfer
 				if(. == "Initiate Crew Transfer")
-					SSshuttle.emergency.request(noannounce = TRUE)
-					SSshuttle.emergencyNoRecall = TRUE //Prevent Recall.
-					priority_announce("The shift has come to an end and the shuttle called. [GLOB.security_level == SEC_LEVEL_RED ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [SSshuttle.emergency.timeLeft(600)] minutes.", null, ANNOUNCER_SHUTTLECALLED, "Priority")
-					log_game("Round end vote passed. Shuttle has been auto-called.")
-					message_admins("Round end vote passed. Shuttle has been auto-called.")
-
+					SSshuttle.autoEnd()
 					var/obj/machinery/computer/communications/C = locate() in GLOB.machines
 					if(C)
-						C.post_status("shuttle")
+						C.post_status("shuttle") // bunga-edit end
 	if(restart)
 		var/active_admins = FALSE
 		for(var/client/C in GLOB.admins + GLOB.deadmins)
@@ -226,7 +208,7 @@ SUBSYSTEM_DEF(vote)
 					shuffle_inplace(maps)
 				for(var/valid_map in maps)
 					choices.Add(valid_map)
-			if("transfer")
+			if("transfer") // bunga-edit: crew transfer
 				var/list/ignore_vote = list(
 					SHUTTLE_IGNITING,
 					SHUTTLE_CALL,
@@ -237,7 +219,8 @@ SUBSYSTEM_DEF(vote)
 				)
 				if(SSshuttle.emergency.mode in ignore_vote)
 					return FALSE
-				choices.Add("Initiate Crew Transfer", "Continue Playing")
+				choices.Add("Initiate Crew Transfer", "Continue Playing") // bunga-edit end
+
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)
