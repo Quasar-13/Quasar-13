@@ -170,6 +170,17 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	return control_computer != null
 
+/obj/machinery/cryopod/JoinPlayerHere(mob/M, buckle)
+	close_machine(M, TRUE)
+
+/obj/machinery/cryopod/latejoin/Initialize()
+	. = ..()
+	new /obj/effect/landmark/latejoin(src)
+
+/obj/machinery/cryopod/latejoin/Destroy()
+	SSjob.latejoin_trackers -= src
+	. = ..()
+
 /obj/machinery/cryopod/close_machine(mob/user)
 	if(!control_computer)
 		find_control_computer(TRUE)
