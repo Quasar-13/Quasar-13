@@ -71,3 +71,14 @@
  * # Race Defines
  */
 #define isbeefman(A) (is_species(A,/datum/species/beefman))
+
+
+/*
+ *	Gunpointing
+*/
+//Movable signals
+///When someone talks into a radio
+#define COMSIG_MOVABLE_RADIO_TALK_INTO "movable_radio_talk_into"
+#define TRAIT_NORUNNING "norunning"		// You walk!
+///Resting position for living mob updated
+#define COMSIG_LIVING_UPDATED_RESTING "living_updated_resting" //from base of (/mob/living/proc/update_resting): (resting)

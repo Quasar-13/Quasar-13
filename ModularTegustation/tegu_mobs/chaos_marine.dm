@@ -26,6 +26,9 @@
 	del_on_death = TRUE
 	blood_volume = BLOOD_VOLUME_NORMAL
 	gps_name = "Chaotic Signal"
+	achievement_type = /datum/award/achievement/boss/marine_kill
+	crusher_achievement_type = /datum/award/achievement/boss/marine_crusher
+	score_achievement_type = /datum/award/score/marine_score
 	deathmessage = "falls to the ground, decaying into glowing particles."
 	deathsound = "sound/magic/curse.ogg"
 	footstep_type = FOOTSTEP_MOB_HEAVY

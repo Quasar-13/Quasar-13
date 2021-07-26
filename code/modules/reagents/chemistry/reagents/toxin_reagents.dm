@@ -2,8 +2,8 @@
 //////////////////////////Poison stuff (Toxins & Acids)///////////////////////
 
 /datum/reagent/toxin
-	name = "Toxin"
-	description = "A toxic chemical."
+	name = "Space Toxin"
+	description = "A spooky poisonous chemical."
 	color = "#CF3600" // rgb: 207, 54, 0
 	taste_description = "bitterness"
 	taste_mult = 1.2
@@ -190,11 +190,6 @@
 	color = "#003333" // rgb: 0, 51, 51
 	toxpwr = 2
 	taste_description = "fish"
-
-/datum/reagent/toxin/carpotoxin/on_mob_life(mob/living/carbon/M)
-	. = ..()
-	for(var/i in M.all_scars)
-		qdel(i)
 
 /datum/reagent/toxin/zombiepowder
 	name = "Zombie Powder"
@@ -434,6 +429,14 @@
 	color = "#7F8400" // rgb: 127, 132, 0
 	toxpwr = 0.1
 	taste_description = "green tea"
+
+/datum/reagent/toxin/mushroom_powder
+	name = "Mushroom Powder"
+	description = "Finely ground polypore mushrooms, ready to be steeped in water to make mushroom tea."
+	reagent_state = SOLID
+	color = "#67423A" // rgb: 127, 132, 0
+	toxpwr = 0.1
+	taste_description = "mushrooms"
 
 /datum/reagent/toxin/mutetoxin //the new zombie powder.
 	name = "Mute Toxin"

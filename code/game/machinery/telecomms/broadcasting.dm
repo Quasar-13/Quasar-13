@@ -103,7 +103,7 @@
 	message,  // the text content of the message
 	spans,  // the list of spans applied to the message
 	list/message_mods, // the list of modification applied to the message. Whispering, singing, ect
-	lvls = null //SKYRAT EDIT - NTSL. It's the list of Z-levels that should hear this message
+	lvls = null //BUNGALOW EDIT - NTSL. It's the list of Z-levels that should hear this message
 )
 	src.source = source
 	src.frequency = frequency

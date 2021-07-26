@@ -36,6 +36,17 @@
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
+//CO Parade suit
+
+/obj/item/clothing/under/misc/coparade
+	desc = "A black suit that belongs to the militaristic captain of the station."
+	name = "commanding officer's parade uniform"
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "spaceship_co"
+	inhand_icon_state = "black_suit"
+	can_adjust = FALSE
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
 //Commodore Parade suit
 
@@ -74,4 +85,10 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "marshal_jacket"
 
+/obj/item/clothing/suit/armor/captain/co
+	name = "co's coat"
+	desc = "The coat of a militaristic captain"
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "commander_jacket"
 

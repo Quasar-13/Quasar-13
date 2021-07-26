@@ -160,6 +160,10 @@
 	for(var/i in 1 to created_volume)
 		new /obj/item/stack/medical/poultice(location)
 
+/datum/chemical_reaction/medicine/seraka_destroy //seraka extract is destroyed by sodium hydroxide
+	results = list(/datum/reagent/consumable/sugar = 1)
+	required_reagents = list(/datum/reagent/medicine/coagulant/seraka_extract = 1, /datum/reagent/lye = 1)
+
 //Bungalow C3 Rebalance
 
 /datum/chemical_reaction/anacea2

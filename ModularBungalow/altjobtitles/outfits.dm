@@ -94,6 +94,13 @@
 	head = null
 
 //Captain
+
+/datum/outfit/job/captain/commandingofficer
+	name = "Captain (Commanding Officer)"
+	head = /obj/item/clothing/head/beret/captain
+	uniform = /obj/item/clothing/under/misc/coparade
+	suit = /obj/item/clothing/suit/armor/captain/co
+
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
 	head = /obj/item/clothing/head/centhat

@@ -60,6 +60,16 @@ SUBSYSTEM_DEF(job)
 		if(!job.map_check())	//Even though we initialize before mapping, this is fine because the config is loaded at new
 			testing("Removed [job.type] due to map config")
 			continue
+
+		if(job.maptype != SSmaptype.maptype)
+			if(job.maptype != "none")
+				continue
+
+/*		if(SSmaptype.maptype == "syndicate")	Shit's fucked
+			if(job.maptype == "none")
+				continue	*/
+
+
 		occupations += job
 		name_occupations[job.title] = job
 		type_occupations[J] = job
