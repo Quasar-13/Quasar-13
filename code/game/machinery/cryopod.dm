@@ -1,5 +1,3 @@
-#define AHELP_FIRST_MESSAGE "Please adminhelp before leaving the round, even if there are no administrators online!"
-
 /*
  * Cryogenic refrigeration unit. Basically a despawner.
  * Stealing a lot of concepts/code from sleepers due to massive laziness.
@@ -134,10 +132,10 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/on_store_message = "has entered long-term storage."
 	var/on_store_name = "Cryogenic Oversight"
 
-	/// Time until despawn when a mob enters a cryopod. You cannot other people in pods unless they're catatonic.
-	var/time_till_despawn = 30 SECONDS
-	/// Cooldown for when it's now safe to try an despawn the player.
-	COOLDOWN_DECLARE(despawn_world_time)
+	// 3 minutes-ish safe period before being despawned.
+	var/time_till_despawn = 3 MINUTES // This is reduced to 30 seconds if a player manually enters cryo
+	var/fast_despawn = 30 SECONDS
+	var/despawn_world_time = null // Used to keep track of the safe period.
 
 	var/obj/machinery/computer/cryopod/control_computer
 	COOLDOWN_DECLARE(last_no_computer_message)
@@ -156,6 +154,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	return ..()
 
 /obj/machinery/cryopod/proc/find_control_computer(urgent = FALSE)
+
 	for(var/cryo_console as anything in GLOB.cryopod_computers)
 		var/obj/machinery/computer/cryopod/console = cryo_console
 		if(get_area(console) == get_area(src))
@@ -171,27 +170,18 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	return control_computer != null
 
-/obj/machinery/cryopod/JoinPlayerHere(mob/M, buckle)
-	close_machine(M, TRUE)
-
-/obj/machinery/cryopod/latejoin/Initialize()
-	. = ..()
-	new /obj/effect/landmark/latejoin(src)
-
-/obj/machinery/cryopod/latejoin/Destroy()
-	SSjob.latejoin_trackers -= src
-	. = ..()
-
-/obj/machinery/cryopod/close_machine(atom/movable/target)
+/obj/machinery/cryopod/close_machine(mob/user)
 	if(!control_computer)
 		find_control_computer(TRUE)
-	if((isnull(target) || isliving(target)) && state_open && !panel_open)
-		..(target)
+	if((isnull(user) || istype(user)) && state_open && !panel_open)
+		..(user)
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)
-			to_chat(occupant, "<span class='notice'><b>You feel cool air surround you. You go numb as your senses turn inward.</b></span>")
-
-		COOLDOWN_START(src, despawn_world_time, time_till_despawn)
+			to_chat(occupant, "<span class='boldnotice'>You feel cool air surround you. You go numb as your senses turn inward.</span>")
+		if(mob_occupant.client || !mob_occupant.key) // Self cryos and SSD
+			despawn_world_time = world.time + (fast_despawn) // This gives them 30 seconds
+		else
+			despawn_world_time = world.time + time_till_despawn
 	icon_state = "cryopod"
 
 /obj/machinery/cryopod/open_machine()
@@ -213,14 +203,19 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		return
 
 	var/mob/living/mob_occupant = occupant
-	if(mob_occupant.stat == DEAD)
-		open_machine()
+	if(mob_occupant)
+		// Eject dead people
+		if(mob_occupant.stat == DEAD)
+			open_machine()
 
-	if(!mob_occupant.client && COOLDOWN_FINISHED(src, despawn_world_time))
-		if(!control_computer)
-			find_control_computer(urgent = TRUE)
+		if(world.time <= despawn_world_time)
+			return
 
-		despawn_occupant()
+		if(!mob_occupant.client && mob_occupant.stat <= SOFT_CRIT) // Occupant is living and has no client.
+			if(!control_computer)
+				find_control_computer(urgent = TRUE) // better hope you found it this time
+
+			despawn_occupant()
 
 /obj/machinery/cryopod/proc/handle_objectives()
 	var/mob/living/mob_occupant = occupant
@@ -288,16 +283,15 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			mob_occupant.mind.special_role = null
 	else
 		crew_member["job"] = "N/A"
-
 	// Delete them from datacore.
 	var/announce_rank = null
-	for(var/datum/data/record/medical_record as anything in GLOB.data_core.medical)
+	for(var/datum/data/record/medical_record in GLOB.data_core.medical)
 		if(medical_record.fields["name"] == mob_occupant.real_name)
 			qdel(medical_record)
-	for(var/datum/data/record/security_record as anything in GLOB.data_core.security)
+	for(var/datum/data/record/security_record in GLOB.data_core.security)
 		if(security_record.fields["name"] == mob_occupant.real_name)
 			qdel(security_record)
-	for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+	for(var/datum/data/record/general_record in GLOB.data_core.general)
 		if(general_record.fields["name"] == mob_occupant.real_name)
 			announce_rank = general_record.fields["rank"]
 			qdel(general_record)
@@ -334,7 +328,6 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			mob_occupant.ghostize(FALSE) // Players despawned too early may not re-enter the game
 		else
 			mob_occupant.ghostize(TRUE)
-
 	handle_objectives()
 	QDEL_NULL(occupant)
 	open_machine()
@@ -352,50 +345,52 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		to_chat(user, "<span class='notice'>Dead people can not be put into cryo.</span>")
 		return
 
-	if(target.key && user != target)
+	if(target.client && user != target)
 		if(iscyborg(target))
 			to_chat(user, "<span class='danger'>You can't put [target] into [src]. [target.p_theyre(capitalized = TRUE)] online.</span>")
 		else
 			to_chat(user, "<span class='danger'>You can't put [target] into [src]. [target.p_theyre(capitalized = TRUE)] conscious.</span>")
 		return
+	else if(target.client)
+		if(alert(target,"Would you like to enter cryosleep?",,"Yes","No") == "No")
+			return
 
-	if(target == user && (tgalert(target, "Would you like to enter cryosleep?", "Enter Cryopod?", "Yes", "No") != "Yes"))
-		return
+	var/generic_plsnoleave_message = " Please adminhelp before leaving the round, even if there are no administrators online!"
 
-	if(target == user)
+	if(target == user && COOLDOWN_FINISHED(target.client, cryo_warned))
+		var/caught = FALSE
 		var/datum/antagonist/antag = target.mind.has_antag_datum(/datum/antagonist)
-
 		var/datum/job/target_job = SSjob.GetJob(target.mind.assigned_role)
-
-		if(target_job && target_job.req_admin_notify)
-			tgalert(target, "You're an important role! [AHELP_FIRST_MESSAGE]")
+		if(target_job.req_admin_notify)
+			alert("You're an important role![generic_plsnoleave_message]")
+			caught = TRUE
 		if(antag)
-			tgalert(target, "You're \a [antag.name]! [AHELP_FIRST_MESSAGE]")
+			alert("You're \a [antag.name]![generic_plsnoleave_message]")
+			caught = TRUE
+		if(caught)
+			COOLDOWN_START(target.client, cryo_warned, 5 MINUTES)
+			return
 
 	if(!istype(target) || !can_interact(user) || !target.Adjacent(user) || !ismob(target) || isanimal(target) || !istype(user.loc, /turf) || target.buckled)
 		return
 		// rerun the checks in case of shenanigans
 
-	if(occupant)
-		to_chat(user, "<span class='notice'>[src] is already occupied!</span>")
-		return
-
 	if(target == user)
-		visible_message("<span class='infoplain'>[user] starts climbing into the cryo pod.</span>")
+		visible_message("[user] starts climbing into the cryo pod.")
 	else
-		visible_message("<span class='infoplain'>[user] starts putting [target] into the cryo pod.</span>")
+		visible_message("[user] starts putting [target] into the cryo pod.")
 
-	to_chat(target, "<span class='warning'><b>If you ghost, log out or close your client now, your character will shortly be permanently removed from the round.</b></span>")
+	if(occupant)
+		to_chat(user, "<span class='notice'>[src] is in use.</span>")
+		return
+	close_machine(target)
 
+	to_chat(target, "<span class='boldnotice'>If you ghost, log out or close your client now, your character will shortly be permanently removed from the round.</span>")
+	name = "[name] ([occupant.name])"
 	log_admin("[key_name(target)] entered a stasis pod.")
 	message_admins("[key_name_admin(target)] entered a stasis pod. [ADMIN_JMP(src)]")
 	add_fingerprint(target)
 
-	close_machine(target)
-	name = "[name] ([target.name])"
-
 // Attacks/effects.
 /obj/machinery/cryopod/blob_act()
 	return // Sorta gamey, but we don't really want these to be destroyed.
-
-#undef AHELP_FIRST_MESSAGE
