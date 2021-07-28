@@ -25,7 +25,7 @@
 /obj/item/clothing/under/rank/civilian/head_of_personnel/galaxy
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-
+	icon_state = "hop"
 /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt/galaxy
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
@@ -109,5 +109,5 @@
 /datum/outfit/job/captain/galaxy
 	name = "Captain (Galaxy Station)"
 	gloves = /obj/item/clothing/gloves/color/captain/galaxy
-	uniform =  /obj/item/clothing/under/rank/captain/galaxy
+	uniform = /obj/item/clothing/under/rank/captain/galaxy
 	head = /obj/item/clothing/head/caphat/galaxy

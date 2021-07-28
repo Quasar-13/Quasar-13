@@ -26,7 +26,9 @@
 	charge = 5e+006
 	},
 /obj/structure/cable,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "af" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -110,7 +112,9 @@
 "al" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/east,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "am" = (
 /obj/machinery/light{
@@ -120,7 +124,9 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "an" = (
 /obj/structure/cable,
@@ -145,7 +151,9 @@
 /area/quartermaster/storage)
 "ap" = (
 /obj/structure/cable,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "aq" = (
 /obj/machinery/door/airlock/external{
@@ -170,7 +178,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "as" = (
 /turf/closed/wall/r_wall,
@@ -180,14 +190,18 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/south,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "au" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 9
 	},
 /obj/structure/cable,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "av" = (
 /obj/effect/turf_decal/bot_white/right,
@@ -209,7 +223,9 @@
 	},
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/east,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "ax" = (
 /obj/effect/turf_decal/bot_white/left,
@@ -753,7 +769,9 @@
 "bG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "bH" = (
 /obj/machinery/button/door{
@@ -1089,8 +1107,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/power/apc/auto_name/east,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable,
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/maintenance/fore/upper)
@@ -2432,10 +2448,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
 "fg" = (
@@ -7574,17 +7587,13 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/storage/eva)
 "pV" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 3;
-	height = 10;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/box;
-	width = 7
+/obj/structure/lattice/catwalk,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 26
 	},
-/turf/open/openspace/airless,
-/area/space)
+/turf/open/openspace,
+/area/maintenance/central)
 "pW" = (
 /turf/closed/wall/r_wall,
 /area/hallway/secondary/command)
@@ -9637,7 +9646,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/computer/cargo{
+/obj/machinery/computer/cargo/request{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -12502,10 +12511,14 @@
 /area/quartermaster/miningdock)
 "Bj" = (
 /obj/structure/window/reinforced/spawner/west,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Bk" = (
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Bl" = (
 /obj/docking_port/stationary{
@@ -12516,11 +12529,15 @@
 	name = "Cargo Bay";
 	width = 12
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Bm" = (
 /obj/structure/window/reinforced/spawner/east,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Bn" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -12615,7 +12632,9 @@
 	pixel_y = -26
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "BA" = (
 /obj/machinery/door/airlock{
@@ -12769,18 +12788,24 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/layer2{
 	dir = 8
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Ca" = (
 /obj/machinery/light/floor,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Cb" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer4{
 	dir = 4
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "Cc" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -12990,7 +13015,9 @@
 /area/crew_quarters/dorms)
 "CI" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "CK" = (
 /obj/structure/railing{
@@ -13005,11 +13032,15 @@
 /area/quartermaster/miningdock)
 "CM" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "CN" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "CO" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -13156,12 +13187,16 @@
 "Dl" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "Dm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "Do" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -13397,9 +13432,6 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
-/obj/machinery/computer{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -13411,6 +13443,9 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
+	},
+/obj/machinery/computer/cargo{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
@@ -13483,7 +13518,9 @@
 "EB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "EC" = (
 /obj/structure/railing{
@@ -13505,14 +13542,18 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer4{
 	dir = 8
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "EF" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/layer2{
 	dir = 4
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/storage)
 "EG" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -13958,6 +13999,15 @@
 	dir = 8
 	},
 /obj/item/stack/ore/iron,
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 3;
+	height = 10;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/box;
+	width = 7
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "GY" = (
@@ -14594,7 +14644,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "Mr" = (
 /obj/item/kirbyplants/random,
@@ -14817,7 +14869,9 @@
 /obj/item/folder/yellow,
 /obj/item/pen,
 /obj/machinery/airalarm/directional/east,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "OI" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -14989,12 +15043,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/hallway/primary/upper)
 "Ps" = (
@@ -15124,7 +15173,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "QD" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -15307,7 +15358,9 @@
 /obj/machinery/atmospherics/components/unary/tank/nitrogen{
 	dir = 4
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "RF" = (
 /obj/structure/lattice,
@@ -15398,9 +15451,6 @@
 /area/maintenance/aft/upper)
 "Sh" = (
 /obj/machinery/airalarm/directional/east,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "Sj" = (
@@ -15496,6 +15546,16 @@
 /obj/effect/landmark/start/head_of_personnel,
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/command)
+"To" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 26
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/upper)
 "Tt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15861,7 +15921,9 @@
 	pixel_y = -32;
 	shuttle_id = "mining"
 	},
-/turf/open/floor/engine/hull,
+/turf/open/floor/engine/hull{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/quartermaster/miningdock)
 "Wn" = (
 /obj/machinery/light/small{
@@ -15999,7 +16061,9 @@
 	dir = 4
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "Xl" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -16310,7 +16374,9 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/space/nearstation)
 "YR" = (
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/engine/gravity_generator)
 "YT" = (
 /obj/structure/grille/broken,
@@ -16468,7 +16534,9 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom{
 	dir = 4
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/tcommsat/server/upper)
 "ZU" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -38474,7 +38542,7 @@ ab
 ab
 ab
 ab
-pV
+ab
 ab
 ab
 ab
@@ -42573,7 +42641,7 @@ oH
 pr
 qg
 bS
-rz
+To
 sm
 sM
 tv
@@ -52853,7 +52921,7 @@ sY
 Ph
 YU
 nb
-nQ
+pV
 oC
 nQ
 tF
@@ -55417,7 +55485,7 @@ jj
 hu
 hu
 hu
-nQ
+pV
 nQ
 nQ
 Sq
