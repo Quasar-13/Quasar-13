@@ -153,3 +153,9 @@
 	desc = "A small workplace for an unimportant person. Comes with a comms relay and a communications console as well as living quarters."
 	template_id = "workplace_command"
 
+/obj/item/workplacecapsule/xenoarch
+	name = "xenoarchaeology capsule"
+	desc = "A small workplace for the lovely xenoarchaeologist."
+	template_id = "workplace_xenoarch"
+
+
