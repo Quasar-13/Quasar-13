@@ -306,24 +306,22 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "aF" = (
-/obj/machinery/atmospherics/pipe/multiz{
-	name = "multi deck distro adapter";
-	piping_layer = 1
-	},
 /obj/structure/lattice/catwalk,
 /obj/structure/sign/warning/electricshock{
 	pixel_x = -32
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/multiz/layer2{
+	name = "multi deck distro adapter"
+	},
 /turf/open/floor/plating,
 /area/maintenance/fore/upper)
 "aG" = (
-/obj/machinery/atmospherics/pipe/multiz{
-	name = "multi deck scrubber adapter";
-	piping_layer = 3
-	},
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/multiz/layer4{
+	name = "multi deck scrubber adapter"
+	},
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/fore/upper)
@@ -11227,16 +11225,13 @@
 /area/quartermaster/storage)
 "xq" = (
 /obj/structure/cable,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/multiz{
-	dir = 1;
-	name = "multi deck scrubber adapter";
-	piping_layer = 3
-	},
 /obj/effect/spawner/structure/window/hollow/directional{
 	dir = 9
 	},
 /obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/multiz/layer4{
+	name = "multi deck scrubber adapter"
+	},
 /turf/open/openspace,
 /area/maintenance/aft/upper)
 "xr" = (
@@ -11264,12 +11259,10 @@
 	dir = 5
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/multiz{
-	dir = 1;
-	name = "multi deck distro adapter";
-	piping_layer = 1
-	},
 /obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/multiz/layer2{
+	name = "multi deck distro adapter"
+	},
 /turf/open/openspace,
 /area/maintenance/aft/upper)
 "xv" = (
@@ -12757,6 +12750,15 @@
 /obj/item/clothing/head/cone{
 	pixel_y = -12
 	},
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 3;
+	height = 10;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/box;
+	width = 7
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "BX" = (
@@ -13994,15 +13996,6 @@
 	dir = 8
 	},
 /obj/item/stack/ore/iron,
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 3;
-	height = 10;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/box;
-	width = 7
-	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "GY" = (
