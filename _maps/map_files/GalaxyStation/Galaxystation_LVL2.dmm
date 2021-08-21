@@ -4245,6 +4245,7 @@
 	name = "engineering camera"
 	},
 /obj/machinery/power/apc/auto_name/north,
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_smes)
 "iS" = (
@@ -12840,6 +12841,15 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/plasteel,
 /area/maintenance/aft/upper)
+"Cj" = (
+/obj/machinery/button/door{
+	id = "gateshutter";
+	name = "Gateway Shutter Control";
+	pixel_y = -26;
+	req_access_txt = "19"
+	},
+/turf/open/openspace,
+/area/maintenance/central)
 "Ck" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/tile/green{
@@ -13916,6 +13926,25 @@
 /obj/machinery/light,
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+"Gq" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/button/door{
+	id = "gateshutter";
+	name = "Gateway Shutter Control";
+	pixel_y = 26;
+	req_access_txt = "19"
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
 "Gr" = (
 /obj/effect/turf_decal/trimline/white/corner{
 	dir = 8
@@ -15172,6 +15201,21 @@
 /obj/structure/falsewall,
 /turf/open/floor/plating,
 /area/maintenance/aft/upper)
+"QI" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/bot_white/right,
+/obj/machinery/computer/gateway_control,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
 "QJ" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/airless,
@@ -15521,6 +15565,13 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/white,
 /area/security/brig)
+"Td" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "gateshutter";
+	name = "Gateway Access Shutter"
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
 "Tg" = (
 /obj/structure/railing,
 /obj/structure/chair/comfy/black{
@@ -54439,9 +54490,9 @@ lY
 Vt
 nQ
 oC
-oC
+Cj
 pS
-qG
+Gq
 Xl
 rU
 Cn
@@ -54695,9 +54746,9 @@ ll
 lZ
 Vt
 nQ
-oC
-oC
-pS
+nQ
+nQ
+Td
 qH
 qI
 qJ
@@ -54952,9 +55003,9 @@ lm
 ma
 jj
 nQ
-oC
-oC
-pS
+nQ
+nQ
+Td
 qI
 rk
 qI
@@ -55209,12 +55260,12 @@ ln
 mb
 jj
 nR
-oC
-oC
-pS
+nQ
+nQ
+Td
 qJ
 qI
-qH
+QI
 mG
 tj
 ok
