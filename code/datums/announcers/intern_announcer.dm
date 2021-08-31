@@ -44,4 +44,3 @@
 		ANNOUNCER_SPANOMALIES = 'sound/ai/intern/spanomalies.ogg')
 
 	custom_alert_message = "<br><span class='alert'>Please stand by for an important message from our new intern.</span><br>"
-

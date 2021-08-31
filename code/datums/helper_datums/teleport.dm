@@ -16,6 +16,7 @@
 		/obj/effect/dummy/chameleon,
 		/obj/effect/wisp,
 		/obj/effect/mob_spawn,
+		/obj/effect/immovablerod,
 		))
 	if(delete_atoms[teleatom.type])
 		qdel(teleatom)
@@ -158,7 +159,6 @@
 					break
 			if(density_found)
 				continue
-
 
 		// DING! You have passed the gauntlet, and are "probably" safe.
 		return F
