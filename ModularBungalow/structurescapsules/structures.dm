@@ -33,7 +33,7 @@
 /datum/map_template/shelter/chemistry
 	name = "Chemistry"
 	shelter_id = "workplace_chemistry"
-	description = "A workplace with a gardening tools and machinery. Some seeds are included."
+	description = "A workplace with an entire chemistry lab."
 	mappath = "_maps/templates/workplace_chemistry.dmm"
 
 /datum/map_template/shelter/command
@@ -47,3 +47,9 @@
 	shelter_id = "workplace_engineering"
 	description = "A workplace with a small amount of engineering gear and some space for atmospherics."
 	mappath = "_maps/templates/workplace_engineering.dmm"
+
+/datum/map_template/shelter/xenoarch
+	name = "Xenoarchaeology"
+	shelter_id = "workplace_xenoarch"
+	description = "A workplace with everything you need for your geology assignment."
+	mappath = "_maps/templates/workplace_xenoarch.dmm"

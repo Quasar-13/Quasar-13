@@ -23,6 +23,10 @@
 	ventcrawler = VENTCRAWLER_ALWAYS
 	var/obj/item/inventory_head
 	var/obj/item/inventory_mask
+	can_be_held = TRUE
+	worn_slot_flags = ITEM_SLOT_HEAD
+	head_icon = 'icons/mob/pets_held.dmi'
+	held_state = "crab"
 	gold_core_spawnable = FRIENDLY_SPAWN
 
 /mob/living/simple_animal/crab/Life()
@@ -54,6 +58,7 @@
 	icon_living = "evilcrab"
 	icon_dead = "evilcrab_dead"
 	gold_core_spawnable = FRIENDLY_SPAWN
+	held_state = "evilcrab"
 
 /mob/living/simple_animal/crab/kreb
 	name = "Kreb"

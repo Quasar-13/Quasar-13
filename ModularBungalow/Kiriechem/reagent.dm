@@ -1,18 +1,18 @@
 //Kiriechem Medicines
-/datum/reagent/medicine/bicardine //brings it back kinda
-	name = "Bicardine"
+/datum/reagent/medicine/bicaridine //brings it back kinda
+	name = "Bicaridine"
 	description = "A bruise reliever with a low overdose"
 	color = "#A1240B" // rgb: 236	236	141
 	taste_description = "spicy"
 	overdose_threshold = 11
 	reagent_state = LIQUID
 
-/datum/reagent/medicine/bicardine/on_mob_life(mob/living/M)
+/datum/reagent/medicine/bicaridine/on_mob_life(mob/living/M)
 	M.adjustBruteLoss(-3*REM)
 	..()
 	return TRUE
 
-/datum/reagent/medicine/bicardine/overdose_process(mob/living/M)
+/datum/reagent/medicine/bicaridine/overdose_process(mob/living/M)
 	M.adjustFireLoss(2*REM)
 	..()
 
@@ -56,7 +56,7 @@
 	..()
 
 
-/datum/reagent/medicine/bicarbital //bicardine but new
+/datum/reagent/medicine/bicarbital //bicaridine but new
 	name = "Bicarbital"
 	description = "A bruise reliever that deals minor genetics damage."
 	color = "#A1240B" // rgb: 236	236	141
