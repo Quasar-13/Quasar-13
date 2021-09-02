@@ -21,8 +21,6 @@ export const COLORS = {
     engineering: '#f1c40f',
     cargo: '#f39c12',
     centcom: '#00c100',
-    syndicate: '#8c2e2e',
-    terragov: '#27db93',
     other: '#c38312',
   },
   // Damage type colors
@@ -31,6 +29,11 @@ export const COLORS = {
     toxin: '#2ecc71',
     burn: '#e67e22',
     brute: '#e74c3c',
+  },
+  // reagent / chemistry related colours
+  reagent: {
+    acidicbuffer: "#fbc314",
+    basicbuffer: "#3853a4",
   },
 };
 
@@ -56,11 +59,12 @@ export const CSS_COLORS = [
   'label',
 ];
 
+/* IF YOU CHANGE THIS KEEP IT IN SYNC WITH CHAT CSS */
 export const RADIO_CHANNELS = [
   {
     name: 'Syndicate',
     freq: 1213,
-    color: '#a52a2a',
+    color: '#8f4a4b',
   },
   {
     name: 'Red Team',
@@ -71,6 +75,16 @@ export const RADIO_CHANNELS = [
     name: 'Blue Team',
     freq: 1217,
     color: '#3434fd',
+  },
+  {
+    name: 'Green Team',
+    freq: 1219,
+    color: '#34fd34',
+  },
+  {
+    name: 'Yellow Team',
+    freq: 1221,
+    color: '#fdfd34',
   },
   {
     name: 'CentCom',
@@ -95,7 +109,7 @@ export const RADIO_CHANNELS = [
   {
     name: 'Command',
     freq: 1353,
-    color: '#5177ff',
+    color: '#fcdf03',
   },
   {
     name: 'Medical',

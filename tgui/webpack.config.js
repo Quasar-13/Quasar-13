@@ -25,9 +25,9 @@ const createStats = verbose => ({
 });
 
 module.exports = (env = {}, argv) => {
-  const mode = argv.mode === 'production' ? 'production' : 'development';
+  const mode = argv.mode || 'production';
   const config = {
-    mode,
+    mode: mode === 'production' ? 'production' : 'development',
     context: path.resolve(__dirname),
     target: ['web', 'es3', 'browserslist:ie 8'],
     entry: {
@@ -49,16 +49,16 @@ module.exports = (env = {}, argv) => {
       chunkLoadTimeout: 15000,
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.tsx', '.ts', '.js'],
       alias: {},
     },
     module: {
       rules: [
         {
-          test: /\.m?jsx?$/,
+          test: /\.(js|cjs|ts|tsx)$/,
           use: [
             {
-              loader: 'babel-loader',
+              loader: require.resolve('babel-loader'),
               options: createBabelConfig({ mode }),
             },
           ],
@@ -73,30 +73,31 @@ module.exports = (env = {}, argv) => {
               },
             },
             {
-              loader: 'css-loader',
+              loader: require.resolve('css-loader'),
               options: {
                 esModule: false,
               },
             },
             {
-              loader: 'sass-loader',
+              loader: require.resolve('sass-loader'),
             },
           ],
         },
         {
           test: /\.(png|jpg|svg)$/,
           use: [
-            'url-loader',
+            {
+              loader: require.resolve('url-loader'),
+              options: {
+                esModule: false,
+              },
+            },
           ],
         },
       ],
     },
     optimization: {
       emitOnErrors: false,
-      splitChunks: {
-        chunks: 'initial',
-        name: 'tgui-common',
-      },
     },
     performance: {
       hints: false,
@@ -105,11 +106,14 @@ module.exports = (env = {}, argv) => {
     cache: {
       type: 'filesystem',
       cacheLocation: path.resolve(__dirname, `.yarn/webpack/${mode}`),
+      buildDependencies: {
+        config: [__filename],
+      },
     },
     stats: createStats(true),
     plugins: [
       new webpack.EnvironmentPlugin({
-        NODE_ENV: env.NODE_ENV || argv.mode || 'development',
+        NODE_ENV: env.NODE_ENV || mode,
         WEBPACK_HMR_ENABLED: env.WEBPACK_HMR_ENABLED || argv.hot || false,
         DEV_SERVER_IP: env.DEV_SERVER_IP || null,
       }),
@@ -130,7 +134,7 @@ module.exports = (env = {}, argv) => {
   }
 
   // Production build specific options
-  if (argv.mode === 'production') {
+  if (mode === 'production') {
     const TerserPlugin = require('terser-webpack-plugin');
     config.optimization.minimizer = [
       new TerserPlugin({
@@ -147,7 +151,7 @@ module.exports = (env = {}, argv) => {
   }
 
   // Development build specific options
-  if (argv.mode !== 'production') {
+  if (mode !== 'production') {
     config.devtool = 'cheap-module-source-map';
   }
 
