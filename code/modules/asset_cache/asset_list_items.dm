@@ -230,6 +230,7 @@
 		"baseskill" = 'icons/UI_Icons/Achievements/baseskill.png',
 		"bbgum" = 'icons/UI_Icons/Achievements/Boss/bbgum.png',
 		"colossus" = 'icons/UI_Icons/Achievements/Boss/colossus.png',
+		"drake" = 'icons/UI_Icons/Achievements/Boss/drake.png',
 		"hierophant" = 'icons/UI_Icons/Achievements/Boss/hierophant.png',
 		"legion" = 'icons/UI_Icons/Achievements/Boss/legion.png',
 		"miner" = 'icons/UI_Icons/Achievements/Boss/miner.png',
@@ -501,7 +502,8 @@
 		var/list/portrait = p
 		var/png = "data/paintings/[tab]/[portrait["md5"]].png"
 		if(fexists(png))
-			assets[portrait["title"]] = png
+			var/asset_name = "[tab]_[portrait["md5"]]"
+			assets[asset_name] = png
 	..() //this is where it registers all these assets we added to the list
 
 /datum/asset/simple/portraits/library

@@ -12,7 +12,7 @@
 	show_in_report = TRUE
 	report_message = "System's local planet has irregular atmospherical properties"
 	trait_to_give = STATION_TRAIT_UNNATURAL_ATMOSPHERE
-/* Not needed
+
 /datum/station_trait/unique_ai
 	name = "Unique AI"
 	trait_type = STATION_TRAIT_NEUTRAL
@@ -20,7 +20,7 @@
 	show_in_report = TRUE
 	report_message = "For experimental purposes, this station AI might show divergence from default lawset. Do not meddle with this experiment."
 	trait_to_give = STATION_TRAIT_UNIQUE_AI
-*/
+
 /datum/station_trait/ian_adventure
 	name = "Ian's Adventure"
 	trait_type = STATION_TRAIT_NEUTRAL
@@ -67,7 +67,7 @@
 /datum/station_trait/announcement_medbot
 	name = "Announcement \"System\""
 	trait_type = STATION_TRAIT_NEUTRAL
-	weight = 1
+	weight = 2
 	show_in_report = TRUE
 	report_message = "Our announcement system is under scheduled maintanance at the moment. Thankfully, we have a backup."
 	blacklist = list(/datum/station_trait/announcement_intern)

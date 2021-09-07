@@ -5760,16 +5760,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
-"cZG" = (
-/obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
-/obj/machinery/atmospherics/components/binary/pump/on{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/engine/atmos)
 "cZJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
@@ -13517,11 +13507,11 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "jOc" = (
-/obj/machinery/power/smes{
-	charge = 5e+006
+/obj/structure/cable,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
-/obj/structure/cable,
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/gravity_generator)
 "jOP" = (
@@ -18931,6 +18921,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/storage_shared)
+"oNT" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/east{
+	pixel_x = 24
+	},
+/turf/open/floor/plating,
+/area/engine/gravity_generator)
 "oOq" = (
 /obj/structure/table,
 /obj/item/hemostat,
@@ -20521,7 +20518,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/gravity_generator)
 "pXu" = (
@@ -21348,9 +21344,6 @@
 /turf/closed/wall/r_wall,
 /area/maintenance/department/security)
 "qFC" = (
-/obj/machinery/power/apc/auto_name/east{
-	pixel_x = 24
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -21360,7 +21353,10 @@
 /obj/machinery/camera/motion{
 	c_tag = "Gravity Generator"
 	},
-/obj/structure/cable,
+/obj/machinery/airalarm{
+	dir = 8;
+	pixel_x = 24
+	},
 /turf/open/floor/plating,
 /area/engine/gravity_generator)
 "qFI" = (
@@ -21523,23 +21519,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
-"qOH" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/holopad,
-/obj/machinery/atmospherics/pipe/simple/yellow/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/engine/atmos)
 "qPL" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -24455,7 +24434,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/trinary/mixer/airmix{
-	dir = 4
+	dir = 4;
+	target_pressure = 101
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/atmos)
@@ -25486,13 +25466,16 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/engine/atmos)
 "tVm" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 5
 	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/gravity_generator)
 "tVK" = (
@@ -30132,15 +30115,10 @@
 /turf/open/floor/plasteel/dark,
 /area/storage/eva)
 "xXX" = (
-/obj/machinery/airalarm{
-	pixel_y = 24
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /obj/structure/cable,
-/obj/machinery/power/terminal,
+/obj/machinery/power/smes{
+	charge = 5e+006
+	},
 /turf/open/floor/plating,
 /area/engine/gravity_generator)
 "xYs" = (
@@ -58691,7 +58669,7 @@ tgA
 hFX
 xXX
 jOc
-pOC
+fGz
 pOC
 pOC
 cOv
@@ -58948,7 +58926,7 @@ npL
 lop
 tVm
 pWU
-pOC
+fGz
 pOC
 jOP
 cOv
@@ -59204,8 +59182,8 @@ ieX
 tgA
 hFX
 qFC
+oNT
 fGz
-pOC
 pOC
 pOC
 cOv
@@ -68960,7 +68938,7 @@ kMk
 bFF
 wfO
 qMF
-cZG
+pkj
 bUj
 sAF
 vwv
@@ -69470,7 +69448,7 @@ npD
 npD
 npD
 npD
-qOH
+lAU
 hxz
 oip
 twP
@@ -69731,7 +69709,7 @@ lAU
 hxz
 thD
 fWH
-cZG
+pkj
 bUj
 ntj
 ubA

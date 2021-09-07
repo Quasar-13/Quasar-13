@@ -9,6 +9,8 @@
 	fire_sound = 'sound/weapons/emitter.ogg'
 	flags_1 =  CONDUCT_1
 	w_class = WEIGHT_CLASS_HUGE
+	///what kind of magic is this
+	var/school = SCHOOL_EVOCATION
 	var/checks_antimagic = TRUE
 	var/max_charges = 6
 	var/charges = 0
@@ -54,6 +56,7 @@
 	chambered = new ammo_type(src)
 	if(can_charge)
 		START_PROCESSING(SSobj, src)
+	RegisterSignal(src, COMSIG_ITEM_RECHARGED, .proc/instant_recharge)
 
 
 /obj/item/gun/magic/Destroy()
@@ -89,3 +92,8 @@
 	switch(var_name)
 		if(NAMEOF(src, charges))
 			recharge_newshot()
+
+/obj/item/gun/magic/proc/instant_recharge()
+	charges = max_charges
+	recharge_newshot()
+	update_icon()
