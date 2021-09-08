@@ -84,7 +84,8 @@
 #define ACCESS_TOXINS_STORAGE 71
 /// Room and launching.
 #define ACCESS_AUX_BASE 72
-
+/// Solgov offices
+#define ACCESS_SOLGOV 90 //BUNGALOW EDIT: solgov offical
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.

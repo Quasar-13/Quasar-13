@@ -150,8 +150,8 @@ SUBSYSTEM_DEF(blackbox)
 			record_feedback("tally", "radio_usage", 1, "centcom")
 		if(FREQ_AI_PRIVATE)
 			record_feedback("tally", "radio_usage", 1, "ai private")
-		if(FREQ_TERRAGOV)	// Tegustation TerraGov edit: Adds TerraGov frequency
-			record_feedback("tally", "radio_usage", 1, "terragov")
+		if(FREQ_SOLGOV)	// bungaedit - solgov radio
+			record_feedback("tally", "radio_usage", 1, "solgov")
 		if(FREQ_CTF_RED)
 			record_feedback("tally", "radio_usage", 1, "CTF red team")
 		if(FREQ_CTF_BLUE)
