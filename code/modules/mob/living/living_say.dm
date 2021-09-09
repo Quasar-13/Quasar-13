@@ -19,7 +19,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	// Faction
 	RADIO_KEY_SYNDICATE = RADIO_CHANNEL_SYNDICATE,
 	RADIO_KEY_CENTCOM = RADIO_CHANNEL_CENTCOM,
-	RADIO_KEY_TERRAGOV = RADIO_CHANNEL_TERRAGOV, // Tegustation TerraGov edit
+	RADIO_KEY_SOLGOV = RADIO_CHANNEL_SOLGOV, // Bungalow edit - solgov
 
 	// Admin
 	MODE_KEY_ADMIN = MODE_ADMIN,
@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	// Faction
 	"е" = RADIO_CHANNEL_SYNDICATE,
 	"н" = RADIO_CHANNEL_CENTCOM,
-	"я" = RADIO_CHANNEL_TERRAGOV,
+	"я" = RADIO_CHANNEL_SOLGOV,
 
 	// Admin
 	"з" = MODE_ADMIN,

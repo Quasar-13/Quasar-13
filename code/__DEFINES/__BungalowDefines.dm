@@ -12,10 +12,7 @@
 /// Mentorhelp keybind
 #define COMSIG_KB_ADMIN_MSAY_DOWN "keybinding_mentor_msay_down"
 /// Radio channels
-#define RADIO_CHANNEL_TERRAGOV "TerraGov"
-#define RADIO_KEY_TERRAGOV "z"
-#define RADIO_TOKEN_TERRAGOV ":z"
-#define FREQ_TERRAGOV 1345
+
 /// Tegustation Security Updates
 #define SEC_RECORD_BAD_CLEARANCE "ACCESS DENIED: User ID has inadequate clearance."
 #define SEC_RECORD_BOT_COOLDOWN 60 SECONDS

@@ -4,8 +4,8 @@
 /obj/item/clothing/suit/neocoat
 	name = "doctor's long labcoat"
 	desc = "A long white labcoat used by doctors occasionally"
-	icon = 'ModularBungalow/zbungalowicons/clothing/newlabcoats.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/newlabcoats_worn.dmi'
+	icon = 'ModularBungalow/zbungalowicons/clothing/obj/suits.dmi'
+	worn_icon = 'ModularBungalow/zbungalowicons/clothing/mob/suits.dmi'
 	icon_state = "labcoat_doc_alt"
 	inhand_icon_state = "labcoat"
 	allowed = list(/obj/item/analyzer, /obj/item/stack/medical, /obj/item/dnainjector, /obj/item/reagent_containers/dropper, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/hypospray, /obj/item/healthanalyzer, /obj/item/flashlight/pen, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/pill, /obj/item/storage/pill_bottle, /obj/item/paper, /obj/item/melee/classic_baton/telescopic, /obj/item/soap, /obj/item/sensor_device, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/biopsy_tool)

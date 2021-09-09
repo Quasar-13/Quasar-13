@@ -6,7 +6,7 @@
 	total_positions = 1
 	spawn_positions = 0
 	supervisors = "the Captain, SolGov, and Space Law"
-	special_notice = "Monitor the station and ensure the security team and command staff are abiding by space law. Report any misbehaviour to SolGov."
+//	special_notice = "Monitor the station and ensure the security team and command staff are abiding by space law. Report any misbehaviour to SolGov."
 	selection_color = "#8482d5"
 	minimal_player_age = 7
 	exp_requirements = 180
@@ -27,7 +27,7 @@
 	display_order = JOB_DISPLAY_ORDER_SOLGOV
 
 	paycheck = PAYCHECK_COMMAND
-	paycheck_department = ACCOUNT_COMMAND
+	paycheck_department = ACCOUNT_CIV
 
 /obj/effect/landmark/start/deputy
 	name = "SolGov Representative"
@@ -36,3 +36,28 @@
 /obj/item/kitchen/knife/letter_opener/solgov
     icon_state = "letter_opener_solgov"
     embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
+
+/datum/outfit/job/solgov
+	name = "SolGov Representative"
+	jobtype = /datum/job/solgov
+
+	id = /obj/item/card/id/silver
+	head = /obj/item/clothing/head/solgov
+	uniform = /obj/item/clothing/under/solgov/formal
+	accessory = /obj/item/clothing/accessory/waistcoat/solgov
+	suit = /obj/item/clothing/suit/toggle/solgov
+	gloves = /obj/item/clothing/gloves/color/white
+	shoes = /obj/item/clothing/shoes/laceup
+	ears = /obj/item/radio/headset/solgov
+	glasses = /obj/item/clothing/glasses/sunglasses
+	belt = /obj/item/pda/solgov
+
+	implants = list(/obj/item/implant/mindshield)
+
+	backpack = /obj/item/storage/backpack/captain
+	satchel = /obj/item/storage/backpack/satchel/cap
+	duffelbag = /obj/item/storage/backpack/duffelbag/captain
+
+	backpack_contents = list(
+		/obj/item/kitchen/knife/letter_opener/solgov = 1
+	)
