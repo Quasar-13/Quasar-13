@@ -4,7 +4,7 @@
 	department_head = list("Solgov")
 	faction = "Station"
 	total_positions = 1
-	spawn_positions = 0
+	spawn_positions = 1 //test
 	supervisors = "the Captain, SolGov, and Space Law"
 //	special_notice = "Monitor the station and ensure the security team and command staff are abiding by space law. Report any misbehaviour to SolGov."
 	selection_color = "#8482d5"
@@ -29,13 +29,12 @@
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_CIV
 
-/obj/effect/landmark/start/deputy
+/obj/effect/landmark/start/solgov
 	name = "SolGov Representative"
 	icon_state = "SolGov Representative"
 
 /obj/item/kitchen/knife/letter_opener/solgov
     icon_state = "letter_opener_solgov"
-    embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
 
 /datum/outfit/job/solgov
 	name = "SolGov Representative"

@@ -1,11 +1,12 @@
 GLOBAL_LIST_INIT(command_positions, list(
 	"Captain",
 	"Head of Personnel",
+	"SolGov Representative",
 	"Head of Security",
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Quartermaster"))
+	"Quartermaster",)) //qm will never be a head
 
 
 GLOBAL_LIST_INIT(engineering_positions, list(
