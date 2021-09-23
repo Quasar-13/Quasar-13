@@ -147,3 +147,5 @@
 /obj/item/crowbar/old
 	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors. This one seems to be covered in dust."
 	icon = 'icons/obj/tools_old.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/tools_old_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_old_righthand.dmi'

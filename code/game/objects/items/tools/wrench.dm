@@ -2,8 +2,8 @@
 	name = "wrench"
 	desc = "A wrench with common uses. Can be found in your hand."
 	icon = 'icons/obj/tools.dmi'
-	icon_state = "wrench"
-	worn_icon_state = "wrench"
+	icon_state = "wrench_pipe"
+	worn_icon_state = "wrench_pipe"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	flags_1 = CONDUCT_1
@@ -137,3 +137,5 @@
 	desc = "A wrench with common uses. Can be found in your hand. This one seems ancient!"
 	icon = 'icons/obj/tools_old.dmi'
 	icon_state = "wrench"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_old_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_old_righthand.dmi'

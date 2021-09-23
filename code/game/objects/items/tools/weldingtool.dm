@@ -389,5 +389,7 @@
 /obj/item/weldingtool/old
 	desc = "A standard edition welder provided by Nanotrasen. This one seems to leak a little bit."
 	icon = 'icons/obj/tools_old.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/tools_old_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_old_righthand.dmi'
 
 #undef WELDER_FUEL_BURN_INTERVAL
