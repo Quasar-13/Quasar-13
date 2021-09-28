@@ -574,6 +574,7 @@
 				job.allow_bureaucratic_error = FALSE
 				job.total_positions = 0
 			for(var/mob/living/carbon/human/H in GLOB.player_list)
+				var/obj/item/clothing/mask/newmask = new /obj/item/clothing/mask/bandana/black
 				// Jumpsuit
 				var/olduniform = H.w_uniform
 				var/obj/item/clothing/under/newuniform = new /obj/item/clothing/under/color/black
@@ -590,8 +591,13 @@
 				qdel(H.wear_mask)
 				qdel(H.shoes)
 
+				if(isplasmaman(H)) // So you don't get killed
+					var/obj/item/clothing/mask/newhead = new /obj/item/clothing/head/helmet/space/plasmaman/robotics/anarchy
+					newuniform = new /obj/item/clothing/under/plasmaman/robotics/anarchy
+					newmask = new /obj/item/clothing/mask/breath
+					H.equip_to_slot_or_del(newhead, ITEM_SLOT_HEAD)
+
 				// Mask
-				var/obj/item/clothing/mask/newmask = new /obj/item/clothing/mask/bandana/black
 				H.equip_to_slot_or_del(newmask, ITEM_SLOT_MASK)
 
 				// Shoes
@@ -602,7 +608,7 @@
 				if(H.get_idcard(TRUE))
 					var/obj/item/card/id/LEID = H.get_idcard(TRUE)
 					LEID.access = get_all_accesses()
-					LEID.assignment = "Assistant"
+					LEID.assignment = "Free Citizen"
 					LEID.desc = "An identification card of a FREE man! Has full access everywhere on the station."
 					LEID.update_label()
 

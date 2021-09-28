@@ -202,6 +202,10 @@
 	icon_state = "roboticist_envirohelm"
 	inhand_icon_state = "roboticist_envirohelm"
 
+/obj/item/clothing/head/helmet/space/plasmaman/robotics/anarchy
+	name = "dark plasma envirosuit helmet"
+	desc = "A plasmaman envirohelmet designed for freedom fighters within the ranks of ISC."
+
 /obj/item/clothing/head/helmet/space/plasmaman/genetics
 	name = "geneticist's plasma envirosuit helmet"
 	desc = "A plasmaman envirohelmet designed for geneticists."
