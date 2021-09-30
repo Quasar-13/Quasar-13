@@ -188,7 +188,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	var/attack_speed_mod = 0.4
 
-/obj/item/staff/roadsign/melee_attack_chain(mob/living/user, atom/target, params)
+/obj/item/staff/roadsign/melee_attack_chain(mob/living/carbon/user, atom/target, params)
 	..()
 	if(user.mad_shaking > 0)
 		user.changeNext_move(CLICK_CD_MELEE * attack_speed_mod)
