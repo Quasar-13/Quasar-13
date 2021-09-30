@@ -2,8 +2,8 @@
 	name = "wrench"
 	desc = "A wrench with common uses. Can be found in your hand."
 	icon = 'icons/obj/tools.dmi'
-	icon_state = "wrench"
-	worn_icon_state = "wrench"
+	icon_state = "wrench_pipe"
+	worn_icon_state = "wrench_pipe"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	flags_1 = CONDUCT_1
@@ -121,3 +121,21 @@
 	else
 		icon_state = "[initial(icon_state)]"
 		inhand_icon_state = "[initial(inhand_icon_state)]"
+
+/obj/item/wrench/syndie
+	name = "suspicious-looking wrench"
+	desc = "It’s one of those fancy wrenches that you turn backward without twisting the bolt for faster action."
+	icon_state = "wrench_syndie"
+	toolspeed = 0.5
+
+/obj/item/wrench/crescent
+	name = "crescent wrench"
+	desc = "A wrench with common uses. Can be found in your hand. This one is a crescent wrench."
+	icon_state = "wrench"
+
+/obj/item/wrench/old
+	desc = "A wrench with common uses. Can be found in your hand. This one seems ancient!"
+	icon = 'icons/obj/tools_old.dmi'
+	icon_state = "wrench"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_old_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_old_righthand.dmi'

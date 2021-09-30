@@ -679,16 +679,19 @@
 	important_info = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	assignedrole = ROLE_SYNDICATE_CYBERSUN
+	var/assigned_antag = /datum/antagonist/cybersun // I need it because captain is a subtype of this.
 
 /datum/outfit/syndicatespace/syndicrew/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE
 
 /obj/effect/mob_spawn/human/syndicatespace/special(mob/living/new_spawn)
 	new_spawn.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
-	new_spawn.mind.add_antag_datum(/datum/antagonist/cybersun)
+	new_spawn.mind.add_antag_datum(assigned_antag)
 	var/policy = get_policy(assignedrole)
-	if(policy)
+	if(policy) // If admins have a policy set for the Cybersun.
 		to_chat(new_spawn, "<span class='bold'>[policy]</span>")
+	else // No policy set - show important_info instead.
+		to_chat(new_spawn, "<span class='bold'>[important_info]</span>")
 
 /obj/effect/mob_spawn/human/syndicatespace/captain
 	name = "Syndicate Ship Captain"
@@ -697,9 +700,7 @@
 	important_info = "Protect the ship and secret documents in your backpack with your own life."
 	outfit = /datum/outfit/syndicatespace/syndicrew/syndicaptain
 	assignedrole = ROLE_SYNDICATE_CYBERSUN_CAPTAIN
-
-/obj/effect/mob_spawn/human/syndicatespace/captain/special(mob/living/new_spawn)
-	new_spawn.mind.add_antag_datum(/datum/antagonist/cybersun/captain)
+	assigned_antag = /datum/antagonist/cybersun/captain
 
 /datum/outfit/syndicatespace/syndicaptain/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE

@@ -76,7 +76,10 @@
 
 /obj/item/storage/toolbox/mechanical/PopulateContents()
 	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
+	if(prob(50))
+		new /obj/item/wrench(src)
+	else
+		new /obj/item/wrench/crescent(src)
 	new /obj/item/weldingtool(src)
 	new /obj/item/crowbar(src)
 	new /obj/item/analyzer(src)
@@ -88,6 +91,12 @@
 	has_latches = FALSE
 	has_soul = TRUE
 
+/obj/item/storage/toolbox/mechanical/old/PopulateContents()
+	new /obj/item/screwdriver/old(src)
+	new /obj/item/wrench/old(src)
+	new /obj/item/weldingtool/old(src)
+	new /obj/item/crowbar/old(src)
+	new /obj/item/wirecutters/old(src)
 /obj/item/storage/toolbox/mechanical/old/heirloom
 	name = "toolbox" //this will be named "X family toolbox"
 	desc = "It's seen better days."
@@ -122,12 +131,12 @@
 	..()
 
 /obj/item/storage/toolbox/mechanical/old/clean/PopulateContents()
-	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
-	new /obj/item/weldingtool(src)
-	new /obj/item/crowbar(src)
-	new /obj/item/wirecutters(src)
-	new /obj/item/multitool(src)
+	new /obj/item/screwdriver/old(src)
+	new /obj/item/wrench/old(src)
+	new /obj/item/weldingtool/old(src)
+	new /obj/item/crowbar/old(src)
+	new /obj/item/wirecutters/old(src)
+	new /obj/item/multitool/old(src)
 	new /obj/item/clothing/gloves/color/yellow(src)
 
 /obj/item/storage/toolbox/electrical
@@ -164,11 +173,11 @@
 
 /obj/item/storage/toolbox/syndicate/PopulateContents()
 	new /obj/item/screwdriver/nuke(src)
-	new /obj/item/wrench(src)
+	new /obj/item/wrench/syndie(src)
 	new /obj/item/weldingtool/largetank(src)
-	new /obj/item/crowbar/red(src)
-	new /obj/item/wirecutters(src, "red")
-	new /obj/item/multitool(src)
+	new /obj/item/crowbar/syndie(src)
+	new /obj/item/wirecutters/syndie(src)
+	new /obj/item/multitool/syndie(src)
 	new /obj/item/clothing/gloves/combat(src)
 
 /obj/item/storage/toolbox/drone
