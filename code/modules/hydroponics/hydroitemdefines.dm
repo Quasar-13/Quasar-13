@@ -267,9 +267,6 @@
 	desc = "Contains a fertilizer that increases the yield of a plant while gradually preventing mutations."
 	list_reagents = list(/datum/reagent/plantnutriment/robustharvestnutriment = 50)
 
-/obj/item/reagent_containers/glass/bottle/nutrient/empty
-	name = "bottle"
-
 /obj/item/reagent_containers/glass/bottle/killer
 	volume = 30
 	amount_per_transfer_from_this = 1
