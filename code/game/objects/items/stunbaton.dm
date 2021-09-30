@@ -260,8 +260,9 @@
 	return 1
 
 /// After the initial stun period, we check to see if the target needs to have the stun applied.
-/obj/item/melee/baton/proc/apply_stun_effect_end(mob/living/target, armor_v)
+/obj/item/melee/baton/proc/apply_stun_effect_end(mob/living/target, armor_check)
 	var/trait_check = HAS_TRAIT(target, TRAIT_STUNRESISTANCE) //var since we check it in out to_chat as well as determine stun duration
+	var/armor_mod = 1 + (armor_check / 35)
 	if(!target.IsKnockdown())
 		to_chat(target, "<span class='warning'>Your muscles seize, making you collapse[trait_check ? ", but your body quickly recovers..." : "!"]</span>")
 
