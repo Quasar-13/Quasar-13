@@ -267,12 +267,12 @@
 			return
 		if(!(T in view(user.client.view, user)))
 			return
+		user.swap_hand()
 		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
 		CP.locked = FALSE
 		primed = FALSE
 		update_icon()
 		primed_attack(T, user)
-		user.swap_hand()
 
 /obj/item/storage/belt/nano_blade/proc/primed_attack(turf/target, mob/living/user)
 	var/turf/end = get_turf(user)
@@ -280,16 +280,15 @@
 	var/obj/spot1 = new phaseout(start, user.dir)
 	var/halt = FALSE
 	// Stolen dash code
-	for(var/T in getline(start, get_turf(target)))
-		var/turf/tile = T
-		for(var/mob/living/victim in tile)
+	for(var/turf/T in getline(start, get_turf(target)))
+		for(var/mob/living/victim in T)
 			if(victim != user)
 				playsound(victim, 'ModularTegustation/Tegusounds/weapons/anime_slash.ogg', 30, TRUE)
 				victim.take_bodypart_damage(15)
 		// Unlike actual ninjas, we stop noclip-dashing here.
 		if(isclosedturf(T))
 			halt = TRUE
-		for(var/obj/O in tile)
+		for(var/obj/O in T)
 			// We ignore mobs as we are cutting through them
 			if(!O.CanPass(user, tile))
 				halt = TRUE
