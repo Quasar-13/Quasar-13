@@ -9,13 +9,13 @@
 	slowdown = -0.25
 	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/mask/gas/mad_clown/equipped(mob/living/user, slot)
+/obj/item/clothing/mask/gas/mad_clown/equipped(mob/living/carbon/user, slot)
 	. = ..()
 	if(ishuman(user) && slot == ITEM_SLOT_MASK)
 		ADD_TRAIT(src, TRAIT_NODROP, "mad-mask")
 		user.mad_shaking += 1
 
-/obj/item/clothing/mask/gas/mad_clown/dropped(mob/living/user)
+/obj/item/clothing/mask/gas/mad_clown/dropped(mob/living/carbon/user)
 	. = ..()
 	REMOVE_TRAIT(src, TRAIT_NODROP, "mad-mask")
 	user.mad_shaking -= 1
