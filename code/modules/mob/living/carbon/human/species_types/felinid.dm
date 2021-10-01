@@ -19,7 +19,7 @@
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	liked_food = MEAT | RAW | DAIRY
-	disliked_food = GROSS
+	disliked_food = GROSS | CLOTH
 	toxic_food = FRUIT | VEGETABLES
 //	toxicliked_food = DAIRY				For later
 	ass_image = 'icons/ass/asscat.png'
