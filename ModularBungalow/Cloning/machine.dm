@@ -456,11 +456,11 @@
 		occupant.forceMove(T)
 	update_icon()
 	mob_occupant.domutcheck(1) //Waiting until they're out before possible monkeyizing. The 1 argument forces powers to manifest.
-	for(var/fl in unattached_flesh)
-		fl.forceMove(T)
+	for(var/obj/item/fl in unattached_flesh)
 		if(istype(fl, /obj/item/organ))
 			var/obj/item/organ/O = fl
 			O.organ_flags &= ~ORGAN_FROZEN
+			O.forceMove(T)
 	unattached_flesh.Cut()
 
 	occupant = null
