@@ -39,3 +39,4 @@
 /obj/projectile/bullet/a10_24
 	name = "10x24mm bullet"
 	damage = 26
+	armour_penetration = 25

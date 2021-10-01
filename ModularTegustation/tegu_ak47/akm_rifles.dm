@@ -26,6 +26,8 @@
 	icon_state = "aks74u"
 	fire_sound = 'ModularTegustation/Tegusounds/weapons/guns/ak47.ogg' // Temporary
 	burst_size = 1
+	actions_types = list()
+	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/aks74u
@@ -58,7 +60,7 @@
 	max_ammo = 30
 
 /obj/item/ammo_box/magazine/aks74u/expanded
-	name = "AKS-74U Magazine (5.45x39mm)"
+	name = "AKS-74U Expanded Magazine (5.45x39mm)"
 	icon_state = "ak_mag_large_item"
 	max_ammo = 50
 
