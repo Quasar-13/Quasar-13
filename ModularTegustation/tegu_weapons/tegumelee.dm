@@ -290,7 +290,7 @@
 			halt = TRUE
 		for(var/obj/O in T)
 			// We ignore mobs as we are cutting through them
-			if(!O.CanPass(user, tile))
+			if(!O.CanPass(user, T))
 				halt = TRUE
 		if(halt)
 			break
