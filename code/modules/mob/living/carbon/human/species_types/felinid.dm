@@ -18,8 +18,8 @@
 	attack_verb = "claw"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
-	liked_food = MEAT | RAW | DAIRY
-	disliked_food = GROSS
+	liked_food = MEAT | RAW | DAIRY | SEAFOOD
+	disliked_food = GROSS | CLOTH
 	toxic_food = FRUIT | VEGETABLES
 //	toxicliked_food = DAIRY				For later
 	ass_image = 'icons/ass/asscat.png'
@@ -33,6 +33,13 @@
 	if(H)
 		stop_wagging_tail(H)
 	. = ..()
+
+// Prevents felinids from taking toxin damage from carpotoxin
+/datum/species/human/felinid/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)
+	. = ..()
+	if(istype(chem, /datum/reagent/toxin/carpotoxin))
+		var/datum/reagent/toxin/carpotoxin/fish = chem
+		fish.toxpwr = 0
 
 /datum/species/human/felinid/can_wag_tail(mob/living/carbon/human/H)
 	return mutant_bodyparts["tail_human"] || mutant_bodyparts["waggingtail_human"]
