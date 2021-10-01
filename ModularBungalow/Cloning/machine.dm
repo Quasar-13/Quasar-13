@@ -219,7 +219,7 @@
 	ADD_TRAIT(H, TRAIT_MUTE, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOBREATH, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
-	H.Unconscious(80)
+	H.Unconscious(200)
 
 	if(!empty)
 		clonemind.transfer_to(H)
@@ -457,7 +457,10 @@
 	update_icon()
 	mob_occupant.domutcheck(1) //Waiting until they're out before possible monkeyizing. The 1 argument forces powers to manifest.
 	for(var/fl in unattached_flesh)
-		qdel(fl)
+		fl.forceMove(T)
+		if(istype(fl, /obj/item/organ))
+			var/obj/item/organ/O = fl
+			O.organ_flags &= ~ORGAN_FROZEN
 	unattached_flesh.Cut()
 
 	occupant = null
@@ -554,8 +557,7 @@
 				BP.forceMove(src)
 				unattached_flesh += BP
 
-	for(var/o in H.internal_organs)
-		var/obj/item/organ/organ = o
+	for(var/obj/item/organ/organ in H.internal_organs)
 		if(!istype(organ) || (organ.organ_flags & ORGAN_VITAL))
 			continue
 		organ.organ_flags |= ORGAN_FROZEN
@@ -604,7 +606,7 @@
 		occupant_overlay.pixel_y = 27 + round(sin(world.time) * 3)
 		occupant_overlay.pixel_x = round(sin(world.time * 3))
 		. += occupant_overlay
-		. += "cover-on"
+	. += "cover-on"
 	. += "panel"
 
 /*
