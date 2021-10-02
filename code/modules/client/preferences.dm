@@ -902,6 +902,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 
+			//Syndiestation, REPLACE ASAP
+			if(SSmaptype.maptype == "syndicate")
+				if(job.maptype == "none")
+					continue
+
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
 				width += widthPerColumn
@@ -921,6 +926,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			lastJob = job
 			if(is_banned_from(user.ckey, rank))
 				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;bancheck=[rank]'> BANNED</a></td></tr>"
+				continue
+			if(job.trusted_only && !is_trusted_player(user.client))
+				HTML += "<font color=black>[rank]</font></td><td><font color=black> \[WHITELISTED\]</font></td></tr>"
 				continue
 			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 			if(required_playtime_remaining)
@@ -1002,7 +1010,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	popup.open(FALSE)
 
 /datum/preferences/proc/SetJobPreferenceLevel(datum/job/job, level)
-	if (!job)
+	if(!job)
 		return FALSE
 
 	if (level == JP_HIGH) // to high
