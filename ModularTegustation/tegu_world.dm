@@ -32,13 +32,8 @@
 	//s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	//s += "</a>"
 	//s += " | "
-	s += "<a href=\"[CONFIG_GET(string/discordurl)]\">"//Change this to wherever you want the hub to link to
-	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
-	s += "</a>"
-	s += ")<br>"
-
 	// Tegu Description
-	s += "<br><b>The best cuts this side of the Andromeda!</b>"
+	s += "<br><b>Best cuts this side of the andromeda!</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
 	s += "<br>Map: [map_name]"
 
