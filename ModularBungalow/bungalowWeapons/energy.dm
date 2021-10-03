@@ -9,7 +9,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
 	selfcharge = 1
-	ammo_x_offset = 1
+	ammo_x_offset = 2
 	charge_sections = 6
 
 
