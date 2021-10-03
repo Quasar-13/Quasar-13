@@ -1,32 +1,37 @@
-/datum/job/tegu/mechanic
+/datum/job/mechanic
 	title = "Mechanic"
 	department_head = list("Logistics Officer")
-	faction = "Syndicate"
+	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the logistics officer"
-	selection_color = "#bbe291"
+	supervisors = "the commandant"
+	selection_color = "#DDDD33"
+	exp_requirements = 60
+	exp_type = EXP_TYPE_LOGISTICS
+	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/logisticsofficer
+	outfit = /datum/outfit/job/mechanic
 
-	access = list()
-	minimal_access = list()
-	paycheck = PAYCHECK_EASY
-	paycheck_department = ACCOUNT_SRV
-	display_order = JOB_DISPLAY_ORDER_BOTANIST
-	bounty_types = CIV_JOB_GROW
+	access = list(ACCESS_SYNDICATE)
+	minimal_access = list(ACCESS_SYNDICATE)
+	paycheck = PAYCHECK_MEDIUM
+	paycheck_department = ACCOUNT_ENG
+	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
+	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER
+	bounty_types = CIV_JOB_ENG
 
 /datum/outfit/job/mechanic
 	name = "Mechanic"
-	jobtype = /datum/job/tegu/mechanic
+	jobtype = /datum/job/mechanic
 
-	belt = /obj/item/pda/botanist
-	ears = /obj/item/radio/headset/headset_srv
-	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
-	suit = /obj/item/clothing/suit/apron
-	gloves  =/obj/item/clothing/gloves/botanic_leather
-	suit_store = /obj/item/plant_analyzer
+	id = /obj/item/card/id/black
+	belt = /obj/item/storage/belt/utility
+	ears = /obj/item/radio/headset/syndicate
+	uniform = /obj/item/clothing/under/smc/mechanic
+	shoes = /obj/item/clothing/shoes/workboots
+	box = /obj/item/storage/box/survival/engineer
 
-	backpack = /obj/item/storage/backpack/botany
-	satchel = /obj/item/storage/backpack/satchel/hyd
-	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics
+//Spawn Point
+/obj/effect/landmark/start/mechanic
+	name = "Mechanic"
+	icon_state = "mechanic"

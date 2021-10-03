@@ -1,32 +1,41 @@
-/datum/job/tegu/fo
+/datum/job/first_officer
 	title = "First Officer"
 	department_head = list("Commandant")
-	faction = "Syndicate"
+	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
-	selection_color = "#bbe291"
+	selection_color = "#ff3322"
+	exp_requirements = 60
+	exp_type = EXP_TYPE_SYNDICATE
+	maptype = "syndicate"
 
-	outfit = /datum/outfit/job/fo
+	outfit = /datum/outfit/job/first_officer
 
-	access = list()
-	minimal_access = list()
-	paycheck = PAYCHECK_EASY
-	paycheck_department = ACCOUNT_SRV
-	display_order = JOB_DISPLAY_ORDER_BOTANIST
-	bounty_types = CIV_JOB_GROW
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_COMMAND, ACCESS_SYNDICATE_POLICE)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_COMMAND, ACCESS_SYNDICATE_POLICE)
+	paycheck = PAYCHECK_COMMAND
+	paycheck_department = ACCOUNT_ENG
 
-/datum/outfit/job/fo
+	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
+
+	display_order = JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL
+	bounty_types = CIV_JOB_ENG
+
+/datum/outfit/job/first_officer
 	name = "First Officer"
-	jobtype = /datum/job/tegu/fo
+	jobtype = /datum/job/first_officer
+	belt = null
 
-	belt = /obj/item/pda/botanist
-	ears = /obj/item/radio/headset/headset_srv
-	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
-	suit = /obj/item/clothing/suit/apron
-	gloves  =/obj/item/clothing/gloves/botanic_leather
-	suit_store = /obj/item/plant_analyzer
+	id = /obj/item/card/id/black
+	ears = /obj/item/radio/headset/syndicate/alt/leader
+	glasses = /obj/item/clothing/glasses/sunglasses
+	suit = /obj/item/clothing/suit/armor/firstofficer
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
+	gloves = /obj/item/clothing/gloves/color/black
+	uniform = /obj/item/clothing/under/syndicate
 
-	backpack = /obj/item/storage/backpack/botany
-	satchel = /obj/item/storage/backpack/satchel/hyd
-	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics
+//Spawn Point
+/obj/effect/landmark/start/first_officer
+	name = "First Officer"
+	icon_state = "first_officer"
