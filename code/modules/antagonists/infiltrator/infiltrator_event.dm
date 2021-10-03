@@ -38,9 +38,9 @@
 
 /datum/round_event/ghost_role/infiltrator/proc/spawn_t(mob/dead/selected, list/spawn_locs)
 	var/datum/mind/Mind = new /datum/mind(selected.key)
-	var/mob/living/carbon/human/species/infiltrator = new(pick(spawn_locs))
-	if(prob(100)) // Random lizard event
-		infiltrator.race = /datum/species/lizard
+	var/mob/living/carbon/human/infiltrator = new(pick(spawn_locs))
+	if(prob(20)) // Random lizard event
+		infiltrator.set_species(/datum/species/lizard)
 	Mind.active = TRUE
 	var/datum/preferences/A = new
 	A.copy_to(infiltrator)

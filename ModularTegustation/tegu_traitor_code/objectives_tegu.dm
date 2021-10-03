@@ -84,11 +84,12 @@
 	difficulty = 40
 	excludefromjob = list("Research Director")
 
-/datum/objective/escape/escape_with_identity/infiltrator/New() //For infiltrators, so they get mulligan
-	. = ..()
+/datum/objective/escape/escape_with_identity/infiltrator //For infiltrators, so they get mulligan
 	var/list/spec_equipment = list()
+
+/datum/objective/escape/escape_with_identity/infiltrator/New()
 	spec_equipment += /obj/item/adv_mulligan
-	give_special_equipment(spec_equipment)
+	..()
 
 /datum/objective/proc/find_target_by_race(race, invert=FALSE) // race = "human", and so on.
 	var/list/datum/mind/owners = get_owners()

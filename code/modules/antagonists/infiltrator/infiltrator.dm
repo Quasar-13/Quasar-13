@@ -168,6 +168,7 @@
 			id_theft.owner = owner
 			id_theft.find_target_by_role(role = ROLE_INFILTRATOR, role_type = TRUE, invert = TRUE)
 			add_objective(id_theft)
+			id_theft.give_special_equipment(id_theft.spec_equipment)
 			return
 
 	else
