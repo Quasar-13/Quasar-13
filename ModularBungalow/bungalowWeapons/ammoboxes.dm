@@ -19,7 +19,7 @@
 	caliber = CALIBER_38
 	max_ammo = 12
 
-/obj/item/ammo_box/magazine/glock/update_icon()
+/obj/item/ammo_box/magazine/sig/update_icon()
 	..()
 	if (ammo_count() == 0)
 		icon_state = "9x19p-0"

@@ -23,7 +23,7 @@
 	bounty_types = CIV_JOB_ENG
 
 /datum/outfit/job/requisitions_chief
-	name = "Logistics Officer"
+	name = "Requisitions Chief"
 	jobtype = /datum/job/requisitions_chief
 
 	id = /obj/item/card/id/black

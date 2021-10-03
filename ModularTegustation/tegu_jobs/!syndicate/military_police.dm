@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/military_police
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
-	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_POLICE)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_POLICE)
 	paycheck = PAYCHECK_HARD
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_WARDEN
