@@ -134,7 +134,7 @@
 	senior_title = "Senior Project Manager"
 
 /datum/job/tegu/secretary
-	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
+	alt_titles = list("Staff Officer", "Lieutenant", "Union Representative", "Ambassador")
 	senior_title = "Diplomat"
 
 /datum/job/hop

@@ -152,4 +152,3 @@
 	icon_state = "h+cell"
 	maxcharge = 500000
 	chargerate = 5000
-

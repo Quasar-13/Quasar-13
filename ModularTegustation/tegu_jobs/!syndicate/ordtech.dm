@@ -1,40 +1,32 @@
-/datum/job/tegu/ordinance_technician
+/datum/job/tegu/ordtech
 	title = "Ordinance Technician"
 	department_head = list("Logistics Officer")
 	faction = "Syndicate"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the logistics officer"
-	selection_color = "#DDDD33"
-	exp_requirements = 60
-	exp_type = EXP_TYPE_LOGISTICS
-	maptype = "syndicate"
+	selection_color = "#bbe291"
 
-	outfit = /datum/outfit/job/ordinance_technician
+	outfit = /datum/outfit/job/deck
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
-	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_ENG
-	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
-	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER
-	bounty_types = CIV_JOB_ENG
+	access = list()
+	minimal_access = list()
+	paycheck = PAYCHECK_EASY
+	paycheck_department = ACCOUNT_SRV
+	display_order = JOB_DISPLAY_ORDER_BOTANIST
+	bounty_types = CIV_JOB_GROW
 
-/datum/outfit/job/ordinance_technician
-	name = "Mechanic"
-	jobtype = /datum/job/tegu/ordinance_technician
-
-	id = /obj/item/card/id/black
-	belt = /obj/item/storage/belt/utility
-	ears = /obj/item/radio/headset/syndicate
-	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/hazardvest
-	shoes = /obj/item/clothing/shoes/workboots
-	box = /obj/item/storage/box/survival/engineer
-
-
-
-//Spawn Point
-/obj/effect/landmark/start/ordinance_technician
+/datum/outfit/job/ordtech
 	name = "Ordinance Technician"
-	icon_state = "ordinance_technician"
+	jobtype = /datum/job/tegu/ordtech
+
+	belt = /obj/item/pda/botanist
+	ears = /obj/item/radio/headset/headset_srv
+	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
+	suit = /obj/item/clothing/suit/apron
+	gloves  =/obj/item/clothing/gloves/botanic_leather
+	suit_store = /obj/item/plant_analyzer
+
+	backpack = /obj/item/storage/backpack/botany
+	satchel = /obj/item/storage/backpack/satchel/hyd
+	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics

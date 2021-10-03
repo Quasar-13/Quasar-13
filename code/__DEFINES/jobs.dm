@@ -4,7 +4,6 @@
 #define JOB_UNAVAILABLE_PLAYTIME 3
 #define JOB_UNAVAILABLE_ACCOUNTAGE 4
 #define JOB_UNAVAILABLE_SLOTFULL 5
-#define JOB_NOT_TRUSTED 6
 
 #define DEFAULT_RELIGION "Order of the Cobalt Queen"
 #define DEFAULT_DEITY "Her Grace"

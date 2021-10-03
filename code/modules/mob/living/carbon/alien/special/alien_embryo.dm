@@ -10,7 +10,7 @@
 	/// Are we bursting out of the poor sucker who's the xeno mom?
 	var/bursting = FALSE
 	/// How long does it take to advance one stage? Growth time * 5 = how long till we make a Larva!
-	var/growth_time = 120 SECONDS
+	var/growth_time = 60 SECONDS
 
 /obj/item/organ/body_egg/alien_embryo/Initialize()
 	. = ..()
@@ -117,7 +117,7 @@
 
 	if(gib_on_success)
 		new_xeno.visible_message("<span class='danger'>[new_xeno] bursts out of [owner] in a shower of gore!</span>", "<span class='userdanger'>You exit [owner], your previous host.</span>", "<span class='hear'>You hear organic matter ripping and tearing!</span>")
-		owner.gib()
+		owner.gib(TRUE)
 	else
 		new_xeno.visible_message("<span class='danger'>[new_xeno] wriggles out of [owner]!</span>", "<span class='userdanger'>You exit [owner], your previous host.</span>")
 		owner.adjustBruteLoss(40)

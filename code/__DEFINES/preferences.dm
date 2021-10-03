@@ -80,13 +80,6 @@
 #define EXP_TYPE_SECURITY		"Security"
 #define EXP_TYPE_SILICON		"Silicon"
 #define EXP_TYPE_SERVICE		"Service"
-
-#define EXP_TYPE_SYNDICATE		"Syndicate Command"
-#define EXP_TYPE_OPERATIONS		"Operations"
-#define EXP_TYPE_LOGISTICS		"Logistics"
-#define EXP_TYPE_TRIAGE		"Triage"
-#define EXP_TYPE_POLICE		"Military Police"
-
 #define EXP_TYPE_ANTAG			"Antag"
 #define EXP_TYPE_SPECIAL		"Special"
 #define EXP_TYPE_GHOST			"Ghost"

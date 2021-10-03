@@ -1,45 +1,32 @@
-/datum/job/marine
+/datum/job/tegu/marine
 	title = "Marine"
-	department_head = list("Wing Commander", "Staff Officer")
-	faction = "Station"
-	total_positions = 28
-	spawn_positions = 18
-	supervisors = "the wing commander and staff officer"
-	selection_color = "#884488"
-	exp_requirements = 60
-	exp_type = EXP_TYPE_OPERATIONS
-	maptype = "syndicate"
+	department_head = list("Wing Commander")
+	faction = "Syndicate"
+	total_positions = 16
+	spawn_positions = 16
+	supervisors = "the wing commander"
+	selection_color = "#bbe291"
 
 	outfit = /datum/outfit/job/marine
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
-	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_ENG
-
-	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
-
-	display_order = JOB_DISPLAY_ORDER_GENETICIST
-	bounty_types = CIV_JOB_ENG
+	access = list()
+	minimal_access = list()
+	paycheck = PAYCHECK_EASY
+	paycheck_department = ACCOUNT_SRV
+	display_order = JOB_DISPLAY_ORDER_BOTANIST
+	bounty_types = CIV_JOB_GROW
 
 /datum/outfit/job/marine
 	name = "Marine"
-	jobtype = /datum/job/marine
+	jobtype = /datum/job/tegu/marine
 
-	id = /obj/item/card/id/black
-	ears = /obj/item/radio/headset/syndicate/alt
-	uniform = /obj/item/clothing/under/syndicate
-	shoes = /obj/item/clothing/shoes/jackboots
-	mask = /obj/item/clothing/mask/gas/syndicate
-	head = /obj/item/clothing/head/helmet/blueshirt
-	gloves = /obj/item/clothing/gloves/color/black
-	l_pocket = /obj/item/gun/ballistic/automatic/pistol
-	suit = /obj/item/clothing/suit/armor/vest/blueshirt
+	belt = /obj/item/pda/botanist
+	ears = /obj/item/radio/headset/headset_srv
+	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
+	suit = /obj/item/clothing/suit/apron
+	gloves  =/obj/item/clothing/gloves/botanic_leather
+	suit_store = /obj/item/plant_analyzer
 
-	belt = null
-
-
-//Spawn Point
-/obj/effect/landmark/start/marine
-	name = "Marine"
-	icon_state = "Marine"
+	backpack = /obj/item/storage/backpack/botany
+	satchel = /obj/item/storage/backpack/satchel/hyd
+	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics

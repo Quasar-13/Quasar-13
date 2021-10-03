@@ -1,13 +1,13 @@
-/datum/job/tegu/mechanic
-	title = "Mechanic"
-	department_head = list("Logistics Officer")
+/datum/job/tegu/medicalcommander
+	title = "Medical Commander"
+	department_head = list("Commandant")
 	faction = "Syndicate"
-	total_positions = 3
-	spawn_positions = 3
-	supervisors = "the logistics officer"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the commandant"
 	selection_color = "#bbe291"
 
-	outfit = /datum/outfit/job/logisticsofficer
+	outfit = /datum/job/tegu/medicalcommander
 
 	access = list()
 	minimal_access = list()
@@ -16,9 +16,9 @@
 	display_order = JOB_DISPLAY_ORDER_BOTANIST
 	bounty_types = CIV_JOB_GROW
 
-/datum/outfit/job/mechanic
-	name = "Mechanic"
-	jobtype = /datum/job/tegu/mechanic
+/datum/outfit/job/medicalcommander
+	name = "Medical Commander"
+	jobtype = /datum/job/tegu/medicalcommander
 
 	belt = /obj/item/pda/botanist
 	ears = /obj/item/radio/headset/headset_srv

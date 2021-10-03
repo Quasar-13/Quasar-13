@@ -7,15 +7,15 @@
 	icon_dead = "alienh_dead"
 	icon_gib = "syndicate_gib"
 	gender = FEMALE
-	speed = -3
+	speed = 0
 	butcher_results = list(/obj/item/food/meat/slab/xeno = 4,
 							/obj/item/stack/sheet/animalhide/xeno = 1)
-	maxHealth = 250
-	health = 250
+	maxHealth = 125
+	health = 125
 	harm_intent_damage = 5
 	obj_damage = 60
-	melee_damage_lower = 35
-	melee_damage_upper = 42
+	melee_damage_lower = 25
+	melee_damage_upper = 25
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
 	speak_emote = list("hisses")
@@ -43,8 +43,8 @@
 	icon_state = "aliend"
 	icon_living = "aliend"
 	icon_dead = "aliend_dead"
-	melee_damage_lower = 12
-	melee_damage_upper = 25
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 	var/plant_cooldown = 30
 	var/plants_off = 0
 
@@ -62,8 +62,8 @@
 	icon_state = "aliens"
 	icon_living = "aliens"
 	icon_dead = "aliens_dead"
-	health = 300
-	maxHealth = 300
+	health = 150
+	maxHealth = 150
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	ranged = 1
@@ -78,10 +78,10 @@
 	icon_state = "alienq"
 	icon_living = "alienq"
 	icon_dead = "alienq_dead"
-	health = 600
-	maxHealth = 600
-	melee_damage_lower = 55
-	melee_damage_upper = 72
+	health = 250
+	maxHealth = 250
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 	ranged = 1
 	retreat_distance = 5
 	minimum_distance = 5
@@ -135,8 +135,8 @@
 	health_doll_icon = "alienq"
 	bubble_icon = "alienroyal"
 	move_to_delay = 4
-	maxHealth = 700
-	health = 700
+	maxHealth = 400
+	health = 400
 	butcher_results = list(/obj/item/food/meat/slab/xeno = 10,
 							/obj/item/stack/sheet/animalhide/xeno = 2)
 	mob_size = MOB_SIZE_LARGE
@@ -144,7 +144,7 @@
 
 /obj/projectile/neurotox
 	name = "neurotoxin"
-	damage = 50
+	damage = 30
 	icon_state = "toxin"
 
 /mob/living/simple_animal/hostile/alien/maid
