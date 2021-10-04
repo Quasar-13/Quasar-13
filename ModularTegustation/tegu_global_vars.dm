@@ -5,5 +5,8 @@ GLOBAL_LIST_INIT(tegu_job_assignment, list(/*"Deputy",*/"Chemist","Void Technici
 	"Syndicate Ship Captain", "TerraGov Official",
 	//Syndiestation
 	"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
-	"Medical Officer", "Triage Officer", "Triage Technician"))
+	"Medical Officer", "Triage Officer", "Triage Technician",
+
+	//Other Gamemodes
+	"Commander", "Administrator", "Lab Technician", "Medical Technician", "Engineer", "Bunker Crew", "Soldier", "Security", "Civillian"))
 GLOBAL_LIST_EMPTY(banned_kids)

@@ -355,7 +355,7 @@ update_label()
 	name = "solgov identification card"
 	id_type_name = "solgov identification card"
 	desc = "A special ID given to terragov civillians and officials."
-	icon_state = "black"
+	icon_state = "solgov"
 	inhand_icon_state = "silver_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
