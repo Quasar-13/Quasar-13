@@ -335,7 +335,7 @@ update_label()
 	name = "silver identification card"
 	id_type_name = "silver identification card"
 	desc = "A silver card which shows honour and dedication."
-	icon_state = "silver"
+	icon_state = "solgov"
 	inhand_icon_state = "silver_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
@@ -349,6 +349,17 @@ update_label()
 	inhand_icon_state = "silver_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
+//Solgov ID
+/obj/item/card/id/solgov
+	name = "solgov identification card"
+	id_type_name = "solgov identification card"
+	desc = "A special ID given to terragov civillians and officials."
+	icon_state = "black"
+	inhand_icon_state = "silver_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
 
 /obj/item/card/id/silver/reaper
 	name = "Thirteen's ID Card (Reaper)"
