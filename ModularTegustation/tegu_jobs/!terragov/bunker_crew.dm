@@ -8,7 +8,7 @@
 	selection_color = "#b7edda"
 	maptype = "solgov"
 
-	/datum/outfit/job/bunker_crew
+	outfit = /datum/outfit/job/bunker_crew
 
 	access = list(ACCESS_ENGINE)
 	minimal_access = list(ACCESS_ENGINE)
