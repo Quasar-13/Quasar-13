@@ -164,6 +164,13 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "dice", "cut")
+	var/primed = FALSE
+	var/dash_cooldown // Current cooldown to compare to world.time
+	var/dash_cooldown_time = 5 SECONDS // Cooldown time after dash
+	var/dash_sound = 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg'
+	var/beam_effect = "blood_beam"
+	var/phasein = /obj/effect/temp_visual/dir_setting/cult/phase
+	var/phaseout = /obj/effect/temp_visual/dir_setting/cult/phase
 
 /obj/item/melee/nano_blade/Initialize()
 	. = ..()
@@ -191,6 +198,58 @@
 		user.visible_message("<span class='suicide'>[user] carves a grid into [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit sudoku...</span>")
 	return (BRUTELOSS)
 
+/obj/item/melee/nano_blade/examine(mob/user)
+	. = ..()
+	. += "<span class='info'>Use [src] in your hand to prime for a swift dash.</span>"
+
+/obj/item/melee/nano_blade/attack_self(mob/user)
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	if(primed)
+		to_chat(user, "<span class='notice'>You return your stance.</span>")
+		primed = FALSE
+	else
+		if(dash_cooldown > world.time)
+			to_chat(user, "<span class='notice'>The [src] isn't ready for another dash attack yet.</span>")
+			return
+		user.visible_message("<span class='warning'>[user] grips the blade within [src] and primes to attack.</span>", "<span class='warning'>You take an opening stance...</span>", "<span class='warning'>You hear a weapon being drawn...</span>")
+		primed = TRUE
+
+/obj/item/melee/nano_blade/afterattack(atom/A, mob/living/user, proximity_flag, params)
+	. = ..()
+	var/turf/T = get_turf(A)
+	if(!T)
+		return
+	if(primed && dash_cooldown < world.time)
+		if(!(T in view(user.client.view, user)))
+			return
+		primed = FALSE
+		dash_cooldown = world.time + dash_cooldown_time
+		primed_attack(T, user)
+
+/obj/item/melee/nano_blade/proc/primed_attack(turf/target, mob/living/user)
+	var/turf/end = get_turf(user)
+	var/turf/start = get_turf(user)
+	var/obj/spot1 = new phaseout(start, user.dir)
+	// Stolen dash code
+	for(var/turf/T in getline(start, get_turf(target)))
+		for(var/mob/living/victim in T)
+			if(victim != user)
+				playsound(victim, 'ModularTegustation/Tegusounds/weapons/anime_slash.ogg', 30, TRUE)
+				victim.take_bodypart_damage(15)
+		// Unlike actual ninjas, we stop noclip-dashing here.
+		if(isclosedturf(T))
+			break
+		else
+			end = T
+	user.forceMove(end) // YEET
+	playsound(start, dash_sound, 35, TRUE)
+	var/obj/spot2 = new phasein(end, user.dir)
+	spot1.Beam(spot2, beam_effect, time=20)
+	user.visible_message("<span class='warning'>In a flash of red, [user] dashes forward with [user.p_their()] blade!</span>", "<span class='notice'>You dash forward with [src]!</span>", "<span class='warning'>You hear a blade slice through the air at impossible speeds!</span>")
+
+
+// Sheath
 /obj/item/storage/belt/nano_blade
 	name = "nanoforged blade sheath"
 	desc = "It yearns to bath in the blood of your enemies... but you hold it back!"
@@ -199,12 +258,6 @@
 	worn_icon_state = "sheath"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 3
-	var/primed = FALSE //Prerequisite to anime bullshit
-	// ##The anime bullshit## - Mostly stolen from action/innate/dash
-	var/dash_sound = 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg'
-	var/beam_effect = "blood_beam"
-	var/phasein = /obj/effect/temp_visual/dir_setting/cult/phase
-	var/phaseout = /obj/effect/temp_visual/dir_setting/cult/phase
 
 /obj/item/storage/belt/nano_blade/ComponentInitialize()
 	. = ..()
@@ -220,7 +273,6 @@
 /obj/item/storage/belt/nano_blade/examine(mob/user)
 	. = ..()
 	if(length(contents))
-		. += "<span class='notice'>Use [src] in-hand to prime for an opening strike."
 		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
 
 /obj/item/storage/belt/nano_blade/AltClick(mob/user)
@@ -235,81 +287,11 @@
 	else
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 
-/obj/item/storage/belt/nano_blade/attack_self(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
-		return
-	if(length(contents))
-		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
-		if(primed)
-			CP.locked = FALSE
-			playsound(user, 'sound/items/sheath.ogg', 25, TRUE)
-			to_chat(user, "<span class='notice'>You return your stance.</span>")
-			primed = FALSE
-			update_icon()
-		else
-			CP.locked = TRUE //Prevents normal removal of the blade while primed
-			playsound(user, 'sound/items/unsheath.ogg', 25, TRUE)
-			user.visible_message("<span class='warning'>[user] grips the blade within [src] and primes to attack.</span>", "<span class='warning'>You take an opening stance...</span>", "<span class='warning'>You hear a weapon being drawn...</span>")
-			primed = TRUE
-			update_icon()
-	else
-		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-
-/obj/item/storage/belt/nano_blade/afterattack(atom/A, mob/living/user, proximity_flag, params)
-	. = ..()
-	var/turf/T = get_turf(A)
-	if(!T)
-		return
-	if(primed && length(contents))
-		var/obj/item/I = contents[1]
-		if(!user.put_in_inactive_hand(I))
-			to_chat(user, "<span class='warning'>You need a free hand!</span>")
-			return
-		if(!(T in view(user.client.view, user)))
-			return
-		user.swap_hand()
-		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
-		CP.locked = FALSE
-		primed = FALSE
-		update_icon()
-		primed_attack(T, user)
-
-/obj/item/storage/belt/nano_blade/proc/primed_attack(turf/target, mob/living/user)
-	var/turf/end = get_turf(user)
-	var/turf/start = get_turf(user)
-	var/obj/spot1 = new phaseout(start, user.dir)
-	var/halt = FALSE
-	// Stolen dash code
-	for(var/turf/T in getline(start, get_turf(target)))
-		for(var/mob/living/victim in T)
-			if(victim != user)
-				playsound(victim, 'ModularTegustation/Tegusounds/weapons/anime_slash.ogg', 30, TRUE)
-				victim.take_bodypart_damage(15)
-		// Unlike actual ninjas, we stop noclip-dashing here.
-		if(isclosedturf(T))
-			halt = TRUE
-		for(var/obj/O in T)
-			// We ignore mobs as we are cutting through them
-			if(!O.CanPass(user, T))
-				halt = TRUE
-		if(halt)
-			break
-		else
-			end = T
-	user.forceMove(end) // YEET
-	playsound(start, dash_sound, 35, TRUE)
-	var/obj/spot2 = new phasein(end, user.dir)
-	spot1.Beam(spot2, beam_effect, time=20)
-	user.visible_message("<span class='warning'>In a flash of red, [user] draws [user.p_their()] blade!</span>", "<span class='notice'>You dash forward while drawing your weapon!</span>", "<span class='warning'>You hear a blade slice through the air at impossible speeds!</span>")
-
 /obj/item/storage/belt/nano_blade/update_icon_state()
 	icon_state = "weeb_sheath"
 	worn_icon_state = "sheath"
 	if(contents.len)
-		if(primed)
-			icon_state += "-primed"
-		else
-			icon_state += "-blade"
+		icon_state += "-blade"
 		worn_icon_state += "-sabre"
 		inhand_icon_state = initial(inhand_icon_state)
 
