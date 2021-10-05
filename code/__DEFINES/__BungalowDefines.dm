@@ -27,6 +27,17 @@
 /// Access levels - Used for Tech cult
 #define ACCESS_MECHANICUS_BASIC 220
 #define ACCESS_MECHANICUS_LEADER 221
+
+//Access for Syndiestation
+// Syndicate General Officer access
+#define ACCESS_SYNDICATE_OFFICER 152
+//Syndicate Command access
+#define ACCESS_SYNDICATE_POLICE 153
+//Syndicate Command access
+#define ACCESS_SYNDICATE_COMMAND 154
+//Syndicate Commandant
+#define ACCESS_SYNDICATE_COMMANDANT 155
+
 /// Bungalow Cloning defines
 #define CLONER_FRESH_CLONE "fresh"
 #define CLONER_MATURE_CLONE "mature"
