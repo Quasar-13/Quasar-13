@@ -276,11 +276,11 @@
 		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
 
 /obj/item/storage/belt/nano_blade/AltClick(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)) || primed)
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	if(length(contents))
 		var/obj/item/I = contents[1]
-		playsound(user, dash_sound, 25, TRUE)
+		playsound(user, 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg', 25, TRUE)
 		user.visible_message("<span class='notice'>[user] swiftly draws \the [I].</span>", "<span class='notice'>You draw \the [I].</span>")
 		user.put_in_hands(I)
 		update_icon()
