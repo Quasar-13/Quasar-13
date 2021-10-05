@@ -175,3 +175,76 @@
 	desc = "A sign labelling the courtroom, where the ever sacred Space Law is upheld."
 	icon_state = "court"
 	is_editable = TRUE
+
+///////DECK SIGNS
+
+/obj/structure/sign/departments/deck1
+	name = "\improper Deck 1 sign"
+	sign_change_name = "Location - Deck 1"
+	desc = "A sign labelling the deck."
+	icon_state = "deck-1"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/deck2
+	name = "\improper Deck 2 sign"
+	sign_change_name = "Location - Deck 2"
+	desc = "A sign labelling the deck."
+	icon_state = "deck-2"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/deck3
+	name = "\improper Deck 3 sign"
+	sign_change_name = "Location - Deck 3"
+	desc = "A sign labelling the deck."
+	icon_state = "deck-3"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/deck4
+	name = "\improper Deck 4 sign"
+	sign_change_name = "Location - Deck 4"
+	desc = "A sign labelling the deck."
+	icon_state = "deck-4"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/deck5
+	name = "\improper Deck 5 sign"
+	sign_change_name = "Location - Deck 5"
+	desc = "A sign labelling the deck."
+	icon_state = "deck-5"
+	is_editable = TRUE
+
+///////SECTION SIGNS
+/obj/structure/sign/departments/section1
+	name = "\improper Section 1 sign"
+	sign_change_name = "Location - Section 1"
+	desc = "A sign labelling the section."
+	icon_state = "section-1"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/section2
+	name = "\improper Deck 2 sign"
+	sign_change_name = "Location - Section 2"
+	desc = "A sign labelling the section."
+	icon_state = "section-2"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/section3
+	name = "\improper Deck 3 sign"
+	sign_change_name = "Location - Section 3"
+	desc = "A sign labelling the section."
+	icon_state = "section-3"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/section4
+	name = "\improper Deck 4 sign"
+	sign_change_name = "Location - Section 4"
+	desc = "A sign labelling the section."
+	icon_state = "section-4"
+	is_editable = TRUE
+
+/obj/structure/sign/departments/section5
+	name = "\improper Deck 5 sign"
+	sign_change_name = "Location - Section 5"
+	desc = "A sign labelling the section."
+	icon_state = "section-5"
+	is_editable = TRUE
