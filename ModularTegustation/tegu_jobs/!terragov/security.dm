@@ -18,7 +18,7 @@
 
 
 /datum/outfit/job/security
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Security)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/security
 	belt = null

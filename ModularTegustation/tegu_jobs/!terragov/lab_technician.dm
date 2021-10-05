@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 
 /datum/outfit/job/lab_technician
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Lab Technician)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/lab_technician
 	belt = null

@@ -22,7 +22,7 @@
 	bounty_types = CIV_JOB_ENG
 
 /datum/outfit/job/commander
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Commander)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/commander
 	belt = null

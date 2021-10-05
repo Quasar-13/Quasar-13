@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_WARDEN
 
 /datum/outfit/job/soldier
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Soldier)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/soldier
 	belt = null

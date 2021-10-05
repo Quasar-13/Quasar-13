@@ -18,7 +18,7 @@
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 
 /datum/outfit/job/civillian
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Civillian)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/civillian
 	belt = null

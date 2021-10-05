@@ -18,7 +18,7 @@
 	display_order = JOB_DISPLAY_ORDER_SECRETARY
 
 /datum/outfit/job/administrator
-	name = "Solgov Survivor outfit"
+	name = "Solgov Survivor (Administrator)"
 	id = /obj/item/card/id/solgov
 	jobtype = /datum/job/administrator
 	belt = null
