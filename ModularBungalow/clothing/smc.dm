@@ -22,7 +22,7 @@
 	icon_state = "triagetech"
 
 /obj/item/clothing/under/smc/triageofficer
-	desc = "A medic's sundicate jumpsuit with a hint of green. Helps stand out in the heat of battle."
+	desc = "A medic's syndicate jumpsuit with a hint of green. Helps stand out in the heat of battle."
 	name = "triage officer's jumpsuit"
 	icon_state = "triageofficer"
 
