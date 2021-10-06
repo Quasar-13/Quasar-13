@@ -9,6 +9,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
+"bt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/dorms)
 "bA" = (
 /obj/structure/table,
 /obj/item/gun/ballistic/shotgun/doublebarrel,
@@ -120,7 +127,6 @@
 /turf/open/floor/plating,
 /area/mine/production)
 "fK" = (
-/obj/structure/table/glass,
 /obj/item/storage/box/bodybags{
 	pixel_x = -1;
 	pixel_y = 6
@@ -128,6 +134,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel,
 /area/science)
 "fY" = (
@@ -209,6 +216,8 @@
 	},
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/under/rank/medical/doctor/nurse,
+/obj/item/clothing/head/nursehat,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/dorms)
 "hA" = (
@@ -375,8 +384,19 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
+/obj/item/clothing/under/suit/beige,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
+"mb" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/glass{
+	name = "Mining Station Bridge"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/mine/production)
 "mh" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -447,6 +467,7 @@
 	dir = 4
 	},
 /obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/healthanalyzer,
 /turf/open/floor/plasteel/white,
 /area/medical)
 "nW" = (
@@ -505,10 +526,10 @@
 	name = "Administrator's uniform"
 	},
 /obj/item/clothing/head/beret/command,
-/obj/item/clothing/suit/armor/hos,
 /obj/item/areaeditor/blueprints,
 /obj/item/clothing/glasses/sunglasses/garb,
 /obj/item/clothing/gloves/color/black,
+/obj/item/clothing/glasses/hud/health/syndicate,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "oN" = (
@@ -546,8 +567,29 @@
 "pk" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/syringes,
+/obj/item/healthanalyzer/viro,
 /turf/open/floor/plasteel,
 /area/science)
+"pm" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/structure/closet/crate/medical,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/chem,
+/obj/item/healthanalyzer/chem,
+/obj/item/healthanalyzer/chem,
+/obj/item/healthanalyzer/wound,
+/obj/item/healthanalyzer/wound,
+/turf/open/floor/plasteel/white,
+/area/medical)
 "px" = (
 /obj/item/mop,
 /obj/item/reagent_containers/glass/bucket,
@@ -633,8 +675,8 @@
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold,
 /obj/item/ammo_box/magazine/m50,
 /obj/item/clothing/suit/armor/captain/solgov,
-/obj/item/clothing/glasses/sunglasses/garb,
 /obj/item/clothing/gloves/color/black,
+/obj/item/clothing/glasses/hud/health/syndicate,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/captain)
 "rn" = (
@@ -707,6 +749,10 @@
 "sb" = (
 /obj/structure/closet/wardrobe/black,
 /turf/open/floor/plasteel/dark,
+/area/crew_quarters/dorms)
+"sh" = (
+/obj/machinery/computer/arcade,
+/turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "sv" = (
 /obj/effect/turf_decal/tile/purple,
@@ -864,13 +910,6 @@
 	dir = 4
 	},
 /obj/item/storage/firstaid/toxin,
-/obj/item/healthanalyzer/paramed{
-	pixel_y = 4
-	},
-/obj/item/healthanalyzer/chem,
-/obj/item/healthanalyzer/wound{
-	pixel_y = -4
-	},
 /turf/open/floor/plasteel/white,
 /area/medical)
 "vQ" = (
@@ -964,21 +1003,17 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/mine/production)
+"xB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/slot_machine,
+/turf/open/floor/plasteel,
+/area/crew_quarters/dorms)
 "xP" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restroom"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
-"xU" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/medical)
 "xW" = (
 /obj/machinery/dna_scannernew,
 /turf/open/floor/plasteel,
@@ -1010,11 +1045,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
-"ys" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/freezer/kitchen,
-/turf/open/floor/plasteel,
-/area/crew_quarters/dorms)
 "yu" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/bot,
@@ -1135,16 +1165,16 @@
 /area/mine/production)
 "AD" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/item/storage/firstaid,
-/obj/item/storage/firstaid{
-	pixel_x = 3
+/obj/item/storage/firstaid/regular{
+	pixel_x = 4
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular{
+	pixel_x = -4
 	},
 /turf/open/floor/plasteel/white,
 /area/medical)
@@ -1154,6 +1184,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"AU" = (
+/obj/machinery/smartfridge/drying_rack,
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/captain)
 "Bq" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -1178,6 +1212,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/item/healthanalyzer/paramed,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/dorms)
 "BN" = (
@@ -1231,7 +1266,9 @@
 /area/hallway/primary/central)
 "Cd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/secure_closet/freezer/fridge{
+	locked = 0
+	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -1370,6 +1407,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/dorms)
+"EO" = (
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/medical)
 "EQ" = (
 /obj/machinery/light{
 	dir = 1
@@ -1457,8 +1498,6 @@
 	},
 /obj/structure/table,
 /obj/item/gps,
-/obj/item/gps,
-/obj/item/gps,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/captain)
 "FR" = (
@@ -1535,13 +1574,6 @@
 /obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
 /area/medical)
-"Gp" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/engine/engineering)
 "Gr" = (
 /turf/open/floor/plasteel,
 /area/science)
@@ -1558,6 +1590,9 @@
 "GO" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/highsecurity,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "GW" = (
@@ -1687,6 +1722,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "Cryodorms"
 	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "IY" = (
@@ -1905,6 +1941,15 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet{
+	name = "Auxilliary Wardrobe"
+	},
+/obj/item/clothing/suit/toggle/labcoat/virologist,
+/obj/item/clothing/under/rank/medical/virologist,
+/obj/item/clothing/under/rank/rnd/geneticist,
+/obj/item/clothing/suit/toggle/labcoat/genetics,
+/obj/item/clothing/suit/toggle/labcoat/pharmacist,
+/obj/item/clothing/under/rank/medical/pharmacist,
 /turf/open/floor/plasteel,
 /area/science)
 "KS" = (
@@ -1922,6 +1967,9 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock/glass{
 	name = "Mining Station Bridge"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
@@ -2035,10 +2083,6 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "MS" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "sec";
-	name = "Security Officer's Locker"
-	},
 /obj/item/clothing/under/syndicate/camo,
 /obj/item/gun/ballistic/automatic/pistol/m1911,
 /obj/item/ammo_box/magazine/m45,
@@ -2049,6 +2093,13 @@
 /obj/item/gps,
 /obj/item/kitchen/knife/combat/survival,
 /obj/item/clothing/gloves/color/black,
+/obj/item/clothing/mask/gas,
+/obj/structure/closet/secure_closet{
+	icon_state = "sec";
+	name = "Soldier's Locker"
+	},
+/obj/item/storage/belt/military/assault,
+/obj/item/clothing/suit/jacket/miljacket,
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "MT" = (
@@ -2169,6 +2220,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
+"OF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/under/rank/civilian/hydroponics,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/dorms)
 "OG" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -2197,6 +2253,22 @@
 	},
 /turf/open/floor/circuit,
 /area/tcommsat/server)
+"OT" = (
+/obj/structure/table,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/food/grown/tobacco,
+/obj/item/clothing/mask/cigarette/pipe,
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/captain)
 "OU" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets,
@@ -2279,12 +2351,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
-"Qe" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
+"Qa" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/toggle/chef,
+/obj/item/clothing/head/chefhat,
 /turf/open/floor/plasteel,
-/area/ai_monitored/security/armory)
+/area/crew_quarters/dorms)
 "Qj" = (
 /obj/machinery/airalarm{
 	pixel_y = 23
@@ -2471,10 +2544,6 @@
 /turf/closed/wall/r_wall,
 /area/science)
 "To" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "sec";
-	name = "Security Officer's Locker"
-	},
 /obj/item/clothing/suit/armor/vest/alt,
 /obj/item/clothing/under/rank/security/officer/beatcop,
 /obj/item/gun/ballistic/automatic/pistol/sig,
@@ -2484,6 +2553,11 @@
 /obj/item/clothing/head/beret/sec/navyofficer,
 /obj/item/kitchen/knife/combat/survival,
 /obj/item/clothing/gloves/color/black,
+/obj/item/clothing/glasses/sunglasses,
+/obj/structure/closet/secure_closet{
+	icon_state = "sec";
+	name = "Base Security's Locker"
+	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory/upper)
 "Ts" = (
@@ -2532,6 +2606,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/computer/secure_data,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/captain)
 "TU" = (
@@ -2721,7 +2796,7 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "Wz" = (
-/obj/structure/table,
+/obj/machinery/computer/med_data,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/captain)
 "WJ" = (
@@ -2858,7 +2933,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/crew_quarters/dorms)
 "ZM" = (
-/obj/structure/table/glass,
 /obj/item/storage/box/monkeycubes{
 	pixel_x = 6;
 	pixel_y = 7
@@ -2866,6 +2940,7 @@
 /obj/item/storage/box/monkeycubes{
 	pixel_x = -5
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel,
 /area/science)
 "ZQ" = (
@@ -28694,15 +28769,15 @@ ZR
 ZR
 ZR
 Za
-Yw
+xB
 kA
 kA
 Yw
 PK
-Yw
 GW
+bt
 Cd
-Yw
+LC
 Db
 Za
 ZR
@@ -28957,8 +29032,8 @@ Qs
 Yw
 CV
 Yw
-IH
-LC
+Yw
+Yw
 Yw
 mR
 Za
@@ -29213,9 +29288,9 @@ wt
 da
 Yw
 MT
-Yw
+IH
+Qa
 Sw
-ys
 Yw
 mR
 Za
@@ -29987,7 +30062,7 @@ Yw
 Yw
 Yw
 Yw
-Uw
+sh
 Yw
 ZQ
 ZR
@@ -30260,8 +30335,8 @@ XJ
 Ts
 tY
 Wz
-Wz
 UY
+AU
 QR
 ZR
 ZR
@@ -30498,7 +30573,7 @@ xp
 Yw
 Yw
 DD
-Me
+OF
 LM
 Kg
 Za
@@ -30518,7 +30593,7 @@ Ts
 tY
 hm
 Fb
-UY
+OT
 QR
 ZR
 ZR
@@ -32050,7 +32125,7 @@ ZR
 ZR
 ZR
 rd
-Go
+pm
 Fv
 FW
 rd
@@ -32307,10 +32382,10 @@ ZR
 ZR
 ZR
 wD
-xU
+Go
 VK
 Hb
-rV
+EO
 qQ
 XJ
 Ts
@@ -33337,7 +33412,7 @@ ZR
 Xn
 zM
 bb
-Gp
+zL
 Xn
 zw
 XJ
@@ -33594,7 +33669,7 @@ ZR
 Xn
 ws
 JZ
-zL
+JZ
 Le
 qQ
 XJ
@@ -37709,7 +37784,7 @@ ZR
 ZR
 HW
 HW
-PO
+mb
 HW
 HW
 ZR
@@ -39497,8 +39572,8 @@ ZR
 ZR
 Lz
 MS
-Qe
-IC
+Yt
+Yt
 MS
 Lz
 rK
@@ -39754,8 +39829,8 @@ ZR
 ZR
 Lz
 MS
-Qe
-IC
+Yt
+Yt
 MS
 Lz
 jA
