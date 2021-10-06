@@ -21,6 +21,11 @@
 	name = "triage technician's jumpsuit"
 	icon_state = "triagetech"
 
+/obj/item/clothing/under/smc/triageofficer
+	desc = "A medic's sundicate jumpsuit with a hint of green. Helps stand out in the heat of battle."
+	name = "triage officer's jumpsuit"
+	icon_state = "triageofficer"
+
 /obj/item/clothing/under/smc/logistics
 	desc = "A black and red jumpsuit for the ship's logistic's officer"
 	name = "logistic officer's jumpsuit"
@@ -33,10 +38,18 @@
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "labcoat_syndie"
+	icon_state = "triageofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
+/obj/item/clothing/suit/armor/labcoat/triagetech
+	name = "triage technician's labcoat"
+	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "triagetech"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/medical_officer
 	name = "medical officer's armored labcoat"

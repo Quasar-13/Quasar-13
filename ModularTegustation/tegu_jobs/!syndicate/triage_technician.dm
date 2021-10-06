@@ -32,7 +32,7 @@
 	glasses = /obj/item/clothing/glasses/hud/health/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex
-	suit = /obj/item/clothing/suit/armor/labcoat/syndie
+	suit = /obj/item/clothing/suit/armor/labcoat/triagetech
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	l_hand = /obj/item/storage/firstaid/regular
 
