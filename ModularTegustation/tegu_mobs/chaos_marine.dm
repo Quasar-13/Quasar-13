@@ -416,7 +416,7 @@
 /obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos
 	name = "berserker's hardsuit"
 	allowed = list(/obj/item/gun, /obj/item/nullrod, /obj/item/tank/internals)
-	armor = list("melee" = 75, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 70, "bullet" = 30, "laser" = 40, "energy" = 50, "bomb" = 70, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	cell = /obj/item/stock_parts/cell/hyper
@@ -427,7 +427,7 @@
 
 /obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal/berserker/chaos
 	name = "berserker's helmet"
-	armor = list("melee" = 75, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 70, "bullet" = 30, "laser" = 40, "energy" = 50, "bomb" = 70, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	icon_state = "hardsuit0-chaos"
