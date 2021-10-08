@@ -184,3 +184,12 @@
 	new /obj/item/toy/balloon/syndicate/gold(src)
 	new /obj/item/toy/balloon/syndicate/gold(src)
 	new /obj/item/toy/balloon/syndicate/gold(src)
+
+/datum/uplink_item/dangerous/nano_blade
+	name = "Nanoforged Katana"
+	desc = "A tailor-made blade forged by the most secretive ninja organization within the Syndicate. \
+			Merely weilding this weapon grants incredible agility."
+	item = /obj/item/storage/belt/nano_blade
+	cost = 12
+	surplus = 5
+	limited_stock = 1
