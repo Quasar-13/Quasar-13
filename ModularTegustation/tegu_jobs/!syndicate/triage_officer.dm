@@ -27,11 +27,11 @@
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/smc/triageofficer
 	glasses = /obj/item/clothing/glasses/hud/health/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex
-	suit = /obj/item/clothing/suit/armor/vest/alt
+	suit = /obj/item/clothing/suit/armor/labcoat/syndie
 	l_hand = /obj/item/storage/firstaid/medical
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 
