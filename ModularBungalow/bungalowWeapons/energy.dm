@@ -29,6 +29,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
 	icon_state = "hoprifle"
 	inhand_icon_state = "energydisable3"
+	shaded_charge = TRUE
 	w_class = WEIGHT_CLASS_BULKY
 	force = 5
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser/scatter/disabler, /obj/item/ammo_casing/energy/laser/scatter/close)
