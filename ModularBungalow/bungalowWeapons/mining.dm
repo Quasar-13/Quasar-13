@@ -1,7 +1,7 @@
 //Miner's Laser pistol
 /obj/item/gun/energy/e_gun/miner
 	name = "\improper E-224 Mining Pistol"
-	desc = "Nanotrasen�s standard issue mining beam pistol."
+	desc = "Nanotrasen’s standard issue mining beam pistol."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
 	icon_state = "mining"
 	inhand_icon_state = "gun"
@@ -15,7 +15,7 @@
 //Miner's Laser Shotgun
 /obj/item/gun/energy/e_gun/miner/shotty
 	name = "\improper E-244 Mining Scattershot"
-	desc = "Nanotrasen�s standard issue mining scattershot."
+	desc = "Nanotrasen’s standard issue mining scattershot."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
 	icon_state = "mining-scatter"
 	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
@@ -33,7 +33,7 @@
 //"Miner" Laser Rifle
 /obj/item/gun/energy/e_gun/miner/rifle
 	name = "\improper E-204 Mining Assault Rifle"
-	desc = "Nanotrasen�s standard issue mining rifle."
+	desc = "Nanotrasen’s standard issue mining rifle."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
 	icon_state = "mining-rifle"
 	inhand_icon_state = "gun"
@@ -51,7 +51,7 @@
 //"Miner" Heavy Rifle
 /obj/item/gun/energy/e_gun/miner/heavyrifle
 	name = "\improper E-207 Mining Heavy Rifle"
-	desc = "Nanotrasen�s standard issue mining rifle that fires heavy bolts."
+	desc = "Nanotrasen’s standard issue mining rifle that fires heavy bolts."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
 	icon_state = "mining-rifle"
 	inhand_icon_state = "gun"
@@ -69,7 +69,7 @@
 //Mining Bolter
 /obj/item/gun/energy/e_gun/miner/bolter
 	name = "\improper E-225 Mining Bolt Pistol"
-	desc = "Nanotrasen�s standard issue mining bolter. Fires mini bullets at insane speeds, but has a low capacity"
+	desc = "Nanotrasen’s standard issue mining bolter. Fires mini bullets at insane speeds, but has a low capacity"
 	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
 	icon_state = "mining-bolter"
 	inhand_icon_state = "gun"
