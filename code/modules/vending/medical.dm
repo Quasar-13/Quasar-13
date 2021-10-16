@@ -8,7 +8,10 @@
 	products = list(/obj/item/stack/medical/gauze = 8,
 					/obj/item/reagent_containers/syringe = 12,
 					/obj/item/reagent_containers/dropper = 3,
-					/obj/item/healthanalyzer = 4,
+					/obj/item/healthanalyzer/paramed = 4,
+					/obj/item/healthanalyzer/wound = 3,
+					/obj/item/healthanalyzer/chem = 3,
+					/obj/item/healthanalyzer/viro = 3,
 					/obj/item/wrench/medical = 1,
 					/obj/item/stack/sticky_tape/surgical = 3,
 					/obj/item/healthanalyzer/wound = 4,
@@ -24,8 +27,6 @@
 					/obj/item/storage/firstaid/advanced = 2,
 					/obj/item/shears = 1,
 					/obj/item/storage/organbox = 1)
-	armor = list(MELEE = 100, BULLET = 100, LASER = 100, ENERGY = 100, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
-	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/medical
 	default_price = PAYCHECK_EASY
 	extra_price = PAYCHECK_COMMAND
@@ -77,3 +78,7 @@
 /obj/item/vending_refill/drugs
 	machine_name = "NanoDrug Plus"
 	icon_state = "refill_medical"
+
+
+
+

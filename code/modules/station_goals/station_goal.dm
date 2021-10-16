@@ -10,6 +10,7 @@
 	var/list/gamemode_blacklist = list()
 	var/completed = FALSE
 	var/report_message = "Complete this goal."
+	var/maptype = "station" //me on my way to build station shields around a planetary outpost
 
 /datum/station_goal/proc/send_report()
 	priority_announce("Priority Nanotrasen directive received. Project \"[name]\" details inbound.", "Incoming Priority Message", SSstation.announcer.get_rand_report_sound())

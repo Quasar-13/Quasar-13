@@ -103,7 +103,30 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Emergency Response Team Commander" = 220,
 		"Security Response Officer" = 221,
 		"Engineer Response Officer" = 222,
-		"Medical Response Officer" = 223
+		"Medical Response Officer" = 223,
+
+		// 300-360: Syndicate Marine Corps
+		"Commandant" = 300,
+		"First Officer" = 310,
+		//Operations
+		"Wing Commander" = 320,
+		"Pilot Officer" = 321,
+		"Staff Officer" = 322,
+		"Marine" = 323,
+		//Triage
+		"Medical Officer" = 331,
+		"Triage Deckhand" = 332,
+		"Triage Officer" = 333,
+		//Logistics
+		"Logistics Officer" = 341,
+		"Requisitions Chief" = 342,
+		"Mechanic" = 343,
+		"Deckhand" = 344,
+		//Military Police
+		"Military Warden" = 350,
+		"Military Police" = 351,
+		//Just assistants
+		"Survivor" = 998
 	)
 
 /datum/crewmonitor/ui_interact(mob/user, datum/tgui/ui)
@@ -149,7 +172,8 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 			stack_trace("Tracked mob has no loc and is likely in nullspace: [tracked_living_mob] ([tracked_living_mob.type])")
 			continue
 
-		if (pos.z != z)
+		// Machinery and the target should be on the same level or different levels of the same station
+		if(pos.z != z && (!is_station_level(pos.z) || !is_station_level(z)))
 			continue
 
 		var/sensor_mode

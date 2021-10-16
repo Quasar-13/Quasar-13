@@ -16,6 +16,7 @@
 	var/autounlock_by_boost = TRUE			//boosting this will autounlock this node.
 	var/list/research_costs = list()					//Point cost to research. type = amount
 	var/category = "Misc"				//Category
+	var/maptype = "none" //Maptype, used to make sure stuff like munit research can't be found on other maptypes - Bungalow
 
 /datum/techweb_node/error_node
 	id = "ERROR"

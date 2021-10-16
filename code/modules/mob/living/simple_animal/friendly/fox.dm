@@ -23,6 +23,7 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	can_be_held = TRUE
 	held_state = "fox"
+	worn_slot_flags = ITEM_SLOT_HEAD
 	pet_bonus = TRUE
 	pet_bonus_emote = "pants and yaps happily!"
 

@@ -2518,9 +2518,6 @@
 	name = "Port Bow Solar Control"
 	},
 /obj/structure/cable,
-/obj/machinery/light_switch{
-	pixel_y = 24
-	},
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
 "agC" = (
@@ -9243,7 +9240,7 @@
 	dir = 9
 	},
 /obj/machinery/power/apc/auto_name/north,
-/mob/living/simple_animal/hostile/retaliate/terry,
+/mob/living/simple_animal/hostile/retaliate/goose/terry,
 /turf/open/floor/plasteel,
 /area/security/warden)
 "ayB" = (
@@ -10966,6 +10963,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/machinery/vending/command{
+	pixel_x = -27
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aCB" = (
@@ -48206,12 +48206,12 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/camera{
 	c_tag = "Medbay Psychology Office";
 	dir = 1;
 	network = list("ss13","medbay")
 	},
+/obj/machinery/vending/psych,
 /turf/open/floor/plasteel/white,
 /area/medical/psychology)
 "cHA" = (
@@ -52255,12 +52255,12 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "deS" = (
-/obj/machinery/power/rad_collector/anchored,
 /obj/structure/window/plasma/reinforced,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 10
 	},
+/obj/machinery/power/tesla_coil,
 /turf/open/floor/engine,
 /area/engine/supermatter)
 "deU" = (
@@ -52378,7 +52378,6 @@
 /turf/open/floor/engine,
 /area/engine/supermatter)
 "dfm" = (
-/obj/machinery/power/rad_collector/anchored,
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
@@ -52386,6 +52385,7 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 9
 	},
+/obj/machinery/power/tesla_coil,
 /turf/open/floor/engine,
 /area/engine/supermatter)
 "dfp" = (
@@ -53808,8 +53808,8 @@
 /area/science/research)
 "dss" = (
 /obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 8
+	pixel_x = -35;
+	pixel_y = -24
 	},
 /obj/machinery/button/door/incinerator_vent_toxmix{
 	id = "toxinsaccess";
@@ -56214,6 +56214,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"eBR" = (
+/obj/effect/turf_decal/bot{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 "eBX" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -57731,6 +57741,15 @@
 	},
 /turf/open/floor/plasteel/dark/corner,
 /area/engine/atmos)
+"fHy" = (
+/obj/structure/window/plasma/reinforced,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 1
+	},
+/obj/machinery/power/tesla_coil,
+/turf/open/floor/engine,
+/area/engine/supermatter)
 "fId" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -62211,7 +62230,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "jlw" = (
-/obj/machinery/light/small,
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -70968,6 +70986,15 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
+"pIA" = (
+/obj/structure/window/plasma/reinforced{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/general/visible,
+/obj/machinery/power/tesla_coil,
+/turf/open/floor/engine,
+/area/engine/supermatter)
 "pJO" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/donkpockets,
@@ -125095,7 +125122,7 @@ def
 dej
 aFC
 deC
-deC
+eBR
 dlI
 aKH
 aMk
@@ -125610,11 +125637,11 @@ del
 aFC
 djt
 aMk
-daZ
+fHy
 dbb
 aMk
 aNv
-dfk
+pIA
 dfq
 djt
 dfF

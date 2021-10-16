@@ -74,6 +74,13 @@
 	if(tool)
 		speed_mod = tool.toolspeed
 
+	//Bungalow Medical rework
+	if(target.stat == CONSCIOUS)
+		speed_mod = speed_mod*1.1
+	else
+		speed_mod = speed_mod*0.8
+
+
 	var/implement_speed_mod = 1
 	if(implement_type)	//this means it isn't a require hand or any item step.
 		implement_speed_mod = implements[implement_type] / 100.0

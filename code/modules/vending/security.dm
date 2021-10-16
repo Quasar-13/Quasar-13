@@ -38,3 +38,28 @@
 
 /obj/item/vending_refill/security
 	icon_state = "refill_sec"
+
+
+
+/obj/machinery/vending/command
+	name = "\improper Command Time"
+	desc = "A command equipment vendor."
+	product_ads = "Come get your memories"
+	icon_state = "wallcom"
+	icon_deny = "wallcom"
+	light_mask = "wallmed-light-mask"
+	req_access = list(ACCESS_HEADS)
+	density = FALSE
+	products = list(/obj/item/pet_carrier = 7,
+					/obj/item/storage/photo_album = 7,
+					/obj/item/clothing/shoes/sneakers/brown/digitigrade = 7,
+					/obj/item/assembly/flash/handheld = 7,
+					/obj/item/megaphone/command = 7,
+					/obj/item/clothing/shoes/sneakers/brown = 7,
+					/obj/item/card/id/captains_spare = 1)
+	contraband = list(/obj/item/clothing/head/crown/fancy = 3,
+					/obj/item/clothing/glasses/sunglasses/gar/supergar = 2)
+	premium = list(/obj/item/coin/antagtoken = 2,
+					/obj/item/clothing/glasses/sunglasses = 3)
+
+

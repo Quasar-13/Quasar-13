@@ -1,6 +1,6 @@
 /datum/chemical_reaction/tricordizine
 	results = list(/datum/reagent/medicine/tricordizine = 3)
-	required_reagents = list(/datum/reagent/medicine/bicardine = 1, /datum/reagent/medicine/kelotane = 1, /datum/reagent/toxin = 1)
+	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/medicine/kelotane = 1, /datum/reagent/toxin = 1)
 	mix_message = "The mixture turns into a fluffy blue liquid."
 
 /datum/chemical_reaction/omnizidrite

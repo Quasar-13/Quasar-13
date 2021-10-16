@@ -71,6 +71,15 @@
 	/// Should this job be allowed to be picked for the bureaucratic error event?
 	var/allow_bureaucratic_error = TRUE
 
+	/// Job's station type. Will affect what kinds of station the job spawns on. Spawns on all types if set to none.
+	var/maptype = "none"
+
+	///Job's faction, for maps like the starfury
+	var/corp = "nanotrasen"
+
+	//To help with Whitelisting shit
+	var/trusted_only = FALSE
+
 /datum/job/New()
 	. = ..()
 	var/list/jobs_changes = GetMapChanges()

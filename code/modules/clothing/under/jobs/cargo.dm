@@ -49,4 +49,3 @@
 	name = "shaft miner's jumpsuit"
 	icon_state = "explorer"
 	inhand_icon_state = "explorer"
-	can_adjust = FALSE

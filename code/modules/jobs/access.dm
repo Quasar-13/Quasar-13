@@ -385,11 +385,16 @@
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
 //				"Deputy", // Tegustation Deputy edit: Add all Tegu-only jobs here!
 				"Void Technician", "Chemist", "Secretary", //Bungalowstation edit
+
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Pharmacist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
 
 /proc/get_all_job_icons() //For all existing HUD icons
-	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official", "Commodore", "Marshal") //Tegu edit right there
+	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official", "Commodore", "Marshal",
+
+				//Bungalow Station Marine Corps
+				"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
+				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden")
 
 
 
@@ -407,7 +412,7 @@
 	var/jobName = I.assignment
 
 	//bungalow alt job titles
-	var/list/blacklist = list("Commodore", "Marshal")
+	var/list/blacklist = list("Commodore", "Marshal", "Commanding Officer")
 	for(var/datum/job/J in SSjob.occupations)
 		if((jobName in J.alt_titles) || (jobName == J.senior_title))
 			if(jobName in blacklist)//Blacklists names above

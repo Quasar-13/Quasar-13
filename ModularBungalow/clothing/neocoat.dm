@@ -59,3 +59,10 @@
 	desc = "A beautiful red and black labcoat for deputized doctors to wear."
 	icon_state = "labcoat_brig"
 
+//Xenoarch
+/obj/item/clothing/suit/neocoat/xeno
+	name = "xenoarchaeologist's labcoat"
+	desc = "A long, armored labcoat that looks a little ugly...."
+	icon_state = "labcoat_geo"
+	allowed = list(/obj/item/pickaxe, /obj/item/tank/internals)
+	armor = list(MELEE = 25, BULLET = 0, LASER = 10,ENERGY = 10, BOMB = 30, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)

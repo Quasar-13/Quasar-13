@@ -1074,6 +1074,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/engine/atmos/upper)
+"awF" = (
+/obj/effect/spawner/lootdrop/garbage_spawner,
+/turf/open/floor/plasteel,
+/area/maintenance/department/science)
 "awH" = (
 /turf/closed/wall,
 /area/crew_quarters/bar)
@@ -3424,12 +3428,10 @@
 /turf/open/floor/plasteel,
 /area/maintenance/port)
 "boW" = (
-/obj/machinery/mecha_part_fabricator{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
+/obj/machinery/mecha_part_fabricator,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "boZ" = (
@@ -3580,6 +3582,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 6
 	},
+/obj/item/retractor,
 /turf/open/floor/plasteel/white,
 /area/medical/surgery/room_b)
 "btU" = (
@@ -8204,6 +8207,7 @@
 	pixel_x = 30
 	},
 /obj/item/reagent_containers/spray/cleaner,
+/obj/item/retractor,
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "dnI" = (
@@ -8453,9 +8457,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 4
-	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "drl" = (
@@ -8654,6 +8655,9 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
+	},
+/obj/machinery/vending/command{
+	pixel_y = 30
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -12149,7 +12153,6 @@
 	pixel_y = 30;
 	receive_ore_updates = 1
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "eQw" = (
@@ -13320,13 +13323,6 @@
 /obj/item/wirecutters,
 /turf/open/floor/plasteel,
 /area/engine/lobby)
-"foC" = (
-/obj/structure/window/spawner,
-/obj/effect/turf_decal/trimline/purple/filled/corner{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/science/robotics/lab)
 "foL" = (
 /obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel/dark,
@@ -15637,9 +15633,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security)
 "gjG" = (
-/obj/machinery/mecha_part_fabricator{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#c1caff"
@@ -15653,6 +15646,7 @@
 	name = "Research Camera";
 	network = list("ss13","rd")
 	},
+/obj/machinery/mecha_part_fabricator,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "gjM" = (
@@ -30044,8 +30038,10 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
 "lYm" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/effect/landmark/start/roboticist,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 6
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "lYB" = (
@@ -37073,7 +37069,7 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "oRG" = (
-/mob/living/simple_animal/hostile/retaliate/terry,
+/mob/living/simple_animal/hostile/retaliate/goose/terry,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "oRH" = (
@@ -41759,6 +41755,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/item/inspector,
 /turf/open/floor/plasteel/dark,
 /area/security/main)
 "qLC" = (
@@ -43919,6 +43916,15 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hop)
+"rEP" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/science/robotics/lab)
 "rES" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -51067,7 +51073,6 @@
 /turf/open/floor/carpet/stellar,
 /area/crew_quarters/heads/cmo)
 "uvP" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
@@ -51077,6 +51082,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/vending/psych,
 /turf/open/floor/carpet/purple,
 /area/medical/psychology)
 "uwb" = (
@@ -54512,7 +54518,7 @@
 /turf/open/floor/engine,
 /area/science/chem)
 "vWC" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -98860,13 +98866,13 @@ tYF
 tYw
 xiL
 lpp
+iVv
 lTS
 lTS
 lTS
 lTS
 lTS
-lTS
-lTS
+kQn
 msl
 taD
 taD
@@ -99359,7 +99365,7 @@ lTS
 msl
 pYy
 iTA
-nnv
+awF
 lTS
 tYw
 aSt
@@ -100894,11 +100900,11 @@ blE
 dpE
 wlV
 oAg
+nSC
+nnv
+nnv
+lTS
 msl
-nnv
-nnv
-lTS
-lTS
 nnv
 lTS
 slU
@@ -100910,7 +100916,7 @@ slU
 slU
 mRe
 lTS
-lTS
+ffj
 lTS
 nnv
 lTS
@@ -101155,7 +101161,7 @@ bdD
 lTS
 nnv
 lTS
-lTS
+bdD
 lTS
 qwa
 gHx
@@ -101424,8 +101430,8 @@ uzg
 uzg
 dvc
 lTS
-lTS
-lTS
+pYy
+pYy
 msl
 msl
 msl
@@ -101936,7 +101942,7 @@ nSk
 ilz
 lIb
 uzg
-pYy
+lTS
 pYy
 jjQ
 pYy
@@ -107068,7 +107074,7 @@ yiB
 oct
 aVR
 yiB
-foC
+kvP
 rqj
 yiW
 mOf
@@ -107578,7 +107584,7 @@ wsb
 vmf
 fnc
 boW
-yiB
+oct
 yiB
 yiB
 qLe
@@ -107835,7 +107841,7 @@ wsb
 bzt
 fnc
 xXu
-jQF
+rEP
 jQF
 jQF
 mPE

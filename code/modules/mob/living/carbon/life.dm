@@ -39,6 +39,11 @@
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
 
+	if(. && mind) //. == not dead
+		for(var/key in mind.addiction_points)
+			var/datum/addiction/addiction = SSaddiction.all_addictions[key]
+			addiction.process_addiction(src)
+
 	if(stat != DEAD)
 		return 1
 
@@ -88,7 +93,12 @@
 			losebreath++  //You can't breath at all when in critical or when being choked, so you're going to miss a breath
 
 		else if(health <= crit_threshold)
-			losebreath += 0.25 //You're having trouble breathing in soft crit, so you'll miss a breath one in four times
+			losebreath += 0.50 //You're having trouble breathing in soft crit, so you'll miss a breath half the time
+			var drop_chance = 50
+			if(prob(drop_chance))
+				Knockdown(75)
+				Jitter(50)
+				to_chat(src, "<span class='notice'>You are too tired to keep going!</span>")
 
 	//Suffocate
 	if(losebreath >= 1) //You've missed a breath, take oxy damage
@@ -574,6 +584,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(drunkenness >= 101)
 			adjustToxLoss(2) //Let's be honest you shouldn't be alive by now
 
+	if(mad_shaking)
+		do_shaky_animation(mad_shaking)
+
 /// Base carbon environment handler, adds natural stabilization
 /mob/living/carbon/handle_environment(datum/gas_mixture/environment)
 	var/areatemp = get_temperature(environment)
@@ -867,3 +880,11 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		return
 
 	heart.beating = !status
+
+/// Drop items for the 'butterfingers' trait
+/mob/living/carbon/proc/roll_random_drop(drop_chance = 20, jitter_amount = 10)
+	if(prob(drop_chance))
+		var/obj/item/I = get_active_held_item()
+		if(I && dropItemToGround(I))
+			to_chat(src, "<span class='notice'>Your hands slip and you drop what you were holding!</span>")
+			Jitter(jitter_amount)

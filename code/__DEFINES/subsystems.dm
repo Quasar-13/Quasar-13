@@ -112,6 +112,7 @@
 #define INIT_ORDER_INSTRUMENTS		82
 #define INIT_ORDER_VIS				80
 #define INIT_ORDER_ACHIEVEMENTS		77
+#define INIT_ORDER_MAPTYPE			76 //It touches like 7 other subsystems. If you add anything that is in any way affected by map types, put it after this.
 #define INIT_ORDER_RESEARCH			75
 #define INIT_ORDER_STATION			74 //This is high priority because it manipulates a lot of the subsystems that will initialize after it.
 #define INIT_ORDER_EVENTS			70

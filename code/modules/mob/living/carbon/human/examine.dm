@@ -129,8 +129,6 @@
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
 		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
 
-	var/temp = getBruteLoss() //no need to calculate each of these twice
-
 	var/list/msg = list()
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
@@ -183,6 +181,11 @@
 		msg += "[t_He] [p_do()]n't seem all there.\n"
 
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
+		var/temp
+		if(user == src && src.hal_screwyhud == SCREWYHUD_CRIT)//fake damage
+			temp = 50
+		else
+			temp = getBruteLoss()
 		if(temp)
 			if(temp < 25)
 //				msg += "[t_He] [t_has] minor bruising.\n"
@@ -437,13 +440,13 @@
 					"<a href='?src=[REF(src)];hud=s;add_comment=1'>\[Add comment\]</a>"), "")
 	else if(isobserver(user))
 		. += "<span class='info'><b>Traits:</b> [get_quirk_string(FALSE, CAT_QUIRK_ALL)]</span>"
-		//SKYRAT EDIT ADDITION BEGIN - GUNPOINT
+		//BUNGALOW EDIT ADDITION BEGIN - GUNPOINT
 	if(gunpointing)
 		. += "<span class='warning'><b>[t_He] [t_is] holding [gunpointing.target.name] at gunpoint with [gunpointing.aimed_gun.name]!</b></span>\n"
 	if(length(gunpointed))
 		for(var/datum/gunpoint/GP in gunpointed)
 			. += "<span class='warning'><b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b></span>\n"
-	//SKYRAT EDIT ADDITION END
+	//BUNGALOW EDIT ADDITION END
 	. += "*---------*</span>"
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .)
@@ -460,3 +463,23 @@
 			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
+
+/mob/living/carbon/human/examine_more(mob/user)
+	. = ..()
+	if ((wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE)))
+		return
+	var/age_text
+	switch(age)
+		if(-INFINITY to 25)
+			age_text = "very young"
+		if(26 to 35)
+			age_text = "of adult age"
+		if(36 to 55)
+			age_text = "middle-aged"
+		if(56 to 75)
+			age_text = "rather old"
+		if(76 to 100)
+			age_text = "very old"
+		if(101 to INFINITY)
+			age_text = "withering away"
+	. += list("<span class='notice'>[p_they(TRUE)] appear[p_s()] to be [age_text].</span>")

@@ -98,10 +98,10 @@
 		CtrlClickOn(A)
 		return
 
-	//SKYRAT EDIT ADDITION BEGIN - TYPING_INDICATOR
+	//Bungalow EDIT ADDITION BEGIN - TYPING_INDICATOR
 	if(typing_indicator)
 		set_typing_indicator(FALSE)
-	//SKYRAT EDIT ADDITION END
+	//Bungalow EDIT ADDITION END
 
 	if(incapacitated(ignore_restraints = TRUE, ignore_stasis = TRUE))
 		return
@@ -198,7 +198,7 @@
 			if(closed[target] || isarea(target))  // avoid infinity situations
 				continue
 			closed[target] = TRUE
-			if(isturf(target) || isturf(target.loc) || (target in direct_access) || (isobj(target) && target.flags_1 & IS_ONTOP_1)) //Directly accessible atoms
+			if(isturf(target) || isturf(target.loc) || (target in direct_access) || (ismovable(target) && target.flags_1 & IS_ONTOP_1)) //Directly accessible atoms
 				if(Adjacent(target) || (tool && CheckToolReach(src, target, tool.reach))) //Adjacent or reaching attacks
 					return TRUE
 
