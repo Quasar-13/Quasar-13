@@ -46,7 +46,6 @@
 /obj/machinery/status_display/wrench_act(mob/living/user, obj/item/I)
 	. = ..()
 	to_chat(user, "You start [anchored ? "unsecuring" : "securing"] the status display.")
-	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 6 SECONDS))
 		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
 		to_chat(user, "You finish [anchored ? "unsecuring" : "securing"] the status display.")
@@ -61,19 +60,18 @@
 		return TRUE
 	user.visible_message("<span class='notice'>[user] begins repairing the status display.")
 	to_chat(user, "You begin repairing the status display.")
-	if(!tool.use_tool(src, user, 4 SECONDS, amount = 0, volume=50))
+	if(tool.use_tool(src, user, 40, volume=50, extra_checks = CALLBACK(src, .proc/weld_checks, tool, user)))
+		to_chat(user, "You finish repairing the status display.")
+		obj_integrity = max_integrity
+		set_machine_stat(machine_stat & ~BROKEN)
+		update_icon()
 		return TRUE
-	to_chat(user, "You finish repairing the status display.")
-	obj_integrity = max_integrity
-	set_machine_stat(machine_stat & ~BROKEN)
-	update_icon()
-	return TRUE
 
 /obj/machinery/status_display/deconstruct(disassembled = TRUE)
 	if(flags_1 & NODECONSTRUCT_1)
 		return
 	if(!disassembled)
-		new /obj/item/stack/sheet/iron(drop_location(), 2)
+		new /obj/item/stack/sheet/metal(drop_location(), 2)
 		new /obj/item/shard(drop_location())
 		new /obj/item/shard(drop_location())
 	else
@@ -213,7 +211,7 @@
 		setDir(ndir)
 		pixel_x = NSCOMPONENT(dir) ? 0 : (dir == EAST ? -world.icon_size : world.icon_size)
 		pixel_y = NSCOMPONENT(dir) ? (dir == NORTH ? -world.icon_size : world.icon_size) : 0
-	update_appearance()
+	update_icon()
 
 /obj/machinery/status_display/evac/Initialize()
 	. = ..()
