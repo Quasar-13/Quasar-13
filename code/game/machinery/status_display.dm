@@ -43,29 +43,30 @@
 	custom_materials = list(/datum/material/iron=14000, /datum/material/glass=8000)
 	result_path = /obj/machinery/status_display
 
-/obj/machinery/status_display/wrench_act_secondary(mob/living/user, obj/item/tool)
+/obj/machinery/status_display/wrench_act(mob/living/user, obj/item/I)
 	. = ..()
-	balloon_alert(user, "[anchored ? "un" : ""]securing...")
+	to_chat(user, "You start [anchored ? "unsecuring" : "securing"] the status display.")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 6 SECONDS))
 		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
-		balloon_alert(user, "[anchored ? "un" : ""]secured")
+		to_chat(user, "You finish [anchored ? "unsecuring" : "securing"] the status display.")
 		deconstruct()
 		return TRUE
 
 /obj/machinery/status_display/welder_act(mob/living/user, obj/item/tool)
-	if(user.combat_mode)
+	if(user.a_intent == INTENT_HARM)
 		return
-	if(atom_integrity >= max_integrity)
-		balloon_alert(user, "it doesn't need repairs!")
+	if(obj_integrity >= max_integrity)
+		to_chat(user, "It doesn't need repairs!")
 		return TRUE
-	user.balloon_alert_to_viewers("repairing display...", "repairing...")
+	user.visible_message("<span class='notice'>[user] begins repairing the status display.")
+	to_chat(user, "You begin repairing the status display.")
 	if(!tool.use_tool(src, user, 4 SECONDS, amount = 0, volume=50))
 		return TRUE
-	balloon_alert(user, "repaired")
-	atom_integrity = max_integrity
+	to_chat(user, "You finish repairing the status display.")
+	obj_integrity = max_integrity
 	set_machine_stat(machine_stat & ~BROKEN)
-	update_appearance()
+	update_icon()
 	return TRUE
 
 /obj/machinery/status_display/deconstruct(disassembled = TRUE)
