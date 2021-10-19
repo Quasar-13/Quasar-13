@@ -203,8 +203,9 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.max_items = 3
+	STR.max_items = 2
+	STR.set_holdable(list(/obj/item/clothing/mask/gas/mad_clown, /obj/item/staff/roadsign))
 
 /obj/item/storage/box/hug/mad_clown/PopulateContents()
-	new /obj/item/reagent_containers/glass/bottle/accelerant_ts(src)
+	new /obj/item/clothing/mask/gas/mad_clown(src)
 	new /obj/item/staff/roadsign(src)
