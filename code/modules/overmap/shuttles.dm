@@ -1,13 +1,27 @@
-/area/shuttle/nt/falcon
+/area/shuttle/nts/falcon
 	name = "NTS Falcon"
 
-/obj/machinery/computer/shuttle/falcon
+/datum/map_template/shuttle/nts
+	can_be_bought = FALSE
+	port_id = "nts"
+
+/datum/map_template/shuttle/nts/falcon
+	suffix = "falcon"
+	name = "NTS Falcon"
+
+/obj/machinery/computer/shuttle/nts/falcon
 	name = "NTS Falcon Console"
 	desc = "Used to control the NTS falcon."
-	circuit = /obj/item/circuitboard/computer/shuttle/falcon
-	shuttleId = "ship_falcon"
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4;whiteship_lavaland;whiteship_custom"
+	shuttleId = "falcon"
 
-/obj/item/circuitboard/computer/shuttle/falcon
-	name = "NTS Falcon Console board"
-	desc = "Used to make the falcon console."
+
+
+/datum/map_template/shuttle/nts/crow
+	suffix = "crow"
+	name = "NTS Crow"
+
+/obj/machinery/computer/shuttle/nts/crow
+	name = "NTS Crow Console"
+	desc = "Used to control the NTS crow."
+	shuttleId = "crow"
+
