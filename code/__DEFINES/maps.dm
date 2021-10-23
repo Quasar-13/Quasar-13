@@ -74,8 +74,8 @@ require only minor tweaks.
 
 // default trait definitions, used by SSmapping
 #define ZTRAITS_CENTCOM list(ZTRAIT_CENTCOM = TRUE)
-#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_STATION = TRUE)
-#define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_SPACE_RUINS = TRUE)
+#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_STATION = TRUE)
+#define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_SPACE_RUINS = TRUE)
 
 //Mining Maps
 #define ZTRAITS_LAVALAND list(\
@@ -86,6 +86,7 @@ require only minor tweaks.
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
 
 
+
 //Bungalow extra mining
 #define ZTRAITS_ICEMOON list(\
 	ZTRAIT_MINING = TRUE, \
@@ -94,7 +95,7 @@ require only minor tweaks.
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid/snow/icemoon)
 
-#define ZTRAITS_JUNGLE list(\
+#define ZTRAITS_JUNGLE_PLANET list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_ACIDRAIN = TRUE, \
 	ZTRAIT_JUNGLE_RUINS = TRUE, \

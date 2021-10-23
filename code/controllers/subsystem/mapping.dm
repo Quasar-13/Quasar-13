@@ -13,11 +13,16 @@ SUBSYSTEM_DEF(mapping)
 
 	var/list/map_templates = list()
 
+	var/list/planet_templates = list()
+
+
 	var/list/ruins_templates = list()
 	var/list/space_ruins_templates = list()
 	var/list/lava_ruins_templates = list()
 	var/list/ice_ruins_templates = list()
 	var/list/ice_ruins_underground_templates = list()
+
+
 
 	//Bungalowstation mining
 	var/list/rock_ruins_templates = list()
@@ -71,21 +76,16 @@ SUBSYSTEM_DEF(mapping)
 			to_chat(world, "<span class='boldannounce'>Unable to load next or default map config, defaulting to Meta Station</span>")
 			config = old_config
 	initialize_biomes()
+	Templates()
 	loadWorld()
 	repopulate_sorted_areas()
 	process_teleport_locs()			//Sets up the wizard teleport locations
-	preloadTemplates()
 	run_map_generation()
 
 #ifndef LOWMEMORYMODE
-	// Create space ruin levels
-	while (space_levels_so_far < config.space_ruin_levels)
-		++space_levels_so_far
-		add_new_zlevel("Empty Area [space_levels_so_far]", ZTRAITS_SPACE)
-	// and one level with no ruins
-	for (var/i in 1 to config.space_empty_levels)
-		++space_levels_so_far
-		empty_space = add_new_zlevel("Empty Area [space_levels_so_far]", list(ZTRAIT_LINKAGE = CROSSLINKED))
+
+	//overmap shit
+	empty_space = add_new_zlevel("Empty Area [space_levels_so_far]", list(ZTRAIT_LINKAGE = UNAFFECTED))
 
 	// Pick a random away mission.
 	if(CONFIG_GET(flag/roundstart_away))
@@ -224,7 +224,7 @@ Used by the AI doomsday and the self-destruct nuke.
 	z_list = SSmapping.z_list
 
 #define INIT_ANNOUNCE(X) to_chat(world, "<span class='boldannounce'>[X]</span>"); log_world(X)
-/datum/controller/subsystem/mapping/proc/LoadGroup(list/errorList, name, path, files, list/traits, list/default_traits, silent = FALSE)
+/datum/controller/subsystem/mapping/proc/LoadGroup(list/errorList, name, path, files, list/traits, list/default_traits, silent = FALSE, datum/overmap_object/ov_obj = null)
 	. = list()
 	var/start_time = REALTIMEOFDAY
 
@@ -254,11 +254,11 @@ Used by the AI doomsday and the self-destruct nuke.
 		while (total_z > traits.len)  // fall back to defaults on extra levels
 			traits += list(default_traits)
 
-	// preload the relevant space_level datums
+	//  the relevant space_level datums
 	var/start_z = world.maxz + 1
 	var/i = 0
 	for (var/level in traits)
-		add_new_zlevel("[name][i ? " [i + 1]" : ""]", level)
+		add_new_zlevel("[name][i ? " [i + 1]" : ""]", level, null, overmap_obj = ov_obj)
 		++i
 
 	// load the maps
@@ -277,10 +277,18 @@ Used by the AI doomsday and the self-destruct nuke.
 	// ensure we have space_level datums for compiled-in maps
 	InitializeDefaultZLevels()
 
+	//Load overmap
+	SSovermap.MappingInit()
+
+
+
+
 	// load the station
 	station_start = world.maxz + 1
 	INIT_ANNOUNCE("Loading [config.map_name]...")
-	LoadGroup(FailedZs, "Station", config.map_path, config.map_file, config.traits, ZTRAITS_STATION)
+	LoadGroup(FailedZs, "Station", config.map_path, config.map_file, config.traits, ZTRAITS_STATION, ov_obj = new config.overmap_object_type(SSovermap.main_system, rand(5,20), rand(5,20)))
+
+
 
 	if(SSdbcore.Connect())
 		var/datum/db_query/query_round_map_name = SSdbcore.NewQuery({"
@@ -291,35 +299,22 @@ Used by the AI doomsday and the self-destruct nuke.
 
 #ifndef LOWMEMORYMODE
 	// TODO: remove this when the DB is prepared for the z-levels getting reordered
-	while (world.maxz < (5 - 1) && space_levels_so_far < config.space_ruin_levels)
+	while (world.maxz < 5 && space_levels_so_far < config.space_ruin_levels)
 		++space_levels_so_far
 		add_new_zlevel("Empty Area [space_levels_so_far]", ZTRAITS_SPACE)
 
+		add_new_zlevel("Ruins Area [space_levels_so_far]", ZTRAITS_SPACE, overmap_obj = new /datum/overmap_object/ruins(SSovermap.main_system, rand(5,20), rand(5,20)))
+	//Load planets
 	if(config.minetype == "lavaland")
-		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
-
-		//Bungalow Edit Start
-
-	else if(config.minetype == "icemoon")
-		LoadGroup(FailedZs, "Icemoon", "map_files/Mining", "Icemoon.dmm", default_traits = ZTRAITS_ICEMOON)
-
-	else if(config.minetype == "jungle")
-		LoadGroup(FailedZs, "Jungle", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
-
-	else if(config.minetype == "rockplanet")
-		LoadGroup(FailedZs, "Rockplanet", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
-
-	else if(config.minetype == "tidalmoon")
-		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
+		var/datum/planet_template/lavaland_template = planet_templates[/datum/planet_template/lavaland]
+		lavaland_template.LoadTemplate(SSovermap.main_system, rand(5,20), rand(5,20))
+	else if (!isnull(config.minetype) && config.minetype != "none")
+		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 
 		//Syndicate Marine Corps
 
-	else if(config.minetype == "phobos")
+	if(config.minetype == "phobos")
 		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_phobos.dmm", default_traits = ZTRAITS_MISSION)
-
-	else if(config.minetype == "icemission")
-		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_ice.dmm", default_traits = ZTRAITS_ICEMISSION)
-		//Bungalow Edit End
 
 
 	else if (!isnull(config.minetype) && config.minetype != "none")
@@ -434,18 +429,25 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	next_map_config = VM
 	return TRUE
 
-/datum/controller/subsystem/mapping/proc/preloadTemplates(path = "_maps/templates/") //see master controller setup
+/datum/controller/subsystem/mapping/proc/Templates(path = "_maps/templates/") //see master controller setup
 	var/list/filelist = flist(path)
 	for(var/map in filelist)
 		var/datum/map_template/T = new(path = "[path][map]", rename = "[map]")
 		map_templates[T.name] = T
 
-	preloadRuinTemplates()
-	preloadShuttleTemplates()
-	preloadShelterTemplates()
-	preloadHolodeckTemplates()
+	RuinTemplates()
+	ShuttleTemplates()
+	ShelterTemplates()
+	HolodeckTemplates()
+	preloadPlanetTemplates()
 
-/datum/controller/subsystem/mapping/proc/preloadRuinTemplates()
+/datum/controller/subsystem/mapping/proc/preloadPlanetTemplates()
+	for(var/path in subtypesof(/datum/planet_template))
+		planet_templates[path] = new path()
+
+
+
+/datum/controller/subsystem/mapping/proc/RuinTemplates()
 	// Still supporting bans by filename
 	var/list/banned = generateMapList("[global.config.directory]/lavaruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/spaceruinblacklist.txt")
@@ -484,7 +486,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			rock_ruins_templates[R.name] = R
 
 
-/datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
+/datum/controller/subsystem/mapping/proc/ShuttleTemplates()
 	var/list/unbuyable = generateMapList("[global.config.directory]/unbuyableshuttles.txt")
 
 	for(var/item in subtypesof(/datum/map_template/shuttle))
@@ -499,7 +501,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		shuttle_templates[S.shuttle_id] = S
 		map_templates[S.shuttle_id] = S
 
-/datum/controller/subsystem/mapping/proc/preloadShelterTemplates()
+/datum/controller/subsystem/mapping/proc/ShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))
 		var/datum/map_template/shelter/shelter_type = item
 		if(!(initial(shelter_type.mappath)))
@@ -509,7 +511,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		shelter_templates[S.shelter_id] = S
 		map_templates[S.shelter_id] = S
 
-/datum/controller/subsystem/mapping/proc/preloadHolodeckTemplates()
+/datum/controller/subsystem/mapping/proc/HolodeckTemplates()
 	for(var/item in subtypesof(/datum/map_template/holodeck))
 		var/datum/map_template/holodeck/holodeck_type = item
 		if(!(initial(holodeck_type.mappath)))
