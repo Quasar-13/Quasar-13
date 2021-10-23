@@ -584,6 +584,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(drunkenness >= 101)
 			adjustToxLoss(2) //Let's be honest you shouldn't be alive by now
 
+	if(mad_shaking)
+		do_shaky_animation(mad_shaking)
+
 /// Base carbon environment handler, adds natural stabilization
 /mob/living/carbon/handle_environment(datum/gas_mixture/environment)
 	var/areatemp = get_temperature(environment)

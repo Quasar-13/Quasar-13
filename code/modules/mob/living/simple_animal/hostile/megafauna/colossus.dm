@@ -273,113 +273,6 @@
 			SSexplosions.medturf += target
 
 
-
-//Black Box
-
-/obj/machinery/smartfridge/black_box
-	name = "black box"
-	desc = "A completely indestructible chunk of crystal, rumoured to predate the start of this universe. It looks like you could store things inside it."
-	icon = 'icons/obj/lavaland/artefacts.dmi'
-	icon_state = "blackbox"
-	light_range = 8
-	max_n_of_items = INFINITY
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	pixel_y = -4
-	use_power = NO_POWER_USE
-	base_build_path = /obj/machinery/smartfridge/black_box
-	var/memory_saved = FALSE
-	var/list/stored_items = list()
-	var/list/blacklist = list()
-
-/obj/machinery/smartfridge/black_box/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_blocker)
-
-/obj/machinery/smartfridge/black_box/accept_check(obj/item/O)
-	if(!istype(O))
-		return FALSE
-	if(blacklist[O])
-		visible_message("<span class='boldwarning'>[src] ripples as it rejects [O]. The device will not accept items that have been removed from it.</span>")
-		return FALSE
-	return TRUE
-
-/obj/machinery/smartfridge/black_box/Initialize()
-	. = ..()
-	var/static/obj/machinery/smartfridge/black_box/current
-	if(current && current != src)
-		qdel(src, force=TRUE)
-		return
-	current = src
-	ReadMemory()
-
-/obj/machinery/smartfridge/black_box/process()
-	..()
-	if(!memory_saved && SSticker.current_state == GAME_STATE_FINISHED)
-		WriteMemory()
-		memory_saved = TRUE
-
-/obj/machinery/smartfridge/black_box/proc/WriteMemory()
-	var/json_file = file("data/npc_saves/Blackbox.json")
-	stored_items = list()
-
-	for(var/obj/O in (contents-component_parts))
-		stored_items += O.type
-	var/list/file_data = list()
-	file_data["data"] = stored_items
-	fdel(json_file)
-	WRITE_FILE(json_file, json_encode(file_data))
-
-/obj/machinery/smartfridge/black_box/proc/ReadMemory()
-	if(fexists("data/npc_saves/Blackbox.sav")) //legacy compatability to convert old format to new
-		var/savefile/S = new /savefile("data/npc_saves/Blackbox.sav")
-		S["stored_items"] >> stored_items
-		fdel("data/npc_saves/Blackbox.sav")
-	else
-		var/json_file = file("data/npc_saves/Blackbox.json")
-		if(!fexists(json_file))
-			return
-		var/list/json = json_decode(file2text(json_file))
-		stored_items = json["data"]
-	if(isnull(stored_items))
-		stored_items = list()
-
-	for(var/item in stored_items)
-		create_item(item)
-
-//in it's own proc to avoid issues with items that nolonger exist in the code base.
-//try catch doesn't always prevent byond runtimes from halting a proc,
-/obj/machinery/smartfridge/black_box/proc/create_item(item_type)
-	var/obj/O = new item_type(src)
-	blacklist[O] = TRUE
-
-/obj/machinery/smartfridge/black_box/Destroy(force = FALSE)
-	if(force)
-		for(var/thing in src)
-			qdel(thing)
-		return ..()
-	else
-		return QDEL_HINT_LETMELIVE
-
-
-//No taking it apart
-
-/obj/machinery/smartfridge/black_box/default_deconstruction_screwdriver()
-	return
-
-/obj/machinery/smartfridge/black_box/exchange_parts()
-	return
-
-
-/obj/machinery/smartfridge/black_box/default_pry_open()
-	return
-
-
-/obj/machinery/smartfridge/black_box/default_unfasten_wrench()
-	return
-
-/obj/machinery/smartfridge/black_box/default_deconstruction_crowbar()
-	return
-
 ///Anomolous Crystal///
 
 #define ACTIVATE_TOUCH "touch"
@@ -467,21 +360,6 @@
 
 /obj/machinery/anomalous_crystal/ex_act()
 	ActivationReaction(null, ACTIVATE_BOMB)
-
-/obj/machinery/anomalous_crystal/honk //Strips and equips you as a clown. I apologize for nothing
-	observer_desc = "This crystal strips and equips its targets as clowns."
-	possible_methods = list(ACTIVATE_MOB_BUMP, ACTIVATE_SPEECH)
-	activation_sound = 'sound/items/bikehorn.ogg'
-
-/obj/machinery/anomalous_crystal/honk/ActivationReaction(mob/user)
-	if(..() && ishuman(user) && !(user in affected_targets))
-		var/mob/living/carbon/human/H = user
-		for(var/obj/item/W in H)
-			H.dropItemToGround(W)
-		var/datum/job/clown/C = new /datum/job/clown()
-		C.equip(H)
-		qdel(C)
-		affected_targets.Add(H)
 
 /obj/machinery/anomalous_crystal/theme_warp //Warps the area you're in to look like a new one
 	observer_desc = "This crystal warps the area around it to a theme."
