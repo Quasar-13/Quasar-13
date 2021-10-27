@@ -298,3 +298,22 @@
 /datum/brain_trauma/severe/hypnotic_trigger/proc/hypnotrigger()
 	to_chat(owner, "<span class='warning'>The words trigger something deep within you, and you feel your consciousness slipping away...</span>")
 	owner.apply_status_effect(/datum/status_effect/trance, rand(100,300), FALSE)
+	
+	
+	
+//I forgot what this was
+//First curable by neurine, then surgery, then not able to be cured at all. It's not my fault, it's a skill issue.
+//Incurable traumas have the flag TRAUMA_RESILIENCE_ABSOLUTE IIRC
+
+/datum/brain_trauma/severe/dementia
+	var/name = "Dementia"
+	var/desc = "A trauma that causes proceedural loss of memory."
+	var/scan_desc = "proceedural loss of memory" //description when detected by a health scanner
+	var/mob/living/carbon/owner 
+	var/obj/item/organ/brain/brain 
+	var/gain_text = ""
+	var/lose_text = "<span class='notice'><b>You rember!</b></span>"
+	var/can_gain = TRUE
+	var/random_gain = TRUE 
+	var/resilience = TRAUMA_RESILIENCE_BASIC
+	var/stage = 1
