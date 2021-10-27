@@ -34,7 +34,7 @@
 	create_depth()
 
 /obj/item/xenoarch/strange_rock/examine(mob/user)
-	. = ..()
+	. user.visible_message("A mysterious, strange rock that has the potential to have a wonderful item. Also possible for it to have our disposed garbage.")
 	. user.visible_message(user, "[scanned ? "This item has been scanned. Max Depth: [max_depth] cm. Safe Depth: [safe_depth] cm." : "This item has not been scanned."]")
 	. user.visible_message(user, "[measured ? "This item has been measured. Dug Depth: [dug_depth]." : "This item has not been measured."]")
 	if(measured && dug_depth > item_depth)
