@@ -111,7 +111,7 @@
 					if(!(world.time % 5))
 						to_chat(src, "<span class='warning'>[L] is restraining [P], you cannot push past.</span>")
 					return TRUE
-				//BUNGALOW EDIT ADDITION BEGIN - GUNPOINT
+				//SKYRAT EDIT ADDITION BEGIN - GUNPOINT
 		if(L.gunpointed.len)
 			var/is_pointing = FALSE
 			for(var/datum/gunpoint/gp in L.gunpointed)
@@ -126,7 +126,7 @@
 			if(!(world.time % 5))
 				to_chat(src, "<span class='warning'>[L] is holding someone at gunpoint, you cannot push past.</span>")
 			return TRUE
-		//BUNGALOW EDIT ADDITION END
+		//SKYRAT EDIT ADDITION END
 
 	if(moving_diagonally)//no mob swap during diagonal moves.
 		return TRUE
@@ -533,7 +533,7 @@
 /// Proc to append and redefine behavior to the change of the [/mob/living/var/resting] variable.
 /mob/living/proc/update_resting()
 	update_rest_hud_icon()
-	SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_RESTING, resting) //BUNGALOW EDIT ADDITION - GUNPOINT
+	SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_RESTING, resting) //SKYRAT EDIT ADDITION - GUNPOINT
 
 /mob/living/proc/get_up(instant = FALSE)
 	set waitfor = FALSE

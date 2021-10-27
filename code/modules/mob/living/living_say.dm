@@ -347,7 +347,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	//INVOKE_ASYNC(GLOBAL_PROC, /.proc/flick_overlay, I, speech_bubble_recipients, 30) - ORIGINAL
-	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //BUNGALOW EDIT CHANGE - TYPING_INDICATOR
+	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //SKYRAT EDIT CHANGE - TYPING_INDICATOR
 
 /mob/proc/binarycheck()
 	return FALSE

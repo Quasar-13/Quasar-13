@@ -190,7 +190,7 @@
 				. = TRUE
 
 ///obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language, list/message_mods) - ORIGINAL
-/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language, list/message_mods, direct = TRUE) //BUNGALOW EDIT CHANGE - GUNPOINT
+/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language, list/message_mods, direct = TRUE) //SKYRAT EDIT CHANGE - GUNPOINT
 	if(HAS_TRAIT(M, TRAIT_SIGN_LANG)) //Forces Sign Language users to wear the translation gloves to speak over radios
 		var/mob/living/carbon/mute = M
 		if(istype(mute))
@@ -210,7 +210,7 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
-	SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language, direct) //BUNGALOW EDIT ADDITION - GUNPOINT
+	SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language, direct) //SKYRAT EDIT ADDITION - GUNPOINT
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language, message_mods)
 	return ITALICS | REDUCE_RANGE
 
@@ -306,7 +306,7 @@
 			if (idx && (idx % 2) == (message_mods[RADIO_EXTENSION] == MODE_L_HAND))
 				return
 
-	talk_into(speaker, raw_message, , spans, language=message_language, direct=FALSE) //BUNGALOW EDIT CHANGE - GUNPOINT
+	talk_into(speaker, raw_message, , spans, language=message_language, direct=FALSE) //SKYRAT EDIT CHANGE - GUNPOINT
 
 // Checks if this radio can receive on the given frequency.
 /obj/item/radio/proc/can_receive(freq, level)
