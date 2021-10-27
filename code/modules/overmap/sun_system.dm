@@ -13,11 +13,11 @@
 	var/z_level = 0
 
 	/// The levels are initialised in reserved blocks on the overmap level. Those offsets are this level's starting point
-	var/x_offset = 0
-	var/y_offset = 0
+	var/x_offset = 1
+	var/y_offset = 231
 	/// The furthest x and y in the sun system
-	var/maxx = 50
-	var/maxy = 50
+	var/maxx = 28
+	var/maxy = 22
 
 /datum/overmap_sun_system/proc/GetVisualX(passed_x)
 	return x_offset + passed_x
