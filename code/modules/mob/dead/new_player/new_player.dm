@@ -414,18 +414,15 @@
 
 	var/list/department_categories = list()
 
-	var/list/standardmode
-	standardmode = list("planetary", "station", "ship")
-
-	if(SSmaptype.maptype == standardmode)
-		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
-
 	//Syndiestation
 	if(SSmaptype.maptype == "syndicate")
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
 
-	if(SSmaptype.maptype == "solgov")
+	else if(SSmaptype.maptype == "solgov")
 		department_categories = list("Solgov")
+
+	else
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
 
 	for(var/category in department_categories)

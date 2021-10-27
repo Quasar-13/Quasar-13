@@ -335,7 +335,7 @@ update_label()
 	name = "silver identification card"
 	id_type_name = "silver identification card"
 	desc = "A silver card which shows honour and dedication."
-	icon_state = "solgov"
+	icon_state = "silver"
 	inhand_icon_state = "silver_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'

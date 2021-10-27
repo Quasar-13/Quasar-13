@@ -1,4 +1,4 @@
-/datum/job/engineer
+/datum/job/solgovengineer
 	title = "Engineer"
 	department_head = list("Commander")
 	faction = "Station"
@@ -8,7 +8,7 @@
 	selection_color = "#b7edda"
 	maptype = "solgov"
 
-	outfit = /datum/outfit/job/engineer
+	outfit = /datum/outfit/job/solgovengineer
 
 	access = list(ACCESS_ENGINE)
 	minimal_access = list(ACCESS_ENGINE)
@@ -20,9 +20,9 @@
 	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER
 	bounty_types = CIV_JOB_ENG
 
-/datum/outfit/job/engineer
+/datum/outfit/job/solgovengineer
 	name = "Solgov Survivor (Engineer)"
 	id = /obj/item/card/id/solgov
-	jobtype = /datum/job/engineer
+	jobtype = /datum/job/solgovengineer
 	belt = null
 
