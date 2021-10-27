@@ -35,10 +35,10 @@
 
 /obj/item/xenoarch/strange_rock/examine(mob/user)
 	. = ..()
-	. to_chat(user, "[scanned ? "This item has been scanned. Max Depth: [max_depth] cm. Safe Depth: [safe_depth] cm." : "This item has not been scanned."]")
-	. to_chat(user, "[measured ? "This item has been measured. Dug Depth: [dug_depth]." : "This item has not been measured."]")
+	. user.visible_message(user, "[scanned ? "This item has been scanned. Max Depth: [max_depth] cm. Safe Depth: [safe_depth] cm." : "This item has not been scanned."]")
+	. user.visible_message(user, "[measured ? "This item has been measured. Dug Depth: [dug_depth]." : "This item has not been measured."]")
 	if(measured && dug_depth > item_depth)
-		to_chat(user,"The rock is crumbling, even just brushing it will destroy it!")
+		user.visible_message(user,"The rock is crumbling, even just brushing it will destroy it!")
 
 /obj/item/xenoarch/strange_rock/proc/create_item()
 	var/choose_tier = rand(1,100)
