@@ -34,7 +34,7 @@
 	if(delete_species)
 		QDEL_NULL(species)
 
-	//BUNGALOW EDIT END
+	//Bungalow EDIT END
 
 	mutations.Cut()					//This only references mutations, just dereference.
 	temporary_mutations.Cut()		//^
