@@ -129,10 +129,10 @@
 	for(var/obj/potential_consumption in view(1, src))
 		if(istype(potential_consumption, /obj/item/stack/ore/diamond))
 			qdel(potential_consumption)
-			visible_message(span_notice("[src] consumes [potential_consumption], and it disappears! ...At least, you think."))
+			visible_message("<span class='notice'[src] consumes [potential_consumption], and it disappears! ...At least, you think.</span>")
 		else if(istype(potential_consumption, /obj/item/pen/survival))
 			qdel(potential_consumption)
-			visible_message(span_notice("[src] examines [potential_consumption] closer, and telekinetically shatters the pen."))
+			visible_message("<span class='notice'[src] examines [potential_consumption] closer, and telekinetically shatters the pen.</span>")
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/random/Initialize()
 	. = ..()
