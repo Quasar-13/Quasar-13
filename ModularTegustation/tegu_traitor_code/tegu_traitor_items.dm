@@ -61,7 +61,8 @@
 		else
 			to_chat(user, "<span class='warning'>[src] doesn't have any DNA loaded in it!</span>")
 
-// A "nuke op" kit for Gorlex Infiltrators, available for 15 TC.
+// A "nuke op" kit for Gorlex Infiltrators.
+// Costs 15 TC.
 /obj/item/storage/backpack/duffelbag/syndie/flukeop/PopulateContents()
 	new /obj/item/clothing/suit/space/hardsuit/syndi(src) //8 TC
 	new /obj/item/storage/box/syndie_kit/imp_microbomb(src) //2 TC
@@ -69,6 +70,21 @@
 	new /obj/item/radio/headset/syndicate/alt(src)
 	new /obj/item/clothing/gloves/combat(src) //1 TC?
 	new /obj/item/gun/ballistic/automatic/pistol(src) //7 TC
+	new /obj/item/ammo_box/magazine/m9mm(src) //1TC
+
+// A kit for LUFR operatives. Available only to lizard infiltrators that got lucky enough to get this faction.
+// Costs 14 TC.
+/obj/item/storage/backpack/duffelbag/syndie/lufr/PopulateContents()
+	new /obj/item/clothing/head/hos/beret/syndicate(src) //1 TC?
+	new /obj/item/clothing/mask/balaclava(src) //0 TC, haha
+	new /obj/item/radio/headset/syndicate/alt(src) //2 TC
+	new /obj/item/clothing/gloves/combat(src) //1 TC?
+	new /obj/item/clothing/under/syndicate/coldres(src) //2-3 TC?
+	new /obj/item/clothing/shoes/combat(src) //Free, idk
+	new /obj/item/gun/ballistic/automatic/pistol(src) //7 TC
+	new /obj/item/ammo_box/magazine/m9mm(src) //1TC
+	new /obj/item/grenade/chem_grenade/clf3(src) //1 TC, I suppose
+	new /obj/item/grenade/frag(src) //3 TC
 
 // Advanced hypno-flash. For psychologists.
 /obj/item/assembly/flash/hypnotic/adv
