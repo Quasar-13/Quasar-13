@@ -309,7 +309,7 @@
 	name = "Dementia"
 	desc = "A trauma that causes proceedural loss of memory."
 	scan_desc = "proceedural loss of memory" //description when detected by a health scanner
-	mob/living/carbon/owner 
+	var/mob/living/carbon/owner 
 	var/obj/item/organ/brain/brain 
 	gain_text = ""
 	lose_text = "<span class='notice'><b>You rember!</b></span>"
