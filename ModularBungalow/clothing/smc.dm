@@ -21,6 +21,11 @@
 	name = "triage technician's jumpsuit"
 	icon_state = "triagetech"
 
+/obj/item/clothing/under/smc/triageofficer
+	desc = "A medic's syndicate jumpsuit with a hint of green. Helps stand out in the heat of battle."
+	name = "triage officer's jumpsuit"
+	icon_state = "triageofficer"
+
 /obj/item/clothing/under/smc/logistics
 	desc = "A black and red jumpsuit for the ship's logistic's officer"
 	name = "logistic officer's jumpsuit"
@@ -33,10 +38,18 @@
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "labcoat_syndie"
+	icon_state = "triageofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
+/obj/item/clothing/suit/armor/labcoat/triagetech
+	name = "triage technician's labcoat"
+	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "triagetech"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/medical_officer
 	name = "medical officer's armored labcoat"
@@ -98,6 +111,16 @@
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
 
+/obj/item/clothing/suit/armor/reqchief
+	name = "requisition chief's armor vest"
+	desc = "A lightly armored vest that does not compromise movement.."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "reqarmor"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
+
+
 
 //Berets
 /obj/item/clothing/head/beret/mo
@@ -114,7 +137,7 @@
 
 /obj/item/clothing/head/beret/triage
 	name = "triage officer's beret"
-	desc = "A green beret for those in charge of the marines."
+	desc = "A green beret for those in charge of the marine's health."
 	icon_state = "beret_serv"
 
 
@@ -133,4 +156,12 @@
 	icon = 'ModularBungalow/clothing/icons/glasses.dmi'
 	icon_state = "synsechud"
 	glass_colour_type = /datum/client_colour/glass_colour/blue
+
+
+//Head
+/obj/item/clothing/head/helmet/space/eva/syndie
+	name = "syndicate soldier helmet"
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	icon_state = "syndie"
 

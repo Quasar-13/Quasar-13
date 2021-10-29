@@ -46,6 +46,15 @@
 	illegal_tech = TRUE
 	restricted_roles = list("Bartender")
 
+/datum/uplink_item/role_restricted/mad_clown
+	name = "Mad clown's box"
+	desc = "Tired of BORING and simple comedy? Want to introduce something NEW to society? \
+			Then you'll surely like this box our team found somewhere in Nevada! \
+			Contains a protective clown's mask and the ultimate weapon for a mad man you are."
+	item = /obj/item/storage/box/hug/mad_clown
+	cost = 12
+	restricted_roles = list("Clown")
+
 /datum/uplink_item/role_restricted/sith_starter_kit
 	name = "Sith Starter Kit"
 	desc = "Has everything you need to get started with the Dark Side! \

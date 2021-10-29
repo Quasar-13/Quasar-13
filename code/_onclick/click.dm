@@ -98,10 +98,8 @@
 		CtrlClickOn(A)
 		return
 
-	//Bungalow EDIT ADDITION BEGIN - TYPING_INDICATOR
 	if(typing_indicator)
 		set_typing_indicator(FALSE)
-	//Bungalow EDIT ADDITION END
 
 	if(incapacitated(ignore_restraints = TRUE, ignore_stasis = TRUE))
 		return

@@ -143,6 +143,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sortList(list(
 	"Inverted",
 	"Matrix",
 	"Monochrome",
+	"Moth",
 	"Murica",
 	"Nanotrasen",
 	"Not Malf",
