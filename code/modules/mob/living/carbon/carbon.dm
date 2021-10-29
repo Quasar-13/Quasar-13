@@ -1332,3 +1332,11 @@
 
 /mob/living/carbon/proc/attach_rot(mapload)
 	AddComponent(/datum/component/rot/corpse)
+
+/// Does the big shaking animation
+/mob/living/carbon/proc/do_shaky_animation(shaky)
+	var/amplitude = min(4, (shaky/100) + 1)
+	var/pixel_x_diff = rand(-amplitude, amplitude)
+	var/pixel_y_diff = rand(-amplitude/3, amplitude/3)
+	animate(src, pixel_x = pixel_x_diff, pixel_y = pixel_y_diff , time = 0.65, loop = 24, flags = ANIMATION_RELATIVE|ANIMATION_PARALLEL)
+	animate(pixel_x = -pixel_x_diff , pixel_y = -pixel_y_diff , time = 0.65, flags = ANIMATION_RELATIVE)

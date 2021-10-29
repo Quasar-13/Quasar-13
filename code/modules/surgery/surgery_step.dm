@@ -79,7 +79,6 @@
 		speed_mod = speed_mod*1.1
 	else
 		speed_mod = speed_mod*0.8
-		fail_prob = 10
 
 
 	var/implement_speed_mod = 1

@@ -28,13 +28,13 @@
 	sharpness = SHARP_POINTY
 	var/random_color = TRUE //if the screwdriver uses random coloring
 	var/static/list/screwdriver_colors = list(
-		"blue" = rgb(24, 97, 213),
-		"red" = rgb(255, 0, 0),
-		"pink" = rgb(213, 24, 141),
-		"brown" = rgb(160, 82, 18),
-		"green" = rgb(14, 127, 27),
-		"cyan" = rgb(24, 162, 213),
-		"yellow" = rgb(255, 165, 0)
+		"blue" = "#8080ff",
+		"red" = "#ff666e",
+		"pink" = "#fd99ff",
+		"brown" = "#b38459",
+		"green" = "#9fe3a9",
+		"cyan" = "#96ffef",
+		"yellow" = "#ffe366"
 	)
 
 /obj/item/screwdriver/suicide_act(mob/user)
@@ -142,3 +142,9 @@
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
 	random_color = FALSE
+
+/obj/item/screwdriver/old
+	desc = "You can be totally screwy with this. Well, if the end wasn't so rusty."
+	icon = 'icons/obj/tools_old.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/tools_old_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_old_righthand.dmi'

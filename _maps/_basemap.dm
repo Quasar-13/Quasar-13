@@ -11,6 +11,9 @@
 		#include "map_files\Mining\Jungle.dmm"
 		#include "map_files\Mining\Tidalmoon.dmm"
 
+		//SMC Missions
+		#include "map_files\Mining\mission_phobos.dmm"
+
 		//Debug Z Levels
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
@@ -19,6 +22,8 @@
 		#include "map_files\Deltastation\DeltaStation2.dmm"
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\PackedStation\PackedStation.dmm"
+		#include "map_files\GalaxyStation\GalaxyStation.dmm" //marg
+		#include "map_files\GalaxyStation\Galaxystation_LVL2.dmm"
 		#include "map_files\RemoraStation\RemoraStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
@@ -29,6 +34,7 @@
 		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\PhoboStation\PhoboStation.dmm"
+		#include "map_files\AndromedaStation\Andromeda.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

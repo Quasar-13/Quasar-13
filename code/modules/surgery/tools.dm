@@ -320,10 +320,12 @@
 
 /obj/item/retractor/advanced
 	name = "mechanical pinches"
-	desc = "An agglomerate of rods and gears."
+	desc = "An ungainly set of rods and gears mounted onto a gauntlet apparatus."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "retractor_a"
+	inhand_icon_state = "clamps_a"
 	toolspeed = 0.7
+	force = 10 //this is in essence a hunk of metal strapped to someone's hand, it's gonna hurt
 
 /obj/item/retractor/advanced/attack_self(mob/user)
 	playsound(get_turf(user), 'sound/items/change_drill.ogg', 50, TRUE)

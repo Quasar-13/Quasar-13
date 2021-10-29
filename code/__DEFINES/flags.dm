@@ -19,17 +19,19 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 // scroll down before changing the numbers on these
 
 /// This flag is what recursive_hear_check() uses to determine wether to add an item to the hearer list or not.
-#define HEAR_1						(1<<0)
+#define HEAR_1 (1<<0)
 /// Is this object currently processing in the atmos object list?
-#define ATMOS_IS_PROCESSING_1 		(1<<1)
+#define ATMOS_IS_PROCESSING_1 (1<<1)
 /// conducts electricity (metal etc.)
-#define CONDUCT_1					(1<<2)
+#define CONDUCT_1 (1<<2)
 /// For machines and structures that should not break into parts, eg, holodeck stuff
-#define NODECONSTRUCT_1				(1<<3)
+#define NODECONSTRUCT_1 (1<<3)
 /// atom queued to SSoverlay
-#define OVERLAY_QUEUED_1			(1<<4)
+#define OVERLAY_QUEUED_1 (1<<4)
 /// item has priority to check when entering or leaving
-#define ON_BORDER_1					(1<<5)
+#define ON_BORDER_1	(1<<5)
+///Whether or not this atom shows screentips when hovered over
+#define NO_SCREENTIPS_1 (1 << 10)
 /// Prevent clicking things below it on the same turf eg. doors/ fulltile windows
 #define PREVENT_CLICK_UNDER_1 (1<<6)
 #define HOLOGRAM_1 (1<<7)
@@ -38,7 +40,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 ///Whether /atom/Initialize() has already run for the object
 #define INITIALIZED_1 (1<<9)
 /// was this spawned by an admin? used for stat tracking stuff.
-#define ADMIN_SPAWNED_1     (1<<10)
+#define ADMIN_SPAWNED_1 (1<<10)
 /// should not get harmed if this gets caught by an explosion?
 #define PREVENT_CONTENTS_EXPLOSION_1 (1<<11)
 /// should the contents of this atom be acted upon
@@ -58,9 +60,9 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 
 
 /// If the thing can reflect light (lasers/energy)
-#define RICOCHET_SHINY			(1<<0)
+#define RICOCHET_SHINY (1<<0)
 /// If the thing can reflect matter (bullets/bomb shrapnel)
-#define RICOCHET_HARD			(1<<1)
+#define RICOCHET_HARD (1<<1)
 
 //TURF FLAGS
 /// If a turf cant be jaunted through.

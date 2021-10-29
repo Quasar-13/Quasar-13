@@ -455,6 +455,9 @@
 	icon_state = "holyflask"
 	color = "#333333"
 	list_reagents = list(/datum/reagent/fuel/unholywater = 50)
+	can_have_cap = FALSE
+	cap_icon_state = null
+	cap_on = FALSE
 
 ///how many times can the shuttle be cursed?
 #define MAX_SHUTTLE_CURSES 3
