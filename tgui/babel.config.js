@@ -8,7 +8,10 @@ const createBabelConfig = options => {
   const { mode, presets = [], plugins = [] } = options;
   return {
     presets: [
-      ['@babel/preset-env', {
+      ['@babel/preset-typescript', {
+        allowDeclareFields: true,
+      }],
+	  ['@babel/preset-env', {
         modules: 'commonjs',
         useBuiltIns: 'entry',
         corejs: '3.8',
@@ -19,7 +22,10 @@ const createBabelConfig = options => {
       ...presets,
     ],
     plugins: [
-      '@babel/plugin-transform-jscript',
+      ['@babel/plugin-proposal-class-properties', {
+        loose: true,
+      }],
+	  '@babel/plugin-transform-jscript',
       'babel-plugin-inferno',
       'babel-plugin-transform-remove-console',
       'common/string.babel-plugin.cjs',
@@ -28,7 +34,7 @@ const createBabelConfig = options => {
   };
 };
 
-module.exports = (api) => {
+module.exports = api => {
   api.cache(true);
   const mode = process.env.NODE_ENV;
   return createBabelConfig({ mode });
