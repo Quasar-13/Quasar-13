@@ -9,7 +9,7 @@ export const AirlockElectronics = (props, context) => {
     oneAccess,
     unres_direction,
     passedName,
-    passedCycleId,  
+    passedCycleId, 
   } = data;
   const regions = data.regions || [];
   const accesses = data.accesses || [];
@@ -76,7 +76,7 @@ export const AirlockElectronics = (props, context) => {
                   passedCycleId: value,
                 })} />
             </LabeledList.Item>
-		  </LabeledList>
+          </LabeledList>
         </Section>
         <AccessList
           accesses={regions}
