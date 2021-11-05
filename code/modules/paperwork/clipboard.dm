@@ -70,8 +70,9 @@
 
 /obj/item/clipboard/AltClick(mob/user)
 	..()
-	if(pen)
-		remove_paper(user)
+	var/obj/item/paper/toppaper = toppaper_ref?.resolve()
+	if(toppaper)
+		remove_paper(toppaper, user)
 
 /obj/item/clipboard/CtrlClick(mob/user)
 	..()
@@ -145,7 +146,7 @@
 	if(usr.stat != CONSCIOUS || HAS_TRAIT(usr, TRAIT_HANDS_BLOCKED))
 		return
 
-		switch(action)
+	switch(action)
 		// Take the pen out
 		if("remove_pen")
 			if(pen)
