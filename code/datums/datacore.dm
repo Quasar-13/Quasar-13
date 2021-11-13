@@ -143,9 +143,8 @@
 	var/list/manifest_out
 	var/list/standardmode
 
-	standardmode = list("planetary", "station", "ship")
 
-	if(SSmaptype.maptype == standardmode)
+	if(SSmaptype.maptype == "station")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -156,6 +155,31 @@
 		"Service",
 		"Silicon"
 		)
+
+	if(SSmaptype.maptype == "ship")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "planetary")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
 	if(SSmaptype.maptype == "syndicate")
 		manifest_out = list(
 			"Syndicate Command",
