@@ -11,7 +11,7 @@
 	icon_state = "warden_envirosuit"
 	inhand_icon_state = "warden_envirosuit"
 
-/obj/item/clothing/under/plasmaman/syndicate/generic
+/obj/item/clothing/under/plasmaman/syndicate/generic //I HAD TO PUT THIS HERE BECAUSE, WHEN I MADE "/code/modules/clothing/under/jobs/Plasmaman/syndicate.dm" IT DID NOT GOT RECOGNIZED IN COMPILATION
 	name = "standard syndicate plasma envirosuit"
 	desc = "Inspired by the regular syndicate combat suit."
 	icon_state = "syndicate_envirosuit"
