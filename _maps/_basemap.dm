@@ -30,10 +30,7 @@
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
 
 		//Admin only maps
-		#include "map_files\HelioStation\HelioStation.dmm"
-		#include "map_files\KiloStation\KiloStation.dmm"
-		#include "map_files\IceBoxStation\IceBoxStation.dmm"
-		#include "map_files\PhoboStation\PhoboStation.dmm"
+		#include "map_files\RemusFacility\RemusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
 
 		#ifdef CIBUILDING

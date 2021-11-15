@@ -141,7 +141,10 @@
 
 /datum/datacore/proc/get_manifest()
 	var/list/manifest_out
-	if(SSmaptype.maptype != "syndicate")
+	var/list/standardmode
+
+
+	if(SSmaptype.maptype == "station")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -152,6 +155,31 @@
 		"Service",
 		"Silicon"
 		)
+
+	if(SSmaptype.maptype == "ship")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "planetary")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
 	if(SSmaptype.maptype == "syndicate")
 		manifest_out = list(
 			"Syndicate Command",
@@ -161,9 +189,14 @@
 			"Military Police"
 		)
 
+	if(SSmaptype.maptype == "solgov")
+		manifest_out = list(
+			"Solgov"
+		)
+
 	var/list/departments
 
-	if(SSmaptype.maptype != "syndicate")
+	if(SSmaptype.maptype == standardmode)
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -182,6 +215,11 @@
 			"Operations" = GLOB.operations_positions,
 			"Logistics" = GLOB.logistics_positions,
 			"Military Police" = GLOB.police_positions)
+
+
+	if(SSmaptype.maptype == "solgov")
+		departments = list(
+			"Solgov Personnel" = GLOB.solgov_positions)
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

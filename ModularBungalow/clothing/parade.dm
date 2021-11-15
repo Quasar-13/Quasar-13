@@ -1,4 +1,4 @@
-//Sec Parade suit
+//Secretary Parade suit
 /obj/item/clothing/under/misc/secparade
 	desc = "A black suit blue trim. Worn by the lowly secretary"
 	name = "secretary's parade uniform"
@@ -84,6 +84,8 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "marshal_jacket"
 
+
+//CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
 	name = "co's coat"
 	desc = "The coat of a militaristic captain"
@@ -91,3 +93,9 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "commander_jacket"
 
+/obj/item/clothing/suit/armor/captain/solgov
+	name = "Solgov Commander's coat"
+	desc = "The coat of a Solgov base commander"
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "Solgov_jacket"
