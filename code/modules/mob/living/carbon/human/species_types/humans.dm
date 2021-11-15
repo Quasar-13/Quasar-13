@@ -6,6 +6,7 @@
 	mutant_bodyparts = list("wings" = "None")
 	use_skintones = 1
 	skinned_type = /obj/item/stack/sheet/animalhide/human
+	species_language_holder = /datum/language_holder/human
 	disliked_food = GROSS | RAW | CLOTH
 	liked_food = JUNKFOOD | FRIED
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
