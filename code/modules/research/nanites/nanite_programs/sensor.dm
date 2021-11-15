@@ -281,6 +281,7 @@
 		"Fly" = /datum/species/fly,
 		"Felinid" = /datum/species/human/felinid,
 		"Jelly" = /datum/species/jelly,
+		"bee" = /datum/species/human/beepeople,
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()
