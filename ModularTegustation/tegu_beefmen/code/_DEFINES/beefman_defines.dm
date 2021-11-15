@@ -10,4 +10,5 @@ GLOBAL_LIST_INIT(color_list_beefman, list("Very Rare" = "d93356", "Rare" = "da2e
 GLOBAL_LIST_INIT(eyes_beefman, list("Capers", "Cloves", "Olives", "Peppercorns" ))
 GLOBAL_LIST_INIT(mouths_beefman, list("Frown1", "Frown2", "Grit1", "Grit2",  "Smile1", "Smile2"))
 
+//testing this here cause why not
 GLOBAL_LIST_INIT(eyes_bee, list("MothLike"))
