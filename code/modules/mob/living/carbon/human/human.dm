@@ -1181,7 +1181,7 @@
 	race = /datum/species/human/felinid
 
 /mob/living/carbon/human/species/beepeople
-	race = /datum/species/human/beepeople
+	race = /datum/species/beepeople
 
 /mob/living/carbon/human/species/fly
 	race = /datum/species/fly

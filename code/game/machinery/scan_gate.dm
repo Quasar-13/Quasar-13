@@ -142,7 +142,7 @@
 					if(SCANGATE_ZOMBIE)
 						scan_species = /datum/species/zombie
 					if (SCANGATE_BEE)
-						scan_species = /datum/species/human/beepeople
+						scan_species = /datum/species/beepeople
 				if(is_species(H, scan_species))
 					beep = TRUE
 				if(detect_species == SCANGATE_ZOMBIE) //Can detect dormant zombies

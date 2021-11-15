@@ -1,23 +1,24 @@
-/datum/species/human/beepeople
+/datum/species/beepeople
 	name = "BeePerson"
 	id = "beepeople"
 	say_mod = "buzzes"
-	limbs_id = "human"
+	limbs_id = "bee"
 
-	species_traits = list(NOEYESPRITES, TRAIT_ANTENNAE, HAIR, LIPS, HAS_FLESH, HAS_BONE)
+	species_traits = list( LIPS, NOEYESPRITES, HAS_FLESH, HAS_BONE, TRAIT_ANTENNAE)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 
-	mutant_bodyparts = list("moth_antennae" = "Plain")
+	mutant_bodyparts = list("bee_wings" = "simple", "tail_bee" = "simple")
 
-	attack_verb = "slash"
-	attack_sound = 'sound/weapons/slash.ogg'
-	miss_sound = 'sound/weapons/slashmiss.ogg'
+	attack_verb = "sting"
+	attack_sound = 'sound/weapons/beeattack.ogg'
+	miss_sound = 'sound/weapons/beemissattack.ogg'
 	meat = /obj/item/food/meat/slab/human
 	liked_food = VEGETABLES | DAIRY //|POLEN (need to add it)
 	disliked_food = FRUIT | GROSS | CLOTH
 	toxic_food = MEAT | RAW | SEAFOOD
-	//mutanteyes = /obj/item/organ/eyes/bee //need to add it. it just going to be resprite tho.
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
+
+
 	//wings_icon = "Megamoth" need to add. resprite of moth wings, smaller tho.
 	//has_innate_wings = TRUE
 
@@ -67,17 +68,6 @@
 //	if(H.dna.features["original_moth_antennae"] == null && H.dna.features["moth_antennae"] == "Burnt Off")
 //		H.dna.features["moth_antennae"] = "Plain"
 //	handle_mutant_bodyparts(H)
-
-
-/datum/sprite_accessory/bee
-	icon = 'icons/mob/mutant_bodyparts.dmi'
-
-/datum/sprite_accessory/bee/eyes
-//just in case
-
-/datum/sprite_accessory/bee/eyes/mothlike
-	name = "Moth like"
-	icon_state = "mothlike"
 
 
 
