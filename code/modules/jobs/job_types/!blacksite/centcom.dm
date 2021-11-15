@@ -1,0 +1,1 @@
+/obj/item/radio/headset/heads/headset_cent/commander

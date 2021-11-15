@@ -1,0 +1,45 @@
+/datum/job/ertmedic
+	title = "ERT Medic"
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "space law and the ERT Commander"
+	selection_color = "#134975"
+	exp_type = EXP_TYPE_CENTCOM
+	maptype = "blacksite"
+
+	outfit = /datum/outfit/job/ertmedic
+
+	access = list()
+	minimal_access = list()
+	paycheck = PAYCHECK_CENTCOM
+	paycheck_department = ACCOUNT_SEC
+	display_order = JOB_DISPLAY_ORDER_BARTENDER
+
+
+/datum/outfit/job/ertmedic
+	name = "ERT Medic"
+	jobtype = /datum/job/ertmedic
+
+	mask = /obj/item/clothing/mask/gas/sechailer
+	uniform = /obj/item/clothing/under/rank/centcom/officer
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/headset_cent/alt
+	id = /obj/item/card/id/ert/medical
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/med
+	suit_store = /obj/item/gun/energy/laser/captain
+	glasses = /obj/item/clothing/glasses/hud/health
+	back = /obj/item/storage/backpack/ert/medical
+	belt = /obj/item/storage/belt/medical
+	l_hand = /obj/item/storage/firstaid/regular
+	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
+		/obj/item/melee/baton/loaded=1,\
+		/obj/item/reagent_containers/hypospray/combat=1,\
+		/obj/item/gun/medbeam=1)
+
+
+//Spawn Point
+/obj/effect/landmark/start/ertmedic
+	name = "ERT Medic"
+	icon_state = "Assistant"
