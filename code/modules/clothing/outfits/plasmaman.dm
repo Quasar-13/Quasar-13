@@ -235,3 +235,10 @@
 	head = /obj/item/clothing/head/helmet/space/plasmaman/centcom_intern
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
 	gloves = /obj/item/clothing/gloves/color/plasmaman/centcom_intern
+
+/datum/outfit/plasmaman/syndicate/generic
+	name = "Standard Syndicate Plasmaman"
+
+	head = /obj/item/clothing/head/helmet/space/plasmaman/syndicate/generic
+	uniform = /obj/item/clothing/under/plasmaman/syndicate/generic
+	gloves = /obj/item/clothing/gloves/color/plasmaman/syndicate/generic
