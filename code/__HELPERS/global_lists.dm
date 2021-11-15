@@ -16,8 +16,6 @@
 	// beef parts //
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/beef/eyes, GLOB.eyes_beefman)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/beef/mouth, GLOB.mouths_beefman)
-	// bee parts
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/bee/eyes, GLOB.eyes_bee)
 
 	//bodypart accessories (blizzard intensifies)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/body_markings, GLOB.body_markings_list)
