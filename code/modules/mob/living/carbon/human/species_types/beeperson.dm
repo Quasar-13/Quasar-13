@@ -7,7 +7,7 @@
 	species_traits = list(NOEYESPRITES, TRAIT_ANTENNAE, HAIR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 
-	mutant_bodyparts = list("moth_antennae" = "Plain", "beeeyes")
+	mutant_bodyparts = list("moth_antennae" = "Plain")
 
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
