@@ -348,12 +348,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<span style='border: 1px solid #161616; background-color: #[features["ethcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=color_ethereal;task=input'>Change</a><BR>"
 
-			if (istype(pref_species, /datum/species/human/beepeople))
-				dat += APPEARANCE_CATEGORY_COLUMN
-
-				dat += "<h3>Eyes</h3>"
-				dat += "<a href='?_src_=prefs;preference=eyes_bee;task=input'>[features["beeeyes"]]</a><BR>"
-
 			if(istype(pref_species, /datum/species/beefman)) // Tegustation Beefmen edit
 				if(!use_skintones)
 					dat += APPEARANCE_CATEGORY_COLUMN
@@ -1481,11 +1475,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_etherealcolor = input(user, "Choose your ethereal color", "Character Preference") as null|anything in GLOB.color_list_ethereal
 					if(new_etherealcolor)
 						features["ethcolor"] = GLOB.color_list_ethereal[new_etherealcolor]
-
-				if ("eyes_bee")
-					var/new_eyes = input(user, "Choose your eyes:", "character Preference") as null|anything in GLOB.eyes_bee
-					if(new_eyes)
-						features["beeeyes"] = new_eyes
 
 				if("color_beef") // Tegustation Beefman edit
 					var/new_beefcolor = input(user, "Select your doneness:", "Character Preference") as null|anything in GLOB.color_list_beefman
