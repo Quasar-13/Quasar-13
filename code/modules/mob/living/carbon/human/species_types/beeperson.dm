@@ -4,10 +4,11 @@
 	say_mod = "buzzes"
 	limbs_id = "human"
 
-
-	species_traits = list(NOEYESPRITES, TRAIT_ANTENNAE,EYECOLOR,HAIR,LIPS,HAS_FLESH,HAS_BONE)
+	species_traits = list(NOEYESPRITES, TRAIT_ANTENNAE, HAIR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
-	mutant_bodyparts = list("moth_antennae" = "Plain")
+
+	mutant_bodyparts = list("moth_antennae" = "Plain", "beeeyes")
+
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
@@ -75,7 +76,7 @@
 //just in case
 
 /datum/sprite_accessory/bee/eyes/mothlike
-	name = "Mothlike"
+	name = "Moth like"
 	icon_state = "mothlike"
 
 
