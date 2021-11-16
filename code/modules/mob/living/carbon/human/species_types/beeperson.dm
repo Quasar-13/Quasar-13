@@ -38,7 +38,7 @@
 
 // wings stuff
 
-/datum/species/bee/handle_fire(mob/living/carbon/human/H, no_protection = FALSE)
+/datum/species/beepeople/handle_fire(mob/living/carbon/human/H, no_protection = FALSE)
 	. = ..()
 	if(.)
 		return
@@ -59,14 +59,14 @@
 			H.dna.features["wings"] = "None"
 		handle_mutant_bodyparts(H)
 
-/datum/species/bee/space_move(mob/living/carbon/human/H)
+/datum/species/beepeople/space_move(mob/living/carbon/human/H)
 	. = ..()
 	if(H.loc && !isspaceturf(H.loc) && H.dna.features["bee_wings"] != "Burnt Off" && !flying_species)
 		var/datum/gas_mixture/current = H.loc.return_air()
 		if(current && (current.return_pressure() >= ONE_ATMOSPHERE*0.85))
 			return TRUE
 
-/datum/species/bee/spec_fully_heal(mob/living/carbon/human/H)
+/datum/species/beepeople/spec_fully_heal(mob/living/carbon/human/H)
 	. = ..()
 	if(H.dna.features["original_bee_wings"] != null)
 		H.dna.features["bee_wings"] = H.dna.features["original_bee_wings"]
@@ -83,13 +83,13 @@
 
 
 // insect damage
-/datum/species/bee/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
+/datum/species/beepeople/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	. = ..()
 	if(chem.type == /datum/reagent/toxin/pestkiller)
 		H.adjustToxLoss(3)
 		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)
 
-/datum/species/bee/check_species_weakness(obj/item/weapon, mob/living/attacker)
+/datum/species/beepeople/check_species_weakness(obj/item/weapon, mob/living/attacker)
 	if(istype(weapon, /obj/item/melee/flyswatter))
 		return 10
 	return 1
