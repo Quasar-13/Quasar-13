@@ -16,7 +16,6 @@
 	// beef parts //
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/beef/eyes, GLOB.eyes_beefman)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/beef/mouth, GLOB.mouths_beefman)
-
 	//bodypart accessories (blizzard intensifies)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/body_markings, GLOB.body_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/lizard, GLOB.tails_list_lizard)
@@ -39,7 +38,7 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/monkey, GLOB.tails_list_monkey)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/bee, GLOB.bee_tails_list) //bee tail
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/bee_wings, GLOB.bee_wings_list) // bee wings
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings/bee, GLOB.bee_wings_list) // bee wings
 	load_trusted_players()
 
 	//Species

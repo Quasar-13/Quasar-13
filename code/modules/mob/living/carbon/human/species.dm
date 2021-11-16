@@ -609,7 +609,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							hair_overlay.color = "#" + hair_color
 					else
 						hair_overlay.color = "#" + H.hair_color
-
 					//Gradients
 					grad_style = H.grad_style
 					grad_color = H.grad_color
@@ -620,7 +619,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 						temp.Blend(temp_hair, ICON_ADD)
 						gradient_overlay.icon = temp
 						gradient_overlay.color = "#" + grad_color
-
 				else
 					hair_overlay.color = forced_colour
 				hair_overlay.alpha = hair_alpha

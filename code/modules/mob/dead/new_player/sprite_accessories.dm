@@ -1681,8 +1681,6 @@
 /datum/sprite_accessory/tails_animated
 	icon = 'icons/mob/mutant_bodyparts.dmi'
 
-
-
 /datum/sprite_accessory/tails/lizard/smooth
 	name = "Smooth"
 	icon_state = "smooth"
@@ -2085,6 +2083,15 @@
 	name = "Witch Wing"
 	icon_state = "witchwing"
 
+
+//going to use mothg_wings just for now...maybe forever
+/datum/sprite_accessory/moth_wings/bee
+	icon = 'icons/mob/beewings.dmi'
+
+/datum/sprite_accessory/moth_wings/bee/simple
+	name = "Simple wings"
+	icon_state = "Simple"
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2217,9 +2224,3 @@
 	name = "Witch Wing"
 	icon_state = "witchwing"
 
-/datum/sprite_accessory/bee_wings
-	icon = 'icons/mob/beewings.dmi'
-
-datum/sprite_accessory/bee_wings/simple
-	name = "Simple wings"
-	icon_state = "Simple"

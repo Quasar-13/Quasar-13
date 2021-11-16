@@ -19,6 +19,22 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 
 
+	//tail stuff
+
+/datum/species/beepeople/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
+	var/real_tail_type = C.dna.features["tail_bee"]
+
+	. = ..()
+
+	if(pref_load)
+		C.dna.features["tail_bee"] = real_tail_type
+
+		var/obj/item/organ/tail/bee/new_tail = new /obj/item/organ/tail/bee()
+
+		new_tail.tail_type = C.dna.features["tail_bee"]
+
+		new_tail.Insert(C, TRUE, FALSE)
+
 	//wings_icon = "Megamoth" need to add. resprite of moth wings, smaller tho.
 	//has_innate_wings = TRUE
 
