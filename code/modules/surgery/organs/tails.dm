@@ -104,6 +104,7 @@
 	desc = "No more honey"
 	color = "#116611"
 	tail_type = "Simple"
+	//icon_state = "severedbeetail" for later
 
 /obj/item/organ/tail/bee/Initialize()
 	. = ..()

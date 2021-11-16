@@ -1607,7 +1607,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_bee_antennae
 					new_bee_antennae = input(user, "Choose your characte's antennae:", "Character Preference") as null|anything in GLOB.bee_antennae_list
 					if(new_bee_antennae)
-						features["bee_wings"] = new_bee_antennae
+						features["bee_antennae"] = new_bee_antennae
 
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
