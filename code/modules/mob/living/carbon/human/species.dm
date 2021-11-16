@@ -925,6 +925,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					S = GLOB.bee_wings_list[H.dna.features["bee_wings"]]
 				if("tail_bee")
 					S = GLOB.bee_tails_list[H.dna.features["tail_bee"]]
+				if("bee_antennae")
+					S = GLOB.bee_antennae_list[H.dna.features["bee_antennae"]]
 			if(!S || S.icon_state == "none")
 				continue
 

@@ -1738,6 +1738,7 @@
 
 /datum/sprite_accessory/tails/bee
 	icon = 'icons/mob/beetail.dmi'
+	color_src = null
 
 /datum/sprite_accessory/tails/bee/simple/
 	name = "Simple tail"
@@ -2087,6 +2088,7 @@
 //going to use mothg_wings just for now...maybe forever
 /datum/sprite_accessory/moth_wings/bee
 	icon = 'icons/mob/beewings.dmi'
+	color_src = null
 
 /datum/sprite_accessory/moth_wings/bee/simple
 	name = "Simple wings"
@@ -2159,6 +2161,14 @@
 /datum/sprite_accessory/moth_antennae/regal
 	name = "Regal"
 	icon_state = "regal"
+
+/datum/sprite_accessory/moth_antennae/bee
+	icon = 'icons/mob/bee_antennae.dmi'
+	color_src = null
+
+/datum/sprite_accessory/moth_antennae/bee/simple
+	name = "Simple antennae"
+	icon_state = "Simple"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'

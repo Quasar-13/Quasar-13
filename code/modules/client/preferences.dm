@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/skin_tone = "caucasian1" //Skin color
 	var/eye_color = "000" //Eye color
 	var/datum/species/pref_species = new /datum/species/human() //Mutant race
-	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_antennae" = "Plain", "moth_markings" = "None", "bee_wings" = "Simple", "tail_bee" = "Simple")
+	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_antennae" = "Plain", "moth_markings" = "None", "bee_wings" = "Simple", "tail_bee" = "Simple", "bee_antennae" = "Simple")
 	var/list/randomise = list(RANDOM_UNDERWEAR = TRUE, RANDOM_UNDERWEAR_COLOR = TRUE, RANDOM_UNDERSHIRT = TRUE, RANDOM_SOCKS = TRUE, RANDOM_BACKPACK = TRUE, RANDOM_JUMPSUIT_STYLE = TRUE, RANDOM_HAIRSTYLE = TRUE, RANDOM_HAIR_COLOR = TRUE, RANDOM_FACIAL_HAIRSTYLE = TRUE, RANDOM_FACIAL_HAIR_COLOR = TRUE, RANDOM_SKIN_TONE = TRUE, RANDOM_EYE_COLOR = TRUE)
 	var/phobia = "spiders"
 
@@ -570,6 +570,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Bee Wings</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=bee_wings;task=input'>[features["bee_wings"]]</a><BR>"
+
+			if(pref_species.mutant_bodyparts["bee_antennae"])
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Bee antennae</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=bee_antennae;task=input'>[features["bee_antennae"]]</a><BR>"
 
 			//Adds a thing to select which phobia because I can't be assed to put that in the quirks window
 			if("Phobia" in all_quirks)
@@ -1594,6 +1602,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					new_bee_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.bee_wings_list
 					if(new_bee_wings)
 						features["bee_wings"] = new_bee_wings
+
+				if("bee_antennae")
+					var/new_bee_antennae
+					new_bee_antennae = input(user, "Choose your characte's antennae:", "Character Preference") as null|anything in GLOB.bee_antennae_list
+					if(new_bee_antennae)
+						features["bee_wings"] = new_bee_antennae
 
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
