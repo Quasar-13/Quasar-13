@@ -92,7 +92,7 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergeant", "NT Military Police")
+	alt_titles = list("Brig Chief", "Sergeant")
 	senior_title = "Sergeant Major"
 
 /datum/job/detective
