@@ -583,8 +583,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
 	WRITE_FILE(S["feature_beefcolor"]					, features["beefcolor"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["feature_beefeyes"]					, features["beefeyes"])
-	WRITE_FILE(S["feature_bee_tail"]					,["tail_bee"])
-	WRITE_FILE(S["feature_bee_wings"]					,["bee_wings"])
+	WRITE_FILE(S["feature_bee_tail"]					,features["tail_bee"])
+	WRITE_FILE(S["feature_bee_wings"]					,features["bee_wings"])
 	WRITE_FILE(S["feature_beefmouth"]					, features["beefmouth"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["persistent_scars"]			, persistent_scars)
 

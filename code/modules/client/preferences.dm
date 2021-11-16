@@ -1586,7 +1586,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("tail_bee")
 					var/new_bee_tail
 					new_bee_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in GLOB.bee_tails_list
-					if(new_tail)
+					if(new_bee_tail)
 						features["tail_bee"] = new_bee_tail
 
 				if("bee_wings")

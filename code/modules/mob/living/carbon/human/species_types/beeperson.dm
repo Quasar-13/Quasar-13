@@ -4,7 +4,7 @@
 	say_mod = "buzzes"
 	limbs_id = "bee"
 
-	species_traits = list( LIPS, NOEYESPRITES, HAS_FLESH, HAS_BONE, TRAIT_ANTENNAE)
+	species_traits = list( LIPS, NOEYESPRITES, HAS_FLESH, HAS_BONE, TRAIT_ANTENNAE, HAIR)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 
 	mutant_bodyparts = list("bee_wings" = "simple", "tail_bee" = "simple")

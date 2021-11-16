@@ -1681,6 +1681,8 @@
 /datum/sprite_accessory/tails_animated
 	icon = 'icons/mob/mutant_bodyparts.dmi'
 
+
+
 /datum/sprite_accessory/tails/lizard/smooth
 	name = "Smooth"
 	icon_state = "smooth"
@@ -1735,6 +1737,13 @@
 	name = "Monkey"
 	icon_state = "monkey"
 	color_src = FALSE
+
+/datum/sprite_accessory/tails/bee
+	icon = 'icons/mob/beetail.dmi'
+
+/datum/sprite_accessory/tails/bee/simple/
+	name = "Simple tail"
+	icon_state = "Simple"
 
 /datum/sprite_accessory/snouts
 	icon = 'icons/mob/mutant_bodyparts.dmi'
@@ -2207,3 +2216,10 @@
 /datum/sprite_accessory/moth_markings/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
+
+/datum/sprite_accessory/bee_wings
+	icon = 'icons/mob/beewings.dmi'
+
+datum/sprite_accessory/bee_wings/simple
+	name = "Simple wings"
+	icon_state = "Simple"
