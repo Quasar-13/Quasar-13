@@ -5,14 +5,14 @@
 	spawn_positions = 15
 	supervisors = "space law and the ERT Commander"
 	selection_color = "#134975"
-	exp_type = EXP_TYPE_MEDIUM
+	exp_type = EXP_TYPE_NTMARINE
 	maptype = "blacksite"
 
 	outfit = /datum/outfit/job/ntmarine
 
 	access = list()
 	minimal_access = list()
-	paycheck = PAYCHECK_CENTCOM
+	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_WARDEN
 
@@ -24,7 +24,7 @@
 	mask = /obj/item/clothing/mask/gas
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
 	shoes = /obj/item/clothing/shoes/combat/swat
-	gloves = /obj/item/clothing/gloves/black
+	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_cent/alt
 	id = /obj/item/card/id
 	suit = /obj/item/clothing/suit/armor/vest

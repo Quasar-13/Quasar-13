@@ -920,6 +920,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(job.maptype == "none")
 					continue
 
+			if(SSmaptype.maptype == "blacksite")
+				if(job.maptype == "none")
+					continue
+
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
 				width += widthPerColumn

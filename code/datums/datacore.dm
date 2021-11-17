@@ -194,6 +194,12 @@
 			"Solgov"
 		)
 
+	if(SSmaptype.maptype == "blacksite")
+		manifest_out = list(
+			"Central Command",
+			"ERT",
+			"Marines"
+		)
 	var/list/departments
 
 	if(SSmaptype.maptype == standardmode)
@@ -220,6 +226,14 @@
 	if(SSmaptype.maptype == "solgov")
 		departments = list(
 			"Solgov Personnel" = GLOB.solgov_positions)
+
+
+	if(SSmaptype.maptype == "blacksite")
+		departments = list(
+			"Central Command" = GLOB.centcom_positions,
+			"Emergency Response Team" = GLOB.ert_positions,
+			"Nanotrasen Marine Corps" = GLOB.ntmarines_positions)
+
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

@@ -88,6 +88,11 @@
 #define EXP_TYPE_TRIAGE		"Triage"
 #define EXP_TYPE_POLICE		"Military Police"
 
+//NT Blacksite
+#define EXP_TYPE_CENTCOM		"Central Command"
+#define EXP_TYPE_ERT		"Emergency Response Team"
+#define EXP_TYPE_NTMARINE		"Nanotrasen Marine Corps"
+
 //Other Gamemodes
 #define EXP_TYPE_SOLGOV		"Solgov"
 

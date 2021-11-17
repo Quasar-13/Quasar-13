@@ -421,6 +421,9 @@
 	else if(SSmaptype.maptype == "solgov")
 		department_categories = list("Solgov")
 
+	else if(SSmaptype.maptype == "blacksite")
+		department_categories = list("Central Command", "Emergency Response Team", "Nanotrasen Marine Corps")
+
 	else
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
