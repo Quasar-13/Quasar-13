@@ -100,7 +100,7 @@
 	senior_title = "Staff Sergant"
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
+	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
 	senior_title = "Blueshield Officer"
 
 //Supply
