@@ -2048,6 +2048,11 @@
 	icon_state = "burnt_off"
 	locked = TRUE
 
+/datum/sprite_accessory/moth_wings/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+	locked = TRUE
+
 /datum/sprite_accessory/moth_wings/firewatch
 	name = "Firewatch"
 	icon_state = "firewatch"
@@ -2123,6 +2128,10 @@
 	icon_state = "lovers"
 
 /datum/sprite_accessory/moth_antennae/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+
+/datum/sprite_accessory/moth_antennae/bee/burnt_off
 	name = "Burnt Off"
 	icon_state = "burnt_off"
 

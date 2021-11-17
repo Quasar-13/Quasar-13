@@ -1,5 +1,5 @@
 /datum/species/beepeople
-	name = "BeePerson"
+	name = "Beepeople"
 	id = "beepeople"
 	say_mod = "buzzes"
 	limbs_id = "bee"
@@ -20,8 +20,7 @@
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 1
 
-	//tail stuff
-
+//tail stuff
 /datum/species/beepeople/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	var/real_tail_type = C.dna.features["tail_bee"]
 
@@ -37,7 +36,6 @@
 		new_tail.Insert(C, TRUE, FALSE)
 
 // wings stuff
-
 /datum/species/beepeople/handle_fire(mob/living/carbon/human/H, no_protection = FALSE)
 	. = ..()
 	if(.)
@@ -50,7 +48,7 @@
 		if(!H.dna.features["original_bee_antennae"])
 			H.dna.features["original_bee_antennae"] = H.dna.features["bee_antennae"]
 		H.dna.features["bee_antennae"] = "Burnt Off"
-		if(flying_species) //This is all exclusive to if the person has the effects of a potion of flight
+		if(flying_species)
 			if(H.movement_type & FLYING)
 				ToggleFlight(H)
 				H.Knockdown(1.5 SECONDS)
@@ -72,17 +70,17 @@
 		H.dna.features["bee_wings"] = H.dna.features["original_bee_wings"]
 
 	if(H.dna.features["original_bee_wings"] == null && H.dna.features["bee_wings"] == "Burnt Off")
-		H.dna.features["bee_wings"] = "Plain"
+		H.dna.features["bee_wings"] = "Simple"
 
 	if(H.dna.features["original_bee_antennae"] != null)
 		H.dna.features["bee_antennae"] = H.dna.features["original_bee_antennae"]
 
 	if(H.dna.features["original_bee_antennae"] == null && H.dna.features["bee_antennae"] == "Burnt Off")
-		H.dna.features["bee_antennae"] = "Plain"
+		H.dna.features["bee_antennae"] = "Simple"
 	handle_mutant_bodyparts(H)
 
 
-// insect damage
+// get retk insect
 /datum/species/beepeople/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	. = ..()
 	if(chem.type == /datum/reagent/toxin/pestkiller)
