@@ -312,6 +312,13 @@ Used by the AI doomsday and the self-destruct nuke.
 	else if(config.minetype == "tidalmoon")
 		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
 
+		//Syndicate Marine Corps
+
+	else if(config.minetype == "phobos")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_phobos.dmm", default_traits = ZTRAITS_MISSION)
+
+	else if(config.minetype == "icemission")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_ice.dmm", default_traits = ZTRAITS_ICEMISSION)
 		//Bungalow Edit End
 
 
@@ -592,7 +599,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		// No need to empty() these, because it's world init and they're
 		// already /turf/open/space/basic.
 		var/turf/T = t
-		T.flags_1 |= UNUSED_RESERVATION_TURF_1
+		T.flags_1 |= UNUSED_RESERVATION_TURF
 	unused_turfs["[z]"] = block
 	reservation_ready["[z]"] = TRUE
 	clearing_reserved_turfs = FALSE
@@ -603,7 +610,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		T.empty(RESERVED_TURF_TYPE, RESERVED_TURF_TYPE, null, TRUE)
 		LAZYINITLIST(unused_turfs["[T.z]"])
 		unused_turfs["[T.z]"] |= T
-		T.flags_1 |= UNUSED_RESERVATION_TURF_1
+		T.flags_1 |= UNUSED_RESERVATION_TURF
 		GLOB.areas_by_type[world.area].contents += T
 		CHECK_TICK
 

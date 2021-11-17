@@ -30,6 +30,10 @@
 	attack_sound = 'sound/weapons/rapierhit.ogg'
 	deathsound = 'sound/voice/mook_death.ogg'
 	aggro_vision_range = 15 //A little more aggressive once in combat to balance out their really low HP
+
+	butcher_results = list(/obj/item/stack/ore/silver = 7, /obj/item/stack/sheet/bone = 2)
+	guaranteed_butcher_results = list(/obj/item/stack/sheet/bone = 2)
+
 	var/attack_state = MOOK_ATTACK_NEUTRAL
 	var/struck_target_leap = FALSE
 

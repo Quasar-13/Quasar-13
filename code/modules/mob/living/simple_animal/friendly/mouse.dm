@@ -29,7 +29,7 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	var/chew_probability = 1
 	can_be_held = TRUE
-	held_state = "mouse_gray"
+	worn_slot_flags = ITEM_SLOT_HEAD
 	faction = list("rat")
 
 /mob/living/simple_animal/mouse/Initialize()
@@ -40,6 +40,7 @@
 	icon_state = "mouse_[body_color]"
 	icon_living = "mouse_[body_color]"
 	icon_dead = "mouse_[body_color]_dead"
+	held_state = "mouse_[body_color]"
 	add_cell_sample()
 
 /mob/living/simple_animal/mouse/add_cell_sample()

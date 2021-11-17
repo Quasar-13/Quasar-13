@@ -299,8 +299,16 @@
 			G.on_report()
 			intercepttext += G.get_report()
 
+	if(SSstation.station_traits.len)
+		intercepttext += "<hr><b>Identified shift divergencies:</b>"
+		for(var/i in SSstation.station_traits)
+			var/datum/station_trait/station_trait_iterator = i
+			if(!station_trait_iterator.show_in_report)
+				return
+			intercepttext += station_trait_iterator.get_report()
+
 	print_command_report(intercepttext, "Central Command Status Summary", announce=FALSE)
-	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", 'sound/ai/intercept.ogg')
+	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", ANNOUNCER_INTERCEPT)
 	if(GLOB.security_level < SEC_LEVEL_BLUE)
 		set_security_level(SEC_LEVEL_BLUE)
 
@@ -566,7 +574,8 @@
 		var/datum/station_goal/G = T
 		if(config_tag in initial(G.gamemode_blacklist))
 			continue
-		possible += T
+			if(G.maptype ==SSmaptype.maptype)
+				possible += T
 	var/goal_weights = 0
 	while(possible.len && goal_weights < STATION_GOAL_BUDGET)
 		var/datum/station_goal/picked = pick_n_take(possible)

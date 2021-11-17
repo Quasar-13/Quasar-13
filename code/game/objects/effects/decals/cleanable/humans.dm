@@ -89,9 +89,10 @@
 	layer = LOW_OBJ_LAYER
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6")
 	mergeable_decal = FALSE
-
 	dryname = "rotting gibs"
 	drydesc = "They look bloody and gruesome while some terrible smell fills the air."
+
+	var/already_rotting = FALSE
 
 /obj/effect/decal/cleanable/blood/gibs/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
@@ -99,8 +100,15 @@
 	RegisterSignal(src, COMSIG_MOVABLE_PIPE_EJECTING, .proc/on_pipe_eject)
 	if(mapload) //Don't rot at roundstart for the love of god
 		return
-/obj/effect/decal/cleanable/blood/gibs/dry()
-	. = ..()
+	if(already_rotting)
+		start_rotting(rename=FALSE)
+	else
+		addtimer(CALLBACK(src, .proc/start_rotting), 2 MINUTES)
+
+/obj/effect/decal/cleanable/blood/gibs/proc/start_rotting(rename=TRUE)
+	if(rename)
+		name = "rotting [initial(name)]"
+		desc += " They smell terrible."
 	AddComponent(/datum/component/rot/gibs)
 
 /obj/effect/decal/cleanable/blood/gibs/ex_act(severity, target)
@@ -205,7 +213,6 @@
 	var/list/species_types = list()
 	dryname = "dried footprints"
 	drydesc = "HMM... SOMEONE WAS HERE!"
-
 
 /obj/effect/decal/cleanable/blood/footprints/Initialize(mapload)
 	. = ..()

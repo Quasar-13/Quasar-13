@@ -27,6 +27,8 @@
 
 	var/disgust = 0
 
+	var/mad_shaking = 0
+
 	//inventory slots
 	var/obj/item/back = null
 	var/obj/item/clothing/mask/wear_mask = null

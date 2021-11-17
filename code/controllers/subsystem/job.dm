@@ -16,6 +16,8 @@ SUBSYSTEM_DEF(job)
 
 	var/list/level_order = list(JP_HIGH,JP_MEDIUM,JP_LOW)
 
+
+
 /datum/controller/subsystem/job/Initialize(timeofday)
 	SSmapping.HACK_LoadMapConfig()
 	if(!occupations.len)
@@ -33,6 +35,7 @@ SUBSYSTEM_DEF(job)
 	new_overflow.allow_bureaucratic_error = FALSE
 	new_overflow.spawn_positions = cap
 	new_overflow.total_positions = cap
+
 
 	if(new_overflow_role != overflow_role)
 		var/datum/job/old_overflow = GetJob(overflow_role)
@@ -60,6 +63,18 @@ SUBSYSTEM_DEF(job)
 		if(!job.map_check())	//Even though we initialize before mapping, this is fine because the config is loaded at new
 			testing("Removed [job.type] due to map config")
 			continue
+
+		if(job.maptype != SSmaptype.maptype)
+			if(job.maptype != "none")
+				continue
+
+	//Add back the moment you fix the other bugs
+//		if(SSmaptype.maptype == "syndicate")
+//			if(job.maptype == "none")
+//				continue
+
+
+
 		occupations += job
 		name_occupations[job.title] = job
 		type_occupations[J] = job
@@ -113,6 +128,7 @@ SUBSYSTEM_DEF(job)
 	JobDebug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
 	var/list/candidates = list()
 	for(var/mob/dead/new_player/player in unassigned)
+
 		if(is_banned_from(player.ckey, job.title) || QDELETED(player))
 			JobDebug("FOC isbanned failed, Player: [player]")
 			continue
@@ -131,6 +147,12 @@ SUBSYSTEM_DEF(job)
 		if(player.client.prefs.job_preferences[job.title] == level)
 			JobDebug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
+
+		//Trusted players system
+		if(job.trusted_only && !is_trusted_player(player.client))
+			return FALSE
+
+
 	return candidates
 
 /datum/controller/subsystem/job/proc/GiveRandomJob(mob/dead/new_player/player)
@@ -169,6 +191,9 @@ SUBSYSTEM_DEF(job)
 			JobDebug("GRJ Random job given, Player: [player], Job: [job]")
 			if(AssignRole(player, job.title))
 				return TRUE
+
+		if(job.trusted_only && !is_trusted_player(player.client))
+			JobDebug("FOC player is not trusted, Player: [player]")
 
 /datum/controller/subsystem/job/proc/ResetOccupations()
 	JobDebug("Occupations reset.")
@@ -217,6 +242,7 @@ SUBSYSTEM_DEF(job)
 			continue
 		var/mob/dead/new_player/candidate = pick(candidates)
 		AssignRole(candidate, command_position)
+
 
 /datum/controller/subsystem/job/proc/FillAIPosition()
 	var/ai_selected = FALSE
@@ -282,6 +308,7 @@ SUBSYSTEM_DEF(job)
 
 	//People who wants to be the overflow role, sure, go on.
 	JobDebug("DO, Running Overflow Check 1")
+
 	var/datum/job/overflow = GetJob(SSjob.overflow_role)
 	var/list/overflow_candidates = FindOccupationCandidates(overflow, JP_LOW)
 	JobDebug("AC1, Candidates: [overflow_candidates.len]")
@@ -430,8 +457,15 @@ SUBSYSTEM_DEF(job)
 
 	//If we joined at roundstart we should be positioned at our workstation
 	if(!joined_late)
+		var/spawning_handled = FALSE
 		var/obj/S = null
-		if(length(GLOB.jobspawn_overrides[rank]))
+		if(HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS))
+			SendToLateJoin(living_mob)
+			spawning_handled = TRUE
+		else if(HAS_TRAIT(SSstation, STATION_TRAIT_RANDOM_ARRIVALS))
+			DropLandAtRandomHallwayPoint(living_mob)
+			spawning_handled = TRUE
+		else if(length(GLOB.jobspawn_overrides[rank]))
 			S = pick(GLOB.jobspawn_overrides[rank])
 		else
 			for(var/_sloc in GLOB.start_landmarks_list)
@@ -445,7 +479,7 @@ SUBSYSTEM_DEF(job)
 				break
 		if(S)
 			S.JoinPlayerHere(living_mob, FALSE)
-		if(!S) //if there isn't a spawnpoint send them to latejoin, if there's no latejoin go yell at your mapper
+		if(!S && !spawning_handled) //if there isn't a spawnpoint send them to latejoin, if there's no latejoin go yell at your mapper
 			log_world("Couldn't find a round start spawn point for [rank]")
 			if(!SendToLateJoin(living_mob))
 				living_mob.move_to_error_room()
@@ -492,7 +526,7 @@ SUBSYSTEM_DEF(job)
 		var/mob/living/carbon/human/wageslave = living_mob
 		living_mob.add_memory("Your account ID is [wageslave.account_id].")
 	if(job && living_mob)
-		job.after_spawn(living_mob, M, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
+		job.after_spawn(living_mob, M, joined_late) // note: this happens before the mob has a key! M will always have a client, living_mob might not.
 
 	return living_mob
 
@@ -518,6 +552,7 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/proc/setup_officer_positions()
 	var/datum/job/J = SSjob.GetJob("Security Officer")
+
 	if(!J)
 		CRASH("setup_officer_positions(): Security officer job is missing")
 
@@ -679,6 +714,13 @@ SUBSYSTEM_DEF(job)
 		message_admins(msg)
 		CRASH(msg)
 
+///Lands specified mob at a random spot in the hallways
+/datum/controller/subsystem/job/proc/DropLandAtRandomHallwayPoint(mob/living/living_mob)
+	var/turf/spawn_turf = get_safe_random_station_turf(typesof(/area/hallway))
+
+	var/obj/structure/closet/supplypod/centcompod/toLaunch = new()
+	living_mob.forceMove(toLaunch)
+	new /obj/effect/pod_landingzone(spawn_turf, toLaunch)
 
 ///////////////////////////////////
 //Keeps track of all living heads//

@@ -11,7 +11,9 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	flags_1 = CAN_BE_DIRTY_1 | NO_SCREENTIPS_1
 
+	turf_flags = CAN_BE_DIRTY_1
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_OPEN_FLOOR)
 	canSmoothWith = list(SMOOTH_GROUP_OPEN_FLOOR, SMOOTH_GROUP_TURF_OPEN)
 
@@ -236,7 +238,10 @@
 /turf/open/floor/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_FLOORWALL)
-			return list("mode" = RCD_FLOORWALL, "delay" = 20, "cost" = 16)
+			return rcd_result_with_memory(
+				list("mode" = RCD_FLOORWALL, "delay" = 2 SECONDS, "cost" = 16),
+				src, RCD_MEMORY_WALL,
+			)
 		if(RCD_AIRLOCK)
 			if(the_rcd.airlock_glass)
 				return list("mode" = RCD_AIRLOCK, "delay" = 50, "cost" = 20)
@@ -245,7 +250,10 @@
 		if(RCD_DECONSTRUCT)
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 33)
 		if(RCD_WINDOWGRILLE)
-			return list("mode" = RCD_WINDOWGRILLE, "delay" = 10, "cost" = 4)
+			return rcd_result_with_memory(
+				list("mode" = RCD_WINDOWGRILLE, "delay" = 1 SECONDS, "cost" = 4),
+				src, RCD_MEMORY_WINDOWGRILLE,
+			)
 		if(RCD_MACHINE)
 			return list("mode" = RCD_MACHINE, "delay" = 20, "cost" = 25)
 		if(RCD_COMPUTER)
@@ -283,12 +291,19 @@
 				new_airlock.electronics.accesses = the_rcd.airlock_electronics.accesses.Copy()
 				new_airlock.electronics.one_access = the_rcd.airlock_electronics.one_access
 				new_airlock.electronics.unres_sides = the_rcd.airlock_electronics.unres_sides
+				new_airlock.electronics.passed_name = the_rcd.airlock_electronics.passed_name
+				new_airlock.electronics.passed_cycle_id = the_rcd.airlock_electronics.passed_cycle_id
 			if(new_airlock.electronics.one_access)
 				new_airlock.req_one_access = new_airlock.electronics.accesses
 			else
 				new_airlock.req_access = new_airlock.electronics.accesses
 			if(new_airlock.electronics.unres_sides)
 				new_airlock.unres_sides = new_airlock.electronics.unres_sides
+			if(new_airlock.electronics.passed_name)
+				new_airlock.name = sanitize(new_airlock.electronics.passed_name)
+			if(new_airlock.electronics.passed_cycle_id)
+				new_airlock.closeOtherId = new_airlock.electronics.passed_cycle_id
+				new_airlock.update_other_id()
 			new_airlock.autoclose = TRUE
 			new_airlock.update_icon()
 			return TRUE

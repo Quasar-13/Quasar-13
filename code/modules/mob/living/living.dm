@@ -353,7 +353,7 @@
 /mob/living/proc/reset_pull_offsets(mob/living/M, override)
 	if(!override && M.buckled)
 		return
-	animate(M, pixel_x = base_pixel_x, pixel_y = base_pixel_y, 1)
+	animate(M, pixel_x = M.base_pixel_x, pixel_y = M.base_pixel_y, 1)
 
 //mob verbs are a lot faster than object verbs
 //for more info on why this is not atom/pull, see examinate() in mob.dm
@@ -902,9 +902,9 @@
 
 /mob/living/resist_grab(moving_resist)
 	. = TRUE
-	if(pulledby.grab_state || resting || HAS_TRAIT(src, TRAIT_GRABWEAKNESS))
+	if(pulledby.grab_state || body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS))
 		var/altered_grab_state = pulledby.grab_state
-		if((resting || HAS_TRAIT(src, TRAIT_GRABWEAKNESS)) && pulledby.grab_state < GRAB_KILL) //If resting, resisting out of a grab is equivalent to 1 grab state higher. won't make the grab state exceed the normal max, however
+		if((body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS)) && pulledby.grab_state < GRAB_KILL) //If prone, resisting out of a grab is equivalent to 1 grab state higher. won't make the grab state exceed the normal max, however
 			altered_grab_state++
 		var/resist_chance = BASE_GRAB_RESIST_CHANCE /// see defines/combat.dm, this should be baseline 60%
 		resist_chance = (resist_chance/altered_grab_state) ///Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
@@ -1655,6 +1655,8 @@
 	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 
 
+
+
 /mob/living/set_stat(new_stat)
 	. = ..()
 	if(isnull(.))
@@ -1698,10 +1700,12 @@
 		if(UNCONSCIOUS)
 			if(. != HARD_CRIT)
 				become_blind(UNCONSCIOUS_TRAIT)
-			if(health <= crit_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
+			if(health <= crit_knockdown_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				ADD_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+				REMOVE_TRAIT(src, TRAIT_BUTTERFINGERS, STAT_TRAIT)
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -1921,3 +1925,27 @@
 			if (INTENT_HELP)
 				attack_result = style.help_act(src, target)
 	return attack_result
+
+/// Special key down handling of /living mobs, currently only used for typing indicator
+/mob/living/key_down(_key, client/user)
+	if(!typing_indicator && stat == CONSCIOUS)
+		for(var/kb_name in user.prefs.key_bindings[_key])
+			switch(kb_name)
+				if("Say")
+					set_typing_indicator(TRUE)
+					break
+				if("Me")
+					set_typing_indicator(TRUE)
+					break
+	return ..()
+
+/// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
+/mob/living/set_typing_indicator(state)
+	typing_indicator = state
+	var/state_of_bubble = bubble_icon? "[bubble_icon]0" : "default0"
+	var/mutable_appearance/bubble_overlay = mutable_appearance('icons/mob/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
+	bubble_overlay.appearance_flags = RESET_COLOR | RESET_TRANSFORM | TILE_BOUND | PIXEL_SCALE
+	if(typing_indicator)
+		add_overlay(bubble_overlay)
+	else
+		cut_overlay(bubble_overlay)

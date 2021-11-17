@@ -27,6 +27,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
+		/datum/language/spacer,
 		/datum/language/terrum,
 		/datum/language/russian, // TEGU
 		/datum/language/nekomimetic

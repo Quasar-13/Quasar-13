@@ -19,6 +19,7 @@
 	var/special_pod //If this pack comes shipped in a specific pod when launched from the express console
 	var/admin_spawned = FALSE
 	var/goody = FALSE //Goodies can only be purchased by private accounts and can have coupons apply to them. They also come in a lockbox instead of a full crate, so the 700 min doesn't apply
+	var/maptype = "none" //i am dying
 
 /datum/supply_pack/proc/generate(atom/A, datum/bank_account/paying_account)
 	var/obj/structure/closet/crate/C
@@ -35,6 +36,10 @@
 
 	fill(C)
 	return C
+
+/datum/supply_pack/proc/get_cost()
+	. = cost
+	. *= SSeconomy.pack_price_modifier
 
 /datum/supply_pack/proc/fill(obj/structure/closet/crate/C)
 	if (admin_spawned)
@@ -587,10 +592,11 @@
 /datum/supply_pack/security/armory/russian
 	name = "Russian Surplus Crate"
 	desc = "Hello Comrade, we have the most modern russian military equipment the black market can offer, for the right price of course. Sadly we couldnt remove the lock so it requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 12
+	cost = CARGO_CRATE_VALUE * 30 //tegu edit - Elmo with a
 	contraband = TRUE
 	contains = list(/obj/item/food/rationpack,
 					/obj/item/ammo_box/a762,
+					/obj/item/ammo_box/magazine/ak47, //tegu edit: ak
 					/obj/item/storage/toolbox/ammo,
 					/obj/item/storage/toolbox/maint_kit,
 					/obj/item/clothing/suit/armor/vest/russian,
@@ -602,6 +608,7 @@
 					/obj/item/clothing/mask/russian_balaclava,
 					/obj/item/clothing/head/helmet/rus_ushanka,
 					/obj/item/clothing/suit/armor/vest/russian_coat,
+					/obj/item/gun/ballistic/automatic/ak47, //tegu edit: 47
 					/obj/item/gun/ballistic/rifle/boltaction,
 					/obj/item/gun/ballistic/rifle/boltaction)
 	crate_name = "surplus military crate"
@@ -2647,11 +2654,19 @@
 	crate_name = "soft drinks supply crate"
 
 /datum/supply_pack/vending/vendomat
-	name = "Vendomat Supply Crate"
+	name = "Vendomat & YouTool Supply Crate"
 	desc = "More tools for your IED testing facility."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/assist)
-	crate_name = "vendomat supply crate"
+	contains = list(/obj/item/vending_refill/assist,
+					/obj/item/vending_refill/youtool)
+	crate_name = "Vendomat & YouTool supply crate"
+
+/datum/supply_pack/vending/clothesmate
+	name = "ClothesMate Supply Crate"
+	desc = "Out of cowboy boots? Buy this crate."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/vending_refill/clothing)
+	crate_name = "ClothesMate supply crate"
 
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////// Clothing Vending Restocks ////////////////////////////
@@ -2717,8 +2732,9 @@
 
 /datum/supply_pack/vending/wardrobes/security
 	name = "Security Wardrobe Supply Crate"
-	desc = "This crate contains refills for the SecDrobe and LawDrobe."
-	cost = CARGO_CRATE_VALUE * 3
+	desc = "This crate contains refills for the SecDrobe, DetDrobe and LawDrobe."
+	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/vending_refill/wardrobe/sec_wardrobe,
+					/obj/item/vending_refill/wardrobe/det_wardrobe,
 					/obj/item/vending_refill/wardrobe/law_wardrobe)
 	crate_name = "security department supply crate"

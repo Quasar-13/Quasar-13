@@ -88,9 +88,11 @@
 
 /turf/closed/mineral/random/stationside/asteroid/rockplanet
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
-	turf_type = /turf/open/floor/plating/asteroid
+	turf_type = /turf/open/floor/plating/asteroid/rockplanet
 	mineralSpawnChanceList = list(/obj/item/stack/ore/uranium = 5, /obj/item/stack/ore/diamond = 1, /obj/item/stack/ore/gold = 10,
 		/obj/item/stack/ore/silver = 12, /obj/item/stack/ore/plasma = 20, /obj/item/stack/ore/iron = 40, /obj/item/stack/ore/titanium = 11,
 		/turf/closed/mineral/gibtonite = 4, /obj/item/stack/ore/bluespace_crystal = 1)
-	mineralChance = 30
-	
+	mineralChance = 10
+
+/turf/open/floor/plating/asteroid/rockplanet
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS

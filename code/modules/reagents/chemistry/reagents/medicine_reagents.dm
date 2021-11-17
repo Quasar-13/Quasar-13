@@ -487,7 +487,7 @@
 	color = "#D2FFFA"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	addiction_threshold = 25
+	addiction_types = list(/datum/addiction/stimulants = 4) //1.6 per 2 seconds
 
 /datum/reagent/medicine/ephedrine/on_mob_metabolize(mob/living/L)
 	..()
@@ -527,54 +527,6 @@
 		. = 1
 	return TRUE
 
-/datum/reagent/medicine/ephedrine/addiction_act_stage1(mob/living/M)
-	if(prob(3) && iscarbon(M))
-		M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
-		M.Unconscious(100)
-		M.Jitter(350)
-
-	if(prob(33))
-		M.adjustToxLoss(2*REM, 0)
-		M.losebreath += 2
-		. = 1
-	..()
-
-/datum/reagent/medicine/ephedrine/addiction_act_stage2(mob/living/M)
-	if(prob(6) && iscarbon(M))
-		M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
-		M.Unconscious(100)
-		M.Jitter(350)
-
-	if(prob(33))
-		M.adjustToxLoss(3*REM, 0)
-		M.losebreath += 3
-		. = 1
-	..()
-
-/datum/reagent/medicine/ephedrine/addiction_act_stage3(mob/living/M)
-	if(prob(12) && iscarbon(M))
-		M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
-		M.Unconscious(100)
-		M.Jitter(350)
-
-	if(prob(33))
-		M.adjustToxLoss(4*REM, 0)
-		M.losebreath += 4
-		. = 1
-	..()
-
-/datum/reagent/medicine/ephedrine/addiction_act_stage4(mob/living/M)
-	if(prob(24) && iscarbon(M))
-		M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
-		M.Unconscious(100)
-		M.Jitter(350)
-
-	if(prob(33))
-		M.adjustToxLoss(5*REM, 0)
-		M.losebreath += 5
-		. = 1
-	..()
-
 /datum/reagent/medicine/diphenhydramine
 	name = "Diphenhydramine"
 	description = "Rapidly purges the body of Histamine and reduces jitteriness. Slight chance of causing drowsiness."
@@ -596,7 +548,7 @@
 	color = "#A9FBFB"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	addiction_threshold = 25
+	addiction_types = list(/datum/addiction/opiods = 10)
 
 /datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
 	..()
@@ -624,39 +576,6 @@
 		M.drop_all_held_items()
 		M.Dizzy(2)
 		M.Jitter(2)
-	..()
-
-/datum/reagent/medicine/morphine/addiction_act_stage1(mob/living/M)
-	if(prob(33))
-		M.drop_all_held_items()
-		M.Jitter(2)
-	..()
-
-/datum/reagent/medicine/morphine/addiction_act_stage2(mob/living/M)
-	if(prob(33))
-		M.drop_all_held_items()
-		M.adjustToxLoss(1*REM, 0)
-		. = 1
-		M.Dizzy(3)
-		M.Jitter(3)
-	..()
-
-/datum/reagent/medicine/morphine/addiction_act_stage3(mob/living/M)
-	if(prob(33))
-		M.drop_all_held_items()
-		M.adjustToxLoss(2*REM, 0)
-		. = 1
-		M.Dizzy(4)
-		M.Jitter(4)
-	..()
-
-/datum/reagent/medicine/morphine/addiction_act_stage4(mob/living/M)
-	if(prob(33))
-		M.drop_all_held_items()
-		M.adjustToxLoss(3*REM, 0)
-		. = 1
-		M.Dizzy(5)
-		M.Jitter(5)
 	..()
 
 /datum/reagent/medicine/oculine
@@ -839,6 +758,14 @@
 	description = "Reacts with neural tissue, helping reform damaged connections. Can cure minor traumas."
 	color = "#C0C0C0" //ditto
 
+/datum/reagent/medicine/neurine/on_mob_add(mob/living/L, amount)
+	. = ..()
+	ADD_TRAIT(L, TRAIT_ANTICONVULSANT, name)
+
+/datum/reagent/medicine/neurine/on_mob_delete(mob/living/L)
+	. = ..()
+	REMOVE_TRAIT(L, TRAIT_ANTICONVULSANT, name)
+
 /datum/reagent/medicine/neurine/on_mob_life(mob/living/carbon/C)
 	if(holder.has_reagent(/datum/reagent/consumable/ethanol/neurotoxin))
 		holder.remove_reagent(/datum/reagent/consumable/ethanol/neurotoxin, 5)
@@ -884,6 +811,7 @@
 	color = "#78008C"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
+	addiction_types = list(/datum/addiction/stimulants = 4) //0.8 per 2 seconds
 
 /datum/reagent/medicine/stimulants/on_mob_metabolize(mob/living/L)
 	..()
@@ -995,6 +923,7 @@
 	color = "#FFAF00"
 	metabolization_rate = 0.4 //Math is based on specific metab rate so we want this to be static AKA if define or medicine metab rate changes, we want this to stay until we can rework calculations.
 	overdose_threshold = 25
+	addiction_types = list(/datum/addiction/hallucinogens = 14)
 
 /datum/reagent/medicine/earthsblood/on_mob_life(mob/living/M)
 	if(current_cycle <= 25) //10u has to be processed before u get into THE FUN ZONE
@@ -1456,3 +1385,15 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	clot_rate = 0.2
 	passive_bleed_modifier = 0.8
+
+/datum/reagent/medicine/coagulant/seraka_extract
+	name = "Seraka Extract"
+	description = "A deeply coloured oil present in small amounts in Seraka Mushrooms. Acts as an effective blood clotting agent, but has a low overdose threshold."
+	color = "#00767C"
+	taste_description = "intensely savoury bitterness"
+	glass_name = "glass of seraka extract"
+	glass_desc = "Deeply savoury, bitter, and makes your blood clot up in your veins. A great drink, all things considered."
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+	clot_rate = 0.4 //slightly better than regular coagulant
+	passive_bleed_modifier = 0.5
+	overdose_threshold = 10 //but easier to overdose on

@@ -267,6 +267,35 @@
 	W.update_label()
 	..()
 
+
+/datum/outfit/centcom/admiral
+	name = "Admiral"
+
+	uniform = /obj/item/clothing/under/rank/centcom/commander
+	suit = /obj/item/clothing/suit/pirate/captain
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	ears = /obj/item/radio/headset/heads/headset_cent/commander
+	belt = /obj/item/lighter
+	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	back = /obj/item/storage/backpack/satchel/leather
+	id = /obj/item/card/id/admiral
+
+/datum/outfit/centcom/admiral/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	if(visualsOnly)
+		return
+
+	var/obj/item/card/id/W = H.wear_id
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("CenCom Commander")
+	W.assignment = "Admiral"
+	W.registered_name = H.real_name
+	W.update_label()
+	..()
+
+
 /datum/outfit/ghost_cultist
 	name = "Cultist Ghost"
 

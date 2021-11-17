@@ -14,7 +14,7 @@
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random = 30, /obj/structure/spawner/lavaland/legion = 3, \
 		SPAWN_MEGAFAUNA = 4, /mob/living/simple_animal/hostile/asteroid/goldgrub = 10)
 	///Weighted list of flora that can spawn in the area.
-	var/list/flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2)
+	var/list/flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2, /obj/structure/flora/ash/seraka = 2)
 	// Weighted list of Megafauna that can spawn in the caves
 	var/list/megafauna_spawn_list
 
@@ -57,8 +57,8 @@
 		var/closed = text2num(string_gen[world.maxx * (gen_turf.y - 1) + gen_turf.x])
 
 		var/stored_flags
-		if(gen_turf.flags_1 & NO_RUINS_1)
-			stored_flags |= NO_RUINS_1
+		if(gen_turf.turf_flags & NO_RUINS)
+			stored_flags |= NO_RUINS
 
 		var/turf/new_turf = pickweight(closed ? closed_turf_types : open_turf_types)
 

@@ -22,7 +22,7 @@ GENE SCANNER
 	name = "\improper T-ray scanner"
 	desc = "A terahertz-ray emitter and scanner used to detect underfloor objects such as cables and pipes."
 	custom_price = PAYCHECK_ASSISTANT * 0.7
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/tools.dmi'
 	icon_state = "t-ray0"
 	var/on = FALSE
 	slot_flags = ITEM_SLOT_BELT
@@ -449,11 +449,10 @@ GENE SCANNER
 			else
 				render_list += "<span class='notice ml-1'>Subject contains no reagents in their stomach.</span>\n"
 
-		if(LAZYLEN(M.reagents.addiction_list))
-			render_list += "<span class='boldannounce ml-1'>Subject is addicted to the following reagents:</span>\n"
-			for(var/a in M.reagents.addiction_list)
-				var/datum/reagent/addiction = a
-				render_list += "<span class='alert ml-2'>[addiction.name]</span>\n"
+		if(LAZYLEN(M.mind?.active_addictions))
+			render_list += "<span class='boldannounce ml-1'>Subject is addicted to the following types of drug:</span>\n"
+			for(var/datum/addiction/addiction_type as anything in M.mind.active_addictions)
+				render_list += "<span class='alert ml-2'>[initial(addiction_type.name)]</span>\n"
 		else
 			render_list += "<span class='notice ml-1'>Subject is not addicted to any reagents.</span>\n"
 
@@ -504,8 +503,10 @@ GENE SCANNER
 		to_chat(user, jointext(render_list, ""))
 
 /obj/item/healthanalyzer/wound
-	name = "first aid analyzer"
-	icon_state = "adv_spectrometer"
+	name = "Wound analyzer"
+	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
+	icon_state = "wound"
+
 	desc = "A prototype MeLo-Tech medical scanner used to diagnose injuries and recommend treatment for serious wounds, but offers no further insight into the patient's health. You hope the final version is less annoying to read!"
 	var/next_encouragement
 	var/greedy
@@ -544,7 +545,7 @@ GENE SCANNER
 	desc = "A hand-held environmental scanner which reports current gas levels. Alt-Click to use the built in barometer function."
 	name = "analyzer"
 	custom_price = PAYCHECK_ASSISTANT * 0.9
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/tools.dmi'
 	icon_state = "analyzer"
 	inhand_icon_state = "analyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'

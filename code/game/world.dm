@@ -51,6 +51,7 @@ GLOBAL_VAR(restart_counter)
 
 	load_admins()
 	load_mentors() // Tegustation Mentorhelp edit: Load the mentors!
+	load_minors() // Load the list of smol beans. We can't allow kids to play that horrifying mess of a Space Station!
 
 	//SetupLogs depends on the RoundID, so lets check
 	//DB schema and set RoundID if we can
@@ -146,6 +147,7 @@ GLOBAL_VAR(restart_counter)
 	GLOB.world_paper_log = "[GLOB.log_directory]/paper.log"
 	GLOB.tgui_log = "[GLOB.log_directory]/tgui.log"
 	GLOB.world_shuttle_log = "[GLOB.log_directory]/shuttle.log"
+	GLOB.world_ntsl_log = "[GLOB.log_directory]/ntsl.log"	//BUNGALOW EDIT ADDITION - NTSL
 
 	GLOB.demo_log = "[GLOB.log_directory]/demo.log"
 

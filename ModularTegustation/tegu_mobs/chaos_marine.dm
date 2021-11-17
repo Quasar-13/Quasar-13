@@ -20,12 +20,15 @@
 	ranged_cooldown_time = 20
 	vision_range = 10
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 0.5, CLONE = 0.5, STAMINA = 0, OXY = 0.5)
-	loot = list(/obj/item/nullrod/scythe/talking/chainsword/chaos, /obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos)
-	crusher_loot = list(/obj/item/nullrod/scythe/talking/chainsword/chaos, /obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos, /obj/item/upgradescroll)
+	loot = list(/obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos)
+	crusher_loot = list(/obj/item/nullrod/scythe/talking/chainsword/chaos, /obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos)
 	wander = FALSE
 	del_on_death = TRUE
 	blood_volume = BLOOD_VOLUME_NORMAL
 	gps_name = "Chaotic Signal"
+	achievement_type = /datum/award/achievement/boss/marine_kill
+	crusher_achievement_type = /datum/award/achievement/boss/marine_crusher
+	score_achievement_type = /datum/award/score/marine_score
 	deathmessage = "falls to the ground, decaying into glowing particles."
 	deathsound = "sound/magic/curse.ogg"
 	footstep_type = FOOTSTEP_MOB_HEAVY
@@ -413,7 +416,7 @@
 /obj/item/clothing/suit/space/hardsuit/ert/paranormal/berserker/chaos
 	name = "berserker's hardsuit"
 	allowed = list(/obj/item/gun, /obj/item/nullrod, /obj/item/tank/internals)
-	armor = list("melee" = 75, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 70, "bullet" = 30, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	cell = /obj/item/stock_parts/cell/hyper
@@ -424,7 +427,7 @@
 
 /obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal/berserker/chaos
 	name = "berserker's helmet"
-	armor = list("melee" = 75, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 70, "bullet" = 30, "laser" = 30, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	icon_state = "hardsuit0-chaos"

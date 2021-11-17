@@ -199,7 +199,7 @@
 	message.maptext = MAPTEXT(complete_text)
 
 	// View the message
-	LAZYADDASSOC(owned_by.seen_messages, message_loc, src)
+	LAZYADDASSOCLIST(owned_by.seen_messages, message_loc, src)
 	owned_by.images |= message
 	animate(message, alpha = 255, time = CHAT_MESSAGE_SPAWN_TIME)
 
@@ -238,6 +238,13 @@
 		var/atom/movable/virtualspeaker/v = speaker
 		speaker = v.source
 		spans |= "virtual-speaker"
+
+
+	// BUNGALOW EDIT ADDITION START - NTSL
+	// NTSL doesn't pass a speaker when you do broadcast() since technically nothing is actually speaking.
+	if(!speaker)
+		return
+	// BUNGALOW EDIT ADDITION END - NTSL
 
 	// Ignore virtual speaker (most often radio messages) from ourself
 	if (originalSpeaker != src && speaker == src)

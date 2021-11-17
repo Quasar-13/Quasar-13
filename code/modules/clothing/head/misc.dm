@@ -469,16 +469,6 @@
 	inhand_icon_state = "that"
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 
-
-//Bungalow edit
-/obj/item/clothing/head/cmoberet
-	name = "chief medical officer's beret"
-	desc = "The light blue beret of the poor Doctor"
-	icon_state = "cmoberet"
-	inhand_icon_state = "that"
-	armor = list(MELEE = 15, BULLET = 5, LASER = 10, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 100)
-
-
 /obj/item/clothing/head/jackbros
 	name = "frosty hat"
 	desc = "Hee-ho!"
@@ -490,3 +480,12 @@
 	desc = "A gauzy white veil."
 	icon_state = "weddingveil"
 	inhand_icon_state = "weddingveil"
+
+/obj/item/clothing/head/centom_cap
+	name = "\improper CentCom Commander Cap"
+	icon_state = "centcom_cap"
+	desc = "Worn by the finest of CentCom Commanders. Inside the lining of the cap, lies two faint initials."
+	inhand_icon_state = "that"
+	flags_inv = 0
+	armor = list(MELEE = 30, BULLET = 15, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
+	strip_delay = 140

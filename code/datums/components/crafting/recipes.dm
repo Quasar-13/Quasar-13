@@ -289,10 +289,10 @@
 	..()
 	blacklist += subtypesof(/obj/item/gun/energy/laser)
 
-/datum/crafting_recipe/teslarevolver
-	name = "Tesla Revolver"
+/datum/crafting_recipe/teslacannon
+	name = "Tesla Cannon"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	result = /obj/item/gun/energy/tesla_revolver
+	result = /obj/item/gun/energy/tesla_cannon
 	reqs = list(/obj/item/assembly/signaler/anomaly/flux = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/gunkit/tesla = 1)
@@ -812,6 +812,13 @@
 				/obj/item/stack/sheet/animalhide/ashdrake = 5)
 	category = CAT_PRIMAL
 
+/datum/crafting_recipe/godslayer
+	name = "Godslayer Armour"
+	result = /obj/item/clothing/suit/hooded/cloak/godslayer
+	time = 60
+	reqs = list(/obj/item/ice_energy_crystal = 1, /obj/item/wendigo_skull = 1, /obj/item/clockwork_alloy = 1)
+	category = CAT_PRIMAL
+
 /datum/crafting_recipe/firebrand
 	name = "Firebrand"
 	result = /obj/item/match/firebrand
@@ -857,14 +864,6 @@
 	parts = list(/obj/item/grown/log = 5)
 	blacklist = list(/obj/item/grown/log/steel)
 	result = /obj/structure/bonfire
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/skeleton_key
-	name = "Skeleton Key"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/bone = 5)
-	result = /obj/item/skeleton_key
-	always_available = FALSE
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/rake //Category resorting incoming

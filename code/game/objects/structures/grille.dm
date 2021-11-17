@@ -55,9 +55,16 @@
 		if(RCD_DECONSTRUCT)
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 20, "cost" = 5)
 		if(RCD_WINDOWGRILLE)
+			var/cost = 8
+			var/delay = 2 SECONDS
 			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED)
-				return list("mode" = RCD_WINDOWGRILLE, "delay" = 40, "cost" = 12)
-			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8)
+				delay = 4 SECONDS
+				cost = 12
+
+			return rcd_result_with_memory(
+				list("mode" = RCD_WINDOWGRILLE, "delay" = delay, "cost" = cost),
+				get_turf(src), RCD_MEMORY_WINDOWGRILLE,
+			)
 	return FALSE
 
 /obj/structure/grille/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
@@ -159,7 +166,7 @@
 			return
 
 //window placing begin
-	else if(is_glass_sheet(W))
+	else if(is_glass_sheet(W) || istype(W, /obj/item/stack/sheet/bronze))
 		if (!broken)
 			var/obj/item/stack/ST = W
 			if (ST.get_amount() < 2)
@@ -189,6 +196,8 @@
 					WD = new/obj/structure/window/shuttle(drop_location())
 				else if(istype(W, /obj/item/stack/sheet/plastitaniumglass))
 					WD = new/obj/structure/window/plasma/reinforced/plastitanium(drop_location())
+				else if(istype(W, /obj/item/stack/sheet/bronze))
+					WD = new/obj/structure/window/bronze/fulltile(drop_location())
 				else
 					WD = new/obj/structure/window/fulltile(drop_location()) //normal window
 				WD.setDir(dir_to_set)

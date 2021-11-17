@@ -25,6 +25,9 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 	alpha = 50
 
+	butcher_results = list(/obj/item/food/meat/slab/xeno = 2)
+	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/goliath_hide = 2)
+
 	footstep_type = FOOTSTEP_MOB_CLAW
 
 /mob/living/simple_animal/hostile/jungle/mega_arachnid/Life()
@@ -66,5 +69,5 @@
 	desc = "Used by mega arachnids to immobilize their prey."
 	item_flags = DROPDEL
 	flags_1 = NONE
-	icon_state = "tentacle_end"
-	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "flesh_snare"
+	armed = TRUE

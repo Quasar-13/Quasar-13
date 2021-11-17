@@ -3,10 +3,10 @@ GLOBAL_LIST_EMPTY(station_turfs)
 /// Any floor or wall. What makes up the station and the rest of the map.
 /turf
 	icon = 'icons/turf/floors.dmi'
-	flags_1 = CAN_BE_DIRTY_1
 	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE // Important for interaction with and visualization of openspace.
 	luminosity = 1
-
+	/// Turf bitflags, see code/__DEFINES/flags.dm
+	var/turf_flags = NONE
 	var/intact = 1
 
 	// baseturfs can be either a list or a single turf type.
@@ -60,6 +60,11 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 	///the holodeck can load onto this turf if TRUE
 	var/holodeck_compatible = FALSE
+
+	/// If this turf contained an RCD'able object (or IS one, for walls)
+	/// but is now destroyed, this will preserve the value.
+	/// See __DEFINES/construction.dm for RCD_MEMORY_*.
+	var/rcd_memory
 
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list("x", "y", "z")

@@ -10,21 +10,10 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/structure/closet/crate/necropolis/tendril
-	desc = "It's watching you suspiciously. You need a skeleton key to open it."
-	///prevents bust_open to fire
-	integrity_failure = 0
-	/// var to check if it got opened by a key
-	var/spawned_loot = FALSE
+	desc = "It's watching you suspiciously."
 
-/obj/structure/closet/crate/necropolis/tendril/Initialize()
-	. = ..()
-	RegisterSignal(src, COMSIG_PARENT_ATTACKBY, .proc/try_spawn_loot)
+/obj/structure/closet/crate/necropolis/tendril/PopulateContents()
 
-/obj/structure/closet/crate/necropolis/tendril/proc/try_spawn_loot(datum/source, obj/item/item, mob/user, params) ///proc that handles key checking and generating loot
-	SIGNAL_HANDLER
-
-	if(!istype(item, /obj/item/skeleton_key) || spawned_loot)
-		return FALSE
 	var/loot = rand(1,21)
 	switch(loot)
 		if(1)
@@ -79,15 +68,6 @@
 			new /obj/item/bedsheet/cult(src)
 		if(21)
 			new /obj/item/clothing/neck/necklace/memento_mori(src)
-	spawned_loot = TRUE
-	qdel(item)
-	to_chat(user, "<span class='notice'>You disable the magic lock, revealing the loot.</span>")
-	return TRUE
-
-/obj/structure/closet/crate/necropolis/tendril/can_open(mob/living/user, force = FALSE)
-	if(!spawned_loot)
-		return FALSE
-	return ..()
 
 //KA modkit design discs
 /obj/item/disk/design_disk/modkit_disc
@@ -601,6 +581,9 @@
 /obj/item/reagent_containers/glass/bottle/potion
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "potionflask"
+	can_have_cap = FALSE
+	cap_icon_state = null
+	cap_on = FALSE
 
 /obj/item/reagent_containers/glass/bottle/potion/flight
 	name = "strange elixir"
@@ -624,7 +607,7 @@
 	if(iscarbon(exposed_mob) && exposed_mob.stat != DEAD)
 		var/mob/living/carbon/exposed_carbon = exposed_mob
 		var/holycheck = ishumanbasic(exposed_carbon)
-		if(reac_volume < 5 || !(holycheck || islizard(exposed_carbon) || (ismoth(exposed_carbon) && exposed_carbon.dna.features["moth_wings"] != "Burnt Off"))) // implying xenohumans are holy //as with all things,
+		if(reac_volume < 5 || !(holycheck || isflyperson(exposed_carbon) || isskeleton(exposed_carbon) || isandroid(exposed_carbon) || islizard(exposed_carbon) || (ismoth(exposed_carbon) && exposed_carbon.dna.features["moth_wings"] != "Burnt Off"))) // implying xenohumans are holy //as with all things,
 			if((methods & INGEST) && show_message)
 				to_chat(exposed_carbon, "<span class='notice'><i>You feel nothing but a terrible aftertaste.</i></span>")
 			return
@@ -1053,12 +1036,14 @@
 /obj/structure/closet/crate/necropolis/bubblegum/PopulateContents()
 	new /obj/item/clothing/suit/space/hostile_environment(src)
 	new /obj/item/clothing/head/helmet/space/hostile_environment(src)
-	var/loot = rand(1,2)
+	var/loot = rand(1,3)
 	switch(loot)
 		if(1)
 			new /obj/item/mayhem(src)
 		if(2)
 			new /obj/item/gun/magic/staff/spellblade(src)
+		if(3)
+			new /obj/item/organ/heart/demon(src)
 
 /obj/structure/closet/crate/necropolis/bubblegum/crusher
 	name = "bloody bubblegum chest"
@@ -1075,12 +1060,11 @@
 
 /obj/item/mayhem/attack_self(mob/user)
 	for(var/mob/living/carbon/human/H in range(7,user))
-		var/obj/effect/mine/pickup/bloodbath/B = new(H)
-		INVOKE_ASYNC(B, /obj/effect/mine/pickup/bloodbath/.proc/mineEffect, H)
+		H.apply_status_effect(STATUS_EFFECT_MAYHEM)
 	to_chat(user, "<span class='notice'>You shatter the bottle!</span>")
 	playsound(user.loc, 'sound/effects/glassbr1.ogg', 100, TRUE)
 	message_admins("<span class='adminnotice'>[ADMIN_LOOKUPFLW(user)] has activated a bottle of mayhem!</span>")
-	log_combat(user, null, "activated a bottle of mayhem", src)
+	user.log_message("activated a bottle of mayhem", LOG_ATTACK)
 	qdel(src)
 
 //Colossus
@@ -1345,13 +1329,6 @@
 			new /obj/item/wisp_lantern(src)
 		if(3)
 			new /obj/item/prisoncube(src)
-
-/obj/item/skeleton_key
-	name = "skeleton key"
-	desc = "An artifact usually found in the hands of the natives of lavaland, which NT now holds a monopoly on."
-	icon = 'icons/obj/lavaland/artefacts.dmi'
-	icon_state = "skeleton_key"
-	w_class = WEIGHT_CLASS_SMALL
 
 #undef HIEROPHANT_BLINK_RANGE
 #undef HIEROPHANT_BLINK_COOLDOWN

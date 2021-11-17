@@ -13,6 +13,7 @@ Assistant
 	outfit = /datum/outfit/job/assistant
 	antag_rep = 7
 	paycheck = PAYCHECK_ASSISTANT // Get a job. Job reassignment changes your paycheck now. Get over it.
+	corp = "none" //We will assist any who require us, even if they're war criminals
 
 	liver_traits = list(TRAIT_GREYTIDE_METABOLISM)
 

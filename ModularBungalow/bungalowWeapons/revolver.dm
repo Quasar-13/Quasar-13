@@ -3,7 +3,7 @@
 	name = "Chiappa Rhino"
 	desc = "A special pistol made for the captain, chambered in .38"
 	icon_state = "rhino"
-	icon = 'ModularBungalow/zbungalowicons/kirie_stuff/kiriepistols.dmi'
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	initial_caliber = CALIBER_38
 	fire_sound = 'sound/weapons/gun/revolver/shot_alt.ogg'

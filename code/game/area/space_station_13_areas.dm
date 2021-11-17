@@ -349,6 +349,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "captain"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
+/area/crew_quarters/office/secretary
+	name = "secretary office"
+	icon_state = "secretary"
+	sound_environment = SOUND_AREA_WOODFLOOR
+
 /area/crew_quarters/heads/captain/private
 	name = "Captain's Quarters"
 	icon_state = "captain_private"
@@ -480,6 +485,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_WOODFLOOR
 
+/area/crew_quarters/bar/Initialize(mapload)
+	. = ..()
+	GLOB.bar_areas += src
+
 /area/crew_quarters/bar/atrium
 	name = "Atrium"
 	icon_state = "bar"
@@ -511,7 +520,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	mood_bonus = 5
 	mood_message = "<span class='nicegreen'>I love being in the library!</span>\n"
 	mood_trait = TRAIT_INTROVERT
-	flags_1 = CULT_PERMITTED_1
+	area_flags = CULT_PERMITTED
 	sound_environment = SOUND_AREA_LARGE_SOFTFLOOR
 
 /area/library/lounge
@@ -538,7 +547,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/library/abandoned
 	name = "Abandoned Library"
 	icon_state = "abandoned_library"
-	flags_1 = CULT_PERMITTED_1
+	area_flags = CULT_PERMITTED
 
 /area/chapel
 	icon_state = "chapel"
@@ -592,10 +601,14 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Engineering"
 	icon_state = "engine"
 
+/area/engine/voidtech
+	name = "Void technician's Office"
+	icon_state = "voidtech"
+
 /area/engine/atmos
 	name = "Atmospherics"
 	icon_state = "atmos"
-	flags_1 = CULT_PERMITTED_1
+	area_flags = CULT_PERMITTED
 
 /area/engine/atmos/upper
 	name = "Upper Atmospherics"
@@ -826,7 +839,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical/virology
 	name = "Virology"
 	icon_state = "virology"
-	flags_1 = CULT_PERMITTED_1
+	area_flags = CULT_PERMITTED
 
 /area/medical/morgue
 	name = "Morgue"
@@ -1036,6 +1049,16 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
+/area/office/clown
+	name = "Clown's office"
+	icon_state = "clown"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/office/mime
+	name = "Mime's office"
+	icon_state ="mime"
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
 /area/quartermaster/sorting
 	name = "Delivery Office"
 	icon_state = "cargo_delivery"
@@ -1077,7 +1100,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/janitor
 	name = "Custodial Closet"
 	icon_state = "janitor"
-	flags_1 = CULT_PERMITTED_1
+	area_flags = CULT_PERMITTED
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 

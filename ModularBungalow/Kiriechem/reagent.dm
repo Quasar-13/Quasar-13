@@ -1,18 +1,18 @@
 //Kiriechem Medicines
-/datum/reagent/medicine/bicardine //brings it back kinda
-	name = "Bicardine"
+/datum/reagent/medicine/bicaridine //brings it back kinda
+	name = "Bicaridine"
 	description = "A bruise reliever with a low overdose"
 	color = "#A1240B" // rgb: 236	236	141
 	taste_description = "spicy"
-	overdose_threshold = 6
+	overdose_threshold = 11
 	reagent_state = LIQUID
 
-/datum/reagent/medicine/bicardine/on_mob_life(mob/living/M)
+/datum/reagent/medicine/bicaridine/on_mob_life(mob/living/M)
 	M.adjustBruteLoss(-3*REM)
 	..()
 	return TRUE
 
-/datum/reagent/medicine/bicardine/overdose_process(mob/living/M)
+/datum/reagent/medicine/bicaridine/overdose_process(mob/living/M)
 	M.adjustFireLoss(2*REM)
 	..()
 
@@ -22,7 +22,7 @@
 	description = "A burn reliever with a low overdose."
 	color = "#F3F772" // rgb: 236	236	141
 	taste_description = "burning"
-	overdose_threshold = 6
+	overdose_threshold = 11
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/M)
@@ -40,7 +40,7 @@
 	description = "A good all-round medicine.."
 	color = "#92A6F7" // rgb: 236	236	141
 	taste_description = "chalk"
-	overdose_threshold = 10
+	overdose_threshold = 15
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/tricordizine/on_mob_life(mob/living/M)
@@ -52,20 +52,62 @@
 	return TRUE
 
 /datum/reagent/medicine/tricordizine/overdose_process(mob/living/M)
-	M.adjustCloneLoss(4*REM)
+	M.adjustCloneLoss(2*REM)
 	..()
 
 
+/datum/reagent/medicine/bicarbital //bicaridine but new
+	name = "Bicarbital"
+	description = "A bruise reliever that deals minor genetics damage."
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	reagent_state = LIQUID
 
-/datum/reagent/medicine/giadone //heals all cellular damage
+/datum/reagent/medicine/bicardite/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-3*REM)
+	M.adjustCloneLoss(0.5*REM)
+	..()
+	return TRUE
+
+
+/datum/reagent/medicine/keluri //brings it back kinda
+	name = "Keluri"
+	description = "A burn reliever that deals minor genetics damage."
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/keluri/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-3*REM)
+	M.adjustCloneLoss(0.5*REM)
+	..()
+	return TRUE
+
+
+/datum/reagent/medicine/venadone //brings it back kinda
+	name = "Venadone"
+	description = "A medicine to heal genetic damage but deals very minor toxin damage."
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/venadone/on_mob_life(mob/living/M)
+	M.adjustCloneLoss(-2*REM)
+	M.adjustToxLoss(0.5*REM)
+	..()
+	return TRUE
+
+
+/datum/reagent/medicine/giadone //cellular damage
 	name = "Giadone"
-	description = "like some sort of mistake"
+	description = "Heals massively genetic damage by forcefully fusing together cells with force."
 	color = "#ADDBD4" // rgb: 236	236	141
 	taste_description = "bitter with a hint of alcohol"
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/giadone/on_mob_life(mob/living/M)
 	M.adjustCloneLoss(-6*REM)
+	M.adjustBruteLoss(3*REM)
 	..()
 	return TRUE
 
@@ -113,7 +155,7 @@
 	return TRUE
 
 /datum/reagent/medicine/omnizidrite/overdose_process(mob/living/M)
-	M.adjustCloneLoss(12*REM)
+	M.adjustCloneLoss(3.3*REM)
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, 4*REM)
 	..()
 

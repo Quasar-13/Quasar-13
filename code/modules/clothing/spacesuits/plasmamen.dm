@@ -202,6 +202,10 @@
 	icon_state = "roboticist_envirohelm"
 	inhand_icon_state = "roboticist_envirohelm"
 
+/obj/item/clothing/head/helmet/space/plasmaman/robotics/anarchy
+	name = "dark plasma envirosuit helmet"
+	desc = "A plasmaman envirohelmet designed for freedom fighters within the ranks of ISC."
+
 /obj/item/clothing/head/helmet/space/plasmaman/genetics
 	name = "geneticist's plasma envirosuit helmet"
 	desc = "A plasmaman envirohelmet designed for geneticists."
@@ -328,3 +332,10 @@
 	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
 	icon_state = "intern_envirohelm"
 	inhand_icon_state = "intern_envirohelm"
+
+/obj/item/clothing/head/helmet/space/plasmaman/syndicate/generic
+	name = "standard syndicate plasma envirosuit helmet"
+	desc = "A plasmaman containment helmet designed for security officers, protecting them from being flashed and burning alive, alongside other undesirables."
+	icon_state = "syndicate_envirohelm"
+	inhand_icon_state = "syndicate_envirohelm"
+	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 100, RAD = 0, FIRE = 100, ACID = 75)
