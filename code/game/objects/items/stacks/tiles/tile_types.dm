@@ -334,6 +334,11 @@
 	inhand_icon_state = "tile-bcircuit"
 	turf_type = /turf/open/floor/circuit
 	merge_type = /obj/item/stack/tile/circuit
+	tile_reskin_types = list(
+		/obj/item/stack/tile/circuit,
+		/obj/item/stack/tile/circuit/green,
+		/obj/item/stack/tile/circuit/red
+		)
 
 /obj/item/stack/tile/circuit/green
 	name = "green circuit tile"
@@ -370,6 +375,11 @@
 	inhand_icon_state = "tile-pod"
 	turf_type = /turf/open/floor/pod
 	merge_type = /obj/item/stack/tile/pod
+	tile_reskin_types = list(
+		/obj/item/stack/tile/pod,
+		/obj/item/stack/tile/pod/light,
+		/obj/item/stack/tile/pod/dark
+		)
 
 /obj/item/stack/tile/pod/light
 	name = "light pod floor tile"
@@ -407,6 +417,14 @@
 	source = /datum/robot_energy_storage/metal
 	merge_type = /obj/item/stack/tile/plasteel
 	color = COLOR_FLOORTILE_GRAY
+	tile_reskin_types = list(
+		/obj/item/stack/tile/plasteel,
+		/obj/item/stack/tile/plasteel/dark,
+		/obj/item/stack/tile/plasteel/white,
+		/obj/item/stack/tile/plasteel/tech,
+		/obj/item/stack/tile/plasteel/tech/grid,
+		/obj/item/stack/tile/plasteel/tech/techmaint
+		)
 
 /obj/item/stack/tile/plastic
 	name = "plastic tile"
@@ -419,16 +437,38 @@
 
 /obj/item/stack/tile/plasteel/dark
 	name = "dark tile"
+	icon_state = "fr_tile"
 	turf_type = /turf/open/floor/plasteel/dark
 	merge_type = /obj/item/stack/tile/plasteel/dark
+
 /obj/item/stack/tile/plasteel/white
 	name = "white tile"
+	icon_state = "tile-bluespace"
 	turf_type = /turf/open/floor/plasteel/white
 	merge_type = /obj/item/stack/tile/plasteel/white
+
 /obj/item/stack/tile/plasteel/grimy
 	name = "grimy floor tile"
 	turf_type = /turf/open/floor/plasteel/grimy
 	merge_type = /obj/item/stack/tile/plasteel/grimy
+
+/obj/item/stack/tile/plasteel/tech
+	name = "techfloor tile"
+	icon_state = "tile_podlight"
+	turf_type = /turf/open/floor/plasteel/tech
+	merge_type = /obj/item/stack/tile/plasteel/tech
+
+/obj/item/stack/tile/plasteel/tech/grid
+	name = "techfloor grid tile"
+	icon_state = "tile_poddark"
+	turf_type = /turf/open/floor/plasteel/tech/grid
+	merge_type = /obj/item/stack/tile/plasteel/tech/grid
+
+/obj/item/stack/tile/plasteel/tech/techmaint
+	name = "techmaint tile"
+	icon_state = "tile_pod"
+	turf_type = /turf/open/floor/plasteel/tech/techmaint
+	merge_type = /obj/item/stack/tile/plasteel/tech/techmaint
 
 /obj/item/stack/tile/material
 	name = "floor tile"
