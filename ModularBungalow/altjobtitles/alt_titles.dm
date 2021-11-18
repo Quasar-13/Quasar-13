@@ -92,16 +92,16 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergeant")
-	senior_title = "Sergeant Major"
+	alt_titles = list("Brig Chief", "Security Sergeant")
+	senior_title = list("Master-At-Arms", "Security Major")
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergeant"
+	senior_title = list("Intelligence Officer", "Chief Investigator")
 
 /datum/job/officer
 	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
-	senior_title = "Man-at-Arms"
+	senior_title = list("Man-at-Arms", "Sergeant Officer")
 
 //Supply
 /datum/job/mining
@@ -142,6 +142,6 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer")
+	alt_titles = list("Commanding Officer", "Commander")
 	senior_title = list("Commodore", "Marshal")
 
