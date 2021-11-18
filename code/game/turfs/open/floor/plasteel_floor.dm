@@ -1,5 +1,6 @@
 /turf/open/floor/plasteel
 	color = COLOR_FLOORTILE_GRAY
+	icon = 'icons/turf/floors/tiles.dmi'
 	base_icon_state = "tiled"
 	icon_state = "tiled"
 	floor_tile = /obj/item/stack/tile/plasteel

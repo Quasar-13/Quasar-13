@@ -155,7 +155,6 @@ HELPER(bottlegreen, "#57967f", 255)
 	name = "hazard stripes"
 	color = "#d2d53d"
 	icon_state = "stripe"
-	color =  "#c900fb"
 
 /obj/effect/turf_decal/industrial/warning/corner
 	icon_state = "stripecorner"

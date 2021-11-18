@@ -351,6 +351,7 @@
 	icon_state = "materialfloor"
 	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	floor_tile = /obj/item/stack/tile/material
+	icon = 'icons/turf/floors/tiles.dmi'
 	icon_state = "tiled"
 
 /turf/open/floor/material/has_tile()
