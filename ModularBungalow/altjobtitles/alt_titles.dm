@@ -12,7 +12,7 @@
 /datum/job/atmos
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
 	senior_title = "Fusion Technician"
-	ultra_senior_title = "Air Chemist"
+	ultra_senior_title = "Atmosian"
 
 /datum/job/tegu/voidtech
 	alt_titles = list("Space Explorer", "Salvager")
