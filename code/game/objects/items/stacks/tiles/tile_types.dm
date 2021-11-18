@@ -406,6 +406,7 @@
 	cost = 125
 	source = /datum/robot_energy_storage/metal
 	merge_type = /obj/item/stack/tile/plasteel
+	color = COLOR_FLOORTILE_GRAY
 
 /obj/item/stack/tile/plastic
 	name = "plastic tile"
@@ -415,6 +416,19 @@
 	mats_per_unit = list(/datum/material/plastic=500)
 	turf_type = /turf/open/floor/plastic
 	merge_type = /obj/item/stack/tile/plastic
+
+/obj/item/stack/tile/plasteel/dark
+	name = "dark tile"
+	turf_type = /turf/open/floor/plasteel/dark
+	merge_type = /obj/item/stack/tile/plasteel/dark
+/obj/item/stack/tile/plasteel/white
+	name = "white tile"
+	turf_type = /turf/open/floor/plasteel/white
+	merge_type = /obj/item/stack/tile/plasteel/white
+/obj/item/stack/tile/plasteel/grimy
+	name = "grimy floor tile"
+	turf_type = /turf/open/floor/plasteel/grimy
+	merge_type = /obj/item/stack/tile/plasteel/grimy
 
 /obj/item/stack/tile/material
 	name = "floor tile"

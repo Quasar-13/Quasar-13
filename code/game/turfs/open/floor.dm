@@ -17,7 +17,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_OPEN_FLOOR)
 	canSmoothWith = list(SMOOTH_GROUP_OPEN_FLOOR, SMOOTH_GROUP_TURF_OPEN)
 
-	thermal_conductivity = 0.04
+	thermal_conductivity = 0.040
 	heat_capacity = 10000
 	intact = TRUE
 	tiled_dirt = TRUE
@@ -123,16 +123,19 @@
 /turf/open/floor/proc/break_tile()
 	if(broken)
 		return
-	icon_state = pick(broken_states)
+	var/image/I = image(icon = src.icon, icon_state = pick(broken_states))
+	src.overlays += I
 	broken = 1
 
 /turf/open/floor/burn_tile()
 	if(broken || burnt)
 		return
 	if(LAZYLEN(burnt_states))
-		icon_state = pick(burnt_states)
+		var/image/I = image(icon = src.icon, icon_state = pick(burnt_states))
+		src.overlays += I
 	else
-		icon_state = pick(broken_states)
+		var/image/I = image(icon = src.icon, icon_state = pick(broken_states))
+		src.overlays += I
 	burnt = 1
 
 /turf/open/floor/proc/make_plating(force = FALSE)
@@ -348,6 +351,7 @@
 	icon_state = "materialfloor"
 	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	floor_tile = /obj/item/stack/tile/material
+	icon_state = "tiled"
 
 /turf/open/floor/material/has_tile()
 	return LAZYLEN(custom_materials)
