@@ -142,6 +142,6 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer", "Commander")
+	alt_titles = list("Commanding Officer")
 	senior_title = list("Commodore", "Marshal")
 
