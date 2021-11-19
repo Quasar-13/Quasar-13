@@ -25,6 +25,7 @@
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt
 	uniform = /obj/item/clothing/under/syndicate
+	suit = /obj/item/clothing/suit/armor/vest/warden
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/sig
