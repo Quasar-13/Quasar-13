@@ -140,7 +140,12 @@
 		foundrecord.fields["rank"] = assignment
 
 /datum/datacore/proc/get_manifest()
-	var/list/manifest_out = list(
+	var/list/manifest_out
+	var/list/standardmode
+
+
+	if(SSmaptype.maptype == "station")
+		manifest_out = list(
 		"Command",
 		"Security",
 		"Engineering",
@@ -149,17 +154,73 @@
 		"Supply",
 		"Service",
 		"Silicon"
-	)
-	var/list/departments = list(
-		"Command" = GLOB.command_positions,
-		"Security" = GLOB.security_positions,
-		"Engineering" = GLOB.engineering_positions,
-		"Medical" = GLOB.medical_positions,
-		"Science" = GLOB.science_positions,
-		"Supply" = GLOB.supply_positions,
-		"Service" = GLOB.service_positions,
-		"Silicon" = GLOB.nonhuman_positions
-	)
+		)
+
+	if(SSmaptype.maptype == "ship")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "planetary")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "syndicate")
+		manifest_out = list(
+			"Syndicate Command",
+			"Triage",
+			"Operations",
+			"Logistics",
+			"Military Police"
+		)
+
+	if(SSmaptype.maptype == "solgov")
+		manifest_out = list(
+			"Solgov"
+		)
+
+	var/list/departments
+
+	if(SSmaptype.maptype == standardmode)
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+	if(SSmaptype.maptype == "syndicate")
+		departments = list(
+		//Syndiestation
+			"Syndicate Command" = GLOB.syncommand_positions,
+			"Triage" = GLOB.triage_positions,
+			"Operations" = GLOB.operations_positions,
+			"Logistics" = GLOB.logistics_positions,
+			"Military Police" = GLOB.police_positions)
+
+
+	if(SSmaptype.maptype == "solgov")
+		departments = list(
+			"Solgov Personnel" = GLOB.solgov_positions)
+
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]
 		var/rank = t.fields["rank"]

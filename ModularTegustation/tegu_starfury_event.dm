@@ -91,6 +91,19 @@
 	stun_projectile_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 80, "energy" = 90, "bomb" = 80, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 90)
 
+
+//Andromeda Turret
+//just make this a subset and remap it you lazy shit
+/obj/machinery/porta_turret/syndicate/andromeda
+	shot_delay = 2
+	scan_range = 9
+	stun_projectile = /obj/projectile/bullet/a556/phasic
+	lethal_projectile = /obj/projectile/bullet/a556/phasic
+	lethal_projectile_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
+	stun_projectile_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 80, "energy" = 90, "bomb" = 80, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 90)
+
+
 //Energy Crowbar
 /obj/item/crowbar/combat
 	name = "combat crowbar"

@@ -39,6 +39,11 @@
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
 
+	if(. && mind) //. == not dead
+		for(var/key in mind.addiction_points)
+			var/datum/addiction/addiction = SSaddiction.all_addictions[key]
+			addiction.process_addiction(src)
+
 	if(stat != DEAD)
 		return 1
 
@@ -578,6 +583,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 		if(drunkenness >= 101)
 			adjustToxLoss(2) //Let's be honest you shouldn't be alive by now
+
+	if(mad_shaking)
+		do_shaky_animation(mad_shaking)
 
 /// Base carbon environment handler, adds natural stabilization
 /mob/living/carbon/handle_environment(datum/gas_mixture/environment)

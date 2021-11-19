@@ -31,6 +31,7 @@
 	uniform = /obj/item/clothing/under/rank/research/chem
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit = /obj/item/clothing/suit/neocoat/chemre
+	suit_store = /obj/item/healthanalyzer/chem
 
 	backpack = /obj/item/storage/backpack/chemistry
 	satchel = /obj/item/storage/backpack/satchel/chem

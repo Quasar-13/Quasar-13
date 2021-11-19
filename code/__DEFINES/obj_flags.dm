@@ -22,7 +22,8 @@
 #define BEING_REMOVED			(1<<0)
 #define IN_INVENTORY			(1<<1) //is this item equipped into an inventory slot or hand of a mob? used for tooltips
 #define FORCE_STRING_OVERRIDE	(1<<2) // used for tooltips
-#define NEEDS_PERMIT			(1<<3) //Used by security bots to determine if this item is safe for public use.
+///Used by security bots to determine if this item is safe for public use.
+#define NEEDS_PERMIT (1<<3)
 #define SLOWS_WHILE_IN_HAND		(1<<4)
 #define NO_MAT_REDEMPTION		(1<<5) // Stops you from putting things like an RCD or other items into an ORM or protolathe for materials.
 #define DROPDEL					(1<<6) // When dropped, it calls qdel on itself
@@ -35,6 +36,7 @@
 #define HAND_ITEM				(1<<14) /// If an item is just your hand (circled hand, slapper) and shouldn't block things like riding
 #define EXAMINE_SKIP			(1<<15) /// Makes the Examine proc not read out this item.
 #define XENOMORPH_HOLDABLE		(1<<16) /// A Xenomorph can hold this item.
+#define NO_PIXEL_RANDOM_DROP 	(1<<17) //if dropped, it wont have a randomized pixel_x/pixel_y
 
 // Flags for the clothing_flags var on /obj/item/clothing
 

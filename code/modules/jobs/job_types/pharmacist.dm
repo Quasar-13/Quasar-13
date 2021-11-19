@@ -31,10 +31,13 @@
 	uniform = /obj/item/clothing/under/rank/medical/pharmacist
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit =  /obj/item/clothing/suit/neocoat/pharm
+	suit_store = /obj/item/healthanalyzer/chem
+
 	backpack = /obj/item/storage/backpack/chemistry
 	satchel = /obj/item/storage/backpack/satchel/chem
 	duffelbag = /obj/item/storage/backpack/duffelbag/chemistry
 	box = /obj/item/storage/box/survival/medical
+
 
 	chameleon_extras = /obj/item/gun/syringe
 

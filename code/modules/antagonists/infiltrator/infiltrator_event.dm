@@ -22,7 +22,7 @@
 	var/chance = pickweight(list(1 = 3, 2 = 2, 3 = 1))
 	maximum_infiltrators = pick(chance)
 
-	for(var/i in 1 to maximum_infiltrators)
+	for(var/i in 1 to min(candidates.len, maximum_infiltrators))
 		members += pick_n_take(candidates)
 
 	var/list/spawn_locs = list()
@@ -32,14 +32,15 @@
 		return MAP_ERROR
 
 	for(var/mob/dead/selected in members)
-		var/mob/living/carbon/human/infiltrator = spawn_t(selected, spawn_locs)
-		spawned_mobs += infiltrator
+		spawn_t(selected, spawn_locs)
 
 	return SUCCESSFUL_SPAWN
 
 /datum/round_event/ghost_role/infiltrator/proc/spawn_t(mob/dead/selected, list/spawn_locs)
 	var/datum/mind/Mind = new /datum/mind(selected.key)
 	var/mob/living/carbon/human/infiltrator = new(pick(spawn_locs))
+	if(prob(20)) // Random lizard event
+		infiltrator.set_species(/datum/species/lizard)
 	Mind.active = TRUE
 	var/datum/preferences/A = new
 	A.copy_to(infiltrator)

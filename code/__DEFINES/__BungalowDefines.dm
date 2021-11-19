@@ -27,6 +27,17 @@
 /// Access levels - Used for Tech cult
 #define ACCESS_MECHANICUS_BASIC 220
 #define ACCESS_MECHANICUS_LEADER 221
+
+//Access for Syndiestation
+// Syndicate General Officer access
+#define ACCESS_SYNDICATE_OFFICER 152
+//Syndicate Command access
+#define ACCESS_SYNDICATE_POLICE 153
+//Syndicate Command access
+#define ACCESS_SYNDICATE_COMMAND 154
+//Syndicate Commandant
+#define ACCESS_SYNDICATE_COMMANDANT 155
+
 /// Bungalow Cloning defines
 #define CLONER_FRESH_CLONE "fresh"
 #define CLONER_MATURE_CLONE "mature"
@@ -71,14 +82,3 @@
  * # Race Defines
  */
 #define isbeefman(A) (is_species(A,/datum/species/beefman))
-
-
-/*
- *	Gunpointing
-*/
-//Movable signals
-///When someone talks into a radio
-#define COMSIG_MOVABLE_RADIO_TALK_INTO "movable_radio_talk_into"
-#define TRAIT_NORUNNING "norunning"		// You walk!
-///Resting position for living mob updated
-#define COMSIG_LIVING_UPDATED_RESTING "living_updated_resting" //from base of (/mob/living/proc/update_resting): (resting)

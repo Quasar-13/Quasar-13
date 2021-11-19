@@ -10,7 +10,7 @@
 	/// Are we bursting out of the poor sucker who's the xeno mom?
 	var/bursting = FALSE
 	/// How long does it take to advance one stage? Growth time * 5 = how long till we make a Larva!
-	var/growth_time = 60 SECONDS
+	var/growth_time = 120 SECONDS
 
 /obj/item/organ/body_egg/alien_embryo/Initialize()
 	. = ..()
@@ -50,9 +50,9 @@
 				to_chat(owner, "<span class='danger'>Your stomach hurts.</span>")
 				if(prob(20))
 					owner.adjustToxLoss(1)
-		if(5)
-			to_chat(owner, "<span class='danger'>You feel something tearing its way out of your stomach...</span>")
-			owner.adjustToxLoss(10)
+		if(6)
+			to_chat(owner, "<span class='danger'>You feel something tearing its way out of your chest...</span>")
+			owner.take_bodypart_damage(5)
 
 /// Controls Xenomorph Embryo growth. If embryo is fully grown (or overgrown), stop the proc. If not, increase the stage by one and if it's not fully grown (stage 6), add a timer to do this proc again after however long the growth time variable is.
 /obj/item/organ/body_egg/alien_embryo/proc/advance_embryo_stage()
@@ -117,7 +117,7 @@
 
 	if(gib_on_success)
 		new_xeno.visible_message("<span class='danger'>[new_xeno] bursts out of [owner] in a shower of gore!</span>", "<span class='userdanger'>You exit [owner], your previous host.</span>", "<span class='hear'>You hear organic matter ripping and tearing!</span>")
-		owner.gib(TRUE)
+		owner.gib()
 	else
 		new_xeno.visible_message("<span class='danger'>[new_xeno] wriggles out of [owner]!</span>", "<span class='userdanger'>You exit [owner], your previous host.</span>")
 		owner.adjustBruteLoss(40)

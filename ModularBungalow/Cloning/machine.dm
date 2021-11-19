@@ -155,7 +155,7 @@
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, list/mutantparts, list/markings, factions, list/quirks, datum/bank_account/insurance, list/traumas, empty)
+/obj/machinery/clonepod/proc/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, empty)
 	if(panel_open)
 		return NONE
 	if(mess || attempting)
@@ -195,7 +195,7 @@
 	H.real_name = clonename
 
 	H.hardset_dna(ui, mutation_index, H.dna.default_mutation_genes, H.real_name, blood_type, mrace, features, H.dna.mutations, FALSE)
-	H.set_species(mrace, TRUE, null, features, mutantparts, markings)
+	H.set_species(mrace, TRUE, null, features)
 
 	if(!HAS_TRAIT(H, TRAIT_RADIMMUNE))//dont apply mutations if the species is Mutation proof.
 		if(efficiency > 2)
@@ -219,7 +219,7 @@
 	ADD_TRAIT(H, TRAIT_MUTE, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOBREATH, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
-	H.Unconscious(80)
+	H.Unconscious(200)
 
 	if(!empty)
 		clonemind.transfer_to(H)
@@ -239,14 +239,13 @@
 			var/datum/quirk/Q = new V(H)
 			Q.on_clone(quirks[V])
 
-/*		for(var/t in traumas)
+		for(var/t in traumas)
 			var/datum/brain_trauma/BT = t
 			var/datum/brain_trauma/cloned_trauma = BT.on_clone()
 			if(cloned_trauma)
 				H.gain_trauma(cloned_trauma, BT.resilience)
 
-		H.set_cloned_appearance()*/
-		//attempted fix
+		H.set_cloned_appearance()
 
 		H.set_suicide(FALSE)
 	attempting = FALSE
@@ -420,7 +419,7 @@
 	connected.updateUsrDialog()
 	return TRUE
 
-/obj/machinery/clonepod/proc/go_out()
+/obj/machinery/clonepod/proc/go_out(move = TRUE)
 	countdown.stop()
 	var/mob/living/mob_occupant = occupant
 	var/turf/T = get_turf(src)
@@ -453,15 +452,26 @@
 		to_chat(occupant, "<span class='notice'><b>There is a bright flash!</b><br><i>You feel like a new being.</i></span>")
 		mob_occupant.flash_act()
 
-	occupant.forceMove(T)
+	if(move)
+		occupant.forceMove(T)
 	update_icon()
 	mob_occupant.domutcheck(1) //Waiting until they're out before possible monkeyizing. The 1 argument forces powers to manifest.
-	for(var/fl in unattached_flesh)
-		qdel(fl)
+	for(var/obj/item/fl in unattached_flesh)
+		if(istype(fl, /obj/item/organ))
+			var/obj/item/organ/O = fl
+			O.organ_flags &= ~ORGAN_FROZEN
+			O.forceMove(T)
 	unattached_flesh.Cut()
 
 	occupant = null
 	clonemind = null
+
+// Guess they moved out on their own, remove any clone status effects
+// If the occupant var is null, welp what can we do
+/obj/machinery/clonepod/Exited(atom/movable/AM, atom/newloc)
+	if(AM == occupant)
+		go_out(FALSE)
+	. = ..()
 
 /obj/machinery/clonepod/proc/malfunction()
 	var/mob/living/mob_occupant = occupant
@@ -547,8 +557,7 @@
 				BP.forceMove(src)
 				unattached_flesh += BP
 
-	for(var/o in H.internal_organs)
-		var/obj/item/organ/organ = o
+	for(var/obj/item/organ/organ in H.internal_organs)
 		if(!istype(organ) || (organ.organ_flags & ORGAN_VITAL))
 			continue
 		organ.organ_flags |= ORGAN_FROZEN
@@ -597,7 +606,7 @@
 		occupant_overlay.pixel_y = 27 + round(sin(world.time) * 3)
 		occupant_overlay.pixel_x = round(sin(world.time * 3))
 		. += occupant_overlay
-		. += "cover-on"
+	. += "cover-on"
 	. += "panel"
 
 /*

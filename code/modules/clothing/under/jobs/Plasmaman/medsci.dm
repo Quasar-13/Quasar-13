@@ -22,6 +22,10 @@
 	icon_state = "roboticist_envirosuit"
 	inhand_icon_state = "roboticist_envirosuit"
 
+/obj/item/clothing/under/plasmaman/robotics/anarchy
+	name = "dark plasma envirosuit"
+	desc = "A plasmaman envirosuit designed for freedom fighters within the ranks of ISC."
+
 /obj/item/clothing/under/plasmaman/viro
 	name = "virology plasma envirosuit"
 	desc = "The suit worn by the safest people on the station, those who are completely immune to the monstrosities they create."

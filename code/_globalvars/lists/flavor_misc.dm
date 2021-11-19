@@ -6,6 +6,7 @@ GLOBAL_LIST_EMPTY(hairstyles_female_list)	//stores only hair names
 GLOBAL_LIST_EMPTY(facial_hairstyles_list)	//stores /datum/sprite_accessory/facial_hair indexed by name
 GLOBAL_LIST_EMPTY(facial_hairstyles_male_list)	//stores only hair names
 GLOBAL_LIST_EMPTY(facial_hairstyles_female_list)	//stores only hair names
+GLOBAL_LIST_EMPTY(hair_gradients_list) //stores /datum/sprite_accessory/hair_gradient indexed by name
 	//Underwear
 GLOBAL_LIST_EMPTY(underwear_list)		//stores /datum/sprite_accessory/underwear indexed by name
 GLOBAL_LIST_EMPTY(underwear_m)	//stores only underwear name
@@ -91,7 +92,32 @@ GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list(
 	"ghost_camo",
 	"catghost")) //stores the ghost forms that support directional sprites
 
-GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list("ghost")) //stores the ghost forms that support hair and other such things
+GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list(
+	"ghost",
+	"ghost_red",
+	"ghost_black",
+	"ghost_blue",
+	"ghost_yellow",
+	"ghost_green",
+	"ghost_pink",
+	"ghost_cyan",
+	"ghost_dblue",
+	"ghost_dred",
+	"ghost_dgreen",
+	"ghost_dcyan",
+	"ghost_grey",
+	"ghost_dyellow",
+	"ghost_dpink",
+	"skeleghost",
+	"ghost_purpleswirl",
+	"ghost_rainbow",
+	"ghost_fire",
+	"ghost_funkypurp",
+	"ghost_pinksherbert",
+	"ghost_blazeit",
+	"ghost_mellow",
+	"ghost_camo",))
+	//stores the ghost forms that support hair and other such things
 
 GLOBAL_LIST_INIT(ai_core_display_screens, sortList(list(
 	":thinking:",
@@ -117,6 +143,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sortList(list(
 	"Inverted",
 	"Matrix",
 	"Monochrome",
+	"Moth",
 	"Murica",
 	"Nanotrasen",
 	"Not Malf",

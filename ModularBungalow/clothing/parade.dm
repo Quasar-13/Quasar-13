@@ -1,5 +1,4 @@
-//Sec Parade suit
-
+//Secretary Parade suit
 /obj/item/clothing/under/misc/secparade
 	desc = "A black suit blue trim. Worn by the lowly secretary"
 	name = "secretary's parade uniform"
@@ -16,10 +15,10 @@
 /obj/item/clothing/under/misc/qmparade
 	desc = "A black suit with bronze trim and a medal attached. The gaudy look must belong to the QM"
 	name = "qm's parade uniform"
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'
 	icon_state = "spaceship_qm"
 	inhand_icon_state = "black_suit"
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
@@ -85,6 +84,8 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "marshal_jacket"
 
+
+//CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
 	name = "co's coat"
 	desc = "The coat of a militaristic captain"
@@ -92,3 +93,9 @@
 	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "commander_jacket"
 
+/obj/item/clothing/suit/armor/captain/solgov
+	name = "Solgov Commander's coat"
+	desc = "The coat of a Solgov base commander"
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "Solgov_jacket"

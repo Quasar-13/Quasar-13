@@ -207,6 +207,7 @@
 	icon_state = "beret_com"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 90
+
 /*	//unused
 /obj/item/clothing/head/beret/lt
 	name = "officer beret"
