@@ -45,7 +45,7 @@
 		var/turf/open/floor/turf_type = initial(plated_tile.turf_type)
 		smoothing_flags &= ~SMOOTH_BITMASK
 		SSicon_smooth.remove_from_queues(src)
-		var/image/I = image('whitesands/icons/obj/catwalks.dmi', "plated")
+		var/image/I = image('icons/obj/catwalks.dmi', "plated")
 		I.color = initial(turf_type.color)
 		overlays += I
 	else

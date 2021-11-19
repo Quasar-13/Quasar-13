@@ -10,12 +10,14 @@
 /turf/open/floor/wood
 	desc = "Stylish dark wood."
 	icon_state = "wood"
+	icon = 'icons/turf/floors/wood.dmi'
 	floor_tile = /obj/item/stack/tile/wood
 	footstep = FOOTSTEP_WOOD
 	barefootstep = FOOTSTEP_WOOD_BAREFOOT
 	clawfootstep = FOOTSTEP_WOOD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
+	color = WOOD_COLOR_GENERIC
 
 /turf/open/floor/wood/mahogany
 	color = WOOD_COLOR_RICH

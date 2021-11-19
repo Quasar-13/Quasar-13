@@ -70,7 +70,7 @@
 	color = COLOR_WHITE
 
 /turf/open/floor/plasteel/tech
-	icon = 'whitesands/icons/turf/floors/techfloor.dmi'
+	icon = 'icons/turf/floors/techfloor.dmi'
 	icon_state = "techfloor_gray"
 	base_icon_state = "techfloor_gray"
 	floor_tile = /obj/item/stack/tile/plasteel/tech
@@ -112,6 +112,7 @@
 	base_icon_state = "ridged"
 
 /turf/open/floor/plasteel/showroomfloor
+	icon = '/icons/turf/floors.dmi'
 	icon_state = "showroomfloor"
 	base_icon_state = "showroomfloor"
 	color = null
@@ -150,6 +151,7 @@
 
 /turf/open/floor/plasteel/grimy
 	color = null
+	icon = 'icons/turf/floors/linoleum.dmi'
 	icon_state = "lino"
 	base_icon_state = "lino"
 	tiled_dirt = FALSE
@@ -172,6 +174,7 @@
 
 /turf/open/floor/plasteel/vaporwave
 	color = null
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "pinkblack"
 	base_icon_state = "pinkblack"
 
