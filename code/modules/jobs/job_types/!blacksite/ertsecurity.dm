@@ -12,7 +12,7 @@
 
 	access = list()
 	minimal_access = list()
-	paycheck = PAYCHECK_CENTCOM
+	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_BARTENDER
 
@@ -28,13 +28,13 @@
 	ears = /obj/item/radio/headset/headset_cent/alt
 	id = /obj/item/card/id/ert/security
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/sec
-	suit_store = /obj/item/gun/energy/laser/captain
-	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	back = /obj/item/storage/backpack/ert/security
 	belt = /obj/item/storage/belt/security/full
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
+		/obj/item/choice_beacon/ert=1,\
 		/obj/item/storage/box/handcuffs=1,\
+		/obj/item/gun/energy/pulse/pistol=1,\
 		/obj/item/melee/baton/loaded=1)
 
 

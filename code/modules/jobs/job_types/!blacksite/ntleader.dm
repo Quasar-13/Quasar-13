@@ -14,7 +14,7 @@
 	minimal_access = list()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY
+	display_order = JOB_DISPLAY_ORDER_WARDEN
 
 /datum/outfit/job/ntsquadleader
 	name = "NT Squad Leader"
@@ -23,7 +23,7 @@
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/black
-	ears = /obj/item/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/heads/headset_cent/commander
 	id = /obj/item/card/id
 	suit = /obj/item/clothing/suit/armor/vest
 	belt = /obj/item/storage/belt/military/assault

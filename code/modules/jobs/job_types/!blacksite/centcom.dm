@@ -4,15 +4,15 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "no one"
-	selection_color = "#10cc74"
-	exp_type = EXP_TYPE_ERT
+	selection_color = "#006928"
+	exp_type = EXP_TYPE_CENTCOM
 	maptype = "blacksite"
 
 	outfit = /datum/outfit/job/centcom
 
 	access = list()
 	minimal_access = list()
-	paycheck = PAYCHECK_CENTCOM
+	paycheck = PAYCHECK_CENTCOMCOMMAND
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 

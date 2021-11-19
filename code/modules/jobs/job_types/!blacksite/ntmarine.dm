@@ -14,7 +14,7 @@
 	minimal_access = list()
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_WARDEN
+	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 
 
 /datum/outfit/job/ntmarine

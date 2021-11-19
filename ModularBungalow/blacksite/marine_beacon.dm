@@ -20,7 +20,7 @@
 
 /obj/item/storage/backpack/duffelbag/marine
 	name = "Marine Assault Kit"
-	desc = "The classic ballistic NT weapon."
+	desc = "The classic ballistic NT weapon. Fires in bursts."
 
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/ar(src)
@@ -35,7 +35,7 @@
 
 /obj/item/storage/backpack/duffelbag/marine/medic
 	name = "Marine Medic Kit"
-	desc = "Contains two medical kits, "
+	desc = "Contains two medical kits and a PDW."
 
 /obj/item/storage/backpack/duffelbag/marine/medic/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/wt550(src)
@@ -43,6 +43,7 @@
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/storage/firstaid/emergency(src)
+	new /obj/item/storage/firstaid/brute(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 
@@ -73,3 +74,15 @@
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
+
+
+/obj/item/storage/backpack/duffelbag/marine/mosin
+	name = "Marine Marksman Kit"
+	desc = "This bolt action rifle is good for dealing massive amounts of damage in a single shot."
+/obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
+	new /obj/item/gun/ballistic/rifle/boltaction(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+

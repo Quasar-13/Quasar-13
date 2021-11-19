@@ -14,10 +14,11 @@
 	minimal_access = list()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
+	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY
 
 /datum/outfit/job/deathcommando
 	name = "Death Commando"
+
 	jobtype = /datum/job/deathcommando
 
 	uniform = /obj/item/clothing/under/rank/centcom/commander
@@ -29,20 +30,18 @@
 	back = /obj/item/storage/backpack/security
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber
 	r_pocket = /obj/item/shield/energy
-	suit_store = /obj/item/tank/internals/emergency_oxygen/double
-	belt = /obj/item/gun/ballistic/revolver/mateba
-	l_hand = /obj/item/gun/energy/pulse/loyalpin
-	id = /obj/item/card/id/ert/deathsquad
 	ears = /obj/item/radio/headset/headset_cent/alt
+	suit_store = /obj/item/gun/energy/pulse/loyalpin
+	belt = /obj/item/gun/ballistic/revolver/mateba
+	id = /obj/item/card/id/ert/deathsquad
 
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/ammo_box/a357=1,\
-		/obj/item/storage/firstaid/regular=1,\
-		/obj/item/storage/box/flashbangs=1,\
+		/obj/item/choice_beacon/deathsquad=1,\
 		/obj/item/flashlight=1,\
-		/obj/item/grenade/c4/x4=1)
+		/obj/item/tank/internals/emergency_oxygen/double=1)
 
 /datum/outfit/centcom/death_commando/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
