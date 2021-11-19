@@ -35,7 +35,7 @@
 
 /obj/item/storage/backpack/duffelbag/marine/medic
 	name = "Marine Medic Kit"
-	desc = "For the action hero captain, who loves to get themselves a little gung-ho"
+	desc = "Contains two medical kits, "
 
 /obj/item/storage/backpack/duffelbag/marine/medic/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/wt550(src)
@@ -49,7 +49,7 @@
 
 /obj/item/storage/backpack/duffelbag/marine/shotgun
 	name = "Marine Trenchman Kit"
-	desc = "The gun for a captain who is reserved, sly and charming."
+	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck."
 
 /obj/item/storage/backpack/duffelbag/marine/shotgun/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lethal(src)
@@ -63,7 +63,7 @@
 
 /obj/item/storage/backpack/duffelbag/marine/smg
 	name = "Marine SMG Kit"
-	desc = "The gun for a bombastic captain that loves to shoot to kill. Captain Chiappa and his 6 commandos take no prisoners."
+	desc = "This semi-auto gun has a fast fire rate for clearing rooms."
 
 /obj/item/storage/backpack/duffelbag/marine/smg/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)

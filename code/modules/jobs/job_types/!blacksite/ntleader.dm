@@ -1,0 +1,31 @@
+/datum/job/ntsquadleader
+	title = "NT Squad Leader"
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "space law and the NT Commander"
+	selection_color = "#073052"
+	exp_type = EXP_TYPE_NTMARINE
+	maptype = "blacksite"
+
+	outfit = /datum/outfit/job/ntsquadleader
+
+	access = list()
+	minimal_access = list()
+	paycheck = PAYCHECK_COMMAND
+	paycheck_department = ACCOUNT_SEC
+	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY
+
+/datum/outfit/job/ntsquadleader
+	name = "NT Squad Leader"
+	jobtype = /datum/job/ntsquadleader
+
+	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset/headset_cent/alt
+	id = /obj/item/card/id
+	suit = /obj/item/clothing/suit/armor/vest
+	belt = /obj/item/storage/belt/military/assault
+	backpack_contents = list(/obj/item/choice_beacon/marine=1)
+

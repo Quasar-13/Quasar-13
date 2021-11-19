@@ -4,7 +4,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "space law and the Centcom Commander"
-	selection_color = "#3d719c"
+	selection_color = "#10cc74"
 	exp_type = EXP_TYPE_ERT
 	maptype = "blacksite"
 

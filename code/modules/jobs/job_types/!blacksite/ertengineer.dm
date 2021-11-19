@@ -4,7 +4,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "space law and the ERT Commander"
-	selection_color = "#134975"
+	selection_color = "#49f2a3"
 	exp_type = EXP_TYPE_ERT
 	maptype = "blacksite"
 
