@@ -412,7 +412,7 @@
 	var/jobName = I.assignment
 
 	//bungalow alt job titles
-	var/list/blacklist = list("Commodore", "Marshal", "Commanding Officer")
+	var/list/blacklist = list("Commodore", "Marshal", "Commanding Officer", "Station Commander")
 	for(var/datum/job/J in SSjob.occupations)
 		if((jobName in J.alt_titles) || (jobName == J.senior_title))
 			if(jobName in blacklist)//Blacklists names above
