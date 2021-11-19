@@ -21,13 +21,11 @@
 	name = "NT Marine"
 	jobtype = /datum/job/ntmarine
 
-	mask = /obj/item/clothing/mask/gas
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_cent/alt
 	id = /obj/item/card/id
-	suit = /obj/item/clothing/suit/armor/vest
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(/obj/item/choice_beacon/marine=1)
 

@@ -21,7 +21,7 @@
 	jobtype = /datum/job/bridge
 
 	uniform = /obj/item/clothing/under/rank/centcom/intern
-	suit = /obj/item/clothing/suit/armor/bulletproof
+	suit = /obj/item/clothing/suit/ntcommand/bridge
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/heads/headset_cent

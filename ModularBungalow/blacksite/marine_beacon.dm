@@ -23,6 +23,7 @@
 	desc = "The classic ballistic NT weapon. Fires in bursts."
 
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
 	new /obj/item/gun/ballistic/automatic/ar(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
@@ -38,6 +39,8 @@
 	desc = "Contains two medical kits and a PDW."
 
 /obj/item/storage/backpack/duffelbag/marine/medic/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/medic(src)
+	new /obj/item/clothing/head/beret/med(src)
 	new /obj/item/gun/ballistic/automatic/wt550(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
@@ -53,6 +56,8 @@
 	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck."
 
 /obj/item/storage/backpack/duffelbag/marine/shotgun/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/security(src)
+	new /obj/item/clothing/mask/gas/atmos(src)
 	new /obj/item/gun/ballistic/shotgun/lethal(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
@@ -67,6 +72,7 @@
 	desc = "This semi-auto gun has a fast fire rate for clearing rooms."
 
 /obj/item/storage/backpack/duffelbag/marine/smg/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
@@ -79,7 +85,10 @@
 /obj/item/storage/backpack/duffelbag/marine/mosin
 	name = "Marine Marksman Kit"
 	desc = "This bolt action rifle is good for dealing massive amounts of damage in a single shot."
+
 /obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
+	new /obj/item/clothing/neck/cloak/ranger(src)
 	new /obj/item/gun/ballistic/rifle/boltaction(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)

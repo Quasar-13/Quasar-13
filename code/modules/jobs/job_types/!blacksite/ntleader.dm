@@ -25,7 +25,8 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/heads/headset_cent/commander
 	id = /obj/item/card/id
-	suit = /obj/item/clothing/suit/armor/vest
+	head = /obj/item/clothing/head/beret/command
+	suit = /obj/item/clothing/suit/armor/vest/ntmarine/command
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(/obj/item/choice_beacon/marine=1)
 
