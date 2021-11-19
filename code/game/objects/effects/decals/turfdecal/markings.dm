@@ -1,3 +1,21 @@
+/obj/effect/turf_decal/caution
+	icon_state = "caution"
+
+/obj/effect/turf_decal/caution/white
+	color = COLOR_WHITE
+
+/obj/effect/turf_decal/caution/red
+	color = COLOR_RED
+
+/obj/effect/turf_decal/caution/stand_clear
+	icon_state = "stand_clear"
+
+/obj/effect/turf_decal/caution/stand_clear/white
+	color = COLOR_WHITE
+
+/obj/effect/turf_decal/caution/stand_clear/red
+	color = COLOR_RED
+
 /obj/effect/turf_decal/arrows
 	icon_state = "arrows"
 	color = COLOR_YELLOW
@@ -9,6 +27,7 @@
 	color = COLOR_RED
 
 /obj/effect/turf_decal/box
+	icon_state = "box"
 	color = COLOR_YELLOW
 
 /obj/effect/turf_decal/box/corners

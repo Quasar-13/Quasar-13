@@ -121,10 +121,12 @@
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/plasteel/solarpanel
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "solarpanel"
 	base_icon_state = "solarpanel"
 
 /turf/open/floor/plasteel/airless/solarpanel
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "solarpanel"
 	base_icon_state = "solarpanel"
 
@@ -193,6 +195,7 @@
 
 
 /turf/open/floor/plasteel/stairs
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "stairs"
 	base_icon_state = "stairs"
 	tiled_dirt = FALSE
@@ -215,6 +218,7 @@
 
 
 /turf/open/floor/plasteel/rockvault
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "rockvault"
 	base_icon_state = "rockvault"
 
@@ -228,6 +232,7 @@
 
 
 /turf/open/floor/plasteel/elevatorshaft
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "elevatorshaft"
 	base_icon_state = "elevatorshaft"
 	color = null
