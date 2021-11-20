@@ -2048,10 +2048,7 @@
 	icon_state = "burnt_off"
 	locked = TRUE
 
-/datum/sprite_accessory/moth_wings/bee/burnt_off
-	name = "Burnt Off"
-	icon_state = "burnt_off"
-	locked = TRUE
+
 
 /datum/sprite_accessory/moth_wings/firewatch
 	name = "Firewatch"
@@ -2099,6 +2096,11 @@
 	name = "Simple wings"
 	icon_state = "Simple"
 
+/datum/sprite_accessory/moth_wings/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+	locked = TRUE
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2128,10 +2130,6 @@
 	icon_state = "lovers"
 
 /datum/sprite_accessory/moth_antennae/burnt_off
-	name = "Burnt Off"
-	icon_state = "burnt_off"
-
-/datum/sprite_accessory/moth_antennae/bee/burnt_off
 	name = "Burnt Off"
 	icon_state = "burnt_off"
 
@@ -2178,6 +2176,10 @@
 /datum/sprite_accessory/moth_antennae/bee/simple
 	name = "Simple antennae"
 	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_antennae/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'

@@ -104,7 +104,7 @@
 	desc = "No more honey"
 	color = "#116611"
 	tail_type = "Simple"
-	//icon_state = "severedbeetail" for later
+	icon_state = "severedbeetail"
 
 /obj/item/organ/tail/bee/Initialize()
 	. = ..()
@@ -122,7 +122,7 @@
 	..()
 	if(istype(H))
 		H.dna.species.mutant_bodyparts -= "tail_bee"
-		color = "#" + H.dna.features["mcolor"]
+		color = "#" + H.dna.features["mcolor"] // i dont remember what this do
 		tail_type = H.dna.features["tail_bee"]
 		H.update_body()
 
