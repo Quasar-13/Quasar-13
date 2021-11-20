@@ -103,15 +103,15 @@
 
 
 /obj/item/storage/backpack/duffelbag/marine/mosin
-	name = "Marine Marksman Kit"
-	desc = "This bolt action rifle is good for dealing massive amounts of damage in a single shot."
+	name = "Marine Ranger Kit"
+	desc = "This kit is perfect for scouting out areas for enemies.."
 
 /obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine/sniper(src)
 	new /obj/item/clothing/neck/cloak/ranger(src)
 	new /obj/item/binoculars(src)
 	new /obj/item/clothing/glasses/sniper(src)
-	new /obj/item/gun/ballistic/rifle/boltaction(src)
+	new /obj/item/gun/ballistic/rifle/boltaction/brand_new(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)

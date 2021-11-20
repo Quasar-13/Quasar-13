@@ -141,8 +141,6 @@
 
 /datum/datacore/proc/get_manifest()
 	var/list/manifest_out
-	var/list/standardmode
-
 
 	if(SSmaptype.maptype == "station")
 		manifest_out = list(
@@ -203,17 +201,6 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == standardmode)
-		departments = list(
-			"Command" = GLOB.command_positions,
-			"Security" = GLOB.security_positions,
-			"Engineering" = GLOB.engineering_positions,
-			"Medical" = GLOB.medical_positions,
-			"Science" = GLOB.science_positions,
-			"Supply" = GLOB.supply_positions,
-			"Service" = GLOB.service_positions,
-			"Silicon" = GLOB.nonhuman_positions)
-
 	if(SSmaptype.maptype == "syndicate")
 		departments = list(
 		//Syndiestation
@@ -223,18 +210,26 @@
 			"Logistics" = GLOB.logistics_positions,
 			"Military Police" = GLOB.police_positions)
 
-
-	if(SSmaptype.maptype == "solgov")
+	else if(SSmaptype.maptype == "solgov")
 		departments = list(
-			"Solgov Personnel" = GLOB.solgov_positions)
+		"Solgov Personnel" = GLOB.solgov_positions)
 
-
-	if(SSmaptype.maptype == "blacksite")
+	else if(SSmaptype.maptype == "blacksite")
 		departments = list(
-			"Security" = GLOB.security_positions,
 			"Central Command" = GLOB.centcom_positions,
 			"Emergency Response Team" = GLOB.ert_positions,
 			"Nanotrasen Marine Corps" = GLOB.ntmarines_positions)
+
+	else
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
 
 
 	for(var/datum/data/record/t in GLOB.data_core.general)

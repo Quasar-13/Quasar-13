@@ -58,13 +58,14 @@
 	name = "NT marine pointman armor plates"
 	desc = "This armor vest has red plates for the marines to rally behind. These marines usually carry pointman equipment."
 	icon_state = "marine_security"
-	armor = list(MELEE = 45, BULLET = 30, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 45, BULLET = 30, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/sniper
-	name = "NT marine sharpshooter armor plates"
-	desc = "This armor vest has extra pockets for extra equipment."
+	name = "NT marine ranger armor plates"
+	desc = "This armor vest has extra pockets for extra equipment, and is lightweight enought to dash in."
 	icon_state = "marine_sniper"
-	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	slowdown = -0.2
+	armor = list(MELEE = 10, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/glasses/sniper
 	name = "sniper goggles"

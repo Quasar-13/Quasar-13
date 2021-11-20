@@ -452,7 +452,6 @@
 					dept_dat += "<a class='job[command_bold]' href='byond://?src=[REF(src)];SelectedJob=[job_datum.title]'>[job_datum.title] [altjobline] ([job_datum.current_positions])</a>"//bungalow edit - alt job titled
 
 		if(!dept_dat.len)
-//			if(SSmaptype.maptype != "syndicate")
 			dept_dat += "<span class='nopositions'>No positions open.</span>"
 
 		dat += jointext(dept_dat, "")
