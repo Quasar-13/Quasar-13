@@ -15,7 +15,17 @@
 	icon_state = "fedmodern"
 	inhand_icon_state = "armor"
 
-//Armor
+//Marine Armor
+/obj/item/clothing/under/plasmaman/centcom_intern/marine
+	name = "NT marine light combat suit"
+	desc = "A lightly armored suit that decreases the chance of you getting sliced."
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
+
+/obj/item/clothing/under/plasmaman/robotics/marine
+	name = "NT marine pointman combat suit"
+	desc = "A lightly armored suit that decreases the chance of you getting sliced."
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 10)
+
 /obj/item/clothing/suit/armor/vest/ntmarine
 	name = "NT marine armor plates"
 	desc = "These form-fitting V2 armor plates are used by the NT marine force."
@@ -30,12 +40,18 @@
 	name = "NT squad lead armor plates"
 	desc = "This armor vest has added blue plates for easy identification on the battlefield."
 	icon_state = "marine_command"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 20)
+	armor = list(MELEE = 35, BULLET = 45, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 20)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/medic
 	name = "NT marine medic armor plates"
 	desc = "This armor vest has white plates for those seeking medical attention."
 	icon_state = "marine_medic"
+	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+
+/obj/item/clothing/suit/armor/vest/ntmarine/engineer
+	name = "NT marine engineer armor plates"
+	desc = "This armor vest has brown plates for those seeking technical assistance."
+	icon_state = "marine_engineer"
 	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/security
@@ -44,10 +60,16 @@
 	icon_state = "marine_security"
 	armor = list(MELEE = 45, BULLET = 30, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
-/obj/item/clothing/suit/armor/vest/ntmarine/engineer
+/obj/item/clothing/suit/armor/vest/ntmarine/sniper
 	name = "NT marine sharpshooter armor plates"
 	desc = "This armor vest has extra pockets for extra equipment."
-	icon_state = "marine_engineer"
+	icon_state = "marine_sniper"
 	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
+/obj/item/clothing/glasses/sniper
+	name = "sniper goggles"
+	desc = "NT sniper goggles issued to their sniper corps."
+	worn_icon = 'ModularBungalow/clothing/worn/glassesw.dmi'
+	icon = 'ModularBungalow/clothing/icons/glasses.dmi'
+	icon_state = "snipergoggles"
 

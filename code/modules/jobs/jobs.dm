@@ -100,8 +100,9 @@ GLOBAL_LIST_INIT(police_positions, list(
 
 //NT Blacksite
 GLOBAL_LIST_INIT(centcom_positions, list(
-	"Centcom Commander",
-	"Deathsquad"))
+	"NT Commander",
+	"NT Bridge Officer",
+	"NT Medical Officer"))
 
 GLOBAL_LIST_INIT(ert_positions, list(
 	"ERT Commander",
@@ -110,9 +111,9 @@ GLOBAL_LIST_INIT(ert_positions, list(
 	"ERT Security"))
 
 GLOBAL_LIST_INIT(ntmarines_positions, list(
-	"NT Marine Squad Leader",
+	"NT Squad Leader",
 	"NT Marine",
-	"Deathsquad"
+	"Death Commando"
 	))
 
 //Other Gamemodes
@@ -145,9 +146,9 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#7692b0"),
 
 //NT Blacksite
-	EXP_TYPE_CENTCOM = list("jobs" = centcom_positions, "color" = "#70FF00"),
-	EXP_TYPE_ERT = list("jobs" = logistics_positions, "color" = "#1D6BAB"),
-	EXP_TYPE_NTMARINES = list("jobs" = police_positions, "color" = "#134975"),
+	EXP_TYPE_CENTCOM = list("jobs" = centcom_positions, "color" = "#006928"),
+	EXP_TYPE_ERT = list("jobs" = ert_positions, "color" = "#10cc74"),
+	EXP_TYPE_NTMARINES = list("jobs" = ntmarines_positions, "color" = "#134975"),
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),

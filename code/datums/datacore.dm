@@ -197,9 +197,10 @@
 	if(SSmaptype.maptype == "blacksite")
 		manifest_out = list(
 			"Central Command",
-			"ERT",
-			"Marines"
+			"Emergency Response Team",
+			"Nanotrasen Marine Corps"
 		)
+
 	var/list/departments
 
 	if(SSmaptype.maptype == standardmode)
@@ -230,6 +231,7 @@
 
 	if(SSmaptype.maptype == "blacksite")
 		departments = list(
+			"Security" = GLOB.security_positions,
 			"Central Command" = GLOB.centcom_positions,
 			"Emergency Response Team" = GLOB.ert_positions,
 			"Nanotrasen Marine Corps" = GLOB.ntmarines_positions)

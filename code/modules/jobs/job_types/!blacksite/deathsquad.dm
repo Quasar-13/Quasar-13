@@ -31,7 +31,6 @@
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber
 	r_pocket = /obj/item/shield/energy
 	ears = /obj/item/radio/headset/headset_cent/alt
-	suit_store = /obj/item/gun/energy/pulse/loyalpin
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	id = /obj/item/card/id/ert/deathsquad
 

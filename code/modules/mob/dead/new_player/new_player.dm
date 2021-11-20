@@ -434,7 +434,6 @@
 		var/cat_color = GLOB.position_categories[category]["color"]
 		var/list/dept_dat = list()
 
-//		if(SSmaptype.maptype != "syndicate")
 		dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 		dat += "<legend align='center' style='color: [cat_color]'>[category]</legend>"
 

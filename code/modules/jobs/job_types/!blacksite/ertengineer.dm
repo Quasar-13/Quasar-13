@@ -32,7 +32,6 @@
 	back = /obj/item/storage/backpack/ert/engineer
 	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/rcd_ammo/large
-	l_hand = /obj/item/storage/firstaid/regular
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/choice_beacon/ert=1,\
 		/obj/item/melee/baton/loaded=1,\

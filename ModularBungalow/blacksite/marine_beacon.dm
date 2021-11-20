@@ -47,18 +47,37 @@
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/storage/firstaid/emergency(src)
 	new /obj/item/storage/firstaid/brute(src)
+	new /obj/item/extinguisher/mini(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
+
+/obj/item/storage/backpack/duffelbag/marine/engi
+	name = "Marine Engineering Kit"
+	desc = "Contains a toolbelt, a semi-auto pistol and an energy shield."
+
+/obj/item/storage/backpack/duffelbag/marine/engi/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
+	new /obj/item/clothing/head/beret/eng/hazard(src)
+	new /obj/item/extinguisher/mini(src)
+	new /obj/item/gun/ballistic/automatic/pistol(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/shield/energy(src)
+	new /obj/item/storage/belt/utility/full/engi(src)
 
 
 /obj/item/storage/backpack/duffelbag/marine/shotgun
 	name = "Marine Trenchman Kit"
-	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck."
+	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck and a shield."
 
 /obj/item/storage/backpack/duffelbag/marine/shotgun/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine/security(src)
 	new /obj/item/clothing/mask/gas/atmos(src)
 	new /obj/item/gun/ballistic/shotgun/lethal(src)
+	new /obj/item/shield/energy(src)
+	new /obj/item/melee/transforming/energy/sword/saber(src)
+	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
@@ -74,6 +93,7 @@
 /obj/item/storage/backpack/duffelbag/marine/smg/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
+	new /obj/item/shield/energy(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
@@ -87,11 +107,15 @@
 	desc = "This bolt action rifle is good for dealing massive amounts of damage in a single shot."
 
 /obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
-	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
+	new /obj/item/clothing/suit/armor/vest/ntmarine/sniper(src)
 	new /obj/item/clothing/neck/cloak/ranger(src)
+	new /obj/item/binoculars(src)
+	new /obj/item/clothing/glasses/sniper(src)
 	new /obj/item/gun/ballistic/rifle/boltaction(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
+
+
 

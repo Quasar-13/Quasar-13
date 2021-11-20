@@ -30,5 +30,6 @@
 	id = /obj/item/card/id/centcom
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
+		/obj/item/defibrillator/compact/combat/loaded/nanotrasen=1,\
 		/obj/item/reagent_containers/hypospray/combat=1,\
 		/obj/item/gun/medbeam=1)

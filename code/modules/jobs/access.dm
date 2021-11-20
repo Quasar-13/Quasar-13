@@ -394,12 +394,16 @@
 
 				//Bungalow Station Marine Corps
 				"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
-				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden")
+				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden",
+
+				//Bungalowstation Solgov
+				"Commander", "Administrator", "Lab Technician", "Security", "Bunker Crew", "Engineer", "Civilian", "Medical Technician", "Soldier",
+				)
 
 
 
 /proc/get_all_centcom_jobs()
-	return list("Central Command","VIP Guest", "Surgeon General", "Intelligence Officer", "Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Research Officer","Special Ops Officer","CentCom Commander","CentCom Bartender","Private Security Force")
+	return list("Central Command","VIP Guest", "Surgeon General", "Intelligence Officer", "Custodian","Thunderdome Overseer","CentCom Official","Research Officer","Special Ops Officer","CentCom Commander","CentCom Bartender","Private Security Force")
 
 
 /proc/get_all_syndicate_jobs()

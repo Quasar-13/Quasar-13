@@ -20,7 +20,7 @@
 	name = "NT Squad Leader"
 	jobtype = /datum/job/ntsquadleader
 
-	uniform = /obj/item/clothing/under/plasmaman/centcom_intern
+	uniform = /obj/item/clothing/under/plasmaman/centcom_intern/marine
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/heads/headset_cent/commander
