@@ -33,6 +33,10 @@
 	create_item()
 	create_depth()
 
+//This was broken because of 3 periods and it took me 25 days of work to fix it.
+//if you put those periods there, Use this image:
+//https://cdn.discordapp.com/attachments/568749204541800478/911883466679934996/unknown.png
+
 /obj/item/xenoarch/strange_rock/examine(mob/user)
 	. = ..()
 	if(scanned == TRUE)
