@@ -20,7 +20,7 @@
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 0.9
 
-/datum/species/bee/regenerate_organs(mob/living/carbon/C,datum/species/old_species,replace_current=TRUE,list/excluded_zones)
+/datum/species/beepeople/regenerate_organs(mob/living/carbon/C,datum/species/old_species,replace_current=TRUE,list/excluded_zones)
 	. = ..()
 	if(ishuman(C))
 		var/mob/living/carbon/human/H = C
