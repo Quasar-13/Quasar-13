@@ -20,6 +20,12 @@
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 0.9
 
+/datum/species/bee/regenerate_organs(mob/living/carbon/C,datum/species/old_species,replace_current=TRUE,list/excluded_zones)
+	. = ..()
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		handle_mutant_bodyparts(H)
+
 //tail stuff
 /datum/species/beepeople/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	var/real_tail_type = C.dna.features["tail_bee"]
