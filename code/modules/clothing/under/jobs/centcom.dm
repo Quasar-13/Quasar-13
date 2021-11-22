@@ -15,6 +15,13 @@
 	inhand_icon_state = "g_suit"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/centcom/ert
+	name = "\improper CentCom emergency response team's jumpsuit"
+	desc = "It's a jumpsuit worn by the ERTs. Used by CentCom ERTs."
+	icon_state = "ert"
+	inhand_icon_state = "g_suit"
+	alt_covers_chest = TRUE
+
 /obj/item/clothing/under/rank/centcom/officer
 	name = "\improper CentCom turtleneck suit"
 	desc = "A casual, yet refined green turtleneck, used by CentCom Officials. It has a fragrance of aloe."

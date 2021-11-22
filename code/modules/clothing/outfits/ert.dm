@@ -2,7 +2,7 @@
 	name = "ERT Common"
 
 	mask = /obj/item/clothing/mask/gas/sechailer
-	uniform = /obj/item/clothing/under/rank/centcom/officer
+	uniform = /obj/item/clothing/under/rank/centcom/ert
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_cent/alt
