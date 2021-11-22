@@ -33,6 +33,15 @@
 
 
 //Armor
+/obj/item/clothing/suit/armor/vest/syndicate
+	name = "syndicate armor vest"
+	desc = "A slim Type 1 armored vest that provides decent protection against most types of damage."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "hecu_armor"
+	inhand_icon_state = "armoralt"
+	blood_overlay_type = "armor"
+
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."

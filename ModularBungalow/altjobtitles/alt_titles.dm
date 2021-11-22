@@ -17,7 +17,7 @@
 
 //Service
 /datum/job/assistant
-	alt_titles = list("Civilian", "Visitor", "Businessman", "Entertainer")
+	alt_titles = list("Visitor", "Businessman", "Entertainer")
 	senior_title = list("Assistinator", "Assistant 2")
 
 /datum/job/cook
@@ -92,16 +92,16 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergeant")
-	senior_title = "Sergeant Major"
+	alt_titles = list("Brig Chief", "Security Sergeant")
+	senior_title = list("Master-At-Arms", "Security Major")
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergeant"
+	senior_title = list("Intelligence Officer", "Chief Investigator")
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
-	senior_title = "Man-at-Arms"
+	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
+	senior_title = list("Man-at-Arms", "Sergeant Officer")
 
 //Supply
 /datum/job/mining
@@ -142,6 +142,6 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer")
+	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
 

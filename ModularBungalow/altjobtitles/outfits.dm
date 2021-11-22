@@ -95,6 +95,12 @@
 
 //Captain
 
+/datum/outfit/job/captain/stationcommander
+	name = "Captain (Station Commander)"
+	head = null
+	uniform = /obj/item/clothing/under/misc/cdrparade
+	suit = /obj/item/clothing/suit/armor/captain/cdr_jacket
+
 /datum/outfit/job/captain/commandingofficer
 	name = "Captain (Commanding Officer)"
 	head = /obj/item/clothing/head/beret/captain

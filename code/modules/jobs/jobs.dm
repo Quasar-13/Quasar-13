@@ -99,6 +99,18 @@ GLOBAL_LIST_INIT(police_positions, list(
 	"Military Police"))
 
 
+//Other Gamemodes
+GLOBAL_LIST_INIT(solgov_positions, list(
+	"Commander",
+	"Administrator",
+	"Lab Technician",
+	"Medical Technician",
+	"Engineer",
+	"Bunker Crew",
+	"Soldier",
+	"Security",
+	"Civillian"))
+
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_COMMAND = list("jobs" = command_positions, "color" = "#ccccff"),
 	EXP_TYPE_ENGINEERING = list("jobs" = engineering_positions, "color" = "#ffeeaa"),
@@ -114,7 +126,10 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OPERATIONS = list("jobs" = operations_positions, "color" = "#ab88b3"),
 	EXP_TYPE_TRIAGE = list("jobs" = triage_positions, "color" = "#43ab62"),
 	EXP_TYPE_LOGISTICS = list("jobs" = logistics_positions, "color" = "#e3dc81"),
-	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#7692b0")
+	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#7692b0"),
+
+//Other Gamemodes
+	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
