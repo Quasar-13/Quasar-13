@@ -109,5 +109,3 @@
 	if(istype(weapon, /obj/item/melee/flyswatter))
 		return 10
 	return 1
-
-
