@@ -13,9 +13,9 @@
 	attack_sound = 'sound/weapons/beeattack.ogg'
 	miss_sound = 'sound/weapons/beemissattack.ogg'
 	meat = /obj/item/food/meat/slab/human
-	liked_food = VEGETABLES | DAIRY //|POLEN (need to add it)
-	disliked_food = FRUIT | GROSS | CLOTH
-	toxic_food = MEAT | RAW | SEAFOOD
+	liked_food = VEGETABLES | POLLEN
+	disliked_food = FRUIT | DAIRY | CLOTH
+	toxic_food = MEAT | RAW | SEAFOOD | GROSS
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 0.9
