@@ -32,6 +32,6 @@
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
-	suit = /obj/item/clothing/suit/armor/vest/alt
+	suit = /obj/item/clothing/suit/armor/reqchief
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/ppk
-	head = /obj/item/clothing/head/flatcap
+	head = /obj/item/clothing/head/beret/req
