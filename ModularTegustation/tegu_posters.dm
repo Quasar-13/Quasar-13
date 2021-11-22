@@ -78,3 +78,8 @@
 	desc = "A poster of an unknown woman's buff abs. You feel like just looking at this fills you with determination."
 	icon_state = "poster49"
 
+/obj/structure/sign/poster/contraband/ss13horror
+	name = "Clown Station 13"
+	desc = "In Space, no one can hear you honk."
+	icon_state = "poster50"
+
