@@ -26,6 +26,18 @@
 		var/mob/living/carbon/human/H = C
 		handle_mutant_bodyparts(H)
 
+//name stuff
+/datum/species/beepeople/random_name(gender,unique,lastname)
+	if(unique)
+		return random_unique_beepeople_name()
+
+	var/randname = beepeople_name()
+
+	if (lastname)
+		randname += " [lastname]"
+
+	return randname
+
 //tail stuff
 /datum/species/beepeople/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	var/real_tail_type = C.dna.features["tail_bee"]
@@ -97,3 +109,5 @@
 	if(istype(weapon, /obj/item/melee/flyswatter))
 		return 10
 	return 1
+
+
