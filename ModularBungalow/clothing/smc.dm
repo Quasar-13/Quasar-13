@@ -45,8 +45,8 @@
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
 	icon_state = "triageofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
@@ -54,8 +54,8 @@
 /obj/item/clothing/suit/armor/labcoat/triagetech
 	name = "triage technician's labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
 	icon_state = "triagetech"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
