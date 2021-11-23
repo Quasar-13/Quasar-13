@@ -98,26 +98,26 @@
 /datum/outfit/job/captain/stationcommander
 	name = "Captain (Station Commander)"
 	head = null
-	uniform = /obj/item/clothing/under/misc/cdrparade
+	uniform = /obj/item/clothing/under/misc/parade/cdr
 	suit = /obj/item/clothing/suit/armor/captain/cdr_jacket
 
 /datum/outfit/job/captain/commandingofficer
 	name = "Captain (Commanding Officer)"
 	head = /obj/item/clothing/head/beret/captain
-	uniform = /obj/item/clothing/under/misc/coparade
+	uniform = /obj/item/clothing/under/misc/parade/co
 	suit = /obj/item/clothing/suit/armor/captain/co
 
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
 	head = /obj/item/clothing/head/centhat
-	uniform = /obj/item/clothing/under/misc/comparade
+	uniform = /obj/item/clothing/under/misc/parade/com
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
 
 /datum/outfit/job/captain/marshal
 	name = "Captain (Marshal)"
 	head = null
 	glasses = /obj/item/clothing/glasses/eyepatch
-	uniform = /obj/item/clothing/under/misc/marparade
+	uniform = /obj/item/clothing/under/misc/parade/mar
 	suit = /obj/item/clothing/suit/armor/captain/marshal
 
 //They get a cool ID so this manages that

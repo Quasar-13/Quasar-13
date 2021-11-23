@@ -1,41 +1,3 @@
-/obj/item/clothing/head/caphat/galaxy
-	name = "captain's peaked cap"
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "captain_hat_galaxy"
-/obj/item/clothing/gloves/color/captain/galaxy
-	desc = "Regal white gloves, with a nice gold trim, a diamond anti-shock coating, and an integrated thermal barrier, and armoured bracers. Swanky."
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "captain_gloves_galaxy"
-
-/obj/item/clothing/under/rank/captain/galaxy
-	desc = "It's a white jumpsuit with some gold markings denoting the rank of \"Captain\"."
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "captain_galaxy"
-
-/obj/item/clothing/under/rank/captain/skirt/galaxy
-	desc = "It's a white jumpskirt with some gold markings denoting the rank of \"Captain\"."
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "captain_skirt_galaxy"
-
-/obj/item/clothing/head/hopcap/galaxy
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "hopcap_galaxy"
-
-/obj/item/clothing/under/rank/civilian/head_of_personnel/galaxy
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "hop_galaxy"
-
-/obj/item/clothing/under/rank/civilian/head_of_personnel/skirt/galaxy
-	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
-	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
-	icon_state = "hop_skirt_galaxy"
-
 //lockers
 
 /obj/structure/closet/secure_closet/captains_galaxy
@@ -92,17 +54,3 @@
 	new /obj/item/storage/lockbox/medal/hop(src)
 	new /obj/item/card/id/departmental_budget/srv(src)
 
-
-
-//outfits
-
-/datum/outfit/job/hop/galaxy
-	name = "Head of Personnel (Galaxy Station)"
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel/galaxy
-	head = /obj/item/clothing/head/hopcap/galaxy
-
-/datum/outfit/job/captain/galaxy
-	name = "Captain (Galaxy Station)"
-	gloves = /obj/item/clothing/gloves/color/captain/galaxy
-	uniform = /obj/item/clothing/under/rank/captain/galaxy
-	head = /obj/item/clothing/head/caphat/galaxy

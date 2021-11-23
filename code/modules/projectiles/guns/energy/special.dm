@@ -4,8 +4,10 @@
 	icon_state = "ionrifle"
 	inhand_icon_state = null	//so the human update icon uses the icon_state instead.
 	worn_icon_state = null
-	shaded_charge = TRUE
-	can_flashlight = TRUE
+	shaded_charge = FALSE
+	ammo_x_offset = 2
+	ammo_y_offset = 2
+	can_flashlight = FALSE
 	w_class = WEIGHT_CLASS_HUGE
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
@@ -22,6 +24,9 @@
 	icon_state = "ioncarbine"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT
+	ammo_x_offset = 2
+	ammo_y_offset = 0
+	can_flashlight = TRUE
 	flight_x_offset = 18
 	flight_y_offset = 11
 
@@ -310,6 +315,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	ammo_type = list(/obj/item/ammo_casing/energy/temp, /obj/item/ammo_casing/energy/temp/hot)
 	cell_type = /obj/item/stock_parts/cell/high
+	ammo_x_offset = 2
 	pin = null
 
 /obj/item/gun/energy/temperature/security

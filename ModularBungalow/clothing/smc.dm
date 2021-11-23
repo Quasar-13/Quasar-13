@@ -35,7 +35,7 @@
 //Armor
 /obj/item/clothing/suit/armor/vest/syndicate
 	name = "syndicate armor vest"
-	desc = "A slim Type 1 armored vest that provides decent protection against most types of damage."
+	desc = "A slim Type 1-S armored vest that provides decent protection against most types of damage, created and used by Cybersun."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "hecu_armor"
@@ -45,8 +45,8 @@
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
 	icon_state = "triageofficer"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
@@ -54,8 +54,8 @@
 /obj/item/clothing/suit/armor/labcoat/triagetech
 	name = "triage technician's labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
 	icon_state = "triagetech"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
@@ -148,6 +148,13 @@
 	name = "triage officer's beret"
 	desc = "A green beret for those in charge of the marine's health."
 	icon_state = "beret_serv"
+
+
+/obj/item/clothing/head/beret/req
+	name = "requisition officer's beret"
+	desc =  "A beret 'requisitioned' from god knows where. Not the most stylish, and looks kinda dirty. But you're always glad to see it."
+	icon_state = "beret_qm"
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5)
 
 
 //Glasses

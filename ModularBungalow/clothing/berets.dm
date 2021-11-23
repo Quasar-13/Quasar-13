@@ -2,8 +2,8 @@
 /obj/item/clothing/head/beret
 	name = "beret"
 	desc = "A beret, a mime's favorite headwear."
-	icon = 'ModularBungalow/zbungalowicons/clothing/head.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/head_worn.dmi'
+	icon = 'ModularBungalow/clothing/icons/beret.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/beretw.dmi'
 	icon_state = "beret"
 	dog_fashion = /datum/dog_fashion/head/beret //i think ian wearing any beret is broken, to test later
 	dynamic_hair_suffix = ""
