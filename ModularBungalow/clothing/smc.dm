@@ -35,7 +35,7 @@
 //Armor
 /obj/item/clothing/suit/armor/vest/syndicate
 	name = "syndicate armor vest"
-	desc = "A slim Type 1 armored vest that provides decent protection against most types of damage."
+	desc = "A slim Type 1-S armored vest that provides decent protection against most types of damage, created and used by Cybersun."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "hecu_armor"
