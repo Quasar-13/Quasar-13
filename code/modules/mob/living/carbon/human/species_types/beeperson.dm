@@ -20,6 +20,9 @@
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 0.9
 
+//sorry
+ass_image = 'icons/ass/assbee.png'
+
 /datum/species/beepeople/regenerate_organs(mob/living/carbon/C,datum/species/old_species,replace_current=TRUE,list/excluded_zones)
 	. = ..()
 	if(ishuman(C))
