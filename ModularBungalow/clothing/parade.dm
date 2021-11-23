@@ -91,8 +91,10 @@
 
 /obj/item/clothing/suit/armor/captain
 	name = "debug captain's armor"
-	desc = "A fireproof armored chestpiece reinforced with ceramic plates and plasteel pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest, although it does chafe your nipples."
-	icon_state = "capcarapace"
+	desc = "If you see this, contact the coders."
+	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	icon_state = "commander_jacket"
 	inhand_icon_state = "armor"
 	body_parts_covered = CHEST|GROIN
 	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
@@ -104,8 +106,6 @@
 /obj/item/clothing/suit/armor/captain/marshal
 	name = "marshal's warcoat"
 	desc = "Only a distinctive captain has the experience to get this coat. Many stations lost, many battles won."
-	icon = 'ModularBungalow/clothing/icons/parade.dmi'
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "marshal_jacket"
 
 
@@ -113,22 +113,23 @@
 /obj/item/clothing/suit/armor/captain/cdr_jacket
 	name = "station commander's armor"
 	desc = "The coat of the station's commander. Lovely, personable and everpresent."
-	icon = 'ModularBungalow/clothing/icons/parade.dmi'
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "cdr_jacket"
+
+
+//Galaxy's Jacket
+/obj/item/clothing/suit/armor/captain/galaxy
+	name = "captain's parade coat"
+	desc = "The white carapace of the NTRV Galaxy's Captain"
+	icon_state = "galaxy"
 
 
 //CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
 	name = "co's coat"
-	desc = "The coat of a militaristic captain"
-	icon = 'ModularBungalow/clothing/icons/parade.dmi'
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	desc = "The coat of a militaristic captain."
 	icon_state = "commander_jacket"
 
 /obj/item/clothing/suit/armor/captain/solgov
 	name = "Solgov Commander's coat"
-	desc = "The coat of a Solgov base commander"
-	icon = 'ModularBungalow/clothing/icons/parade.dmi'
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
+	desc = "The coat of a Solgov base commander."
 	icon_state = "Solgov_jacket"
