@@ -6,9 +6,7 @@
 
 	species_traits = list( LIPS, NOEYESPRITES, HAS_FLESH, HAS_BONE, TRAIT_ANTENNAE, HAIR)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
-
 	mutant_bodyparts = list("bee_wings" = "simple", "tail_bee" = "simple", "bee_antennae" = "simple")
-
 	attack_verb = "sting"
 	attack_sound = 'sound/weapons/beeattack.ogg'
 	miss_sound = 'sound/weapons/beemissattack.ogg'
@@ -19,6 +17,8 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	mutanteyes = /obj/item/organ/eyes/moth //for now
 	payday_modifier = 0.9
+
+	species_language_holder = /datum/language_holder/beepeople
 
 	//sorry
 	ass_image = 'icons/ass/assbee.png'

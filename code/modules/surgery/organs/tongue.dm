@@ -30,7 +30,8 @@
 		/datum/language/spacer,
 		/datum/language/terrum,
 		/datum/language/russian, // TEGU
-		/datum/language/nekomimetic
+		/datum/language/nekomimetic,
+		/datum/language/beecommon //bee
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
