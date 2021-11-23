@@ -1740,9 +1740,13 @@
 	icon = 'icons/mob/beetail.dmi'
 	color_src = null
 
-/datum/sprite_accessory/tails/bee/simple/
-	name = "Simple tail"
+/datum/sprite_accessory/tails/bee/simple
+	name = "Simple orange  tail"
 	icon_state = "Simple"
+
+/datum/sprite_accessory/tails/bee/simpleY
+	name = "Simple yellow tail"
+	icon_state = "SimpleY"
 
 /datum/sprite_accessory/snouts
 	icon = 'icons/mob/mutant_bodyparts.dmi'
@@ -2093,8 +2097,12 @@
 	color_src = null
 
 /datum/sprite_accessory/moth_wings/bee/simple
-	name = "Simple wings"
+	name = "Simple orange wings"
 	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_wings/bee/simpleY
+	name = "Simple yellow wings"
+	icon_state = "SimpleY"
 
 /datum/sprite_accessory/moth_wings/bee/burnt_off
 	name = "Burnt Off"
@@ -2174,8 +2182,12 @@
 	color_src = null
 
 /datum/sprite_accessory/moth_antennae/bee/simple
-	name = "Simple antennae"
+	name = "Simple orange antennae"
 	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_antennae/bee/simpley
+	name = "Simple yellow antennae"
+	icon_state = "SimpleY"
 
 /datum/sprite_accessory/moth_antennae/bee/burnt_off
 	name = "Burnt Off"
