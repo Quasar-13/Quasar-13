@@ -3,9 +3,9 @@
 	desc = "A black suit blue trim. Worn by the lowly secretary"
 	name = "secretary's parade uniform"
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	icon_state = "spaceship_sec"
 	inhand_icon_state = "black_suit"
-	worn_icon = 'ModularBungalow/clothing/worn/paradew.dmi'
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
@@ -88,7 +88,7 @@
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
-
+//This just initializes the captain armors.
 /obj/item/clothing/suit/armor/captain
 	name = "debug captain's armor"
 	desc = "If you see this, contact the coders."
