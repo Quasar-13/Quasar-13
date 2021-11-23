@@ -15,7 +15,7 @@
 	name = "voidtech hardsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Trades all protection for speed."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coatet.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "hardsuit-voidtech"
 	inhand_icon_state = "void_hardsuit"
 	lefthand_file = 'ModularTegustation/Teguicons/kirie_stuff/left.dmi'
