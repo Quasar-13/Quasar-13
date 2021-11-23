@@ -15,7 +15,7 @@
 	disliked_food = FRUIT | DAIRY | CLOTH
 	toxic_food = MEAT | RAW | SEAFOOD | GROSS
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
-	mutanteyes = /obj/item/organ/eyes/moth //for now
+	mutanteyes = /obj/item/organ/eyes/bee //same as moths, just diferrent name
 	payday_modifier = 0.9
 
 	species_language_holder = /datum/language_holder/beepeople
