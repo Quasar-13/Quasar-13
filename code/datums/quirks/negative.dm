@@ -138,7 +138,7 @@
 
 	if(ismoth(H) && prob(50))
 		heirloom_type = /obj/item/flashlight/lantern/heirloom_moth
-	if(isbeeperson(H) && prob(60))
+	if(isbeeperson(H) && prob(50))
 		heirloom_type = /obj/item/toy/plush/cubicbee
 	else
 		switch(quirk_holder.mind.assigned_role)
