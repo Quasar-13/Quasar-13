@@ -6,7 +6,7 @@
 	armor = list(MELEE = 15, BULLET = 5, LASER = 20, ENERGY = 10, BOMB = 20, BIO = 10, RAD = 20, FIRE = 100, ACID = 50, WOUND = 10) // surprisingly robust against head trauma
 	flags_inv = 0
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
+	clothing_flags = SNUG_FIT
 	resistance_flags = FIRE_PROOF
 	dynamic_hair_suffix = "+generic"
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
@@ -57,7 +57,7 @@
 	hat_type = "red"
 	dog_fashion = null
 	name = "firefighter helmet"
-	clothing_flags = STOPSPRESSUREDAMAGE | PLASMAMAN_HELMET_EXEMPT
+	clothing_flags = STOPSPRESSUREDAMAGE
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
@@ -77,7 +77,7 @@
 	icon_state = "hardhat0_white"
 	inhand_icon_state = "hardhat0_white"
 	hat_type = "white"
-	clothing_flags = STOPSPRESSUREDAMAGE | PLASMAMAN_HELMET_EXEMPT
+	clothing_flags = STOPSPRESSUREDAMAGE
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
@@ -158,7 +158,7 @@
 	inhand_icon_state = "hardhat0_white"
 	light_range = 4 //Boss always takes the best stuff
 	hat_type = "white"
-	clothing_flags = STOPSPRESSUREDAMAGE | PLASMAMAN_HELMET_EXEMPT
+	clothing_flags = STOPSPRESSUREDAMAGE
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
