@@ -52,10 +52,7 @@
 	var/turf/open/open_turf = loc
 	if(open_turf.turf_fire)
 		return INITIALIZE_HINT_QDEL
-	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
-	)
-	AddElement(/datum/element/connect_loc, src, loc_connections)
+	RegisterSignal(src, COMSIG_MOVABLE_CROSSED, .proc/on_entered)
 	open_turf.turf_fire = src
 	SSturf_fire.fires[src] = TRUE
 	if(power)
@@ -123,7 +120,7 @@
 
 /obj/effect/abstract/turf_fire/proc/on_entered(datum/source, atom/movable/AM)
 	var/turf/open/open_turf = loc
-	if(open_turf.active_hotspot) //If we have an active hotspot, let it do the damage instead 
+	if(open_turf.active_hotspot) //If we have an active hotspot, let it do the damage instead
 		return
 	AM.fire_act(TURF_FIRE_TEMP_BASE + (TURF_FIRE_TEMP_INCREMENT_PER_POWER*fire_power), TURF_FIRE_VOLUME)
 	return
