@@ -17,7 +17,7 @@
 /obj/machinery/computer/libraryconsole
 	name = "library visitor console"
 	icon_state = "oldcomp"
-	icon_screen = "library"
+	icon_screen = "oldcomp_library"
 	icon_keyboard = "no_keyboard"
 	circuit = /obj/item/circuitboard/computer/libraryconsole
 	desc = "Checked out books MUST be returned on time."
@@ -171,7 +171,7 @@
 	pass_flags = PASSTABLE
 
 	icon_state = "oldcomp"
-	icon_screen = "library"
+	icon_screen = "oldcomp_library"
 	icon_keyboard = "no_keyboard"
 	circuit = /obj/item/circuitboard/computer/libraryconsole
 
