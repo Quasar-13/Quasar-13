@@ -118,6 +118,7 @@
 		UpdateFireState()
 
 /obj/effect/abstract/turf_fire/Crossed(atom/movable/AM)
+	. = ..()
 	var/turf/open/open_turf = loc
 	if(open_turf.active_hotspot) //If we have an active hotspot, let it do the damage instead
 		return
