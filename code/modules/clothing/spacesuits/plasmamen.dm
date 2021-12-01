@@ -166,7 +166,7 @@
 		attached_hat = null
 		update_icon()
 	else
-		to_chat(user, "<span class='notice'>You can't remove [attached_hat.name] from the helmet because your hands are full!</span>")
+		to_chat(user, "<span class='notice'>You can't remove the [attached_hat.name] from the helmet because your hands are full!</span>")
 
 /obj/item/clothing/head/helmet/space/plasmaman/security
 	name = "security plasma envirosuit helmet"
