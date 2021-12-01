@@ -104,13 +104,13 @@
 	if(istype(hitting_item, /obj/item/clothing/head))
 		var/obj/item/clothing/hitting_clothing = hitting_item
 		if(hitting_clothing.clothing_flags & PLASMAMAN_HELMET_EXEMPT)
-			to_chat(user, "<span class='notice'>You cannot place [hitting_clothing.name] on helmet!</span>")
+			to_chat(user, "<span class='notice'>You cannot place [hitting_clothing.name] on the helmet!</span>")
 			return
 		if(attached_hat)
-			to_chat(user, "<span class='notice'>There's already something placed on helmet!</span>")
+			to_chat(user, "<span class='notice'>There's already something placed on the helmet!</span>")
 			return
 		attached_hat = hitting_clothing
-		to_chat(user, "<span class='notice'>You placed [hitting_clothing.name] on helmet!</span>")
+		to_chat(user, "<span class='notice'>You placed [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
 		hitting_clothing.forceMove(src)
 		update_icon()
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(isinhands)
@@ -158,15 +158,15 @@
 	if(!attached_hat)
 		return
 	if(user.put_in_active_hand(attached_hat))
-		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from helmet!</span>")
+		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from the helmet!</span>")
 		attached_hat = null
 		update_icon()
 	else if(user.put_in_inactive_hand(attached_hat))
-		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from helmet!</span>")
+		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from the helmet!</span>")
 		attached_hat = null
 		update_icon()
 	else
-		to_chat(user, "<span class='notice'>You can't remove [attached_hat.name] because your hands are full!</span>")
+		to_chat(user, "<span class='notice'>You can't remove [attached_hat.name] from the helmet, because your hands are full!</span>")
 
 /obj/item/clothing/head/helmet/space/plasmaman/security
 	name = "security plasma envirosuit helmet"
