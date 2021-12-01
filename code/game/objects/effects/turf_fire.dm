@@ -52,7 +52,6 @@
 	var/turf/open/open_turf = loc
 	if(open_turf.turf_fire)
 		return INITIALIZE_HINT_QDEL
-	RegisterSignal(src, COMSIG_MOVABLE_CROSSED, .proc/on_entered)
 	open_turf.turf_fire = src
 	SSturf_fire.fires[src] = TRUE
 	if(power)
@@ -118,7 +117,7 @@
 			playsound(open_turf, 'sound/effects/comfyfire.ogg', 40, TRUE)
 		UpdateFireState()
 
-/obj/effect/abstract/turf_fire/proc/on_entered(datum/source, atom/movable/AM)
+/obj/effect/abstract/turf_fire/Crossed(atom/movable/AM)
 	var/turf/open/open_turf = loc
 	if(open_turf.active_hotspot) //If we have an active hotspot, let it do the damage instead
 		return
