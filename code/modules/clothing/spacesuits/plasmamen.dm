@@ -162,7 +162,7 @@
 		attached_hat = null
 		update_icon()
 	else if(user.put_in_inactive_hand(attached_hat))
-		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from the helmet!</span>")
+		to_chat(user, "<span class='notice'>You removed the [attached_hat.name] from the helmet!</span>")
 		attached_hat = null
 		update_icon()
 	else
