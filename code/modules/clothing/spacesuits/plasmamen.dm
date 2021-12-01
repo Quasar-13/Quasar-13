@@ -110,7 +110,7 @@
 			to_chat(user, "<span class='notice'>There's already something placed on the helmet!</span>")
 			return
 		attached_hat = hitting_clothing
-		to_chat(user, "<span class='notice'>You placed [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
+		to_chat(user, "<span class='notice'>You placed the [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
 		hitting_clothing.forceMove(src)
 		update_icon()
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(isinhands)
