@@ -16,7 +16,7 @@
 	new /obj/item/clothing/under/rank/captain/galaxy(src)
 	new /obj/item/clothing/under/rank/captain/skirt/galaxy(src)
 	new /obj/item/clothing/suit/armor/vest/capcarapace(src)
-	new /obj/item/clothing/head/caphat(src)
+	new /obj/item/clothing/head/caphat/galaxy(src)
 	new /obj/item/clothing/under/rank/captain/parade(src)
 	new /obj/item/clothing/suit/armor/vest/capcarapace/alt(src)
 	new /obj/item/clothing/head/caphat/parade(src)
