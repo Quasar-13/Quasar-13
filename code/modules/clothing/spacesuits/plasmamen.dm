@@ -113,6 +113,7 @@
 		to_chat(user, "<span class='notice'>You placed the [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
 		hitting_clothing.forceMove(src)
 		update_icon()
+
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(isinhands)
 	. = ..()
 	if(!isinhands && smile)
