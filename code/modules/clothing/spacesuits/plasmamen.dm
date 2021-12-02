@@ -104,7 +104,7 @@
 	if(istype(hitting_item, /obj/item/clothing/head))
 		var/obj/item/clothing/hitting_clothing = hitting_item
 		if(hitting_clothing.clothing_flags & PLASMAMAN_HELMET_EXEMPT)
-			to_chat(user, "<span class='notice'>You cannot place [hitting_clothing.name] on the helmet!</span>")
+			to_chat(user, "<span class='notice'>You cannot place the [hitting_clothing.name] on the helmet!</span>")
 			return
 		if(attached_hat)
 			to_chat(user, "<span class='notice'>There's already something placed on the helmet!</span>")
