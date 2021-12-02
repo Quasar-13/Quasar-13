@@ -68,7 +68,7 @@
 /obj/item/clothing/head/helmet/space/plasmaman/examine()
 	. = ..()
 	if(attached_hat)
-		. += "<span class='notice'>There's [attached_hat.name] placed on the helmet. Alt+Left click to remove it.</span>"
+		. += "<span class='notice'>The [attached_hat.name] is placed on the helmet. Alt+Left click to remove it.</span>"
 	else
 		. += "<span class='notice'>There's nothing placed on the helmet.</span>"
 
@@ -110,9 +110,10 @@
 			to_chat(user, "<span class='notice'>There's already something placed on the helmet!</span>")
 			return
 		attached_hat = hitting_clothing
-		to_chat(user, "<span class='notice'>You placed [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
+		to_chat(user, "<span class='notice'>You placed the [hitting_clothing.name] on the helmet! Keep in mind this is merely cosmetic: hat lights, stats or anything else won't work!</span>")
 		hitting_clothing.forceMove(src)
 		update_icon()
+
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(isinhands)
 	. = ..()
 	if(!isinhands && smile)
@@ -158,15 +159,15 @@
 	if(!attached_hat)
 		return
 	if(user.put_in_active_hand(attached_hat))
-		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from the helmet!</span>")
+		to_chat(user, "<span class='notice'>You removed the [attached_hat.name] from the helmet!</span>")
 		attached_hat = null
 		update_icon()
 	else if(user.put_in_inactive_hand(attached_hat))
-		to_chat(user, "<span class='notice'>You removed [attached_hat.name] from the helmet!</span>")
+		to_chat(user, "<span class='notice'>You removed the [attached_hat.name] from the helmet!</span>")
 		attached_hat = null
 		update_icon()
 	else
-		to_chat(user, "<span class='notice'>You can't remove [attached_hat.name] from the helmet because your hands are full!</span>")
+		to_chat(user, "<span class='notice'>You can't remove the [attached_hat.name] from the helmet because your hands are full!</span>")
 
 /obj/item/clothing/head/helmet/space/plasmaman/security
 	name = "security plasma envirosuit helmet"
