@@ -4,7 +4,7 @@
 	desc = "Keeps the lil buzzing buggers out of your eyes."
 	icon_state = "beekeeper"
 	inhand_icon_state = "beekeeper"
-	clothing_flags = THICKMATERIAL | SNUG_FIT
+	clothing_flags = THICKMATERIAL | SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 
 
 /obj/item/clothing/suit/beekeeper_suit
