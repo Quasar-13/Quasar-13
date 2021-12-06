@@ -8,6 +8,16 @@
 	inhand_icon_state = "syndicate_suit"
 	can_adjust = FALSE
 
+//Solgov Suit. Formalwear for Solgov Officers
+/obj/item/clothing/under/solgov/suit
+	name = "solgov formal suit"
+	desc = "A muted blue suit with a black overcoat"
+	icon_state = "solgov_suit"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "syndicate_suit"
+	can_adjust = FALSE
+
 //Chemical Researcher Jumpsuit
 /obj/item/clothing/under/rank/research/chem
 	desc = "A tacky pick jumpsuit worn by the station's chemists."
