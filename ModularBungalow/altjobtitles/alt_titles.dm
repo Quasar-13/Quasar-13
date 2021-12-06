@@ -133,7 +133,7 @@
 	alt_titles = list("Chief Atmospherics Technician", "Chief Electrical Technician")
 	senior_title = "Senior Project Manager"
 
-/datum/job/tegu/secretary
+/datum/job/secretary
 	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
 	senior_title = "Diplomat"
 
@@ -144,4 +144,9 @@
 /datum/job/captain
 	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
+
+
+//Funny role
+/datum/job/staff_officer
+	alt_titles = list("Field Officer")
 
