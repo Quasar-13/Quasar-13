@@ -261,6 +261,8 @@
 			return "Your account is not old enough for [jobtitle]."
 		if(JOB_UNAVAILABLE_SLOTFULL)
 			return "[jobtitle] is already filled to capacity."
+		if(JOB_NOT_TRUSTED)
+			return "You need to be trusted to join as [jobtitle]."
 	return "Error: Unknown job availability."
 
 /mob/dead/new_player/proc/IsJobUnavailable(rank, latejoin = FALSE)
@@ -286,6 +288,8 @@
 		return JOB_UNAVAILABLE_PLAYTIME
 	if(latejoin && !job.special_check_latejoin(client))
 		return JOB_UNAVAILABLE_GENERIC
+	if(job.trusted_only && !is_trusted_player(client))
+		return JOB_NOT_TRUSTED
 	return JOB_AVAILABLE
 
 /mob/dead/new_player/proc/AttemptLateSpawn(rank)
@@ -399,12 +403,38 @@
 	dat += "<table><tr><td valign='top'>"
 	var/column_counter = 0
 	// render each category's available jobs
-	for(var/category in GLOB.position_categories)
-		// position_categories contains category names mapped to available jobs and an appropriate color
+
+/*	This makes it look better by removing unused categories.
+	Yes. We are hardcoding this here.
+	Yes. it is shitcode.
+	Yes, if we ever add a new department it will fuck shit up HARD
+	However, I don't see this as a negative, as it allows us to add new departments into other maptypes without it looking like total shit.
+
+*/
+
+	var/list/department_categories = list()
+
+	//Syndiestation
+	if(SSmaptype.maptype == "syndicate")
+		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
+
+	else if(SSmaptype.maptype == "solgov")
+		department_categories = list("Solgov")
+
+	else
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
+
+
+	for(var/category in department_categories)
+			// position_categories contains category names mapped to available jobs and an appropriate color
+
 		var/cat_color = GLOB.position_categories[category]["color"]
+		var/list/dept_dat = list()
+
+//		if(SSmaptype.maptype != "syndicate")
 		dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 		dat += "<legend align='center' style='color: [cat_color]'>[category]</legend>"
-		var/list/dept_dat = list()
+
 		for(var/job in GLOB.position_categories[category]["jobs"])
 			var/datum/job/job_datum = SSjob.name_occupations[job]
 			if(job_datum && IsJobUnavailable(job_datum.title, TRUE) == JOB_AVAILABLE)
@@ -418,11 +448,15 @@
 					dept_dat += "<a class='job[command_bold]' href='byond://?src=[REF(src)];SelectedJob=[job_datum.title]'><span class='priority'>[job_datum.title] [altjobline] ([job_datum.current_positions])</span></a>"//bungalow edit - alt job titles
 				else
 					dept_dat += "<a class='job[command_bold]' href='byond://?src=[REF(src)];SelectedJob=[job_datum.title]'>[job_datum.title] [altjobline] ([job_datum.current_positions])</a>"//bungalow edit - alt job titled
+
 		if(!dept_dat.len)
+//			if(SSmaptype.maptype != "syndicate")
 			dept_dat += "<span class='nopositions'>No positions open.</span>"
+
 		dat += jointext(dept_dat, "")
 		dat += "</fieldset><br>"
 		column_counter++
+
 		if(column_counter > 0 && (column_counter % 3 == 0))
 			dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"

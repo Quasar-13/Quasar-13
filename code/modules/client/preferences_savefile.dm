@@ -158,6 +158,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["asaycolor"], asaycolor)
 	READ_FILE(S["brief_outfit"], brief_outfit)
 	READ_FILE(S["ooccolor"], ooccolor)
+	READ_FILE(S["screentip_color"], screentip_color)
 	READ_FILE(S["lastchangelog"], lastchangelog)
 	READ_FILE(S["UI_style"], UI_style)
 	READ_FILE(S["hotkeys"], hotkeys)
@@ -189,6 +190,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["clientfps"], clientfps)
 	READ_FILE(S["parallax"], parallax)
 	READ_FILE(S["ambientocclusion"], ambientocclusion)
+	READ_FILE(S["screentip_pref"], screentip_pref)
 	READ_FILE(S["auto_fit_viewport"], auto_fit_viewport)
 	READ_FILE(S["widescreenpref"], widescreenpref)
 	READ_FILE(S["pixel_size"], pixel_size)
@@ -229,6 +231,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Sanitize
 	asaycolor		= sanitize_ooccolor(sanitize_hexcolor(asaycolor, 6, 1, initial(asaycolor)))
 	ooccolor		= sanitize_ooccolor(sanitize_hexcolor(ooccolor, 6, 1, initial(ooccolor)))
+	screentip_color = sanitize_ooccolor(sanitize_hexcolor(screentip_color, 6, 1, initial(screentip_color)))
 	lastchangelog	= sanitize_text(lastchangelog, initial(lastchangelog))
 	UI_style		= sanitize_inlist(UI_style, GLOB.available_ui_styles, GLOB.available_ui_styles[1])
 	hotkeys			= sanitize_integer(hotkeys, FALSE, TRUE, initial(hotkeys))
@@ -246,6 +249,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	clientfps		= sanitize_integer(clientfps, -1, 1000, 0)
 	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, FALSE, TRUE, initial(ambientocclusion))
+	screentip_pref	= sanitize_integer(screentip_pref, FALSE, TRUE, initial(screentip_pref))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, FALSE, TRUE, initial(auto_fit_viewport))
 	widescreenpref  = sanitize_integer(widescreenpref, FALSE, TRUE, initial(widescreenpref))
 	pixel_size		= sanitize_float(pixel_size, PIXEL_SCALING_AUTO, PIXEL_SCALING_3X, 0.5, initial(pixel_size))
@@ -296,6 +300,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["asaycolor"], asaycolor)
 	WRITE_FILE(S["brief_outfit"], brief_outfit)
 	WRITE_FILE(S["ooccolor"], ooccolor)
+	WRITE_FILE(S["screentip_color"], screentip_color)
 	WRITE_FILE(S["lastchangelog"], lastchangelog)
 	WRITE_FILE(S["UI_style"], UI_style)
 	WRITE_FILE(S["hotkeys"], hotkeys)
@@ -324,6 +329,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["clientfps"], clientfps)
 	WRITE_FILE(S["parallax"], parallax)
 	WRITE_FILE(S["ambientocclusion"], ambientocclusion)
+	WRITE_FILE(S["screentip_pref"], screentip_pref)
 	WRITE_FILE(S["auto_fit_viewport"], auto_fit_viewport)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["pixel_size"], pixel_size)
@@ -401,6 +407,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_moth_wings"], features["moth_wings"])
 	READ_FILE(S["feature_moth_antennae"], features["moth_antennae"])
 	READ_FILE(S["feature_moth_markings"], features["moth_markings"])
+	READ_FILE(S["feature_bee_wings"], features["bee_wings"]) //bee
+	READ_FILE(S["feature_bee_tail"], features["tail_bee"]) //beeeee
+	READ_FILE(S["feature_bee_antennae"], features["bee_antennae"])// BEEGONE
 	READ_FILE(S["persistent_scars"] , persistent_scars)
 	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences)//tegu edit - alt job titles
 	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences)
@@ -511,6 +520,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list, "Plain")
 	features["moth_antennae"] 	= sanitize_inlist(features["moth_antennae"], GLOB.moth_antennae_list, "Plain")
 	features["moth_markings"] 	= sanitize_inlist(features["moth_markings"], GLOB.moth_markings_list, "None")
+	features["bee_wings"]	= sanitize_inlist(features["bee_wings"], GLOB.bee_wings_list)
+	features["tail_bee"]	= sanitize_inlist(features["tail_bee"], GLOB.bee_tails_list)
+	features["bee_antennae"] = sanitize_inlist(features["bee_antennae"], GLOB.bee_antennae_list)
 
 	persistent_scars = sanitize_integer(persistent_scars)
 
@@ -573,6 +585,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
 	WRITE_FILE(S["feature_beefcolor"]					, features["beefcolor"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["feature_beefeyes"]					, features["beefeyes"])
+	WRITE_FILE(S["feature_bee_tail"]					,features["tail_bee"])
+	WRITE_FILE(S["feature_bee_wings"]					,features["bee_wings"])
+	WRITE_FILE(S["feature_bee_antennae"]				,features["bee_antennae"])
 	WRITE_FILE(S["feature_beefmouth"]					, features["beefmouth"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["persistent_scars"]			, persistent_scars)
 

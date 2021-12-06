@@ -2,7 +2,7 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/cargo/head(src)
 	new /obj/item/gun/energy/disabler/head(src)
 	new /obj/item/assembly/flash/handheld(src)
-	new /obj/item/clothing/under/misc/qmparade(src)
+	new /obj/item/clothing/under/misc/parade/qm(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
@@ -29,7 +29,7 @@
 
 /obj/structure/closet/secure_closet/hop/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/captain/hop(src)
-	new /obj/item/clothing/under/misc/hopparade(src)
+	new /obj/item/clothing/under/misc/parade/hop(src)
 	new /obj/item/gun/energy/e_gun/hop(src)
 	. = ..()
 

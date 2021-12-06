@@ -11,7 +11,7 @@
 /datum/surgery/advanced/wing_reconstruction/can_start(mob/user, mob/living/carbon/target)
 	if(!istype(target))
 		return FALSE
-	return ..() && target.dna.features["moth_wings"] == "Burnt Off" && ismoth(target)
+	return ..() && target.dna.features["moth_wings"] == "Burnt Off" && ismoth(target) || target.dna.features["bee_wings"] == "Burnt Off" && isbeeperson(target)
 
 /datum/surgery_step/wing_reconstruction
 	name = "start wing reconstruction"
@@ -33,7 +33,13 @@
 			"<span class='notice'>[user] completes the surgery on [target]'s wings.</span>")
 		if(H.dna.features["original_moth_wings"] != null)
 			H.dna.features["moth_wings"] = H.dna.features["original_moth_wings"]
+		if(H.dna.features["original_bee_wings"] != null)
+			H.dna.features["bee_wings"] = H.dna.features["original_bee_wings"]
 		else
-			H.dna.features["moth_wings"] = "Plain"
+			if (ismoth(target))
+				H.dna.features["moth_wings"] = "Plain"
+
+			if (isbeeperson(target))
+				H.dna.features["bee_wings"] = "Simple"
 		H.update_mutant_bodyparts()
 	return ..()

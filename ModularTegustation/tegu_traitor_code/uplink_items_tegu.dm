@@ -46,6 +46,15 @@
 	illegal_tech = TRUE
 	restricted_roles = list("Bartender")
 
+/datum/uplink_item/role_restricted/mad_clown
+	name = "Mad clown's box"
+	desc = "Tired of BORING and simple comedy? Want to introduce something NEW to society? \
+			Then you'll surely like this box our team found somewhere in Nevada! \
+			Contains a protective clown's mask and the ultimate weapon for a mad man you are."
+	item = /obj/item/storage/box/hug/mad_clown
+	cost = 12
+	restricted_roles = list("Clown")
+
 /datum/uplink_item/role_restricted/sith_starter_kit
 	name = "Sith Starter Kit"
 	desc = "Has everything you need to get started with the Dark Side! \
@@ -153,6 +162,15 @@
 	restricted_roles = list("Tiger Co. Infiltrator")
 	cant_discount = FALSE
 
+/datum/uplink_item/role_restricted/lufr_kit
+	name = "LUFR Operative Bundle"
+	desc = "A large kit for a professional freedom fighter. \
+	Comes with a tactical duffelbag filled with: \
+	badass balaclava and beret, cold-resistant uniform, combat gloves, Makarov pistol, bowman headset and few grenades."
+	item = /obj/item/storage/backpack/duffelbag/syndie/lufr
+	cost = 14
+	restricted_roles = list("LUFR Infiltrator")
+
 /datum/uplink_item/stealthy_tools/adv_mulligan
 	name = "Advanced Mulligan"
 	desc = "An advanced form of toxin created in one of the Tiger Cooperative laboratories using \
@@ -164,6 +182,8 @@
 	cost = 5
 	surplus = 18
 	include_modes = list(/datum/game_mode/traitor/infiltrator) //It's only for infiltrators, 'cuz of low-cost.
+
+////////////// INFILTRATION GAMEMODE ITEMS - END //////////////
 
 /obj/item/toy/balloon/syndicate/gold
 	name = "gold syndicate balloon"
@@ -184,3 +204,12 @@
 	new /obj/item/toy/balloon/syndicate/gold(src)
 	new /obj/item/toy/balloon/syndicate/gold(src)
 	new /obj/item/toy/balloon/syndicate/gold(src)
+
+/datum/uplink_item/dangerous/nano_blade
+	name = "Nanoforged Katana"
+	desc = "A tailor-made blade forged by the most secretive ninja organization within the Syndicate. \
+			Merely weilding this weapon grants incredible agility."
+	item = /obj/item/storage/belt/nano_blade
+	cost = 12
+	surplus = 5
+	limited_stock = 1

@@ -779,6 +779,69 @@
 	name = "Wisp"
 	icon_state = "hair_wisp"
 
+/*
+/////////////////////////////////////
+/  =---------------------------=    /
+/  == Gradient Hair Definitions ==  /
+/  =---------------------------=    /
+/////////////////////////////////////
+*/
+
+/datum/sprite_accessory/hair_gradient
+	icon = 'icons/mob/hair_gradients.dmi'
+
+/datum/sprite_accessory/hair_gradient/none
+	name = "None"
+	icon_state = "none"
+
+/datum/sprite_accessory/hair_gradient/fadeup
+	name = "Fade Up"
+	icon_state = "fadeup"
+
+/datum/sprite_accessory/hair_gradient/fadedown
+	name = "Fade Down"
+	icon_state = "fadedown"
+
+/datum/sprite_accessory/hair_gradient/vertical_split
+	name = "Vertical Split"
+	icon_state = "vsplit"
+
+/datum/sprite_accessory/hair_gradient/_split
+	name = "Horizontal Split"
+	icon_state = "bottomflat"
+
+/datum/sprite_accessory/hair_gradient/reflected
+	name = "Reflected"
+	icon_state = "reflected_high"
+
+/datum/sprite_accessory/hair_gradient/reflected_inverse
+	name = "Reflected Inverse"
+	icon_state = "reflected_inverse_high"
+
+/datum/sprite_accessory/hair_gradient/wavy
+	name = "Wavy"
+	icon_state = "wavy"
+
+/datum/sprite_accessory/hair_gradient/long_fade_up
+	name = "Long Fade Up"
+	icon_state = "long_fade_up"
+
+/datum/sprite_accessory/hair_gradient/long_fade_down
+	name = "Long Fade Down"
+	icon_state = "long_fade_down"
+
+/datum/sprite_accessory/hair_gradient/short_fade_up
+	name = "Short Fade Up"
+	icon_state = "short_fade_up"
+
+/datum/sprite_accessory/hair_gradient/short_fade_down
+	name = "Short Fade Down"
+	icon_state = "short_fade_down"
+
+/datum/sprite_accessory/hair_gradient/wavy_spike
+	name = "Spiked Wavy"
+	icon_state = "wavy_spiked"
+
 /////////////////////////////
 // Facial Hair Definitions //
 /////////////////////////////
@@ -1365,6 +1428,36 @@
 	icon_state = "tank_white"
 	gender = NEUTER
 
+/datum/sprite_accessory/undershirt/tank_rainbow
+	name = "Tank Top (Rainbow)"
+	icon_state = "tank_rainbow"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/tank_les
+	name = "Tank Top (Lesbian)"
+	icon_state = "tank_les"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/tank_bi
+	name = "Tank Top (Bi)"
+	icon_state = "tank_bi"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/tank_trans
+	name = "Tank Top (Trans)"
+	icon_state = "tank_trans"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/tank_enby
+	name = "Tank Top (Nonbinary)"
+	icon_state = "tank_enby"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/tank_ace
+	name = "Tank Top (Asexual)"
+	icon_state = "tank_ace"
+	gender = NEUTER
+
 /datum/sprite_accessory/undershirt/redtop
 	name = "Top (Red)"
 	icon_state = "redtop"
@@ -1512,6 +1605,26 @@
 	name = "Thigh-high (Rainbow)"
 	icon_state = "rainbow_thigh"
 
+/datum/sprite_accessory/socks/les_thigh
+	name = "Thigh-high (Lesbian)"
+	icon_state = "les_thigh"
+
+/datum/sprite_accessory/socks/bi_thigh
+	name = "Thigh-high (Bi)"
+	icon_state = "bi_thigh" //bi thigh highs? we gotta study this
+
+/datum/sprite_accessory/socks/trans_thigh
+	name = "Thigh-high (Trans)"
+	icon_state = "trans_thigh"
+
+/datum/sprite_accessory/socks/enby_thigh
+	name = "Thigh-high (Nonbinary)"
+	icon_state = "enby_thigh"
+
+/datum/sprite_accessory/socks/ace_thigh
+	name = "Thigh-high (Asexual)"
+	icon_state = "ace_thigh"
+
 /datum/sprite_accessory/socks/striped_thigh
 	name = "Thigh-high (Striped)"
 	icon_state = "striped_thigh"
@@ -1622,6 +1735,18 @@
 	name = "Monkey"
 	icon_state = "monkey"
 	color_src = FALSE
+
+/datum/sprite_accessory/tails/bee
+	icon = 'icons/mob/beetail.dmi'
+	color_src = null
+
+/datum/sprite_accessory/tails/bee/simple
+	name = "Simple orange  tail"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/tails/bee/simpleY
+	name = "Simple yellow tail"
+	icon_state = "SimpleY"
 
 /datum/sprite_accessory/snouts
 	icon = 'icons/mob/mutant_bodyparts.dmi'
@@ -1927,6 +2052,8 @@
 	icon_state = "burnt_off"
 	locked = TRUE
 
+
+
 /datum/sprite_accessory/moth_wings/firewatch
 	name = "Firewatch"
 	icon_state = "firewatch"
@@ -1962,6 +2089,25 @@
 /datum/sprite_accessory/moth_wings/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
+
+
+//going to use mothg_wings just for now...maybe forever
+/datum/sprite_accessory/moth_wings/bee
+	icon = 'icons/mob/beewings.dmi'
+	color_src = null
+
+/datum/sprite_accessory/moth_wings/bee/simple
+	name = "Simple orange wings"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_wings/bee/simpleY
+	name = "Simple yellow wings"
+	icon_state = "SimpleY"
+
+/datum/sprite_accessory/moth_wings/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+	locked = TRUE
 
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
@@ -2031,6 +2177,22 @@
 	name = "Regal"
 	icon_state = "regal"
 
+/datum/sprite_accessory/moth_antennae/bee
+	icon = 'icons/mob/bee_antennae.dmi'
+	color_src = null
+
+/datum/sprite_accessory/moth_antennae/bee/simple
+	name = "Simple orange antennae"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_antennae/bee/simpley
+	name = "Simple yellow antennae"
+	icon_state = "SimpleY"
+
+/datum/sprite_accessory/moth_antennae/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
 	color_src = null
@@ -2094,3 +2256,4 @@
 /datum/sprite_accessory/moth_markings/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
+

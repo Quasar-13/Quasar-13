@@ -5,6 +5,11 @@
 	desc = "A poster making a simple statement: \"Fuck around, Find out.\" There's a tiny Cargonia logo in the bottom right."
 	icon_state = "poster48"
 
+/obj/structure/sign/poster/contraband/lufr
+	name = "Lizards' United Front"
+	desc = "It's time to rise up, friends! No longer shall the Nanotrasen scum opress our kind! Join L.U.Fr - TODAY!"
+	icon_state = "poster-lufr"
+
 // Legit
 // Moth poster sprites are created by Azlanon and AyyRobotics
 
@@ -72,4 +77,9 @@
 	name = "Picture of a Goddess"
 	desc = "A poster of an unknown woman's buff abs. You feel like just looking at this fills you with determination."
 	icon_state = "poster49"
+
+/obj/structure/sign/poster/contraband/ss13horror
+	name = "Clown Station 13"
+	desc = "In Space, no one can hear you honk."
+	icon_state = "poster50"
 

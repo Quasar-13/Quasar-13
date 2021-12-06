@@ -509,7 +509,7 @@
 	icon_state = "lungs-plasma"
 
 	safe_oxygen_min = 0 //We don't breath this
-	safe_toxins_min = 16 //We breath THIS!
+	safe_toxins_min = 1 //We breath THIS!
 	safe_toxins_max = 0
 
 /obj/item/organ/lungs/slime

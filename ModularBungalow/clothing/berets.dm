@@ -2,8 +2,8 @@
 /obj/item/clothing/head/beret
 	name = "beret"
 	desc = "A beret, a mime's favorite headwear."
-	icon = 'ModularBungalow/zbungalowicons/clothing/obj/head.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/mob/head.dmi'
+	icon = 'ModularBungalow/clothing/icons/beret.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/beretw.dmi'
 	icon_state = "beret"
 	dog_fashion = /datum/dog_fashion/head/beret //i think ian wearing any beret is broken, to test later
 	dynamic_hair_suffix = ""
@@ -207,6 +207,7 @@
 	icon_state = "beret_com"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 90
+
 /*	//unused
 /obj/item/clothing/head/beret/lt
 	name = "officer beret"

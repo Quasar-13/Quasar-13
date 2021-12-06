@@ -4,8 +4,8 @@
 /obj/item/clothing/suit/neocoat
 	name = "doctor's long labcoat"
 	desc = "A long white labcoat used by doctors occasionally"
-	icon = 'ModularBungalow/zbungalowicons/clothing/obj/suits.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/mob/suits.dmi'
+	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
 	icon_state = "labcoat_doc_alt"
 	inhand_icon_state = "labcoat"
 	allowed = list(/obj/item/analyzer, /obj/item/stack/medical, /obj/item/dnainjector, /obj/item/reagent_containers/dropper, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/hypospray, /obj/item/healthanalyzer, /obj/item/flashlight/pen, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/pill, /obj/item/storage/pill_bottle, /obj/item/paper, /obj/item/melee/classic_baton/telescopic, /obj/item/soap, /obj/item/sensor_device, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/biopsy_tool)
@@ -34,6 +34,14 @@
 	name = "pharmacist's labcoat"
 	desc = "A beautiful orange labcoat for the pharamcists to wear. has outstanding acid resistance."
 	icon_state = "labcoat_chem"
+
+//Chemical Researcher labcoat
+/obj/item/clothing/suit/neocoat/chemre
+	name = "Chemist's labcoat"
+	desc = "A beautiful purple and orange labcoat for the resarchers to wear. has outstanding acid resistance."
+	icon_state = "labcoat_chemre"
+	inhand_icon_state = "labcoat"
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 70)
 
 //Sci Alternate
 /obj/item/clothing/suit/neocoat/sci

@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/skin_tone = "caucasian1" //Skin color
 	var/eye_color = "000" //Eye color
 	var/datum/species/pref_species = new /datum/species/human() //Mutant race
-	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_antennae" = "Plain", "moth_markings" = "None")
+	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_antennae" = "Plain", "moth_markings" = "None", "bee_wings" = "Simple", "tail_bee" = "Simple", "bee_antennae" = "Simple")
 	var/list/randomise = list(RANDOM_UNDERWEAR = TRUE, RANDOM_UNDERWEAR_COLOR = TRUE, RANDOM_UNDERSHIRT = TRUE, RANDOM_SOCKS = TRUE, RANDOM_BACKPACK = TRUE, RANDOM_JUMPSUIT_STYLE = TRUE, RANDOM_HAIRSTYLE = TRUE, RANDOM_HAIR_COLOR = TRUE, RANDOM_FACIAL_HAIRSTYLE = TRUE, RANDOM_FACIAL_HAIR_COLOR = TRUE, RANDOM_SKIN_TONE = TRUE, RANDOM_EYE_COLOR = TRUE)
 	var/phobia = "spiders"
 
@@ -109,6 +109,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/clientfps = -1
 
 	var/parallax
+
+	///Do we show screentips, if so, how big?
+	var/screentip_pref = TRUE
+	///Color of screentips at top of screen
+	var/screentip_color = "#ffd391"
 
 	var/ambientocclusion = TRUE
 	///Should we automatically fit the viewport?
@@ -550,6 +555,30 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
+			if(pref_species.mutant_bodyparts["tail_bee"])
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Bee Tail</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=tail_bee;task=input'>[features["tail_bee"]]</a><BR>"
+
+			if(pref_species.mutant_bodyparts["bee_wings"])
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Bee Wings</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=bee_wings;task=input'>[features["bee_wings"]]</a><BR>"
+
+			if(pref_species.mutant_bodyparts["bee_antennae"])
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Bee antennae</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=bee_antennae;task=input'>[features["bee_antennae"]]</a><BR>"
+
 			//Adds a thing to select which phobia because I can't be assed to put that in the quirks window
 			if("Phobia" in all_quirks)
 				dat += "<h3>Phobia</h3>"
@@ -649,6 +678,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				else
 					dat += "High"
 			dat += "</a><br>"
+
+			dat += "<b>Set screentip mode:</b> <a href='?_src_=prefs;preference=screentipmode'>[screentip_pref ? "Enabled" : "Disabled"]</a><br>"
+			dat += "<b>Screentip color:</b><span style='border: 1px solid #161616; background-color: [screentip_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=screentipcolor'>Change</a><BR>"
+
 
 			dat += "<b>Ambient Occlusion:</b> <a href='?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
@@ -902,6 +935,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 
+			//Syndiestation, REPLACE ASAP
+			if(SSmaptype.maptype == "syndicate")
+				if(job.maptype == "none")
+					continue
+
+			if(SSmaptype.maptype == "solgov")
+				if(job.maptype == "none")
+					continue
+
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
 				width += widthPerColumn
@@ -921,6 +963,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			lastJob = job
 			if(is_banned_from(user.ckey, rank))
 				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;bancheck=[rank]'> BANNED</a></td></tr>"
+				continue
+			if(job.trusted_only && !is_trusted_player(user.client))
+				HTML += "<font color=black>[rank]</font></td><td><font color=black> \[WHITELISTED\]</font></td></tr>"
 				continue
 			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 			if(required_playtime_remaining)
@@ -1002,7 +1047,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	popup.open(FALSE)
 
 /datum/preferences/proc/SetJobPreferenceLevel(datum/job/job, level)
-	if (!job)
+	if(!job)
 		return FALSE
 
 	if (level == JP_HIGH) // to high
@@ -1550,6 +1595,24 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_moth_markings)
 						features["moth_markings"] = new_moth_markings
 
+				if("tail_bee")
+					var/new_bee_tail
+					new_bee_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in GLOB.bee_tails_list
+					if(new_bee_tail)
+						features["tail_bee"] = new_bee_tail
+
+				if("bee_wings")
+					var/new_bee_wings
+					new_bee_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.bee_wings_list
+					if(new_bee_wings)
+						features["bee_wings"] = new_bee_wings
+
+				if("bee_antennae")
+					var/new_bee_antennae
+					new_bee_antennae = input(user, "Choose your characte's antennae:", "Character Preference") as null|anything in GLOB.bee_antennae_list
+					if(new_bee_antennae)
+						features["bee_antennae"] = new_bee_antennae
+
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
 					if(new_s_tone)
@@ -1870,6 +1933,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					parallax = WRAP(parallax - 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
+
+				if("screentipmode")
+					screentip_pref = !screentip_pref
+
+				if("screentipcolor")
+					var/new_screentipcolor = input(user, "Choose your screentip color:", "Character Preference", screentip_color) as color|null
+					if(new_screentipcolor)
+						screentip_color = sanitize_ooccolor(new_screentipcolor)
 
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion

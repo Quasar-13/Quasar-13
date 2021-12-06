@@ -312,6 +312,13 @@ Used by the AI doomsday and the self-destruct nuke.
 	else if(config.minetype == "tidalmoon")
 		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
 
+		//Syndicate Marine Corps
+
+	else if(config.minetype == "phobos")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_phobos.dmm", default_traits = ZTRAITS_MISSION)
+
+	else if(config.minetype == "icemission")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_ice.dmm", default_traits = ZTRAITS_ICEMISSION)
 		//Bungalow Edit End
 
 

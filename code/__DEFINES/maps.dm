@@ -116,6 +116,15 @@ require only minor tweaks.
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
 
+//SMC Missions
+#define ZTRAITS_MISSION list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2,)
+
+#define ZTRAITS_ICEMISSION list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid/snow/icemoon)
 
 #define DL_NAME "name"
 #define DL_TRAITS "traits"

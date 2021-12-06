@@ -37,6 +37,10 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_antennae, GLOB.moth_antennae_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/monkey, GLOB.tails_list_monkey)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/bee, GLOB.bee_tails_list) //bee tail
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings/bee, GLOB.bee_wings_list) // bee wings
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_antennae/bee, GLOB.bee_antennae_list) //bee antennae
+	load_trusted_players()
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
@@ -48,6 +52,11 @@
 	for(var/path in subtypesof(/datum/surgery))
 		GLOB.surgeries_list += new path()
 	sortList(GLOB.surgeries_list, /proc/cmp_typepaths_asc)
+
+	// Hair Gradients - Initialise all /datum/sprite_accessory/hair_gradient into an list indexed by gradient-style name
+	for(var/path in subtypesof(/datum/sprite_accessory/hair_gradient))
+		var/datum/sprite_accessory/hair_gradient/H = new path()
+		GLOB.hair_gradients_list[H.name] = H
 
 	// Keybindings
 	init_keybindings()

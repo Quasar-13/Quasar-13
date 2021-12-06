@@ -17,6 +17,7 @@
 #define SCANGATE_POD			"pod"
 #define SCANGATE_GOLEM			"golem"
 #define SCANGATE_ZOMBIE			"zombie"
+#define SCANGATE_BEE			"Bee"
 
 /obj/machinery/scanner_gate
 	name = "scanner gate"
@@ -140,6 +141,8 @@
 						scan_species = /datum/species/golem
 					if(SCANGATE_ZOMBIE)
 						scan_species = /datum/species/zombie
+					if (SCANGATE_BEE)
+						scan_species = /datum/species/beepeople
 				if(is_species(H, scan_species))
 					beep = TRUE
 				if(detect_species == SCANGATE_ZOMBIE) //Can detect dormant zombies

@@ -625,6 +625,7 @@
 		facial_hairstyle = "Full Beard"
 	else
 		facial_hairstyle = "Shaved"
+	body_type = gender
 	hairstyle = pick("Bedhead", "Bedhead 2", "Bedhead 3")
 	underwear = "Nude"
 	update_body()
@@ -1178,6 +1179,9 @@
 
 /mob/living/carbon/human/species/felinid
 	race = /datum/species/human/felinid
+
+/mob/living/carbon/human/species/beepeople
+	race = /datum/species/beepeople
 
 /mob/living/carbon/human/species/fly
 	race = /datum/species/fly

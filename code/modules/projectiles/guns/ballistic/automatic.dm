@@ -48,7 +48,7 @@
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "\improper Nanotrasen Saber SMG"
-	desc = "A prototype full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
+	desc = "A prototype full auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon_state = "saber"
 	burst_size = 1
 	actions_types = list()

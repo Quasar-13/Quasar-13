@@ -49,6 +49,7 @@
 	hud_trait = TRAIT_MEDICAL_HUD
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
 
+
 /obj/item/clothing/glasses/hud/health/night
 	name = "night vision health scanner HUD"
 	desc = "An advanced medical head-up display that allows doctors to find patients in complete darkness."

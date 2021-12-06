@@ -1,26 +1,25 @@
-/// Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
+//Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
 /obj/machinery/clonepod/experimental
 	name = "experimental cloning pod"
 	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
-	icon = 'icons/obj/machines/cloning.dmi'
-	icon_state = "pod_0"
 	req_access = null
 	circuit = /obj/item/circuitboard/machine/clonepod/experimental
 	internal_radio = FALSE
 
-/// Start growing a human clone in the pod!
-/obj/machinery/clonepod/experimental/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance)
+//Start growing a human clone in the pod!
+/obj/machinery/clonepod/experimental/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, empty)
 	if(panel_open)
 		return NONE
 	if(mess || attempting)
 		return NONE
 
-	attempting = TRUE
+	attempting = TRUE //One at a time!!
 	countdown.start()
 
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
 
-	H.hardset_dna(ui, mutation_index, H.real_name, blood_type, mrace, features)
+	H.hardset_dna(ui, mutation_index, H.dna.default_mutation_genes, H.real_name, blood_type, mrace, features, H.dna.mutations, FALSE)
+	H.set_species(mrace, TRUE, null, features)
 
 	if(efficiency > 2)
 		var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
@@ -32,17 +31,14 @@
 		if(ismob(M))
 			H = M
 
-	/// Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
-	H.silent = 20
+	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = H
 
-	/// To prevent null names
-	if(!clonename)
-		clonename = "clone ([rand(1,999)])"
+	if(!clonename)	//to prevent null names
+		clonename = "Clone ([rand(1,999)])"
 	H.real_name = clonename
 
-	icon_state = "pod_1"
-	/// Get the clone body ready
+	//Get the clone body ready
 	maim_clone(H)
 	ADD_TRAIT(H, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
@@ -50,7 +46,7 @@
 	ADD_TRAIT(H, TRAIT_MUTE, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOBREATH, CLONING_POD_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
-	H.Unconscious(80)
+	H.Unconscious(200)
 
 	var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, H, POLL_IGNORE_DEFECTIVECLONE)
 	if(LAZYLEN(candidates))
@@ -61,9 +57,8 @@
 		H.grab_ghost()
 		to_chat(H, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
 
-	/// Only does anything if they were still in their old body and not already a ghost
 	if(grab_ghost_when == CLONER_MATURE_CLONE)
-		H.ghostize(TRUE)
+		H.ghostize(TRUE)	//Only does anything if they were still in their old body and not already a ghost
 		to_chat(H.get_ghost(TRUE), "<span class='notice'>Your body is beginning to regenerate in a cloning pod. You will become conscious when it is complete.</span>")
 
 	if(H)
@@ -73,24 +68,22 @@
 
 		H.set_suicide(FALSE)
 	attempting = FALSE
-	/// So that we don't spam clones with autoprocess unless we leave a body in the scanner
-	return CLONING_DELETE_RECORD | CLONING_SUCCESS
+	update_icon()
+	return CLONING_DELETE_RECORD | CLONING_SUCCESS //so that we don't spam clones with autoprocess unless we leave a body in the scanner
 
 
-/// Prototype cloning console, much more rudimental and lacks modern functions such as saving records, autocloning, or safety checks.
+//Prototype cloning console, much more rudimental and lacks modern functions such as saving records, autocloning, or safety checks.
 /obj/machinery/computer/prototype_cloning
 	name = "prototype cloning console"
 	desc = "Used to operate an experimental cloner."
 	icon_screen = "dna"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/computer/prototype_cloning
-	/// Linked scanner. For scanning.
-	var/obj/machinery/dna_scannernew/scanner = null
-	/// Linked experimental cloning pods
-	var/list/pods
+	var/obj/machinery/dna_scannernew/scanner = null //Linked scanner. For scanning.
+	var/list/pods //Linked experimental cloning pods
 	var/temp = "Inactive"
 	var/scantemp = "Ready to Scan"
-	var/loading = FALSE
+	var/loading = FALSE // Nice loading text
 
 	light_color = LIGHT_COLOR_BLUE
 
@@ -109,7 +102,7 @@
 	if(pods)
 		for(var/P in pods)
 			var/obj/machinery/clonepod/experimental/pod = P
-			if(pod.is_operational() && !(pod.occupant || pod.mess))
+			if(pod.is_operational && !(pod.occupant || pod.mess))
 				return pod
 
 /obj/machinery/computer/prototype_cloning/proc/updatemodules(findfirstcloner)
@@ -125,7 +118,7 @@
 		// Try to find a scanner in that direction
 		scannerf = locate(/obj/machinery/dna_scannernew, get_step(src, direction))
 		// If found and operational, return the scanner
-		if (!isnull(scannerf) && scannerf.is_operational())
+		if (!isnull(scannerf) && scannerf.is_operational)
 			return scannerf
 
 	// If no scanner was found, it will return null
@@ -135,7 +128,7 @@
 	var/obj/machinery/clonepod/experimental/podf = null
 	for(var/direction in GLOB.cardinals)
 		podf = locate(/obj/machinery/clonepod/experimental, get_step(src, direction))
-		if (!isnull(podf) && podf.is_operational())
+		if (!isnull(podf) && podf.is_operational)
 			AttachCloner(podf)
 
 /obj/machinery/computer/prototype_cloning/proc/AttachCloner(obj/machinery/clonepod/experimental/pod)
@@ -222,7 +215,7 @@
 
 	var/datum/browser/popup = new(user, "cloning", "Prototype Cloning System Control")
 	popup.set_content(dat)
-	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
+	//popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.open()
 
 /obj/machinery/computer/prototype_cloning/Topic(href, href_list)
@@ -232,7 +225,7 @@
 	if(loading)
 		return
 
-	else if ((href_list["clone"]) && !isnull(scanner) && scanner.is_operational())
+	else if ((href_list["clone"]) && !isnull(scanner) && scanner.is_operational)
 		scantemp = ""
 
 		loading = TRUE
@@ -243,7 +236,7 @@
 		addtimer(CALLBACK(src, .proc/do_clone), 2 SECONDS)
 
 		//No locking an open scanner.
-	else if ((href_list["lock"]) && !isnull(scanner) && scanner.is_operational())
+	else if ((href_list["lock"]) && !isnull(scanner) && scanner.is_operational)
 		if ((!scanner.locked) && (scanner.occupant))
 			scanner.locked = TRUE
 			playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)

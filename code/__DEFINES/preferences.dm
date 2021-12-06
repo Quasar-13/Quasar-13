@@ -80,10 +80,27 @@
 #define EXP_TYPE_SECURITY		"Security"
 #define EXP_TYPE_SILICON		"Silicon"
 #define EXP_TYPE_SERVICE		"Service"
+
+//Syndiestation
+#define EXP_TYPE_SYNDICATE		"Syndicate Command"
+#define EXP_TYPE_OPERATIONS		"Operations"
+#define EXP_TYPE_LOGISTICS		"Logistics"
+#define EXP_TYPE_TRIAGE		"Triage"
+#define EXP_TYPE_POLICE		"Military Police"
+
+//Other Gamemodes
+#define EXP_TYPE_SOLGOV		"Solgov"
+
 #define EXP_TYPE_ANTAG			"Antag"
 #define EXP_TYPE_SPECIAL		"Special"
 #define EXP_TYPE_GHOST			"Ghost"
 #define EXP_TYPE_ADMIN			"Admin"
+
+///Screentip settings
+#define SCREENTIP_OFF 0
+#define SCREENTIP_SMALL 1
+#define SCREENTIP_MEDIUM 1
+#define SCREENTIP_BIG 1
 
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 1

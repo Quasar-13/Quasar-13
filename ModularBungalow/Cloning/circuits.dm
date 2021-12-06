@@ -14,3 +14,13 @@
 		/obj/item/stack/sheet/glass = 1,
 		/obj/item/stock_parts/micro_laser = 1)
 
+// Experimental cloning
+/obj/item/circuitboard/computer/prototype_cloning
+	name = "Prototype Cloning (Computer Board)"
+	icon_state = "medical"
+	build_path = /obj/machinery/computer/prototype_cloning
+
+/obj/item/circuitboard/machine/clonepod/experimental
+	name = "Experimental Clone Pod (Machine Board)"
+	icon_state = "medical"
+	build_path = /obj/machinery/clonepod/experimental
