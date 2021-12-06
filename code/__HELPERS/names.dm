@@ -16,6 +16,9 @@
 /proc/moth_name()
 	return "[pick(GLOB.moth_first)] [pick(GLOB.moth_last)]"
 
+/proc/beepeople_name()
+	return "[pick(GLOB.bee_first)] [pick(GLOB.bee_last)] \Roman[rand(1,500)]"
+
 GLOBAL_VAR(command_name)
 /proc/command_name()
 	if (GLOB.command_name)

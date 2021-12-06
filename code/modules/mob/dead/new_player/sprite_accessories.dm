@@ -1736,6 +1736,18 @@
 	icon_state = "monkey"
 	color_src = FALSE
 
+/datum/sprite_accessory/tails/bee
+	icon = 'icons/mob/beetail.dmi'
+	color_src = null
+
+/datum/sprite_accessory/tails/bee/simple
+	name = "Simple orange  tail"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/tails/bee/simpleY
+	name = "Simple yellow tail"
+	icon_state = "SimpleY"
+
 /datum/sprite_accessory/snouts
 	icon = 'icons/mob/mutant_bodyparts.dmi'
 
@@ -2040,6 +2052,8 @@
 	icon_state = "burnt_off"
 	locked = TRUE
 
+
+
 /datum/sprite_accessory/moth_wings/firewatch
 	name = "Firewatch"
 	icon_state = "firewatch"
@@ -2075,6 +2089,25 @@
 /datum/sprite_accessory/moth_wings/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
+
+
+//going to use mothg_wings just for now...maybe forever
+/datum/sprite_accessory/moth_wings/bee
+	icon = 'icons/mob/beewings.dmi'
+	color_src = null
+
+/datum/sprite_accessory/moth_wings/bee/simple
+	name = "Simple orange wings"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_wings/bee/simpleY
+	name = "Simple yellow wings"
+	icon_state = "SimpleY"
+
+/datum/sprite_accessory/moth_wings/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+	locked = TRUE
 
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
@@ -2144,6 +2177,22 @@
 	name = "Regal"
 	icon_state = "regal"
 
+/datum/sprite_accessory/moth_antennae/bee
+	icon = 'icons/mob/bee_antennae.dmi'
+	color_src = null
+
+/datum/sprite_accessory/moth_antennae/bee/simple
+	name = "Simple orange antennae"
+	icon_state = "Simple"
+
+/datum/sprite_accessory/moth_antennae/bee/simpley
+	name = "Simple yellow antennae"
+	icon_state = "SimpleY"
+
+/datum/sprite_accessory/moth_antennae/bee/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
 	color_src = null
@@ -2207,3 +2256,4 @@
 /datum/sprite_accessory/moth_markings/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
+
