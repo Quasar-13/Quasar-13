@@ -72,6 +72,7 @@
 	toxpwr = 3
 	material = /datum/material/plasma
 	penetrates_skin = NONE
+	accelerant_quality = 10
 
 /datum/reagent/toxin/plasma/on_new(data)
 	. = ..()
@@ -368,6 +369,7 @@
 	color = "#9ACD32"
 	toxpwr = 0.5
 	taste_description = "burning"
+	accelerant_quality = 10
 
 /datum/reagent/toxin/spore_burning/on_mob_life(mob/living/carbon/M)
 	M.adjust_fire_stacks(2)

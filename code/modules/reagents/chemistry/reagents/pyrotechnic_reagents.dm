@@ -43,6 +43,7 @@
 	metabolization_rate = 4
 	taste_description = "burning"
 	penetrates_skin = NONE
+	accelerant_quality = 20
 
 /datum/reagent/clf3/on_mob_life(mob/living/carbon/M)
 	M.adjust_fire_stacks(2)
@@ -155,6 +156,7 @@
 	color = "#FA00AF"
 	taste_description = "burning"
 	self_consuming = TRUE
+	accelerant_quality = 20
 
 /datum/reagent/phlogiston/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume)
 	. = ..()
@@ -178,6 +180,7 @@
 	taste_description = "burning"
 	self_consuming = TRUE
 	penetrates_skin = NONE
+	accelerant_quality = 20
 
 	// why, just why
 /datum/reagent/napalm/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray, mob/user)
