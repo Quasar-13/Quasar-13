@@ -98,3 +98,39 @@
 		H.dna.features["tail_monkey"] = "None"
 		H.dna.species.mutant_bodyparts -= "tail_monkey"
 		H.update_body()
+
+/obj/item/organ/tail/bee
+	name = "bee tail"
+	desc = "No more honey"
+	color = "#116611"
+	tail_type = "Simple"
+	icon_state = "severedbeetail"
+
+/obj/item/organ/tail/bee/Initialize()
+	. = ..()
+	color = "#"+ random_color()
+
+/obj/item/organ/tail/bee/Insert(mob/living/carbon/human/H, special = 0, drop_if_replaced = TRUE)
+	..()
+	if(istype(H))
+		var/default_part = H.dna.species.mutant_bodyparts["tail_bee"]
+		if(!default_part || default_part == "None")
+			H.dna.features["tail_bee"] = H.dna.species.mutant_bodyparts["tail_bee"] = tail_type
+
+
+/obj/item/organ/tail/bee/Remove(mob/living/carbon/human/H,  special = 0)
+	..()
+	if(istype(H))
+		H.dna.species.mutant_bodyparts -= "tail_bee"
+		color = "#" + H.dna.features["mcolor"] // i dont remember what this do
+		tail_type = H.dna.features["tail_bee"]
+		H.update_body()
+
+/obj/item/organ/tail/bee/before_organ_replacement(obj/item/organ/replacement)
+	. = ..()
+	var/obj/item/organ/tail/bee/new_tail = replacement
+
+	if(!istype(new_tail))
+		return
+
+	new_tail.tail_type = tail_type

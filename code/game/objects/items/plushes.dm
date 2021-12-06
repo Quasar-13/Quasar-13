@@ -618,3 +618,11 @@
 	desc = "Plushie with the shape of a pug, on the back it has a label that says 'In memory of McGriff. Never forget.'"
 	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
 	inhand_icon_state = "mcgriff_plushie"
+
+/obj/item/toy/plush/cubicbee
+	name = "cubic bee plushie"
+	icon_state = "cubic_bee_plush"
+	desc = "A relic from old times."
+	attack_verb_continuous = list("Stings", "hugs")
+	attack_verb_simple = list ("sting", "hug")
+	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
