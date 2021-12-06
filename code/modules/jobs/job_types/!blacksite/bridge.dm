@@ -3,7 +3,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "no one"
+	supervisors = "centcom commander"
 	selection_color = "#10cc74"
 	exp_type = EXP_TYPE_CENTCOM
 	maptype = "blacksite"
