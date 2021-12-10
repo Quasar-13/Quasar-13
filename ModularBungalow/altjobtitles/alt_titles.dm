@@ -122,7 +122,7 @@
 	senior_title = "Chief Military Police"
 
 /datum/job/cmo
-	alt_titles = list("Medical Director", "Head Surgeon")
+	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
 	senior_title = "Senior Medical Officer"
 
 /datum/job/rd
