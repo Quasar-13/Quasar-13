@@ -11,8 +11,8 @@
 
 	outfit = /datum/outfit/job/secretary
 
-	access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT)
-	minimal_access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT)
+	access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_MEDICAL, ACCESS_MAINT_TUNNELS, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_MEDICAL, ACCESS_MAINT_TUNNELS, ACCESS_SEC_DOORS)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECRETARY
@@ -29,7 +29,6 @@
 	belt = /obj/item/pda/captain
 	r_pocket = /obj/item/kitchen/knife/letter_opener
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced/command = 1, /obj/item/workplacecapsule/command = 1)
-
 
 
 /obj/effect/landmark/start/secretary
