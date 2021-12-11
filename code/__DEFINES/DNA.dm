@@ -133,6 +133,7 @@
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
 #define ORGAN_SLOT_APPENDIX "appendix"
+#define ORGAN_SLOT_STINGER "bee_stinger"
 #define ORGAN_SLOT_BRAIN "brain"
 #define ORGAN_SLOT_BRAIN_ANTIDROP "brain_antidrop"
 #define ORGAN_SLOT_BRAIN_ANTISTUN "brain_antistun"
@@ -155,6 +156,7 @@
 #define ORGAN_SLOT_TONGUE "tongue"
 #define ORGAN_SLOT_VOICE "vocal_cords"
 #define ORGAN_SLOT_ZOMBIE "zombie_infection"
+
 
 /// Xenomorph organ slots
 #define ORGAN_SLOT_XENO_ACIDGLAND "acid_gland"
@@ -204,6 +206,7 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 	ORGAN_SLOT_BRAIN_ANTIDROP,
 	ORGAN_SLOT_BRAIN_ANTISTUN,
 	ORGAN_SLOT_TAIL,
+	ORGAN_SLOT_STINGER,
 	ORGAN_SLOT_PARASITE_EGG,
 	ORGAN_SLOT_REGENERATIVE_CORE,
 	ORGAN_SLOT_XENO_PLASMAVESSEL,
