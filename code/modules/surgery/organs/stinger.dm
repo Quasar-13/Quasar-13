@@ -28,11 +28,11 @@
 	if(missed)
 		unembedded()
 
-obj/item/hardened_stinger/embedded(atom/target)
+/obj/item/hardened_stinger/embedded(atom/target)
 	if(isbodypart(target))
 		missed = FALSE
 
-obj/item/hardened_stinger/unembedded()
+/obj/item/hardened_stinger/unembedded()
 	var/turf/T = get_turf(src)
 	visible_message("<span class='warning'>[src] cracks and twists, changing shape!</span>")
 	for(var/i in contents)
