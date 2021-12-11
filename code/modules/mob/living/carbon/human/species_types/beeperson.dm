@@ -134,7 +134,7 @@
 	desc = "launch your stinger"
 	icon_icon = 'icons/mob/actions/actions_bee.dmi'
 	button_icon_state = "stinger_attack"
-	background_icon_state = "bg_alien"
+	background_icon_state = "bg_spell"
 	var/stinger_path = /obj/item/hardened_stinger
 
 //using the ability
