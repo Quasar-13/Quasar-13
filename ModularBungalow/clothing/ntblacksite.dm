@@ -40,19 +40,19 @@
 	name = "NT squad lead armor plates"
 	desc = "This armor vest has added blue plates for easy identification on the battlefield."
 	icon_state = "marine_command"
-	armor = list(MELEE = 35, BULLET = 45, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 20)
+	armor = list(MELEE = 35, BULLET = 45, LASER = 25, ENERGY = 20, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 20)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/medic
 	name = "NT marine medic armor plates"
 	desc = "This armor vest has white plates for those seeking medical attention."
 	icon_state = "marine_medic"
-	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 15, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/engineer
 	name = "NT marine engineer armor plates"
 	desc = "This armor vest has brown plates for those seeking technical assistance."
 	icon_state = "marine_engineer"
-	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 15, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/vest/ntmarine/security
 	name = "NT marine pointman armor plates"
@@ -64,7 +64,7 @@
 	name = "NT marine ranger armor plates"
 	desc = "This armor vest has extra pockets for extra equipment, and is lightweight enought to dash in."
 	icon_state = "marine_sniper"
-	slowdown = -0.2
+	slowdown = -0.3
 	armor = list(MELEE = 10, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/glasses/sniper

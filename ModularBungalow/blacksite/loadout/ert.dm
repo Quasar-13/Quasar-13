@@ -19,13 +19,13 @@
 
 
 /obj/item/storage/backpack/duffelbag/ert
-	name = "E-000 Laser Rifle Kit"
+	name = "E-000 Laser Rifle Kit and Ion Rifle"
 	desc = "Usually given to NT station captains, this rifle is in your hands as well for delicate missions"
 
 /obj/item/storage/backpack/duffelbag/ert/PopulateContents()
 	new /obj/item/gun/energy/laser/captain(src)
+	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
-
 
 /obj/item/storage/backpack/duffelbag/ert/laser
 	name = "Laser Sniper Kit"

@@ -24,7 +24,7 @@
 s
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
-	new /obj/item/gun/ballistic/automatic/ar(src)
+	new /obj/item/gun/ballistic/automatic/ar/semi(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
@@ -63,7 +63,6 @@ s
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/shield/energy(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
 
