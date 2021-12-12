@@ -90,8 +90,6 @@
 
 //Blacksite
 #define EXP_TYPE_NTMARINE		"NT Marines"
-#define EXP_TYPE_CENTCOM		"Central Command"
-#define EXP_TYPE_ERT	"Emergency Response Technician"
 
 //Other Gamemodes
 #define EXP_TYPE_SOLGOV		"Solgov"
