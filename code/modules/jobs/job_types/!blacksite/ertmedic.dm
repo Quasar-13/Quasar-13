@@ -32,13 +32,13 @@
 	back = /obj/item/storage/backpack/ert/medical
 	belt = /obj/item/storage/belt/medical
 	l_hand = /obj/item/storage/firstaid/regular
+	r_hand = /obj/item/gun/medbeam
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/choice_beacon/ert=1,\
 		/obj/item/defibrillator/compact/combat/loaded/nanotrasen=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/reagent_containers/hypospray/combat=1,\
-		/obj/item/storage/firstaid/advanced=1,\
-		/obj/item/gun/medbeam=1)
+		/obj/item/storage/firstaid/advanced=1)
 
 
 //Spawn Point
