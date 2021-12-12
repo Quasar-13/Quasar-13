@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/deathcommando
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_HEADS)
+	minimal_access = list(ACCESS_HEADS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY

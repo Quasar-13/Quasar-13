@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/bridge
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_HEADS)
+	minimal_access = list(ACCESS_HEADS)
 	paycheck = PAYCHECK_CENTCOM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECRETARY
@@ -24,6 +24,6 @@
 	suit = /obj/item/clothing/suit/ntcommand/bridge
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/black
-	ears = /obj/item/radio/headset/heads/headset_cent
+	ears = /obj/item/radio/headset/headset_cent/alt
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id/centcom
