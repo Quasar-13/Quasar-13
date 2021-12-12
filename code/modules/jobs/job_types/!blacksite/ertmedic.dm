@@ -37,6 +37,7 @@
 		/obj/item/defibrillator/compact/combat/loaded/nanotrasen=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/reagent_containers/hypospray/combat=1,\
+		/obj/item/storage/firstaid/advanced=1,\
 		/obj/item/gun/medbeam=1)
 
 

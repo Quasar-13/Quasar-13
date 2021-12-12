@@ -1,8 +1,8 @@
 /datum/job/bridge
 	title = "NT Bridge Officer"
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "centcom commander"
 	selection_color = "#10cc74"
 	exp_type = EXP_TYPE_CENTCOM

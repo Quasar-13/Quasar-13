@@ -3,7 +3,7 @@
 	faction = "Station"
 	total_positions = 15
 	spawn_positions = 15
-	supervisors = "space law and the ERT Commander"
+	supervisors = "the NT Squad Leader and the NT Commander"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
 	maptype = "blacksite"
