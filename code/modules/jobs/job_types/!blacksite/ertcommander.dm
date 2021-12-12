@@ -5,7 +5,7 @@
 	spawn_positions = 1
 	supervisors = "space law and the NT Commander"
 	selection_color = "#10cc74"
-	exp_type = EXP_TYPE_ERT
+	exp_type = EXP_TYPE_NTMARINE
 	maptype = "blacksite"
 
 	outfit = /datum/outfit/job/ertcommander

@@ -141,7 +141,6 @@
 
 /datum/datacore/proc/get_manifest()
 	var/list/manifest_out
-	var/list/standardmode
 
 
 	if(SSmaptype.maptype == "station")
@@ -189,6 +188,14 @@
 			"Military Police"
 		)
 
+	if(SSmaptype.maptype == "blacksite")
+		manifest_out = list(
+			"NT Command",
+			"NT Specialist",
+			"NT Marines"
+		)
+
+
 	if(SSmaptype.maptype == "solgov")
 		manifest_out = list(
 			"Solgov"
@@ -196,7 +203,31 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == standardmode)
+	if(SSmaptype.maptype == "station")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+
+	if(SSmaptype.maptype == "planetary")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+
+	if(SSmaptype.maptype == "ship")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -217,9 +248,14 @@
 			"Military Police" = GLOB.police_positions)
 
 
+	if(SSmaptype.maptype == "blacksite")
+		departments = list(
+			"NT Marines" = GLOB.ntmarines_positions)
+
 	if(SSmaptype.maptype == "solgov")
 		departments = list(
 			"Solgov Personnel" = GLOB.solgov_positions)
+
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

@@ -5,7 +5,7 @@
 	spawn_positions = 1
 	supervisors = "no one"
 	selection_color = "#006928"
-	exp_type = EXP_TYPE_CENTCOM
+	exp_type = EXP_TYPE_NTMARINE
 	maptype = "blacksite"
 
 	outfit = /datum/outfit/job/ntcommander
