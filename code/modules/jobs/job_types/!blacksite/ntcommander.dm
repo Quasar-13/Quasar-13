@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/ntcommander
 
-	access = list(ACCESS_HEADS)
-	minimal_access = list(ACCESS_HEADS)
+	access = list(ACCESS_HEADS, ACCESS_CAPTAIN)
+	minimal_access = list(ACCESS_HEADS, ACCESS_CAPTAIN)
 	paycheck = PAYCHECK_CENTCOMCOMMAND
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN

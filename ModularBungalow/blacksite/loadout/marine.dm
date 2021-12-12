@@ -77,12 +77,16 @@ s
 	new /obj/item/shield/energy(src)
 	new /obj/item/melee/transforming/energy/sword/saber(src)
 	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/belt/bandolier(src)
-	new /obj/item/gun/ballistic/automatic/pistol(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/meteor(src)
+	new /obj/item/storage/box/shotgun/meteor(src)
+	new /obj/item/storage/box/shotgun/frag(src)
+	new /obj/item/storage/belt/bandolier/marine(src)
+	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
 
 /obj/item/storage/backpack/duffelbag/marine/smg
