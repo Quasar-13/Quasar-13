@@ -45,6 +45,8 @@ s
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/storage/bag/chemistry/medic(src)
+	new /obj/item/gun/syringe(src)
 	new /obj/item/storage/firstaid/emergency(src)
 	new /obj/item/storage/firstaid/brute(src)
 	new /obj/item/extinguisher/mini(src)
@@ -59,10 +61,12 @@ s
 	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
 	new /obj/item/clothing/head/beret/eng/hazard(src)
 	new /obj/item/extinguisher/mini(src)
+	new /obj/item/gun/ballistic/rifle/boltaction/brand_new(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
 
@@ -113,11 +117,11 @@ s
 	new /obj/item/clothing/suit/armor/vest/ntmarine/sniper(src)
 	new /obj/item/clothing/neck/cloak/ranger(src)
 	new /obj/item/binoculars(src)
-	new /obj/item/gun/ballistic/rifle/boltaction/brand_new(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
+	new /obj/item/gun/ballistic/automatic/sniper_rifle(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
 
 
