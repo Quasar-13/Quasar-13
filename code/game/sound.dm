@@ -249,7 +249,7 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 			if ("can_open")
 				soundin = pick('sound/effects/can_open1.ogg', 'sound/effects/can_open2.ogg', 'sound/effects/can_open3.ogg')
 			if("gun_t12")
-				soundin = pick('ModularTegustation/Tegusounds/weapons/guns/autorifle-1.ogg','ModularTegustation/Tegusounds/weapons/guns/autorifle-2.ogg','ModularTegustation/Tegusounds/weapons/guns/autorifle-3.ogg')
+				soundin = pick('ModularBungalow/zbungalowsounds/weapons/guns/autorifle-1.ogg','ModularBungalow/zbungalowsounds/weapons/guns/autorifle-2.ogg','ModularBungalow/zbungalowsounds/weapons/guns/autorifle-3.ogg')
 			if("bullet_miss")
 				soundin = pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg')
 			if("revolver_spin")

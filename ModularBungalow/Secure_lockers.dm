@@ -1,7 +1,7 @@
 //lockers
 
 /obj/structure/closet/secure_closet/captains_galaxy
-	icon = 'ModularTegustation/Teguicons/closet.dmi'
+	icon = 'ModularBungalow/legacy_icons/closet.dmi'
 	name = "\proper captain's locker"
 	req_access = list(ACCESS_CAPTAIN)
 	icon_state = "cap"
@@ -31,7 +31,7 @@
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/hop_galaxy
-	icon = 'ModularTegustation/Teguicons/closet.dmi'
+	icon = 'ModularBungalow/legacy_icons/closet.dmi'
 	name = "\proper head of personnel's locker"
 	req_access = list(ACCESS_HOP)
 	icon_state = "hop"

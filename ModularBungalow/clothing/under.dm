@@ -37,8 +37,8 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	icon_state = "voidtech"
 	inhand_icon_state = "void_suit"
-	lefthand_file = 'ModularTegustation/Teguicons/kirie_stuff/left.dmi'
-	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
+	lefthand_file = 'ModularBungalow/legacy_icons/kirie_stuff/left.dmi'
+	righthand_file = 'ModularBungalow/legacy_icons/kirie_stuff/right.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 10)
 	resistance_flags = NONE
 

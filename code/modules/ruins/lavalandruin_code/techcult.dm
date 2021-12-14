@@ -4,7 +4,7 @@
 	name = "tech cult identification card"
 	desc = "An ID card used by religious group praising misterious machine god."
 	access = list(ACCESS_MECHANICUS_BASIC, ACCESS_ROBOTICS)
-	icon = 'ModularTegustation/Teguicons/cards.dmi'
+	icon = 'ModularBungalow/legacy_icons/cards.dmi'
 	icon_state = "techcult"
 	uses_overlays = FALSE
 	registered_age = null
@@ -422,7 +422,7 @@
 /obj/item/organ/heart/cybernetic/tier4
 	name = "quadro-cybernetic heart"
 	desc = "An electronic device designed to mimic the functions of an organic human heart. Can inject with set of chemicals when user enter critical condition and regenerate the dose later."
-	icon = 'ModularTegustation/Teguicons/tier4_organs.dmi'
+	icon = 'ModularBungalow/legacy_icons/tier4_organs.dmi'
 	icon_state = "heart-c-u3"
 	maxHealth = 3 * STANDARD_ORGAN_THRESHOLD
 	dose_available = TRUE
