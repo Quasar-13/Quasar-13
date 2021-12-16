@@ -204,6 +204,10 @@
 	if(last_legion)
 		loot = list(/obj/item/staff/storm)
 		elimination = FALSE
+		// Spawn portal to the tomb
+		if(CONFIG_GET(flag/tombworld_enabled))
+			var/turf/spawning_at = get_turf(GLOB.tomb_portal_location)
+			new /obj/effect/portal/permanent/tomb(spawning_at)
 	else if(prob(20)) //20% chance for sick lootz.
 		loot = list(/obj/structure/closet/crate/necropolis/tendril)
 		if(!true_spawn)

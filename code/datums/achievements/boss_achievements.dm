@@ -128,3 +128,14 @@
 	database_id = BOSS_MEDAL_MARINE_CRUSHER
 	icon = "marine"
 
+/datum/award/achievement/boss/necromancer_kill
+	name = "Necromancer Killer"
+	desc = "Now he lays among those he commanded..."
+	database_id = BOSS_MEDAL_NECROMANCER
+	icon = "necromancer"
+
+/datum/award/achievement/boss/necromancer_crusher
+	name = "Necromancer Crusher"
+	desc = "A worthy foe, turned to dust. How the turntables."
+	database_id = BOSS_MEDAL_NECROMANCER_CRUSHER
+	icon = "necromancer"

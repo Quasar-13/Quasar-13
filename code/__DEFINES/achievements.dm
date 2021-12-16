@@ -69,6 +69,7 @@
 #define BOSS_MEDAL_SWARMERS   "Swarmer Beacon Killer"
 #define BOSS_MEDAL_WENDIGO    "Wendigo Killer"
 #define BOSS_MEDAL_MARINE     "Chaos Marine Killer"
+#define BOSS_MEDAL_NECROMANCER "Necromancer Killer"
 
 #define BOSS_MEDAL_MINER_CRUSHER	  	"Blood-drunk Miner Crusher"
 #define BOSS_MEDAL_FROSTMINER_CRUSHER	"Demonic-frost Miner Crusher"
@@ -80,6 +81,7 @@
 #define BOSS_MEDAL_SWARMERS_CRUSHER		"Swarmer Beacon Crusher"
 #define BOSS_MEDAL_WENDIGO_CRUSHER		"Wendigo Crusher"
 #define BOSS_MEDAL_MARINE_CRUSHER       "Chaos Marine Crusher"
+#define BOSS_MEDAL_NECROMANCER_CRUSHER	"Necromancer Crusher"
 
 // Medal hub IDs for boss-kill scores
 #define BOSS_SCORE 	         "Bosses Killed"
