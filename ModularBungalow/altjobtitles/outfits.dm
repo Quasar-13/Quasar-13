@@ -101,6 +101,7 @@
 	uniform = /obj/item/clothing/under/misc/parade/cdr
 	suit = /obj/item/clothing/suit/armor/captain/cdr_jacket
 
+
 /datum/outfit/job/captain/commandingofficer
 	name = "Captain (Commanding Officer)"
 	head = /obj/item/clothing/head/beret/captain
@@ -112,6 +113,7 @@
 	head = /obj/item/clothing/head/centhat
 	uniform = /obj/item/clothing/under/misc/parade/com
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
+	gloves = /obj/item/clothing/gloves/color/captain/commodore
 
 /datum/outfit/job/captain/marshal
 	name = "Captain (Marshal)"
