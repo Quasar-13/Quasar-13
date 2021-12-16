@@ -110,6 +110,7 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"ERT Security",
 	"Death Commando",
 	"NT Squad Leader",
+	"NT Vehicle Operator",
 	"NT Marine"))
 
 
