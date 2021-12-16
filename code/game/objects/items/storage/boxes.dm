@@ -869,7 +869,7 @@
 	illustration = null
 
 /obj/item/storage/box/beanbag/PopulateContents()
-	for(var/i in 1 to 6)
+	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/beanbag(src)
 
 /obj/item/storage/box/actionfigure
