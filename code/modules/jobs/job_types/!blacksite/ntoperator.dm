@@ -28,7 +28,15 @@
 	head = /obj/item/clothing/head/beret/black
 	belt = null
 	backpack_contents = list(/obj/item/choice_beacon/mech=1,
-		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg =1,
-		/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy=1,
-		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot=1)
+		/obj/item/storage/box/mechapilot =1)
 
+
+
+/obj/item/storage/box/mechapilot
+	name = "mech pilot kit"
+	desc = "A large duffel bag containing all you need for armored support."
+
+/obj/item/storage/box/mechapilot/PopulateContents()
+		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
+		new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy(src)
+		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)
