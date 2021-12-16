@@ -55,7 +55,7 @@ s
 
 /obj/item/storage/backpack/duffelbag/marine/engi
 	name = "Marine Engineering Kit"
-	desc = "Contains a toolbelt, a semi-auto pistol and an energy shield."
+	desc = "Contains a toolbelt, a bolt action rifle, and a turret."
 
 /obj/item/storage/backpack/duffelbag/marine/engi/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
@@ -66,6 +66,7 @@ s
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
+	new /obj/item/choice_beacon/marines/turret(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 

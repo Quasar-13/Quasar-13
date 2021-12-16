@@ -35,6 +35,7 @@
 		/obj/item/choice_beacon/ert=1,\
 		/obj/item/storage/box/handcuffs=1,\
 		/obj/item/gun/energy/pulse/pistol=1,\
+		/obj/item/choice_beacon/marines/turret/heavy=1,\
 		/obj/item/melee/baton/loaded=1)
 
 

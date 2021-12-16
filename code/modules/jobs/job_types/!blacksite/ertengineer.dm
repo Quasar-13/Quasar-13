@@ -36,6 +36,7 @@
 		/obj/item/choice_beacon/ert=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/stack/sheet/mineral/sandbags=50,\
+		/obj/item/choice_beacon/marines/turret=1,\
 		/obj/item/construction/rcd/loaded=1)
 
 
