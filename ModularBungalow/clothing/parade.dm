@@ -49,6 +49,15 @@
 	name = "commodore's parade uniform"
 	icon_state = "spaceship_com"
 
+//Commodore Gloves
+
+/obj/item/clothing/gloves/color/captain/commodore
+	name = "commodore's gloves"
+	desc = "Green gloves from high-ranking naval personnel. Just the sight of this green strikes fear in the hearts of others."
+	worn_icon = 'ModularBungalow/clothing/worn/glovesw.dmi'
+	icon = 'ModularBungalow/clothing/icons/gloves.dmi'
+	icon_state = "commodore_gloves"
+
 
 //Marshal's Parade suit
 
