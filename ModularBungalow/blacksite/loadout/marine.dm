@@ -134,7 +134,6 @@ s
 	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
 	new /obj/item/clothing/glasses/eyepatch(src)
 	new /obj/item/clothing/neck/cloak/samurai (src)
-	new /obj/item/clothing/glasses/eyepatch(src)
 	new /obj/item/vibro_weapon(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
