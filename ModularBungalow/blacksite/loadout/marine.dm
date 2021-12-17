@@ -125,4 +125,14 @@ s
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
 
+/obj/item/storage/backpack/duffelbag/marine/samurai
+	name = "Marine Blademaster Kit"
+	desc = "This kit is great for frontlining, with a bullet deflecting blade."
+
+/obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/samurai(src)
+	new /obj/item/clothing/neck/cloak/samurai (src)
+	new /obj/item/vibro_weapon(src)
+	new /obj/item/gun/ballistic/automatic/pistol(src)
+
 

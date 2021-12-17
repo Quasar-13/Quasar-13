@@ -67,10 +67,10 @@
 	slowdown = -0.3
 	armor = list(MELEE = 10, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
-/obj/item/clothing/glasses/sniper
-	name = "sniper goggles"
-	desc = "NT sniper goggles issued to their sniper corps."
-	worn_icon = 'ModularBungalow/clothing/worn/glassesw.dmi'
-	icon = 'ModularBungalow/clothing/icons/glasses.dmi'
-	icon_state = "snipergoggles"
+/obj/item/clothing/suit/armor/vest/ntmarine/samurai
+	name = "NT marine samurai armor plates"
+	desc = "This armor vest is very light, allowing for amazingly fast movement."
+	icon_state = "marine_samurai"
+	slowdown = -0.4
+	armor = list(MELEE = 5, BULLET = 0, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 5)
 
