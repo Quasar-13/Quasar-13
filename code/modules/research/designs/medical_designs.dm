@@ -825,3 +825,10 @@
 	id = "surgery_wing_reconstruction"
 	surgery = /datum/surgery/advanced/wing_reconstruction
 	research_icon_state = "surgery_chest"
+
+/datum/desing/surgery/reattachment_stinger
+	name = "Re-attachment of stinger"
+	desc = "A reaatach of a lose bee stinger"
+	id = "surgery_bee_stinger"
+	surgery = /datum/surgery/advanced/reattach_stinger
+	research_icon_state = "surgery_groin"

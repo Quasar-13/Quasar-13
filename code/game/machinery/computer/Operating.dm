@@ -125,6 +125,7 @@
 			var/chems_needed = surgery_step.get_chem_list()
 			var/alternative_step
 			var/alt_chems_needed = ""
+			var/obj_needed = surgery_step.get.obj_list()
 			if(surgery_step.repeatable)
 				var/datum/surgery_step/next_step = procedure.get_surgery_next_step()
 				if(next_step)
@@ -136,6 +137,7 @@
 				"name" = capitalize("[parse_zone(procedure.location)] [procedure.name]"),
 				"next_step" = capitalize(surgery_step.name),
 				"chems_needed" = chems_needed,
+				"obj_needed" = obj_needed,
 				"alternative_step" = alternative_step,
 				"alt_chems_needed" = alt_chems_needed
 			))

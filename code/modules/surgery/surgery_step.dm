@@ -9,6 +9,7 @@
 	var/list/chems_needed = list()  //list of chems needed to complete the step. Even on success, the step will have no effect if there aren't the chems required in the mob.
 	var/require_all_chems = TRUE    //any on the list or all on the list?
 	var/silicons_obey_prob = FALSE
+	var/list/obj_needed = list () //item requiered
 
 /datum/surgery_step/proc/try_op(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	var/success = FALSE
@@ -175,6 +176,17 @@
 			var/chemname = temp.name
 			chems += chemname
 	return english_list(chems, and_text = require_all_chems ? " and " : " or ")
+
+/datum/surgery_step/proc/get_obj_list()
+	if (!LAZYLEN(obj_needed))
+		return
+	var/list/objs = list()
+	for(var/R in obj_needed)
+		var/datum/obj/temp = GLOB.objs_needed_surgery[R]
+		if(temp)
+			var/objname = temp.name
+			objs += objname
+	return
 
 //Replaces visible_message during operations so only people looking over the surgeon can see them.
 /datum/surgery_step/proc/display_results(mob/user, mob/living/target, self_message, detailed_message, vague_message, target_detailed = FALSE)

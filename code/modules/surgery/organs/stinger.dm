@@ -2,7 +2,6 @@
 	name = "stinger"
 	desc = "A bee stinger"
 	icon_state = "stinger"
-	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_STINGER
 	var/stinger_type = "Standar"
 
