@@ -18,7 +18,7 @@
 	movement_type = GROUND
 	speak_emote = list("says")
 	speed = 3
-	move_to_delay = 4
+	move_to_delay = 3
 	vision_range = 10
 	ranged = TRUE
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 0.5, CLONE = 0.5, STAMINA = 0, OXY = 0.5)
@@ -198,16 +198,16 @@
 		necrotic_revival()
 	else if((flight_cooldown <= world.time) && (current_stage >= 2) && prob(50))
 		toggle_flight()
-	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(50))
+	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(60))
 		repulse(FALSE)
 	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 2) && (t_distance < 16) && prob(60))
 		var/turf/target_loc = get_step(target, pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,SOUTHEAST,NORTHWEST,SOUTHWEST))
 		blade_dash(target_loc)
 	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 2) && (t_distance < 8) && prob(40))
 		instant_strike(target)
-	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 3) && (t_distance > 0)  && prob(30))
+	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 3)  && prob(50))
 		massacre()
-	else if((strike_cooldown <= world.time) && (t_distance > 2) && (t_distance < 8) && prob(50))
+	else if((strike_cooldown <= world.time) && (t_distance > 2) && (t_distance < 10) && prob(50))
 		lightning_strike(target)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/adjustHealthEffects()
@@ -465,5 +465,5 @@
 	blink(start_turf, end_turf, 30)
 	can_attack = FALSE // To avoid shenanigans with instant death
 	playsound(src, 'sound/magic/blink.ogg', 100, 1)
-	SLEEP_CHECK_DEATH(8)
+	SLEEP_CHECK_DEATH(7)
 	can_attack = TRUE
