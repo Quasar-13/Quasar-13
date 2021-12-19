@@ -189,11 +189,12 @@
 		to_chat(user, "<span class='warning'>The spell can only affect the dead!</span>")
 		return
 	var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
-	if(H.client && ghost?.can_reenter_corpse)
-		ghost.reenter_corpse()
-	else
-		to_chat(user, "<span class='warning'>[H] has no soul!</span>")
-		return
+	if(!H.client)
+		if(ghost?.can_reenter_corpse)
+			ghost.reenter_corpse()
+		else
+			to_chat(user, "<span class='warning'>[H] has no soul!</span>")
+			return
 
 	H.set_species(/datum/species/skeleton/necromancer, icon_update=0)
 	H.revive(full_heal = TRUE, admin_revive = TRUE)

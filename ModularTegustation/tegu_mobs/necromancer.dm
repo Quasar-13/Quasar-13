@@ -10,6 +10,7 @@
 	icon_living = "necromancer"
 	icon = 'ModularTegustation/Teguicons/megafauna.dmi'
 	faction = list("necromancer")
+	attack_sound = 'sound/weapons/punch1.ogg'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	light_color = "#0F0F0F"
 	light_range = 6
@@ -31,9 +32,9 @@
 	wander = FALSE
 	del_on_death = TRUE
 	blood_volume = BLOOD_VOLUME_NORMAL
-	achievement_type = /datum/award/achievement/boss/marine_kill
-	crusher_achievement_type = /datum/award/achievement/boss/marine_crusher
-	score_achievement_type = /datum/award/score/marine_score
+	achievement_type = /datum/award/achievement/boss/necromancer_kill
+	crusher_achievement_type = /datum/award/achievement/boss/necromancer_crusher
+	score_achievement_type = /datum/award/score/necromancer_score
 	deathmessage = "falls to the ground, decaying into glowing particles."
 	deathsound = "sound/magic/curse.ogg"
 	attack_action_types = list(/datum/action/innate/megafauna_attack/necrotic_revival,
@@ -50,6 +51,7 @@
 
 	var/flying = FALSE
 	var/can_move = TRUE
+	var/can_attack = TRUE
 	var/current_stage = 1
 
 	var/has_sword = FALSE
@@ -58,7 +60,7 @@
 	var/revival_cooldown
 	var/revival_cooldown_time = 20 SECONDS
 	var/max_revived = 4 // Can't revive more than this number of remains per spell
-	var/mob/living/skeleton_type = /mob/living/simple_animal/hostile/skeleton/necromancer
+	var/list/skeleton_types = list(/mob/living/simple_animal/hostile/skeleton/necromancer)
 	var/strike_cooldown
 	var/strike_cooldown_time = 8 SECONDS
 	var/strike_range = 4
@@ -154,15 +156,14 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/AttackingTarget()
-	if(!flying)
+	if(can_attack)
 		if(has_sword)
-			sword.melee_attack_chain(src, target)
-			face_atom(target)
 			if(isliving(target))
 				var/mob/living/L = target
+				sword.melee_attack_chain(src, L)
 				if(L.health <= HEALTH_THRESHOLD_DEAD || L.stat == DEAD)
 					devour(L)
-			return TRUE
+				return TRUE
 		return ..()
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/Move()
@@ -199,14 +200,14 @@
 		toggle_flight()
 	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(50))
 		repulse(FALSE)
-	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 2) && prob(70))
+	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 2) && (t_distance < 16) && prob(60))
 		var/turf/target_loc = get_step(target, pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,SOUTHEAST,NORTHWEST,SOUTHWEST))
 		blade_dash(target_loc)
-	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 2) && prob(40))
+	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 2) && (t_distance < 8) && prob(40))
 		instant_strike(target)
-	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 4) && (t_distance > 1)  && prob(30))
+	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 3) && (t_distance > 0)  && prob(30))
 		massacre()
-	else if((strike_cooldown <= world.time) && (get_dist(src, target) > 2) && prob(50))
+	else if((strike_cooldown <= world.time) && (t_distance > 2) && (t_distance < 8) && prob(50))
 		lightning_strike(target)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/adjustHealthEffects()
@@ -241,23 +242,13 @@
 			return
 		var/successful_revival = FALSE
 		for(var/obj/effect/decal/remains/R in T)
+			var/mob/living/skeleton_type = pick(skeleton_types)
 			new skeleton_type(T)
 			revived += 1
 			qdel(R)
 			successful_revival = TRUE
 		if(successful_revival)
 			new /obj/effect/temp_visual/cult/blood/out(T)
-
-/mob/living/simple_animal/hostile/skeleton/necromancer
-	desc = "The creation of a powerful necromancer."
-	faction = list("necromancer")
-
-/mob/living/simple_animal/hostile/skeleton/necromancer/strong
-	desc = "The creation of a powerful necromancer. This one looks a bit tougher."
-	maxHealth = 70
-	health = 70
-	melee_damage_lower = 25
-	melee_damage_upper = 25
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_strike(target)
 	if(strike_cooldown > world.time)
@@ -275,12 +266,13 @@
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_bolt(turf/open/T)
 	var/turf/lightning_source = get_step(get_step(T, NORTH), NORTH)
-	lightning_source.Beam(T, icon_state="lightning[rand(1,12)]", time = 3)
-	playsound(get_turf(T), 'sound/magic/lightningbolt.ogg', 30, TRUE)
+	if(lightning_source)
+		lightning_source.Beam(T, icon_state="lightning[rand(1,12)]", time = 3)
+	playsound(T, 'sound/magic/lightningbolt.ogg', 30, TRUE)
 	for(var/mob/living/L in T)
 		if("necromancer" in L.faction)
 			continue
-		L.adjustFireLoss(35)
+		L.adjustFireLoss(30)
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			H.electrocution_animation(4)
@@ -313,15 +305,17 @@
 		if(distfromcaster == 0)
 			if(isliving(AM))
 				var/mob/living/M = AM
-				M.Paralyze(10)
-				M.adjustBruteLoss(25)
-				to_chat(M, "<span class='userdanger'>You're slammed into the floor by [src]!</span>")
+				if(!("necromancer" in M.faction))
+					M.Paralyze(10)
+					M.adjustBruteLoss(25)
+					to_chat(M, "<span class='userdanger'>You're slammed into the floor by [src]!</span>")
 		else
 			new /obj/effect/temp_visual/gravpush(get_turf(AM), get_dir(src, AM))
 			if(isliving(AM))
 				var/mob/living/M = AM
-				M.adjustBruteLoss(5)
-				to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
+				if(!("necromancer" in M.faction))
+					M.adjustBruteLoss(5)
+					to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
 			AM.safe_throw_at(throwtarget, ((clamp((5 - (clamp(distfromcaster - 2, 0, distfromcaster))), 3, 5))), 1,src, force = MOVE_FORCE_VERY_STRONG)
 
 
@@ -340,16 +334,18 @@
 	for(var/action_type in stage_two_actions)
 		var/datum/action/innate/megafauna_attack/attack_action = new action_type()
 		attack_action.Grant(src)
-	skeleton_type = /mob/living/simple_animal/hostile/skeleton/necromancer/strong
+	skeleton_types = list(/mob/living/simple_animal/hostile/skeleton/necromancer/strong)
 
 /datum/movespeed_modifier/necromancer_flight
 	multiplicative_slowdown = -3
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/toggle_flight()
-	if(flight_cooldown > world.time)
+	if(!can_attack || (flight_cooldown > world.time))
 		return
 	flight_cooldown = world.time + 600 SECONDS // Actual cooldown is set on landing
+	visible_message("<span class='boldwarning'>[src] takes off from the ground!</span>")
 	flying = TRUE
+	can_attack = FALSE
 	repulse_cooldown = world.time + 600 SECONDS // So no double repulse
 	ADD_TRAIT(src, TRAIT_MOVE_PHASING, "ability")
 	add_movespeed_modifier(/datum/movespeed_modifier/necromancer_flight, update = TRUE)
@@ -360,7 +356,6 @@
 	icon_living = "necromancer_winged[has_sword]"
 	pixel_x = -32
 	update_icon()
-	visible_message("<span class='boldwarning'>[src] takes off from the ground!</span>")
 
 	var/oldtransform = transform
 	alpha = 255
@@ -375,9 +370,10 @@
 	animate(src, alpha = 255, transform = oldtransform, 4)
 	animate(pixel_z = 0, time = 4)
 	SLEEP_CHECK_DEATH(4)
+	flight_cooldown = world.time + flight_cooldown_time
 	REMOVE_TRAIT(src, TRAIT_MOVE_PHASING, "ability")
 	can_move = TRUE
-	flight_cooldown = world.time + flight_cooldown_time
+	can_attack = TRUE
 	density = TRUE
 	flying = FALSE
 	remove_movespeed_modifier(/datum/movespeed_modifier/necromancer_flight, update = TRUE)
@@ -399,7 +395,7 @@
 		if(prob(50))
 			target_turfs += T
 			new /obj/effect/temp_visual/cult/turf/floor(T)
-			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 3)
+			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 5)
 
 /* Stage three stuff */
 
@@ -416,6 +412,7 @@
 	update_icon()
 	melee_damage_lower = 0 // All the new damage is in the sword
 	melee_damage_upper = 0
+	skeleton_types |= /mob/living/simple_animal/hostile/skeleton/necromancer/mage
 	for(var/action_type in stage_three_actions)
 		var/datum/action/innate/megafauna_attack/attack_action = new action_type()
 		attack_action.Grant(src)
@@ -455,7 +452,7 @@
 	spot1.Beam(spot2, "blood_beam", time=duration)
 	for(var/turf/B in getline(start_t, end_t))
 		for(var/mob/living/victim in B)
-			if( victim != src)
+			if(!("necromancer" in victim.faction) && victim != src)
 				sword.melee_attack_chain(src, victim)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/blade_dash(target)
@@ -466,4 +463,7 @@
 	var/turf/start_turf = get_turf(src)
 	var/turf/end_turf = get_turf(target)
 	blink(start_turf, end_turf, 30)
+	can_attack = FALSE // To avoid shenanigans with instant death
 	playsound(src, 'sound/magic/blink.ogg', 100, 1)
+	SLEEP_CHECK_DEATH(8)
+	can_attack = TRUE

@@ -95,7 +95,8 @@
 #define SWARMER_BEACON_SCORE "Swarmer Beacs Killed"
 #define WENDIGO_SCORE	 	 "Wendigos Killed"
 #define TENDRIL_CLEAR_SCORE	 "Tendrils Killed"
-#define MARINE_SCORE         "Marines Killed"
+#define MARINE_SCORE		 "Marines Killed"
+#define NECROMANCER_SCORE	 "Necromancers Killed"
 
 // DB ID for hardcore random mode
 #define HARDCORE_RANDOM_SCORE "Hardcore Random Score"

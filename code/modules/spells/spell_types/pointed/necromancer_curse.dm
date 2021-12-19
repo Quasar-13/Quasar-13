@@ -3,14 +3,14 @@
 	desc = "A spell that will heavily damage the undead. Use against your ungrateful 'servants'."
 	school = "transmutation"
 	charge_type = "recharge"
-	charge_max = 10
+	charge_max = 45
 	charge_counter = 0
 	clothes_req = TRUE
 	stat_allowed = TRUE
 	invocation = "D'thi U'n Ye!"
 	invocation_type = INVOCATION_SHOUT
 	range = 7
-	cooldown_min = 5
+	cooldown_min = 15
 	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
 	action_icon_state = "zap"
 	active_msg = "You prepare to curse a target..."
@@ -35,9 +35,8 @@
 						   "<span class='danger'>You feel sharp pain coming from your bones as shadows grow larger!</span>")
 
 	// Death upon you
-	target.Paralyze(15)
-	target.Jitter(10)
-	target.adjustStaminaLoss(20)
+	target.Paralyze(25)
+	target.Jitter(25)
 	target.adjustBruteLoss(20)
 	target.adjustFireLoss(20)
 	playsound(target, 'sound/effects/curseattack.ogg', 70, 1)
