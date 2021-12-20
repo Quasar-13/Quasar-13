@@ -6,7 +6,7 @@
 	icon_state = "syringerifle"
 	max_syringes = 3
 
-
+//Syndiecorps pistols
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
 	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."
