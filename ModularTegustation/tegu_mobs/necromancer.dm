@@ -3,7 +3,7 @@
 	desc = "A powerful mage in a dark armor. Legends say that he has sold his and countless souls of other mages for this power."
 	health = 3000
 	maxHealth = 3000
-	armour_penetration = 10 // Low AP
+	armour_penetration = 20 // Low AP
 	melee_damage_lower = 60 // HIGH damage
 	melee_damage_upper = 60 // SO yeah, it's a killer of weak people
 	icon_state = "necromancer"
@@ -58,7 +58,7 @@
 	var/obj/item/necromancer_sword/mob/sword
 
 	var/revival_cooldown
-	var/revival_cooldown_time = 20 SECONDS
+	var/revival_cooldown_time = 10 SECONDS
 	var/max_revived = 4 // Can't revive more than this number of remains per spell
 	var/list/skeleton_types = list(/mob/living/simple_animal/hostile/skeleton/necromancer)
 	var/strike_cooldown
@@ -66,24 +66,25 @@
 	var/strike_range = 4
 	var/strike_delay = 1
 	var/repulse_cooldown
-	var/repulse_cooldown_time = 12 SECONDS
+	var/repulse_cooldown_time = 8 SECONDS
 	var/repulse_range = 3
 	// Stage two spells
 	var/flight_cooldown
-	var/flight_cooldown_time = 30 SECONDS
+	var/flight_cooldown_time = 20 SECONDS
 	var/instant_strike_cooldown
-	var/instant_strike_cooldown_time = 4 SECONDS
+	var/instant_strike_cooldown_time = 6 SECONDS
 	// Stage three spells
 	var/list/penta_angles = list(196, 48, 270, 128, 338)
 	var/list/penta_distances = list(6, 6, 6, 6, 6)
 	var/massacre_cooldown
-	var/massacre_cooldown_time = 20 SECONDS
+	var/massacre_cooldown_time = 14 SECONDS
 	var/dash_cooldown
-	var/dash_cooldown_time = 10 SECONDS
+	var/dash_cooldown_time = 6 SECONDS
 
 /obj/item/necromancer_sword/mob // OP pls nerf
-	armour_penetration = 15
+	armour_penetration = 25
 	force = 70
+	block_chance = 0
 	wound_bonus = -100
 	bare_wound_bonus = -100
 
@@ -200,12 +201,12 @@
 		toggle_flight()
 	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(60))
 		repulse(FALSE)
-	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 2) && (t_distance < 16) && prob(60))
+	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 0) && (t_distance < 16) && prob(60))
 		var/turf/target_loc = get_step(target, pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,SOUTHEAST,NORTHWEST,SOUTHWEST))
 		blade_dash(target_loc)
 	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 2) && (t_distance < 8) && prob(40))
 		instant_strike(target)
-	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 3)  && prob(50))
+	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 4)  && prob(50))
 		massacre()
 	else if((strike_cooldown <= world.time) && (t_distance > 2) && (t_distance < 10) && prob(50))
 		lightning_strike(target)
@@ -214,6 +215,8 @@
 	if(health <= maxHealth/3)
 		max_revived = 6
 		if(current_stage < 3)
+			if(current_stage < 2) // In case of extraordinarily high damage (admemes?)
+				stage_two()
 			stage_three()
 	else if(health <= maxHealth/1.5)
 		max_revived = 5
@@ -324,6 +327,7 @@
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/stage_two()
 	if(current_stage >= 2)
 		return
+	damage_coeff = list(BRUTE = 0.8, BURN = 0.4, TOX = 0.4, CLONE = 0.4, STAMINA = 0, OXY = 0.4)
 	current_stage = 2
 	icon_state = "necromancer_winged[has_sword]"
 	icon_living = "necromancer_winged[has_sword]"
@@ -402,6 +406,7 @@
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/stage_three()
 	if(current_stage >= 3)
 		return
+	damage_coeff = list(BRUTE = 0.65, BURN = 0.2, TOX = 0.2, CLONE = 0.2, STAMINA = 0, OXY = 0.2)
 	current_stage = 3
 	visible_message("<span class='boldannounce'>The [src] raises his arm in the air and a sword materializes in his hand!</span>")
 	playsound(src, 'sound/effects/wounds/crack2.ogg', 100, 1)

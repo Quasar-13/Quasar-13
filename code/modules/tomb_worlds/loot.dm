@@ -6,7 +6,15 @@
 /obj/item/clothing/head/wizard/magus/necromancer
 	name = "\improper Necromancer helm"
 	desc = "A helmet that was once worn by a powerful mage that delved way too far into the dark magic techniques."
-	armor = list(MELEE = 70, BULLET = 40, LASER = 40, ENERGY = 50, BOMB = 50, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	armor = list(MELEE = 80, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	flash_protect = FLASH_PROTECTION_WELDER
+	resistance_flags = FIRE_PROOF | LAVA_PROOF
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	strip_delay = 80
 	var/obj/effect/proc_holder/spell/pointed/necromancer_curse/spell
 
@@ -31,7 +39,16 @@
 	desc = "A set of dark armored robes that seem to be emitting the power of its previous owner."
 	icon_state = "magusdark"
 	inhand_icon_state = "magusdark"
-	armor = list(MELEE = 70, BULLET = 40, LASER = 40, ENERGY = 50, BOMB = 50, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	armor = list(MELEE = 80, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	resistance_flags = FIRE_PROOF | LAVA_PROOF
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/necromancer_sword)
 	strip_delay = 80
 	var/obj/effect/proc_holder/spell/targeted/touch/necrotic_revival/spell
 
@@ -42,13 +59,13 @@
 /obj/item/clothing/suit/wizrobe/necromancer/equipped(mob/user, slot)
 	. = ..()
 	if(slot & ITEM_SLOT_OCLOTHING)
-		user.mind.AddSpell(spell)
+		user?.mind?.AddSpell(spell)
 		return
-	user.mind.RemoveSpell(spell)
+	user?.mind?.TempRemoveSpell(spell)
 
 /obj/item/clothing/suit/wizrobe/necromancer/dropped(mob/user)
 	..()
-	user.mind.RemoveSpell(spell)
+	user?.mind?.TempRemoveSpell(spell)
 
 // Sword
 /obj/item/necromancer_sword
@@ -57,9 +74,10 @@
 	icon_state = "hfrequency0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	armour_penetration = 20
-	force = 35
-	throwforce = 30
+	armour_penetration = 35
+	block_chance = 30
+	force = 32
+	throwforce = 28
 	throw_speed = 4
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("cuts", "slices", "dices")

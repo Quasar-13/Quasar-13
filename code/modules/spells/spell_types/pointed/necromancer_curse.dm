@@ -3,7 +3,7 @@
 	desc = "A spell that will heavily damage the undead. Use against your ungrateful 'servants'."
 	school = "transmutation"
 	charge_type = "recharge"
-	charge_max = 45
+	charge_max = 40
 	charge_counter = 0
 	clothes_req = TRUE
 	stat_allowed = TRUE

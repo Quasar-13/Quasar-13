@@ -186,7 +186,11 @@
 		..()
 		return
 	if(H.stat != DEAD)
-		to_chat(user, "<span class='warning'>The spell can only affect the dead!</span>")
+		if(isskeleton(target) || isvampire(target) || iszombie(target))
+			H.revive(full_heal = TRUE, admin_revive = TRUE)
+			to_chat(H, "<span class='userdanger'>You have been healed by [user.real_name]!</span>")
+			return ..()
+		to_chat(user, "<span class='warning'>The spell can only affect the dead, or living dead!</span>")
 		return
 	var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
 	if(!H.client)
@@ -198,6 +202,6 @@
 
 	H.set_species(/datum/species/skeleton/necromancer, icon_update=0)
 	H.revive(full_heal = TRUE, admin_revive = TRUE)
-	to_chat(H, "<span class='userdanger'>You have been revived by </span><B>[user.real_name]!</B>")
+	to_chat(H, "<span class='userdanger'>You have been revived by [user.real_name]!</span>")
 
 	return ..()
