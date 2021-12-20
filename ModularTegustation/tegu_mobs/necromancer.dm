@@ -1,8 +1,8 @@
 /mob/living/simple_animal/hostile/megafauna/necromancer
 	name = "necromancer"
 	desc = "A powerful mage in a dark armor. Legends say that he has sold his and countless souls of other mages for this power."
-	health = 3000
-	maxHealth = 3000
+	health = 3300
+	maxHealth = 3300
 	armour_penetration = 20 // Low AP
 	melee_damage_lower = 60 // HIGH damage
 	melee_damage_upper = 60 // SO yeah, it's a killer of weak people
@@ -19,7 +19,8 @@
 	speak_emote = list("says")
 	speed = 3
 	move_to_delay = 3
-	vision_range = 10
+	vision_range = 20
+	aggro_vision_range = 30 // Nowhere to run
 	ranged = TRUE
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 0.5, CLONE = 0.5, STAMINA = 0, OXY = 0.5)
 	loot = list(/obj/item/clothing/suit/wizrobe/necromancer,
@@ -39,13 +40,14 @@
 	deathsound = "sound/magic/curse.ogg"
 	attack_action_types = list(/datum/action/innate/megafauna_attack/necrotic_revival,
 							/datum/action/innate/megafauna_attack/lightning_strike,
-							/datum/action/innate/megafauna_attack/repulse
+							/datum/action/innate/megafauna_attack/repulse,
 							)
 	var/stage_two_actions = list(/datum/action/innate/megafauna_attack/nflight,
 							/datum/action/innate/megafauna_attack/instant_strike,
 							)
 	var/stage_three_actions = list(/datum/action/innate/megafauna_attack/massacre,
 							/datum/action/innate/megafauna_attack/blade_dash,
+							/datum/action/innate/megafauna_attack/lightning_storm,
 							)
 	move_force = MOVE_FORCE_NORMAL
 
@@ -62,24 +64,27 @@
 	var/max_revived = 4 // Can't revive more than this number of remains per spell
 	var/list/skeleton_types = list(/mob/living/simple_animal/hostile/skeleton/necromancer)
 	var/strike_cooldown
-	var/strike_cooldown_time = 8 SECONDS
+	var/strike_cooldown_time = 7 SECONDS
 	var/strike_range = 4
 	var/strike_delay = 1
 	var/repulse_cooldown
-	var/repulse_cooldown_time = 8 SECONDS
+	var/repulse_cooldown_time = 7 SECONDS
 	var/repulse_range = 3
 	// Stage two spells
 	var/flight_cooldown
-	var/flight_cooldown_time = 20 SECONDS
+	var/flight_cooldown_time = 14 SECONDS
 	var/instant_strike_cooldown
-	var/instant_strike_cooldown_time = 6 SECONDS
+	var/instant_strike_cooldown_time = 7 SECONDS
 	// Stage three spells
 	var/list/penta_angles = list(196, 48, 270, 128, 338)
 	var/list/penta_distances = list(6, 6, 6, 6, 6)
 	var/massacre_cooldown
-	var/massacre_cooldown_time = 14 SECONDS
+	var/massacre_cooldown_time = 10 SECONDS
 	var/dash_cooldown
 	var/dash_cooldown_time = 6 SECONDS
+	var/storm_cooldown
+	var/storm_cooldown_time = 18 SECONDS
+	var/storm_amount = 100 // How many times the lightning strikes.
 
 /obj/item/necromancer_sword/mob // OP pls nerf
 	armour_penetration = 25
@@ -145,6 +150,13 @@
 	chosen_message = "<span class='colossus'>You will now dash towards your target.</span>"
 	chosen_attack_num = 202
 
+/datum/action/innate/megafauna_attack/lightning_storm
+	name = "Lightning Storm"
+	icon_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon_state = "storm"
+	chosen_message = "<span class='colossus'>You will now start a giant storm near your target.</span>"
+	chosen_attack_num = 203
+
 /mob/living/simple_animal/hostile/megafauna/necromancer/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
 	if(!forced && flying)
 		return FALSE
@@ -189,6 +201,8 @@
 				massacre()
 			if(202)
 				blade_dash(target)
+			if(203)
+				lightning_storm(target)
 		return
 	Goto(target, move_to_delay, minimum_distance)
 	var/remains_in_range = 0
@@ -199,31 +213,42 @@
 		necrotic_revival()
 	else if((flight_cooldown <= world.time) && (current_stage >= 2) && prob(50))
 		toggle_flight()
-	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(60))
-		repulse(FALSE)
-	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 0) && (t_distance < 16) && prob(60))
+	else if((dash_cooldown <= world.time) && (current_stage >= 3) && (t_distance > 0) && (t_distance < 16) && prob(80))
 		var/turf/target_loc = get_step(target, pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,SOUTHEAST,NORTHWEST,SOUTHWEST))
 		blade_dash(target_loc)
-	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 2) && (t_distance < 8) && prob(40))
+	else if((repulse_cooldown <= world.time) && (t_distance < repulse_range) && prob(60))
+		repulse(FALSE)
+	else if((instant_strike_cooldown <= world.time) && (current_stage >= 2) && (t_distance > 1) && (t_distance < 11) && prob(60))
 		instant_strike(target)
-	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 4)  && prob(50))
+	else if((storm_cooldown <= world.time) && (current_stage >= 3) && prob(40))
+		lightning_storm(target)
+	else if((massacre_cooldown <= world.time) && (current_stage >= 3) && (t_distance < 8)  && prob(50))
 		massacre()
-	else if((strike_cooldown <= world.time) && (t_distance > 2) && (t_distance < 10) && prob(50))
+	else if((strike_cooldown <= world.time) && (t_distance > 1) && (t_distance < 10) && prob(60))
 		lightning_strike(target)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/adjustHealthEffects()
 	if(health <= maxHealth/3)
 		max_revived = 6
+		repulse_range = 5
+		strike_range = 6
+		storm_amount = 200
 		if(current_stage < 3)
+			stage_three()
 			if(current_stage < 2) // In case of extraordinarily high damage (admemes?)
 				stage_two()
-			stage_three()
 	else if(health <= maxHealth/1.5)
 		max_revived = 5
+		repulse_range = 4
+		strike_range = 5
+		storm_amount = 150
 		if(current_stage < 2)
 			stage_two()
 	else if(health > maxHealth/1.5)
 		max_revived = initial(max_revived)
+		repulse_range = initial(repulse_range)
+		strike_range = initial(strike_range)
+		storm_amount = initial(storm_amount)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/devour(mob/living/L)
 	for(var/obj/item/W in L)
@@ -260,6 +285,8 @@
 	say("Lini Azam!")
 	playsound(src, 'sound/magic/lightningshock.ogg', 60, 1)
 	var/list/target_turfs = list()
+	if(current_stage >= 3)
+		instant_strike(target, TRUE)
 	for(var/turf/open/T in range(strike_range, target))
 		if(prob(40))
 			target_turfs += T
@@ -268,6 +295,8 @@
 			SLEEP_CHECK_DEATH(strike_delay)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_bolt(turf/open/T)
+	if(!T)
+		return // No turf? Do nothing.
 	var/turf/lightning_source = get_step(get_step(T, NORTH), NORTH)
 	if(lightning_source)
 		lightning_source.Beam(T, icon_state="lightning[rand(1,12)]", time = 3)
@@ -354,6 +383,8 @@
 	ADD_TRAIT(src, TRAIT_MOVE_PHASING, "ability")
 	add_movespeed_modifier(/datum/movespeed_modifier/necromancer_flight, update = TRUE)
 	move_to_delay -= 1
+	speed -= 1
+	handle_automated_action()
 	density = FALSE
 	icon = 'ModularTegustation/Teguicons/96x32.dmi'
 	icon_state = "necromancer_winged[has_sword]"
@@ -382,17 +413,20 @@
 	flying = FALSE
 	remove_movespeed_modifier(/datum/movespeed_modifier/necromancer_flight, update = TRUE)
 	move_to_delay += 1
+	speed += 1
+	handle_automated_action()
 	icon = 'ModularTegustation/Teguicons/megafauna.dmi'
 	pixel_x = 0
 	update_icon()
 	playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
 	repulse(TRUE)
 
-/mob/living/simple_animal/hostile/megafauna/necromancer/proc/instant_strike(target)
-	if(instant_strike_cooldown > world.time)
+/mob/living/simple_animal/hostile/megafauna/necromancer/proc/instant_strike(target, forced = FALSE)
+	if(!forced && instant_strike_cooldown > world.time)
 		return
-	instant_strike_cooldown = world.time + instant_strike_cooldown_time
-	say("Insati Li Azamo!")
+	if(!forced)
+		instant_strike_cooldown = world.time + instant_strike_cooldown_time
+		say("Insati Li Azamo!")
 	playsound(src, 'sound/magic/lightningshock.ogg', 60, 1)
 	var/list/target_turfs = list()
 	for(var/turf/open/T in range(2, target))
@@ -406,7 +440,7 @@
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/stage_three()
 	if(current_stage >= 3)
 		return
-	damage_coeff = list(BRUTE = 0.65, BURN = 0.2, TOX = 0.2, CLONE = 0.2, STAMINA = 0, OXY = 0.2)
+	damage_coeff = list(BRUTE = 0.6, BURN = 0.2, TOX = 0.2, CLONE = 0.2, STAMINA = 0, OXY = 0.2)
 	current_stage = 3
 	visible_message("<span class='boldannounce'>The [src] raises his arm in the air and a sword materializes in his hand!</span>")
 	playsound(src, 'sound/effects/wounds/crack2.ogg', 100, 1)
@@ -470,5 +504,20 @@
 	blink(start_turf, end_turf, 30)
 	can_attack = FALSE // To avoid shenanigans with instant death
 	playsound(src, 'sound/magic/blink.ogg', 100, 1)
-	SLEEP_CHECK_DEATH(7)
+	SLEEP_CHECK_DEATH(5)
 	can_attack = TRUE
+
+/mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_storm(target)
+	if(storm_cooldown > world.time)
+		return
+	storm_cooldown = world.time + storm_cooldown_time
+	say("Un' Lim' Azam!")
+	playsound(src, 'sound/magic/lightningshock.ogg', 100, 1)
+	var/list/target_turfs = list()
+	for(var/turf/open/T in range(strike_range*3, target))
+		target_turfs += T
+	for(var/x in 1 to storm_amount)
+		var/turf/open/TT = pick(target_turfs)
+		new /obj/effect/temp_visual/cult/turf/floor(TT)
+		addtimer(CALLBACK(src, .proc/lightning_bolt, TT), 7)
+		SLEEP_CHECK_DEATH(strike_delay)

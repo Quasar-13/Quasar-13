@@ -6,7 +6,7 @@
 /obj/item/clothing/head/wizard/magus/necromancer
 	name = "\improper Necromancer helm"
 	desc = "A helmet that was once worn by a powerful mage that delved way too far into the dark magic techniques."
-	armor = list(MELEE = 80, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	armor = list(MELEE = 70, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -15,6 +15,8 @@
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	strip_delay = 80
 	var/obj/effect/proc_holder/spell/pointed/necromancer_curse/spell
 
@@ -39,7 +41,7 @@
 	desc = "A set of dark armored robes that seem to be emitting the power of its previous owner."
 	icon_state = "magusdark"
 	inhand_icon_state = "magusdark"
-	armor = list(MELEE = 80, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
+	armor = list(MELEE = 70, BULLET = 50, LASER = 40, ENERGY = 60, BOMB = 80, BIO = 100, RAD = 70, FIRE = 100, ACID = 100,  WOUND = 30)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
