@@ -91,6 +91,7 @@
 	var/bolt_cooldown
 	var/bolt_cooldown_time = 10 SECONDS
 	var/max_affected = 3
+	var/bolt_power = 25000 // Damage in a weird way. Human damage is divided by thousand
 
 /obj/item/necromancer_sword/attack_self(mob/user)
 	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -152,3 +153,8 @@
 		skele.faction = skele_factions
 		qdel(R)
 		new /obj/effect/temp_visual/cult/blood/out(T)
+	for(var/obj/O in T)
+		if(currently_affected >= max_affected)
+			return
+		currently_affected += 1
+		O.zap_act(bolt_power, zap_flags = ZAP_DEFAULT_FLAGS)
