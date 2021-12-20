@@ -935,12 +935,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 
-			//Syndiestation, REPLACE ASAP
+
 			if(SSmaptype.maptype == "syndicate")
 				if(job.maptype == "none")
 					continue
 
 			if(SSmaptype.maptype == "solgov")
+				if(job.maptype == "none")
+					continue
+
+			if(SSmaptype.maptype == "blacksite")
 				if(job.maptype == "none")
 					continue
 

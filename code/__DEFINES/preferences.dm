@@ -88,8 +88,12 @@
 #define EXP_TYPE_TRIAGE		"Triage"
 #define EXP_TYPE_POLICE		"Military Police"
 
+//Blacksite
+#define EXP_TYPE_NTMARINE		"NT Marines"
+
 //Other Gamemodes
 #define EXP_TYPE_SOLGOV		"Solgov"
+
 
 #define EXP_TYPE_ANTAG			"Antag"
 #define EXP_TYPE_SPECIAL		"Special"

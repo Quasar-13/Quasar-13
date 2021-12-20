@@ -11,3 +11,10 @@
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "ranger_cloak"
+
+/obj/item/clothing/neck/cloak/samurai
+	name = "samurai cloak"
+	desc = "A cloak used by ancient NT samurai."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "samurai"
