@@ -112,19 +112,20 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergeant")
-	senior_title = "Sergeant Major"
-	ultra_senior_title = "Weapons Dealer"
+	alt_titles = list("Brig Chief", "Security Sergeant")
+	senior_title = list("Master-At-Arms", "Security Major")
+  ultra_senior_title = "Arms Dealer
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergeant"
-	ultra_senior_title = "CO2 Machine"
+	senior_title = list("Intelligence Officer", "Chief Investigator")
+  ultra_senior_title = "CO2 Machine"
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
-	senior_title = "Man-at-Arms"
-	ultra_senior_title = "Harmbatoner"
+	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
+	senior_title = list("Man-at-Arms", "Sergeant Officer")
+  ultra_senior_title = "Harmbatoner"
+
 
 //Supply
 /datum/job/mining
@@ -149,7 +150,7 @@
 	ultra_senior_title = "Murderer With An Excuse"
 
 /datum/job/cmo
-	alt_titles = list("Medical Director", "Head Surgeon")
+	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
 	senior_title = "Senior Medical Officer"
 	ultra_senior_title = "People Fixer V2"
 
@@ -163,7 +164,7 @@
 	senior_title = "Senior Project Manager"
 	ultra_senior_title = "Jerry the Builder"
 
-/datum/job/tegu/secretary
+/datum/job/secretary
 	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
 	senior_title = "Diplomat"
 	ultra_senior_title = "Sharon"
@@ -174,7 +175,12 @@
 	ultra_senior_title = "AA Granter"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer")
+	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
 	ultra_senior_title = "The Big Person"
+
+
+//Funny role
+/datum/job/staff_officer
+	alt_titles = list("Field Officer")
 

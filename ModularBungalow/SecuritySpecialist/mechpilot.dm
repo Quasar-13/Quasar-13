@@ -14,7 +14,7 @@
 
 /obj/item/choice_beacon/spec/spawn_option(obj/choice,mob/living/M)
 	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Please Stand by for titanfall.</span>")
+	to_chat(M, "<span class='hear'>Stand by for titanfall.</span>")
 
 
 

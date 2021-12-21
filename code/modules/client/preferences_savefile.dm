@@ -407,6 +407,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_moth_wings"], features["moth_wings"])
 	READ_FILE(S["feature_moth_antennae"], features["moth_antennae"])
 	READ_FILE(S["feature_moth_markings"], features["moth_markings"])
+	READ_FILE(S["feature_bee_wings"], features["bee_wings"]) //bee
+	READ_FILE(S["feature_bee_tail"], features["tail_bee"]) //beeeee
+	READ_FILE(S["feature_bee_antennae"], features["bee_antennae"])// BEEGONE
 	READ_FILE(S["persistent_scars"] , persistent_scars)
 	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences)//tegu edit - alt job titles
 	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences)
@@ -517,6 +520,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list, "Plain")
 	features["moth_antennae"] 	= sanitize_inlist(features["moth_antennae"], GLOB.moth_antennae_list, "Plain")
 	features["moth_markings"] 	= sanitize_inlist(features["moth_markings"], GLOB.moth_markings_list, "None")
+	features["bee_wings"]	= sanitize_inlist(features["bee_wings"], GLOB.bee_wings_list)
+	features["tail_bee"]	= sanitize_inlist(features["tail_bee"], GLOB.bee_tails_list)
+	features["bee_antennae"] = sanitize_inlist(features["bee_antennae"], GLOB.bee_antennae_list)
 
 	persistent_scars = sanitize_integer(persistent_scars)
 
@@ -579,6 +585,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
 	WRITE_FILE(S["feature_beefcolor"]					, features["beefcolor"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["feature_beefeyes"]					, features["beefeyes"])
+	WRITE_FILE(S["feature_bee_tail"]					,features["tail_bee"])
+	WRITE_FILE(S["feature_bee_wings"]					,features["bee_wings"])
+	WRITE_FILE(S["feature_bee_antennae"]				,features["bee_antennae"])
 	WRITE_FILE(S["feature_beefmouth"]					, features["beefmouth"]) // Tegustation Beefmen edit
 	WRITE_FILE(S["persistent_scars"]			, persistent_scars)
 

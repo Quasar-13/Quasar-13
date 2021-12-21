@@ -20,8 +20,7 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	liked_food = MEAT | RAW | DAIRY | SEAFOOD
 	disliked_food = GROSS | CLOTH
-	toxic_food = FRUIT | VEGETABLES
-//	toxicliked_food = DAIRY				For later
+	toxic_food = FRUIT | VEGETABLES | POLLEN
 	ass_image = 'icons/ass/asscat.png'
 
 //Curiosity killed the cat's wagging tail.
@@ -75,6 +74,10 @@
 		if(H.dna.features["tail_human"] == "Cat")
 			var/obj/item/organ/tail/cat/tail = new
 			tail.Insert(H, drop_if_replaced = FALSE)
+		else if(H.dna.features["tail_human"] == "Fox")
+			var/obj/item/organ/tail/cat/fox/tail = new
+			tail.Insert(H, special = TRUE, drop_if_replaced = FALSE)
+			mutant_organs += /obj/item/organ/tail/cat/fox
 		else
 			mutant_organs = list()
 	return ..()

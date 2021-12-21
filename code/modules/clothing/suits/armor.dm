@@ -18,27 +18,27 @@
 
 /obj/item/clothing/suit/armor/vest
 	name = "armor vest"
-	desc = "A slim Type I armored vest that provides decent protection against most types of damage."
+	desc = "A slim Type I armored vest that provides decent protection against most types of damage, the most common vest in the galaxy."
 	icon_state = "armoralt"
 	inhand_icon_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 
 /obj/item/clothing/suit/armor/vest/alt
-	desc = "A Type I armored vest that provides decent protection against most types of damage."
+	desc = "A C2-A armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	inhand_icon_state = "armor"
 
 /obj/item/clothing/suit/armor/vest/old
 	name = "degrading armor vest"
-	desc = "Older generation Type 1 armored vest. Due to degradation over time the vest is far less maneuverable to move in."
+	desc = "Older generation Type C armored vest. Due to degradation over time the vest is far less maneuverable to move in."
 	icon_state = "armor"
 	inhand_icon_state = "armor"
 	slowdown = 1
 
 /obj/item/clothing/suit/armor/vest/blueshirt
 	name = "large armor vest"
-	desc = "A large, yet comfortable piece of armor, protecting you from some threats."
+	desc = "The Mk5-F vest, a SolGov classic..."
 	icon_state = "blueshift"
 	inhand_icon_state = "blueshift"
 	custom_premium_price = PAYCHECK_HARD
@@ -156,7 +156,7 @@
 
 /obj/item/clothing/suit/armor/bulletproof
 	name = "bulletproof armor"
-	desc = "A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
+	desc = "A Model 109 heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent, favored by Galactic Press reporters."
 	icon_state = "bulletproof"
 	inhand_icon_state = "armor"
 	blood_overlay_type = "armor"
@@ -185,7 +185,7 @@
 
 /obj/item/clothing/suit/armor/vest/det_suit
 	name = "detective's armor vest"
-	desc = "An armored vest with a detective's badge on it."
+	desc = "A C2-A vest with a detective's badge on it."
 	icon_state = "detective-armor"
 	resistance_flags = FLAMMABLE
 	dog_fashion = null

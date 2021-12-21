@@ -25,6 +25,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isspaceturf(A) (istype(A, /turf/open/space))
 
+#define isopenspaceturf(A) (istype(A, /turf/open/openspace))
+
 #define isfloorturf(A) (istype(A, /turf/open/floor))
 
 #define isclosedturf(A) (istype(A, /turf/closed))
@@ -73,6 +75,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isdullahan(A) (is_species(A, /datum/species/dullahan))
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isandroid(A) (is_species(A, /datum/species/android))
+#define isbeeperson(A) (is_species(A, /datum/species/beepeople))
 
 //more carbon mobs
 

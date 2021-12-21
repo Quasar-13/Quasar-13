@@ -7,6 +7,11 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	normal_integrity = 450
 
+/obj/machinery/door/airlock/command/white
+	icon = 'icons/obj/doors/airlocks/station/commandwhite.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_com
+	normal_integrity = 450
+
 /obj/machinery/door/airlock/security
 	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
@@ -82,6 +87,11 @@
 	id_tag = INCINERATOR_SYNDICATELAVA_AIRLOCK_EXTERIOR
 
 /obj/machinery/door/airlock/command/glass
+	opacity = FALSE
+	glass = TRUE
+	normal_integrity = 400
+
+/obj/machinery/door/airlock/command/white/glass
 	opacity = FALSE
 	glass = TRUE
 	normal_integrity = 400

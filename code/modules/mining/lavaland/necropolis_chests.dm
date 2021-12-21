@@ -807,7 +807,6 @@
 			new /obj/item/lava_staff(src)
 		if(3)
 			new /obj/item/book/granter/spell/sacredflame(src)
-			new /obj/item/gun/magic/wand/fireball(src)
 		if(4)
 			new /obj/item/dragons_blood(src)
 
@@ -1041,7 +1040,7 @@
 		if(1)
 			new /obj/item/mayhem(src)
 		if(2)
-			new /obj/item/gun/magic/staff/spellblade(src)
+			new /obj/item/clothing/shoes/space_ninja(src)
 		if(3)
 			new /obj/item/organ/heart/demon(src)
 

@@ -607,9 +607,8 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/computer/reactor
 	name = "Reactor control console"
 	desc = "Scream"
-	icon = 'ModularTegustation/Teguicons/reactor/computer.dmi'
 	icon_state = "oldcomp"
-	icon_screen = "library"
+	icon_screen = "oldcomp_library"
 	icon_keyboard = null
 	var/obj/machinery/atmospherics/components/trinary/nuclear_reactor/reactor = null
 	var/id = "default_reactor_for_lazy_mappers"
@@ -630,7 +629,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/computer/reactor/control_rods
 	name = "Control rod management computer"
 	desc = "A computer which can remotely raise / lower the control rods of a reactor."
-	icon_screen = "rbmk_rods"
+	icon_screen = "oldcomp_rbmk_rods"
 
 /obj/machinery/computer/reactor/control_rods/attack_hand(mob/living/user)
 	. = ..()
@@ -669,7 +668,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/computer/reactor/stats
 	name = "Reactor Statistics Console"
 	desc = "A console for monitoring the statistics of a nuclear reactor."
-	icon_screen = "rbmk_stats"
+	icon_screen = "oldcomp_rbmk_stats"
 	var/next_stat_interval = 0
 	var/list/psiData = list()
 	var/list/powerData = list()
@@ -720,7 +719,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/computer/reactor/fuel_rods
 	name = "Reactor Fuel Management Console"
 	desc = "A console which can remotely raise fuel rods out of nuclear reactors."
-	icon_screen = "rbmk_fuel"
+	icon_screen = "oldcomp_rbmk_fuel"
 
 /obj/machinery/computer/reactor/fuel_rods/attack_hand(mob/living/user)
 	. = ..()
@@ -757,7 +756,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	name = "Reactor inlet valve computer"
 	desc = "A computer which controls valve settings on an advanced gas cooled reactor. Alt click it to remotely set pump pressure."
 	icon_screen = "rbmk_input"
-	id = "rbmk_input"
+	id = "oldcomp_rbmk_input"
 	var/datum/radio_frequency/radio_connection
 	var/on = FALSE
 
@@ -814,17 +813,17 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/computer/reactor/pump/rbmk_input
 	name = "Reactor inlet valve computer"
 	icon_screen = "rbmk_input"
-	id = "rbmk_input"
+	id = "oldcomp_rbmk_input"
 
 /obj/machinery/computer/reactor/pump/rbmk_output
 	name = "Reactor output valve computer"
 	icon_screen = "rbmk_output"
-	id = "rbmk_output"
+	id = "oldcomp_rbmk_output"
 
 /obj/machinery/computer/reactor/pump/rbmk_moderator
 	name = "Reactor moderator valve computer"
 	icon_screen = "rbmk_moderator"
-	id = "rbmk_moderator"
+	id = "oldcomp_rbmk_moderator"
 
 //Monitoring program.
 /datum/computer_file/program/nuclear_monitor

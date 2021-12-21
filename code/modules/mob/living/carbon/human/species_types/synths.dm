@@ -9,6 +9,7 @@
 	meat = null
 	damage_overlay_type = "synth"
 	limbs_id = "synth"
+	speedmod = 0.2
 	brutemod = 1.6
 	burnmod = 1.3
 	///If your health becomes equal to or less than this value, your disguise is supposed to break. Unfortunately, that feature currently isn't implemented, so currently, all this threshold is used for is (I kid you not) determining whether or not your speech uses SPAN_CLOWN while you're disguised as a bananium golem. See the handle_speech() proc further down in this file for more information on that check.

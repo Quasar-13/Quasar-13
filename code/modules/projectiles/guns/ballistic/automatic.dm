@@ -48,7 +48,7 @@
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "\improper Nanotrasen Saber SMG"
-	desc = "A prototype full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
+	desc = "A prototype full auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon_state = "saber"
 	burst_size = 1
 	actions_types = list()
@@ -248,6 +248,15 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
+
+/obj/item/gun/ballistic/automatic/ar/semi
+	name = "\improper NT-ARS 'Sweeper'"
+	desc = "A robust assault rifle used by Nanotrasen fighting forces. This one is modified to be semi-automatic"
+	w_class = WEIGHT_CLASS_BULKY
+	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
+	slowdown = 0.7
+	burst_size = 1
+	fire_delay = 3
 
 
 // L6 SAW //

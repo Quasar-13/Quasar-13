@@ -53,9 +53,9 @@
 /obj/item/nullrod/scythe/talking/chainsword/chaos
 	name = "chainsaw sword"
 	desc = "Blood for the blood god!"
-	throwforce = 25
-	block_chance = 35
-	armour_penetration = 50
+	force = 15
+	throwforce = 20
+	armour_penetration = 30
 	wound_bonus = 15
 	bare_wound_bonus = 30
 	sharpness = SHARP_EDGED

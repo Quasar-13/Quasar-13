@@ -37,7 +37,7 @@
 	head = /obj/item/clothing/head/hos/syndicate
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	gloves = /obj/item/clothing/gloves/color/black
-	mask = /obj/item/clothing/mask/cigarette/cigar/havana
+	neck = /obj/item/clothing/neck/cloak/trenchcloak
 	glasses = /obj/item/clothing/glasses/hud/eyepatch/admiral
 	uniform = /obj/item/clothing/under/syndicate
 
