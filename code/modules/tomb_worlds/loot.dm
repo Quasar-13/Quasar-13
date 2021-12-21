@@ -91,7 +91,7 @@
 	var/bolt_cooldown
 	var/bolt_cooldown_time = 10 SECONDS
 	var/max_affected = 3
-	var/bolt_power = 25000 // Damage in a weird way. Human damage is divided by thousand
+	var/bolt_power = 50000 // Damage in a weird way. Human damage is divided by thousand
 
 /obj/item/necromancer_sword/attack_self(mob/user)
 	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -134,7 +134,7 @@
 		if(currently_affected >= max_affected)
 			return
 		currently_affected += 1
-		L.adjustFireLoss(25)
+		L.adjustFireLoss(bolt_power/2000)
 		to_chat(L, "<span class='userdanger'>You've been hit by a magical lightning bolt!</span>")
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
@@ -143,7 +143,7 @@
 		if(currently_affected >= max_affected)
 			return
 		currently_affected += 1
-		T.visible_message("<span class='boldannounce'>A skeleton rises from a pile of remains!</span>")
+		T.visible_message("<span class='warning'>A skeleton rises from a pile of remains!</span>")
 		var/mob/living/simple_animal/skele = new /mob/living/simple_animal/hostile/skeleton/necromancer(T)
 		// Skeleton will not attack its creator
 		var/list/skele_factions = user.faction.Copy()
@@ -156,5 +156,8 @@
 	for(var/obj/O in T)
 		if(currently_affected >= max_affected)
 			return
+		if(!O.density)
+			continue
+		T.visible_message("<span class='warning'>[O] has been hit by a lightning bolt!</span>")
 		currently_affected += 1
 		O.zap_act(bolt_power, zap_flags = ZAP_DEFAULT_FLAGS)

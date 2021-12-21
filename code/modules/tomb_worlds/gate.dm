@@ -1,7 +1,7 @@
 /obj/structure/necropolis_gate/tomb_gate
 	name = "tomb gate"
 	desc = "A large gate intended to block whatever or whoever is on the other side."
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	sight_blocker_distance = 2
 
 /obj/structure/necropolis_gate/tomb_gate/attack_hand(mob/user)
 	if(!open && !changing_openness)
@@ -25,11 +25,11 @@
 		message_admins("[user ? ADMIN_LOOKUPFLW(user):"Unknown"] has opened the tomb gate.")
 		log_game("[user ? key_name(user) : "Unknown"] opened the tomb gate.")
 
-		var/sound/alarm_sound = sound('sound/effects/heart_beat.ogg')
+		var/sound/alarm_sound = sound('sound/creatures/legion_death_far.ogg')
 		for(var/mob/M in GLOB.player_list) // EVERYONE gets alerted.
 			to_chat(M, "<span class='userdanger'>The seal of damnation has been removed! The curse that inhabits those lands is now free!</span>")
-			M.playsound_local(T, null, 100, FALSE, 0, FALSE, pressure_affected = FALSE, S = alarm_sound)
-			flash_color(M, flash_color = "#FF0000", flash_time = 200)
+			M.playsound_local(T, null, 40, FALSE, 0, FALSE, pressure_affected = FALSE, S = alarm_sound)
+			flash_color(M, flash_color = "#FF0000", flash_time = 100)
 		for(var/obj/effect/mob_spawn/human/tomb_spawn/spawner in GLOB.tomb_spawn_list)
 			spawner.enabled = TRUE
 			notify_ghosts("The [spawner.name] is enabled!", source = spawner, action=NOTIFY_ATTACK, flashwindow = TRUE)
