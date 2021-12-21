@@ -1,4 +1,4 @@
-/datum/job/tegu/chemre
+/datum/job/chemre
 	title = "Chemist"
 	department_head = list("Research Director")
 	faction = "Station"
@@ -23,7 +23,7 @@
 
 /datum/outfit/job/chemre
 	name = "Chemist"
-	jobtype = /datum/job/tegu/chemre
+	jobtype = /datum/job/chemre
 
 	glasses = /obj/item/clothing/glasses/science
 	belt = /obj/item/pda/geneticist
