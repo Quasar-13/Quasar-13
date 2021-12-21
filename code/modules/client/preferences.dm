@@ -1203,8 +1203,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					for(var/g in J.senior_title)
 						titles_list += g
 				if(user.client.prefs.exp[job_title] >= 600)//100 hours, i can't be fucked making this a config
-					for(var/g in J.ultra_senior_title)
-						titles_list += g
+					if(J.ultra_senior_title)
+						titles_list += J.ultra_senior_title
 				for(var/i in J.alt_titles)
 					titles_list += i
 				var/chosen_title
