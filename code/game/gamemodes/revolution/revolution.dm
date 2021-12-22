@@ -13,7 +13,7 @@
 	report_type = "revolution"
 	antag_flag = ROLE_REV
 	false_report_weight = 10
-	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
+	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Secretary", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
 	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Warden"=1),list("Detective"=1)) //One Target present
 	required_players = 15
 	required_enemies = 2
