@@ -211,7 +211,7 @@
 /obj/item/clothing/head/beret/centcom
 	name = "centcom beret"
 	desc =  "A green beret for those of the highest caliber"
-	icon_state = "beret_serv"
+	icon_state = "beret_cc"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	strip_delay = 90
 
