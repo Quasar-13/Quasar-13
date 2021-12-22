@@ -1,32 +1,32 @@
 /obj/item/toy/plush/moth/hos
-	name = "hos moth plushie"
-	desc = "A plushie depicting a strong moth ready for duty!"
+	name = "Pyx plushie"
+	desc = "A plushie depicting Pyx, the Syndiemoth!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "moth_hos"
 
 /obj/item/toy/plush/moth/hop
-	name = "hop moth plushie"
-	desc = "A plushie depicting a sensible moth, comes with papers!"
+	name = "Drya plushie"
+	desc = "A plushie depicting a Drya, the HOP!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "moth_hop"
 
 /obj/item/toy/plush/moth/ce
-	name = "ce moth plushie"
-	desc = "A plushie depicting a lovely moth. Fire extinguisher not included"
+	name = "Fermi plushie"
+	desc = "AA plushie depicting Fermi Paradox the CE! She is always so helpful"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "moth_ce"
 
 /obj/item/toy/plush/moth/rd
-	name = "rd moth plushie"
-	desc = "A plushie depicting a smart moth. The back opens up with a tiny toy techdisk inside!"
+	name = "Fenris plushie"
+	desc = "A plushie depicting a Fenris Paradox, the RD! The back opens up with a tiny toy techdisk inside!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "moth_rd"
 
-/obj/item/toy/plush/moth/fermi
-	name = "fermi plushie"
-	desc = "A plushie depicting Fermi Paradox! She is always so helpful"
+/obj/item/toy/plush/moth/jani
+	name = "Pappa plushie"
+	desc = "A plushie depicting Pappaporo Paprito! They keep our station clean!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
-	icon_state = "fermi"
+	icon_state = "moth_jani"
 
 /obj/item/toy/plush/moth/aeizori
 	name = "Aeizori plushie"
