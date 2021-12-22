@@ -23,7 +23,7 @@
 	desc = "Usually given to NT station captains, this rifle is in your hands as well for delicate missions"
 
 /obj/item/storage/backpack/duffelbag/ert/PopulateContents()
-	new /obj/item/gun/energy/laser/captain(src)
+	new /obj/item/gun/energy/laser/captain/ntgold(src)
 	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 

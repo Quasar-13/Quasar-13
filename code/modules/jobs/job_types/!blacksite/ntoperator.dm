@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/ntoperator
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_CENT_SPECOPS)
+	minimal_access = list(ACCESS_CENT_SPECOPS)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_DETECTIVE
@@ -27,16 +27,20 @@
 	id = /obj/item/card/id
 	head = /obj/item/clothing/head/beret/black
 	belt = null
-	backpack_contents = list(/obj/item/choice_beacon/mech=1,
-		/obj/item/storage/box/mechapilot =1)
+	backpack_contents = list(/obj/item/choice_beacon/mech/operator=1)
+
+/obj/item/choice_beacon/mech/operator
+	name = "mecha pilot beacon"
+	desc = "A beacon to be used to call down a mecha."
+
+/obj/item/choice_beacon/mech/operator/generate_display_names()
+	var/static/list/op_item_list
+	if(!op_item_list)
+		op_item_list = list()
+		var/list/templist = typesof(/obj/vehicle/sealed/mecha/combat/marauder/operator) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			op_item_list[initial(A.name)] = A
+	return op_item_list
 
 
-
-/obj/item/storage/box/mechapilot
-	name = "mech pilot kit"
-	desc = "A large duffel bag containing all you need for armored support."
-
-/obj/item/storage/box/mechapilot/PopulateContents()
-		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
-		new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy(src)
-		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)
