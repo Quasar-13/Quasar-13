@@ -1,11 +1,20 @@
 GLOBAL_LIST_INIT(command_positions,list(
 	"Captain",
+
+	//Fucking Casiostation
+	"NT Captain",
+
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Quartermaster"))
+	"Quartermaster",
+
+	//Nt Marine command
+	"NT Commander",
+	"ERT Commander",
+	"NT Squad Leader"))
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
@@ -110,6 +119,7 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"ERT Security",
 	"Death Commando",
 	"NT Squad Leader",
+	"NT Military Police",
 	"NT Vehicle Operator",
 	"NT Marine"))
 

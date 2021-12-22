@@ -16,7 +16,6 @@
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 
-
 /datum/outfit/job/ntmarine
 	name = "NT Marine"
 	jobtype = /datum/job/ntmarine
@@ -30,4 +29,3 @@
 	back = null
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(/obj/item/choice_beacon/marine=1)
-

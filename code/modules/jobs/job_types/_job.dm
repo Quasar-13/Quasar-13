@@ -73,6 +73,8 @@
 
 	/// Job's station type. Will affect what kinds of station the job spawns on. Spawns on all types if set to none.
 	var/maptype = "none"
+	///Used to exclude jobs
+	var/mapexclude = "none"
 
 	///Job's faction, for maps like the starfury
 	var/corp = "nanotrasen"

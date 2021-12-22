@@ -76,16 +76,10 @@
 	new /obj/item/clothing/neck/cloak/cap(src)
 	new /obj/item/clothing/under/rank/centcom/officer/captain(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)
-	new /obj/item/clothing/under/rank/captain/parade(src)
-	new /obj/item/clothing/suit/armor/vest/capcarapace/alt(src)
-	new /obj/item/clothing/head/caphat/parade(src)
 	new /obj/item/clothing/suit/captunic(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
-	new /obj/item/radio/headset/heads/captain/alt(src)
-	new /obj/item/radio/headset/heads/captain(src)
-	new /obj/item/choice_beacon/sabre(src)
-	new /obj/item/choice_beacon/captain(src)
+	new /obj/item/radio/headset/heads/headset_cent/commander(src)
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/nt_squadleader

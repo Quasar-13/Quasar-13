@@ -10,6 +10,7 @@
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	mapexclude = "casio"
 
 	outfit = /datum/outfit/job/security
 
