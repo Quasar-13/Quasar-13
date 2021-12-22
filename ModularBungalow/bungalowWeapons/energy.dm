@@ -23,7 +23,7 @@
 
 //X-02 Pulse Disabler Rifle
 /obj/item/gun/energy/e_gun/hop
-	name = "\improper X-02 Disabler Beam Rifle"
+	name = "\improper X-41 Disabler Beam Rifle"
 	desc = "A classic, the successor to the X-01 Multiphase, this rifle trades the ion and kill modes for a concentrated, but weak disabler beam and scattershot blasts."
 	cell_type = /obj/item/stock_parts/cell/hos_gun
 	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'

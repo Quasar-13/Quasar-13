@@ -93,7 +93,7 @@
 	ammo_x_offset = 2
 
 /obj/item/gun/energy/e_gun/nuclear
-	name = "X-06N Nuclear Energy Rifle"
+	name = "X-07 Nuclear Energy Rifle"
 	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
 	icon_state = "nucgun"
 	inhand_icon_state = "nucgun"
