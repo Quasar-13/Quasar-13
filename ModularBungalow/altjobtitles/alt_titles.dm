@@ -114,17 +114,17 @@
 /datum/job/warden
 	alt_titles = list("Brig Chief", "Security Sergeant")
 	senior_title = list("Master-At-Arms", "Security Major")
-  	ultra_senior_title = "Arms Dealer"
+	ultra_senior_title = "Arms Dealer"
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
 	senior_title = list("Intelligence Officer", "Chief Investigator")
-  	ultra_senior_title = "CO2 Machine"
+	ultra_senior_title = "CO2 Machine"
 
 /datum/job/officer
 	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
 	senior_title = list("Man-at-Arms", "Sergeant Officer")
-  	ultra_senior_title = "Harmbatoner"
+	ultra_senior_title = "Harmbatoner"
 
 
 //Supply
