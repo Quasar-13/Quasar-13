@@ -114,7 +114,7 @@
 /datum/job/warden
 	alt_titles = list("Brig Chief", "Security Sergeant")
 	senior_title = list("Master-At-Arms", "Security Major")
-  ultra_senior_title = "Arms Dealer
+  ultra_senior_title = "Arms Dealer"
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")

@@ -1230,7 +1230,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(user.client.prefs.exp[job_title] >= CONFIG_GET(number/senior_timelock)) //If they have more than 50 hours (300 Minutes) past the required time needed for the job, give them access to the senior title
 					for(var/g in J.senior_title)
 						titles_list += g
-				if(user.client.prefs.exp[job_title] >= 600)//100 hours, i can't be fucked making this a config
+				if(user.client.prefs.exp[job_title] >= CONFIG_GET(number/ultra_senior_timelock))//100 hours, i can't be fucked making this a config
 					if(J.ultra_senior_title)
 						titles_list += J.ultra_senior_title
 				for(var/i in J.alt_titles)
