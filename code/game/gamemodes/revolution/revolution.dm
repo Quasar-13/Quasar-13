@@ -14,15 +14,15 @@
 	antag_flag = ROLE_REV
 	false_report_weight = 10
 	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
-	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Chief Engineer"=1),list("Research Director"=1),list("Chief Medical Officer"=1)) //Any head present
-	required_players = 30
+	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Warden"=1),list("Detective"=1)) //One Target present
+	required_players = 15
 	required_enemies = 2
 	recommended_enemies = 3
 	enemy_minimum_age = 14
 
 	announce_span = "Revolution"
 	announce_text = "Some crewmembers are attempting a coup!\n\
-	<span class='danger'>Revolutionaries</span>: Expand your cause and overthrow the heads of staff by execution or otherwise.\n\
+	<span class='danger'>Revolutionaries</span>: Expand your cause and overthrow the Captain, HOS, HOP, Warden and Detective by execution or otherwise.\n\
 	<span class='notice'>Crew</span>: Prevent the revolutionaries from taking over the station."
 
 	var/finished = 0
@@ -59,7 +59,7 @@
 	return TRUE
 
 /datum/game_mode/revolution/post_setup()
-	var/list/heads = SSjob.get_living_heads()
+	var/list/heads = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
 	var/list/sec = SSjob.get_living_sec()
 	var/weighted_score = min(max(round(heads.len - ((8 - sec.len) / 3)),1),max_headrevs)
 
@@ -157,7 +157,7 @@
 /datum/game_mode/revolution/set_round_result()
 	..()
 	if(finished == 1)
-		SSticker.mode_result = "win - heads killed"
+		SSticker.mode_result = "win - targets killed"
 		SSticker.news_report = REVS_WIN
 	else if(finished == 2)
 		SSticker.mode_result = "loss - rev heads killed"
@@ -166,12 +166,12 @@
 //TODO What should be displayed for revs in non-rev rounds
 /datum/game_mode/revolution/special_report()
 	if(finished == 1)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff were killed or exiled! The revolutionaries win!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>The targets were killed or exiled! The revolutionaries win!</span></div>"
 	else if(finished == 2)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff managed to stop the revolution!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>The targets managed to stop the revolution!</span></div>"
 
 /datum/game_mode/revolution/generate_report()
-	return "Employee unrest has spiked in recent weeks, with several attempted mutinies on heads of staff. Some crew have been observed using flashbulb devices to blind their colleagues, \
+	return "Employee unrest has spiked in recent weeks, with several attempted mutinies on certain targets. Some crew have been observed using flashbulb devices to blind their colleagues, \
 		who then follow their orders without question and work towards dethroning departmental leaders. Watch for behavior such as this with caution. If the crew attempts a mutiny, you and \
 		your heads of staff are fully authorized to execute them using lethal weaponry - they will be later cloned and interrogated at Central Command."
 
