@@ -27,6 +27,7 @@
 		#include "map_files\RemoraStation\RemoraStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\CasioStation\Casiostation.dmm"
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
 
 		//Admin only maps
