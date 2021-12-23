@@ -21,7 +21,7 @@
 
 //Beam Rifle
 /obj/item/gun/energy/disabler/advanced/beam
-	name = "SX-1 Disabler Beam Bifle"
+	name = "SX-1 Disabler Beam Rifle"
 	desc = "A fully automatic disabler beam rifle for security use."
 	icon_state = "beamrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan)
