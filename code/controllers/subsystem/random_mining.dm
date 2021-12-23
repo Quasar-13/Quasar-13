@@ -50,3 +50,4 @@ SUBSYSTEM_DEF(randommining)
 	if(choosen_map)
 		var/F = file("data/previous_mining.dat")
 		WRITE_FILE(F, choosen_map)
+		
