@@ -15,7 +15,7 @@
 	false_report_weight = 10
 	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Secretary", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
 	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Warden"=1),list("Detective"=1)) //One Target present
-	required_players = 15
+	required_players = 8
 	required_enemies = 2
 	recommended_enemies = 3
 	enemy_minimum_age = 14
@@ -59,7 +59,7 @@
 	return TRUE
 
 /datum/game_mode/revolution/post_setup()
-	var/list/heads = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+	var/list/heads = SSjob.get_all_targets()
 	var/list/sec = SSjob.get_living_sec()
 	var/weighted_score = min(max(round(heads.len - ((8 - sec.len) / 3)),1),max_headrevs)
 

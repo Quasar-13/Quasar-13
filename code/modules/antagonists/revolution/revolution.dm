@@ -302,7 +302,7 @@
 	var/list/ex_revs = list()
 
 /datum/team/revolution/proc/update_objectives(initial = FALSE)
-	var/untracked_heads = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+	var/untracked_heads = SSjob.get_all_targets()
 	for(var/datum/objective/mutiny/O in objectives)
 		untracked_heads -= O.target
 	for(var/datum/mind/M in untracked_heads)
@@ -326,7 +326,7 @@
 /datum/team/revolution/proc/update_heads()
 	if(SSticker.HasRoundStarted())
 		var/list/datum/mind/head_revolutionaries = head_revolutionaries()
-		var/list/datum/mind/heads = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+		var/list/datum/mind/heads = SSjob.get_all_targets()
 		var/list/sec = SSjob.get_all_sec()
 
 		if(head_revolutionaries.len < max_headrevs && head_revolutionaries.len < round(heads.len - ((8 - sec.len) / 3)))
@@ -491,7 +491,7 @@
 		rev_part += printplayerlist(revs, !check_rev_victory())
 		result += rev_part.Join("<br>")
 
-	var/list/heads = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+	var/list/heads = SSjob.get_all_targets()
 	if(heads.len)
 		var/head_text = "<span class='header'>The targets were:</span>"
 		head_text += "<ul class='playerlist'>"
