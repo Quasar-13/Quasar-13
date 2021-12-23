@@ -1,3 +1,16 @@
+//Old Lasguns
+/obj/item/gun/energy/laser/old
+	name = "\improper L-504 Laser Gun"
+	desc = "Nanotrasen’s 5th series rifle."
+	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon_state = "oldgun"
+
+/obj/item/gun/energy/laser/old/cybersun
+	name = "\improper Cybersun 'Naga' Laser Gun"
+	force = 15
+	desc = "Nanotrasen’s 5th series rifle."
+	icon_state = "naga"
+
 //Home Defender pistol
 /obj/item/gun/energy/e_gun/homedef
 	name = "\improper E-220 Home Defender Beam Revolver"
