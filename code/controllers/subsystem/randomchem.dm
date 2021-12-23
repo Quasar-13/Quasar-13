@@ -1,6 +1,7 @@
 SUBSYSTEM_DEF(randomchem)
 	name = "Kirie Chem V3"
 	init_order = INIT_ORDER_RESEARCH
+	priority = FIRE_PRIORITY_RESEARCH
 	flags = SS_NO_FIRE
 
 
