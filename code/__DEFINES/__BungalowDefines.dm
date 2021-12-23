@@ -31,7 +31,7 @@
 //Access for Syndiestation
 // Syndicate General Officer access
 #define ACCESS_SYNDICATE_OFFICER 152
-//Syndicate Command access
+//Syndicate Police access
 #define ACCESS_SYNDICATE_POLICE 153
 //Syndicate Command access
 #define ACCESS_SYNDICATE_COMMAND 154
