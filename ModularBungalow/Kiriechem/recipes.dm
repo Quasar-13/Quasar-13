@@ -3,6 +3,12 @@
 	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/medicine/kelotane = 1, /datum/reagent/toxin = 1)
 	mix_message = "The mixture turns into a fluffy blue liquid."
 
+/datum/chemical_reaction/tricorital
+	results = list(/datum/reagent/medicine/tricorital = 3)
+	required_reagents = list(/datum/reagent/medicine/bicarbital = 1, /datum/reagent/medicine/keluri = 1, /datum/reagent/toxin = 1)
+	mix_message = "The mixture gives off a lovely odor."
+
+
 /datum/chemical_reaction/omnizidrite
 	results = list(/datum/reagent/medicine/omnizidrite = 1)
 	required_reagents = list(/datum/reagent/medicine/omnizine = 1, /datum/reagent/medicine/omnidrite = 1)

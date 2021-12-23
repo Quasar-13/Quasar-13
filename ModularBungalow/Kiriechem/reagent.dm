@@ -47,13 +47,35 @@
 	M.adjustFireLoss(-2*REM)
 	M.adjustBruteLoss(-2*REM)
 	M.adjustToxLoss(-2*REM)
-	M.adjustCloneLoss(2*REM)
+	M.adjustCloneLoss(1.5*REM)
 	..()
 	return TRUE
 
 /datum/reagent/medicine/tricordizine/overdose_process(mob/living/M)
 	M.adjustCloneLoss(2*REM)
 	..()
+
+
+/datum/reagent/medicine/tricorital //Tricord but for Bicarbital and Keluri
+	name = "Tricorital"
+	description = "A good all-round medicine.."
+	color = "#92A6F7" // rgb: 236	236	141
+	taste_description = "chalk"
+	overdose_threshold = 15
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/tricorital/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-2*REM)
+	M.adjustBruteLoss(-2*REM)
+	M.adjustToxLoss(-2*REM)
+	M.adjustCloneLoss(1.5*REM)
+	..()
+	return TRUE
+
+/datum/reagent/medicine/tricorital/overdose_process(mob/living/M)
+	M.adjustCloneLoss(-1*REM)
+	..()
+
 
 
 /datum/reagent/medicine/bicarbital //bicaridine but new
