@@ -27,7 +27,7 @@
 	name = "NT Military Police"
 	jobtype = /datum/job/ntpolice
 
-	ears = /obj/item/radio/headset/heads/headset_cent
+	ears = /obj/item/radio/headset/headset_cent/alt
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern/marine
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/bulletproof
