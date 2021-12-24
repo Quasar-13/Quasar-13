@@ -17,7 +17,7 @@
 	item_flags = NONE
 
 /obj/item/gun/energy/laser/retro
-	name ="L-204 Laser Blaster"
+	name ="L-304 Laser Blaster"
 	icon_state = "retro"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
@@ -30,7 +30,7 @@
 	ammo_x_offset = 3
 
 /obj/item/gun/energy/laser/hellgun
-	name ="L-304 'Melter'"
+	name ="L-204 'Melter'"
 	desc = "A relic of a weapon, built before NT began installing regulators on its laser weaponry. This pattern of laser gun became infamous for the gruesome burn wounds it caused, and was quietly discontinued once it began to affect NT's reputation."
 	icon_state = "hellgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire)
