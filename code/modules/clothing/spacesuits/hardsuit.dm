@@ -286,7 +286,7 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF
 	heat_protection = HEAD
-	armor = list(MELEE = 30, BULLET = 5, LASER = 10, ENERGY = 20, BOMB = 50, BIO = 100, RAD = 50, FIRE = 50, ACID = 75, WOUND = 15)
+	armor = list(MELEE = 30, BULLET = 5, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 100, RAD = 5, FIRE = 60, ACID = 30, WOUND = 10)
 	light_range = 7
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator)
 
@@ -317,7 +317,8 @@
 	hardsuit_type = "mining"
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF
-	armor = list(MELEE = 30, BULLET = 5, LASER = 10, ENERGY = 20, BOMB = 50, BIO = 100, RAD = 50, FIRE = 50, ACID = 75, WOUND = 15)
+	slowdown = 0.30
+	armor = list(MELEE = 30, BULLET = 5, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 100, RAD = 5, FIRE = 60, ACID = 30, WOUND = 10)
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/mining
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
