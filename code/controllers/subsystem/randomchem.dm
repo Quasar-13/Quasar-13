@@ -1,8 +1,10 @@
-SUBSYSTEM_DEF(randomchem)
-	name = "Kirie Chem V3"
-	init_order = INIT_ORDER_RANDOMCHEM
-	flags = SS_NO_FIRE
+/* Tossing errors. I will fix this up for V4
+It's just straight up not initializing.
 
+SUBSYSTEM_DEF(randomchem)
+	name = "Kirie Chem V4"
+	init_order = INIT_ORDER_TICKER
+	flags = SS_NO_FIRE
 
 	var/list/effects
 	var/kirium1 = "Brute Loss"
@@ -68,3 +70,4 @@ SUBSYSTEM_DEF(randomchem)
 
 	kirium1 = pick(effects)
 	kirium2 = pick(effects)
+*/
