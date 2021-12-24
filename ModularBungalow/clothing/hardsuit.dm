@@ -24,3 +24,22 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/voidtech
 	slowdown = 0.25
 
+
+//Casio Captain Hardsuit
+/obj/item/clothing/head/helmet/space/hardsuit/captain/casio
+	name = "\proper NT Captain's Hardsuit Helmet"
+	desc = "A hard, green armor shell used but NT captain. Space suitable, does not have the helmet however. Slightly unwieldy."
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	icon_state = "hardsuit0-capspace"
+
+/obj/item/clothing/suit/space/hardsuit/swat/captain/casio
+	name = "\proper NT Captain's Armored Hardsuit"
+	desc = "A hard, green armor shell used but NT captain. Space suitable. Slightly unwieldy."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "hardsuit-capspace"
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/captain/casio
+
+

@@ -77,6 +77,7 @@
 	new /obj/item/clothing/under/rank/centcom/officer/captain(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)
 	new /obj/item/clothing/suit/captunic(src)
+	new /obj/item/clothing/suit/armor/captain/casio(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/headset_cent/commander(src)

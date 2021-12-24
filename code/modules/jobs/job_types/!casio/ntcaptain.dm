@@ -44,7 +44,7 @@
 	ears = /obj/item/radio/headset/heads/headset_cent/commander
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/centcom/officer/captain
-	suit = /obj/item/clothing/suit/armor/bulletproof
+	suit = /obj/item/clothing/suit/armor/captain/casio
 	head = null
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
