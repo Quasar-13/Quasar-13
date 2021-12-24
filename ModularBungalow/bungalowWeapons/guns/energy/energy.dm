@@ -1,17 +1,3 @@
-//Old Lasguns
-/obj/item/gun/energy/laser/fifth
-	name = "\improper L-504 Laser Gun"
-	desc = "Nanotrasen’s 5th series rifle."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
-	icon_state = "oldgun"
-
-/obj/item/gun/energy/laser/fifth/cybersun
-	name = "\improper Cybersun 'Naga' Laser Gun"
-	hitsound = 'sound/weapons/blade1.ogg'
-	desc = "Nanotrasen’s 5th series rifle."
-	icon_state = "naga"
-	force = 20
-
 //Home Defender pistol
 /obj/item/gun/energy/e_gun/homedef
 	name = "\improper E-220 Home Defender Beam Revolver"
@@ -32,40 +18,6 @@
 	desc = "An old but well kept E-220. Someone painted a purple H on it. It looks well kept, if a little dustied."
 	icon_state = "homedefender-special"
 	selfcharge = 1
-
-
-//NT GOLD Series
-/obj/item/gun/energy/laser/captain/ntgold
-	name = "E-400 NT GOLD Laser Rifle"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
-	icon_state = "caprifle"
-	inhand_icon_state = "gun"
-	desc = "This is a replica of antique laser gun. Chrome finish with gold accents and leather furniture. NT is inscribed on the side."
-
-/obj/item/gun/energy/laser/captain/ntgold/pistol
-	name = "E-420 NT GOLD Laser Pistol"
-	icon_state = "cappistol"
-	desc = "The second gun ever made in the NT GOLD series guns. Compact, and stylish."
-	w_class = WEIGHT_CLASS_SMALL
-	cell_type = /obj/item/stock_parts/cell/mini_egun
-
-/obj/item/gun/energy/laser/captain/ntgold/shotgun
-	name = "E-440 NT GOLD Laser Scattergun"
-	icon_state = "capshotgun"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
-	desc = "An old captain's shotgun, replicated and made more stylish."
-
-/obj/item/gun/energy/laser/captain/ntgold/smg
-	name = "E-450 NT GOLD Laser Submachinegun"
-	icon_state = "capsmg"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid)
-	desc = "A rapid-fire version of the Captain's gun. Shoots rapid small bullets instead of usual rifle ammo."
-
-/obj/item/gun/energy/laser/captain/ntgold/smg/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
-
-
 
 //X-02 Pulse Disabler Rifle
 /obj/item/gun/energy/e_gun/hop
