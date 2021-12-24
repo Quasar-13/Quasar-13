@@ -54,3 +54,5 @@
 /datum/config_entry/string/infiltrator_lufr_message
 	config_entry_value = "You are here to get rid of filthy humans and sabotage their work. Avoid attacking non-human crew and low-ranking workers. \
 	If there will be a chance - Kill every TerraGov or CentCom official, they have to pay for their crimes."
+
+/datum/config_entry/flag/tombworld_enabled

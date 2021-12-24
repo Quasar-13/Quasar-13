@@ -321,9 +321,13 @@ Used by the AI doomsday and the self-destruct nuke.
 		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_ice.dmm", default_traits = ZTRAITS_ICEMISSION)
 		//Bungalow Edit End
 
-
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
+
+		// Tomb world
+		// It HAS to be loaded after lavaland, yes.
+	if(CONFIG_GET(flag/tombworld_enabled) && GLOB.tomb_portal_location)
+		createRandomTomb()
 #endif
 
 	if(LAZYLEN(FailedZs))	//but seriously, unless the server's filesystem is messed up this will never happen
