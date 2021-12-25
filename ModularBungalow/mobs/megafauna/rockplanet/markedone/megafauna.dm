@@ -316,9 +316,6 @@
 	playsound(src, 'sound/magic/blink.ogg', 100, 1)
 	var/obj/spot2 = new /obj/effect/temp_visual/dir_setting/cult/phase(end_t, src.dir)
 	spot1.Beam(spot2, "blood_beam", time=duration)
-	for(var/turf/B in getline(start_t, end_t))
-		for(var/mob/living/victim in B)
-			sword.melee_attack_chain(src, victim)
 
 /mob/living/simple_animal/hostile/megafauna/gladiator/OpenFire()
 	if(!COOLDOWN_FINISHED(src, ranged_cooldown))
@@ -346,12 +343,8 @@
 				INVOKE_ASYNC(src, .proc/teleport, target)
 				ranged_cooldown += 3 SECONDS
 		if(3)
-			if(prob(35))
-				INVOKE_ASYNC(src, .proc/bone_knife_throw, target)
-				ranged_cooldown += 3 SECONDS
-			else
-				INVOKE_ASYNC(src, .proc/teleport, target)
-				ranged_cooldown += 2 SECONDS
+			INVOKE_ASYNC(src, .proc/teleport, target)
+			ranged_cooldown += 2 SECONDS
 
 #undef MARKED_ONE_STUN_DURATION
 #undef MARKED_ONE_ANGER_DURATION
