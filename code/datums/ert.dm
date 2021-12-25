@@ -94,3 +94,12 @@
 	mission = "Create entertainment for the crew."
 	polldesc = "a Code Rainbow Nanotrasen Emergency Response Party"
 	code = "Rainbow"
+
+/datum/ert/marine
+	roles = list(/datum/antagonist/ert/marine)
+	leader_role = /datum/antagonist/ert/marine/leader
+	rename_team = "Marine Squad"
+	code = "Red"
+	mission = "Save the innocent, punish the guilty."
+	polldesc = "a Nanotrasen military squad"
+

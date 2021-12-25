@@ -18,8 +18,10 @@
 
 /datum/antagonist/rev/can_be_owned(datum/mind/new_owner)
 	. = ..()
+	var/list/targets = list("Captain","Head of Personnel","Head of Security","Warden","Detective", "NT Squad Leader", "NT Captain") //cannot be revved
+
 	if(.)
-		if(new_owner.assigned_role in GLOB.command_positions)
+		if(new_owner.assigned_role in targets)
 			return FALSE
 		if(new_owner.unconvertable)
 			return FALSE
@@ -50,7 +52,7 @@
 	. = ..()
 
 /datum/antagonist/rev/greet()
-	to_chat(owner, "<span class='userdanger'>You are now a revolutionary! Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Help them kill the heads to win the revolution!</span>")
+	to_chat(owner, "<span class='userdanger'>You are now a revolutionary! Do not needlessly slaughter, there will be consequences. Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Join together and kill the HOS, HOP, Captain, Detective and Warden!!</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/rev/create_team(datum/team/revolution/new_team)

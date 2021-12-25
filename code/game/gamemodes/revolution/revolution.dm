@@ -204,3 +204,67 @@
 					N.timer_set = 200
 					N.set_safety()
 					N.set_active()
+
+/datum/game_mode/revolution/marines
+	name = "marine_revolution"
+	config_tag = "marine_revolution"
+	var/endtime = null
+	var/fuckingdone = FALSE
+	var/check_counter = 0
+
+/datum/game_mode/revolution/marines/pre_setup()
+	endtime = world.time + 30 MINUTES
+	return ..()
+
+/datum/game_mode/revolution/marines/process()
+	. = ..()
+	check_counter++
+	if(check_counter == 5)
+		check_counter = 0
+		if (world.time > endtime && !fuckingdone)
+			fuckingdone = TRUE
+			priority_announce("This is Admiral Jill Ness, I have received information of revolutionaires on [station_name()]. I have dispatched a marine strike team to your station. We expect you all to behave.", 'sound/voice/beepsky/radio.ogg')
+			addtimer(CALLBACK(src, .proc/send_in_the_fuzz), 5 MINUTES)
+
+/datum/game_mode/revolution/marines/proc/send_in_the_fuzz()
+	var/cops_to_send = /datum/antagonist/ert/marine
+	var/announcement_message = "The Marines are on their way."
+	var/announcer = "NT Marine Division"
+	var/team_size = 10
+
+	priority_announce(announcement_message, announcer, 'sound/effects/families_police.ogg')
+	var/list/candidates = pollGhostCandidates("Do you seek revenge on the revolution?", "deathsquad", null)
+
+
+	if(candidates.len)
+		//Pick the (un)lucky players
+		var/numagents = min(team_size,candidates.len)
+
+		var/list/spawnpoints = GLOB.emergencyresponseteamspawn
+		var/index = 0
+		while(numagents && candidates.len)
+			var/spawnloc = spawnpoints[index+1]
+			//loop through spawnpoints one at a time
+			index = (index + 1) % spawnpoints.len
+			var/mob/dead/observer/chosen_candidate = pick(candidates)
+			candidates -= chosen_candidate
+			if(!chosen_candidate.key)
+				continue
+
+			//Spawn the body
+			var/mob/living/carbon/human/cop = new(spawnloc)
+			chosen_candidate.client.prefs.copy_to(cop)
+			cop.key = chosen_candidate.key
+
+			//Give antag datum
+			var/datum/antagonist/ert/marines = new cops_to_send
+
+			cop.mind.add_antag_datum(marines)
+			cop.mind.assigned_role = marines.name
+			SSjob.SendToLateJoin(cop)
+
+			//Logging and cleanup
+			log_game("[key_name(cop)] has been selected as an [marines.name]")
+			numagents--
+	return TRUE
+
