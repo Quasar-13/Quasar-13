@@ -4,7 +4,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
 	desc = "If you see this: Call a coder!."
 	icon_state = "disabler"
-	inhand_icon_state = "gun"
+	inhand_icon_state = "arg"
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler)
 	shaded_charge = TRUE
 
@@ -41,9 +41,10 @@
 	name = "SX-3 Disabler Marksman rifle"
 	desc = "A semi-auto disabler rifle with zoom settings."
 	icon_state = "dmr"
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan/heavy)
 	zoomable = TRUE
-	zoom_amt = 3
-	zoom_out_amt = 6
+	zoom_amt = 5
+	zoom_out_amt = 0
 
 //Shottie
 /obj/item/gun/energy/disabler/advanced/scatter
