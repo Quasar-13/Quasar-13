@@ -3,6 +3,7 @@ GLOBAL_LIST_INIT(command_positions,list(
 
 	//Fucking Casiostation
 	"NT Captain",
+	"Blueshield",
 
 	"Head of Personnel",
 	"Head of Security",
