@@ -224,9 +224,9 @@
 		if (world.time > endtime && !fuckingdone)
 			fuckingdone = TRUE
 			priority_announce("This is Admiral Jill Ness, I have received information of revolutionaires on [station_name()]. I have dispatched a marine strike team to your station. We expect you all to behave.", 'sound/voice/beepsky/radio.ogg')
-			addtimer(CALLBACK(src, .proc/send_in_the_fuzz), 5 MINUTES)
+			addtimer(CALLBACK(src, .proc/send_in_the_marines), 5 MINUTES)
 
-/datum/game_mode/revolution/marines/proc/send_in_the_fuzz()
+/datum/game_mode/revolution/marines/proc/send_in_the_marines()
 	var/cops_to_send = /datum/antagonist/ert/marine
 	var/announcement_message = "The Marines are on their way."
 	var/announcer = "NT Marine Division"
