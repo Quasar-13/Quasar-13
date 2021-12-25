@@ -4,7 +4,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
 	desc = "If you see this: Call a coder!."
 	icon_state = "disabler"
-	inhand_icon_state = "arg"
+	inhand_icon_state = "gun"
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler)
 	shaded_charge = TRUE
 
@@ -35,7 +35,6 @@
 	name = "SX-2 Disabler Magnum MK II"
 	desc = "A self-charging disabler magnum. Better than the original in every way."
 	icon_state = "disabler"
-	selfcharge = 1
 
 //DMR
 /obj/item/gun/energy/disabler/advanced/dmr
@@ -43,9 +42,8 @@
 	desc = "A semi-auto disabler rifle with zoom settings."
 	icon_state = "dmr"
 	zoomable = TRUE
-	ammo_type = list(/obj/projectile/beam/disabler/beam/hitscan/heavy)
-	zoom_amt = 5
-	zoom_out_amt = 0
+	zoom_amt = 3
+	zoom_out_amt = 6
 
 //Shottie
 /obj/item/gun/energy/disabler/advanced/scatter

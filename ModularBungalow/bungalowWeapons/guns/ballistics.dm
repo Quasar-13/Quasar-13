@@ -10,6 +10,7 @@
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
 	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."
+	spread = 15
 	icon_state = "sig"
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/sig

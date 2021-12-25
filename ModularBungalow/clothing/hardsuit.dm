@@ -49,5 +49,5 @@
 /obj/item/clothing/suit/space/hardsuit/swat/captain/casio/doom
 	name = "\improper Doom Marine Hardsuit"
 	desc = "Rip and tear, until it is done."
-	slowdown = -0.5
+	slowdown = -1
 
