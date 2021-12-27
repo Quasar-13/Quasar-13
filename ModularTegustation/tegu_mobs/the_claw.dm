@@ -18,6 +18,7 @@
 	pull_force = MOVE_FORCE_STRONG
 	mob_size = MOB_SIZE_LARGE
 	dextrous = TRUE // Hands!
+	held_items = list(null, null)
 	a_intent = "disarm" // So it doesn't break machines when trying to interact and can place items on tables
 	movement_type = GROUND
 	speak_emote = list("says")
