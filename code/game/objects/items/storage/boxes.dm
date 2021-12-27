@@ -862,6 +862,16 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
 
+/obj/item/storage/box/breachingshells
+	name = "box of breaching shotgun shells"
+	desc = "A box full of breaching shells. designed for tactical breaching shotguns"
+	icon_state = "lethalshot_box"
+	illustration = null
+
+/obj/item/storage/box/lethalshot/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/breacher(src)
+
 /obj/item/storage/box/beanbag
 	name = "box of beanbags"
 	desc = "A box full of beanbag shells."
