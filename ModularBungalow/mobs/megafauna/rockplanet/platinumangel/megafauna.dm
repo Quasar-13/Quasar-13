@@ -78,7 +78,7 @@
 		return
 
 	Goto(target, move_to_delay, minimum_distance)
-	if(get_dist(src, target) > MINER_DASH_RANGE && dash_cooldown <= world.time)
+	if(get_dist(src, target) > 5 && dash_cooldown <= world.time)
 		dash_attack()
 	else
 		shoot_ka()
@@ -97,7 +97,7 @@
 	damage = 20
 	speed = 0.9
 	icon_state = "ka_tracer"
-	range = MINER_DASH_RANGE
+	range = 5
 
 /mob/living/simple_animal/hostile/megafauna/platinumangel/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
 	var/adjustment_amount = amount * 0.1
@@ -164,7 +164,7 @@
 	shoot_ka()
 
 /mob/living/simple_animal/hostile/megafauna/platinumangel/proc/shoot_ka()
-	if(ranged_cooldown <= world.time && get_dist(src, target) <= MINER_DASH_RANGE && !Adjacent(target))
+	if(ranged_cooldown <= world.time && get_dist(src, target) <= 5 && !Adjacent(target))
 		ranged_cooldown = world.time + ranged_cooldown_time
 		visible_message("<span class='danger'>[src] fires the proto-kinetic accelerator!</span>")
 		face_atom(target)
@@ -180,11 +180,11 @@
 	var/turf/own_turf = get_turf(src)
 	if(!QDELETED(dash_target))
 		self_dist_to_target += get_dist(dash_target, own_turf)
-	for(var/turf/open/O in RANGE_TURFS(MINER_DASH_RANGE, own_turf))
+	for(var/turf/open/O in RANGE_TURFS(5, own_turf))
 		var/turf_dist_to_target = 0
 		if(!QDELETED(dash_target))
 			turf_dist_to_target += get_dist(dash_target, O)
-		if(get_dist(src, O) >= MINER_DASH_RANGE && turf_dist_to_target <= self_dist_to_target && !islava(O) && !ischasm(O))
+		if(get_dist(src, O) >= 5 && turf_dist_to_target <= self_dist_to_target && !islava(O) && !ischasm(O))
 			var/valid = TRUE
 			for(var/turf/T in getline(own_turf, O))
 				if(T.is_blocked_turf(TRUE))
@@ -194,7 +194,7 @@
 				accessable_turfs[O] = turf_dist_to_target
 	var/turf/target_turf
 	if(!QDELETED(dash_target))
-		var/closest_dist = MINER_DASH_RANGE
+		var/closest_dist = 5
 		for(var/t in accessable_turfs)
 			if(accessable_turfs[t] < closest_dist)
 				closest_dist = accessable_turfs[t]
@@ -271,6 +271,4 @@
 	move_to_delay = 8
 	ranged_cooldown_time = 8
 	dash_cooldown = 8
-
-#undef MINER_DASH_RANGE
 
