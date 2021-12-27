@@ -25,6 +25,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_cent/alt
 	id = /obj/item/card/id
+	glasses = /obj/item/clothing/glasses/sunglasses
 	head = /obj/item/clothing/head/beret/black
 	back = null
 	belt = /obj/item/storage/belt/military/assault

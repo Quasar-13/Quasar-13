@@ -32,7 +32,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
-	icon_state = "capspace"
+	icon_state = "hardsuit0-capspace"
 
 /obj/item/clothing/suit/space/hardsuit/swat/captain/casio
 	name = "\proper NT Captain's Armored Hardsuit"
