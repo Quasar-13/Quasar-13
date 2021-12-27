@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/ntsquadleader
 
-	access = list(ACCESS_HEADS)
-	minimal_access = list(ACCESS_HEADS)
+	access = list(ACCESS_HEADS, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS)
+	minimal_access = list(ACCESS_HEADS, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_WARDEN
