@@ -1,9 +1,12 @@
 {
-	"version": 1,
+	"version": 2,
 	"map_name": "NTSS Remora",
-    "map_path": "map_files/RemoraStation",
-    "map_file": "RemoraStation.dmm",
-    "shuttles": {
+  	"map_path": "map_files/RemoraStation",
+	"map_file": [
+		"RemoraStation.dmm",
+		"RemoraStation2.dmm"
+	],
+	"shuttles": {
 	    "cargo": "cargo_kilo",
 	    "ferry": "ferry_fancy",
 	    "whiteship": "whiteship_meta",
@@ -11,5 +14,16 @@
 	},
 	"maptype": "ship",
 	"minetype": "none",
-	"allow_custom_shuttles": false
+	"allow_custom_shuttles": false,
+	"traits": [
+		{
+			"Up" : 1,
+			"Linkage" : "Cross"
+		},
+		{
+			"Down" : -1,
+			"Baseturf" : "/turf/open/openspace",
+			"Linkage" : "Cross"
+		}
+	]
 }
