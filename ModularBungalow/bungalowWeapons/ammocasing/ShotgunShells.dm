@@ -7,6 +7,7 @@
 	icon_state = "breacher"
 	projectile_type = /obj/projectile/bullet/shotgun_breaching
 	custom_materials = list(/datum/material/iron=4000)
+	caliber = "breacher"
 
 
 /obj/projectile/bullet/shotgun_breaching
