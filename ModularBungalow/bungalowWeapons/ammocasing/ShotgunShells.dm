@@ -1,4 +1,5 @@
 //Breacher Shotgun Shells
+//What this does is that they're basically used to fuck up doors and windows to create entry points in heavily locked down places,very effective and fun stuff to use
 /obj/item/ammo_casing/shotgun/breacher
 	name = "breaching slug"
 	desc = "A 12 gauge anti-material slug. Great for breaching airlocks and windows with minimal shots. Only fits in tactical breaching shotguns."
