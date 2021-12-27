@@ -30,7 +30,7 @@
 	name = "Leaper ruin"
 	id = "leaper"
 	description = "A leaper, ready to be slaughtered."
-	suffix = "jungle_leaper.dmm
+	suffix = "jungle_leaper.dmm"
 	always_place = TRUE
 
 /datum/map_template/ruin/jungle/demon
