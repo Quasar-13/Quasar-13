@@ -11,22 +11,19 @@
 
 
 //QM Parade suit
-
 /obj/item/clothing/under/misc/parade/qm
 	desc = "A black suit with bronze trim and a medal attached. The gaudy look must belong to the QM"
-	name = "qm's parade uniform"
+	name = "QM's parade uniform"
 	icon_state = "spaceship_qm"
 
 
 //Hop Parade suit
-
 /obj/item/clothing/under/misc/parade/hop
 	desc = "A black suit that belongs to they who will one day become the captain."
-	name = "hop's parade uniform"
+	name = "HOP's parade uniform"
 	icon_state = "spaceship_hop"
 
 //CO Parade suit
-
 /obj/item/clothing/under/misc/parade/co
 	desc = "A black suit that belongs to the militaristic captain of the station."
 	name = "commanding officer's parade uniform"
@@ -34,7 +31,6 @@
 
 
 //Station Commander Parade suit
-
 /obj/item/clothing/under/misc/parade/cdr
 	desc = "A black suit that belongs to the station's commander."
 	name = "corporate commander's parade uniform"
@@ -42,7 +38,6 @@
 
 
 //Commodore Parade suit
-
 /obj/item/clothing/under/misc/parade/com
 	can_adjust = FALSE
 	desc = "A custom tailored uniform of someone who means business, and who knows a lot about running a space station."
@@ -50,7 +45,6 @@
 	icon_state = "spaceship_com"
 
 //Commodore Gloves
-
 /obj/item/clothing/gloves/color/captain/commodore
 	name = "commodore's gloves"
 	desc = "Green gloves from high-ranking naval personnel. Just the sight of this green strikes fear in the hearts of others."
@@ -58,9 +52,7 @@
 	icon = 'ModularBungalow/clothing/icons/gloves.dmi'
 	icon_state = "commodore_gloves"
 
-
 //Marshal's Parade suit
-
 /obj/item/clothing/under/misc/parade/mar
 	can_adjust = FALSE
 	desc = "A custom tailored uniform of an elite military commander."
@@ -87,13 +79,17 @@
 	desc = "Only a distinctive captain has the experience to get this coat. Many stations lost, many battles won."
 	icon_state = "marshal_jacket"
 
-
 // Station Commander's jacket
 /obj/item/clothing/suit/armor/captain/cdr_jacket
 	name = "station commander's armor"
 	desc = "The coat of the station's commander. Lovely, personable and everpresent."
 	icon_state = "cdr_jacket"
 
+// Casio Armor
+/obj/item/clothing/suit/armor/captain/casio
+	name = "NT Captain's carapace"
+	desc = "The classic captain's carapace, in naval green."
+	icon_state = "casio"
 
 //CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
@@ -101,6 +97,7 @@
 	desc = "The coat of a militaristic captain"
 	icon_state = "commander_jacket"
 
+//Solgov coat
 /obj/item/clothing/suit/armor/captain/solgov
 	name = "Solgov Commander's coat"
 	desc = "The coat of a Solgov base commander"

@@ -8,7 +8,7 @@
 	selection_color = "#fff5cc"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
-	maptype = "station"
+	mapexclude = list("ship", "planetary")
 
 	outfit = /datum/outfit/job/voidtech
 
