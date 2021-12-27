@@ -21,7 +21,7 @@
 
 /datum/supply_pack/security/armory/breacherguns
 	name = "Tactical breaching shotguns crate"
-	cost = CARGO_CRAETE_VALUE *
+	cost = CARGO_CRATE_VALUE * 6
 	desc = "When you need a way in but dont want to cause an explosion or minimize damage. Crate contains three pre-loaded Tactical Breaching Shotguns and three bandoliers to hold your shells. Requires Armory access to Open"
 	contains = list(/obj/item/gun/ballistic/shotgun/automatic/breaching,
 					/obj/item/gun/ballistic/shotgun/automatic/breaching,
