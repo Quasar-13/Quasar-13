@@ -233,7 +233,7 @@
 	var/turf/our_turf = get_turf(src)
 	if(!istype(our_turf))
 		return
-		to_chat(usr, "<span class='danger'>[src] lifts his ancient blade, and prepares to spin!")
+	to_chat(usr, "<span class='danger'>[src] lifts his ancient blade, and prepares to spin!")
 	spinning = TRUE
 	animate(src, color = "#ff6666", 10)
 	SLEEP_CHECK_DEATH(5)
