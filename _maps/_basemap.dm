@@ -19,12 +19,12 @@
 		#include "map_files\debug\multiz.dmm"
 
 		//Rotation maps
-		#include "map_files\Deltastation\DeltaStation2.dmm"
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\PackedStation\PackedStation.dmm"
 		#include "map_files\GalaxyStation\GalaxyStation.dmm" //marg
 		#include "map_files\GalaxyStation\Galaxystation_LVL2.dmm"
 		#include "map_files\RemoraStation\RemoraStation.dmm"
+		#include "map_files\RemoraStation\RemoraStation2.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
@@ -32,6 +32,7 @@
 		//Admin only maps
 		#include "map_files\RemusFacility\RemusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
+		#include "map_files\Deltastation\DeltaStation2.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
