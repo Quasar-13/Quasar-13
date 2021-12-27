@@ -11,8 +11,9 @@
 	gender = FEMALE
 	speak_chance = 0
 	turns_per_move = 5
-	response_help_continuous = "passes through"
-	response_help_simple = "pass through"
+	pixel_x = -8
+	response_help_continuous = "touches"
+	response_help_simple = "touches"
 	emote_taunt = list("points at you")
 	taunt_chance = 25
 	speed = 1

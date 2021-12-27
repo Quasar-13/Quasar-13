@@ -74,6 +74,14 @@
 	always_place = TRUE //WOULD BE UNFAIR IF SOMETHING THAT IS ALWAYS PLACED HAD A COST...
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/platinum
+	name = "Platinum Angel"
+	id = "platinum"
+	description = "You cannot win, She cannot lose."
+	suffix = "rockplanet_platinum.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
 
 

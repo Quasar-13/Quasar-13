@@ -10,18 +10,28 @@
 	id = "pizzawave"
 	description = "Get some pizza my dude."
 	suffix = "jungle_pizzawave.dmm"
+	allow_duplicates = TRUE
 
 /datum/map_template/ruin/jungle/nest
 	name = "Jungle Xenonest"
 	id = "xenonestjungle"
 	description = "A Xeno nest crammed into the Jungle."
 	suffix = "jungle_nest.dmm"
+	allow_duplicates = TRUE
 
 /datum/map_template/ruin/jungle/seedling
 	name = "Seedling ruin"
 	id = "seedling"
 	description = "A rare seedling plant."
 	suffix = "jungle_seedling.dmm"
+	always_place = TRUE
+
+/datum/map_template/ruin/jungle/leaper
+	name = "Leaper ruin"
+	id = "leaper"
+	description = "A leaper, ready to be slaughtered."
+	suffix = "jungle_leaper.dmm
+	always_place = TRUE
 
 /datum/map_template/ruin/jungle/demon
 	name = "Demonic Office"
