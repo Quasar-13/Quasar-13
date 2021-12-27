@@ -1,5 +1,5 @@
 //platinum hardsuit
-/obj/item/clothing/head/helmet/space/hardsuit/voidtech
+/obj/item/clothing/head/helmet/space/hardsuit/platinum
 	name = "voidtech hardsuit helmet"
 	desc = "A suit that in nearly indestructable. 'For you cannot win and I cannot lose'"
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
