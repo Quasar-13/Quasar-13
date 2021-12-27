@@ -45,7 +45,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/centcom/officer/captain
 	suit = /obj/item/clothing/suit/armor/captain/casio
-	head = null
+	head = /obj/item/clothing/head/beret/centcom
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/station_charter=1)

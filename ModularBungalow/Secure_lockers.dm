@@ -82,6 +82,7 @@
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/headset_cent/commander(src)
 	new /obj/item/door_remote/captain(src)
+	new /obj/item/clothing/head/beret/centcom(src)
 
 /obj/structure/closet/secure_closet/nt_squadleader
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'

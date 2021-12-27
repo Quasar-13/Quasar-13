@@ -935,7 +935,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 			//running mapexclude
-			if(SSmaptype.maptype == job.mapexclude)
+			if(SSmaptype.maptype in job.mapexclude)
 				continue
 
 			if(SSmaptype.maptype == "syndicate")

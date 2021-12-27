@@ -5,6 +5,7 @@ GLOBAL_LIST_INIT(command_positions,list(
 	"NT Captain",
 	"Blueshield",
 
+	//Other Heads of staff
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
