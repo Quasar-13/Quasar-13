@@ -18,3 +18,17 @@
 	if(istype(target, /obj/structure/window) || istype(target, /obj/machinery/door) || istype(target, /obj/structure/door_assembly))
 		damage = 500 //one shot to break a window or 3 shots to breach an airlock door
 	..()
+
+
+/obj/item/storage/box/breachingshells
+	name = "box of breaching shotgun shells"
+	desc = "A box full of breaching shells. designed for tactical breaching shotguns"
+	icon = 'ModularBungalow/bungalowWeapons/_icon/shotgunshell.dmi'
+	icon_state = "breacher_box"
+	illustration = null
+
+/obj/item/storage/box/breachingshells/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/breacher(src)
+
+
