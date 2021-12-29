@@ -1,11 +1,22 @@
 GLOBAL_LIST_INIT(command_positions,list(
 	"Captain",
+
+	//Fucking Casiostation
+	"NT Captain",
+	"Blueshield",
+
+	//Other Heads of staff
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Quartermaster"))
+	"Quartermaster",
+
+	//Nt Marine command
+	"NT Commander",
+	"ERT Commander",
+	"NT Squad Leader"))
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
@@ -99,6 +110,22 @@ GLOBAL_LIST_INIT(police_positions, list(
 	"Military Police"))
 
 
+//NT Blacksite
+GLOBAL_LIST_INIT(ntmarines_positions, list(
+	"NT Commander",
+	"NT Bridge Officer",
+	"NT Medical Officer",
+	"ERT Commander",
+	"ERT Engineer",
+	"ERT Medic",
+	"ERT Security",
+	"Death Commando",
+	"NT Squad Leader",
+	"NT Military Police",
+	"NT Vehicle Operator",
+	"NT Marine"))
+
+
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(
 	"Commander",
@@ -130,6 +157,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),
+	EXP_TYPE_NTMARINE = list("jobs" = ntmarines_positions, "color" = "##134975"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

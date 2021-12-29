@@ -27,11 +27,13 @@
 		#include "map_files\RemoraStation\RemoraStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\CasioStation\Casiostation.dmm"
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
 
 		//Admin only maps
 		#include "map_files\RemusFacility\RemusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
+		#include "map_files\NTBlacksite\NTBlacksite.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

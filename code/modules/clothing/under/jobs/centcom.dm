@@ -16,11 +16,15 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/centcom/officer
-	name = "\improper CentCom emergency response team's jumpsuit"
+	name = "\improper CentCom officer's jumpsuit"
 	desc = "It's a jumpsuit worn by the ERTs. Used by CentCom ERTs."
 	icon_state = "officer"
 	inhand_icon_state = "g_suit"
 	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/rank/centcom/officer/captain
+	name = "\improper Captain's jumpsuit"
+	desc = "It's a jumpsuit worn by the captain himself. The green is for Navy."
 
 /obj/item/clothing/under/rank/centcom/ert
 	name = "\improper CentCom turtleneck suit"

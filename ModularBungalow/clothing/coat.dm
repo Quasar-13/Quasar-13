@@ -1,3 +1,4 @@
+//VT winter coat
 /obj/item/clothing/suit/hooded/wintercoat/engineer/void
 	name = "\improper Void Technician's winter coat"
 	desc = "This is a void technician's winter coat, not suitable for the vacuum of space."
@@ -18,4 +19,5 @@
 	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "winterhood_void"
-	
+
+

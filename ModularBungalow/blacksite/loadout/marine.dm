@@ -24,7 +24,7 @@
 s
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
-	new /obj/item/gun/ballistic/automatic/ar(src)
+	new /obj/item/gun/ballistic/automatic/ar/semi(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
@@ -45,6 +45,8 @@ s
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/storage/bag/chemistry/medic(src)
+	new /obj/item/gun/syringe(src)
 	new /obj/item/storage/firstaid/emergency(src)
 	new /obj/item/storage/firstaid/brute(src)
 	new /obj/item/extinguisher/mini(src)
@@ -53,17 +55,19 @@ s
 
 /obj/item/storage/backpack/duffelbag/marine/engi
 	name = "Marine Engineering Kit"
-	desc = "Contains a toolbelt, a semi-auto pistol and an energy shield."
+	desc = "Contains a toolbelt, a bolt action rifle, and a turret."
 
 /obj/item/storage/backpack/duffelbag/marine/engi/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine/engineer(src)
 	new /obj/item/clothing/head/beret/eng/hazard(src)
 	new /obj/item/extinguisher/mini(src)
+	new /obj/item/gun/ballistic/rifle/boltaction/brand_new(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/ammo_box/a762(src)
+	new /obj/item/choice_beacon/marines/turret(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/shield/energy(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
 
@@ -78,12 +82,16 @@ s
 	new /obj/item/shield/energy(src)
 	new /obj/item/melee/transforming/energy/sword/saber(src)
 	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/box/lethalshot(src)
-	new /obj/item/storage/belt/bandolier(src)
-	new /obj/item/gun/ballistic/automatic/pistol(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/lasershot(src)
+	new /obj/item/storage/box/shotgun/meteor(src)
+	new /obj/item/storage/box/shotgun/meteor(src)
+	new /obj/item/storage/box/shotgun/frag(src)
+	new /obj/item/storage/belt/bandolier/marine(src)
+	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
 
 /obj/item/storage/backpack/duffelbag/marine/smg
@@ -110,12 +118,23 @@ s
 	new /obj/item/clothing/suit/armor/vest/ntmarine/sniper(src)
 	new /obj/item/clothing/neck/cloak/ranger(src)
 	new /obj/item/binoculars(src)
-	new /obj/item/clothing/glasses/sniper(src)
-	new /obj/item/gun/ballistic/rifle/boltaction/brand_new(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
-	new /obj/item/ammo_box/a762(src)
+	new /obj/item/gun/ballistic/automatic/sniper_rifle(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
+
+/obj/item/storage/backpack/duffelbag/marine/samurai
+	name = "Marine Blademaster Kit"
+	desc = "This kit is great for frontlining, with a bullet deflecting blade."
+
+/obj/item/storage/backpack/duffelbag/marine/samurai/PopulateContents()
+	new /obj/item/clothing/suit/armor/vest/ntmarine/samurai(src)
+	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
+	new /obj/item/clothing/glasses/eyepatch(src)
+	new /obj/item/clothing/neck/cloak/samurai (src)
+	new /obj/item/vibro_weapon(src)
+	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 

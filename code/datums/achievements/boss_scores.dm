@@ -57,3 +57,8 @@
 	name = "Chaos Marines Killed"
 	desc = "You've killed HOW many?"
 	database_id = MARINE_SCORE
+
+/datum/award/score/necromancer_score
+	name = "Necromancers Killed"
+	desc = "You've killed HOW many?"
+	database_id = NECROMANCER_SCORE

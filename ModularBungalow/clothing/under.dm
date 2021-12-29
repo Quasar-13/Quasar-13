@@ -18,6 +18,17 @@
 	inhand_icon_state = "syndicate_suit"
 	can_adjust = FALSE
 
+//Samurai outfit. I think it looks really cool, maybe it will?
+/obj/item/clothing/under/syndicate/samurai
+	name = "syndicate samurai outfit"
+	desc = "bandages and hakama. katana not included"
+	icon_state = "samurai"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "syndicate_suit"
+	can_adjust = FALSE
+
+
 //Chemical Researcher Jumpsuit
 /obj/item/clothing/under/rank/research/chem
 	desc = "A tacky pick jumpsuit worn by the station's chemists."

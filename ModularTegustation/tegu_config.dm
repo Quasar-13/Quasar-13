@@ -64,3 +64,6 @@
 /datum/config_entry/number/no_job_restriction_chance
 	config_entry_value = 5
 	min_val = 0
+ 
+//Tombworld enabled flag
+/datum/config_entry/flag/tombworld_enabled
