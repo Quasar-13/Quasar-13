@@ -70,18 +70,3 @@
 	name = "3x3 room spawner"
 	room_width = 3
 	room_height = 3
-
-/* Ruins landmarks */
-/obj/effect/spawner/room/cybersun
-	name = "random cybersun warehouse room"
-	dir = NORTH
-	room_width = 6
-	room_height = 7
-	room_type = "cybersun"
-
-/obj/effect/spawner/room/cybersun_med
-	name = "random cybersun medical room"
-	dir = NORTH
-	room_width = 3
-	room_height = 5
-	room_type = "cybersun_med"
