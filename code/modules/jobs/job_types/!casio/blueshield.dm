@@ -9,6 +9,7 @@
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
 	maptype = "casio"
+	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield
 
