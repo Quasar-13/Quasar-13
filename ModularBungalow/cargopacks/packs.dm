@@ -18,6 +18,29 @@
 
 
 //ARMORY
+
+/datum/supply_pack/security/armory/breacherguns
+	name = "Tactical breaching shotguns crate"
+	cost = CARGO_CRATE_VALUE * 6
+	desc = "When you need a way in but dont want to cause an explosion or minimize damage. Crate contains three pre-loaded Tactical Breaching Shotguns and three bandoliers to hold your shells. Requires Armory access to Open"
+	contains = list(/obj/item/gun/ballistic/shotgun/automatic/breaching,
+					/obj/item/gun/ballistic/shotgun/automatic/breaching,
+					/obj/item/gun/ballistic/shotgun/automatic/breaching,
+					/obj/item/storage/belt/bandolier,
+					/obj/item/storage/belt/bandolier,
+					/obj/item/storage/belt/bandolier)
+	crate_name = "tactical breaching shotguns crate"
+
+/datum/supply_pack/security/armory/box_breachershots
+	name = "Breacherslugs boxes crate"
+	desc = "Contains 4 boxes of Tacical Breach Shotgun slugs. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 3
+	contains = list(/obj/item/storage/box/breachingshells,
+					/obj/item/storage/box/breachingshells,
+					/obj/item/storage/box/breachingshells,
+					/obj/item/storage/box/breachingshells)
+	crate_name = "Breacherslugs crate"
+
 /datum/supply_pack/security/armory/box_rubbershots
 	name = "Rubbershots boxes crate"
 	desc = "Contains 4 boxes of rubbershot shells. Requires Armory access to open."
