@@ -3,6 +3,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
+	head_announce = list(RADIO_CHANNEL_CENTCOM)
 	supervisors = "the captain"
 	selection_color = "#073052"
 	exp_type = EXP_TYPE_NTMARINE

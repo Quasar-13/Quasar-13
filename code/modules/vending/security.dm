@@ -56,6 +56,7 @@
 					/obj/item/assembly/flash/handheld = 7,
 					/obj/item/megaphone/command = 7,
 					/obj/item/clothing/shoes/sneakers/brown = 7,
+					/obj/item/clothing/head/beret/command = 7,
 					/obj/item/card/id/captains_spare = 1)
 	contraband = list(/obj/item/clothing/head/crown/fancy = 3,
 					/obj/item/clothing/glasses/sunglasses/gar/supergar = 2)
