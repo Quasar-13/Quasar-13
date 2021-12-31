@@ -16,7 +16,7 @@
 
 /turf/open/floor/engine/examine(mob/user)
 	. += ..()
-		. += "<span class='notice'>The reinforcement sheet is <b>wrenched</b> firmly in place.</span>"
+	. += "<span class='notice'>The reinforcement sheet is <b>wrenched</b> firmly in place.</span>"
 
 /turf/open/floor/engine/airless
 	initial_gas_mix = AIRLESS_ATMOS

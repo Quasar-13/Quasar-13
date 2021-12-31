@@ -263,6 +263,13 @@
 /obj/structure/fans/Destroy()
 	air_update_turf(TRUE, FALSE)
 	. = ..()
+
+/obj/structure/fans/tiny/energy //todo: make this be powered to work
+	name = "air shield"
+	desc "A barrier of energy, preventing air from moving between it."
+	icon 'icons/effects/effects.dmi'
+	icon_state = "shield-old"
+
 //Invisible, indestructible fans
 /obj/structure/fans/tiny/invisible
 	name = "air flow blocker"

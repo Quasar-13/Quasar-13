@@ -17,7 +17,7 @@
 	. = ..()
 
 //forgive me for my sins
-#define HELPER(color_name, tile_color, tile_alpha)		\
+#define HELPER_CORNER_DECAL(color_name, tile_color, tile_alpha)		\
 	/obj/effect/turf_decal/corner/##color_name {		\
 		icon_state = "corner_white";					\
 		color = ##tile_color;							\
@@ -112,24 +112,24 @@
 		icon_state = "spline_fancy_corner"				\
 	}
 
-HELPER(neutral, null, 75)
-HELPER(black, COLOR_TILE_GRAY, 255)
-HELPER(blue, COLOR_BLUE_GRAY, 255)
-HELPER(green, COLOR_GREEN_GRAY, 255)
-HELPER(lime, COLOR_PALE_GREEN_GRAY, 255)
-HELPER(yellow, COLOR_BROWN, 255)
-HELPER(beige, COLOR_BEIGE, 255)
-HELPER(red, COLOR_RED_GRAY, 255)
-HELPER(bar, "#791500", 130)
-HELPER(pink, COLOR_PALE_RED_GRAY, 255)
-HELPER(purple, COLOR_PURPLE_GRAY, 255)
-HELPER(mauve, COLOR_PALE_PURPLE_GRAY, 255)
-HELPER(orange, COLOR_DARK_ORANGE, 255)
-HELPER(brown, COLOR_DARK_BROWN, 255)
-HELPER(white, COLOR_WHITE, 255)
-HELPER(grey, COLOR_FLOORTILE_GRAY, 255)
-HELPER(lightgrey, "#a8b2b6", 255)
-HELPER(bottlegreen, "#57967f", 255)
+HELPER_CORNER_DECAL(neutral, null, 75)
+HELPER_CORNER_DECAL(black, COLOR_TILE_GRAY, 255)
+HELPER_CORNER_DECAL(blue, COLOR_BLUE_GRAY, 255)
+HELPER_CORNER_DECAL(green, COLOR_GREEN_GRAY, 255)
+HELPER_CORNER_DECAL(lime, COLOR_PALE_GREEN_GRAY, 255)
+HELPER_CORNER_DECAL(yellow, COLOR_BROWN, 255)
+HELPER_CORNER_DECAL(beige, COLOR_BEIGE, 255)
+HELPER_CORNER_DECAL(red, COLOR_RED_GRAY, 255)
+HELPER_CORNER_DECAL(bar, "#791500", 130)
+HELPER_CORNER_DECAL(pink, COLOR_PALE_RED_GRAY, 255)
+HELPER_CORNER_DECAL(purple, COLOR_PURPLE_GRAY, 255)
+HELPER_CORNER_DECAL(mauve, COLOR_PALE_PURPLE_GRAY, 255)
+HELPER_CORNER_DECAL(orange, COLOR_DARK_ORANGE, 255)
+HELPER_CORNER_DECAL(brown, COLOR_DARK_BROWN, 255)
+HELPER_CORNER_DECAL(white, COLOR_WHITE, 255)
+HELPER_CORNER_DECAL(grey, COLOR_FLOORTILE_GRAY, 255)
+HELPER_CORNER_DECAL(lightgrey, "#a8b2b6", 255)
+HELPER_CORNER_DECAL(bottlegreen, "#57967f", 255)
 
 /obj/effect/turf_decal/spline/plain
 	icon_state = "spline_plain"
