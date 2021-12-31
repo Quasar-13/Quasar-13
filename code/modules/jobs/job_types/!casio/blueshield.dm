@@ -31,10 +31,10 @@
 
 /datum/outfit/job/blueshield
 	name = "Blueshield"
-	jobtype = /datum/job/ntcaptain
+	jobtype = /datum/job/blueshield
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/captain
+	belt = /obj/item/pda/blueshield
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_com
 	gloves = /obj/item/clothing/gloves/color/black

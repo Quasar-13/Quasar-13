@@ -27,7 +27,7 @@
 	jobtype = /datum/job/voidtech
 
 	belt = /obj/item/storage/belt/utility/full
-	l_pocket = /obj/item/pda/engineering
+	l_pocket = /obj/item/pda/void
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
 	shoes = /obj/item/clothing/shoes/workboots
