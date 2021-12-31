@@ -92,16 +92,16 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergeant")
-	senior_title = "Sergeant Major"
+	alt_titles = list("Brig Chief", "Security Sergeant")
+	senior_title = list("Master-At-Arms", "Security Major")
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergeant"
+	senior_title = list("Intelligence Officer", "Chief Investigator")
 
 /datum/job/officer
 	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
-	senior_title = "Man-at-Arms"
+	senior_title = list("Man-at-Arms", "Sergeant Officer")
 
 //Supply
 /datum/job/mining
@@ -122,7 +122,7 @@
 	senior_title = "Chief Military Police"
 
 /datum/job/cmo
-	alt_titles = list("Medical Director", "Head Surgeon")
+	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
 	senior_title = "Senior Medical Officer"
 
 /datum/job/rd
@@ -133,7 +133,7 @@
 	alt_titles = list("Chief Atmospherics Technician", "Chief Electrical Technician")
 	senior_title = "Senior Project Manager"
 
-/datum/job/tegu/secretary
+/datum/job/secretary
 	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
 	senior_title = "Diplomat"
 
@@ -142,6 +142,11 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer")
+	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
+
+
+//Funny role
+/datum/job/staff_officer
+	alt_titles = list("Field Officer")
 

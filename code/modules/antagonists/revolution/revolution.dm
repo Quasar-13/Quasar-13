@@ -14,12 +14,14 @@
 	var/datum/team/revolution/rev_team
 
 	/// What message should the player receive when they are being demoted, and the revolution has won?
-	var/victory_message = "The revolution has overpowered the command staff! Viva la revolution! Execute any head of staff and security should you find them alive."
+	var/victory_message = "The revolution has  slaughtered the targets! Viva la revolution! Execute any security should you find them alive."
 
 /datum/antagonist/rev/can_be_owned(datum/mind/new_owner)
 	. = ..()
+	var/list/targets = list("Captain","Head of Personnel","Head of Security","Warden","Detective", "NT Squad Leader", "NT Captain") //cannot be revved
+
 	if(.)
-		if(new_owner.assigned_role in GLOB.command_positions)
+		if(new_owner.assigned_role in targets)
 			return FALSE
 		if(new_owner.unconvertable)
 			return FALSE
@@ -50,7 +52,7 @@
 	. = ..()
 
 /datum/antagonist/rev/greet()
-	to_chat(owner, "<span class='userdanger'>You are now a revolutionary! Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Help them kill the heads to win the revolution!</span>")
+	to_chat(owner, "<span class='userdanger'>You are now a revolutionary! Do not needlessly slaughter, there will be consequences. Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Join together and kill the HOS, HOP, Captain, Detective and Warden!!</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/rev/create_team(datum/team/revolution/new_team)
@@ -302,7 +304,7 @@
 	var/list/ex_revs = list()
 
 /datum/team/revolution/proc/update_objectives(initial = FALSE)
-	var/untracked_heads = SSjob.get_all_heads()
+	var/untracked_heads = SSjob.get_all_targets()
 	for(var/datum/objective/mutiny/O in objectives)
 		untracked_heads -= O.target
 	for(var/datum/mind/M in untracked_heads)
@@ -326,7 +328,7 @@
 /datum/team/revolution/proc/update_heads()
 	if(SSticker.HasRoundStarted())
 		var/list/datum/mind/head_revolutionaries = head_revolutionaries()
-		var/list/datum/mind/heads = SSjob.get_all_heads()
+		var/list/datum/mind/heads = SSjob.get_all_targets()
 		var/list/sec = SSjob.get_all_sec()
 
 		if(head_revolutionaries.len < max_headrevs && head_revolutionaries.len < round(heads.len - ((8 - sec.len) / 3)))
@@ -491,9 +493,9 @@
 		rev_part += printplayerlist(revs, !check_rev_victory())
 		result += rev_part.Join("<br>")
 
-	var/list/heads = SSjob.get_all_heads()
+	var/list/heads = SSjob.get_all_targets()
 	if(heads.len)
-		var/head_text = "<span class='header'>The heads of staff were:</span>"
+		var/head_text = "<span class='header'>The targets were:</span>"
 		head_text += "<ul class='playerlist'>"
 		for(var/datum/mind/head in heads)
 			var/target = (head in targets)
@@ -525,7 +527,7 @@
 
 	var/heads_report = "<b>Heads of Staff</b><br>"
 	heads_report += "<table cellspacing=5>"
-	for(var/datum/mind/N in SSjob.get_living_heads())
+	for(var/datum/mind/N in list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective"))
 		var/mob/M = N.current
 		if(M)
 			heads_report += "<tr><td><a href='?_src_=holder;[HrefToken()];adminplayeropts=[REF(M)]'>[M.real_name]</a>[M.client ? "" : " <i>(No Client)</i>"][M.stat == DEAD ? " <b><font color=red>(DEAD)</font></b>" : ""]</td>"

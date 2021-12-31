@@ -74,6 +74,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/penetrates_skin = VAPOR
 	///Assoc list with key type of addiction this reagent feeds, and value amount of addiction points added per unit of reagent metabolzied (which means * REAGENTS_METABOLISM every life())
 	var/list/addiction_types = null
+	///How good of an accelerant is this reagent
+	var/accelerant_quality = 0
 
 /datum/reagent/New()
 	SHOULD_CALL_PARENT(TRUE)

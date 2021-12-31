@@ -10,6 +10,7 @@
 /datum/reagent/medicine/ventrite/on_mob_life(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -3)
 	M.adjustOxyLoss(rand(1,3))
+	M.adjustCloneLoss(0.5*REM)
 	..()
 	. = 1
 
@@ -23,6 +24,7 @@
 /datum/reagent/medicine/spirozrite/on_mob_life(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -1.5)
 	M.adjustStaminaLoss(rand(1,5))
+	M.adjustCloneLoss(0.5*REM)
 	..()
 	. = 1
 
@@ -35,7 +37,8 @@
 
 /datum/reagent/medicine/citisrite/on_mob_life(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, -1.5)
-	M.adjustBruteLoss(0.5, 0)
+	M.adjustBruteLoss(1)
+	M.adjustCloneLoss(0.5*REM)
 	..()
 	. = 1
 
@@ -49,6 +52,7 @@
 /datum/reagent/medicine/purgrite/on_mob_life(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -1.5)
 	M.adjust_disgust(3)
+	M.adjustCloneLoss(0.5*REM)
 	..()
 	. = 1
 

@@ -312,6 +312,10 @@
 /mob/living/simple_animal/hostile/skeleton/eskimo,
 /turf/open/floor/plating,
 /area/ruin/powered/pride)
+"fa" = (
+/obj/item/ammo_box/magazine/tommygunm45,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/powered)
 "fb" = (
 /obj/structure/trap/stun,
 /turf/open/floor/plating,
@@ -343,6 +347,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/powered)
 "fK" = (
@@ -527,9 +536,10 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/powered)
 "iY" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/structure/frame/computer{
+	dir = 4
 	},
+/obj/item/circuitboard/computer/rdconsole,
 /turf/open/floor/plasteel,
 /area/science)
 "ji" = (
@@ -768,6 +778,10 @@
 /obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/plasteel,
 /area/science)
+"mF" = (
+/obj/item/gun/ballistic/automatic/tommygun,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/powered)
 "mR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -813,6 +827,12 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/powered)
+"nN" = (
+/obj/structure/table/reinforced,
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/xenoarch_researcher,
+/turf/open/floor/plasteel,
+/area/science)
 "nT" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue{
@@ -889,14 +909,15 @@
 	icon_state = "cap";
 	name = "Administrator's Locker"
 	},
-/obj/item/clothing/under/misc/hopparade{
-	name = "Administrator's uniform"
-	},
 /obj/item/clothing/head/beret/command,
 /obj/item/areaeditor/blueprints,
-/obj/item/clothing/glasses/sunglasses/garb,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/glasses/hud/health/syndicate,
+/obj/item/clothing/under/solgov/suit,
+/obj/item/ammo_box/n762,
+/obj/item/gun/ballistic/revolver/nagant,
+/obj/item/storage/belt/bandolier,
+/obj/item/ammo_box/n762,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "oN" = (
@@ -1019,7 +1040,7 @@
 "qz" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office";
+	name = "Commander's Office";
 	req_access_txt = "20"
 	},
 /turf/open/floor/plasteel,
@@ -1068,12 +1089,12 @@
 	name = "Commander's Locker"
 	},
 /obj/item/clothing/head/beret/command,
-/obj/item/clothing/under/misc/coparade,
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold,
 /obj/item/ammo_box/magazine/m50,
 /obj/item/clothing/suit/armor/captain/solgov,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/glasses/hud/health/syndicate,
+/obj/item/clothing/under/solgov/suit,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/captain)
 "rn" = (
@@ -1183,6 +1204,10 @@
 /obj/item/clothing/glasses/hud/security/syndicate,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/powered)
+"sl" = (
+/obj/item/circuitboard/machine/circuit_imprinter,
+/turf/open/floor/plating,
+/area/ruin/powered/pride)
 "sv" = (
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel,
@@ -1370,6 +1395,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/dorms)
+"vq" = (
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	icon_state = "tac";
+	name = "T-12 Locker";
+	req_access_txt = "20"
+	},
+/obj/item/gun/ballistic/automatic/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/obj/item/ammo_box/magazine/t12,
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/captain)
 "vx" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -1745,7 +1787,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-05"
 	},
-/obj/item/clothing/under/misc/hopparade,
+/obj/item/clothing/under/misc/parade/hop,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "zZ" = (
@@ -1920,6 +1962,14 @@
 "Cq" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/north,
+/obj/item/stack/sheet/mineral/sandbags,
+/obj/structure/table,
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 50
+	},
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 50
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "Cv" = (
@@ -2055,12 +2105,6 @@
 /obj/machinery/smartfridge/organ,
 /turf/closed/wall,
 /area/medical)
-"EQ" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/ai_monitored/security/armory/upper)
 "EX" = (
 /obj/structure/rack,
 /obj/item/defibrillator,
@@ -2309,6 +2353,12 @@
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 50
+	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory/upper)
 "HK" = (
@@ -2509,6 +2559,12 @@
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel,
 /area/mine/production)
+"JV" = (
+/obj/machinery/door/window/brigdoor{
+	req_one_access_txt = "1"
+	},
+/turf/open/floor/plasteel,
+/area/ai_monitored/security/armory/upper)
 "JX" = (
 /mob/living/simple_animal/hostile/syndicate/melee/sword/space/stormtrooper,
 /turf/open/floor/plasteel/dark,
@@ -2646,13 +2702,13 @@
 /area/science)
 "KS" = (
 /obj/structure/table,
-/obj/item/gun/ballistic/automatic/ak47{
-	pixel_y = 4
+/obj/item/gun/ballistic/automatic/wt550{
+	pixel_y = 6
 	},
-/obj/item/gun/ballistic/automatic/ak47,
-/obj/item/gun/ballistic/automatic/ak47{
-	pixel_y = -4
+/obj/item/gun/ballistic/automatic/wt550{
+	pixel_y = 3
 	},
+/obj/item/gun/ballistic/automatic/wt550,
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "KZ" = (
@@ -2770,16 +2826,16 @@
 /area/hallway/primary/central)
 "Ms" = (
 /obj/structure/table,
-/obj/item/gun/ballistic/automatic/ak47{
-	pixel_y = 4
-	},
-/obj/item/gun/ballistic/automatic/ak47,
-/obj/item/gun/ballistic/automatic/ak47{
-	pixel_y = -4
-	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/gun/ballistic/automatic/wt550{
+	pixel_y = 6
+	},
+/obj/item/gun/ballistic/automatic/wt550{
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/automatic/wt550,
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "ME" = (
@@ -3227,6 +3283,11 @@
 	},
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/powered)
+"Sk" = (
+/obj/effect/landmark/latejoin,
+/obj/item/clothing/under/suit/tan,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/dorms)
 "Sl" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -3481,24 +3542,24 @@
 	name = "Ammo Locker";
 	req_access_txt = "3"
 	},
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "Vu" = (
@@ -3651,6 +3712,7 @@
 /obj/item/radio/headset/heads,
 /obj/structure/table/greyscale,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "WN" = (
@@ -4398,7 +4460,7 @@ mj
 mj
 xX
 mj
-mj
+fa
 mj
 mj
 mq
@@ -4654,10 +4716,10 @@ mj
 mj
 mj
 vf
-mj
+fa
 JX
-mj
-mj
+fa
+mF
 mq
 mq
 cO
@@ -4912,7 +4974,7 @@ mj
 mj
 xX
 mj
-mj
+mF
 mj
 JX
 mq
@@ -5170,8 +5232,8 @@ mj
 vf
 mj
 JX
-mj
-mj
+mF
+fa
 mq
 mq
 cO
@@ -5425,9 +5487,9 @@ mj
 mj
 mj
 xX
+fa
 mj
-mj
-mj
+fa
 mj
 mq
 mq
@@ -21521,9 +21583,9 @@ Fg
 Gr
 IF
 Gr
-iY
-iY
 oO
+iY
+nN
 Tk
 ZR
 ZR
@@ -23840,7 +23902,7 @@ Hu
 tY
 jL
 UY
-UY
+vq
 QR
 Uk
 Uk
@@ -25870,7 +25932,7 @@ On
 YQ
 yC
 On
-On
+Sk
 On
 Xu
 Yw
@@ -31013,7 +31075,7 @@ ZR
 ZR
 ZR
 ZR
-ZR
+Rz
 Rz
 DU
 WP
@@ -31270,9 +31332,9 @@ ZR
 ZR
 ZR
 ZR
-ZR
 Rz
-EQ
+JV
+Ub
 Ub
 Ub
 Ub
@@ -31527,7 +31589,7 @@ ZR
 ZR
 ZR
 ZR
-ZR
+Rz
 Rz
 Ff
 HN
@@ -64282,7 +64344,7 @@ ZR
 ZR
 fX
 Bz
-qA
+sl
 uK
 qA
 qA

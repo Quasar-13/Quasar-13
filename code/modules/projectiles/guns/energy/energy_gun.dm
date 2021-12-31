@@ -58,6 +58,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hos, /obj/item/ammo_casing/energy/laser/hos, /obj/item/ammo_casing/energy/ion/hos)
+	shaded_charge = TRUE
 	ammo_x_offset = 4
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
@@ -92,13 +93,13 @@
 	ammo_x_offset = 2
 
 /obj/item/gun/energy/e_gun/nuclear
-	name = "X-06N Nuclear Energy Rifle"
+	name = "X-07 Nuclear Energy Rifle"
 	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
 	icon_state = "nucgun"
 	inhand_icon_state = "nucgun"
 	charge_delay = 10
 	can_charge = FALSE
-	ammo_x_offset = 1
+	ammo_x_offset = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
 	selfcharge = 1
 	var/reactor_overloaded

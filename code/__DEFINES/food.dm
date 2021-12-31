@@ -15,6 +15,7 @@
 #define CLOTH 		(1<<14)
 #define NUTS 		(1<<15)
 #define SEAFOOD 	(1<<16)
+#define POLLEN		(1<<17)
 
 #define DRINK_NICE	1
 #define DRINK_GOOD	2
