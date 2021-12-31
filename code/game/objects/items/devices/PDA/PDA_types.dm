@@ -229,3 +229,26 @@
 	name = "geneticist PDA"
 	default_cartridge = /obj/item/cartridge/medical
 	icon_state = "pda-genetics"
+
+/obj/item/pda/chemist
+	name = "chemist PDA"
+	default_cartridge = /obj/item/cartridge/chemistry
+	icon_state = "pda-chemre"
+
+/obj/item/pda/secretary
+	name = "secretary PDA"
+	icon_state = "pda-secretary"
+
+/obj/item/pda/void
+	name = "void PDA"
+	icon_state = "pda-void"
+
+/obj/item/pda/blueshield
+	name = "blueshield PDA"
+	default_cartridge = /obj/item/cartridge/security
+	icon_state = "pda-blueshield"
+
+/obj/item/pda/mp
+	name = "military police PDA"
+	default_cartridge = /obj/item/cartridge/security
+	icon_state = "pda-mp"

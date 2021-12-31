@@ -26,7 +26,7 @@
 	jobtype = /datum/job/chemre
 
 	glasses = /obj/item/clothing/glasses/science
-	belt = /obj/item/pda/geneticist
+	belt = /obj/item/pda/chemist
 	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/research/chem
 	shoes = /obj/item/clothing/shoes/sneakers/white
