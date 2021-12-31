@@ -19,7 +19,7 @@
 	icon_state = "homedefender-special"
 	selfcharge = 1
 
-//X-02 Pulse Disabler Rifle
+//X-41 Pulse Disabler Rifle
 /obj/item/gun/energy/e_gun/hop
 	name = "\improper X-41 Disabler Beam Rifle"
 	desc = "A classic, the shotgun variant of the X-01 Multiphase, this rifle trades the ion and kill modes for a concentrated, but weak disabler beam and scattershot blasts."
@@ -32,6 +32,13 @@
 	force = 5
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser/scatter/disabler, /obj/item/ammo_casing/energy/laser/scatter/close)
 	ammo_x_offset = 2
+
+//Blueshield gun
+/obj/item/gun/energy/e_gun/stun/blueshield
+	name = "\improper XX-02 Tactical Engergy Rifle"
+	desc = "A modified XX-01 that has a disabler mode."
+	w_class = WEIGHT_CLASS_BULKY
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser)
 
 
 // Svet's Disabler
