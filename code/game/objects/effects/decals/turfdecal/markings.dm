@@ -217,3 +217,87 @@
 
 /obj/effect/turf_decal/siding/wideplating/dark/end
 	icon_state = "siding_wideplating_end"
+
+/obj/effect/turf_decal/atmos/oxygen
+	icon_state = "oxygen"
+
+/obj/effect/turf_decal/atmos/carbon_dioxide
+	icon_state = "carbon_dioxide"
+
+/obj/effect/turf_decal/atmos/nitrogen
+	icon_state = "nitrogen"
+
+/obj/effect/turf_decal/atmos/air
+	icon_state = "air"
+
+/obj/effect/turf_decal/atmos/nitrous_oxide
+	icon_state = "nitrous_oxide"
+
+/obj/effect/turf_decal/atmos/plasma
+	icon_state = "plasma"
+
+/obj/effect/turf_decal/atmos/mix
+	icon_state = "mix"
+
+/obj/effect/turf_decal/number/one
+	icon_state = "1"
+
+/obj/effect/turf_decal/number/two
+	icon_state = "2"
+
+/obj/effect/turf_decal/number/three
+	icon_state = "3"
+
+/obj/effect/turf_decal/number/four
+	icon_state = "4"
+
+/obj/effect/turf_decal/number/five
+	icon_state = "5"
+
+/obj/effect/turf_decal/number/six
+	icon_state = "6"
+
+/obj/effect/turf_decal/number/seven
+	icon_state = "7"
+
+/obj/effect/turf_decal/number/eight
+	icon_state = "8"
+
+/obj/effect/turf_decal/number/nine
+	icon_state = "9"
+
+/obj/effect/turf_decal/number/zero
+	icon_state = "0"
+
+/obj/effect/turf_decal/dept/hop
+	icon_state = "hop"
+
+/obj/effect/turf_decal/dept/bar
+	icon_state = "bar"
+
+/obj/effect/turf_decal/dept/cargo
+	icon_state = "cargo"
+
+/obj/effect/turf_decal/dept/medical
+	icon_state = "med"
+
+/obj/effect/turf_decal/dept/science
+	icon_state = "sci"
+
+/obj/effect/turf_decal/dept/security
+	icon_state = "sec"
+
+/obj/effect/turf_decal/dept/mining
+	icon_state = "mine"
+
+/obj/effect/turf_decal/zoo
+	icon_state = "zoo"
+
+/obj/effect/turf_decal/no
+	icon_state = "no"
+
+/obj/effect/turf_decal/radiation
+	icon_state = "radiation"
+
+/obj/effect/turf_decal/radiation/white
+	icon_state = "radiation-w"

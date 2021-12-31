@@ -266,8 +266,8 @@
 
 /obj/structure/fans/tiny/energy //todo: make this be powered to work
 	name = "air shield"
-	desc "A barrier of energy, preventing air from moving between it."
-	icon 'icons/effects/effects.dmi'
+	desc = "A barrier of energy, preventing air from moving between it."
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "shield-old"
 
 //Invisible, indestructible fans
