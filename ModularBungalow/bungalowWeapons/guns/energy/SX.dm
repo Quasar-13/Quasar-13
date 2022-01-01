@@ -50,6 +50,10 @@
 	zoom_amt = 5
 	zoom_out_amt = 0
 
+/obj/item/gun/energy/disabler/advanced/dmr/Initialize()
+	. = ..()
+	fire_delay = 10
+
 //Shottie
 /obj/item/gun/energy/disabler/advanced/scatter
 	name = "SX-4 Disabler Scattergun"

@@ -19,7 +19,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
 	icon_state = "homedefender"
 	inhand_icon_state = "gun"
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/ion)
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan/heavy, /obj/item/ammo_casing/energy/ion)
 	w_class = WEIGHT_CLASS_SMALL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
 	selfcharge = 1

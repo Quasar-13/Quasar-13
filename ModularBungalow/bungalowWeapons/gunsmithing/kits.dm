@@ -76,7 +76,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 
 //Guncase
-/obj/item/storage/fancy/guncase
+/obj/item/storage/guncase
 	name = "gun case"
 	desc = "Holds one firearm."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
@@ -87,10 +87,8 @@
 	w_class = WEIGHT_CLASS_BULKY
 	resistance_flags = NONE
 	max_integrity = 300
-	icon_type = null
-	fold_result = /obj/item/stack/sheet/metal
 
-/obj/item/storage/fancy/guncase/ComponentInitialize()
+/obj/item/storage/guncase/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 1
