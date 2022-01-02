@@ -12,14 +12,15 @@
 	speak_chance = 0
 	turns_per_move = 5
 	pixel_x = -8
-	response_help_continuous = "touches"
-	response_help_simple = "touches"
-	emote_taunt = list("points at you")
+	response_help_continuous = "desparately grasps at"
+	response_help_simple = "desperately grasps at"
+	emote_taunt = list("points")
 	taunt_chance = 25
 	speed = 1
 	is_flying_animal = TRUE
 	stat_attack = HARD_CRIT
 	robust_searching = 1
+	loot = list(/obj/item/clothing/suit/space/hardsuit/platinum)
 	var/intro = 0
 
 	harm_intent_damage = 25
