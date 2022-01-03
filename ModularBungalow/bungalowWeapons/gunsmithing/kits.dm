@@ -45,22 +45,24 @@
 /obj/item/weaponcrafting/laser_receiver
 	name = "energy receiver"
 	desc = "A prototype energy receiver and trigger assembly for an energy firearm."
+	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
+	icon_state = "receiver"
 
 /obj/item/weaponcrafting/plastic_stock
 	name = "plastic stock"
-	desc = "A plastic stock used for certain SX series disabler guns."
+	desc = "A plastic stock used for certain guns."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 	icon_state = "stock"
 
 /obj/item/weaponcrafting/barrel
 	name = "disabler barrel"
-	desc = "A metal barrel used for certain SX series disabler guns."
+	desc = "A metal barrel used for certain guns."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 	icon_state = "short"
 
 /obj/item/weaponcrafting/longbarrel
 	name = "disabler rifle barrel"
-	desc = "A metal barrel used for certain SX series disabler guns."
+	desc = "A metal barrel used for certain guns."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 	icon_state = "barrel"
 
@@ -74,6 +76,7 @@
 	name = "safety override"
 	desc = "A part used for crafting lethal rifles"
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
+	icon_state = "override"
 
 //Guncase
 /obj/item/storage/guncase
