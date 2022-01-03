@@ -42,11 +42,11 @@
 	icon_state = "laser"
 
 //More boring gun parts
-/obj/item/weaponcrafting/receiver/laser
+/obj/item/weaponcrafting/laser_receiver
 	name = "energy receiver"
 	desc = "A prototype energy receiver and trigger assembly for an energy firearm."
 
-/obj/item/weaponcrafting/stock/plastic
+/obj/item/weaponcrafting/plastic_stock
 	name = "plastic stock"
 	desc = "A plastic stock used for certain SX series disabler guns."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
@@ -58,7 +58,7 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 	icon_state = "short"
 
-/obj/item/weaponcrafting/barrel/long
+/obj/item/weaponcrafting/longbarrel
 	name = "disabler rifle barrel"
 	desc = "A metal barrel used for certain SX series disabler guns."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'

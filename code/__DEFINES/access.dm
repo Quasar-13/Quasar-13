@@ -108,6 +108,9 @@
 /// The non-existent CentCom Bar
 #define ACCESS_CENT_BAR 110
 
+//Blueshield Access, Whitelist only. No one should really have access to this office.
+#define ACCESS_BLUESHIELD 111
+
 	//The Syndicate
 /// General Syndicate Access. Includes Syndicate mechs and ruins.
 #define ACCESS_SYNDICATE 150
