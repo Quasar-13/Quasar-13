@@ -1,7 +1,7 @@
 /datum/crafting_recipe/markii
 	name = "Disabler Mark II"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	result = /obj/item/gun/energy/disabler/advanced/markii
+	result = /obj/item/gun/energy/disabler/advanced/markii/nopin
 	reqs = list(/obj/item/weaponcrafting/barrel = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
@@ -18,7 +18,7 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/weaponcrafting/laser_receiver = 1,
-				/obj/item/weaponcrafting/gunkit/mark2 = 1)
+				/obj/item/weaponcrafting/gunkit/drifle = 1)
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
@@ -32,7 +32,7 @@
 				/obj/item/weaponcrafting/stepper = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
-				/obj/item/weaponcrafting/gunkit/mark2 = 1)
+				/obj/item/weaponcrafting/gunkit/beam = 1)
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
@@ -46,7 +46,7 @@
 				/obj/item/weaponcrafting/stepper = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
-				/obj/item/weaponcrafting/gunkit/mark2 = 1)
+				/obj/item/weaponcrafting/gunkit/dmr = 1)
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
@@ -59,7 +59,7 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
-				/obj/item/weaponcrafting/gunkit/mark2 = 1)
+				/obj/item/weaponcrafting/gunkit/shotgun = 1)
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
@@ -72,7 +72,7 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
-				/obj/item/weaponcrafting/gunkit/mark2 = 1)
+				/obj/item/weaponcrafting/gunkit/smg = 1)
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING

@@ -37,7 +37,7 @@
 
 /obj/item/weaponcrafting/gunkit/fifth
 	name = "fifth generation laser gun kit"
-	desc = "Parts needed to craft a 504 Disabler rifle."
+	desc = "Parts needed to craft an L-504 Disabler rifle."
 	icon = 'ModularBungalow/bungalowWeapons/_icon/crafting.dmi'
 	icon_state = "laser"
 
