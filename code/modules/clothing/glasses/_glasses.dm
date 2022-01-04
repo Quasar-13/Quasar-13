@@ -223,6 +223,11 @@
 	icon_state = "hipster_glasses"
 	inhand_icon_state = "hipster_glasses"
 
+/obj/item/clothing/glasses/regular/bigshot
+	name = "Big Shot Shades"
+	desc = "Makes you into a BIG SHOT!"
+	icon_state = "bigshot_glasses"
+
 /obj/item/clothing/glasses/regular/circle
 	name = "circle glasses"
 	desc = "Why would you wear something so controversial yet so brave?"
