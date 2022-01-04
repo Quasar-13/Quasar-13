@@ -5,16 +5,18 @@
 	protected_jobs += "Research Director"
 	protected_jobs += "Chief Medical Officer"
 	protected_jobs += "Quartermaster"
-	protected_jobs += "Commandant"
+	protected_jobs += "Secretary" //Admin requested.
 
 	//NT marines. you do NOT want these guys to be tots
 
 	protected_jobs += "NT Captain"
+	protected_jobs += "Blueshield"
 	protected_jobs += "NT Squad Leader"
 	protected_jobs += "NT Marine"
 	protected_jobs += "NT Military Police"
 
 	//Syndiestation. Operations, MPs and highest 2 command members cannot be antags.
+	protected_jobs += "Commandant"
 	protected_jobs += "First Officer"
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
@@ -30,6 +32,7 @@
 	protected_jobs += "Head of Personnel"
 
 	//Syndiestation. Operations, MPs and highest 2 command members cannot be antags.
+	protected_jobs += "Commandant"
 	protected_jobs += "First Officer"
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
@@ -57,6 +60,7 @@
 	protected_jobs += "Quartermaster"
 
 	//Syndiestation. Operations, MPs and highest 2 command members cannot be antags.
+	protected_jobs += "Commandant"
 	protected_jobs += "First Officer"
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
@@ -80,8 +84,10 @@
 	protected_jobs += "Research Director"
 	protected_jobs += "Chief Medical Officer"
 	protected_jobs += "Quartermaster"
+	protected_jobs += "Secretary" //Admin requested.
 
 	//Syndiestation. Operations, MPs and highest 2 command members cannot be antags.
+	protected_jobs += "Commandant"
 	protected_jobs += "First Officer"
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
@@ -103,6 +109,7 @@
 	protected_jobs += "Head of Personnel"
 
 	//Syndiestation. Operations, MPs and highest 2 command members cannot be antags.
+	protected_jobs += "Commandant"
 	protected_jobs += "First Officer"
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
