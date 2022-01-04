@@ -14,6 +14,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/grimy,
 /area/space)
+"ac" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible,
+/turf/open/floor/plasteel/white,
+/area/space)
 "ad" = (
 /obj/structure/disposaloutlet{
 	dir = 1
@@ -41,6 +45,15 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
+"aj" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/camera/autoname{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/space)
 "ak" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -745,6 +758,27 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"ct" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
+/obj/structure/cable,
+/obj/machinery/door/window/southleft{
+	dir = 4;
+	name = "Maximum Security Test Chamber";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/window/southleft{
+	dir = 8;
+	name = "Maximum Security Test Chamber";
+	req_access_txt = "55"
+	},
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/space)
 "cu" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -758,10 +792,6 @@
 "cv" = (
 /obj/machinery/vending/wardrobe/chem_wardrobe,
 /turf/open/floor/plasteel/white,
-/area/space)
-"cw" = (
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plasteel,
 /area/space)
 "cx" = (
 /obj/structure/cable,
@@ -920,12 +950,33 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"cO" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "cP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
+"cR" = (
+/obj/machinery/sparker{
+	id = "Xenobio";
+	pixel_y = 25
+	},
+/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
+/turf/open/floor/engine,
+/area/space)
+"cS" = (
+/obj/machinery/atmospherics/components/binary/pump,
+/turf/open/floor/plasteel/white,
+/area/space)
 "cT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 9
@@ -1057,6 +1108,18 @@
 /obj/structure/table/glass,
 /obj/machinery/microwave,
 /turf/open/floor/plasteel/white,
+/area/space)
+"dl" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/research/glass{
+	name = "Kill Chamber";
+	normalspeed = 0;
+	req_access_txt = "55"
+	},
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
 /area/space)
 "dm" = (
 /obj/machinery/computer/station_alert,
@@ -1393,6 +1456,13 @@
 /obj/machinery/ai_slipper,
 /turf/open/floor/circuit/red,
 /area/ai_monitored/turret_protected/ai)
+"eo" = (
+/obj/machinery/door/airlock/research{
+	name = "Nanites Lab";
+	req_access_txt = "47"
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "ep" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/green,
@@ -1411,6 +1481,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
+"er" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/plasteel,
+/area/space)
 "es" = (
 /obj/item/radio/intercom{
 	desc = "A station intercom. It looks like it has been modified to not broadcast.";
@@ -1544,6 +1621,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"eP" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio7";
+	name = "Xenobio Pen 7 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "eQ" = (
 /obj/structure/bed,
 /obj/item/clothing/suit/straight_jacket,
@@ -1632,6 +1718,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
+"eY" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio10";
+	name = "Xenobio Pen 10 Blast Door"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/warning/electricshock,
+/turf/open/floor/plating,
+/area/space)
 "eZ" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -1644,6 +1743,15 @@
 "fb" = (
 /turf/open/floor/plating,
 /area/security/prison/safe)
+"fc" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "fe" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -1662,6 +1770,21 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/open/floor/plasteel/white,
 /area/space)
+"fh" = (
+/obj/machinery/door_buttons/access_button{
+	idDoor = "xeno_airlock_interior";
+	idSelf = "xeno_airlock_control";
+	name = "Access Button";
+	pixel_x = 29;
+	pixel_y = -8;
+	req_access_txt = "55"
+	},
+/turf/open/floor/plasteel/white,
+/area/space)
+"fi" = (
+/obj/item/beacon,
+/turf/open/floor/engine,
+/area/space)
 "fm" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/security/prison/work)
@@ -1674,6 +1797,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/rec)
+"fo" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/disposaloutlet{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/space)
 "fr" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -2089,6 +2221,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"gu" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/plasteel,
+/area/space)
 "gv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 6
@@ -2266,6 +2405,12 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
+/area/space)
+"gP" = (
+/obj/machinery/camera/autoname{
+	dir = 8
+	},
+/turf/open/floor/engine,
 /area/space)
 "gQ" = (
 /obj/item/toy/beach_ball/holoball,
@@ -2630,6 +2775,16 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison/work)
+"hR" = (
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "hS" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
@@ -2763,6 +2918,12 @@
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/space)
+"ip" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/space)
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -2806,7 +2967,14 @@
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "iA" = (
-/obj/item/gun/syringe/blowgun,
+/obj/machinery/door_buttons/airlock_controller{
+	idExterior = "xeno_airlock_exterior";
+	idInterior = "xeno_airlock_interior";
+	idSelf = "xeno_airlock_control";
+	name = "Access Console";
+	pixel_x = 25;
+	req_access_txt = "55"
+	},
 /turf/open/floor/plasteel/white,
 /area/space)
 "iB" = (
@@ -2820,6 +2988,19 @@
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /turf/open/floor/plasteel,
 /area/security/prison)
+"iD" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio8";
+	name = "Xenobio Pen 8 Blast Door"
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/warning/electricshock,
+/turf/open/floor/plating,
+/area/space)
 "iE" = (
 /obj/structure/table/optable,
 /obj/machinery/defibrillator_mount/loaded{
@@ -3042,6 +3223,15 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"jo" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/turf/open/floor/engine,
+/area/space)
 "jq" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3057,6 +3247,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/space)
+"ju" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/space)
 "jx" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Courtroom";
@@ -3064,19 +3260,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
-"jB" = (
-/obj/machinery/door/airlock/research{
-	name = "Research Division Access";
-	req_access_txt = "47"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/space)
 "jC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/space)
+"jE" = (
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/space)
@@ -3123,8 +3315,8 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
 "jQ" = (
-/obj/machinery/disposal/bin,
-/turf/open/floor/plasteel,
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/white,
 /area/space)
 "jR" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -3379,6 +3571,15 @@
 /obj/item/gun/ballistic/automatic/pistol,
 /turf/open/floor/plasteel/dark,
 /area/space)
+"kt" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "kw" = (
 /obj/machinery/button/flasher{
 	id = "cell4";
@@ -3573,6 +3774,10 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/space)
+"kY" = (
+/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
+/turf/open/floor/engine,
+/area/space)
 "la" = (
 /obj/structure/window,
 /obj/effect/decal/cleanable/food/flour,
@@ -3726,15 +3931,14 @@
 	icon_state = "wood-broken4"
 	},
 /area/space)
-"lz" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
+"ly" = (
+/obj/machinery/nanite_program_hub,
+/obj/effect/turf_decal/bot,
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -22
 	},
-/obj/machinery/rnd/production/protolathe/department/science,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/space)
 "lA" = (
 /obj/structure/cable,
@@ -3915,6 +4119,12 @@
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/o2,
+/turf/open/floor/plasteel/white,
+/area/space)
+"lO" = (
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/space)
 "lP" = (
@@ -4274,16 +4484,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/space)
-"mX" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/plasteel,
-/area/space)
 "mY" = (
 /obj/machinery/power/shieldwallgen,
 /turf/open/floor/plasteel/dark,
@@ -4437,6 +4637,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
+"nr" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "ns" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/dark,
@@ -4458,6 +4667,13 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/white,
+/area/space)
+"nv" = (
+/obj/machinery/portable_atmospherics/canister/bz,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/space)
 "nw" = (
@@ -4485,6 +4701,17 @@
 /obj/effect/spawner/lootdrop/prison_contraband,
 /turf/open/floor/plasteel/dark,
 /area/security/prison/safe)
+"nB" = (
+/obj/machinery/door_buttons/access_button{
+	idDoor = "xeno_airlock_interior";
+	idSelf = "xeno_airlock_control";
+	name = "Access Button";
+	pixel_x = -25;
+	pixel_y = -8;
+	req_access_txt = "55"
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "nD" = (
 /obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/plasteel/dark,
@@ -4696,6 +4923,12 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/plasteel/dark,
 /area/space)
+"om" = (
+/obj/structure/sign/warning/coldtemp,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/closed/wall/r_wall/syndicate,
+/area/space)
 "on" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
@@ -4742,6 +4975,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
+/area/space)
+"ou" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/turf/open/floor/plasteel,
 /area/space)
 "ov" = (
 /obj/structure/bed,
@@ -4791,6 +5031,10 @@
 /obj/machinery/atmospherics/pipe/manifold/dark/visible,
 /turf/open/floor/plasteel/dark,
 /area/security/prison/mess)
+"oD" = (
+/obj/machinery/light/small,
+/turf/open/floor/engine,
+/area/space)
 "oE" = (
 /obj/structure/bed,
 /obj/effect/spawner/lootdrop/prison_contraband,
@@ -4807,6 +5051,38 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/safe)
+"oF" = (
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	frequency = 1449;
+	id_tag = "xeno_airlock_interior";
+	name = "Xenobiology Lab Internal Airlock";
+	req_access_txt = "55"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/space)
 "oG" = (
 /obj/machinery/light{
 	dir = 8
@@ -4856,6 +5132,15 @@
 /obj/machinery/computer/med_data/laptop,
 /turf/open/floor/plasteel/white,
 /area/space)
+"oM" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio6";
+	name = "Xenobio Pen 6 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "oN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -4897,11 +5182,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
-"oW" = (
-/obj/structure/table,
-/obj/item/toy/figure/scientist,
-/turf/open/floor/plasteel,
-/area/space)
 "oX" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -4933,6 +5213,18 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/freezer,
 /area/security/prison/shower)
+"pa" = (
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4;
+	external_pressure_bound = 140;
+	name = "killroom vent";
+	pressure_checks = 0
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "pb" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access_txt = "12;5;39;37;25;28"
@@ -4971,7 +5263,7 @@
 /turf/open/floor/plating,
 /area/space)
 "pl" = (
-/obj/item/gun/syringe,
+/obj/machinery/processor/slime,
 /turf/open/floor/plasteel/white,
 /area/space)
 "pn" = (
@@ -5402,17 +5694,22 @@
 /turf/open/floor/plasteel/freezer,
 /area/security/prison/shower)
 "qn" = (
-/obj/structure/table,
 /obj/machinery/light{
-	dir = 1
+	dir = 8
 	},
-/obj/machinery/cell_charger{
-	pixel_y = 5
+/turf/open/floor/engine,
+/area/space)
+"qo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/item/stock_parts/cell/high,
-/obj/item/stock_parts/cell/high,
-/obj/item/workplacecapsule/xenoarch,
-/turf/open/floor/plasteel,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio4";
+	name = "Xenobio Pen 4 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
 /area/space)
 "qq" = (
 /obj/structure/sink{
@@ -5503,6 +5800,23 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/safe)
+"qG" = (
+/obj/machinery/monkey_recycler,
+/turf/open/floor/plasteel/white,
+/area/space)
+"qI" = (
+/obj/structure/table,
+/obj/machinery/cell_charger{
+	pixel_y = 5
+	},
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/obj/item/stock_parts/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/turf/open/floor/engine,
+/area/space)
 "qJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -5682,6 +5996,15 @@
 /obj/item/pen/fountain,
 /turf/open/floor/carpet/red,
 /area/bridge/meeting_room)
+"rj" = (
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio5";
+	name = "Xenobio Pen 5 Blast Door"
+	},
+/turf/open/floor/plating,
+/area/space)
 "rk" = (
 /obj/machinery/nuclearbomb/selfdestruct,
 /obj/effect/turf_decal/tile/neutral{
@@ -6064,6 +6387,19 @@
 	},
 /turf/open/floor/plating,
 /area/security/main)
+"sw" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 7";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio7";
+	name = "Xenobio Pen 7 Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/space)
 "sy" = (
 /obj/machinery/shower{
 	dir = 4
@@ -6212,6 +6548,12 @@
 	},
 /turf/open/floor/circuit/red,
 /area/ai_monitored/turret_protected/ai_upload)
+"sR" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "sS" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -6247,17 +6589,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/teleporter)
-"sY" = (
-/obj/structure/table,
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/clothing/glasses/welding,
-/obj/item/storage/toolbox/syndicate,
-/turf/open/floor/plasteel,
-/area/space)
 "sZ" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -6268,6 +6599,18 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
+/area/space)
+"tb" = (
+/obj/machinery/button/door{
+	id = "xenobio7";
+	layer = 3.3;
+	name = "Xenobio Pen 7 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/space)
 "te" = (
 /obj/effect/turf_decal/stripes/line{
@@ -6432,6 +6775,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge/meeting_room)
+"tF" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio9";
+	name = "Xenobio Pen 9 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "tH" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
@@ -6461,6 +6813,12 @@
 	name = "lavaland"
 	},
 /turf/open/space/basic,
+/area/space)
+"tL" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
 /area/space)
 "tM" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -6664,6 +7022,12 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"uu" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "uz" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -6734,6 +7098,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"uJ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "uK" = (
 /obj/machinery/hydroponics/soil,
 /obj/effect/turf_decal/tile/green{
@@ -6768,14 +7138,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
-"uR" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
+"uQ" = (
+/obj/machinery/computer/camera_advanced/xenobio{
+	dir = 1
 	},
-/obj/machinery/computer/rdconsole{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/white,
 /area/space)
 "uS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -6783,6 +7150,41 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
+"uT" = (
+/obj/machinery/door_buttons/access_button{
+	idDoor = "xeno_airlock_exterior";
+	idSelf = "xeno_airlock_control";
+	name = "Access Button";
+	pixel_y = -24;
+	req_access_txt = "55"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	frequency = 1449;
+	id_tag = "xeno_airlock_exterior";
+	name = "Xenobiology Lab External Airlock";
+	req_access_txt = "55"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/white,
+/area/space)
 "uV" = (
 /obj/machinery/light{
 	dir = 8
@@ -6826,6 +7228,12 @@
 /area/security/prison)
 "va" = (
 /obj/machinery/door/airlock/command,
+/turf/open/floor/plasteel/white,
+/area/space)
+"vb" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 9
+	},
 /turf/open/floor/plasteel/white,
 /area/space)
 "vd" = (
@@ -6977,6 +7385,18 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet)
+"vz" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 4";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "vA" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Desk";
@@ -7008,6 +7428,25 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/safe)
+"vF" = (
+/obj/machinery/portable_atmospherics/canister,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/space)
+"vH" = (
+/obj/machinery/button/door{
+	id = "xenobio9";
+	layer = 3.3;
+	name = "Xenobio Pen 9 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "vJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7349,6 +7788,24 @@
 /obj/item/storage/box/masks,
 /turf/open/floor/plasteel/white,
 /area/space)
+"wI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/turf/open/floor/plasteel,
+/area/space)
+"wK" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "wL" = (
 /obj/structure/sink{
 	pixel_y = 25
@@ -7363,6 +7820,15 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"wN" = (
+/obj/machinery/camera/autoname{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/engine,
 /area/space)
 "wO" = (
 /obj/machinery/door/airlock/security{
@@ -7426,6 +7892,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
+"wW" = (
+/obj/machinery/smartfridge/extract/preloaded,
+/turf/open/floor/plasteel/white,
+/area/space)
 "wZ" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 8
@@ -7681,6 +8151,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/main)
+"xF" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 8";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "xG" = (
 /obj/structure/chair/comfy/brown,
 /obj/machinery/holopad,
@@ -7692,6 +8176,16 @@
 	},
 /turf/open/floor/carpet/red,
 /area/bridge/meeting_room)
+"xH" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/rnd/production/protolathe/department/science,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "xI" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/cable,
@@ -7717,6 +8211,19 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/space)
+"xO" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 8";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio8";
+	name = "Xenobio Pen 8 Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
 /area/space)
 "xP" = (
 /obj/effect/turf_decal/stripes/line{
@@ -7748,6 +8255,18 @@
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/circuit/red,
 /area/security/nuke_storage)
+"xT" = (
+/obj/machinery/button/door{
+	id = "xenobio5";
+	layer = 3.3;
+	name = "Xenobio Pen 5 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/space)
 "xU" = (
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
@@ -7994,12 +8513,14 @@
 /obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/space)
-"yN" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
+"yM" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio11";
+	name = "Xenobio Pen 11 Blast Door"
 	},
-/turf/open/floor/plasteel,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/space)
 "yP" = (
 /obj/structure/cable,
@@ -8023,6 +8544,31 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
+/area/space)
+"yS" = (
+/obj/structure/table,
+/obj/item/assembly/igniter{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/assembly/igniter{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/assembly/igniter{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/assembly/igniter{
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/machinery/camera{
+	c_tag = "Xenobiology Lab - Test Chamber";
+	dir = 4;
+	network = list("ss13","rd","xeno")
+	},
+/turf/open/floor/engine,
 /area/space)
 "yT" = (
 /obj/effect/turf_decal/stripes/line{
@@ -8121,6 +8667,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"zg" = (
+/obj/machinery/button/door{
+	id = "xenobio4";
+	layer = 3.3;
+	name = "Xenobio Pen 4 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/space)
 "zi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -8136,6 +8694,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
+"zn" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio8";
+	name = "Xenobio Pen 8 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "zs" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -8377,6 +8944,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/main)
+"Al" = (
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio4";
+	name = "Xenobio Pen 4 Blast Door"
+	},
+/turf/open/floor/plating,
+/area/space)
 "Am" = (
 /obj/structure/table/reinforced,
 /obj/item/taperecorder{
@@ -8572,6 +9148,20 @@
 	},
 /turf/open/floor/plasteel,
 /area/space)
+"AU" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 9";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "AV" = (
 /obj/machinery/computer/secure_data,
 /obj/machinery/requests_console{
@@ -8586,6 +9176,13 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/space)
+"AX" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/space)
 "AY" = (
@@ -8664,6 +9261,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"Bk" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 11";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "Bm" = (
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -8721,6 +9332,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"By" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/delivery,
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 5";
+	req_access_txt = "55"
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "Bz" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/grimy,
@@ -8738,6 +9361,18 @@
 /obj/item/kitchen/knife/combat/survival,
 /obj/item/kitchen/knife/combat/survival,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"BG" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio9";
+	name = "Xenobio Pen 9 Blast Door"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/space)
 "BJ" = (
 /obj/structure/table/glass,
@@ -8771,6 +9406,25 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/turf/open/floor/engine,
+/area/space)
+"BP" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio10";
+	name = "Xenobio Pen 10 Blast Door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"BQ" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/sign/warning/electricshock,
 /turf/open/floor/engine,
 /area/space)
 "BT" = (
@@ -8872,6 +9526,13 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/plasteel/dark,
 /area/security/processing)
+"Cn" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	external_pressure_bound = 120;
+	name = "killroom vent"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "Cq" = (
 /obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 4
@@ -9058,6 +9719,14 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"CS" = (
+/obj/structure/table,
+/obj/item/stack/sheet/metal{
+	amount = 10
+	},
+/obj/item/electropack,
+/turf/open/floor/engine,
+/area/space)
 "CT" = (
 /obj/structure/chair{
 	pixel_y = -2
@@ -9072,6 +9741,19 @@
 /obj/effect/turf_decal/tile/yellow,
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
+/area/space)
+"CV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio5";
+	name = "Xenobio Pen 5 Blast Door"
+	},
+/obj/structure/sign/warning/electricshock,
+/turf/open/floor/plating,
 /area/space)
 "CX" = (
 /obj/machinery/turretid,
@@ -9144,6 +9826,14 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"Dn" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	dir = 1;
+	external_pressure_bound = 120;
+	name = "killroom vent"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "Do" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -9239,6 +9929,18 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/space)
+"Dx" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio7";
+	name = "Xenobio Pen 7 Blast Door"
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/engine,
+/area/space)
 "Dy" = (
 /obj/structure/closet/secure_closet{
 	anchored = 1;
@@ -9257,6 +9959,16 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
+"Dz" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/plasteel,
+/area/space)
 "DA" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -9264,6 +9976,16 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"DC" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/turf/open/floor/engine,
 /area/space)
 "DE" = (
 /obj/structure/closet/firecloset,
@@ -9505,6 +10227,20 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
+"Ex" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 10";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "Ey" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
@@ -9514,6 +10250,12 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"Ez" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/engine,
 /area/space)
 "EA" = (
 /obj/structure/cable,
@@ -9755,6 +10497,16 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"Ff" = (
+/obj/machinery/door/airlock/research{
+	name = "Research Division Access";
+	req_access_txt = "47"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "Fj" = (
 /obj/structure/cable,
 /obj/structure/chair/office{
@@ -9874,11 +10626,30 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/space)
-"FH" = (
-/obj/structure/table,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
+"FC" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
 /turf/open/floor/plasteel,
+/area/space)
+"FH" = (
+/obj/machinery/button/door{
+	id = "xenobio6";
+	layer = 3.3;
+	name = "Xenobio Pen 6 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/space)
 "FI" = (
 /obj/structure/chair/comfy/brown{
@@ -9942,26 +10713,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
-"FT" = (
-/obj/item/stack/sheet/glass,
-/obj/item/stack/sheet/glass,
-/obj/item/stack/sheet/glass,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/matter_bin,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/item/stock_parts/scanning_module{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/stock_parts/scanning_module,
-/obj/machinery/power/apc/auto_name/east,
-/obj/structure/cable,
-/obj/structure/table,
-/obj/item/storage/toolbox/syndicate,
-/turf/open/floor/plasteel,
-/area/space)
 "FX" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/blue{
@@ -10043,6 +10794,16 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ai_monitored/security/armory)
+"Gl" = (
+/obj/machinery/door/airlock/research{
+	name = "Research Division Access";
+	req_access_txt = "47"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "Gm" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -10084,6 +10845,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"Gt" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "Gu" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
@@ -10142,6 +10910,15 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"GH" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/machinery/computer/rdconsole{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "GJ" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -10330,6 +11107,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"Hi" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/space)
 "Hj" = (
 /obj/structure/table/reinforced{
 	color = "#262424"
@@ -10543,6 +11326,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"HM" = (
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "HN" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/pistol,
@@ -10661,6 +11449,19 @@
 	},
 /turf/open/floor/carpet/red,
 /area/bridge/meeting_room)
+"Ig" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 2
+	},
+/obj/structure/disposaloutlet{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/space)
 "Ii" = (
 /turf/open/floor/pod/dark,
 /area/ai_monitored/security/armory)
@@ -10683,6 +11484,26 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/turf/open/floor/plasteel,
+/area/space)
+"Iq" = (
+/obj/item/stack/sheet/glass,
+/obj/item/stack/sheet/glass,
+/obj/item/stack/sheet/glass,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/stock_parts/scanning_module{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/stock_parts/scanning_module,
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable,
+/obj/structure/table,
+/obj/item/storage/toolbox/syndicate,
 /turf/open/floor/plasteel,
 /area/space)
 "Ir" = (
@@ -10805,6 +11626,10 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/security/brig)
+"IG" = (
+/obj/structure/sign/warning/biohazard,
+/turf/closed/wall/r_wall/syndicate,
+/area/space)
 "IH" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/stripes/line{
@@ -10880,6 +11705,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/execution/education)
+"IV" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 11";
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio11";
+	name = "Xenobio Pen 11 Blast Door"
+	},
+/turf/open/floor/engine,
+/area/space)
 "IY" = (
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -11002,6 +11840,13 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /turf/open/floor/plasteel/white,
+/area/space)
+"JF" = (
+/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
 /area/space)
 "JG" = (
 /obj/structure/cable,
@@ -11233,6 +12078,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/space)
+"Kw" = (
+/obj/machinery/light_switch{
+	pixel_x = -20
+	},
+/obj/machinery/power/apc/auto_name/west,
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "Kx" = (
 /obj/machinery/camera{
 	c_tag = "Arrivals Bay 1 North";
@@ -11341,6 +12194,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/eva)
+"KM" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	dir = 1;
+	external_pressure_bound = 120;
+	name = "killroom vent"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "KO" = (
 /obj/machinery/light/small,
 /obj/structure/cable,
@@ -11352,6 +12214,20 @@
 "KP" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"KR" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 7";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
 /area/space)
 "KS" = (
 /obj/structure/chair/comfy/brown{
@@ -11423,6 +12299,21 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
+"Lc" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 4";
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio4";
+	name = "Xenobio Pen 4 Blast Door"
+	},
+/turf/open/floor/engine,
+/area/space)
 "Ld" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -11440,6 +12331,11 @@
 /obj/machinery/pinpointer_dispenser,
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
+/area/space)
+"Lf" = (
+/obj/machinery/nanite_chamber,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
 /area/space)
 "Lg" = (
 /obj/machinery/light/small{
@@ -11495,17 +12391,58 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "Lk" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
-/obj/structure/sign/departments/medbay/alt,
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Research and Development Desk";
+	req_one_access_txt = "7"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rnd";
+	name = "research lab shutters"
+	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating,
+/area/space)
+"Ll" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio5";
+	name = "Xenobio Pen 5 Blast Door"
+	},
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 5";
+	req_access_txt = "55"
+	},
+/turf/open/floor/engine,
 /area/space)
 "Ln" = (
 /obj/machinery/teleport/hub,
 /turf/open/floor/plasteel/dark,
 /area/teleporter)
 "Lo" = (
-/obj/effect/turf_decal/trimline/blue/filled/corner{
-	dir = 8
+/obj/structure/table,
+/obj/item/stack/sheet/glass/fifty{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/clothing/glasses/welding,
+/obj/item/storage/toolbox/syndicate,
+/turf/open/floor/plasteel,
+/area/space)
+"Lp" = (
+/obj/structure/table,
+/obj/item/nanite_remote,
+/obj/machinery/requests_console{
+	department = "Science";
+	departmentType = 2;
+	name = "Science Requests Console";
+	pixel_x = 30;
+	receive_ore_updates = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
@@ -11621,6 +12558,16 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/space)
+"LF" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "LH" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -11645,6 +12592,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+/area/space)
+"LL" = (
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
 /area/space)
 "LM" = (
 /obj/machinery/airalarm{
@@ -11718,6 +12676,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"LW" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 6";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio6";
+	name = "Xenobio Pen 6 Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/space)
 "LX" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -11775,6 +12746,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/nuke_storage)
+"Md" = (
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/space)
 "Mf" = (
 /obj/machinery/door/airlock/command{
 	name = "E.V.A. Storage";
@@ -12235,29 +13218,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/space)
-"Nv" = (
-/obj/structure/table,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/folder/white{
-	pixel_x = 3;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/glass/beaker/large{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/reagent_containers/glass/beaker{
-	pixel_x = 7
-	},
-/obj/item/reagent_containers/dropper{
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/obj/machinery/airalarm/directional/north,
-/turf/open/floor/plasteel,
-/area/space)
 "Nw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12301,12 +13261,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/space)
-"Nz" = (
-/obj/structure/table,
-/obj/item/paper_bin,
-/obj/item/pen,
-/turf/open/floor/plasteel,
-/area/space)
 "NA" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
@@ -12330,6 +13284,18 @@
 "NG" = (
 /turf/open/floor/plating,
 /area/maintenance/central)
+"NI" = (
+/obj/machinery/button/door{
+	id = "xenobio11";
+	layer = 3.3;
+	name = "Xenobio Pen 11 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "NJ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -12346,6 +13312,13 @@
 	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel/dark,
+/area/space)
+"NL" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/engine,
 /area/space)
 "NN" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -12489,6 +13462,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/gateway)
+"Or" = (
+/obj/machinery/disposal/bin,
+/turf/open/floor/plasteel,
+/area/space)
 "Os" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/cable,
@@ -12510,17 +13487,16 @@
 /turf/open/floor/plating,
 /area/security/execution/education)
 "Ow" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Security Office";
-	req_one_access_txt = "1;4"
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 8
+/obj/machinery/cell_charger{
+	pixel_y = 5
 	},
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 4
-	},
-/obj/structure/cable,
+/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
+/obj/item/workplacecapsule/xenoarch,
 /turf/open/floor/plasteel,
 /area/space)
 "Ox" = (
@@ -12530,11 +13506,27 @@
 /turf/open/floor/plasteel/dark,
 /area/space)
 "Oy" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 8
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark,
+/obj/item/folder/white{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 7
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/plasteel,
 /area/space)
 "Oz" = (
 /obj/structure/sign/warning/securearea{
@@ -12589,6 +13581,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/security/execution/education)
+"OF" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/space)
 "OH" = (
 /obj/structure/table/wood,
 /obj/machinery/airalarm{
@@ -12602,6 +13600,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"OI" = (
+/obj/machinery/light,
+/obj/machinery/nanite_program_hub,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "OJ" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -12639,7 +13643,7 @@
 "OQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/southright{
-	dir = 1;
+	dir = 8;
 	name = "Research and Development Desk";
 	req_one_access_txt = "7"
 	},
@@ -12742,6 +13746,12 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
+"Ph" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 10
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "Pi" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
@@ -12772,6 +13782,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
+"Po" = (
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen 6";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/space)
 "Pp" = (
 /obj/machinery/holopad/secure,
 /obj/structure/cable,
@@ -12950,16 +13974,8 @@
 /turf/open/floor/plasteel,
 /area/space)
 "PP" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Security Office";
-	req_one_access_txt = "1;4"
-	},
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 4
-	},
+/obj/structure/table,
+/obj/item/toy/figure/scientist,
 /turf/open/floor/plasteel,
 /area/space)
 "PQ" = (
@@ -13164,6 +14180,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
+"Qr" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 9";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio9";
+	name = "Xenobio Pen 9 Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/space)
 "Qt" = (
 /obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel/dark,
@@ -13189,6 +14218,18 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"QB" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio11";
+	name = "Xenobio Pen 11 Blast Door"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "QC" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
@@ -13238,6 +14279,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/space)
+"QK" = (
+/obj/machinery/button/door{
+	id = "xenobio10";
+	layer = 3.3;
+	name = "Xenobio Pen 10 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 "QM" = (
 /obj/machinery/camera{
 	c_tag = "Central Hallway North-West"
@@ -13267,6 +14320,19 @@
 "QR" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/ai_monitored/security/armory)
+"QS" = (
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Containment Pen 10";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio10";
+	name = "Xenobio Pen 10 Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/space)
 "QV" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /turf/open/floor/plasteel,
@@ -13340,16 +14406,6 @@
 "Rj" = (
 /turf/open/floor/plating,
 /area/security/processing)
-"Rk" = (
-/obj/machinery/door/airlock/research{
-	name = "Research Division Access";
-	req_access_txt = "47"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/space)
 "Rm" = (
 /obj/structure/toilet{
 	pixel_y = 8
@@ -13390,11 +14446,10 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/command)
 "Rr" = (
-/obj/effect/turf_decal/trimline/blue/filled/corner{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark,
+/obj/structure/table,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/open/floor/plasteel,
 /area/space)
 "Rs" = (
 /obj/structure/table,
@@ -13603,6 +14658,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/office/secretary)
+"RP" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
+/area/space)
 "RQ" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
@@ -13724,6 +14783,10 @@
 "Se" = (
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/eva)
+"Sf" = (
+/obj/machinery/atmospherics/pipe/manifold4w/general/visible,
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "Sg" = (
 /obj/item/radio/intercom{
 	pixel_y = 20
@@ -13926,6 +14989,11 @@
 "SI" = (
 /turf/open/floor/mineral/plastitanium/red,
 /area/security/warden)
+"SJ" = (
+/obj/structure/table,
+/obj/item/nanite_scanner,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "SK" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -13968,6 +15036,11 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
+"SP" = (
+/obj/machinery/nanite_programmer,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "SQ" = (
 /obj/machinery/vending/wardrobe/sec_wardrobe,
 /turf/open/floor/plasteel/dark,
@@ -14005,20 +15078,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/space)
-"SW" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/window/southright{
-	dir = 8;
-	name = "Research and Development Desk";
-	req_one_access_txt = "7"
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rnd";
-	name = "research lab shutters"
-	},
-/obj/machinery/door/firedoor,
-/turf/open/floor/plating,
-/area/space)
 "SX" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/dark,
@@ -14028,6 +15087,24 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
+/turf/open/floor/plasteel,
+/area/space)
+"Tb" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/light,
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/space)
 "Tc" = (
@@ -14097,6 +15174,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/space)
+"Tn" = (
+/obj/machinery/camera{
+	c_tag = "Nanite Lab";
+	dir = 4;
+	network = list("ss13","rd")
+	},
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "To" = (
 /obj/machinery/airalarm{
 	dir = 1;
@@ -14160,6 +15247,14 @@
 "Ty" = (
 /turf/open/space/basic,
 /area/security/processing)
+"Tz" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/obj/machinery/nanite_chamber,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "TA" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Prison Wing";
@@ -14320,12 +15415,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
-"Uc" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/space)
 "Ud" = (
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -14369,6 +15458,10 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
+/area/space)
+"Ui" = (
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
 /area/space)
 "Uj" = (
 /obj/machinery/computer/operating{
@@ -14572,6 +15665,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"UK" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/space)
 "UL" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Control";
@@ -14596,6 +15698,10 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+/area/space)
+"UP" = (
+/mob/living/simple_animal/slime,
+/turf/open/floor/engine,
 /area/space)
 "UQ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -14854,6 +15960,12 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"VK" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/plasteel,
+/area/space)
 "VL" = (
 /obj/item/storage/secure/safe/sc_ssafe{
 	pixel_x = 34
@@ -15059,6 +16171,11 @@
 /obj/item/gun/ballistic/rifle/boltaction,
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
+"Wt" = (
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite,
+/turf/open/floor/plasteel/dark,
+/area/space)
 "Wu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
@@ -15114,6 +16231,18 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
+/area/space)
+"WB" = (
+/obj/machinery/button/door{
+	id = "xenobio8";
+	layer = 3.3;
+	name = "Xenobio Pen 8 Blast Doors";
+	pixel_y = 4;
+	req_access_txt = "55"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/space)
 "WC" = (
 /obj/structure/rack,
@@ -15325,6 +16454,10 @@
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"Xm" = (
+/obj/machinery/power/shieldwallgen/xenobiologyaccess,
+/turf/open/floor/plasteel/white,
+/area/space)
 "Xo" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/turf_decal/tile/red{
@@ -15374,6 +16507,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"Xv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio6";
+	name = "Xenobio Pen 6 Blast Door"
+	},
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/warning/electricshock,
+/turf/open/floor/plating,
+/area/space)
 "Xx" = (
 /obj/machinery/door/airlock/medical{
 	name = "Chemistry";
@@ -15470,6 +16616,15 @@
 	safety_mode = 1
 	},
 /turf/open/floor/plating,
+/area/space)
+"XR" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4;
+	external_pressure_bound = 140;
+	name = "killroom vent";
+	pressure_checks = 0
+	},
+/turf/open/floor/plasteel/freezer,
 /area/space)
 "XS" = (
 /turf/open/floor/plasteel/dark,
@@ -15682,6 +16837,16 @@
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/security/brig)
+"Yx" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4;
+	external_pressure_bound = 140;
+	name = "killroom vent";
+	pressure_checks = 0
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "Yy" = (
 /obj/structure/chair{
 	dir = 1
@@ -15999,6 +17164,12 @@
 /obj/structure/chair/stool,
 /turf/open/floor/plasteel/dark,
 /area/security/processing)
+"ZF" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 9
+	},
+/turf/open/floor/plasteel/freezer,
+/area/space)
 "ZH" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -27550,26 +28721,26 @@ ms
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 ms
 ms
 ms
@@ -27807,26 +28978,26 @@ ms
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+iN
+iN
+iN
+iN
+RY
+RY
+RY
+qI
+yS
+CS
+RY
+RY
+RY
+iN
+iN
+iN
+iN
+iN
+iN
 ms
 ms
 ms
@@ -28064,26 +29235,26 @@ AI
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+iN
+iN
+iN
+iN
+RY
+RY
+Ka
+Ka
+ju
+Ka
+Ka
+RY
+RY
+iN
+iN
+iN
+iN
+iN
+iN
 ms
 ms
 ms
@@ -28321,26 +29492,26 @@ ms
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+iN
+iN
+iN
+iN
+RY
+RY
+cR
+fi
+OF
+Ka
+kY
+RY
+RY
+iN
+iN
+iN
+iN
+iN
+iN
 ms
 ms
 ms
@@ -28578,38 +29749,38 @@ ms
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+iN
+iN
+iN
+iN
+RY
+RY
+ip
+Ka
+OF
+Ka
+oD
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 ms
 ms
 ms
@@ -28835,38 +30006,38 @@ ms
 ms
 ms
 ms
+RY
+iN
+iN
+iN
+iN
+RY
+RY
+kY
+Ka
+OF
+Ka
+kY
+RY
+RY
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -29092,38 +30263,38 @@ ms
 ms
 ms
 ms
+RY
+iN
+RY
+RY
+RY
+RY
+RY
+Ka
+Ka
+OF
+Ka
+Ka
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -29349,38 +30520,38 @@ ms
 ms
 ms
 ms
+RY
+iN
+RY
+Vt
+nv
+Xm
+jo
+BQ
+jo
+ct
+jo
+BQ
+jo
+Xm
+vF
+RY
+XR
+pa
+Yx
+RY
+Ka
+qn
+Ka
+NL
+Ka
+Ka
+NL
+qn
+Ka
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -29606,38 +30777,38 @@ ms
 ms
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+iN
+RY
+Vt
+Hu
+cS
+ac
+ac
+ac
+lO
+ac
+ac
+ac
+jE
+vb
+RY
+Ph
+Sf
+ZF
+RY
+Ka
+UP
+Ka
+NL
+UP
+Ka
+NL
+UP
+Ka
+RY
+ar
+RY
 ms
 ms
 ms
@@ -29863,38 +31034,38 @@ ms
 ms
 ms
 ms
+RY
+iN
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+RY
+Cn
+Sf
+Dn
+RY
+fo
+Ka
+Ka
+Ig
+Ka
+Ka
+Ig
+Ka
+Ka
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -30120,38 +31291,38 @@ ms
 ms
 ms
 ms
+RY
+iN
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+RY
+Cn
+Sf
+KM
+RY
+CV
+Ll
+rj
+qo
+Lc
+Al
+CV
+Ll
+rj
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -30377,38 +31548,38 @@ ms
 ms
 ms
 ms
-ms
-ms
 RY
+iN
 RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 RY
+IG
+dl
+om
 RY
+Md
+By
+xT
+LL
+vz
+zg
+Md
+By
+xT
 RY
+ar
 RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
 ms
 ms
 ms
@@ -30635,37 +31806,37 @@ RY
 RY
 RY
 RY
+iN
 RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 RY
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+ms
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
 ms
 ms
 ms
@@ -30905,24 +32076,24 @@ Vt
 Vt
 Vt
 Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -31151,6 +32322,21 @@ iN
 iN
 iN
 RY
+RY
+RY
+RY
+RY
+RY
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -31163,23 +32349,8 @@ Vt
 Vt
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+ar
+RY
 ms
 ms
 ms
@@ -31412,6 +32583,21 @@ Vt
 Vt
 Vt
 Vt
+jQ
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -31421,22 +32607,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -31669,6 +32840,21 @@ Vt
 Vt
 Vt
 Vt
+uQ
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -31678,22 +32864,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -31926,6 +33097,21 @@ Vt
 Vt
 Vt
 Vt
+jQ
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -31934,23 +33120,8 @@ Vt
 Vt
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+ar
+RY
 ms
 ms
 ms
@@ -32182,7 +33353,22 @@ RY
 Vt
 Vt
 Vt
-iA
+Vt
+wW
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -32192,22 +33378,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -32440,6 +33611,21 @@ Vt
 Vt
 Vt
 Vt
+qG
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -32449,22 +33635,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -32697,6 +33868,21 @@ Vt
 Vt
 Vt
 Vt
+wW
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -32705,23 +33891,8 @@ Vt
 Vt
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+ar
+RY
 ms
 ms
 ms
@@ -32955,6 +34126,21 @@ Vt
 Vt
 Vt
 pl
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -32963,22 +34149,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -33211,6 +34382,21 @@ Vt
 Vt
 Vt
 Vt
+wW
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -33220,22 +34406,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -33468,6 +34639,21 @@ Vt
 Vt
 Vt
 Vt
+jQ
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -33476,23 +34662,8 @@ Vt
 Vt
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+ar
+RY
 ms
 ms
 ms
@@ -33725,6 +34896,21 @@ Vt
 Vt
 Vt
 Vt
+uQ
+RY
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
+Vt
 Vt
 Vt
 Vt
@@ -33734,22 +34920,7 @@ Vt
 Vt
 RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -33978,35 +35149,35 @@ Fq
 RY
 iN
 RY
+iA
 Vt
 Vt
 Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+jQ
+RY
 Vt
 RY
+NI
+Bk
+FC
+QK
+Ex
+FC
+vH
+AU
+FC
+WB
+xF
+FC
+tb
+KR
+FC
+FH
+Po
+Tb
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -34235,35 +35406,35 @@ Ge
 RY
 iN
 RY
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+RY
+uT
+RY
+RY
+RY
+RY
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+yM
+IV
+QB
+BP
+QS
+eY
+tF
+Qr
+BG
+zn
+xO
+iD
+eP
+sw
+Dx
+oM
+LW
+Xv
+RY
+ar
+RY
 ms
 ms
 ms
@@ -34495,32 +35666,32 @@ RY
 Vt
 Vt
 Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+RY
 Vt
 Vt
 Vt
 RY
+Ka
+Ka
+DC
+Ka
+Ka
+DC
+Ka
+Ka
+DC
+Ka
+Ka
+DC
+Ka
+Ka
+DC
+Ka
+Ka
+UK
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -34752,32 +35923,32 @@ RY
 Vt
 Vt
 Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+RY
 Vt
 Vt
 Vt
 RY
+Ka
+Ka
+xl
+Ka
+UP
+xl
+Ka
+Ka
+xl
+Ka
+Ka
+xl
+Ka
+Ka
+xl
+Ka
+Ka
+Ka
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -35006,35 +36177,35 @@ RY
 RY
 iN
 RY
+fh
 Vt
 Vt
-Vt
-Vt
-Vt
-Vt
-Vt
-Vt
+RY
 Vt
 Vt
 Vt
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+Ka
+wN
+xl
+Ka
+Ez
+xl
+Ka
+Ka
+xl
+Ka
+aj
+xl
+Ka
+Ka
+xl
+Ka
+Ez
+gP
+RY
+ar
+RY
 ms
 ms
 ms
@@ -35264,7 +36435,7 @@ RY
 iN
 RY
 RY
-Vt
+oF
 RY
 RY
 RY
@@ -35275,23 +36446,23 @@ RY
 RY
 RY
 RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -35520,9 +36691,9 @@ mu
 RY
 Zk
 Zk
+nB
 Zk
-Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -35533,22 +36704,22 @@ Zk
 Zk
 RY
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
+ar
 ms
 ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
 ms
 ms
 ms
@@ -35779,7 +36950,7 @@ Zk
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -35789,23 +36960,23 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
-ms
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 ms
 ms
 ms
@@ -36036,7 +37207,7 @@ Zk
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -36046,8 +37217,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -36293,7 +37464,7 @@ Zk
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -36303,8 +37474,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -36550,7 +37721,7 @@ Zk
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -36560,8 +37731,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -36807,7 +37978,7 @@ RY
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -36817,8 +37988,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -37064,7 +38235,7 @@ RY
 Zk
 Zk
 Zk
-Zk
+RY
 Zk
 Zk
 Zk
@@ -37074,8 +38245,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -37321,18 +38492,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+iN
+iN
 ms
 ms
 ms
@@ -37588,8 +38759,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -37845,8 +39016,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -38102,8 +39273,8 @@ Zk
 Zk
 Zk
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -38349,18 +39520,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+RY
+eo
+eo
+RY
+RY
+RY
+RY
+RY
+RY
+iN
+iN
 ms
 ms
 ms
@@ -38606,18 +39777,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+Kw
+bd
+bd
+Tz
+Gt
+Wt
+SP
+Tn
+RY
+iN
+iN
 ms
 ms
 ms
@@ -38863,18 +40034,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+gu
+er
+er
+cO
+Dz
+Hi
+uu
+wK
+RY
+iN
+iN
 ms
 ms
 ms
@@ -39120,18 +40291,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+kt
+Zk
+Zk
+Zk
+Zk
+Zk
+RP
+OI
+RY
+iN
+iN
 ms
 ms
 ms
@@ -39377,18 +40548,18 @@ RY
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+uJ
+Zk
+Zk
+Zk
+Zk
+Zk
+RP
+ly
+RY
+iN
+iN
 ms
 ms
 ms
@@ -39634,18 +40805,18 @@ RY
 Zk
 Zk
 Zk
+eo
 Zk
 Zk
 Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
+RP
+Ui
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -39891,18 +41062,18 @@ RY
 Zk
 Zk
 Zk
+eo
 Zk
 Zk
 Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
+RP
+Ui
 RY
-ms
-ms
+iN
+iN
 ms
 ms
 ms
@@ -40148,18 +41319,18 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+RP
+Ui
+RY
+iN
+iN
 ms
 ms
 ms
@@ -40405,18 +41576,18 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+ou
+AX
+AX
+fc
+nr
+sR
+tL
+Ui
+RY
+iN
+iN
 ms
 ms
 ms
@@ -40662,18 +41833,18 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+hR
+Ui
+Ui
+Lf
+LF
+SJ
+Lp
+HM
+RY
+iN
+iN
 ms
 ms
 ms
@@ -40919,18 +42090,18 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-ms
-ms
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+iN
+iN
 ms
 ms
 ms
@@ -41171,23 +42342,23 @@ RV
 Zk
 Zk
 Zk
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-ms
-ms
+Zk
+Zk
+Zk
+Zk
+Zk
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
 ms
 ms
 ms
@@ -41429,18 +42600,18 @@ Zk
 Zk
 Zk
 RY
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
 RY
-Zk
-Zk
-Zk
-Zk
-Zk
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 RY
 ms
 ms
@@ -41932,7 +43103,7 @@ Zk
 Zk
 Zk
 RY
-sY
+Lo
 Zk
 Zk
 Zk
@@ -42189,7 +43360,7 @@ Zk
 Zk
 Zk
 RY
-qn
+Ow
 Zk
 Zk
 Zk
@@ -42197,7 +43368,7 @@ Zk
 Hl
 RY
 RY
-jB
+Ff
 RY
 RY
 Zk
@@ -42445,13 +43616,13 @@ RY
 Zk
 Zk
 Zk
-OQ
+Lk
 Zk
 Zk
-oW
-Nz
-mX
-uR
+PP
+VK
+wI
+GH
 RY
 Zk
 Zk
@@ -42703,12 +43874,12 @@ Zk
 Zk
 Zk
 RY
-Nv
+Oy
 Zk
-FH
+Rr
 Zk
-Uc
-cw
+uJ
+RP
 RY
 Zk
 Zk
@@ -42964,8 +44135,8 @@ Zk
 Zk
 Zk
 Zk
-Uc
-cw
+uJ
+RP
 RY
 Zk
 Zk
@@ -43219,10 +44390,10 @@ Hl
 TT
 Zk
 Zk
-FT
-jQ
-lz
-yN
+Iq
+Or
+xH
+JF
 RY
 Zk
 Zk
@@ -43475,14 +44646,14 @@ Zk
 Zk
 TT
 TT
-SW
+OQ
 TT
 TT
 RY
 RY
 RY
 RY
-Rk
+Gl
 RY
 RY
 Zk
@@ -44256,18 +45427,18 @@ bd
 bd
 bd
 RY
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
 RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
-RY
+Zk
+Zk
+Zk
+Zk
+Zk
 RY
 ms
 ms
@@ -44512,21 +45683,21 @@ bd
 bd
 bd
 bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+ms
 ms
 ms
 ms
@@ -57013,17 +58184,17 @@ ms
 ms
 RY
 RY
-Uh
-Bf
-Uh
 RY
 RY
-hd
-Lk
-Ow
-PP
-Lk
-hd
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
+RY
 RY
 RY
 YW
@@ -57276,10 +58447,10 @@ bd
 bd
 bd
 bd
-Lo
-Oy
-Oy
-Rr
+bd
+bd
+bd
+bd
 bd
 bd
 bd
