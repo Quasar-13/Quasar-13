@@ -9,6 +9,7 @@
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
 	maptype = "casio"
+	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield
 
@@ -24,16 +25,16 @@
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 
-	liver_traits = list(TRAIT_ROYAL_METABOLISM)
+	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
 	display_order = JOB_DISPLAY_ORDER_SECRETARY
 
 
 /datum/outfit/job/blueshield
 	name = "Blueshield"
-	jobtype = /datum/job/ntcaptain
+	jobtype = /datum/job/blueshield
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/captain
+	belt = /obj/item/pda/blueshield
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_com
 	gloves = /obj/item/clothing/gloves/color/black

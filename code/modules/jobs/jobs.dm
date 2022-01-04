@@ -169,10 +169,22 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SUPPLY = list("titles" = supply_positions),
 	EXP_TYPE_SECURITY = list("titles" = security_positions),
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
-	EXP_TYPE_SERVICE = list("titles" = service_positions)
+	EXP_TYPE_SERVICE = list("titles" = service_positions),
+	EXP_TYPE_NTMARINE = list("titles" = ntmarines_positions),
+
+//Syndiestation
+	EXP_TYPE_SYNDICATE = list("titles" = syncommand_positions),
+	EXP_TYPE_OPERATIONS = list("titles" = operations_positions),
+	EXP_TYPE_TRIAGE = list("titles" = triage_positions),
+	EXP_TYPE_LOGISTICS = list("titles" = logistics_positions),
+	EXP_TYPE_POLICE = list("titles" = police_positions),
+
+//Other Gamemodes
+	EXP_TYPE_SOLGOV = list("titles" = solgov_positions)
 ))
 
 GLOBAL_LIST_INIT(exp_specialmap, list(
+
 	EXP_TYPE_LIVING = list(), // all living mobs
 	EXP_TYPE_ANTAG = list(),
 	EXP_TYPE_SPECIAL = list("Lifebringer","Ash Walker","Exile","Servant Golem","Free Golem","Hermit","Translocated Vet","Escaped Prisoner","Hotel Staff","SuperFriend","Space Syndicate",ROLE_SYNDICATE_CYBERSUN,ROLE_SYNDICATE_CYBERSUN_CAPTAIN,"Ancient Crew","Space Doctor","Space Bartender","Beach Bum","Skeleton","Zombie","Space Bar Patron","Lavaland Syndicate","Ghost Role"), // Ghost roles
