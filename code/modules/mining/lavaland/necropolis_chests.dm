@@ -1040,7 +1040,7 @@
 		if(1)
 			new /obj/item/mayhem(src)
 		if(2)
-			new /obj/item/clothing/shoes/space_ninja(src)
+			new /obj/item/toy/plush/jone(src)
 		if(3)
 			new /obj/item/organ/heart/demon(src)
 
