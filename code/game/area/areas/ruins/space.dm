@@ -262,11 +262,11 @@
 
 /area/ruin/space/has_grav/ancientstation/proto
 	name = "Delta Station Prototype Lab"
-	icon_state = "proto"
+	icon_state = "toxlab"
 
 /area/ruin/space/has_grav/ancientstation/rnd
 	name = "Delta Station Research and Development"
-	icon_state = "delta_rnd"
+	icon_state = "toxlab"
 
 /area/ruin/space/has_grav/ancientstation/deltaai
 	name = "Delta Station AI Core"
@@ -279,7 +279,7 @@
 
 /area/ruin/space/has_grav/ancientstation/medbay
 	name = "Beta Station Medbay"
-	icon_state = "beta_medbay"
+	icon_state = "medbay"
 
 /area/ruin/space/has_grav/ancientstation/betastorage
 	name = "Beta Station Storage"
