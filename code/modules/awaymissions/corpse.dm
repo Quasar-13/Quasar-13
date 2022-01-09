@@ -330,6 +330,11 @@
 	outfit = /datum/outfit/job/cargo_tech
 	icon_state = "corpsecargotech"
 
+/obj/effect/mob_spawn/human/corpse/janitor
+	name = "Janitor"
+	outfit = /datum/outfit/job/janitor
+	icon_state = "corpsejanitor"
+
 /obj/effect/mob_spawn/human/cook
 	name = "Cook"
 	outfit = /datum/outfit/job/cook
