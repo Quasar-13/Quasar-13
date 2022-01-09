@@ -8,12 +8,12 @@
 	weapon_weight = WEAPON_HEAVY
 	selfcharge = 1
 
-/obj/item/gun/energy/disabler/advanced/rifle/ComponentInitialize()
+/obj/item/gun/energy/disabler/advanced/tgrifle/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
 
-/obj/item/gun/energy/disabler/advanced/markii
+/obj/item/gun/energy/disabler/advanced/tgpistol
 	name = "SX-2 Disabler Magnum MK II"
 	desc = "TerraGov's Military police's own variant of the SX-0 Disabler Magnum, more compact for ease of carry"
 	icon_state = "taserpistol"
@@ -26,4 +26,7 @@
 	icon_state = "disruptorpistol"
 	ammo_type = list(/obj/item/ammo_casing/energy/sniper/disable)
 	weapon_weight = WEAPON_MEDIUM
-	selfcharge = 1
+
+	/obj/item/gun/energy/disabler/advanced/disruptor/Initialize()
+	. = ..()
+	fire_delay = 5
