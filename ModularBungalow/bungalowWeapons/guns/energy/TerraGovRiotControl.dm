@@ -17,7 +17,7 @@
 	name = "SX-2 Disabler Magnum MK II"
 	desc = "TerraGov's Military police's own variant of the SX-0 Disabler Magnum, more compact for ease of carry"
 	icon_state = "taserpistol"
-	weapon_weight= WEAPON_SMALL
+	w_class = WEIGHT_CLASS_SMALL
 	selfcharge = 1
 
 /obj/item/gun/energy/disabler/advanced/disruptor
