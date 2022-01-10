@@ -68,11 +68,12 @@
 		new /datum/data/mining_equipment("KA Cooldown Decrease",		/obj/item/borg/upgrade/modkit/cooldown,								1000),
 		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000),
 		new /datum/data/mining_equipment("E-324 Mining Pistol",			/obj/item/gun/energy/e_gun/miner,									500),
-		new /datum/data/mining_equipment("E-326 Mining Revolver",			/obj/item/gun/energy/e_gun/miner/revolver,						500),
+		new /datum/data/mining_equipment("E-326 Mining Revolver",		/obj/item/gun/energy/e_gun/miner/revolver,							700),
 		new /datum/data/mining_equipment("E-304 Mining Assault Rifle",	/obj/item/gun/energy/e_gun/miner/rifle,								1000),
 		new /datum/data/mining_equipment("E-307 Mining Heavy Rifle",	/obj/item/gun/energy/e_gun/miner/heavyrifle,						3000),
 		new /datum/data/mining_equipment("E-344 Mining Scattershot",	/obj/item/gun/energy/e_gun/miner/shotty,							3000),
-		new /datum/data/mining_equipment("E-346 Mining Scattershot",	/obj/item/gun/energy/e_gun/miner/shotty,							3000),
+		new /datum/data/mining_equipment("E-346 Mining Autoshotgun",	/obj/item/gun/energy/e_gun/miner/autoshotty,						5000),
+		new /datum/data/mining_equipment("E-308 Mining Superheavy Rifle",	/obj/item/gun/energy/e_gun/miner/superheavyrifle,				5000),
 		new /datum/data/mining_equipment("E-325 Mining Bolt Pistol",	/obj/item/gun/energy/e_gun/miner/bolter,							5000)
 	)
 
