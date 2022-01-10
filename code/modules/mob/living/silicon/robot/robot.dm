@@ -949,3 +949,4 @@
 		program.force_full_update()
 /mob/living/silicon/robot/shell
 	shell = TRUE
+
