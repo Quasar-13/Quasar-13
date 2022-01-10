@@ -926,15 +926,15 @@
 	toggle_headlamp(FALSE, TRUE)
 
 /**
- * Records an IC event log entry in the cyborg's internal tablet.
- *
- * Creates an entry in the borglog list of the cyborg's internal tablet, listing the current
- * in-game time followed by the message given. These logs can be seen by the cyborg in their
- * BorgUI tablet app. By design, logging fails if the cyborg is dead.
- *
- * Arguments:
- * arg1: a string containing the message to log.
- */
+* Records an IC event log entry in the cyborg's internal tablet.
+*
+* Creates an entry in the borglog list of the cyborg's internal tablet, listing the current
+* in-game time followed by the message given. These logs can be seen by the cyborg in their
+* BorgUI tablet app. By design, logging fails if the cyborg is dead.
+*
+* Arguments:
+* arg1: a string containing the message to log.
+*/
 /mob/living/silicon/robot/proc/logevent(string = "")
 	if(!string)
 		return
