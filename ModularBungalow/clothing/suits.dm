@@ -10,3 +10,4 @@
 	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "harlequin_hood"
+	flags_inv = HIDEHAIR|HIDEEARS|HIDEFACIALHAIR

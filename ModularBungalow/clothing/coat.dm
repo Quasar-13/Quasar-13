@@ -19,5 +19,3 @@
 	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "winterhood_void"
-
-
