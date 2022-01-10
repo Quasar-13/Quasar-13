@@ -150,7 +150,7 @@
 
 /mob/living/silicon/robot/shell
 	shell = TRUE
-	cell = null
+	cell = /obj/item/stock_parts/cell/high
 
 /mob/living/silicon/robot/model
 	var/set_model = /obj/item/robot_model
