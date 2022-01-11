@@ -40,3 +40,4 @@
 /obj/item/gun/energy/disabler/advanced/disruptor/Initialize()
 	. = ..()
 	fire_delay = 5
+	
