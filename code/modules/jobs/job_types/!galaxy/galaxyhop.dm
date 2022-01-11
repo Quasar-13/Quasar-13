@@ -37,4 +37,4 @@
 
 	liver_traits = list(TRAIT_ROYAL_METABOLISM)
 
-	display_order = JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL
+	display_order = JOB_DISPLAY_ORDER_CAPTAIN
