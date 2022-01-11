@@ -1,27 +1,21 @@
-/obj/item/choice_beacon/marine
+/**
+ * # Marine ERT beacon
+ *
+ * This is a subtype of the ERT beacon, to avoid needless copypaste.
+ */
+/obj/item/choice_beacon/bungalow/deathsquad/marine
 	name = "NT marine beacon"
 	desc = "A beacon the marines use to choose their weapons."
-
-/obj/item/choice_beacon/marine/generate_display_names()
-	var/static/list/marine_item_list
-	if(!marine_item_list)
-		marine_item_list = list()
-		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/marine) //we have to convert type = name to name = type, how lovely!
-		for(var/V in templist)
-			var/atom/A = V
-			marine_item_list[initial(A.name)] = A
-	return marine_item_list
-
-/obj/item/choice_beacon/marine/spawn_option(obj/choice,mob/living/M)
-	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Get out there!</span>")
+	typesof_options = /obj/item/storage/backpack/duffelbag/marine
 
 
-
+/**
+ * # DEFAULT MARINE KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine
 	name = "Marine Assault Kit"
 	desc = "The classic ballistic NT weapon. Fires in bursts."
-s
+
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
 	new /obj/item/gun/ballistic/automatic/ar/semi(src)
@@ -33,7 +27,9 @@ s
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 
-
+/**
+ * # MEDIC KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/medic
 	name = "Marine Medic Kit"
 	desc = "Contains two medical kits and a PDW."
@@ -53,6 +49,9 @@ s
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 
+/**
+ * # ENGINEERING KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/engi
 	name = "Marine Engineering Kit"
 	desc = "Contains a toolbelt, a bolt action rifle, and a turret."
@@ -66,11 +65,14 @@ s
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
-	new /obj/item/choice_beacon/marines/turret(src)
+	new /obj/item/choice_beacon/bungalow/turret(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
 
+/**
+ * # SHOTGUN KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/shotgun
 	name = "Marine Trenchman Kit"
 	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck and a shield."
@@ -94,6 +96,9 @@ s
 	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
 
+/**
+ * # SMG KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/smg
 	name = "Marine SMG Kit"
 	desc = "This semi-auto gun has a fast fire rate for clearing rooms."
@@ -110,6 +115,9 @@ s
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 
+/**
+ * # MOSIN KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/mosin
 	name = "Marine Ranger Kit"
 	desc = "This kit is perfect for scouting out areas for enemies.."
@@ -125,6 +133,9 @@ s
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
 
+/**
+ * # SAMURAI KIT
+ */
 /obj/item/storage/backpack/duffelbag/marine/samurai
 	name = "Marine Blademaster Kit"
 	desc = "This kit is great for frontlining, with a bullet deflecting blade."
@@ -136,5 +147,3 @@ s
 	new /obj/item/clothing/neck/cloak/samurai (src)
 	new /obj/item/vibro_weapon(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
-
-

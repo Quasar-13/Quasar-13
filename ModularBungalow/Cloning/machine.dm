@@ -3,7 +3,7 @@
 
 //Potential replacement for genetics revives or something I dunno (?)
 
-#define CLONE_INITIAL_DAMAGE     150    //Clones in clonepods start with 150 cloneloss damage and 150 brainloss damage, thats just logical
+#define CLONE_INITIAL_DAMAGE 150 //Clones in clonepods start with 150 cloneloss damage and 150 brainloss damage, thats just logical
 #define MINIMUM_HEAL_LEVEL 40
 
 #define SPEAK(message) radio.talk_into(src, message, radio_channel)
@@ -252,7 +252,7 @@
 	update_icon()
 	return CLONING_SUCCESS
 
-//Grow clones to maturity then kick them out.  FREELOADERS
+//Grow clones to maturity then kick them out. FREELOADERS
 /obj/machinery/clonepod/process()
 	var/mob/living/mob_occupant = occupant
 
@@ -281,7 +281,7 @@
 				var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
 				if(D)
 					D.adjust_money(fair_market_price)
-		if(mob_occupant && (mob_occupant.stat == DEAD) || (mob_occupant.suiciding))  //Autoeject corpses and suiciding dudes.
+		if(mob_occupant && (mob_occupant.stat == DEAD) || (mob_occupant.suiciding)) //Autoeject corpses and suiciding dudes.
 			connected_message("Clone Rejected: Deceased.")
 			if(internal_radio)
 				SPEAK("The cloning of [mob_occupant.real_name] has been \
@@ -292,7 +292,7 @@
 		else if(mob_occupant && mob_occupant.cloneloss > (100 - heal_level))
 			mob_occupant.Unconscious(80)
 			var/dmg_mult = CONFIG_GET(number/damage_multiplier)
-			 //Slowly get that clone healed and finished.
+			//Slowly get that clone healed and finished.
 			mob_occupant.adjustCloneLoss(-((speed_coeff / 2) * dmg_mult))
 			var/progress = CLONE_INITIAL_DAMAGE - mob_occupant.getCloneLoss()
 			// To avoid the default cloner making incomplete clones
@@ -350,7 +350,7 @@
 
 	update_icon()
 
-//Let's unlock this early I guess.  Might be too early, needs tweaking.
+//Let's unlock this early I guess. Might be too early, needs tweaking.
 /obj/machinery/clonepod/attackby(obj/item/W, mob/user, params)
 	if(!(occupant || mess))
 		if(default_deconstruction_screwdriver(user, "[icon_state]_maintenance", "[initial(icon_state)]",W))
@@ -543,7 +543,7 @@
 			qdel(fl)
 		unattached_flesh.Cut()
 
-	H.setCloneLoss(CLONE_INITIAL_DAMAGE)     //Yeah, clones start with very low health, not with random, because why would they start with random health
+	H.setCloneLoss(CLONE_INITIAL_DAMAGE) //Yeah, clones start with very low health, not with random, because why would they start with random health
 	// In addition to being cellularly damaged, they also have no limbs or internal organs.
 	// Applying brainloss is done when the clone leaves the pod, so application of traumas can happen
 	// based on the level of damage sustained.
@@ -619,14 +619,14 @@
 	Congratulations, your station has purchased the H-87 industrial cloning device!<br>
 	Using the H-87 is almost as simple as brain surgery! Simply insert the target humanoid into the scanning chamber and select the scan option to create a new profile!<br>
 	<b>That's all there is to it!</b><br>
-	<i>Notice, cloning system cannot scan inorganic life or small primates.  Scan may fail if subject has suffered extreme brain damage.</i><br>
+	<i>Notice, cloning system cannot scan inorganic life or small primates. Scan may fail if subject has suffered extreme brain damage.</i><br>
 	<p>Clone profiles may be viewed through the profiles menu. Scanning implants a complementary HEALTH MONITOR IMPLANT into the subject, which may be viewed from each profile.
 	Profile Deletion has been restricted to \[Station Head\] level access.</p>
 	<h4>Cloning from a profile</h4>
 	Cloning is as simple as pressing the CLONE option at the bottom of the desired profile.<br>
 	Per your company's EMPLOYEE PRIVACY RIGHTS agreement, the H-87 has been blocked from cloning crewmembers while they are still alive.<br>
 	<br>
-	<p>The provided CLONEPOD SYSTEM will produce the desired clone.  Standard clone maturation times (With SPEEDCLONE technology) are roughly 90 seconds.
+	<p>The provided CLONEPOD SYSTEM will produce the desired clone. Standard clone maturation times (With SPEEDCLONE technology) are roughly 90 seconds.
 	The cloning pod may be unlocked early with any \[Medical Researcher\] ID after initial maturation is complete.</p><br>
 	<i>Please note that resulting clones may have a small DEVELOPMENTAL DEFECT as a result of genetic drift.</i><br>
 	<h4>Profile Management</h4>

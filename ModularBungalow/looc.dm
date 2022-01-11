@@ -84,7 +84,7 @@ GLOBAL_VAR_INIT(normal_looc_colour, "#e597e8")
 
 
 /mob/proc/get_top_level_mob()
-    if(istype(src.loc,/mob)&&src.loc!=src)
-        var/mob/M=src.loc
-        return M.get_top_level_mob()
-    return src
+	if(istype(src.loc, /mob) && src.loc != src)
+		var/mob/M = src.loc
+		return M.get_top_level_mob()
+	return src

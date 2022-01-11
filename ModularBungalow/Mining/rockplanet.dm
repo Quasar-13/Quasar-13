@@ -51,7 +51,7 @@
 
 /datum/map_generator/cave_generator/rockplanet
 	open_turf_types = list(/turf/open/floor/plating/asteroid = 1)
-	closed_turf_types =  list(/turf/closed/mineral/random/stationside/asteroid/rockplanet = 1)
+	closed_turf_types = list(/turf/closed/mineral/random/stationside/asteroid/rockplanet = 1)
 
 	mob_spawn_chance = 3
 

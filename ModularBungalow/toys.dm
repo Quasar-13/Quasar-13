@@ -40,8 +40,8 @@
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "jone"
 	inhand_icon_state = null
-	attack_verb_continuous = list("bap","sus")
-	attack_verb_simple = list("bap","sus")
+	attack_verb_continuous = list("bap", "sus") // wtf
+	attack_verb_simple = list("bap", "sus")
 	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
 
 /obj/item/toy/plush/lizardplushie/booker

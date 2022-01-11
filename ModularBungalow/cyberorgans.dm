@@ -2,36 +2,46 @@
 	name = "Cybernetic Organ"
 	desc = "Some sort of incident caused you to lose an organ, and the doctors replaced it with a tin can."
 	value = 0
+	///The chosen organ to give to the player.
 	var/organ
+	///The organ's text, used for telling the player.
 	var/slot_string
 
 /datum/quirk/cyberorgan/on_spawn()
 	if(!organ)
-		organ = pick(ORGAN_SLOT_HEART, ORGAN_SLOT_LIVER, ORGAN_SLOT_LUNGS, ORGAN_SLOT_STOMACH, ORGAN_SLOT_TONGUE, ORGAN_SLOT_EARS, ORGAN_SLOT_EYES)
+		organ = pick(
+			ORGAN_SLOT_HEART,
+			ORGAN_SLOT_LIVER,
+			ORGAN_SLOT_LUNGS,
+			ORGAN_SLOT_STOMACH,
+			ORGAN_SLOT_TONGUE,
+			ORGAN_SLOT_EARS,
+			ORGAN_SLOT_EYES,
+		)
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/organ/old_part = H.getorganslot(organ)
 	var/obj/item/organ/prosthetic
 	switch(organ)
 		if(ORGAN_SLOT_HEART)
-			prosthetic = new/obj/item/organ/heart/cybernetic(quirk_holder)
+			prosthetic = new /obj/item/organ/heart/cybernetic(quirk_holder)
 			slot_string = "heart"
 		if(ORGAN_SLOT_LUNGS)
-			prosthetic = new/obj/item/organ/lungs/cybernetic(quirk_holder)
+			prosthetic = new /obj/item/organ/lungs/cybernetic(quirk_holder)
 			slot_string = "lungs"
 		if(ORGAN_SLOT_STOMACH)
-			prosthetic = new/obj/item/organ/stomach/cybernetic(quirk_holder)
+			prosthetic = new /obj/item/organ/stomach/cybernetic(quirk_holder)
 			slot_string = "stomach"
 		if(ORGAN_SLOT_LIVER)
-			prosthetic = new/obj/item/organ/liver/cybernetic(quirk_holder)
+			prosthetic = new /obj/item/organ/liver/cybernetic(quirk_holder)
 			slot_string = "liver"
 		if(ORGAN_SLOT_TONGUE)
-			prosthetic = new/obj/item/organ/tongue/robot(quirk_holder)
+			prosthetic = new /obj/item/organ/tongue/robot(quirk_holder)
 			slot_string = "tongue"
 		if(ORGAN_SLOT_EARS)
-			prosthetic = new/obj/item/organ/ears/cybernetic(quirk_holder)
+			prosthetic = new /obj/item/organ/ears/cybernetic(quirk_holder)
 			slot_string = "ears"
 		if(ORGAN_SLOT_EYES)
-			prosthetic = new/obj/item/organ/eyes/robotic/basic(quirk_holder)
+			prosthetic = new /obj/item/organ/eyes/robotic/basic(quirk_holder)
 			slot_string = "eyes"
 	prosthetic.Insert(H)
 	qdel(old_part)

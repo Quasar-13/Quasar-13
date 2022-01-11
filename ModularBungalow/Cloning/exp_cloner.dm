@@ -289,7 +289,7 @@
 		clone_species = rando_race.type
 
 	var/obj/machinery/clonepod/pod = GetAvailablePod()
-	//Can't clone without someone to clone.  Or a pod.  Or if the pod is busy. Or full of gibs.
+	//Can't clone without someone to clone. Or a pod. Or if the pod is busy. Or full of gibs.
 	if(!LAZYLEN(pods))
 		temp = "<font class='bad'>No Clonepods detected.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
