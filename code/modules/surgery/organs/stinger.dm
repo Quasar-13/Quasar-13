@@ -34,7 +34,6 @@
 /obj/item/hardened_stinger/unembedded()
 	var/turf/T = get_turf(src)
 	visible_message("<span class='warning'>[src] cracks and twists, changing shape!</span>")
-	for(var/i in contents)
-		var/obj/o = i
+	for(var/obj/items as anything in contents)
 		o.forceMove(T)
 	qdel(src)
