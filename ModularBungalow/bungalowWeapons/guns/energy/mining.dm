@@ -45,7 +45,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	cell_type = /obj/item/stock_parts/cell
 
-/obj/item/gun/energy/e_gun/miner/rifle/ComponentInitialize()
+/obj/item/gun/energy/e_gun/miner/autoshotty/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.32 SECONDS)
 
@@ -75,7 +75,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	cell_type = /obj/item/stock_parts/cell
 
-/obj/item/gun/energy/e_gun/miner/rifle/ComponentInitialize()
+/obj/item/gun/energy/e_gun/miner/heavyrifle/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.30 SECONDS)
 
@@ -90,7 +90,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	cell_type = /obj/item/stock_parts/cell
 
-/obj/item/gun/energy/e_gun/miner/rifle/ComponentInitialize()
+/obj/item/gun/energy/e_gun/miner/superheavyrifle/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.36 SECONDS)
 
