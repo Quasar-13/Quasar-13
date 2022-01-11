@@ -921,7 +921,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			return
 
 		var/obj/item/organ/tongue = user.getorganslot(ORGAN_SLOT_TONGUE)
-		if(licking_tongue)
+		if(tongue)
 			dust_mob(user,
 				"<span class='danger'>As [user] hesitantly leans in and licks [src] everything goes silent before [user.p_their()] body starts to glow and burst into flames before flashing to ash!</span>",
 				"<span class='userdanger'>You tentatively lick [src], but you can't figure out what it tastes like before everything starts burning and your ears fill with ringing!</span>",
