@@ -1,4 +1,4 @@
-/datum/job/ntmarine
+/datum/job/ntmarinecasio
 	title = "NT Marine"
 	faction = "Station"
 	total_positions = 4

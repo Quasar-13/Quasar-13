@@ -1,11 +1,11 @@
-/* 	We don't need this anymore
+
 /datum/job/tegu/deputy
 	title = "Deputy"
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list("Head of Security")
 	faction = "Station"
-	total_positions = 4 //Kept in for posterity
-	spawn_positions = 4 //ditto
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the head of security, and the head of your assigned department"
 	selection_color = "#ffeeee"
 	minimal_player_age = 14
@@ -13,7 +13,7 @@
 	exp_type = EXP_TYPE_CREW
 	id_icon = 'ModularTegustation/Teguicons/cards.dmi'
 	hud_icon = 'ModularTegustation/Teguicons/teguhud.dmi'
-	tegu_spawn = /obj/effect/landmark/start/deputy
+	maptype = "galaxy"
 
 	outfit = /datum/outfit/job/deputy
 
@@ -25,7 +25,6 @@
 
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 	bounty_types = CIV_JOB_SEC
-*/
 
 /obj/item/clothing/under/rank/security/mallcop
 	name = "deputy shirt"
@@ -48,7 +47,7 @@
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	body_parts_covered = CHEST|GROIN|ARMS
 
-/*	Why not just delete the whole file?
+
 /obj/item/clothing/head/beret/sec/engineering
 	name = "engineering deputy beret"
 	desc = "Perhaps the only thing standing between the supermatter and a station-wide explosive sabotage."
@@ -81,9 +80,6 @@
 	icon_state = "beret_supply"
 	tegu_item = TRUE
 
-*/	//end
-/*	More things
-
 /datum/outfit/job/deputy
 	name = "Deputy"
 	jobtype = /datum/job/tegu/deputy
@@ -97,7 +93,7 @@
 	l_pocket = /obj/item/restraints/handcuffs/cable/zipties
 	r_pocket = /obj/item/pda/security
 
-	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	glasses = /obj/item/clothing/glasses/hud/security
 
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
@@ -228,5 +224,3 @@ GLOBAL_LIST_INIT(available_deputy_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MED
 	var/turf/T = get_turf(src)
 	new /obj/effect/landmark/start/deputy(T)
 
-
-*/
