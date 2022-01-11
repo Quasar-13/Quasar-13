@@ -8,7 +8,7 @@
 /obj/item/choice_beacon/mech/operator_mechs
 	name = "mecha pilot beacon"
 	desc = "A beacon to be used to call down a mecha."
-	typesof_option = /obj/vehicle/sealed/mecha/combat/marauder/operator
+	typesof_options = /obj/vehicle/sealed/mecha/combat/marauder/operator
 
 
 /obj/vehicle/sealed/mecha/combat/pilot
