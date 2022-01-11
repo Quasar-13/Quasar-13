@@ -5,10 +5,10 @@
 	selection_message = "<span class='hear'>Stand by for titanfall.</span>"
 
 
-/obj/item/choice_beacon/mech/operator_mechs
+/obj/item/choice_beacon/bungalow/mech/operator_mechs
 	name = "mecha pilot beacon"
 	desc = "A beacon to be used to call down a mecha."
-	typesof_options = /obj/vehicle/sealed/mecha/combat/marauder/operator
+	typesof_options = /obj/vehicle/sealed/mecha/combat/marauder/operator_mech
 
 
 /obj/vehicle/sealed/mecha/combat/pilot
