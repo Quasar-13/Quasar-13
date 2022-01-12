@@ -43,7 +43,7 @@
 	var/syndie = FALSE  // If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel.
 	var/list/channels = list()  // Map from name (see communications.dm) to on/off. First entry is current department (:h)
 	var/list/secure_radio_connections
-	var/list/radio_sounds = list('Bungalow-13/sound/effects/radio1.ogg','Bungalow-13/sound/effects/radio2.ogg','Bungalow-13/sound/effects/radio3.ogg')
+	var/list/radio_sounds = list('Bungalow-13/sound/effects/radio/radio1.ogg','Bungalow-13/sound/effects/radio/radio2.ogg','Bungalow-13/sound/effects/radio/radio3.ogg')
 
 /obj/item/radio/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] starts bouncing [src] off [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
