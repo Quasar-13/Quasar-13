@@ -411,20 +411,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_bee_tail"], features["tail_bee"]) //beeeee
 	READ_FILE(S["feature_bee_antennae"], features["bee_antennae"])// BEEGONE
 	READ_FILE(S["persistent_scars"] , persistent_scars)
-	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences)//tegu edit - alt job titles
+	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences)
+	READ_FILE(S["feature_human_tail"], features["tail_human"])
+	READ_FILE(S["feature_human_ears"], features["ears"])//tegu edit - alt job titles
 	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences)
 	if(SSjob)
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 			if(alt_titles_preferences[job.title])
 				if(!((alt_titles_preferences[job.title] in job.alt_titles) || (alt_titles_preferences[job.title] == job.senior_title)))
 					alt_titles_preferences.Remove(job.title) // Tegu end
-
-	if(!CONFIG_GET(flag/join_with_mutant_humans))
-		features["tail_human"] = "none"
-		features["ears"] = "none"
-	else
-		READ_FILE(S["feature_human_tail"], features["tail_human"])
-		READ_FILE(S["feature_human_ears"], features["ears"])
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)
@@ -509,10 +504,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["beefeyes"]	= sanitize_inlist(features["beefeyes"], GLOB.eyes_beefman) // Tegustation Beefman edit
 	features["beefmouth"]	= sanitize_inlist(features["beefmouth"], GLOB.mouths_beefman) // Tegustation Beefman edit
 	features["tail_lizard"]	= sanitize_inlist(features["tail_lizard"], GLOB.tails_list_lizard)
-	features["tail_human"] 	= sanitize_inlist(features["tail_human"], GLOB.tails_list_human, "None")
+	features["tail_human"] 	= sanitize_inlist(features["tail_human"], GLOB.tails_list_human)
 	features["snout"]	= sanitize_inlist(features["snout"], GLOB.snouts_list)
 	features["horns"] 	= sanitize_inlist(features["horns"], GLOB.horns_list)
-	features["ears"]	= sanitize_inlist(features["ears"], GLOB.ears_list, "None")
+	features["ears"]	= sanitize_inlist(features["ears"], GLOB.ears_list)
 	features["frills"] 	= sanitize_inlist(features["frills"], GLOB.frills_list)
 	features["spines"] 	= sanitize_inlist(features["spines"], GLOB.spines_list)
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
