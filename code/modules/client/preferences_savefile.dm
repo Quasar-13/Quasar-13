@@ -411,10 +411,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_bee_tail"], features["tail_bee"]) //beeeee
 	READ_FILE(S["feature_bee_antennae"], features["bee_antennae"])// BEEGONE
 	READ_FILE(S["persistent_scars"] , persistent_scars)
-	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences) tegu edit - alt job titles
+	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences) //tegu edit - alt job titles
 	READ_FILE(S["feature_human_tail"], features["tail_human"])
 	READ_FILE(S["feature_human_ears"], features["ears"])//
-	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences) tegu edit - alt job titles
+	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences) //tegu edit - alt job titles
 	if(SSjob)
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
 			if(alt_titles_preferences[job.title])
