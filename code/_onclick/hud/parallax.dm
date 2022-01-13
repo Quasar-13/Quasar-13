@@ -161,7 +161,7 @@
 /datum/hud/proc/update_parallax(mob/viewmob)
 	var/mob/screenmob = viewmob || mymob
 	var/client/C = screenmob.client
-	var/turf/posobj = get_turf(C.eye)
+	var/turf/posobj = get_turf_global(C.eye) // yogs - replace get_turf with get_turf_global
 	if(!posobj)
 		return
 	var/area/areaobj = posobj.loc
