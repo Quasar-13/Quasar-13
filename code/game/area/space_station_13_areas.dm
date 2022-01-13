@@ -1410,7 +1410,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Port Bow External Hull Access"
 
 /area/bluespace_locker
-  name = "Bluespace Locker"
-  icon_state = "away"
-  requires_power = FALSE
-  has_gravity = STANDARD_GRAVITY
+	name = "Bluespace Locker"
+	icon_state = "away"
+	requires_power = FALSE
+	has_gravity = STANDARD_GRAVITY
