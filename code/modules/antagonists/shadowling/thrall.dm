@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(list(/obj/effect/proc_holder/sp
 		M.audible_message("<span class='notice'>[M] lets out a short blip, followed by a low-pitched beep.</span>", \
 						  "<span class='userdanger'>You have been turned into a robot! You are no longer a thrall! Though you try, you cannot remember anything about your servitude...</span>")
 	else
-	M.update_sight()
+		M.update_sight()
 	return ..()
 /datum/antagonist/thrall/greet()
 	to_chat(owner, "<span class='shadowling'><b>You see the truth. Reality has been torn away and you realize what a fool you've been.</b></span>")
