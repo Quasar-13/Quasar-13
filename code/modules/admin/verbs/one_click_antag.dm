@@ -84,18 +84,18 @@
 
 	var/datum/game_mode/shadowling/temp = new
 	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		temp.restricted_jobs += temp.protected_jobs
+		restricted_jobs += protected_jobs
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
-		temp.restricted_jobs += "Assistant"
+		restricted_jobs += "Assistant"
 
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
 	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(isReadytoRumble(applicant, ROLE_SHADOWLING))
-			if(temp.age_check(applicant.client))
-				if(!(applicant.job in temp.restricted_jobs))
+			if(age_check(applicant.client))
+				if(!(applicant.job in restricted_jobs))
 					candidates += applicant
 
 	if(candidates.len)
