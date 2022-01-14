@@ -2201,3 +2201,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			continue
 
 		current_part.change_bodypart(species_part)
+
+////////////////////
+/////BODYPARTS/////
+////////////////////
+/obj/item/bodypart
+	var/should_draw_yogs = FALSE
+
+/mob/living/carbon/proc/draw_yogs_parts(do_it)
+	for(var/O in bodyparts)
+		var/obj/item/bodypart/B = O
+		B.should_draw_yogs = do_it

@@ -75,10 +75,10 @@
 	var/mob/living/carbon/human/M = target
 	usr.visible_message("<span class='warning'><b>[usr]'s eyes flash a purpleish-red!</b></span>")
 	var/distance = get_dist(target, usr)
-	if (distance <= 1) //Melee
+	if (distance <= 2)
 		target.visible_message("<span class='danger'>[target] suddendly collapses...</span>")
 		to_chat(target, "<span class='userdanger'>A purple light flashes across your vision, and you lose control of your movements!</span>")
-		target.Stun(100)
+		target.Knockdown(100)
 		M.silent += 10
 	else //Distant glare
 		var/loss = 100 - (distance * 10)
@@ -105,8 +105,15 @@
 	var/admin_override = FALSE //Requested by Shadowlight213. Allows anyone to cast the spell, not just shadowlings.
 
 /obj/effect/proc_holder/spell/aoe_turf/proc/extinguishItem(obj/item/I, cold = FALSE) //Does not darken items held by mobs due to mobs having separate luminosity, use extinguishMob() or write your own proc.
-	var/blacklisted_lights = list(/obj/item/flashlight/flare, /obj/item/flashlight/slime, /obj/item/electronic_assembly)
-	if(istype(I, /obj/item/flashlight))
+	var/blacklisted_lights = list(/obj/item/flashlight/flare, /obj/item/flashlight/slime)
+	if(istype(I, /obj/item/electronic_assembly))
+		var/obj/item/electronic_assembly/EA = I
+		for(var/AC in EA.assembly_components)
+			if(istype(AC, /obj/item/integrated_circuit/output/light))
+				EA.remove_component(AC)
+				qdel(AC)
+				EA.visible_message("<span class='warning'>A puff of smoke rises from [EA].</span>")
+	else if(istype(I, /obj/item/flashlight))
 		var/obj/item/flashlight/F = I
 		if(F.on)
 			if(cold)
@@ -139,7 +146,7 @@
 		revert_cast()
 		return
 	to_chat(user, "<span class='shadowling'>You silently disable all nearby lights.</span>")
-	for(var/turf/T in view(5))
+	for(var/turf/T in view(4))
 		for(var/obj/item/F in T.contents)
 			extinguishItem(F)
 		for(var/obj/machinery/light/L in T.contents)
@@ -155,7 +162,7 @@
 		for(var/mob/living/silicon/robot/borg in T.contents)
 			if(!borg.lamp_cooldown)
 				borg.update_headlamp(TRUE, INFINITY)
-				to_chat(borg, "<span class='danger'>Your headlamp is fried! You'll need a human to help replace it.</span>")
+				to_chat(borg, "<span class='userdanger'>The lightbulb in your headlamp is fried! You'll need a human to help replace it.</span>")
 		for(var/obj/machinery/camera/cam in T.contents)
 			cam.set_light(0)
 			if(prob(10))
@@ -818,28 +825,6 @@
 	to_chat(target, "<span class='userdanger'><font size=3>An agonizing spike of pain drives into your mind, and--</font></span>")
 	target.mind.special_role = "thrall"
 	target.add_thrall()
-
-/obj/effect/proc_holder/spell/self/shadowling_phase_shift //Permanent version of shadow walk with no drawback. Toggleable.
-	name = "Phase Shift"
-	desc = "Phases you into the space between worlds at will, allowing you to move through walls and become invisible."
-	panel = "Ascendant"
-	charge_max = 15
-	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
-	action_icon_state = "shadow_walk"
-
-/obj/effect/proc_holder/spell/self/shadowling_phase_shift/cast(mob/living/simple_animal/ascendant_shadowling/user)
-	user.incorporeal_move = !user.incorporeal_move
-	if(user.incorporeal_move)
-		user.visible_message("<span class='danger'>[user] suddenly vanishes!</span>", \
-		"<span class='shadowling'>You begin phasing through planes of existence. Use the ability again to return.</span>")
-		user.density = 0
-		user.alpha = 0
-	else
-		user.visible_message("<span class='danger'>[user] suddenly appears from nowhere!</span>", \
-		"<span class='shadowling'>You return from the space between worlds.</span>")
-		user.density = 1
-		user.alpha = 255
 
 /obj/effect/proc_holder/spell/aoe_turf/ascendant_storm //Releases bolts of lightning to everyone nearby
 	name = "Lightning Storm"

@@ -120,6 +120,8 @@
 		if(12 to INFINITY)
 			msg += "<span class='notice'><b><i>[t_He] [t_is] just absolutely fucked up, you can look again to take a closer look...</i></b></span>\n"
 
+	if(!skipface && mind && mind.has_antag_datum(ANTAG_DATUM_THRALL))
+		msg += "[t_His] features seem unnaturally tight and drawn.\n"
 	msg += "</span>"
 
 	. += msg.Join("")

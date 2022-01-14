@@ -1,4 +1,4 @@
-GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(/obj/effect/proc_holder/spell/self/lesser_shadowling_hivemind, /obj/effect/proc_holder/spell/targeted/lesser_glare, /obj/effect/proc_holder/spell/self/lesser_shadow_walk, /obj/effect/proc_holder/spell/self/thrall_night_vision))
+GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(list(/obj/effect/proc_holder/spell/self/lesser_shadowling_hivemind, /obj/effect/proc_holder/spell/targeted/lesser_glare, /obj/effect/proc_holder/spell/self/lesser_shadow_walk, /obj/effect/proc_holder/spell/self/thrall_night_vision)))
 
 /datum/antagonist/thrall
 	name = "Shadowling Thrall"
@@ -34,11 +34,8 @@ GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(/obj/effect/proc_holder/spell/s
 		M.audible_message("<span class='notice'>[M] lets out a short blip, followed by a low-pitched beep.</span>", \
 						  "<span class='userdanger'>You have been turned into a robot! You are no longer a thrall! Though you try, you cannot remember anything about your servitude...</span>")
 	else
-		M.visible_message("<span class='big'>[M] looks like their mind is their own again!</span>", \
-						  "<span class='userdanger'>A piercing white light floods your eyes. Your mind is your own again! Though you try, you cannot remember anything about the shadowlings or your time \
-						  under their command...</span>")
-	return TRUE
-
+	M.update_sight()
+	return ..()
 /datum/antagonist/thrall/greet()
 	to_chat(owner, "<span class='shadowling'><b>You see the truth. Reality has been torn away and you realize what a fool you've been.</b></span>")
 	to_chat(owner, "<span class='shadowling'><b>The shadowlings are your masters.</b> Serve them above all else and ensure they complete their goals.</b></span>")
@@ -49,4 +46,4 @@ GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(/obj/effect/proc_holder/spell/s
 	SEND_SOUND(owner.current, sound('yogstation/sound/ambience/antag/thrall.ogg'))
 
 /datum/antagonist/thrall/roundend_report()
-	return "<div class='panel redborder'>[printplayerlist(SSticker.mode.thralls)]</div>"
+	return "[printplayer(owner)]"
