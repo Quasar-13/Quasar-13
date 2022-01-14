@@ -785,7 +785,6 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		to_chat(usr, "<font color='red'>Error: Fast ProcCall: Type [A.type] has no proc named [procname].</font>")
 		return
 
-	var/regex/pain = regex("(\"(\[^"\\\\\]*(?:\\\\.\[^\"\\\\\]*)*)"|\\d+)")
 	pain.Find(procstring)
 	var/list/arguments = list()
 	for(var/i=1 to pain.group.len)

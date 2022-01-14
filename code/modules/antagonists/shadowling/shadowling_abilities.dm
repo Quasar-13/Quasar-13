@@ -58,7 +58,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	action_icon_state = "glare"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 
 /obj/effect/proc_holder/spell/targeted/sling/glare/InterceptClickOn(mob/living/caller, params, atom/t)
 	. = ..()
@@ -101,7 +101,7 @@
 	clothes_req = FALSE
 	range = 5
 	action_icon_state = "veil"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	var/admin_override = FALSE //Requested by Shadowlight213. Allows anyone to cast the spell, not just shadowlings.
 
 /obj/effect/proc_holder/spell/aoe_turf/proc/extinguishItem(obj/item/I, cold = FALSE) //Does not darken items held by mobs due to mobs having separate luminosity, use extinguishMob() or write your own proc.
@@ -179,7 +179,7 @@
 	charge_max = 250
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "icy_veins"
 	sound = 'sound/effects/ghost2.ogg'
 	var/special_lights = list(/obj/item/flashlight/flare, /obj/item/flashlight/slime)
@@ -217,7 +217,7 @@
 	clothes_req = FALSE
 	range = 1 //Adjacent to user
 	action_icon_state = "enthrall"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	var/enthralling = FALSE
 
 /obj/effect/proc_holder/spell/targeted/enthrall/cast(list/targets,mob/living/carbon/human/user = usr)
@@ -310,7 +310,7 @@
 	charge_max = 0
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "commune"
 
 /obj/effect/proc_holder/spell/self/shadowling_hivemind/cast(mob/living/user,mob/user = usr)
@@ -335,7 +335,7 @@
 	charge_max = 600
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "regen_armor"
 
 /obj/effect/proc_holder/spell/self/shadowling_regenarmor/cast(mob/living/carbon/human/user)
@@ -358,7 +358,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	action_icon_state = "collective_mind"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	var/blind_smoke_acquired = FALSE
 	var/screech_acquired = FALSE
 	var/reviveThrallAcquired = FALSE
@@ -418,7 +418,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	action_icon_state = "black_smoke"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	sound = 'sound/effects/bamf.ogg'
 
 /obj/effect/proc_holder/spell/self/blindness_smoke/cast(mob/living/carbon/human/user) //Extremely hacky
@@ -447,7 +447,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	action_icon_state = "screech"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	sound = 'sound/effects/screech.ogg'
 
 /obj/effect/proc_holder/spell/aoe_turf/unearthly_screech/cast(list/targets,mob/user = usr)
@@ -487,7 +487,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	include_user = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "revive_thrall"
 
 /obj/effect/proc_holder/spell/targeted/revive_thrall/cast(list/targets,mob/user = usr)
@@ -593,7 +593,7 @@
 	human_req = TRUE
 	clothes_req = FALSE
 	charge_max = 600
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "extend_shuttle"
 
 /obj/effect/proc_holder/spell/targeted/shadowling_extend_shuttle/cast(list/targets, mob/living/carbon/human/user = usr)
@@ -644,7 +644,7 @@
 	charge_max = 450
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "glare"
 
 /obj/effect/proc_holder/spell/targeted/lesser_glare/cast(list/targets,mob/user = usr)
@@ -680,7 +680,7 @@
 	charge_max = 1200
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "shadow_walk"
 
 /obj/effect/proc_holder/spell/self/lesser_shadow_walk/proc/reappear(mob/living/carbon/human/user)
@@ -696,7 +696,7 @@
 	name = "Thrall Darksight"
 	desc = "Allows you to see in the dark!"
 	action_icon_state = "darksight"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	clothes_req = FALSE
 	charge_max = 0
 
@@ -727,7 +727,7 @@
 	charge_max = 50
 	human_req = TRUE
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "commune"
 
 /obj/effect/proc_holder/spell/self/lesser_shadowling_hivemind/cast(mob/living/carbon/human/user)
@@ -760,7 +760,7 @@
 	charge_max = 0
 	clothes_req = FALSE
 	action_icon_state = "annihilate"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	sound = 'sound/magic/Staff_Chaos.ogg'
 
 /obj/effect/proc_holder/spell/targeted/sling/annihilate/InterceptClickOn(mob/living/caller, params, atom/t)
@@ -796,7 +796,7 @@
 	range = 7
 	charge_max = 0
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "enthrall"
 
 /obj/effect/proc_holder/spell/targeted/sling/hypnosis/InterceptClickOn(mob/living/caller, params, atom/t)
@@ -834,7 +834,7 @@
 	charge_max = 100
 	clothes_req = FALSE
 	action_icon_state = "lightning_storm"
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	sound = 'sound/magic/lightningbolt.ogg'
 
 /obj/effect/proc_holder/spell/aoe_turf/ascendant_storm/cast(list/targets,mob/living/simple_animal/ascendant_shadowling/user = usr)
@@ -859,7 +859,7 @@
 	panel = "Ascendant"
 	charge_max = 0
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "commune"
 
 /obj/effect/proc_holder/spell/self/shadowling_hivemind_ascendant/cast(mob/living/carbon/human/user)
@@ -881,5 +881,5 @@
 	range = 7
 	charge_max = 0
 	clothes_req = FALSE
-	action_icon = 'yogstation/icons/mob/actions.dmi'
+	action_icon = 'icons/mob/actions.dmi'
 	action_icon_state = "gore"

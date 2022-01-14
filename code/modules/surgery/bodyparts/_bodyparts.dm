@@ -852,7 +852,7 @@
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
 		if(should_draw_yogs) //yogs start
-			limb.icon = 'yogstation/icons/mob/mutant_bodyparts.dmi'
+			limb.icon = 'icons/mob/mutant_bodyparts.dmi'
 			if(should_draw_gender)
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
 			else
