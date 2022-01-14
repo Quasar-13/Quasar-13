@@ -228,3 +228,10 @@
 	desc = "A single use autosurgeon that contains a Syndicate skillchip. A screwdriver can be used to remove it, but skillchips can't be placed back in."
 	uses = 1
 	starting_skillchip = /obj/item/skillchip/chameleon
+
+/obj/item/autosurgeon/organ/syndicate/syndie_mantis
+	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis
+
+/obj/item/autosurgeon/organ/syndicate/syndie_mantis/l
+	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis/l
+
