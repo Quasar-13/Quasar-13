@@ -8,5 +8,6 @@
 	. = ..()
 //AUTODROBE VENDING MACHINE
 /obj/machinery/vending/autodrobe/Initialize(mapload)
-	products += list(/obj/item/clothing/suit/hooded/harlequin = 1,)
+	products += list(/obj/item/clothing/suit/hooded/harlequin = 1,
+	/obj/item/clothing/glasses/regular/bigshot = 1,)
 	. = ..()
