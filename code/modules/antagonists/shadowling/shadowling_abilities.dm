@@ -465,8 +465,8 @@
 			if(iscarbon(target))
 				var/mob/living/carbon/M = target
 				to_chat(M, "<span class='danger'><b>A spike of pain drives into your head and scrambles your thoughts!</b></span>")
-				M.confused += 10
-				M.adjustEarDamage(0, 30)//as bad as a changeling shriek
+				M.add_confusion(10)
+				M.adjustOrganLoss(ORGAN_SLOT_EARS, 0, 30)//as bad as a changeling shriek
 			else if(issilicon(target))
 				var/mob/living/silicon/S = target
 				to_chat(S, "<span class='warning'><b>ERROR $!(@ ERROR )#^! SENSORY OVERLOAD \[$(!@#</b></span>")
