@@ -98,7 +98,7 @@
 				continue
 			if(!temp.age_check(applicant.client) || (applicant.job in temp.restricted_jobs))
 				continue
-				if(is_shadow_or_thrall(applicant))
+			if(is_shadow_or_thrall(applicant))
 				continue
 			candidates += applicant
 	if(candidates.len)
