@@ -665,7 +665,7 @@
 			to_chat(target, "<span class='userdanger'>Your gaze is forcibly drawn into [user]'s eyes, and you suddendly feel dizzy and nauseous...</span>")
 		else //Only alludes to the thrall if the target is close by
 			to_chat(target, "<span class='userdanger'>Red lights suddenly dance in your vision, and you suddendly feel dizzy and nauseous...</span>")
-		M.confused += 25
+		M.add_confusion += 25
 		M.Jitter(50)
 		if(prob(25))
 			M.vomit(10)
