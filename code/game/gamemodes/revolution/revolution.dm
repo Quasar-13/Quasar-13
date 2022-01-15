@@ -13,16 +13,16 @@
 	report_type = "revolution"
 	antag_flag = ROLE_REV
 	false_report_weight = 10
-	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
-	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Chief Engineer"=1),list("Research Director"=1),list("Chief Medical Officer"=1)) //Any head present
-	required_players = 30
+	restricted_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Secretary", "Head of Personnel", "Head of Security", "Chief Engineer", "Quartermaster", "Research Director", "Chief Medical Officer")
+	required_jobs = list(list("Captain"=1),list("Head of Personnel"=1),list("Head of Security"=1),list("Warden"=1),list("Detective"=1)) //One Target present
+	required_players = 8
 	required_enemies = 2
 	recommended_enemies = 3
 	enemy_minimum_age = 14
 
 	announce_span = "Revolution"
 	announce_text = "Some crewmembers are attempting a coup!\n\
-	<span class='danger'>Revolutionaries</span>: Expand your cause and overthrow the heads of staff by execution or otherwise.\n\
+	<span class='danger'>Revolutionaries</span>: Expand your cause and overthrow the Captain, HOS, HOP, Warden and Detective by execution or otherwise.\n\
 	<span class='notice'>Crew</span>: Prevent the revolutionaries from taking over the station."
 
 	var/finished = 0
@@ -59,7 +59,7 @@
 	return TRUE
 
 /datum/game_mode/revolution/post_setup()
-	var/list/heads = SSjob.get_living_heads()
+	var/list/heads = SSjob.get_all_targets()
 	var/list/sec = SSjob.get_living_sec()
 	var/weighted_score = min(max(round(heads.len - ((8 - sec.len) / 3)),1),max_headrevs)
 
@@ -157,7 +157,7 @@
 /datum/game_mode/revolution/set_round_result()
 	..()
 	if(finished == 1)
-		SSticker.mode_result = "win - heads killed"
+		SSticker.mode_result = "win - targets killed"
 		SSticker.news_report = REVS_WIN
 	else if(finished == 2)
 		SSticker.mode_result = "loss - rev heads killed"
@@ -166,12 +166,12 @@
 //TODO What should be displayed for revs in non-rev rounds
 /datum/game_mode/revolution/special_report()
 	if(finished == 1)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff were killed or exiled! The revolutionaries win!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>The targets were killed or exiled! The revolutionaries win!</span></div>"
 	else if(finished == 2)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff managed to stop the revolution!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>The targets managed to stop the revolution!</span></div>"
 
 /datum/game_mode/revolution/generate_report()
-	return "Employee unrest has spiked in recent weeks, with several attempted mutinies on heads of staff. Some crew have been observed using flashbulb devices to blind their colleagues, \
+	return "Employee unrest has spiked in recent weeks, with several attempted mutinies on certain targets. Some crew have been observed using flashbulb devices to blind their colleagues, \
 		who then follow their orders without question and work towards dethroning departmental leaders. Watch for behavior such as this with caution. If the crew attempts a mutiny, you and \
 		your heads of staff are fully authorized to execute them using lethal weaponry - they will be later cloned and interrogated at Central Command."
 
@@ -204,3 +204,67 @@
 					N.timer_set = 200
 					N.set_safety()
 					N.set_active()
+
+/datum/game_mode/revolution/marines
+	name = "marine_revolution"
+	config_tag = "marine_revolution"
+	var/endtime = null
+	var/fuckingdone = FALSE
+	var/check_counter = 0
+
+/datum/game_mode/revolution/marines/pre_setup()
+	endtime = world.time + 30 MINUTES
+	return ..()
+
+/datum/game_mode/revolution/marines/process()
+	. = ..()
+	check_counter++
+	if(check_counter == 5)
+		check_counter = 0
+		if (world.time > endtime && !fuckingdone)
+			fuckingdone = TRUE
+			priority_announce("This is Admiral Jill Ness, I have received information of revolutionaires on [station_name()]. I have dispatched a marine strike team to your station. We expect you all to behave.", 'sound/voice/beepsky/radio.ogg')
+			addtimer(CALLBACK(src, .proc/send_in_the_marines), 5 MINUTES)
+
+/datum/game_mode/revolution/marines/proc/send_in_the_marines()
+	var/cops_to_send = /datum/antagonist/ert/marine
+	var/announcement_message = "The Marines are on their way."
+	var/announcer = "NT Marine Division"
+	var/team_size = 10
+
+	priority_announce(announcement_message, announcer, 'sound/effects/families_police.ogg')
+	var/list/candidates = pollGhostCandidates("Do you seek revenge on the revolution?", "deathsquad", null)
+
+
+	if(candidates.len)
+		//Pick the (un)lucky players
+		var/numagents = min(team_size,candidates.len)
+
+		var/list/spawnpoints = GLOB.emergencyresponseteamspawn
+		var/index = 0
+		while(numagents && candidates.len)
+			var/spawnloc = spawnpoints[index+1]
+			//loop through spawnpoints one at a time
+			index = (index + 1) % spawnpoints.len
+			var/mob/dead/observer/chosen_candidate = pick(candidates)
+			candidates -= chosen_candidate
+			if(!chosen_candidate.key)
+				continue
+
+			//Spawn the body
+			var/mob/living/carbon/human/cop = new(spawnloc)
+			chosen_candidate.client.prefs.copy_to(cop)
+			cop.key = chosen_candidate.key
+
+			//Give antag datum
+			var/datum/antagonist/ert/marines = new cops_to_send
+
+			cop.mind.add_antag_datum(marines)
+			cop.mind.assigned_role = marines.name
+			SSjob.SendToLateJoin(cop)
+
+			//Logging and cleanup
+			log_game("[key_name(cop)] has been selected as an [marines.name]")
+			numagents--
+	return TRUE
+

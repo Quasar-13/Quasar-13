@@ -16,7 +16,6 @@
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 
-
 /datum/outfit/job/ntmarine
 	name = "NT Marine"
 	jobtype = /datum/job/ntmarine
@@ -26,8 +25,8 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_cent/alt
 	id = /obj/item/card/id
+	glasses = /obj/item/clothing/glasses/sunglasses
 	head = /obj/item/clothing/head/beret/black
 	back = null
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(/obj/item/choice_beacon/marine=1)
-

@@ -743,6 +743,17 @@ SUBSYSTEM_DEF(job)
 		if(player.mind && (player.mind.assigned_role in GLOB.command_positions))
 			. |= player.mind
 
+//////////////////////////////////
+//Keeps track of all rev targets//
+//////////////////////////////////
+/datum/controller/subsystem/job/proc/get_all_targets()
+	. = list()
+	for(var/i in GLOB.mob_list)
+		var/mob/player = i
+		var/list/targets = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+		if(player.mind && (player.mind.assigned_role in targets))
+			. |= player.mind
+
 //////////////////////////////////////////////
 //Keeps track of all living security members//
 //////////////////////////////////////////////

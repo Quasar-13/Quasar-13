@@ -8,7 +8,7 @@
 	selection_color = "#fff5cc"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
-	maptype = "station"
+	mapexclude = list("ship", "planetary")
 
 	outfit = /datum/outfit/job/voidtech
 
@@ -27,7 +27,7 @@
 	jobtype = /datum/job/voidtech
 
 	belt = /obj/item/storage/belt/utility/full
-	l_pocket = /obj/item/pda/engineering
+	l_pocket = /obj/item/pda/void
 	ears = /obj/item/radio/headset/subspace/void
 	uniform = /obj/item/clothing/under/rank/engineering/void
 	shoes = /obj/item/clothing/shoes/workboots

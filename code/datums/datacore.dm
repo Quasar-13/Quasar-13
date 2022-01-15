@@ -143,7 +143,7 @@
 	var/list/manifest_out
 
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -178,6 +178,19 @@
 		"Service",
 		"Silicon"
 		)
+
+	if(SSmaptype.maptype == "casio")
+		manifest_out = list(
+		"Command",
+		"NT Marines",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
 
 	if(SSmaptype.maptype == "syndicate")
 		manifest_out = list(
@@ -190,8 +203,6 @@
 
 	if(SSmaptype.maptype == "blacksite")
 		manifest_out = list(
-			"NT Command",
-			"NT Specialist",
 			"NT Marines"
 		)
 
@@ -203,7 +214,7 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -231,6 +242,19 @@
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+
+
+	if(SSmaptype.maptype == "casio")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"NT Marines" = GLOB.ntmarines_positions,
 			"Engineering" = GLOB.engineering_positions,
 			"Medical" = GLOB.medical_positions,
 			"Science" = GLOB.science_positions,
