@@ -127,9 +127,6 @@
 				return F.brightness_on //Necessary because flashlights become 0-luminosity when held.  I don't make the rules of lightcode.
 			F.on = FALSE
 			F.update_brightness()
-	else if(istype(I, /obj/item/pda))
-		var/obj/item/pda/P = I
-		P.fon = FALSE
 	I.set_light(0)
 	return I.luminosity
 
