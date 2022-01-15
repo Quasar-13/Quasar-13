@@ -14,9 +14,10 @@
 	item_flags = ABSTRACT | DROPDEL
 	clothing_flags = THICKMATERIAL | STOPSPRESSUREDAMAGE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
 /obj/item/clothing/suit/space/shadowling/Initialize()
-  .=..()
-  ADD_TRAIT(TRAIT_NODROP)
+	.=..()
+	ADD_TRAIT(src, TRAIT_NODROP, ABSTRACT_ITEM_TRAIT)
 
 /obj/item/clothing/head/shadowling
 	name = "chitin helm"
@@ -30,6 +31,7 @@
 	clothing_flags = STOPSPRESSUREDAMAGE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	item_flags = ABSTRACT | DROPDEL
+
 /obj/item/clothing/head/shadowling/Initialize()
-  .=..()
-  ADD_TRAIT(TRAIT_NODROP)
+	.=..()
+	ADD_TRAIT(src, TRAIT_NODROP, ABSTRACT_ITEM_TRAIT)
