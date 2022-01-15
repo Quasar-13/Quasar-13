@@ -90,7 +90,15 @@
 		//Recent as opposed to all because rounds tend to have a LOT of text.
 
 		var/list/recent_speech = list()
+		var/list/say_log = list()
 		var/log_source = target.logging
+		for(var/log_type in log_source)
+			var/nlog_type = text2num(log_type)
+			if(nlog_type & LOG_SAY)
+				var/list/reversed = log_source[log_type]
+				if(islist(reversed))
+					say_log = reverseRange(reversed.Copy())
+					break
 
 		if(recent_speech.len)
 			changeling.antag_memory += "<B>Some of [target]'s speech patterns, we should study these to better impersonate [target.p_them()]!</B><br>"

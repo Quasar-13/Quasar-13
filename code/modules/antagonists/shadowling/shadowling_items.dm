@@ -16,7 +16,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 /obj/item/clothing/suit/space/shadowling/Initialize()
   .=..()
-  add_trait(TRAIT_NODROP)
+  ADD_TRAIT(TRAIT_NODROP)
 
 /obj/item/clothing/head/shadowling
 	name = "chitin helm"
@@ -32,4 +32,4 @@
 	item_flags = ABSTRACT | DROPDEL
 /obj/item/clothing/head/shadowling/Initialize()
   .=..()
-  add_trait(TRAIT_NODROP)
+  ADD_TRAIT(TRAIT_NODROP)
