@@ -89,16 +89,6 @@
 		//Some of target's recent speech, so the changeling can attempt to imitate them better.
 		//Recent as opposed to all because rounds tend to have a LOT of text.
 
-		if(recent_speech.len)
-			changeling.antag_memory += "<B>Some of [target]'s speech patterns, we should study these to better impersonate [target.p_them()]!</B><br>"
-			to_chat(user, "<span class='boldnotice'>Some of [target]'s speech patterns, we should study these to better impersonate [target.p_them()]!</span>")
-			for(var/spoken_memory in recent_speech)
-				changeling.antag_memory += "\"[recent_speech[spoken_memory]]\"<br>"
-				to_chat(user, "<span class='notice'>\"[recent_speech[spoken_memory]]\"</span>")
-			changeling.antag_memory += "<B>We have no more knowledge of [target]'s speech patterns.</B><br>"
-			to_chat(user, "<span class='boldnotice'>We have no more knowledge of [target]'s speech patterns.</span>")
-
-
 		var/datum/antagonist/changeling/target_ling = target.mind.has_antag_datum(/datum/antagonist/changeling)
 		if(target_ling)//If the target was a changeling, suck out their extra juice and objective points!
 			to_chat(user, "<span class='boldnotice'>[target] was one of us. We have absorbed their power.</span>")
