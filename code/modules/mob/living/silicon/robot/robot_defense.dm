@@ -223,8 +223,8 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 				to_chat(user, "<span class='warning'>[B] seems to be stuck to your hand. You'll have to find a different light.</span>")
 			return
 		lamp_functional = TRUE
-			qdel(B)
-			to_chat(user, "<span class='notice'>You replace the headlamp bulb.</span>") //yogs end
+		qdel(B)
+		to_chat(user, "<span class='notice'>You replace the headlamp bulb.</span>") //yogs end
 		return
 
 	if(istype(W, /obj/item/computer_hardware/hard_drive/portable)) //Allows borgs to install new programs with human help
