@@ -381,7 +381,7 @@ SUBSYSTEM_DEF(ticker)
 /**
 Equips people that are readied up when the round starts
 In addition, responsible for spawning the cyborg shell if there are no roundstart cyborgs and announcing if there ISN'T a Captain present
-  */
+*/
 /datum/controller/subsystem/ticker/proc/equip_characters()
 	var/captainless = TRUE
 	var/no_cyborgs = TRUE
