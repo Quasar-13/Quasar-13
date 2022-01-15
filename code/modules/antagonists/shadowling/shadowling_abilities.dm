@@ -341,7 +341,7 @@
 		revert_cast()
 		return
 	user.visible_message("<span class='warning'>[user]'s skin suddenly bubbles and shifts around their body!</span>", \
-						 "<span class='shadowling'>You regenerate your protective armor and cleanse your form of defects.</span>")
+						"<span class='shadowling'>You regenerate your protective armor and cleanse your form of defects.</span>")
 	user.setCloneLoss(0)
 	user.equip_to_slot_or_del(new /obj/item/clothing/suit/space/shadowling(user), ITEM_SLOT_OCLOTHING)
 	user.equip_to_slot_or_del(new /obj/item/clothing/head/shadowling(user), ITEM_SLOT_HEAD)
