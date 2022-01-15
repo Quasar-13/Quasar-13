@@ -71,7 +71,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SENTIENCE,
 	ROLE_FAMILIES = /datum/game_mode/gang,
 	ROLE_HERETIC = /datum/game_mode/heretics,
-	ROLE_SHADOWLING = /datum/game_mode/shadowling
+	ROLE_SHADOWLING = /datum/game_mode/shadowling //yogs
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

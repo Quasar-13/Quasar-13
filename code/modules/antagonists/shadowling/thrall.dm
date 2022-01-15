@@ -36,6 +36,7 @@ GLOBAL_LIST_INIT(thrall_spell_types, typecacheof(list(/obj/effect/proc_holder/sp
 	else
 		M.update_sight()
 	return ..()
+
 /datum/antagonist/thrall/greet()
 	to_chat(owner, "<span class='shadowling'><b>You see the truth. Reality has been torn away and you realize what a fool you've been.</b></span>")
 	to_chat(owner, "<span class='shadowling'><b>The shadowlings are your masters.</b> Serve them above all else and ensure they complete their goals.</b></span>")
