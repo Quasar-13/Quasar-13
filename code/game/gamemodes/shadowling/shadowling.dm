@@ -76,8 +76,8 @@ Made by Xhuis
 		shadow.restricted_roles = restricted_jobs
 		shadowlings--
 	var/thrall_scaling = round(num_players() / 3)
-	required_thralls = clamp(thrall_scaling, 15, 30)
-	thrall_ratio = required_thralls / 15
+	required_thralls = clamp(thrall_scaling, 8, 15)
+	thrall_ratio = required_thralls / 8
 	return TRUE
 
 /datum/game_mode/shadowling/generate_report()
