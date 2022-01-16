@@ -1,9 +1,10 @@
 /obj/item/clothing/suit/space/shadowling
 	name = "chitin shell"
 	desc = "A dark, semi-transparent shell. Protects against vacuum, but not against the light of the stars." //Still takes damage from spacewalking but is immune to space itself
-	icon = 'icons/obj/clothing/suits.dmi'
-	icon_state = "sl_shell"
-	worn_icon_state = "sl_shell"
+	icon = 'modularbungalow/zbungalowicons/clothing/suit.dmi'
+	icon_state = "slshell"
+	worn_icon = 'modularbungalow/zbungalowicons/mob/suits.dmi'
+	worn_icon_state = "slshell"
 	body_parts_covered = FULL_BODY //Shadowlings are immune to space
 	cold_protection = FULL_BODY
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
@@ -23,9 +24,10 @@
 /obj/item/clothing/head/shadowling
 	name = "chitin helm"
 	desc = "A helmet-like enclosure of the head."
-	icon = 'icons/obj/clothing/suits.dmi'
-	icon_state = "sl_head"
-	worn_icon_state = "sl_head"
+	icon = 'modularbungalow/zbungalowicons/clothing/suit.dmi'
+	icon_state = "slhead"
+	worn_icon = 'modularbungalow/zbungalowicons/mob/suits.dmi'
+	worn_icon_state = "slhead"
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
