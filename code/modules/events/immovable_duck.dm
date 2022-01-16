@@ -21,7 +21,7 @@
 	var/z = pick(SSmapping.levels_by_trait(ZTRAIT_STATION))
 	var/turf/startT = spaceDebrisStartLoc(startside, z)
 	var/turf/endT = spaceDebrisFinishLoc(startside, z)
-	new /obj/effect/immovablerod/duck(startT, endT, C.special_target)
+	new /obj/effect/immovablerod/duck(startT, endT, C:special_target)
 
 /obj/effect/immovablerod/duck
 	name = "immovable DUCK"
