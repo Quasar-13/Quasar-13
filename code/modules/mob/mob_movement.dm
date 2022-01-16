@@ -116,16 +116,6 @@
 
 	if(!mob.Process_Spacemove(direct))
 		return FALSE
-
-
-	var/delay = mob.movement_delay() // Yoggybear start
-
-	if(Can_ShadowWalk(mob))
-		if(Process_ShadowWalk(direct))
-			return
-		else
-			delay = delay*SW_LIGHT_FACTOR // Yogs end
-
 	//We are now going to move
 	var/add_delay = mob.cached_multiplicative_slowdown
 	mob.set_glide_size(DELAY_TO_GLIDE_SIZE(add_delay * ( (NSCOMPONENT(direct) && EWCOMPONENT(direct)) ? 2 : 1 ) )) // set it now in case of pulled objects
