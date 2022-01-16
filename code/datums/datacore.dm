@@ -143,7 +143,7 @@
 	var/list/manifest_out
 
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -214,7 +214,7 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,

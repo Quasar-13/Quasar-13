@@ -1,4 +1,4 @@
-/datum/job/ntsquadleader
+/datum/job/ntsquadleadercasio
 	title = "NT Squad Leader"
 	faction = "Station"
 	total_positions = 1

@@ -167,6 +167,7 @@
 	ADD_TRAIT(H, TRAIT_RESISTLOWPRESSURE, MAGIC_TRAIT)
 	H.client?.give_award(/datum/award/achievement/misc/void_ascension, H)
 	priority_announce("$^@&#*$^@(#&$(@&#^$&#^@# The nobleman of void [H.real_name] has arrived, step along the Waltz that ends worlds! $^@&#*$^@(#&$(@&#^$&#^@#","#$^@&#*$^@(#&$(@&#^$&#^@#", ANNOUNCER_SPANOMALIES)
+	set_security_level(SEC_LEVEL_GAMMA)
 
 	sound_loop = new(list(user),TRUE,TRUE)
 	return ..()

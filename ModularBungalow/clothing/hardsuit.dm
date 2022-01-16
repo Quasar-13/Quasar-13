@@ -45,7 +45,6 @@
 
 
 //Just for fun, Doom marine suit
-
 /obj/item/clothing/suit/space/hardsuit/swat/captain/casio/doom
 	name = "\improper Doom Marine Hardsuit"
 	desc = "Rip and tear, until it is done."
