@@ -33,7 +33,7 @@ Made by Xhuis
 /datum/game_mode
 	var/list/datum/mind/shadows = list()
 	var/list/datum/mind/thralls = list()
-	var/required_thralls = 15 //How many thralls are needed (this is changed in pre_setup, so it scales based on pop)
+	var/required_thralls = 8 //How many thralls are needed (this is changed in pre_setup, so it scales based on pop)
 	var/shadowling_ascended = FALSE //If at least one shadowling has ascended
 	var/thrall_ratio = 1
 
@@ -51,7 +51,7 @@ Made by Xhuis
 	name = "shadowling"
 	config_tag = "shadowling"
 	antag_flag = ROLE_SHADOWLING
-	required_players = 26
+	required_players = 15
 	required_enemies = 3
 	recommended_enemies = 3
 	enemy_minimum_age = 14
