@@ -123,9 +123,9 @@
 		unreveal_time = 0
 		revealed = FALSE
 		incorporeal_move = INCORPOREAL_MOVE_JAUNT
-		GET_COMPONENT(incorp, /datum/component/walk/jaunt) //yogs start
+		var/datum/component/walk/jaunt/incorp = GetComponent(/datum/component/walk/jaunt) //yogs start
 		if(incorp)
-			incorp.enabled = TRUE //yogs end
+			incorp.signal_enabled = TRUE //yogs end
 		invisibility = INVISIBILITY_REVENANT
 		to_chat(src, "<span class='revenboldnotice'>You are once more concealed.</span>")
 	if(unstun_time && world.time >= unstun_time)
@@ -259,9 +259,9 @@
 	revealed = TRUE
 	invisibility = 0
 	incorporeal_move = FALSE
-	GET_COMPONENT(incorp, /datum/component/walk/jaunt) //yogs start
+	var/datum/component/walk/jaunt/incorp = GetComponent(/datum/component/walk/jaunt) //yogs start
 	if(incorp)
-		incorp.enabled = FALSE //yogs end
+		incorp.signal_enabled = FALSE //yogs end
 	if(!unreveal_time)
 		to_chat(src, "<span class='revendanger'>You have been revealed!</span>")
 		unreveal_time = world.time + time
@@ -348,9 +348,9 @@
 	inhibited = FALSE
 	draining = FALSE
 	incorporeal_move = INCORPOREAL_MOVE_JAUNT
-	GET_COMPONENT(incorp, /datum/component/walk/jaunt) //yogs start
+	var/datum/component/walk/jaunt/incorp = GetComponent(/datum/component/walk/jaunt) //yogs start
 	if(incorp)
-		incorp.enabled = TRUE //yogs end
+		incorp.signal_enabled = TRUE //yogs end
 	invisibility = INVISIBILITY_REVENANT
 	alpha=255
 	stasis = FALSE

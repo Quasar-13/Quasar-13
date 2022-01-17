@@ -64,14 +64,14 @@
 
 /datum/component/walk/jaunt
 /datum/component/walk/jaunt/can_walk(mob/living/user, turf/destination)
-	for(var/obj/effect/decal/cleanable/salt/S in destination)
-		to_chat(user, "<span class='warning'>[S] bars your passage!</span>")
+	for(var/obj/effect/decal/cleanable/salt in destination)
+		to_chat(user, "<span class='warning'>The salt bars your passage!</span>")
 		if(isrevenant(user))
 			var/mob/living/simple_animal/revenant/R = user
 			R.reveal(20)
 			R.stun(20)
 		return MOVE_NOT_ALLOWED
-	if(destination.flags_1 & NOJAUNT_1)
+	if(destination.flags_1 & NOJAUNT)
 		to_chat(user, "<span class='warning'>Some strange aura is blocking the way.</span>")
 		return MOVE_NOT_ALLOWED
 	if (locate(/obj/effect/blessing, destination))
