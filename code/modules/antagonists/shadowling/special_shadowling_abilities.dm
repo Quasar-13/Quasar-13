@@ -90,6 +90,7 @@
 			H.undershirt = "Nude"
 			H.socks = "Nude"
 			H.faction |= "faithless"
+			H.shadow_walk = TRUE
 			H.LoadComponent(/datum/component/walk/shadow)
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/shadowling(H), ITEM_SLOT_OCLOTHING)

@@ -32,6 +32,8 @@
 	var/list/movespeed_mod_immunities			//Lazy list, see mob_movespeed.dm
 	/// The calculated mob speed slowdown based on the modifiers list
 	var/cached_multiplicative_slowdown
+	/// for slings i dunno im not a coder man
+	var/shadow_walk
 	/// List of action speed modifiers applying to this mob
 	var/list/actionspeed_modification				//Lazy list, see mob_movespeed.dm
 	/// List of action speed modifiers ignored by this mob. List -> List (id) -> List (sources)
