@@ -91,9 +91,9 @@
 		return FALSE
 
 	var/mob/living/L = mob  //Already checked for isliving earlier
-	/*if(L.incorporeal_move)	//Move though walls //yogs start - turned into component
+	if(L.incorporeal_move)	//Move though walls
 		Process_Incorpmove(direct)
-		return FALSE*/ //yogs end
+		return FALSE
 
 	if(mob.remote_control)					//we're controlling something, our movement is relayed to it
 		return mob.remote_control.relaymove(mob, direct)
@@ -116,11 +116,6 @@
 
 	if(!mob.Process_Spacemove(direct))
 		return FALSE
-
-	var/handled = SEND_SIGNAL(L, COMSIG_PROCESS_MOVE, direct) //yogs start - movement components
-	if(handled)
-		return FALSE//yogs end
-
 	//We are now going to move
 	var/add_delay = mob.cached_multiplicative_slowdown
 	mob.set_glide_size(DELAY_TO_GLIDE_SIZE(add_delay * ( (NSCOMPONENT(direct) && EWCOMPONENT(direct)) ? 2 : 1 ) )) // set it now in case of pulled objects
