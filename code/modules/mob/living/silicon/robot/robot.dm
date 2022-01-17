@@ -471,7 +471,7 @@
 	lampButton?.update_icon()
 	update_icons()
 
-/mob/living/silicon/robot/proc/update_headlamp(var/turn_off = 0, var/cooldown = 100)
+/mob/living/silicon/robot/proc/update_headlamp(turn_off = 0, var/cooldown = 100)
 	set_light(0)
 
 /mob/living/silicon/robot/proc/deconstruct()
