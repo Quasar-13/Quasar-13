@@ -321,6 +321,21 @@
 	GLOB.syndicate_shuttle_boards -= src
 	return ..()
 
+/obj/item/circuitboard/computer/syndicate_shuttle/infiltrator
+	name = "Syndicate Shuttle (Computer Board)"
+	icon_state = "generic"
+	build_path = /obj/machinery/computer/shuttle/syndicate/infiltrator
+	challenge = FALSE
+	moved = FALSE
+
+/obj/item/circuitboard/computer/syndicate_shuttle/infiltrator/Initialize()
+	. = ..()
+	GLOB.syndicate_shuttle_boards += src
+
+/obj/item/circuitboard/computer/syndicate_shuttle/infiltrator/Destroy()
+	GLOB.syndicate_shuttle_boards -= src
+	return ..()
+
 /obj/item/circuitboard/computer/syndicatedoor
 	name = "ProComp Executive (Computer Board)"
 	icon_state = "generic"
