@@ -29,6 +29,11 @@
 	var/list/snares = list()
 	var/toggle = FALSE
 
+/mob/living/simple_animal/hostile/guardian/ranged/Initialize() //yogs start
+	. = ..()
+	LoadComponent(/datum/component/walk) //yogs end
+
+
 /mob/living/simple_animal/hostile/guardian/ranged/ToggleMode()
 	if(loc == summoner)
 		if(toggle)
@@ -128,11 +133,17 @@
 /mob/living/simple_animal/hostile/guardian/ranged/Manifest(forced)
 	if (toggle)
 		incorporeal_move = INCORPOREAL_MOVE_BASIC
+		GET_COMPONENT(incorp, /datum/component/walk) //yogs start
+		if(incorp)
+			incorp.enabled = TRUE //yogs end
 	. = ..()
 
 /mob/living/simple_animal/hostile/guardian/ranged/Recall(forced)
 	// To stop scout mode from moving when recalled
 	incorporeal_move = FALSE
+	GET_COMPONENT(incorp, /datum/component/walk) //yogs start
+	if(incorp)
+		incorp.enabled = FALSE //yogs end
 	. = ..()
 
 /mob/living/simple_animal/hostile/guardian/ranged/AttackingTarget()
