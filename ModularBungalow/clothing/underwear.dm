@@ -28,7 +28,7 @@
 	icon_state = "sports_bra_black"
 	gender = NEUTER
 
-/datum/sprite_accessory/undershirt/sportsbrablack
+/datum/sprite_accessory/undershirt/sportsbrablue
 	name = "Sports Bra (black)"
 	icon = 'ModularBungalow/clothing/worn/underwearw.dmi'
 	icon_state = "sports_bra_blue"
