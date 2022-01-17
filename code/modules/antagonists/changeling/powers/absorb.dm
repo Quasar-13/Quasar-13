@@ -91,6 +91,7 @@
 
 		var/list/recent_speech = list()
 		var/list/log_say = list()
+		var/list/say_log = list()
 		var/log_source = target.logging
 		for(var/log_type in log_source)
 			var/nlog_type = text2num(log_type)
