@@ -37,19 +37,37 @@
 	icon_state = "syndie_mantis"
 	force = 20
 	block_chance = 20
+	armour_penetration = 20
+	wound_bonus = 15
+	sharpness = SHARP_EDGED
 
 /obj/item/mantis/blade/NT
 	name = "H.E.P.H.A.E.S.T.U.S. mantis blade"
 	icon_state = "mantis"
 	force = 18
+	block_chance = 60
+	wound_bonus = 15
+	bare_wound_bonus = 32
+	armour_penetration = 35
+	sharpness = SHARP_EDGED
 
 
 /obj/item/organ/cyberimp/arm/syndie_mantis
 	name = "G.O.R.L.E.X. mantis blade implants"
-	desc = "Modernized mantis blades designed and coined by Tiger operatives. Energy actuators makes the blade a much deadlier weapon."
+	desc = "Modernized mantis blades coined by Tiger operatives after the raid on H.E.P.H.A.E.S.T.U.S.Industires core factory by the Gorlex Marauders and designed from H.E.P.H.A.E.S.T.U.S.stolen blueprints. Energy actuators makes the blade a much deadlier weapon."
 	contents = newlist(/obj/item/mantis/blade/syndicate)
 	syndicate_implant = TRUE
 
 /obj/item/organ/cyberimp/arm/syndie_mantis/l
 	zone = BODY_ZONE_L_ARM
 	syndicate_implant = TRUE
+
+/obj/item/organ/cyberimp/arm/nano_mantis
+	name = "H.E.P.H.A.E.S.T.U.S. mantis blade implants"
+	desc = "Moddernized Mantis blades made by the remnants of H.E.P.H.A.E.S.T.U.S. Industries after being absorbed by Nanotrasen, focusing more on defense than offense."
+	contents = newlist(/obj/item/mantis/blade/NT)
+	syndicate_implant = FALSE
+
+/obj/item/organ/cyberimp/arm/nano_mantis/l
+	zone = BODY_ZONE_L_ARM
+	syndicate_implant = FALSE

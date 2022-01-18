@@ -235,3 +235,8 @@
 /obj/item/autosurgeon/organ/syndicate/syndie_mantis/l
 	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis/l
 
+/obj/item/autosurgeon/organ/nano_mantis
+	starting_organ = /obj/item/organ/cyberimp/arm/nano_mantis
+
+/obj/item/autosurgeon/organ/nano_mantis/l
+	starting_organ = /obj/item/organ/cyberimp/arm/nano_mantis/l
