@@ -95,6 +95,7 @@
 	var/desired_sentence = 0 //What sentence do you want to give them?
 	var/desired_crime = null //What is their crime?
 	var/desired_name = null
+	var/stat = 0
 	var/obj/item/radio/Radio //needed to send messages to sec radio
 	//Preset crimes that you can set, without having to remember times
 	var/static/list/crimespetty = list(

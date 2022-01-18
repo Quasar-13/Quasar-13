@@ -706,6 +706,7 @@ update_label()
 /obj/item/card/id/mining
 	name = "mining ID"
 	access = list(ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MECH_MINING, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM)
+
 /obj/item/card/id/genpop
 	name = "Genpop Prisoner ID card"
 	desc = "You are a number, you are not a free man."

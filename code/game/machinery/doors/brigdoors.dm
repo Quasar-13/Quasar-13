@@ -26,7 +26,8 @@
 	req_access = list(ACCESS_SECURITY)
 	density = FALSE
 	var/id = null // id of linked machinery/lockers
-
+	var/desired_name = null
+	var/desired_crime = null
 	var/activation_time = 0
 	var/timer_duration = 0
 
