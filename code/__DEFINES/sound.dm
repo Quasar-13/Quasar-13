@@ -49,6 +49,7 @@
 #define AMBIENCE_AWAY "away"
 #define AMBIENCE_REEBE "reebe" //unused
 #define AMBIENCE_CREEPY "creepy" //not to be confused with spooky
+#define HIGHSEC list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg')
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1
