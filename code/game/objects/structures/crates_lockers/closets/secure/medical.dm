@@ -90,6 +90,7 @@
 	new /obj/item/wallframe/defib_mount(src)
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/cmo(src)
+	new /obj/item/storage/lockbox/medal/med(src)
 	/* START EDIT BUNGALOW */
 	new /obj/item/card/id/departmental_budget/med(src)
 	new /obj/item/clothing/head/beret/cmo
