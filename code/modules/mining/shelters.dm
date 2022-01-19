@@ -24,7 +24,6 @@
 		var/permitted = is_type_in_typecache(T, whitelisted_turfs)
 		if(banned && !permitted)
 			return SHELTER_DEPLOY_BAD_TURFS
-
 		for(var/obj/O in T)
 			if((O.density && O.anchored) || is_type_in_typecache(O, banned_objects))
 				return SHELTER_DEPLOY_ANCHORED_OBJECTS

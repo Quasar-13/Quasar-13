@@ -64,8 +64,8 @@
 	if(!target)
 		. += "pinon[alert ? "alert" : ""]null[icon_suffix]"
 		return
-	var/turf/here = get_turf(src)
-	var/turf/there = get_turf(target)
+	var/turf/here = get_turf_global(src)
+	var/turf/there = get_turf_global(target)
 	if(!here || !there || here.z != there.z)
 		. += "pinon[alert ? "alert" : ""]null[icon_suffix]"
 		return
