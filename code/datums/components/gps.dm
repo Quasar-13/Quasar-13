@@ -107,7 +107,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	if(!tracking || emped) //Do not bother scanning if the GPS is off or EMPed
 		return data
 
-	var/turf/curr = get_turf(parent)
+	var/turf/curr = get_turf_global(parent)
 	data["currentArea"] = "[get_area_name(curr, TRUE)]"
 	data["currentCoords"] = "[curr.x], [curr.y], [curr.z]"
 
@@ -118,7 +118,11 @@ GLOBAL_LIST_EMPTY(GPS_list)
 		var/datum/component/gps/G = gps
 		if(G.emped || !G.tracking || G == src)
 			continue
+<<<<<<< Updated upstream
 		var/turf/pos = get_turf_global(G) // yogs - get_turf_global instead of get_turf
+=======
+		var/turf/pos = get_turf_global(G.parent)
+>>>>>>> Stashed changes
 		if(!pos || !global_mode && pos.z != curr.z)
 			continue
 		var/list/signal = list()

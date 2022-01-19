@@ -1440,6 +1440,18 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	set waitfor = FALSE
 	return call(source, proctype)(arglist(arguments))
 
+// Like get_turf, but if inside a bluespace locker it returns the turf the bluespace locker is on
+// possibly could be adapted for other stuff, i dunno
+/proc/get_turf_global(atom/A, recursion_limit = 5)
+	var/turf/T = get_turf(A)
+	if(recursion_limit <= 0)
+		return T
+	if(T.loc)
+		var/area/R = T.loc
+		if(R.global_turf_object)
+			return get_turf_global(R.global_turf_object, recursion_limit - 1)
+	return T
+
 #define TURF_FROM_COORDS_LIST(List) (locate(List[1], List[2], List[3]))
 
 // Like get_turf, but if inside a bluespace locker it returns the turf the bluespace locker is on

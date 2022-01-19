@@ -23,6 +23,7 @@
 	var/atmosalm = FALSE
 	var/poweralm = FALSE
 	var/lightswitch = TRUE
+	var/atom/global_turf_object = null // for bluespace lockers
 
 	/// All beauty in this area combined, only includes indoor area.
 	var/totalbeauty = 0

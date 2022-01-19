@@ -280,7 +280,11 @@
 	addtimer(CALLBACK(src, .proc/backup_transmission, signal), 20)
 
 /obj/item/radio/proc/backup_transmission(datum/signal/subspace/vocal/signal)
+<<<<<<< Updated upstream
 	var/turf/T = get_turf_global(src) // yogs - get_turf_global instead of get_turf
+=======
+	var/turf/T = get_turf_global(src)
+>>>>>>> Stashed changes
 	if (signal.data["done"] && (T.z in signal.levels))
 		return
 
@@ -316,7 +320,11 @@
 	if (freq == FREQ_CENTCOM)
 		return independent  // hard-ignores the z-level check
 	if (!(0 in level))
+<<<<<<< Updated upstream
 		var/turf/position = get_turf_global(src) // yogs - get_turf_global instead of get_turf
+=======
+		var/turf/position = get_turf_global(src)
+>>>>>>> Stashed changes
 		if(!position || !(position.z in level))
 			return FALSE
 
