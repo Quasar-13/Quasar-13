@@ -280,15 +280,7 @@
 	addtimer(CALLBACK(src, .proc/backup_transmission, signal), 20)
 
 /obj/item/radio/proc/backup_transmission(datum/signal/subspace/vocal/signal)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 	var/turf/T = get_turf_global(src) // yogs - get_turf_global instead of get_turf
-=======
-	var/turf/T = get_turf_global(src)
->>>>>>> Stashed changes
-=======
-	var/turf/T = get_turf(src)
->>>>>>> parent of 0209607d56 (THERE ONCE WAS A MAN WITH 4 ARMS)
 	if (signal.data["done"] && (T.z in signal.levels))
 		return
 
@@ -324,15 +316,7 @@
 	if (freq == FREQ_CENTCOM)
 		return independent  // hard-ignores the z-level check
 	if (!(0 in level))
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 		var/turf/position = get_turf_global(src) // yogs - get_turf_global instead of get_turf
-=======
-		var/turf/position = get_turf_global(src)
->>>>>>> Stashed changes
-=======
-		var/turf/position = get_turf(src)
->>>>>>> parent of 0209607d56 (THERE ONCE WAS A MAN WITH 4 ARMS)
 		if(!position || !(position.z in level))
 			return FALSE
 
