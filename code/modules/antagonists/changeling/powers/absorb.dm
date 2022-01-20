@@ -90,7 +90,6 @@
 		//Recent as opposed to all because rounds tend to have a LOT of text.
 
 		var/list/recent_speech = list()
-		var/list/log_say = list()
 		var/list/say_log = list()
 		var/log_source = target.logging
 		for(var/log_type in log_source)
@@ -98,7 +97,7 @@
 			if(nlog_type & LOG_SAY)
 				var/list/reversed = log_source[log_type]
 				if(islist(reversed))
-					log_say = reverseRange(reversed.Copy())
+					say_log = reverseRange(reversed.Copy())
 					break
 
 		if(LAZYLEN(say_log) > LING_ABSORB_RECENT_SPEECH)
