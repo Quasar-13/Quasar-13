@@ -52,7 +52,7 @@
 
 		if(sortTag != O.currTag)
 			var/tag = uppertext(GLOB.TAGGERLOCATIONS[O.currTag])
-			to_chat(src, "<span class='notice'>SELECTED DESTINATION: [tag]</span>"
+			to_chat(src, "<span class='notice'>SELECTED DESTINATION: [tag]</span>")
 			sortTag = O.currTag
 			playsound(loc, 'sound/machines/twobeep_high.ogg', 100, TRUE)
 
@@ -348,19 +348,19 @@
 /obj/item/dest_tagger/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] begins tagging [user.p_their()] final destination! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	if (islizard(user))
-		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HELL</span>"))//lizard nerf
+		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HELL</span>")//lizard nerf
 	else
-		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HEAVEN</span>"
+		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HEAVEN</span>")
 	playsound(src, 'sound/machines/twobeep_high.ogg', 100, TRUE)
 	return BRUTELOSS
 
-/obj/item/destTagger/ui_interact(mob/user, datum/tgui/ui)
+/obj/item/dest_tagger/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user,src,ui)
 	if(!ui)
 		ui = new(user,src,"DestinationTagger")
 		ui.open()
 
-/obj/item/destTagger/ui_act(action,list/params)
+/obj/item/dest_tagger/ui_act(action,list/params)
 	if(..())
 		return
 
@@ -371,7 +371,7 @@
 				currTag = selectedTag
 			world.log << params["tag"]
 
-/obj/item/destTagger/ui_data(mob/user)
+/obj/item/dest_tagger/ui_data(mob/user)
 	var/list/data = list()
 	data["destinations"] = GLOB.TAGGERLOCATIONS
 	data["currentTag"] = currTag
