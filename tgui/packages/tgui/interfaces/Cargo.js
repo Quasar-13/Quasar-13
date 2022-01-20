@@ -46,22 +46,22 @@ export const CargoContent = (props, context) => {
           </Tabs.Tab>
           {!requestonly && (
             <>
-            <Tabs.Tab
-              icon="shopping-cart"
-              textColor={tab !== 'cart'
+              <Tabs.Tab
+                icon="shopping-cart"
+                textColor={tab !== 'cart'
                 && cart.length > 0
                 && 'yellow'}
-              selected={tab === 'cart'}
-              onClick={() => setTab('cart')}>
-              Checkout ({cart.length})
-            </Tabs.Tab>
-            <Tabs.Tab
-              icon="question"
-              selected={tab === 'help'}
-              onClick={() => setTab('help')}>
-              Help
-            </Tabs.Tab>
-          </>
+                selected={tab === 'cart'}
+                onClick={() => setTab('cart')}>
+                Checkout ({cart.length})
+              </Tabs.Tab>
+              <Tabs.Tab
+                icon="question"
+                selected={tab === 'help'}
+                onClick={() => setTab('help')}>
+                Help
+              </Tabs.Tab>
+            </>
           )}
         </Tabs>
       </Section>
