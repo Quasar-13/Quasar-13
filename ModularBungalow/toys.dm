@@ -1,3 +1,5 @@
+// PLUSHIES //
+
 /obj/item/toy/plush/moth/hos
 	name = "Pyx plushie"
 	desc = "A plushie depicting Pyx, the Syndiemoth!"
@@ -49,3 +51,12 @@
 	desc = "An adorable stuffed toy that resembles the hardboiled detective, Booker!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "booka"
+
+
+// FIGUERES //
+
+/obj/item/toy/figure/secretary
+	name = "Secretary action figure"
+	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
+	icon_state = "secretary"
+	toysay = "Im going to steal the AA!"
