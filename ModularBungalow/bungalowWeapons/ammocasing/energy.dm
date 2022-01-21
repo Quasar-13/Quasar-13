@@ -30,7 +30,7 @@
 //Beam casings
 /obj/item/ammo_casing/energy/disabler/hitscan
 	projectile_type = /obj/projectile/beam/disabler/beam
-	select_name  = "disable"
+	select_name = "disable"
 	e_cost = 100
 	fire_sound = 'sound/weapons/taser2.ogg'
 	harmful = FALSE

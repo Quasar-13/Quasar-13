@@ -1,21 +1,31 @@
+/**
+ * The base type of ALL Bungalow choice-beacons
+ * All Bungalow choice beacons are subtypes of this one, to avoid copy-paste.
+ */
+/obj/item/choice_beacon/bungalow
+	name = "bungalow beacon"
+	desc = "A debug beacon, if you see this, welcome to Bungalow!"
+	///The typesof item this choice beacon will allow you to choose from.
+	var/typesof_options = /obj/item/storage/backpack/duffelbag/ert
+	///The message played after selecting something with this beacon.
+	var/selection_message = "<span class='hear'>Get out there!</span>"
+
+/obj/item/choice_beacon/bungalow/generate_display_names()
+	var/static/list/item_list = list()
+	for(var/obj/typesof_option as anything in typesof(typesof_options))
+		item_list[initial(typesof_option.name)] = typesof_option
+	return item_list
+
+/obj/item/choice_beacon/bungalow/spawn_option(obj/choice, mob/living/gifted_person)
+	new choice(get_turf(gifted_person))
+	to_chat(gifted_person, selection_message)
+
 //Gun beacon
-/obj/item/choice_beacon/captain
+/obj/item/choice_beacon/bungalow/captain
 	name = "captain's gun beacon"
 	desc = "A beacon the captain uses to select his weapon of choice."
-
-/obj/item/choice_beacon/captain/generate_display_names()
-	var/static/list/cap_item_list
-	if(!cap_item_list)
-		cap_item_list = list()
-		var/list/templist = typesof(/obj/item/storage/box/captain) //we have to convert type = name to name = type, how lovely!
-		for(var/V in templist)
-			var/atom/A = V
-			cap_item_list[initial(A.name)] = A
-	return cap_item_list
-
-/obj/item/choice_beacon/captain/spawn_option(obj/choice,mob/living/M)
-	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Thank you for your service. Captain.</span>")
+	typesof_options = /obj/item/storage/box/captain
+	selection_message = "<span class='hear'>Thank you for your service. Captain.</span>"
 
 
 /obj/item/storage/box/captain
@@ -82,23 +92,10 @@
 
 
 //Captain blade beacon
-/obj/item/choice_beacon/sabre
+/obj/item/choice_beacon/bungalow/captain/sabre
 	name = "captain's blade beacon"
 	desc = "A beacon the captain uses to select his weapon of choice."
-
-/obj/item/choice_beacon/sabre/generate_display_names()
-	var/static/list/sord_item_list
-	if(!sord_item_list)
-		sord_item_list = list()
-		var/list/templist = typesof(/obj/item/storage/box/sabre) //we have to convert type = name to name = type, how lovely!
-		for(var/V in templist)
-			var/atom/A = V
-			sord_item_list[initial(A.name)] = A
-	return sord_item_list
-
-/obj/item/choice_beacon/sabre/spawn_option(obj/choice,mob/living/M)
-	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Thank you for your service. Captain.</span>")
+	typesof_options = /obj/item/storage/box/sabre
 
 
 /obj/item/storage/box/sabre

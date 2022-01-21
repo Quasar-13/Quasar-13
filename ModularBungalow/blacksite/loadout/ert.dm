@@ -1,23 +1,12 @@
-/obj/item/choice_beacon/ert
+/obj/item/choice_beacon/bungalow/deathsquad/ert
 	name = "ERT Officer beacon"
 	desc = "A beacon the ERT officers use to choose their weapons."
-
-/obj/item/choice_beacon/ert/generate_display_names()
-	var/static/list/ert_item_list
-	if(!ert_item_list)
-		ert_item_list = list()
-		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/ert) //we have to convert type = name to name = type, how lovely!
-		for(var/V in templist)
-			var/atom/A = V
-			ert_item_list[initial(A.name)] = A
-	return ert_item_list
-
-/obj/item/choice_beacon/ert/spawn_option(obj/choice,mob/living/M)
-	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Get out there!</span>")
+	typesof_options = /obj/item/storage/backpack/duffelbag/ert
 
 
-
+/**
+ * # RIFLE AND ION KIT
+ */
 /obj/item/storage/backpack/duffelbag/ert
 	name = "E-000 Laser Rifle Kit and Ion Rifle"
 	desc = "Usually given to NT station captains, this rifle is in your hands as well for delicate missions"
@@ -27,6 +16,10 @@
 	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
+
+/**
+ * # LASER SNIPER KIT
+ */
 /obj/item/storage/backpack/duffelbag/ert/laser
 	name = "Laser Sniper Kit"
 	desc = "Contains one M76 Lethal laser beam rifle and a usable sidearm."
@@ -36,6 +29,9 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 
+/**
+ * # X-RAY KIT
+ */
 /obj/item/storage/backpack/duffelbag/ert/xray
 	name = "Ultramaterial Rifle Kit"
 	desc = "Contains one fully modified L-792 Ultramaterial laser rifle and a usable sidearm."
@@ -45,6 +41,9 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 
+/**
+ * # ACCELERATION RIFLE KIT
+ */
 /obj/item/storage/backpack/duffelbag/ert/pkr
 	name = "Particle Acceleration Rifle Kit"
 	desc = "Contains one Particle Acceleration rifle and sidearm."

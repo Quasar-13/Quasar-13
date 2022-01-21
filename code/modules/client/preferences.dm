@@ -1230,8 +1230,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				var/titles_list = list(job_title)
 				var/datum/job/J = SSjob.GetJob(job_title)
 				if(user.client.prefs.exp[job_title] >= CONFIG_GET(number/senior_timelock)) //If they have more than 50 hours (300 Minutes) past the required time needed for the job, give them access to the senior title
-					for(var/g in J.senior_title)
-						titles_list += g
+					for(var/possible_job_titles in J.senior_title)
+						titles_list += possible_job_titles
 				for(var/i in J.alt_titles)
 					titles_list += i
 				var/chosen_title

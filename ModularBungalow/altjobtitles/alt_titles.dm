@@ -1,5 +1,7 @@
 /datum/job
+	///Possible alt titles players can choose.
 	var/list/alt_titles = list()
+	///Titles selectable after getting enough playtime on the job.
 	var/senior_title
 
 //Engineering
