@@ -283,6 +283,14 @@
 	design_ids = list("mmi_posi")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
+/datum/techweb_node/exodrone_tech
+	id = "exodrone"
+	display_name = "Exploration Drone Research"
+	description = "Technology for exploring far away locations."
+	prereq_ids = list("robotics")
+	design_ids = list("exodrone_console","exoscanner_console","exoscanner","exodrone_launcher")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
 /datum/techweb_node/neural_programming
 	id = "neural_programming"
 	display_name = "Neural Programming"
