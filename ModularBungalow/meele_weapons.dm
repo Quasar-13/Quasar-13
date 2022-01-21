@@ -7,15 +7,15 @@
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
 	force = 10
-	wound_bonus = 2
+	wound_bonus = -5
 	throwforce = 12
 	hitsound = 'sound/weapons/smash.ogg'
 	attack_verb_continuous = list("beats", "smacks", "robusts")
 	attack_verb_simple = list("beat", "smack", "robust")
-	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 3.5)
+	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 2.5)
 	w_class = WEIGHT_CLASS_HUGE
 
 //one more force than the spear just because you need to craft a baseball bat for this.
 /obj/item/melee/baseball_bat/toolbox/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=19)
+	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=14)
