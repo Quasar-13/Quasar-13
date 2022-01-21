@@ -108,7 +108,7 @@
 
 /obj/item/storage/box/sabre/rapier
 	name = "Rapier"
-	desc = "For the action hero captain, who loves to get themselves a little gung-ho"
+	desc = "For the elegant captain"
 
 /obj/item/storage/box/sabre/rapier/PopulateContents()
 	new /obj/item/storage/belt/rapier(src)
@@ -116,7 +116,7 @@
 
 /obj/item/storage/box/sabre/lance
 	name = "Lance of Longinus"
-	desc = "The holy lance is actually a special nullrod"
+	desc = "The holy lance is actually a special nullrod. Throw it to annihilate any evildoers."
 
 /obj/item/storage/box/sabre/lance/PopulateContents()
 	new /obj/item/nullrod/spear/captain(src)
@@ -125,7 +125,7 @@
 
 /obj/item/storage/box/sabre/katana
 	name = "Captain's Katana"
-	desc = "The blade of the heroic captain"
+	desc = "The blade of the captain who prefers something a little extra."
 
 /obj/item/storage/box/sabre/katana/PopulateContents()
 	new /obj/item/katana/captain(src)
