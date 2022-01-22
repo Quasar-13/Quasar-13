@@ -200,7 +200,7 @@
 	name = "metal cage"
 	desc = "A big metal cage with retractable bottom part. You don't like where this is going..."
 	icon = 'icons/obj/pet_carrier.dmi'
-	icon_state = "pet_carrier_open"
+	icon_state = "rat_cage_open"
 	inhand_icon_state = "pet_carrier"
 	slot_flags = ITEM_SLOT_OCLOTHING
 	custom_materials = list(/datum/material/iron = 7500)
@@ -214,6 +214,17 @@
 /obj/item/pet_carrier/cage/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
+
+/obj/item/pet_carrier/cage/update_icon_state()
+	if(open)
+		icon_state = initial(icon_state)
+	else
+		icon_state = "rat_cage_[!occupants.len ? "closed" : "occupied"]"
+
+/obj/item/pet_carrier/cage/update_overlays()
+	. = ..()
+	if(!open)
+		. += "[locked ? "" : "un"]locked_rat"
 
 /obj/item/pet_carrier/cage/attack(mob/living/target, mob/living/user)
 	if(user.a_intent == INTENT_HARM)
