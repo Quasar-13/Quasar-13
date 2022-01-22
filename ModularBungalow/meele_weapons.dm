@@ -6,7 +6,7 @@
 	inhand_icon_state = "baseball_toolbox"
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
-	force = 10
+	force = 11
 	wound_bonus = -5
 	throwforce = 12
 	hitsound = 'sound/weapons/smash.ogg'
@@ -18,4 +18,4 @@
 
 /obj/item/melee/baseball_bat/toolbox/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=14)
+	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
