@@ -14,8 +14,8 @@
 	attack_verb_simple = list("beat", "smack", "robust")
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 2.5)
 	w_class = WEIGHT_CLASS_HUGE
+	can_be_cricket = 0
 
-//one more force than the spear just because you need to craft a baseball bat for this.
 /obj/item/melee/baseball_bat/toolbox/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=14)
