@@ -1,6 +1,6 @@
 GLOBAL_LIST_INIT(adventure_loot_generator_index,generate_generator_index())
 
-/// Creates generator__id => type map.
+/// Great name
 /proc/generate_generator_index()
 	. = list()
 	for(var/type in typesof(/datum/adventure_loot_generator))
@@ -79,7 +79,7 @@ GLOBAL_LIST_INIT(adventure_loot_generator_index,generate_generator_index())
 /// Rare minerals/materials
 /datum/adventure_loot_generator/simple/materials
 	id = "materials"
-	loot_list = list(/obj/item/stack/sheet/iron/fifty,/obj/item/stack/sheet/plasteel/twenty)
+	loot_list = list(/obj/item/stack/sheet/iron/fifty)
 
 /// Assorted weaponry
 /datum/adventure_loot_generator/simple/weapons

@@ -1,4 +1,3 @@
-import { formatTime } from '../format';
 import { Component } from 'inferno';
 
 // AnimatedNumber Copypaste
@@ -58,6 +57,6 @@ export class TimeDisplay extends Component {
       return this.state.value || null;
     }
 
-    return formatTime(val);
+    return formatTime(val)
   }
 }

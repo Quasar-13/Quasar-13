@@ -22,10 +22,8 @@
 	var/deep_scan_description
 
 /datum/exploration_event/proc/ecounter(obj/item/exodrone/drone)
-	if(!visited)
-		var/log = get_discovery_message(drone)
-		if(log)
-			drone.drone_log(log)(drone))
+	if(discovery_log && !visited)
+		drone.drone_log(get_discovery_message(drone))
 	visited = TRUE
 
 /// Override this if you need to modify discovery message

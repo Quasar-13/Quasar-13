@@ -1,8 +1,8 @@
 /obj/machinery/computer/exodrone_control_console
-	name = "exploration drone control console"
-	desc = "control eploration drones from intersteller distances. Communication lag not included."
+	name = "exploration odrone control console"
 	//Currently controlled drone
 	var/obj/item/exodrone/controlled_drone
+
 	/// Have we lost contact with the drone without disconnecting. Unset on user confirmation.
 	var/signal_lost = FALSE
 
@@ -24,13 +24,11 @@
 		update_icon()
 
 /obj/machinery/computer/exodrone_control_console/proc/on_exodrone_status_changed()
-	SIGNAL_HANDLER
-	//Notify we need human action and switch screeb icon to alert.
+	//Notify we need human action.
 	playsound(src,'sound/machines/ping.ogg',30,FALSE)
 	update_icon()
 
 /obj/machinery/computer/exodrone_control_console/proc/drone_destroyed()
-	SIGNAL_HANDLER
 	signal_lost = TRUE
 	end_drone_control()
 
@@ -47,7 +45,7 @@
 
 /obj/machinery/computer/exodrone_control_console/ui_static_data(mob/user)
 	. = ..()
-	.["all_tools"] = GLOB.exodrone_tool_metadata
+	.["all_tools"] = GLOB.all_exodrone_tools
 	.["all_bands"] = GLOB.exoscanner_bands
 
 /obj/machinery/computer/exodrone_control_console/ui_data(mob/user)
@@ -87,12 +85,12 @@
 		.["all_drones"] = exodrones
 
 /obj/machinery/computer/exodrone_control_console/update_overlays()
-	/// Show alert screen if the drone is in a mode that requires decisionmaking
 	if(controlled_drone && (controlled_drone.drone_status == EXODRONE_IDLE || controlled_drone.drone_status == EXODRONE_EXPLORATION || controlled_drone.drone_status == EXODRONE_ADVENTURE))
 		icon_screen = "alert:2"
 	else
 		icon_screen = initial(icon_screen)
 	. = ..()
+
 
 /obj/machinery/computer/exodrone_control_console/ui_act(action, list/params)
 	. = ..()
@@ -124,12 +122,11 @@
 			return TRUE
 		if("start_travel")
 			if(controlled_drone && controlled_drone.can_travel())
-				var/datum/exploration_site/target_site
 				if(params["target_site"])
-					target_site = locate(params["target_site"]) in GLOB.exploration_sites
-					if(!target_site)
-						return TRUE
-				controlled_drone.launch_for(target_site)
+					var/datum/exploration_site/target_site = locate(params["target_site"]) in GLOB.exploration_sites
+					controlled_drone.launch_for(target_site)
+				else
+					controlled_drone.go_home()
 			return TRUE
 		if("explore")
 			if(controlled_drone && controlled_drone.drone_status == EXODRONE_EXPLORATION)
@@ -167,5 +164,16 @@
 						qdel(thing_to_jettison) //this might need some limitations
 			return TRUE
 
+
 /obj/machinery/computer/exodrone_control_console/ui_assets(mob/user)
-	return list(get_asset_datum(/datum/asset/simple/adventure)) //preset screens
+	return list(
+		get_asset_datum(/datum/asset/simple/adventure) //preset screens
+	)
+
+
+// DEBUG VERSB
+/mob/verb/discover_sites()
+	set name = "Discover Sites"
+
+	generate_exploration_sites(1)
+	generate_exploration_sites(2)
