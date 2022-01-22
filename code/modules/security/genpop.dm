@@ -107,10 +107,10 @@
 	)
 	var/static/list/crimesmisdemeanor = list(
 		list(name="Assault", tooltip="To use physical force against someone without the apparent intent to kill them.", colour="average",icon="fist-raised",sentence="5"),
-		elist(name="Narcotics Distribution", tooltip="To distribute narcotics and other controlled substances.", colour="average",icon="tablets",sentence="5"),
+		list(name="Narcotics Distribution", tooltip="To distribute narcotics and other controlled substances.", colour="average",icon="tablets",sentence="5"),
 		list(name="Resisting Arrest", tooltip="To not cooperate with an officer who attempts a proper arrest.", colour="average",icon="running",sentence="5"),
 		list(name="Gross Negligence", tooltip="Recklessly acting without reasonable caution and putting another person at risk of injury or death. (Failing to act warrants the same consequences)", colour="average",icon="bomb",sentence="5"),
-		list(name="Petty Theft", tooltip="The theft of an item that is not-detrimental to the function of a person's job, nor is it considered to be of high emotional or monetary value",colour="average",icon="people-carry",sentence="5"),
+		list(name="Petty Teheft", tooltip="The theft of an item that is not-detrimental to the function of a person's job, nor is it considered to be of high emotional or monetary value",colour="average",icon="people-carry",sentence="5"),
 		list(name="Dereliction of Duty", tooltip="To willfully abandon an obligation that is critical to the station's continued operation.",colour="average",icon="walking",sentence="5"),
 		list(name="Breaking and Entry", tooltip="Forced entry to areas where the subject does not have access to. This counts for general areas, and breaking into restricted areas is a more serious crime.",colour="average",icon="door-closed",sentence="5")
 	)
@@ -121,9 +121,9 @@
 		list(name="Sabotage", tooltip="To hinder the work of the crew or station through malicious actions.",colour="bad",icon="fire",sentence="7"),
 		list(name="Unlawful Assembly", tooltip="The continued assembly of multiple people after being expressly asked to disperse by any member of command, the Detective or the Warden.",colour="bad",icon="gavel",sentence="7"),
 		list(name="Manslaughter", tooltip="An unlawful killing that doesn't involve malice aforethought",colour="bad",icon="skull-crossbones",sentence="7"),
-		list(name="Illegal ID modification", tooltip="The editing of one's access without proper reason or authority",colour="bad",icon="id-card",sentence="7"),icon="people-carry",sentence="7"),
-		list(name="Theft", tooltip="To steal restricted or dangerous items",colour="average",icon="people-carry",sentence="7"),
-		list(name="B&E of a Restricted Area", tooltip="This is breaking into any Security area, Command area (Bridge, EVA, Captains Quarters, Teleporter, etc.),the Engin e Room, Atmos, or Toxins research.",colour="bad",icon="id-card",sentence="7")
+		list(name="Illegal ID modification", tooltip="The editing of one's access without proper reason or authority",colour="bad",icon="id-card",sentence="7"),
+		list(name="Theft", tooltip="To steal restricted or dangerous items",colour="bad",icon="people-carry",sentence="7"),
+		list(name="B&E of a Restricted Area", tooltip="This is breaking into any Security area, Command area, the Engine Room, Atmos, or Toxins research.",colour="bad",icon="id-card",sentence="7"),
 		list(name="Major Trespass", tooltip="Being in a restricted area without prior authorization. This includes any Security Area, Command area (including EVA), The Engine Room, Atmos, or Toxins Research.",colour="bad",icon="key",sentence="7")
 	)
 
@@ -140,11 +140,11 @@
 	Radio.set_frequency(FREQ_SECURITY)
 
 /obj/machinery/genpop_interface/update_icon()
-	if(stat & (NOPOWER))
+	if(machine_stat & (NOPOWER))
 		icon_state = "frame"
 		return
 
-	if(stat & (BROKEN))
+	if(machine_stat & (BROKEN))
 		set_picture("ai_bsod")
 		return
 	set_picture("default")
