@@ -75,11 +75,11 @@ export const GenPop = (props, context) => {
         <Section title="Crimes">
           <Flex direction="column">
             <Flex.Item grow={1}>
-              {Object.keys(data.pettyCrimes).map(petty => {
-                let value = data.pettyCrimes[petty];
+              {Object.keys(data.infractionCrimes).map(infraction => {
+                let value = data.infractionCrimes[infraction];
                 return (
                   <Button
-                    key={petty}
+                    key={infraction}
                     content={value.name}
                     color={value.colour}
                     icon={value.icon}
@@ -90,11 +90,11 @@ export const GenPop = (props, context) => {
             </Flex.Item>
             <Flex.Item>
               <hr />
-              {Object.keys(data.minorCrimes).map(minor => {
-                let value = data.minorCrimes[minor];
+              {Object.keys(data.misdemeanorCrimes).map(misdemeanor => {
+                let value = data.misdemeanorCrimes[misdemeanor];
                 return (
                   <Button
-                    key={minor}
+                    key={misdemeanor}
                     content={value.name}
                     color={value.colour}
                     icon={value.icon}
@@ -105,41 +105,11 @@ export const GenPop = (props, context) => {
             </Flex.Item>
             <Flex.Item>
               <hr />
-              {Object.keys(data.moderateCrimes).map(moderate => {
-                let value = data.moderateCrimes[moderate];
+              {Object.keys(data.felonyCrimes).map(felony => {
+                let value = data.felonyCrimes[felony];
                 return (
                   <Button
-                    key={moderate}
-                    content={value.name}
-                    color={value.colour}
-                    icon={value.icon}
-                    tooltip={value.tooltip}
-                    onClick={() => act('presetCrime', { preset: value.sentence, crime: value.name })} />
-                );
-              })}
-            </Flex.Item>
-            <Flex.Item>
-              <hr />
-              {Object.keys(data.majorCrimes).map(major => {
-                let value = data.majorCrimes[major];
-                return (
-                  <Button
-                    key={major}
-                    content={value.name}
-                    color={value.colour}
-                    icon={value.icon}
-                    tooltip={value.tooltip}
-                    onClick={() => act('presetCrime', { preset: value.sentence, crime: value.name })} />
-                );
-              })}
-            </Flex.Item>
-            <Flex.Item>
-              <hr />
-              {Object.keys(data.severeCrimes).map(severe => {
-                let value = data.severeCrimes[severe];
-                return (
-                  <Button
-                    key={severe}
+                    key={felony}
                     content={value.name}
                     color={value.colour}
                     icon={value.icon}
