@@ -246,7 +246,7 @@
 		for(var/mob/living/simple_animal/mouse/mice in occupants)
 			if(prob(max(2, heated)))
 				addtimer(CALLBACK(src, .proc/commotion, mice), rand(0,9), TIMER_STOPPABLE)
-	if(prob(25) && heated > 0)
+	if(prob(50) && heated > 0)
 		heated -= 1
 	..()
 
@@ -262,7 +262,7 @@
 			user.visible_message("<span class='warning'>Mice in [src] dig into [user.name]'s flesh!</span>", \
 			"<span class='userdanger'>Mice in [src] dig into your flesh!</span>")
 			playsound(src, 'sound/weapons/bite.ogg', rand(max(2, heated/4), max(8, heated/2)), TRUE)
-			user.apply_damage(damage = rand(1,3), damagetype = BRUTE, def_zone = BODY_ZONE_CHEST, blocked = FALSE, forced = TRUE, spread_damage = FALSE, wound_bonus = heated/2, bare_wound_bonus = heated, sharpness = SHARP_EDGED)
+			user.apply_damage(damage = rand(1,3), damagetype = BRUTE, def_zone = BODY_ZONE_CHEST, blocked = FALSE, forced = TRUE, spread_damage = FALSE, wound_bonus = heated, bare_wound_bonus = heated*2, sharpness = SHARP_POINTY)
 			if(prob(5))
 				user.emote("scream")
 			if(prob(5) && user.jitteriness < 10)
@@ -274,7 +274,7 @@
 	if(I.tool_behaviour == TOOL_WELDER)
 		if(heated > 100)
 			to_chat(user, "<span class='notice'>[src] is already too hot.</span>")
-		if(I.use_tool(src, user, 2, volume=10))
+		if(I.use_tool(src, user, 5, volume=10))
 			user.visible_message("<span class='notice'>[user.name] heated [src] with [I].</span>", \
 			"<span class='notice'>You heat [src] with [I].</span>", \
 			"<span class='hear'>You hear welding.</span>")
