@@ -45,6 +45,7 @@ export const Crystallizer = (props, context) => {
                 animated
                 value={parseFloat(data.gas_input)}
                 width="63px"
+                height="10px"
                 unit="moles/s"
                 minValue={0}
                 maxValue={500}
