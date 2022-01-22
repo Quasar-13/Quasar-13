@@ -110,7 +110,7 @@
 		list(name="Narcotics Distribution", tooltip="To distribute narcotics and other controlled substances.", colour="average",icon="tablets",sentence="5"),
 		list(name="Resisting Arrest", tooltip="To not cooperate with an officer who attempts a proper arrest.", colour="average",icon="running",sentence="5"),
 		list(name="Gross Negligence", tooltip="Recklessly acting without reasonable caution and putting another person at risk of injury or death. (Failing to act warrants the same consequences)", colour="average",icon="bomb",sentence="5"),
-		list(name="Petty Teheft", tooltip="The theft of an item that is not-detrimental to the function of a person's job, nor is it considered to be of high emotional or monetary value",colour="average",icon="people-carry",sentence="5"),
+		list(name="Petty Theft", tooltip="The theft of an item that is not-detrimental to the function of a person's job, nor is it considered to be of high emotional or monetary value",colour="average",icon="people-carry",sentence="5"),
 		list(name="Dereliction of Duty", tooltip="To willfully abandon an obligation that is critical to the station's continued operation.",colour="average",icon="walking",sentence="5"),
 		list(name="Breaking and Entry", tooltip="Forced entry to areas where the subject does not have access to. This counts for general areas, and breaking into restricted areas is a more serious crime.",colour="average",icon="door-closed",sentence="5")
 	)
@@ -126,7 +126,6 @@
 		list(name="B&E of a Restricted Area", tooltip="This is breaking into any Security area, Command area, the Engine Room, Atmos, or Toxins research.",colour="bad",icon="id-card",sentence="7"),
 		list(name="Major Trespass", tooltip="Being in a restricted area without prior authorization. This includes any Security Area, Command area (including EVA), The Engine Room, Atmos, or Toxins Research.",colour="bad",icon="key",sentence="7")
 	)
-
 /obj/item/circuitboard/machine/genpop_interface
 	name = "Prisoner Management Interface (circuit)"
 	build_path = /obj/machinery/genpop_interface

@@ -105,8 +105,8 @@ export const GenPop = (props, context) => {
             </Flex.Item>
             <Flex.Item>
               <hr />
-              {Object.keys(data.felonyCrimes).map(felony => {
-                let value = data.felonyCrimes[felony];
+              {Object.keys(data.felonyminorCrimes).map(felony => {
+                let value = data.felonyminorCrimes[felony];
                 return (
                   <Button
                     key={felony}
