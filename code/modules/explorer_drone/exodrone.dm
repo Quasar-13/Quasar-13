@@ -66,7 +66,8 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 	. = ..()
 	name = pick(strings(EXODRONE_FILE,"probe_names"))
 	if(name_counter[name])
-		name = "[name] \Roman[++name_counter[name]]"
+		name_counter[name]++
+		name = "[name] \Roman[name_counter[name]]"
 	else
 		name_counter[name] = 1
 	GLOB.exodrones += src
@@ -94,11 +95,6 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 				return "Traveling to exploration site."
 			else
 				return "Idle."
-
-/// Is the drone ready to start traveling for exploration site
-/obj/item/exodrone/proc/ready_to_launch()
-	var/obj/machinery/exodrone_launcher/pad = locate() in loc
-	return pad && pad.fuel_canister != null && pad.fuel_canister.uses > 0 //On pad and pad is fueled
 
 /// Starts travel for site, does not validate if it's possible
 /obj/item/exodrone/proc/launch_for(datum/exploration_site/target_site)
@@ -197,32 +193,35 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 	for(var/obj/machinery/exodrone_launcher/other_pad in GLOB.exodrone_launchers)
 		return other_pad
 
-/// Ecounters random or specificed event for the current site.
+/// encounters random or specificed event for the current site.
 /obj/item/exodrone/proc/explore_site(datum/exploration_event/specific_event)
-	if(!specific_event) //Ecounter random event
-		var/list/events_to_ecounter = list()
+	if(!specific_event) //encounter random event
+		var/list/events_to_encounter = list()
 		for(var/datum/exploration_event/event in location.events)
 			if(event.visited)
 				continue
-			events_to_ecounter += event
-		if(!length(events_to_ecounter))
-			drone_log("It seems there's nothing interesting left around [location.name]")
+			events_to_encounter += event
+		if(!length(events_to_encounter))
+			drone_log("It seems there's nothing interesting left around [location.name].")
 			return
-		var/datum/exploration_event/ecountered_event = pick(events_to_ecounter)
-		ecountered_event.ecounter(src)
+		var/datum/exploration_event/encountered_event = pick(events_to_encounter)
+		encountered_event.encounter(src)
 	else if(specific_event.is_targetable())
-		specific_event.ecounter(src)
+		specific_event.encounter(src)
 
 /obj/item/exodrone/proc/get_adventure_data()
 	var/list/data = current_adventure?.ui_data()
 	data["description"] = updateKeywords(data["description"])
+	var/list/choices = data["choices"]
+	for(var/list/choice in choices)
+		choice["text"] = updateKeywords(choice["text"])
 	return data
 
 ///Replaces $$SITE_NAME with site name and $$QualityName with quality values
-/obj/item/exodrone/proc/updateKeywords(description)
+/obj/item/exodrone/proc/updateKeywords(text)
 	_regex_context = src
 	var/static/regex/keywordRegex = regex(@"\$\$(\S*)","g")
-	. = keywordRegex.Replace(description,/obj/item/exodrone/proc/replace_keyword)
+	. = keywordRegex.Replace(text,/obj/item/exodrone/proc/replace_keyword)
 	_regex_context = null
 
 /// This is called with src = regex datum, so don't try to access any instance variables directly here.
@@ -306,10 +305,25 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/item/exodrone/proc/busy_time_left()
 	return busy_duration - (world.time - busy_start_time)
 
-/// Can the drone start traveling now
-/obj/item/exodrone/proc/can_travel()
+/// Returns failure message or FALSE if we're ready to travel
+/obj/item/exodrone/proc/travel_error()
 	/// We're home and on ready pad or exploring and out of any events/adventures
-	return (drone_status == EXODRONE_IDLE && ready_to_launch()) || (drone_status == EXODRONE_EXPLORATION && current_event_ui_data == null)
+	switch(drone_status)
+		if(EXODRONE_IDLE)
+			var/obj/machinery/exodrone_launcher/pad = locate() in loc
+			if(!pad)
+				return "No launcher"
+			if(!pad.fuel_canister)
+				return "No fuel in launcher"
+			if(pad.fuel_canister.uses <= 0)
+				return "Launcher fuel used up"
+			return FALSE
+		if(EXODRONE_EXPLORATION)
+			if(current_event_ui_data)
+				return "Busy"
+			return FALSE
+		else
+			return ""
 
 /// Deals damage in adventures/events.
 /obj/item/exodrone/proc/damage(amount)
@@ -428,3 +442,12 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/item/fuel_pellet/exotic
 	fuel_type = FUEL_EXOTIC
 	icon_state = "fuel_exotic"
+
+#undef EXODRONE_LOG_SIZE
+#undef EXODRONE_CARGO_SLOTS
+#undef FUEL_BASIC
+#undef BASIC_FUEL_TIME_COST
+#undef FUEL_ADVANCED
+#undef ADVANCED_FUEL_TIME_COST
+#undef FUEL_EXOTIC
+#undef EXOTIC_FUEL_TIME_COST

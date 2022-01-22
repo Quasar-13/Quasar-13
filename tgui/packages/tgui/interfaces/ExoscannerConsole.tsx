@@ -1,10 +1,7 @@
-/* eslint-disable max-len */
-import { useBackend, useLocalState } from '../backend';
-import { BlockQuote, Box, Button, Flex, Icon, Modal, NumberInput, Section, Slider, LabeledList, NoticeBox, ProgressBar, TimeDisplay, Stack } from '../components';
+import { useBackend } from '../backend';
+import { BlockQuote, Box, Button, Flex, Icon, Modal, Section, LabeledList, NoticeBox, Stack } from '../components';
 import { Window } from '../layouts';
-import { resolveAsset } from '../assets';
 import { formatTime } from '../format';
-import { toKeyedArray } from '../../common/collections';
 
 
 type SiteData = {
@@ -34,7 +31,9 @@ const ScanFailedModal = (props, context) => {
           <Box color="bad">SCAN FAILURE!</Box>
         </Flex.Item>
         <Flex.Item>
-          <Button onClick={() => act("confirm_fail")}>Confirm</Button>
+          <Button
+            content="Confirm"
+            onClick={() => act("confirm_fail")} />
         </Flex.Item>
       </Flex>
     </Modal>);
@@ -58,8 +57,15 @@ const ScanSelectionSection = (props, context) => {
   return (
     <Stack vertical fill>
       <Stack.Item grow>
-        <Section fill title="Site Data" buttons={<Button onClick={() => act("select_site", { "site_ref": null })}>Back</Button>}>
-        <LabeledList>
+        <Section
+          fill
+          title="Site Data"
+          buttons={
+            <Button
+              content="Back"
+              onClick={() => act("select_site", { "site_ref": null })} />
+          }>
+          <LabeledList>
             <LabeledList.Item label="Name">{site.name}</LabeledList.Item>
             <LabeledList.Item label="Description">
               {site.revealed ? site.description : "No Data"}
@@ -68,29 +74,62 @@ const ScanSelectionSection = (props, context) => {
             <LabeledList.Divider />
             <LabeledList.Item label="Spectrography Data" />
             <LabeledList.Divider />
-            {Object.keys(site.band_info).map(band => (<LabeledList.Item key={band} label={band}>{site.band_info[band]}</LabeledList.Item>))}
-            </LabeledList>
+            {Object.keys(site.band_info).map(band => (
+              <LabeledList.Item
+                key={band}
+                label={band}>
+                {site.band_info[band]}
+              </LabeledList.Item>
+            ))}
+          </LabeledList>
         </Section>
-        </Stack.Item>
+      </Stack.Item>
       {scan_availible && (
         <Stack.Item>
           <Section fill title="Scans">
             {!point_scan_complete && (
               <Section title="Point Scan">
-                <BlockQuote>Point scan performs rudimentary scan of the site, revealing its general characteristics.</BlockQuote>
-                <Box><Button disabled={scan_power <= 0} onClick={() => act("start_point_scan")}>Scan</Button> <Box inline pl={3}>Estimated Time: {point_cost}.</Box></Box>
+                <BlockQuote>
+                  Point scan performs rudimentary scan of
+                  the site, revealing its general characteristics.
+                </BlockQuote>
+                <Box>
+                  <Button
+                    content="Scan"
+                    disabled={scan_power <= 0}
+                    onClick={() => act("start_point_scan")} />
+                  <Box
+                    inline
+                    pl={3}>
+                    Estimated Time: {point_cost}.
+                  </Box>
+                </Box>
               </Section>
             )}
             {!deep_scan_complete && (
               <Section title="Deep Scan">
-                <BlockQuote>Deep scan performs full scan of the site, revealing all details.</BlockQuote>
-                <Box><Button disabled={scan_power <= 0} onClick={() => act("start_deep_scan")}>Scan</Button> <Box inline pl={3}>Estimated Time: {deep_cost}.</Box></Box>
+                <BlockQuote>
+                  Deep scan performs full scan
+                  of the site, revealing all details.
+                </BlockQuote>
+                <Box>
+                  <Button
+                    content="Scan"
+                    disabled={scan_power <= 0}
+                    onClick={() => act("start_deep_scan")} />
+                  <Box
+                    inline
+                    pl={3}>
+                    Estimated Time: {deep_cost}.
+                  </Box>
+                </Box>
               </Section>
             )}
           </Section>
         </Stack.Item>
       )}
-    </Stack>);
+    </Stack>
+  );
 };
 
 type ScanInProgressData = {
@@ -133,7 +172,8 @@ const ScanInProgressModal = (props, context) => {
             onClick={() => act("stop_scan")} />
         </LabeledList.Item>
       </LabeledList>
-    </Modal>);
+    </Modal>
+  );
 };
 
 
@@ -163,8 +203,12 @@ export const ExoscannerConsole = (props, context) => {
 
   return (
     <Window>
-      {!!scan_in_progress && (<ScanInProgressModal />)}
-      {!!failed && (<ScanFailedModal />)}
+      {!!scan_in_progress && (
+        <ScanInProgressModal />
+      )}
+      {!!failed && (
+        <ScanFailedModal />
+      )}
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>
@@ -177,18 +221,28 @@ export const ExoscannerConsole = (props, context) => {
                       <Icon
                         name="satellite-dish"
                         size={3} />
-                    </>) || ("No properly configured scanner arrays detected.")}
+                    </>
+                  ) || (
+                    "No properly configured scanner arrays detected."
+                  )}
                 </Stack.Item>
               </Stack>
               <Section title="Special Scan Condtions">
-                {scan_conditions && scan_conditions.map(condition => <NoticeBox key={condition} warning>{condition}</NoticeBox>)}
+                {scan_conditions && scan_conditions.map(condition => (
+                  <NoticeBox
+                    key={condition}
+                    warning>
+                    {condition}
+                  </NoticeBox>
+                ))}
               </Section>
             </Section>
           </Stack.Item>
           {!!selected_site && (
             <Stack.Item grow>
               <ScanSelectionSection site_ref={selected_site} />
-            </Stack.Item>)}
+            </Stack.Item>
+          )}
           {!selected_site && (
             <>
               <Stack.Item>
@@ -196,7 +250,8 @@ export const ExoscannerConsole = (props, context) => {
                   <Stack>
                     <Stack.Item>
                       <BlockQuote>
-                        Broad spectrum scan looking for anything not matching known start charts.
+                        Broad spectrum scan looking for
+                        anything not matching known start charts.
                       </BlockQuote>
                     </Stack.Item>
                     <Stack.Item>
@@ -234,8 +289,10 @@ export const ExoscannerConsole = (props, context) => {
                   </Stack>
                 </Section>
               </Stack.Item>
-            </>)}
+            </>
+          )}
         </Stack>
       </Window.Content>
-    </Window>);
+    </Window>
+  );
 };
