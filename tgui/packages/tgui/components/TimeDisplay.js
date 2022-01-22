@@ -1,3 +1,4 @@
+import { formatTime } from '../format';
 import { Component } from 'inferno';
 
 // AnimatedNumber Copypaste
