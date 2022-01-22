@@ -114,10 +114,6 @@
 		list(name="Dereliction of Duty", tooltip="To willfully abandon an obligation that is critical to the station's continued operation.",colour="average",icon="walking",sentence="5"),
 		list(name="Breaking and Entry", tooltip="Forced entry to areas where the subject does not have access to. This counts for general areas, and breaking into restricted areas is a more serious crime.",colour="average",icon="door-closed",sentence="5")
 	)
-	var/static/list/crimesmoderate = list(
-		list(name="Rioting", tooltip="To partake in an unauthorized and disruptive assembly of crewmen that refuse to disperse.",colour="average",icon="users",sentence="5"),
-		list(name="Animal Cruelty", tooltip="To kill an animal for reasons other than research, food purposes, self-defense purposes, or as a resolution to animal overpopulation.",colour="average",icon="user-minus",sentence="5")
-	)
 	var/static/list/crimesfelonyminor = list(
 		list(name="Assault, Officer", tooltip="To use physical force against a Department Head or member of Security without the apparent intent to kill them.",colour="bad",icon="gavel",sentence="7"),
 		list(name="Possession, weapon", tooltip="To be in possession of a weapon without prior authorization, such as guns, batons, flashes, grenades, etc.",colour="bad",icon="exclamation",sentence="7"),
@@ -126,7 +122,7 @@
 		list(name="Unlawful Assembly", tooltip="The continued assembly of multiple people after being expressly asked to disperse by any member of command, the Detective or the Warden.",colour="bad",icon="gavel",sentence="7"),
 		list(name="Manslaughter", tooltip="An unlawful killing that doesn't involve malice aforethought",colour="bad",icon="skull-crossbones",sentence="7"),
 		list(name="Illegal ID modification", tooltip="The editing of one's access without proper reason or authority",colour="bad",icon="id-card",sentence="7"),icon="people-carry",sentence="7"),
-		list(name="Theft", tooltip="To steal restricted or dangerous items",colour="average",icon="people-carry",sentence="5"),
+		list(name="Theft", tooltip="To steal restricted or dangerous items",colour="average",icon="people-carry",sentence="7"),
 		list(name="B&E of a Restricted Area", tooltip="This is breaking into any Security area, Command area (Bridge, EVA, Captains Quarters, Teleporter, etc.),the Engin e Room, Atmos, or Toxins research.",colour="bad",icon="id-card",sentence="7")
 		list(name="Major Trespass", tooltip="Being in a restricted area without prior authorization. This includes any Security Area, Command area (including EVA), The Engine Room, Atmos, or Toxins Research.",colour="bad",icon="key",sentence="7")
 	)
