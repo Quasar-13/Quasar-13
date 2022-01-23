@@ -1267,6 +1267,7 @@
 
 /obj/item/circuitboard/machine/exodrone_launcher
 	name = "Exploration Drone Launcher (Machine Board)"
+	desc = "You can use a crowbar to remove the fuel pellet."
 	icon_state = "science"
 	build_path = /obj/machinery/exodrone_launcher
 	req_components = list(

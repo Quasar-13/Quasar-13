@@ -119,7 +119,7 @@ export const ExodroneConsole = (props, context) => {
   ] = useLocalState(context, 'choosingTools', false);
 
   return (
-    <Window width={650} height={500}>
+    <Window width={750} height={600}>
       {!!signal_lost && <SignalLostModal />}
       {!!choosingTools && <ToolSelectionModal />}
       <Window.Content>
