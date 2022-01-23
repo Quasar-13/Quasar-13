@@ -1,6 +1,6 @@
 //weapons recipe
 /datum/crafting_recipe/baseballtoolbox
-	name = "Baseball toolbox"
+	name = "Toolbox Bat"
 	result = /obj/item/melee/baseball_bat/toolbox
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
 				/obj/item/melee/baseball_bat = 1,
