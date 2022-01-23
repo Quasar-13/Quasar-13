@@ -1,5 +1,5 @@
 /obj/item/melee/baseball_bat/toolbox
-	name = "Baseball bat with a toolbox"
+	name = "toolbox bat"
 	desc = "There ain't a skull in the league that can withstand a toolbox."
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "baseball_toolbox"
