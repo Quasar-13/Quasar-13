@@ -423,7 +423,7 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 
 /obj/item/fuel_pellet
 	name = "standard fuel pellet"
-	desc = "compressed fuel pellet for long-distance flight"
+	desc = "Compressed fuel pellet for long-distance flight."
 	icon = 'icons/obj/exploration.dmi'
 	icon_state = "fuel_basic"
 	var/fuel_type = FUEL_BASIC
@@ -435,10 +435,14 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 		qdel(src)
 
 /obj/item/fuel_pellet/advanced
+	name = "advanced fuel pellet"
+	desc = "An upgraded version of the standard fuel pellet, able to pack more fuel for long-distance flights."
 	fuel_type = FUEL_ADVANCED
 	icon_state = "fuel_advanced"
 
 /obj/item/fuel_pellet/exotic
+	name = "exotic fuel pellet"
+	desc = "An exotic type of fuel compressed in a pellet to be used in exodrone explorations."
 	fuel_type = FUEL_EXOTIC
 	icon_state = "fuel_exotic"
 
