@@ -174,7 +174,7 @@ export const formatSiBaseTenUnit = (
  * Formats decisecond count into HH::MM::SS display by default
  * "short" format does not pad and adds hms suffixes
  */
- export const formatTime = (val, formatType) => {
+export const formatTime = (val, formatType) => {
   // THERE IS AS YET INSUFFICIENT DATA FOR A MEANINGFUL ANSWER
   // HH:MM:SS
   // 00:02:13
