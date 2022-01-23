@@ -5,6 +5,7 @@ import { resolveAsset } from '../assets';
 import { formatTime } from '../format';
 import { capitalize } from 'common/string';
 import nt_logo from '../assets/bg-nanotrasen.svg';
+import { Fragment } from 'inferno';
 
 type ExplorationEventData = {
   name: string,
@@ -131,17 +132,38 @@ export const ExodroneConsole = (props, context) => {
 const SignalLostModal = (props, context) => {
   const { act } = useBackend(context);
   return (
-    <Modal backgroundColor="red" textAlign="center" width={30} height={22} p={0} style={{ "border-radius": "5%" }}></Modal>
-    <img src={nt_logo} width={64} height={64} />
-    <Box backgroundColor="black" textColor="red" fontSize={2} style={{ "border-radius": "-10%" }}>CONNECTION LOST</Box>
-    <Box p={2} italic>
-    Connection to exploration drone interrupted.
-    Please contact nearest Nanotrasen Exploration Division
-    representative for further instructions.
-  </Box>
-  <Icon name="exclamation-triangle" textColor="black" size={5} />
-  <Box><Button color="danger" style={{ "border": "1px solid black" }} onClick={() => act("confirm_signal_lost")}>Confirm</Button></Box>
-  </Modal>);
+    <Modal
+      backgroundColor="red"
+      textAlign="center"
+      width={30}
+      height={22}
+      p={0}
+      style={{ "border-radius": "5%" }}>
+      <img src={nt_logo} width={64} height={64} />
+      <Box
+        backgroundColor="black"
+        textColor="red"
+        fontSize={2}
+        style={{ "border-radius": "-10%" }}>
+        CONNECTION LOST
+      </Box>
+      <Box p={2} italic>
+        Connection to exploration drone interrupted.
+        Please contact nearest Nanotrasen Exploration Division
+        representative for further instructions.
+      </Box>
+      <Icon
+        name="exclamation-triangle"
+        textColor="black"
+        size={5} />
+      <Box>
+        <Button
+          content="Confirm"
+          color="danger"
+          style={{ "border": "1px solid black" }}
+          onClick={() => act("confirm_signal_lost")} />
+      </Box>
+    </Modal>);
 };
 
 const DroneSelectionSection = (props, context) => {
@@ -154,9 +176,9 @@ const DroneSelectionSection = (props, context) => {
     <Section scrollable fill title="Exploration Drone Listing">
       <Stack vertical>
         {all_drones.map(drone => (
-          <>
-          <Stack.Item grow key={drone.ref}>
-          <Stack fill>
+          <Fragment key={drone.ref}>
+            <Stack.Item grow>
+              <Stack fill>
                 <Stack.Item basis={10} fontFamily="monospace" fontSize="18px">
                   {drone.name}
                 </Stack.Item>
@@ -177,9 +199,9 @@ const DroneSelectionSection = (props, context) => {
                   )}
                 </Stack.Item>
               </Stack>
-              </Stack.Item>
+            </Stack.Item>
             <Stack.Divider />
-          </>
+          </Fragment>
         ))}
       </Stack>
     </Section>);
@@ -205,7 +227,7 @@ const ToolSelectionModal = (props, context) => {
         </Stack.Item>
         <Stack.Item>
           <Stack textAlign="center">
-          {!!toolData && toolData.map(tool_name => (
+            {!!toolData && toolData.map(tool_name => (
               <Stack.Item key={tool_name}>
                 <Button
                   onClick={() => {
@@ -217,7 +239,7 @@ const ToolSelectionModal = (props, context) => {
                   tooltip={all_tools[tool_name].description}>
                   <Stack vertical>
                     <Stack.Item>
-                    {capitalize(tool_name)}
+                      {capitalize(tool_name)}
                     </Stack.Item>
                     <Stack.Item ml={2.5}>
                       <Icon name={all_tools[tool_name].icon} size={3} />
@@ -266,14 +288,14 @@ const EquipmentBox = (props, context) => {
             </Stack.Item>
             {!!configurable && (
               <Stack.Item mt={-9.4} textAlign="right">
-              <Button
-                onClick={() => act("remove_tool", { tool_type: cargo.name })}
-                color="danger"
-                icon="minus"
-                tooltipPosition="right"
-                tooltip="Remove Tool" />
-            </Stack.Item>)}
-        </Stack>);
+                <Button
+                  onClick={() => act("remove_tool", { tool_type: cargo.name })}
+                  color="danger"
+                  icon="minus"
+                  tooltipPosition="right"
+                  tooltip="Remove Tool" />
+              </Stack.Item>)}
+          </Stack>);
       case "cargo":// Jettison button.
         return (
           <Stack direction="column">
@@ -344,7 +366,7 @@ const EquipmentGrid = (props, context) => {
         </Section>
       </Stack.Item>
       <Stack.Item>
-      <Section title="Cargo">
+        <Section title="Cargo">
           <Stack.Item>
             {!!configurable && (
               <Button
@@ -357,7 +379,7 @@ const EquipmentGrid = (props, context) => {
           </Stack.Item>
           <Stack.Item>
             <Stack wrap="wrap" width={10}>
-            {cargo.map(cargo_element => (
+              {cargo.map(cargo_element => (
                 <EquipmentBox
                   key={cargo_element.name}
                   cargo={cargo_element} />))}
@@ -503,27 +525,27 @@ const TravelTargetSelectionScreen = (props, context) => {
         )}
         {valid_destinations.map(destination => (
           <Section
-          key={destination.ref}
-          title={destination.name}
-          buttons={
-            <>
-              <Button
-                mr={1}
-                content={can_travel ? "Launch!" : travel_error}
-                onClick={() => travel_to(destination.ref)}
-                disabled={!can_travel} />
-              ETA: {formatTime(travel_cost(destination), "short")}
-            </>
-          }>
-          <LabeledList>
-            <LabeledList.Item label="Location">
-              {destination.coordinates}
-            </LabeledList.Item>
-            <LabeledList.Item label="Description">
-              {destination.description}
-            </LabeledList.Item>
-            <LabeledList.Divider />
-            {non_empty_bands(destination).map(band => (
+            key={destination.ref}
+            title={destination.name}
+            buttons={
+              <>
+                <Button
+                  mr={1}
+                  content={can_travel ? "Launch!" : travel_error}
+                  onClick={() => travel_to(destination.ref)}
+                  disabled={!can_travel} />
+                ETA: {formatTime(travel_cost(destination), "short")}
+              </>
+            }>
+            <LabeledList>
+              <LabeledList.Item label="Location">
+                {destination.coordinates}
+              </LabeledList.Item>
+              <LabeledList.Item label="Description">
+                {destination.description}
+              </LabeledList.Item>
+              <LabeledList.Divider />
+              {non_empty_bands(destination).map(band => (
                 <LabeledList.Item
                   key={band}
                   label={band}>
@@ -613,12 +635,12 @@ const ExplorationScreen = (props, context) => {
         <DroneStatus />
       }>
       <Stack vertical fill>
-      <Stack.Item grow>
+        <Stack.Item grow>
           <LabeledList>
             <LabeledList.Item label="Site">{site.name}</LabeledList.Item>
             <LabeledList.Item label="Location">{site.coordinates}</LabeledList.Item>
             <LabeledList.Item label="Description">{site.description}</LabeledList.Item>
-            </LabeledList>
+          </LabeledList>
         </Stack.Item>
         <Stack.Item align="center" grow>
           <Button
@@ -627,14 +649,14 @@ const ExplorationScreen = (props, context) => {
         </Stack.Item>
         {site.events.map(e => (
           <Stack.Item
-          align="center"
-          key={site.ref}
-          grow>
-          <Button
-            content={capitalize(e.name)}
-            onClick={() => act("explore_event", { target_event: e.ref })} />
+            align="center"
+            key={site.ref}
+            grow>
+            <Button
+              content={capitalize(e.name)}
+              onClick={() => act("explore_event", { target_event: e.ref })} />
           </Stack.Item>))}
-          <Stack.Item align="center" grow>
+        <Stack.Item align="center" grow>
           <Button
             content="Travel"
             onClick={() => setTravelDimmerShown(true)} />
@@ -661,7 +683,7 @@ const EventScreen = (props, context) => {
       )}
       <Stack vertical fill textAlign="center">
         <Stack.Item>
-        <Stack fill>
+          <Stack fill>
             <Stack.Item>
               <img src={resolveAsset(event.image)}
                 height="125px"
@@ -720,7 +742,7 @@ const AdventureScreen = (props, context) => {
         </Stack.Item>
         <Stack.Divider />
         <Stack.Item>
-        <img
+          <img
             src={imgSource}
             height="100px"
             width="200px"
@@ -732,14 +754,14 @@ const AdventureScreen = (props, context) => {
             <Stack.Item grow />
             {!!adventure_data.choices && adventure_data.choices.map(choice => (
               <Stack.Item key={choice.key}>
-              <Button
-                fluid
-                content={choice.text}
-                textAlign="center"
-                onClick={() => act('adventure_choice', { choice: choice.key })} />
-            </Stack.Item>
-          ))}
-          <Stack.Item grow />
+                <Button
+                  fluid
+                  content={choice.text}
+                  textAlign="center"
+                  onClick={() => act('adventure_choice', { choice: choice.key })} />
+              </Stack.Item>
+            ))}
+            <Stack.Item grow />
           </Stack>
         </Stack.Item>
       </Stack>
@@ -799,7 +821,7 @@ const ExodroneConsoleContent = (props, context) => {
               <LabeledList.Item key={log_line} label={`Entry ${ix + 1 }`}>
                 {log_line}
               </LabeledList.Item>))}
-              </LabeledList>
+          </LabeledList>
         </Section>
       </Stack.Item>
     </Stack>
