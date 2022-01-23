@@ -179,5 +179,6 @@
 /mob/living/simple_animal/hostile/asteroid/elite/pandora/abductor/death(gibbed)
 	spawn_gibs()
 	spawn_gibs()
-	new /obj/item/key/gateway/home(src.loc)
+	new /obj/item/gun/energy/pulse/pistol(src.loc)
+	new /obj/structure/signpost/salvation(src.loc)
 	qdel(src)
