@@ -14,7 +14,7 @@
 	attack_verb_simple = list("beat", "smack", "robust")
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 2.5)
 	w_class = WEIGHT_CLASS_HUGE
-	can_be_cricket = 0
+	can_be_cricket = FALSE
 
 /obj/item/melee/baseball_bat/toolbox/ComponentInitialize()
 	. = ..()
