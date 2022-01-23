@@ -65,7 +65,8 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 	. = ..()
 	name = pick(strings(EXODRONE_FILE,"probe_names"))
 	if(name_counter[name])
-		name = "[name] \Roman[++name_counter[name]]"
+		name_counter[name]++
+		name = "[name] \Roman[name_counter[name]]"
 	else
 		name_counter[name] = 1
 	GLOB.exodrones += src
@@ -191,32 +192,35 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 	for(var/obj/machinery/exodrone_launcher/other_pad in GLOB.exodrone_launchers)
 		return other_pad
 
-/// Ecounters random or specificed event for the current site.
+/// encounters random or specificed event for the current site.
 /obj/item/exodrone/proc/explore_site(datum/exploration_event/specific_event)
-	if(!specific_event) //Ecounter random event
-		var/list/events_to_ecounter = list()
+	if(!specific_event) //encounter random event
+		var/list/events_to_encounter = list()
 		for(var/datum/exploration_event/event in location.events)
 			if(event.visited)
 				continue
-			events_to_ecounter += event
-		if(!length(events_to_ecounter))
-			drone_log("It seems there's nothing interesting left around [location.name]")
+			events_to_encounter += event
+		if(!length(events_to_encounter))
+			drone_log("It seems there's nothing interesting left around [location.name].")
 			return
-		var/datum/exploration_event/ecountered_event = pick(events_to_ecounter)
-		ecountered_event.ecounter(src)
+		var/datum/exploration_event/encountered_event = pick(events_to_encounter)
+		encountered_event.encounter(src)
 	else if(specific_event.is_targetable())
-		specific_event.ecounter(src)
+		specific_event.encounter(src)
 
 /obj/item/exodrone/proc/get_adventure_data()
 	var/list/data = current_adventure?.ui_data()
 	data["description"] = updateKeywords(data["description"])
+	var/list/choices = data["choices"]
+	for(var/list/choice in choices)
+		choice["text"] = updateKeywords(choice["text"])
 	return data
 
 ///Replaces $$SITE_NAME with site name and $$QualityName with quality values
-/obj/item/exodrone/proc/updateKeywords(description)
+/obj/item/exodrone/proc/updateKeywords(text)
 	_regex_context = src
 	var/static/regex/keywordRegex = regex(@"\$\$(\S*)","g")
-	. = keywordRegex.Replace(description,/obj/item/exodrone/proc/replace_keyword)
+	. = keywordRegex.Replace(text,/obj/item/exodrone/proc/replace_keyword)
 	_regex_context = null
 
 /// This is called with src = regex datum, so don't try to access any instance variables directly here.
@@ -437,3 +441,12 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/item/fuel_pellet/exotic
 	fuel_type = FUEL_EXOTIC
 	icon_state = "fuel_exotic"
+
+#undef EXODRONE_LOG_SIZE
+#undef EXODRONE_CARGO_SLOTS
+#undef FUEL_BASIC
+#undef BASIC_FUEL_TIME_COST
+#undef FUEL_ADVANCED
+#undef ADVANCED_FUEL_TIME_COST
+#undef FUEL_EXOTIC
+#undef EXOTIC_FUEL_TIME_COST

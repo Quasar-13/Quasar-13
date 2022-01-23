@@ -39,6 +39,7 @@ type SiteData = {
   name: string,
   ref: string,
   description: string,
+  coordinates: string,
   distance: number,
   band_info: Record<string, number>,
   revealed: boolean,
@@ -117,7 +118,6 @@ export const ExodroneConsole = (props, context) => {
     setChoosingTools,
   ] = useLocalState(context, 'choosingTools', false);
 
-  const toolData = Object.keys(all_tools);
   return (
     <Window width={650} height={500}>
       {!!signal_lost && <SignalLostModal />}
@@ -163,7 +163,8 @@ const SignalLostModal = (props, context) => {
           style={{ "border": "1px solid black" }}
           onClick={() => act("confirm_signal_lost")} />
       </Box>
-    </Modal>);
+    </Modal>
+  );
 };
 
 const DroneSelectionSection = (props, context) => {
@@ -219,6 +220,7 @@ const ToolSelectionModal = (props, context) => {
     setChoosingTools,
   ] = useLocalState(context, 'choosingTools', false);
 
+  const toolData = Object.keys(all_tools);
   return (
     <Modal>
       <Stack fill vertical pr={2}>
@@ -256,7 +258,8 @@ const ToolSelectionModal = (props, context) => {
           </Stack>
         </Stack.Item>
       </Stack>
-    </Modal>);
+    </Modal>
+  );
 };
 
 const EquipmentBox = (props, context) => {
@@ -294,7 +297,8 @@ const EquipmentBox = (props, context) => {
                   icon="minus"
                   tooltipPosition="right"
                   tooltip="Remove Tool" />
-              </Stack.Item>)}
+              </Stack.Item>
+            )}
           </Stack>);
       case "cargo":// Jettison button.
         return (
@@ -323,12 +327,21 @@ const EquipmentBox = (props, context) => {
                 tooltipPosition="right"
                 tooltip={`Jettison ${cargo.name}`} />
             </Stack.Item>
-          </Stack>);
+          </Stack>
+        );
       case "empty":
         return "";
     }
   };
-  return (<Box width={5} height={5} style={{ border: '2px solid black' }} textAlign="center">{boxContents(cargo)}</Box>);
+  return (
+    <Box
+      width={5}
+      height={5}
+      style={{ border: '2px solid black' }}
+      textAlign="center">
+      {boxContents(cargo)}
+    </Box>
+  );
 };
 
 const EquipmentGrid = (props, context) => {
@@ -346,7 +359,7 @@ const EquipmentGrid = (props, context) => {
       <Stack.Item grow>
         <Section fill title="Controls">
           <Stack vertical textAlign="center">
-            <Stack.Item >
+            <Stack.Item>
               <Button
                 fluid
                 icon="plug"
@@ -374,7 +387,7 @@ const EquipmentGrid = (props, context) => {
                 color="average"
                 icon="wrench"
                 content="Install Tool"
-                onClick={() => { setChoosingTools(true); }} />
+                onClick={() => setChoosingTools(true)} />
             )}
           </Stack.Item>
           <Stack.Item>
@@ -382,7 +395,8 @@ const EquipmentGrid = (props, context) => {
               {cargo.map(cargo_element => (
                 <EquipmentBox
                   key={cargo_element.name}
-                  cargo={cargo_element} />))}
+                  cargo={cargo_element} />
+              ))}
             </Stack>
           </Stack.Item>
         </Section>
@@ -414,7 +428,8 @@ const DroneStatus = (props, context) => {
           value={drone_integrity}
           maxValue={drone_max_integrity} />
       </Stack.Item>
-    </Stack>);
+    </Stack>
+  );
 };
 
 const NoSiteDimmer = () => {
@@ -455,7 +470,7 @@ const TravelTargetSelectionScreen = (props, context) => {
   const travel_cost = target_site => {
     if (site) {
       return Math.max(Math.abs(site.distance - target_site.distance), 1)
-      * drone_travel_coefficent;
+        * drone_travel_coefficent;
     }
     else {
       return target_site.distance * drone_travel_coefficent;
@@ -477,11 +492,12 @@ const TravelTargetSelectionScreen = (props, context) => {
 
   const non_empty_bands = (dest : SiteData) => {
     const band_check = (s: string) => dest.band_info[s] !== undefined
-    && dest.band_info[s] !== 0;
+      && dest.band_info[s] !== 0;
     return Object.keys(all_bands).filter(band_check);
   };
-  const valid_destinations = sites.filter(destination => !site
-    || destination.ref !== site.ref);
+  const valid_destinations = !!sites && sites.filter(destination => (
+    !site || destination.ref !== site.ref
+  ));
   return (
     drone_status === "travel" && (
       <TravelDimmer />
@@ -513,12 +529,12 @@ const TravelTargetSelectionScreen = (props, context) => {
             title="Home"
             buttons={
               <Box>
+                ETA: {formatTime(site.distance * drone_travel_coefficent, "short")}
                 <Button
-                  mr={1}
+                  ml={1}
                   content={can_travel ? "Launch!" : travel_error}
                   onClick={() => travel_to(null)}
                   disabled={!can_travel} />
-                ETA: {formatTime(site.distance * drone_travel_coefficent, "short")}
               </Box>
             }
           />
@@ -529,12 +545,12 @@ const TravelTargetSelectionScreen = (props, context) => {
             title={destination.name}
             buttons={
               <>
+                ETA: {formatTime(travel_cost(destination), "short")}
                 <Button
-                  mr={1}
+                  ml={1}
                   content={can_travel ? "Launch!" : travel_error}
                   onClick={() => travel_to(destination.ref)}
                   disabled={!can_travel} />
-                ETA: {formatTime(travel_cost(destination), "short")}
               </>
             }>
             <LabeledList>
@@ -550,7 +566,8 @@ const TravelTargetSelectionScreen = (props, context) => {
                   key={band}
                   label={band}>
                   {destination.band_info[band]}
-                </LabeledList.Item>))}
+                </LabeledList.Item>
+              ))}
             </LabeledList>
           </Section>
         ))}
@@ -662,7 +679,8 @@ const ExplorationScreen = (props, context) => {
             onClick={() => setTravelDimmerShown(true)} />
         </Stack.Item>
       </Stack>
-    </Section>);
+    </Section>
+  );
 };
 
 const EventScreen = (props, context) => {
@@ -721,7 +739,8 @@ const EventScreen = (props, context) => {
           </Stack>
         </Stack.Item>
       </Stack>
-    </Section>);
+    </Section>
+  );
 };
 
 const AdventureScreen = (props, context) => {
@@ -765,7 +784,8 @@ const AdventureScreen = (props, context) => {
           </Stack>
         </Stack.Item>
       </Stack>
-    </Section>);
+    </Section>
+  );
 };
 
 const DroneScreen = (props, context) => {
@@ -776,15 +796,19 @@ const DroneScreen = (props, context) => {
   } = data;
   switch (drone_status) {
     case "busy":
-      return (<TimeoutScreen />);
+      return <TimeoutScreen />;
     case "idle":
     case "travel":
-      return (<TravelTargetSelectionScreen />);
+      return <TravelTargetSelectionScreen />;
     case "adventure":
-      return (<AdventureScreen />);
+      return <AdventureScreen />;
     case "exploration":
-      if (event) { return (<EventScreen />); }
-      else { return (<ExplorationScreen />); }
+      if (event) {
+        return <EventScreen />;
+      }
+      else {
+        return <ExplorationScreen />;
+      }
   }
 };
 
@@ -796,7 +820,9 @@ const ExodroneConsoleContent = (props, context) => {
     drone_log,
   } = data;
 
-  if (!drone) { return (<DroneSelectionSection />); }
+  if (!drone) {
+    return <DroneSelectionSection />;
+  }
 
   return (
     <Stack fill vertical>
@@ -820,7 +846,8 @@ const ExodroneConsoleContent = (props, context) => {
             {drone_log.map((log_line, ix) => (
               <LabeledList.Item key={log_line} label={`Entry ${ix + 1 }`}>
                 {log_line}
-              </LabeledList.Item>))}
+              </LabeledList.Item>
+            ))}
           </LabeledList>
         </Section>
       </Stack.Item>

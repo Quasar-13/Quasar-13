@@ -147,7 +147,7 @@
 	if(open)
 		icon_state = initial(icon_state)
 	else
-	icon_state = "[base_icon_state]_[!occupants.len ? "closed" : "occupied"]"
+		icon_state = "[base_icon_state]_[!occupants.len ? "closed" : "occupied"]"
 
 /obj/item/pet_carrier/update_overlays()
 	. = ..()
@@ -195,5 +195,12 @@
 	occupants -= occupant
 	occupant_weight -= occupant.mob_size
 	occupant.setDir(SOUTH)
+
+/obj/item/pet_carrier/biopod
+	name = "biopod"
+	desc = "Alien device used for undescribable purpose. Or carrying pets."
+	base_icon_state = "biopod"
+	icon_state = "biopod_open"
+	inhand_icon_state = "biopod"
 
 #undef pet_carrier_full
