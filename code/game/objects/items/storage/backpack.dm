@@ -153,6 +153,12 @@
 	icon_state = "captainpack"
 	inhand_icon_state = "captainpack"
 
+/obj/item/storage/backpack/centcom
+	name = "centcom backpack"
+	desc = "It's a special backpack made exclusively for Nanotrasen officers. Green for Navy baby."
+	icon_state = "gcaptainpack"
+	inhand_icon_state = "captainpack"
+
 /obj/item/storage/backpack/industrial
 	name = "industrial backpack"
 	desc = "It's a tough backpack for the daily grind of station life."
