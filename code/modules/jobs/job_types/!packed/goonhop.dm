@@ -46,7 +46,7 @@
 	id = /obj/item/card/id/silver
 	belt = /obj/item/pda/heads/hop
 	ears = /obj/item/radio/headset/heads/hop
-	uniform = /obj/item/clothing/under/suit/green
+	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = null
 	backpack_contents = list(/obj/item/storage/box/ids=1,\
