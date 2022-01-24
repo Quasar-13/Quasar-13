@@ -147,4 +147,4 @@
 /obj/item/clothing/suit/armor/captain/flag/admiral/combat
 	name = "The Admiral's combat jacket"
 	desc = "The Fleet Admiral's jacket, ready for combat. Prepare yourself."
-	icon_state = "admiral_fancy"
+	icon_state = "admiral_combat"
