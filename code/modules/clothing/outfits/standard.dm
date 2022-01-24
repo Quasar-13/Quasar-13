@@ -281,7 +281,7 @@
 /datum/outfit/centcom/commander/radm
 	name = "Rear Admiral"
 	uniform = /obj/item/clothing/under/bni/officer
-	suit = /obj/item/clothing/suit/armor/vest/centcom_formal
+	suit = /obj/item/clothing/suit/armor/captain/flag
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
@@ -292,7 +292,7 @@
 /datum/outfit/centcom/commander/vadm
 	name = "Vice Admiral"
 	uniform = /obj/item/clothing/under/bni/officer
-	suit = /obj/item/clothing/suit/armor/captain/flag
+	suit = /obj/item/clothing/suit/armor/captain/flag/vadm
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
@@ -307,6 +307,8 @@
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
 	head = /obj/item/clothing/head/beret/sec/navyhos/black
+	backpack_contents = list(/obj/item/clothing/suit/armor/captain/flag/admiral/fancy=1,\
+		/obj/item/clothing/suit/armor/captain/flag/admiral/combat=1)
 
 
 
