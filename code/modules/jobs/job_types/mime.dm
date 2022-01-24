@@ -6,6 +6,7 @@
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
+	mapexclude = list("packed")
 
 	outfit = /datum/outfit/job/mime
 

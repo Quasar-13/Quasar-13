@@ -1,5 +1,5 @@
 /datum/job/ntcaptain
-	title = "NT Captain"
+	title = "Captain"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
 	faction = "Station"
@@ -38,7 +38,7 @@
 //	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "[displayed_rank] [H.real_name] is on deck!")) // original
 
 /datum/outfit/job/ntcaptain
-	name = "NT Captain"
+	name = "Captain (Casio)"
 	jobtype = /datum/job/ntcaptain
 
 	id = /obj/item/card/id/gold
