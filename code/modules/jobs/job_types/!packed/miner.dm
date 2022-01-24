@@ -5,7 +5,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the chief engineer"
-	selection_color = "#dcba97"
+	selection_color = "#fff5cc"
 	maptype = "packed"
 
 	outfit = /datum/outfit/job/goonminer
@@ -23,10 +23,10 @@
 	jobtype = /datum/job/goonminer
 
 	belt = /obj/item/pda/shaftminer
-	ears = /obj/item/radio/headset/headset_cargo/mining
+	ears = /obj/item/radio/headset/headset_eng
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	gloves = /obj/item/clothing/gloves/color/black
-	uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
+	uniform = /obj/item/clothing/under/rank/cargo/miner
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
 	r_pocket = /obj/item/storage/bag/ore	//causes issues if spawned in backpack
 	backpack_contents = list(

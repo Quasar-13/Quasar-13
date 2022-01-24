@@ -179,6 +179,16 @@
 		"Silicon"
 		)
 
+	if(SSmaptype.maptype == "packed")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Logistics",
+		"Research",
+		"Service",
+		"Silicon"
+		)
+
 	if(SSmaptype.maptype == "casio")
 		manifest_out = list(
 		"Command",
@@ -250,6 +260,14 @@
 			"Silicon" = GLOB.nonhuman_positions)
 
 
+	if(SSmaptype.maptype == "packed")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Logistics" = GLOB.logistics_positions,
+			"Research" = GLOB.research_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
 
 	if(SSmaptype.maptype == "casio")
 		departments = list(
