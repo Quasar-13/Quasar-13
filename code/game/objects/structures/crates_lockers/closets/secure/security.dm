@@ -23,7 +23,7 @@
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/color/captain(src)
-	new /obj/item/choice_beacon/bungalow/captain(src)
+	new /obj/item/choice_beacon/bungalow/captain/gun(src)
 	new /obj/item/choice_beacon/bungalow/captain/sabre(src)
 	new /obj/item/door_remote/captain(src)
 

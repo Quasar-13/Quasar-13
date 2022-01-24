@@ -29,7 +29,7 @@
 	gender = NEUTER
 
 /datum/sprite_accessory/undershirt/sportsbrablue
-	name = "Sports Bra (black)"
+	name = "Sports Bra (blue)"
 	icon = 'ModularBungalow/clothing/worn/underwearw.dmi'
 	icon_state = "sports_bra_blue"
 	gender = NEUTER
