@@ -93,6 +93,10 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//Chief Engineer
+/datum/outfit/job/chief_engineer/chiefatmosphericstechnician
+	name = "Chief Engineer (Chief Atmos Tech)"
+	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
 //Captain
 
 /datum/outfit/job/captain/stationcommander
