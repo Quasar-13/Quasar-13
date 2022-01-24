@@ -87,6 +87,7 @@
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering/void = 3,
 					/obj/item/clothing/under/rank/engineering/engineer = 3,
 					/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
 					/obj/item/clothing/under/rank/engineering/signal_tech = 3,

@@ -28,6 +28,25 @@
 	inhand_icon_state = "syndicate_suit"
 	can_adjust = FALSE
 
+//BNI Suit for BNI people
+/obj/item/clothing/under/bni
+	name = "BNI outfit"
+	desc = "An outfit for NT's BNI division"
+	icon_state = "bni"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "suit"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/bni/senior
+	name = "Senior BNI outfit"
+	desc = "An outfit for NT's Senior BNI operatives"
+	icon_state = "bni_senior"
+
+/obj/item/clothing/under/bni/officer
+	name = "BNI officer outfit"
+	desc = "An outfit for NT's BNI officers"
+	icon_state = "bni_officer"
 
 //Chemical Researcher Jumpsuit
 /obj/item/clothing/under/rank/research/chem
@@ -53,3 +72,15 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 10)
 	resistance_flags = NONE
 
+//Mechanic Jumpsuit
+/obj/item/clothing/under/rank/engineering/mech
+	desc = "It's a red jumpsuit worn by those that build the mining ship."
+	name = "mechanic's jumpsuit"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	icon_state = "mech"
+	inhand_icon_state = "void_suit"
+	lefthand_file = 'ModularTegustation/Teguicons/kirie_stuff/left.dmi'
+	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 10)
+	resistance_flags = NONE
