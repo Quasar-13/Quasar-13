@@ -25,6 +25,7 @@
 		#include "map_files\GalaxyStation\GalaxyStation.dmm" //marg
 		#include "map_files\GalaxyStation\Galaxystation_LVL2.dmm"
 		#include "map_files\RemoraStation\RemoraStation.dmm"
+		#include "map_files\Fermistation\Fermistation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 		#include "map_files\CasioStation\Casiostation.dmm"

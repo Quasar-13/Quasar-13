@@ -1,8 +1,8 @@
 /obj/item/clothing/suit/hooded/harlequin
 	name = "Harlequin costume"
 	desc = "The best friend of a clown!"
-	worn_icon = 'ModularBungalow/clothing/worn/suitsw.dmi'
-	icon = 'ModularBungalow/clothing/icons/suits.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "harlequin"
 	hoodtype = /obj/item/clothing/head/hooded/harlequin_hood
 
