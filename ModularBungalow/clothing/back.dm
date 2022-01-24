@@ -4,4 +4,6 @@
 	icon =	'ModularBungalow/clothing/icons/back.dmi'
 	icon_state = "gcaptainpack"
 	worn_icon = 'ModularBungalow/clothing/worn/backw.dmi'
-	inhand_icon_state = "captainpack"
+	lefthand_file = 'ModularBungalow/zbungalowicons/clothes_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/clothes_righthand.dmi'
+	inhand_icon_state = "gcaptainpack"
