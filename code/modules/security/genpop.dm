@@ -91,7 +91,6 @@
 	maptext_width = 32
 	maptext_y = -1
 	circuit = /obj/item/circuitboard/machine/genpop_interface
-	var/id = null // id of linked machinery/lockers
 	var/next_print = 0
 	var/desired_sentence = 0 //What sentence do you want to give them?
 	var/desired_crime = null //What is their crime?
