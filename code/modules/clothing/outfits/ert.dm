@@ -6,6 +6,7 @@
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_cent/alt
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
 
 /datum/outfit/centcom/ert/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
@@ -33,6 +34,7 @@
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/melee/baton/loaded=1)
 	l_pocket = /obj/item/switchblade
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/cdr
 
 /datum/outfit/centcom/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -300,6 +302,7 @@
 	shoes = /obj/item/clothing/shoes/clown_shoes/combat
 	r_pocket = /obj/item/bikehorn/golden
 	l_pocket = /obj/item/food/grown/banana
+	accessory = null
 	backpack_contents = list(/obj/item/storage/box/hug/survival=1,\
 		/obj/item/melee/transforming/energy/sword/bananium=1,\
 		/obj/item/shield/energy/bananium=1,\
@@ -377,6 +380,7 @@
 	r_pocket = /obj/item/grenade/chem_grenade/cleaner
 	l_pocket = /obj/item/grenade/chem_grenade/cleaner
 	l_hand = /obj/item/storage/bag/trash
+	accessory = null
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/storage/box/lights/mixed=1,\
 		/obj/item/mop/advanced=1,\
@@ -391,6 +395,7 @@
 	belt = /obj/item/melee/classic_baton/telescopic
 	l_pocket = /obj/item/assembly/flash
 	r_pocket = /obj/item/storage/wallet
+	accessory = null
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/clothing/head/helmet/police=1,\
 		/obj/item/storage/box/handcuffs=1)
@@ -404,6 +409,7 @@
 	head = /obj/item/clothing/head/hardhat/weldhat
 	suit = /obj/item/clothing/suit/hazardvest
 	suit_store = null
+	accessory = null
 	l_hand = /obj/item/areaeditor/blueprints
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/stack/sheet/metal/fifty=1,\
@@ -420,6 +426,7 @@
 	head = /obj/item/clothing/head/chameleon
 	suit = /obj/item/clothing/suit/chameleon
 	suit_store = null
+	accessory = null
 	glasses = /obj/item/clothing/glasses/chameleon
 	backpack_contents = list(/obj/item/storage/box/hug/survival=1,\
 		/obj/item/shield/energy/bananium=1,\
