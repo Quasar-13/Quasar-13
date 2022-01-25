@@ -475,8 +475,8 @@
 /datum/reagent/drug/blastoff/on_mob_metabolize(mob/living/dancer)
 	. = ..()
 
-	//RegisterSignal(dancer, COMSIG_MOB_EMOTED("flip"), .proc/on_flip)
-	//RegisterSignal(dancer, COMSIG_MOB_EMOTED("spin"), .proc/on_spin)
+	RegisterSignal(dancer, COMSIG_MOB_EMOTED("flip"), .proc/on_flip)
+	RegisterSignal(dancer, COMSIG_MOB_EMOTED("spin"), .proc/on_spin)
 
 	if(!dancer.hud_used)
 		return
@@ -505,8 +505,8 @@
 /datum/reagent/drug/blastoff/on_mob_end_metabolize(mob/living/dancer)
 	. = ..()
 
-	//UnregisterSignal(dancer, COMSIG_MOB_EMOTED("flip"))
-	//UnregisterSignal(dancer, COMSIG_MOB_EMOTED("spin"))
+	UnregisterSignal(dancer, COMSIG_MOB_EMOTED("flip"))
+	UnregisterSignal(dancer, COMSIG_MOB_EMOTED("spin"))
 
 	if(!dancer.hud_used)
 		return
