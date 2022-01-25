@@ -29,6 +29,7 @@
 	ears = /obj/item/radio/headset/headset_sct
 	uniform = /obj/item/clothing/under/misc/parade
 	shoes = /obj/item/clothing/shoes/sneakers/black
+	l_hand = /obj/item/storage/briefcase/secretary
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 	belt = /obj/item/pda/secretary
 	r_pocket = /obj/item/kitchen/knife/letter_opener
