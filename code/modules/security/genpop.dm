@@ -321,6 +321,40 @@ GLOBAL_LIST_EMPTY(prisoner_ids)
 			to_chat(loc, "<big><span class='boldnotice'>You have served your sentence! You may now exit prison through the turnstiles and collect your belongings by slotting the ID into your locker.</span>")
 		return PROCESS_KILL
 
+/obj/machinery/genpop_interface/proc/timer_start()
+	if(machine_stat & (NOPOWER|BROKEN))
+		return 0
+
+	activation_time = world.time
+	timing = TRUE
+
+	for(var/obj/machinery/door/window/brigdoor/door in targets)
+		if(door.density)
+			continue
+		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/close)
+
+	return 1
+
+/obj/machinery/genpop_interface/proc/timer_end(forced = FALSE)
+
+	if(machine_stat & (NOPOWER|BROKEN))
+		return 0
+
+	if(!forced)
+		Radio.set_frequency(FREQ_SECURITY)
+		Radio.talk_into(src, "Timer has expired. Releasing prisoner.", FREQ_SECURITY)
+
+	timing = FALSE
+	activation_time = null
+	set_timer(0)
+	update_icon()
+
+	for(var/obj/machinery/door/window/brigdoor/door in targets)
+		if(!door.density)
+			continue
+		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/open)
+
+	return 1
 
 
 #undef PRESET_SHORT
