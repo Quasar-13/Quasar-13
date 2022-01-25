@@ -1,6 +1,3 @@
-////////////
-//SNIPERS//
-///////////
 //Wetwork Energy Sniper
 /obj/item/gun/energy/sniper/security
 	name = "L-733 Anti-Personnel Rifle"

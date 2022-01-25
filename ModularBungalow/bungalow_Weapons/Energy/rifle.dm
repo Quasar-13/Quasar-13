@@ -1,21 +1,9 @@
-//////////
-//RIFLES//
-//////////
 //Blueshield gun
 /obj/item/gun/energy/e_gun/stun/blueshield
 	name = "\improper XX-02 Tactical Engergy Rifle"
 	desc = "A modified XX-01 that has a disabler mode."
 	w_class = WEIGHT_CLASS_BULKY
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser)
-
-//NT GOLD Series
-/obj/item/gun/energy/laser/captain/ntgold
-	name = "E-400 NT GOLD Laser Rifle"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
-	icon_state = "caprifle"
-	inhand_icon_state = "gun"
-	w_class = WEIGHT_CLASS_BULKY
-	desc = "This is a replica of antique laser gun. Chrome finish with gold accents and leather furniture. NT is inscribed on the side."
 
 //Autorifle
 /obj/item/gun/energy/disabler/advanced/rifle

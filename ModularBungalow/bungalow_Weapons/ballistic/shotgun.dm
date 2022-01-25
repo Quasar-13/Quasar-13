@@ -1,7 +1,3 @@
-////////////
-//SHOTGUNS//
-////////////
-
 /obj/item/gun/ballistic/shotgun/doublebarrel/side
 	name = "Short Shottie"
 	desc = "A small double-barrel shotgun."
@@ -29,7 +25,6 @@
 	can_be_sawn_off = FALSE
 	pb_knockback = 3 // it's a super shotgun!
 
-//BREACH AND CLEAN
 /obj/item/gun/ballistic/shotgun/automatic/breaching
 	name = "tactical breaching shotgun"
 	desc = "A compact semi-auto shotgun designed to fire breaching slugs and create rapid entry points. Only accepts breaching slugs."
@@ -44,8 +39,6 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
 	max_ammo = 7
 	caliber = "breacher"
-
-
 
 /obj/item/ammo_box/magazine/internal/shot/triple
 	name = "triple-barrel shotgun internal magazine"

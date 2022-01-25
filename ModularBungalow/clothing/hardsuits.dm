@@ -61,4 +61,3 @@
 	name = "\improper Doom Marine Hardsuit"
 	desc = "Rip and tear, until it is done."
 	slowdown = -0.5
-

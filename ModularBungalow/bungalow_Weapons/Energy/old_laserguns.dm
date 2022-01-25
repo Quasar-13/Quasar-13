@@ -1,6 +1,3 @@
-///////////////
-//Old Lasguns//
-///////////////
 /obj/item/gun/energy/laser/fifth
 	name = "\improper L-504 Laser Gun"
 	desc = "Nanotrasen’s 5th series rifle."
