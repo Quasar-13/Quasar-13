@@ -241,6 +241,7 @@
 	icon_state = "bluespace"
 	base_icon_state = "bluespace"
 	color = null
+	icon = 'icons/turf/floors.dmi'
 
 
 
