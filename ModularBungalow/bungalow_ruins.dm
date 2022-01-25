@@ -19,5 +19,5 @@ DATU: Datums for map templates
 	placement_weight = 1
 	cost = 1
 	allow_duplicates = FALSE
-	prefix = "ModularBungalow/ruins/"
+	prefix = "ModularBungalow/ruins"
 	suffix = "interdyne.dmm"

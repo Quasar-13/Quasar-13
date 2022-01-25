@@ -3,7 +3,6 @@
 /datum/blackmarket_item/language
 	category = "Language"
 
-
 /datum/blackmarket_item/language/roundstartrace
 	name = "Random racial language book"
 	desc = "Group of xeno-specie schemes together in their language? Learn their language with one of our books!"
@@ -226,8 +225,6 @@
 	stock_max = 1
 	availability_prob = 100
 
-
-
 /datum/blackmarket_item/treasure/svetdisabler
 	name = "Brass Ray"
 	desc = "A modified disabler designed by someone with awfull tastes. Self rechargeable and uses 'rays' instead of 'beams' to shoot."
@@ -237,7 +234,6 @@
 	stock_max = 1
 	availability_prob = 100
 
-
 /datum/blackmarket_item/treasure/svetbaton
 	name = "Brass Stringer"
 	desc = "A modified baton designed by someone with awfull tastes. Retracts into pockets and works on silicons."
@@ -246,7 +242,6 @@
 	price_max = 10000
 	stock_max = 1
 	availability_prob = 100
-
 
 /datum/blackmarket_item/treasure/svetshotgun
 	name = "Brass Cannon"
@@ -265,4 +260,3 @@
 	price_max = 10000
 	stock_max = 1
 	availability_prob = 100
-

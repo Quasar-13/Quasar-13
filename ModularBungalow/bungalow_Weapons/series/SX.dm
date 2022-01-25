@@ -15,6 +15,10 @@
 	icon_state = "autorifle"
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/disabler/advanced/rifle/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.20 SECONDS)
+
 //Beam Rifle
 /obj/item/gun/energy/disabler/advanced/beam
 	name = "SX-1 Disabler Beam Rifle"
@@ -22,6 +26,10 @@
 	icon_state = "beamrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan)
 	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/energy/disabler/advanced/beam/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
 
 //Mark II pistol
 /obj/item/gun/energy/disabler/advanced/markii

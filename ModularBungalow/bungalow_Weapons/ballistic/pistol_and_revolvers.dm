@@ -1,4 +1,7 @@
-//PISTOLS///
+///////////////////////
+////////PISTOLS////////
+///////////////////////
+
 /obj/item/gun/ballistic/automatic/pistol/mk23
 	name = "Mark 23 SOCOM"
 	desc = "A pistol used by special forces across the galaxy."
@@ -42,7 +45,9 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
-//REVOLVERS//
+////////////////////
+//////REVOLVERS////
+///////////////////
 
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino

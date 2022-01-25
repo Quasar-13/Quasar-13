@@ -93,7 +93,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
-
 /datum/crafting_recipe/tempgun_scratch
 	name = "Temperature Gun"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
@@ -106,7 +105,6 @@
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
-
 
 /datum/crafting_recipe/beam_rifle_scratch
 	name = "Particle Acceleration Rifle"
@@ -124,7 +122,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
-
 /datum/crafting_recipe/ebow_scratch
 	name = "Energy Crossbow"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
@@ -139,7 +136,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
-
 /datum/crafting_recipe/xraylaser_scratch
 	name = "X-ray Laser Gun"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
@@ -153,7 +149,6 @@
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
-
 
 /datum/crafting_recipe/hellgun_scratch
 	name = "Hellfire Laser Gun"

@@ -51,7 +51,6 @@
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/synaptazine(src)
 
-
 /obj/item/storage/pill_bottle/haloperidol
 	name = "bottle of haloperidol pills"
 	desc = "Used to fight addictions, causes drowsiness."
