@@ -15,7 +15,6 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
-
 /obj/item/gun/energy/disabler/advanced/tgpistol
 	name = "TGMPC Disabler pistol"
 	desc = "TerraGov's Military police's own variant of the SX-0 Disabler Magnum, more compact for ease of carry"
