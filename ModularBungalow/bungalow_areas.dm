@@ -1,5 +1,5 @@
 //RUINS//
-area/crew_quarters/devious_lick
+/area/crew_quarters/devious_lick
 	name = "Devious Lick"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "amongus"
