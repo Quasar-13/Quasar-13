@@ -13,9 +13,17 @@
 	. = ..()
 
 //AUTODROBE VENDING MACHINE
-/obj/machinery/vending/autodrobe/Initialize(mapload)
+/obj/machinery/vending/autodrobe/Initialize()
 	products += list(
 		/obj/item/clothing/suit/hooded/harlequin = 1,
     /obj/item/clothing/glasses/regular/bigshot = 1,
 	)
 	. = ..()
+
+
+//ENGINER WARDROBE VENDING MACHINE
+/obj/machinery/vending/wardrobe/engi_wardrobe/Initialize()
+	products += list(
+		/obj/item/clothing/suit/hooded/wintercoat/engineering/void = 3,
+	)
+	.=..()
