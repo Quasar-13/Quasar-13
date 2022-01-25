@@ -54,4 +54,3 @@
 	list_reagents = list(/datum/reagent/drug/antihol = 5)
 	rename_with_volume = TRUE
 */
-
