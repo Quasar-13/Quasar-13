@@ -18,6 +18,7 @@
 	name = "aiuri bottle"
 	desc = "A small bottle. Contains aiuri - used to heal burn damage."
 	list_reagents = list(/datum/reagent/medicine/c2/aiuri = 30)
+
 /obj/item/storage/pill_bottle/mannitol/small
 	name = "bottle of mannitol pills"
 	desc = "Contains pills used to treat brain damage."
@@ -25,7 +26,6 @@
 /obj/item/storage/pill_bottle/mannitol/small/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/mannitol/small(src)
-
 
 /obj/item/storage/pill_bottle/morphine/small
 	name = "bottle of morphine pills"
