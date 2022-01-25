@@ -37,7 +37,7 @@
 	jobtype = /datum/job/elitesec
 
 	mask = /obj/item/clothing/mask/gas/sechailer
-	uniform = /obj/item/clothing/under/rank/security/officer
+	uniform = /obj/item/clothing/under/suit/black
 	shoes = /obj/item/clothing/shoes/combat/swat
 	id = /obj/item/card/id/ert/security
 	belt = /obj/item/pda/warden

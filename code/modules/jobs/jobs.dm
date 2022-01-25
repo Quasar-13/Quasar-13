@@ -67,7 +67,6 @@ GLOBAL_LIST_INIT(security_positions, list(
 	"Warden",
 	"Detective",
 	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
-	"Security Assistant",
 	"Security Officer"))
 
 
@@ -172,6 +171,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),
+	EXP_TYPE_RESEARCH = list("jobs" = research_positions, "color" = "#ffddff"),
 	EXP_TYPE_NTMARINE = list("jobs" = ntmarines_positions, "color" = "##134975"),
 ))
 

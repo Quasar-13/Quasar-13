@@ -49,11 +49,16 @@
 
 //Blueshield gun
 /obj/item/gun/energy/e_gun/stun/blueshield
-	name = "\improper XX-02 Tactical Engergy Rifle"
+	name = "\improper XX-02 Tactical Energy Rifle"
 	desc = "A modified XX-01 that has a disabler mode."
 	w_class = WEIGHT_CLASS_BULKY
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser)
 
+//NSO gun
+/obj/item/gun/energy/pulse/pistol/nso
+	name = "P-27 Lethal Pulse Pistol"
+	desc = "A pulse pistol used by the Nanotrasen Security Operative. Lacks a stun mode."
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse, /obj/item/ammo_casing/energy/laser)
 
 // Svet's Disabler
 /obj/item/gun/energy/disabler/svet_disabler
