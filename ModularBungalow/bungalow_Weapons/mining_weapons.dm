@@ -20,7 +20,7 @@
 /obj/item/gun/energy/e_gun/miner/revolver
 	name = "\improper E-326 Mining Revolve"
 	desc = "A refined, powerful hitscan pistol."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining-revolver"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire, /obj/item/ammo_casing/energy/kinetic)
 
@@ -58,7 +58,7 @@
 /obj/item/gun/energy/e_gun/miner/rifle
 	name = "\improper E-304 Mining Assault Rifle"
 	desc = "Nanotrasen’s standard issue mining rifle."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining-rifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_BULKY
@@ -73,7 +73,7 @@
 /obj/item/gun/energy/e_gun/miner/heavyrifle
 	name = "\improper E-307 Mining Heavy Rifle"
 	desc = "Nanotrasen’s standard issue mining rifle that fires heavy bolts."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining-heavyrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_BULKY
@@ -88,7 +88,7 @@
 /obj/item/gun/energy/e_gun/miner/superheavyrifle
 	name = "\improper E-308 Mining Superheavy Rifle"
 	desc = "Nanotrasen’s standard issue mining rifle that fires heavy bolts."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining-superheavy"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_BULKY
@@ -103,7 +103,7 @@
 /obj/item/gun/energy/e_gun/miner/bolter
 	name = "\improper E-325 Mining Bolt Pistol"
 	desc = "Nanotrasen’s standard issue mining bolter. Fires mini bullets at insane speeds, but has a low capacity"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining-bolter"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/rapid, /obj/item/ammo_casing/energy/kinetic)
 

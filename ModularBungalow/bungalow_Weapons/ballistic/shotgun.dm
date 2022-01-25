@@ -11,7 +11,7 @@
 	desc = "A triple-barrel shotgun. This one is customized with a purple vernish paint, attached to a brass frame and trimed with silver."
 	icon = 'ModularBungalow/zbungalowicons/weapons/shotguns.dmi'
 	icon_state = "svet_shotgun"
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/back/shotguns.dmi'
+	worn_icon = 'ModularBungalow/zbungalowicons/weapons/weapons_worn.dmi'
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_righthand.dmi'
 	inhand_icon_state = null
