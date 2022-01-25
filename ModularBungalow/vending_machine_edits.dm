@@ -20,7 +20,6 @@
 	)
 	. = ..()
 
-
 //ENGINER WARDROBE VENDING MACHINE
 /obj/machinery/vending/wardrobe/engi_wardrobe/Initialize()
 	products += list(

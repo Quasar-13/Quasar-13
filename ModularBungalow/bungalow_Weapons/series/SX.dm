@@ -53,7 +53,6 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/disabler)
 	weapon_weight = WEAPON_HEAVY
 
-
 //SMG
 /obj/item/gun/energy/disabler/advanced/pdw
 	name = "SX-5 Disabler PDW"

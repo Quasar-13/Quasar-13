@@ -52,7 +52,6 @@
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "booka"
 
-
 // FIGUERES //
 
 /obj/item/toy/figure/secretary

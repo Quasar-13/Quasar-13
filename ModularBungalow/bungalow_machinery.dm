@@ -6,7 +6,6 @@
 	view_range = 1
 	projectile_type = /obj/projectile/beam/weak
 
-
 /obj/machinery/manned_turret/scatter
 	name = "weak laser auto turret"
 	desc = "While the trigger is held down, this gun will redistribute recoil to allow its user to easily shift targets."
@@ -33,6 +32,7 @@
 					/obj/item/storage/pill_bottle/synaptazine = 2,
 					/obj/item/storage/pill_bottle/haloperidol = 2,
 					/obj/item/storage/pill_bottle/morphine/small = 2)
+
 	default_price = 40
 	extra_price = 680
 	payment_department = ACCOUNT_MED

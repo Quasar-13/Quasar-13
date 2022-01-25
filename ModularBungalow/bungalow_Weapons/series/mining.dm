@@ -1,7 +1,3 @@
-/////////////////////////////////////////
-//////////////////MINING/////////////////
-/////////////////////////////////////////
-
 //Miner's Laser pistol
 /obj/item/gun/energy/e_gun/miner
 	name = "\improper E-324 Mining Pistol"
@@ -14,7 +10,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
 	selfcharge = 1
-
 
 //Miner's Laser Revolver
 /obj/item/gun/energy/e_gun/miner/revolver
@@ -38,7 +33,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	cell_type = /obj/item/stock_parts/cell
 
-
 //Miner's AutoShotgun
 /obj/item/gun/energy/e_gun/miner/autoshotty
 	name = "\improper E-346 Mining Autoshotgun"
@@ -52,7 +46,6 @@
 /obj/item/gun/energy/e_gun/miner/autoshotty/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.32 SECONDS)
-
 
 //"Miner" Laser Rifle
 /obj/item/gun/energy/e_gun/miner/rifle
@@ -68,7 +61,6 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 
-
 //"Miner" Heavy Rifle
 /obj/item/gun/energy/e_gun/miner/heavyrifle
 	name = "\improper E-307 Mining Heavy Rifle"
@@ -83,7 +75,6 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.30 SECONDS)
 
-
 //Miner Superheavy Rifle
 /obj/item/gun/energy/e_gun/miner/superheavyrifle
 	name = "\improper E-308 Mining Superheavy Rifle"
@@ -97,7 +88,6 @@
 /obj/item/gun/energy/e_gun/miner/superheavyrifle/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.36 SECONDS)
-
 
 //Mining Bolter
 /obj/item/gun/energy/e_gun/miner/bolter

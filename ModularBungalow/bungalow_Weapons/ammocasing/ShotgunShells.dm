@@ -9,7 +9,6 @@
 	custom_materials = list(/datum/material/iron=4000)
 	caliber = "breacher"
 
-
 /obj/projectile/bullet/shotgun_breaching
 	name = "12g breaching round"
 	desc = "A breaching round designed to destroy airlocks and windows with only a few shots, but is ineffective against other targets."
@@ -21,7 +20,6 @@
 		damage = 500 //one shot to break a window or 3 shots to breach an airlock door
 	..()
 
-
 /obj/item/storage/box/breachingshells
 	name = "box of breaching shotgun shells"
 	desc = "A box full of breaching shells. designed for tactical breaching shotguns"
@@ -32,5 +30,3 @@
 /obj/item/storage/box/breachingshells/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/breacher(src)
-
-

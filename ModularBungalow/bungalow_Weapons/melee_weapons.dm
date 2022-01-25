@@ -19,7 +19,6 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
 
-
 //BATONS//
 /obj/item/melee/classic_baton/telescopic/svet_baton
 	name = "Brass Stinger"
@@ -33,13 +32,11 @@
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NONE
 	force = 5
-
 	cooldown = 25
 	stamina_damage = 85
 	affect_silicon = TRUE
 	on_sound = 'sound/weapons/contractorbatonextend.ogg'
 	on_stun_sound = 'sound/effects/contractorbatonhit.ogg'
-
 	on_icon_state = "svetbaton_1"
 	off_icon_state = "svetbaton_0"
 	on_inhand_icon_state = "svetbaton"

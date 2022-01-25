@@ -8,7 +8,6 @@
 	pin = /obj/item/firing_pin
 	actions_types = list()
 
-
 /obj/item/gun/ballistic/automatic/m90/unrestricted/auto/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)

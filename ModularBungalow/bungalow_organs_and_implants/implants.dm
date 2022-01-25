@@ -51,7 +51,6 @@
 	armour_penetration = 35
 	sharpness = SHARP_EDGED
 
-
 /obj/item/organ/cyberimp/arm/syndie_mantis
 	name = "G.O.R.L.E.X. mantis blade implants"
 	desc = "Modernized mantis blades coined by Tiger operatives after the raid on H.E.P.H.A.E.S.T.U.S.Industires core factory by the Gorlex Marauders and designed from H.E.P.H.A.E.S.T.U.S.stolen blueprints. Energy actuators makes the blade a much deadlier weapon."

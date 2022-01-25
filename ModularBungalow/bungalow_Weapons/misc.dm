@@ -1,5 +1,4 @@
 //bandolier//
-
 /obj/item/storage/belt/bandolier/marine
 	name = "soldier's bandolier"
 	desc = "A bandolier for holding rifle and shotgun ammunition."

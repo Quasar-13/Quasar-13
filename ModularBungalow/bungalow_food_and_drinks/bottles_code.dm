@@ -13,7 +13,6 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/pisco = 100)
 
 //SODA CANS
-
 /obj/item/reagent_containers/food/drinks/soda_cans/tula
 	name = "Tula"
 	desc = "What does the name matters?"
