@@ -66,7 +66,7 @@
 	desc = "A ribbon denoting the rank of ensign, O-1. A very common rank in the NT Navy denoting the lowest commissioned officer."
 	icon_state = "nt_ens"
 
-/obj/item/clothing/accessory/medal/rank/nt/2lt
+/obj/item/clothing/accessory/medal/rank/nt/ltj
 	name = "2LT rank ribbon"
 	desc = "A ribbon denoting the rank of second lieutenant, O-2. A common rank in the NT Navy denoting a junior commissioned officer."
 	icon_state = "nt_2lt"
