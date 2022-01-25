@@ -58,7 +58,6 @@
 /obj/item/clothing/accessory/medal/rank/nt
 	name = "NT Debug ribbon"
 	desc = "If you see this, contact the Coders!."
-	worn_icon = 'ModularBungalow/clothing/worn/accessoryw.dmi'
 	icon_state = "nt_null"
 
 //Commissioned Officers
