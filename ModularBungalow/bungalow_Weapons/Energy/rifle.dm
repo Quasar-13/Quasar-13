@@ -5,25 +5,24 @@
 	w_class = WEIGHT_CLASS_BULKY
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan, /obj/item/ammo_casing/energy/laser)
 
-//Autorifle
-/obj/item/gun/energy/disabler/advanced/rifle
-	name = "SX-0 Disabler Autorifle"
-	desc = "A fully automatic disabler rifle for security use."
-	icon_state = "autorifle"
-	weapon_weight = WEAPON_HEAVY
-
 /obj/item/gun/energy/disabler/advanced/rifle/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.20 SECONDS)
 
-//Beam Rifle
-/obj/item/gun/energy/disabler/advanced/beam
-	name = "SX-1 Disabler Beam Rifle"
-	desc = "A fully automatic disabler beam rifle for security use."
-	icon_state = "beamrifle"
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan)
-	weapon_weight = WEAPON_HEAVY
-
 /obj/item/gun/energy/disabler/advanced/beam/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
+
+//old laser guns
+/obj/item/gun/energy/laser/fifth
+	name = "\improper L-504 Laser Gun"
+	desc = "Nanotrasen’s 5th series rifle."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
+	icon_state = "oldgun"
+
+/obj/item/gun/energy/laser/fifth/cybersun
+	name = "\improper Cybersun 'Naga' Laser Gun"
+	hitsound = 'sound/weapons/blade1.ogg'
+	desc = "Nanotrasen’s 5th series rifle."
+	icon_state = "naga"
+	force = 20

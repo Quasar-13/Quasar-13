@@ -3,7 +3,7 @@
 	name = "Mark 23 SOCOM"
 	desc = "A pistol used by special forces across the galaxy."
 	icon_state = "mk23"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/glock
 	can_suppress = FALSE
 
@@ -11,14 +11,14 @@
 	name = "SIG Sauer P226"
 	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."
 	icon_state = "sig"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/sig
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/ppk
 	name = "Type 64"
 	desc = "The classic Chinese handgun. Chambered in .38."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "ppk"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
@@ -26,7 +26,7 @@
 /obj/item/gun/ballistic/automatic/pistol/glock
 	name = "Glock 17"
 	desc = "The well known austrian pistol. Commonly used by law enforcement."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "glock"
 	mag_type = /obj/item/ammo_box/magazine/glock
 	can_suppress = FALSE
