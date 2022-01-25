@@ -3,7 +3,7 @@
 /obj/item/ammo_casing/shotgun/breacher
 	name = "breaching slug"
 	desc = "A 12 gauge anti-material slug. Great for breaching airlocks and windows with minimal shots. Only fits in tactical breaching shotguns."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/shotgunshell.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/shotgunshell.dmi'
 	icon_state = "breacher"
 	projectile_type = /obj/projectile/bullet/shotgun_breaching
 	custom_materials = list(/datum/material/iron=4000)
@@ -25,7 +25,7 @@
 /obj/item/storage/box/breachingshells
 	name = "box of breaching shotgun shells"
 	desc = "A box full of breaching shells. designed for tactical breaching shotguns"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/shotgunshell.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/shotgunshell.dmi'
 	icon_state = "breacher_box"
 	illustration = null
 

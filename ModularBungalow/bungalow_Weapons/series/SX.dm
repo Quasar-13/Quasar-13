@@ -1,7 +1,7 @@
 //The SX- Series Guns
 /obj/item/gun/energy/disabler/advanced
 	name = "SX Series gun"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
 	desc = "If you see this: Call a coder!."
 	icon_state = "disabler"
 	inhand_icon_state = "arg"
