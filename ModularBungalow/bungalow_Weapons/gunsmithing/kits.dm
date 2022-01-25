@@ -97,4 +97,3 @@
 	STR.max_items = 1
 	STR.set_holdable(list(/obj/item/gun))
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-

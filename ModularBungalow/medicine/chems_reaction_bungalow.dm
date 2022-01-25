@@ -19,7 +19,6 @@
 	results = list(/datum/reagent/toxin/bungotoxin = 2)
 	required_reagents = list(/datum/reagent/consumable/bungojuice = 1, /datum/reagent/toxin = 1)
 
-
 //MUTATION CHEMS
 /datum/chemical_reaction/mutationtoxin_moth
 	results = list(/datum/reagent/mutationtoxin/moth = 2)

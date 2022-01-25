@@ -168,4 +168,3 @@
 	time = 600
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
-

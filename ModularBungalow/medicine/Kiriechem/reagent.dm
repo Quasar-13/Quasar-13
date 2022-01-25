@@ -76,8 +76,6 @@
 	M.adjustCloneLoss(-1*REM)
 	..()
 
-
-
 /datum/reagent/medicine/bicarbital //bicaridine but new
 	name = "Bicarbital"
 	description = "A bruise reliever that deals minor genetics damage."
@@ -90,7 +88,6 @@
 	M.adjustCloneLoss(0.5*REM)
 	..()
 	return TRUE
-
 
 /datum/reagent/medicine/keluri //brings it back kinda
 	name = "Keluri"
@@ -105,7 +102,6 @@
 	..()
 	return TRUE
 
-
 /datum/reagent/medicine/venadone //brings it back kinda
 	name = "Venadone"
 	description = "A medicine to heal genetic damage but deals very minor toxin damage."
@@ -119,7 +115,6 @@
 	..()
 	return TRUE
 
-
 /datum/reagent/medicine/giadone //cellular damage
 	name = "Giadone"
 	description = "Heals massively genetic damage by forcefully fusing together cells with force."
@@ -132,7 +127,6 @@
 	M.adjustBruteLoss(3*REM)
 	..()
 	return TRUE
-
 
 /datum/reagent/medicine/omnidrite
 	name = "Omnidrite"
@@ -181,7 +175,6 @@
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, 4*REM)
 	..()
 
-
 //Kiriechem Explosives
 /datum/reagent/kl6
 	name = "KL-6"
@@ -207,4 +200,3 @@
 	M.adjustOrganLoss(ORGAN_SLOT_EARS, 0.3*REM)
 	M.adjustOrganLoss(ORGAN_SLOT_EYES, 0.3*REM)
 	M.adjustCloneLoss(4*REM)
-

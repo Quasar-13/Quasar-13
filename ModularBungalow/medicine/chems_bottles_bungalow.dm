@@ -1,5 +1,4 @@
 //Chems
-
 /obj/item/reagent_containers/glass/bottle/libital
 	name = "libital bottle"
 	desc = "A small bottle. Contains libital - used to heal brute damage."
@@ -36,7 +35,6 @@
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/morphine/small(src)
 
-
 /obj/item/storage/pill_bottle/neurine/small
 	name = "bottle of neurine pills"
 	desc = "Used to treat brain traumas"
@@ -44,7 +42,6 @@
 /obj/item/storage/pill_bottle/neurine/small/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/neurine/small(src)
-
 
 /obj/item/storage/pill_bottle/synaptazine
 	name = "bottle of synaptazine pills"

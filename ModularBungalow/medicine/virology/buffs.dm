@@ -30,7 +30,6 @@ Let this be a warning to anyone that wants to try this.
 		M.physiology.armor.melee -= 10
 		*/
 
-
 /datum/symptom/heart_restoration
 	name = "Heart Restoration"
 	desc = "The virus stimulates the production and replacement of cardiac tissues, causing the host to regenerate the heart when damaged."
@@ -54,7 +53,3 @@ Let this be a warning to anyone that wants to try this.
 				heart.applyOrganDamage(-4, -4)
 			if(!heart) // only dealing with heart stuff from here on out
 				return
-
-
-
-

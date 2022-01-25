@@ -49,8 +49,6 @@
 		return TRUE
 	return FALSE
 
-
-
 /datum/symptom/heal/food
 	name = "Photosynthesis"
 	desc = "The virus is able to convert light into food"
@@ -87,9 +85,6 @@
 /datum/symptom/heal/light/passive_message_condition(mob/living/M)
 	return TRUE
 
-
-
-
 /datum/symptom/heal/booze
 	name = "Craft Beer Affinity"
 	desc = "This virus takes space beer, and uses it to mend your wounds."
@@ -104,7 +99,6 @@
 		"Resistance 5" = "Alcohol is consumed at a much slower rate.",
 		"Stage Speed 7" = "Increases healing speed.",
 	)
-
 /datum/symptom/heal/booze/Start(datum/disease/advance/A)
 	if(!..())
 		return
@@ -145,9 +139,6 @@
 		return TRUE
 	return FALSE
 
-
-
-
 /datum/symptom/heal/watercoag
 	name = "Automatic Saline Production"
 	desc = "The virus automatically produces saline glucose out of water."
@@ -184,9 +175,3 @@
 	var/heal_amt = 2 * actual_power
 	M.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 0.5 * heal_amt)
 	return 1
-
-
-
-
-
-

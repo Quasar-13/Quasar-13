@@ -12,8 +12,6 @@ FSS4: Bio-Sphere
 
 DATU: Datums for map templates
 */
-
-
 /datum/map_template/ruin/space/bungalow/interdyne
 	name = "Old Interdyne Station"
 	id = "inderdyne" // For blacklisting purposes, all ruins need an id

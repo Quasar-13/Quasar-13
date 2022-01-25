@@ -18,7 +18,7 @@
 	reqs = list(
 		/datum/reagent/consumable/grenadine = 20,
 		/obj/item/food/icecream = 2,
-		/datum/reagent/consumable/ethanol/pisco = 60,
+		/datum/reagent/consumable/ethanol/pisco = 60
 	)
 	category = CAT_DRINK
 
@@ -29,7 +29,7 @@
 		/obj/item/food/bun = 1,
 		/obj/item/food/patty/plain = 1,
 		/obj/item/organ/ears/cat = 1,
-		/obj/item/organ/tail/cat = 1,
+		/obj/item/organ/tail/cat = 1
 	)
 	result = /obj/item/food/burger/catburger
 	subcategory = CAT_BURGER
@@ -39,7 +39,7 @@
 	name = "Sausage bread"
 	reqs = list(
 		/obj/item/food/bread/plain = 1,
-		/obj/item/food/sausage = 2,
+		/obj/item/food/sausage = 2
 	)
 	result = /obj/item/food/bread/sausage
 	subcategory = CAT_BREAD
@@ -49,7 +49,7 @@
 	name = "Egg with sausage"
 	reqs = list(
 		/obj/item/food/sausage = 1,
-		/obj/item/food/egg = 1,
+		/obj/item/food/egg = 1
 	)
 	result = /obj/item/food/eggssausage
 	subcategory = CAT_EGG

@@ -80,13 +80,11 @@
 /obj/item/storage/box/captain/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
 
-
 //Captain blade beacon
 /obj/item/choice_beacon/bungalow/captain/sabre
 	name = "captain's blade beacon"
 	desc = "A beacon the captain uses to select his weapon of choice."
 	typesof_options = /obj/item/storage/box/sabre
-
 
 /obj/item/storage/box/sabre
 	name = "Sabre, Standard Issues"

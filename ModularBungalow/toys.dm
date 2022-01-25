@@ -1,5 +1,4 @@
 // PLUSHIES //
-
 /obj/item/toy/plush/moth/hos
 	name = "Pyx plushie"
 	desc = "A plushie depicting Pyx, the Syndiemoth!"

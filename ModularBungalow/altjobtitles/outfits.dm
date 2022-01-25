@@ -105,7 +105,6 @@
 	uniform = /obj/item/clothing/under/misc/parade/cdr
 	suit = /obj/item/clothing/suit/armor/captain/cdr_jacket
 
-
 /datum/outfit/job/captain/commandingofficer
 	name = "Captain (Commanding Officer)"
 	head = /obj/item/clothing/head/beret/captain
@@ -136,7 +135,3 @@
 	var/obj/item/card/id/W = H.wear_id
 	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
 	..()
-
-
-
-

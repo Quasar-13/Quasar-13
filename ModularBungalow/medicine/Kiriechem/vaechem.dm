@@ -1,5 +1,4 @@
 //Vaechem
-
 /datum/reagent/medicine/ventrite
 	name = "Ventrite"
 	description = "A once forgotten medicine that restores the stomach back to working condition, known to interfere with respiration as long as it is in the system."
@@ -55,4 +54,3 @@
 	M.adjustCloneLoss(0.5*REM)
 	..()
 	. = 1
-

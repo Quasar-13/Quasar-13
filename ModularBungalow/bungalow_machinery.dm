@@ -32,7 +32,6 @@
 					/obj/item/storage/pill_bottle/synaptazine = 2,
 					/obj/item/storage/pill_bottle/haloperidol = 2,
 					/obj/item/storage/pill_bottle/morphine/small = 2)
-
 	default_price = 40
 	extra_price = 680
 	payment_department = ACCOUNT_MED

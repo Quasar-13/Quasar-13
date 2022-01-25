@@ -24,7 +24,7 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "marine"
 
-/area/marines
+/area/marines_gateway
 	name = "Marine Gateway"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "marine_gateway"
