@@ -12,13 +12,9 @@
 	righthand_file = 'ModularBungalow/zbungalowicons/items_righthand.dmi'
 	inhand_icon_state = "gcaptainpack"
 
-
-
-
 //////////////////////////////
 ////////// BRIEFCASE//////////
 /////////////////////////////
-
 /obj/item/storage/briefcase/secretary
 	folder_path = /obj/item/folder/blue
 	icon = 'ModularBungalow/clothing/icons/storage.dmi'
@@ -27,13 +23,10 @@
 	righthand_file = 'ModularBungalow/zbungalowicons/items_righthand.dmi'
 
 /obj/item/storage/briefcase/secretary/PopulateContents()
-
 	new /obj/item/reagent_containers/food/drinks/bottle/whiskey(src)
 	new /obj/item/paper_bin(src)
-	new /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass (src)
+	new /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass(src)
 	..()
-
-
 
 //////////////////////////////
 //////////// BAG/////////////
@@ -61,7 +54,7 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/circuitboard,
 		/obj/item/electronics,
-		/obj/item/wallframe,
+		/obj/item/wallframe
 	))
 
 
@@ -91,7 +84,6 @@
 	new /obj/item/reagent_containers/glass/bottle/synaptizine(src)
 	new /obj/item/reagent_containers/glass/bottle/synaptizine(src)
 	new /obj/item/reagent_containers/glass/bottle(src)
-
 	for(var/i in 1 to 30)
 		new /obj/item/reagent_containers/syringe(src)
 
@@ -104,7 +96,6 @@
 
 /obj/item/storage/backpack/duffelbag/deathsquad/PopulateContents()
 	new /obj/item/gun/energy/pulse/carbine(src)
-
 
 /**
  * # MINIGUN KIT BLACKSITE
@@ -129,7 +120,6 @@
 	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-
 /**
  * # LASER SNIPER KIT BLACK SITE ERT
  */
@@ -140,7 +130,6 @@
 /obj/item/storage/backpack/duffelbag/ert/laser/PopulateContents()
 	new /obj/item/gun/energy/sniper/pin(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
-
 
 /**
  * # X-RAY KIT BLACKSITE ERT
@@ -153,7 +142,6 @@
 	new /obj/item/gun/energy/xray(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-
 /**
  * # ACCELERATION RIFLE KIT BLACKSITE ERT
  */
@@ -164,7 +152,6 @@
 /obj/item/storage/backpack/duffelbag/ert/pkr/PopulateContents()
 	new /obj/item/gun/energy/beam_rifle(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
-
 
 /**
  * # DEFAULT MARINE KIT BLACKSITE MARINE
@@ -182,7 +169,6 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
-
 
 /**
  * # MEDIC KIT BLACKSITE MARINE
@@ -205,7 +191,6 @@
 	new /obj/item/extinguisher/mini(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-
 /**
  * # ENGINEERING KIT BLACKSITE MARINE
  */
@@ -225,7 +210,6 @@
 	new /obj/item/choice_beacon/bungalow/turret(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
-
 
 /**
  * # SHOTGUN KIT BLACKSITE MARINE
@@ -252,7 +236,6 @@
 	new /obj/item/storage/belt/bandolier/marine(src)
 	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
-
 /**
  * # SMG KIT BLACKSITE MARINE
  */
@@ -271,7 +254,6 @@
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-
 /**
  * # MOSIN KIT BLACKSITE MARINE
  */
@@ -289,7 +271,6 @@
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
-
 /**
  * # SAMURAI KIT BLACKSITE MARINE
  */
@@ -301,6 +282,6 @@
 	new /obj/item/clothing/suit/armor/vest/ntmarine/samurai(src)
 	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
 	new /obj/item/clothing/glasses/eyepatch(src)
-	new /obj/item/clothing/neck/cloak/samurai (src)
+	new /obj/item/clothing/neck/cloak/samurai(src)
 	new /obj/item/vibro_weapon(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
