@@ -14,4 +14,3 @@
 	icon_state = "machinegun"
 	view_range = 1
 	projectile_type = /obj/projectile/beam/scatter
-

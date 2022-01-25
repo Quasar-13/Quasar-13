@@ -129,3 +129,51 @@
 
 /obj/item/storage/box/sabre/katana/PopulateContents()
 	new /obj/item/katana/captain(src)
+
+
+
+//BLACKSITE//
+/obj/item/choice_beacon/bungalow/deathsquad
+	name = "NT Death Commando beacon"
+	desc = "A beacon the Death Commando uses to choose their weapons."
+	typesof_options = /obj/item/storage/backpack/duffelbag/deathsquad
+	selection_message = "<span class='hear'>Get out there!</span>"
+
+//BLACKSITE ERT//
+/obj/item/choice_beacon/bungalow/deathsquad/ert
+	name = "ERT Officer beacon"
+	desc = "A beacon the ERT officers use to choose their weapons."
+	typesof_options = /obj/item/storage/backpack/duffelbag/ert
+
+/**
+ * # Marine ERT beacon
+ *
+ * This is a subtype of the ERT beacon, to avoid needless copypaste.
+ */
+ //BLACKSITE MARINE
+/obj/item/choice_beacon/bungalow/deathsquad/marine
+	name = "NT marine beacon"
+	desc = "A beacon the marines use to choose their weapons."
+	typesof_options = /obj/item/storage/backpack/duffelbag/marine
+
+/**
+ * # Turret ERT beacon BLACKSITE
+ *
+ * This is a subtype of the ERT beacon, to avoid needless copypaste.
+ */
+/obj/item/choice_beacon/bungalow/turret
+	name = "turret beacon"
+	desc = "A beacon to be used to call down a turret for engineering use."
+	typesof_options = /obj/machinery/manned_turret/scatter
+	selection_message = "<span class='hear'>Stand by for titanfall.</span>"
+
+
+/**
+ * # HEAVY Turret ERT beacon BLACKSITE
+ *
+ * Kirie Note - I hate using these beacons, especially without shit. but a capsule is arguably more shit
+ */
+/obj/item/choice_beacon/bungalow/turret/heavy
+	name = "heavy turret beacon"
+	desc = "A beacon to be used to call down a turret for heavy use."
+	typesof_options = /obj/machinery/manned_turret/laser

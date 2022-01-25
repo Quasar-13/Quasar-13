@@ -17,4 +17,3 @@
 /obj/structure/displaycase/blueshield
 	start_showpiece_type = /obj/item/gun/energy/e_gun/stun/blueshield
 	req_access = list(ACCESS_HOS) //They need access to this
-
