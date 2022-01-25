@@ -35,9 +35,7 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/voidtech
 	slowdown = 0.25
 
-
-//Casio Captain Hardsuit
-
+//Casio Captain Hardsuit//
 /obj/item/clothing/head/helmet/space/hardsuit/swat/captain/casio
 	name = "\proper NT Captain's Hardsuit Helmet"
 	desc = "A hard, green armor shell used but NT captain. Space suitable, does not have the helmet however. Slightly unwieldy."
@@ -53,8 +51,6 @@
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "hardsuit-capspace"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain/casio
-
-
 
 //Just for fun, Doom marine suit
 /obj/item/clothing/suit/space/hardsuit/swat/captain/casio/doom
