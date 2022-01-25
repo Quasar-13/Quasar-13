@@ -276,7 +276,7 @@
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
 	head = /obj/item/clothing/head/beret/sec
-	l_hand = /obj/item/clothing/accessory/medal/rank/nt/pvst
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/pvst
 
 
 /datum/outfit/centcom/commander/radm
@@ -288,7 +288,7 @@
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
 	head = null
 	neck = /obj/item/clothing/neck/cloak/flag
-	l_hand = /obj/item/clothing/accessory/medal/rank/nt/radm
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/radm
 
 
 /datum/outfit/centcom/commander/vadm
@@ -299,7 +299,7 @@
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
 	head = /obj/item/clothing/head/beret/ce
-	l_hand = /obj/item/clothing/accessory/medal/rank/nt/vadm
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/vadm
 
 
 /datum/outfit/centcom/commander/admiral
@@ -312,7 +312,7 @@
 	head = /obj/item/clothing/head/beret/sec/navyhos/black
 	backpack_contents = list(/obj/item/clothing/suit/armor/captain/flag/admiral/fancy=1,\
 		/obj/item/clothing/suit/armor/captain/flag/admiral/combat=1)
-	l_hand = /obj/item/clothing/accessory/medal/rank/nt/adm
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/adm
 
 
 
@@ -438,7 +438,7 @@
 	suit_store = /obj/item/tank/internals/emergency_oxygen/double
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	l_hand = /obj/item/gun/energy/pulse/loyalpin
-	r_hand = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
 	id = /obj/item/card/id/ert/deathsquad
 	ears = /obj/item/radio/headset/headset_cent/alt
 
@@ -470,7 +470,7 @@
 	name = "Death Commando Officer"
 	head = /obj/item/clothing/head/helmet/space/beret
 	uniform = /obj/item/clothing/under/bni/officer
-	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cpt
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/cpt
 
 /datum/outfit/chrono_agent
 	name = "Timeline Eradication Agent"

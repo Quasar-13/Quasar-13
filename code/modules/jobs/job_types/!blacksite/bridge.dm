@@ -26,4 +26,5 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_cent/alt
 	back = /obj/item/storage/backpack/satchel/leather
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
 	id = /obj/item/card/id/centcom
