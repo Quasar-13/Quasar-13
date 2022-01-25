@@ -1,7 +1,7 @@
 /obj/item/gun/energy/laser/fifth
 	name = "\improper L-504 Laser Gun"
 	desc = "Nanotrasen’s 5th series rifle."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
 	icon_state = "oldgun"
 
 /obj/item/gun/energy/laser/fifth/cybersun

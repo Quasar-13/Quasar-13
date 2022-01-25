@@ -6,7 +6,7 @@
 /obj/item/gun/energy/e_gun/miner
 	name = "\improper E-324 Mining Pistol"
 	desc = "Nanotrasen’s standard issue mining beam pistol."
-	icon = 'ModularBungalow/bungalowWeapons/_icon/miningguns.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/miningguns.dmi'
 	icon_state = "mining"
 	inhand_icon_state = "gun"
 	pin = /obj/item/firing_pin/explorer

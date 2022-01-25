@@ -22,7 +22,7 @@
 	name = "\improper X-41 Disabler Beam Rifle"
 	desc = "A classic, the shotgun variant of the X-01 Multiphase, this rifle trades the ion and kill modes for a concentrated, but weak disabler beam and scattershot blasts."
 	cell_type = /obj/item/stock_parts/cell/hos_gun
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
 	icon_state = "hoprifle"
 	inhand_icon_state = "energydisable3"
 	shaded_charge = TRUE

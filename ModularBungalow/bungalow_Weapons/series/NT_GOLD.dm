@@ -7,7 +7,7 @@
 
 /obj/item/gun/energy/laser/captain/ntgold
 	name = "E-400 NT GOLD Laser Rifle"
-	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
 	icon_state = "caprifle"
 	inhand_icon_state = "gun"
 	w_class = WEIGHT_CLASS_BULKY
