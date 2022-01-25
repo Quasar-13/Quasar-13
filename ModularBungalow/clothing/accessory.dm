@@ -58,6 +58,7 @@
 /obj/item/clothing/accessory/medal/rank/nt
 	name = "NT Debug ribbon"
 	desc = "If you see this, contact the Coders!."
+	worn_icon = 'ModularBungalow/clothing/worn/accessoryw.dmi'
 	icon_state = "nt_null"
 
 //Commissioned Officers
@@ -86,8 +87,8 @@
 	desc = "A ribbon denoting the rank of commander, O-5. An uncommon rank in the NT Navy denoting a senior commissioned officer. Almost always found alongside a captain, this ribbon can rarely be found on the frontline on sensitive operations"
 	icon_state = "nt_cdr"
 
-/obj/item/clothing/accessory/medal/rank/nt/capt
-	name = "CAPT rank ribbon"
+/obj/item/clothing/accessory/medal/rank/nt/cpt
+	name = "CPT rank ribbon"
 	desc = "A ribbon denoting the rank of captain, O-6. An uncommon rank in the NT Navy denoting someone capable of running NT's largest stations and starships."
 	icon_state = "nt_cpt"
 
