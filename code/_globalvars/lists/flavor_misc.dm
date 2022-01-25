@@ -40,6 +40,10 @@ GLOBAL_LIST_EMPTY(moth_antennae_list)
 GLOBAL_LIST_EMPTY(moth_markings_list)
 GLOBAL_LIST_EMPTY(caps_list)
 GLOBAL_LIST_EMPTY(tails_list_monkey)
+//bee
+GLOBAL_LIST_EMPTY(bee_tails_list)
+GLOBAL_LIST_EMPTY(bee_wings_list)
+GLOBAL_LIST_EMPTY(bee_antennae_list)
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Red" = "ff4d4d",
@@ -126,7 +130,9 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sortList(list(
 	"Banned",
 	"Bliss",
 	"Blue",
+	"Cat",
 	"Clown",
+	"Code",
 	"Database",
 	"Dorf",
 	"Firewall",

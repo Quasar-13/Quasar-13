@@ -70,50 +70,6 @@
 
 
 
-/datum/reagent/mixer/paraide
-	name = "Paraide"
-
-/datum/chemical_reaction/paraide
-	results = list(/datum/reagent/mixer/paraide = 3)
-	required_reagents = list(/datum/reagent/lye = 1, /datum/reagent/drug/space_drugs = 1, /datum/reagent/saltpetre = 1)
-
-
-
-/datum/reagent/mixer/sparaide
-	name = "Stable Paraide"
-
-/datum/chemical_reaction/sparaide
-	results = list(/datum/reagent/mixer/sparaide = 2)
-	required_reagents = list(/datum/reagent/mixer/paraide = 1, /datum/reagent/stable_plasma = 1)
-
-
-
-/datum/reagent/mixer/hebitide
-	name = "Hebitide"
-
-/datum/chemical_reaction/hebitide
-	results = list(/datum/reagent/mixer/hebitide = 5)
-	required_reagents = list(/datum/reagent/toxin/formaldehyde = 1, /datum/reagent/diethylamine = 1, /datum/reagent/lye = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/acetone = 1)
-
-
-
-/datum/reagent/mixer/uhebitide
-	name = "Unstable Hebitide"
-
-/datum/chemical_reaction/uhebitide
-	results = list(/datum/reagent/mixer/uhebitide = 2)
-	required_reagents = list(/datum/reagent/mixer/hebitide = 1, /datum/reagent/impedrezene = 1)
-
-
-
-/datum/reagent/mixer/mhebitide
-	name = "Mutated Hebitide"
-
-/datum/chemical_reaction/mhebitide
-	results = list(/datum/reagent/mixer/mhebitide = 2)
-	required_reagents = list(/datum/reagent/mixer/hebitide = 1, /datum/reagent/blood = 1)
-
-
 
 /datum/reagent/mixer/dioxadide
 	name = "Dioxadide"
@@ -193,4 +149,80 @@
 /datum/chemical_reaction/caemide
 	results = list(/datum/reagent/mixer/caemide = 3)
 	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone_oxide = 1, /datum/reagent/cryptobiolin = 1)
+
+
+//Table 2 chems
+
+
+/datum/reagent/mixer/paraide
+	name = "Paraide"
+
+/datum/chemical_reaction/paraide
+	results = list(/datum/reagent/mixer/paraide = 3)
+	required_reagents = list(/datum/reagent/lye = 1, /datum/reagent/drug/space_drugs = 1, /datum/reagent/saltpetre = 1)
+
+
+
+/datum/reagent/mixer/sparaide
+	name = "Stable Paraide"
+
+/datum/chemical_reaction/sparaide
+	results = list(/datum/reagent/mixer/sparaide = 2)
+	required_reagents = list(/datum/reagent/mixer/paraide = 1, /datum/reagent/stable_plasma = 1)
+
+
+
+/datum/reagent/mixer/dparaide
+	name = "Distilled Paraide"
+
+/datum/chemical_reaction/dparaide
+	results = list(/datum/reagent/mixer/dparaide = 2)
+	required_reagents = list(/datum/reagent/mixer/paraide = 1, /datum/reagent/drug/space_drugs = 1)
+
+
+
+/datum/reagent/mixer/rparaide
+	name = "Reactive Paraide"
+
+/datum/chemical_reaction/rparaide
+	results = list(/datum/reagent/mixer/rparaide = 2)
+	required_reagents = list(/datum/reagent/mixer/paraide = 1, /datum/reagent/sodium = 1)
+
+
+
+/datum/reagent/mixer/srparaide
+	name = "Semi-Reactive Paraide"
+
+/datum/chemical_reaction/srparaide
+	results = list(/datum/reagent/mixer/srparaide = 2)
+	required_reagents = list(/datum/reagent/mixer/sparaide = 1, /datum/reagent/sodium = 1)
+
+
+
+
+/datum/reagent/mixer/hebitide
+	name = "Hebitide"
+
+/datum/chemical_reaction/hebitide
+	results = list(/datum/reagent/mixer/hebitide = 5)
+	required_reagents = list(/datum/reagent/toxin/formaldehyde = 1, /datum/reagent/diethylamine = 1, /datum/reagent/lye = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/acetone = 1)
+
+
+
+/datum/reagent/mixer/uhebitide
+	name = "Unstable Hebitide"
+
+/datum/chemical_reaction/uhebitide
+	results = list(/datum/reagent/mixer/uhebitide = 2)
+	required_reagents = list(/datum/reagent/mixer/hebitide = 1, /datum/reagent/impedrezene = 1)
+
+
+
+/datum/reagent/mixer/mhebitide
+	name = "Mutated Hebitide"
+
+/datum/chemical_reaction/mhebitide
+	results = list(/datum/reagent/mixer/mhebitide = 2)
+	required_reagents = list(/datum/reagent/mixer/hebitide = 1, /datum/reagent/blood = 1)
+
 

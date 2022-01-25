@@ -25,14 +25,8 @@
 
 	var/server_caption = CONFIG_GET(string/servercaption)
 	var/map_name = SSmapping.config?.map_name
-	s+= "<b>[server_caption]</b>" // SSETH FANS WELCOME! // "<b>The Problems of the Future, <i>Today!</i></b>"  // "<b>[station_name()]</b>";	// TEGUSTATION: We don't display the name of the Station anymore
+	s+= "<b>[server_caption]</b>"
 	s += " ("
-	//s += "<a href=\"[CONFIG_GET(string/forumurl)]\">"//Change this to wherever you want the hub to link to.
-	//	s += "[game_version]"
-	//s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
-	//s += "</a>"
-	//s += " | "
-	// Tegu Description
 	s += "<br><b>Best cuts this side of the andromeda!</b>"
 	s += "<br>Roleplay: \[<b>Medium</b>\]"
 	s += "<br>Map: [map_name]"
@@ -53,12 +47,6 @@
 
 	if (!host && hostedby)
 		features += "hosted by <b>[hostedby]</b>"
-
-	// FUPLP REMOVE: We don't list features!
-	//if (features)
-	//	s += ": [jointext(features, ", ")]"
-
-	//s += "<br>Light RP, New Antagonists"
 
 	status = s
 	return s

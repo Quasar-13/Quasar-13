@@ -1,5 +1,5 @@
 /obj/item/gun/energy/pulse
-	name = "pulse rifle"
+	name = "P-04 Pulse Rifle"
 	desc = "A heavy-duty, multifaceted energy rifle with three modes. Preferred by front-line combat personnel."
 	icon_state = "pulse"
 	inhand_icon_state = null
@@ -32,7 +32,7 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/energy/pulse/carbine
-	name = "pulse carbine"
+	name = "P-05 Pulse Rifle"
 	desc = "A compact variant of the pulse rifle with less firepower but easier storage."
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
@@ -48,7 +48,7 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/energy/pulse/destroyer
-	name = "pulse destroyer"
+	name = "P-06 Pulse Destroyer"
 	desc = "A heavy-duty energy rifle built for pure destruction."
 	worn_icon_state = "pulse"
 	cell_type = "/obj/item/stock_parts/cell/infinite"
@@ -58,7 +58,7 @@
 	to_chat(user, "<span class='danger'>[src.name] has three settings, and they are all DESTROY.</span>")
 
 /obj/item/gun/energy/pulse/pistol
-	name = "pulse pistol"
+	name = "P-24 Pulse Pistol"
 	desc = "A pulse rifle in an easily concealed handgun package with low capacity."
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
@@ -71,8 +71,7 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/energy/pulse/pistol/m1911
-	name = "\improper M1911-P"
+	name = "P-25 Pulse M1911"
 	desc = "A compact pulse core in a classic handgun frame for Nanotrasen officers. It's not the size of the gun, it's the size of the hole it puts through people."
 	icon_state = "m1911"
 	inhand_icon_state = "gun"
-	cell_type = "/obj/item/stock_parts/cell/infinite"

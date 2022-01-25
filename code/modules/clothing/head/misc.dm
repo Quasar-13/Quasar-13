@@ -71,7 +71,7 @@
 	icon_state = "syndicate-helm-black-red"
 	inhand_icon_state = "syndicate-helm-black-red"
 	desc = "A plastic replica of a Syndicate agent's space helmet. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
-	clothing_flags = SNUG_FIT
+	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
 /obj/item/clothing/head/cueball
@@ -88,7 +88,7 @@
 	desc = "A ball of white styrofoam. So festive."
 	icon_state = "snowman_h"
 	inhand_icon_state = "snowman_h"
-	clothing_flags = SNUG_FIT
+	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
@@ -183,7 +183,7 @@
 	desc = "Bkaw!"
 	icon_state = "chickenhead"
 	inhand_icon_state = "chickensuit"
-	clothing_flags = SNUG_FIT
+	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
 /obj/item/clothing/head/griffin
@@ -191,7 +191,7 @@
 	desc = "Why not 'eagle head'? Who knows."
 	icon_state = "griffinhat"
 	inhand_icon_state = "griffinhat"
-	clothing_flags = SNUG_FIT
+	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
 /obj/item/clothing/head/bearpelt
@@ -205,7 +205,7 @@
 	icon_state = "xenos"
 	inhand_icon_state = "xenos_helm"
 	desc = "A helmet made out of chitinous alien hide."
-	clothing_flags = SNUG_FIT
+	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 

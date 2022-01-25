@@ -13,8 +13,8 @@
 	icon_state = "seedling"
 	icon_living = "seedling"
 	icon_dead = "seedling_dead"
-	maxHealth = 100
-	health = 100
+	maxHealth = 400
+	health = 400
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	pixel_x = -16
@@ -97,7 +97,8 @@
 	var/target_angle = Get_Angle(owner, target)
 	var/matrix/final = matrix()
 	final.Turn(target_angle)
-	seedling_screen_object.transform = final
+	if(final != null)
+		seedling_screen_object.transform = final
 
 /atom/movable/screen/seedling
 	icon = 'icons/mob/jungle/arachnid.dmi'

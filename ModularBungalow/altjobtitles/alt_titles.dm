@@ -1,5 +1,7 @@
 /datum/job
+	///Possible alt titles players can choose.
 	var/list/alt_titles = list()
+	///Titles selectable after getting enough playtime on the job.
 	var/senior_title
 
 //Engineering
@@ -11,13 +13,13 @@
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
 	senior_title = "Fusion Technician"
 
-/datum/job/tegu/voidtech
+/datum/job/voidtech
 	alt_titles = list("Space Explorer", "Salvager")
 	senior_title = "Space Marine"
 
 //Service
 /datum/job/assistant
-	alt_titles = list("Civilian", "Visitor", "Businessman", "Entertainer")
+	alt_titles = list("Visitor", "Businessman", "Entertainer")
 	senior_title = list("Assistinator", "Assistant 2")
 
 /datum/job/cook
@@ -69,7 +71,7 @@
 	alt_titles = list("Geneologist", "Medical Geneticist")
 	senior_title = "Genetic Engineer"
 
-/datum/job/tegu/chemre
+/datum/job/chemre
 	alt_titles = list("Chemical Researcher", "Chemical Scientist")
 	senior_title = "Chemical Engineer"
 
@@ -92,16 +94,16 @@
 
 //Security
 /datum/job/warden
-	alt_titles = list("Brig Chief", "Sergant")
-	senior_title = "Sergeant Major"
+	alt_titles = list("Brig Chief", "Security Sergeant")
+	senior_title = list("Master-At-Arms", "Security Major")
 
 /datum/job/detective
 	alt_titles = list("Forensics Specialist", "Private Investigator")
-	senior_title = "Staff Sergeant"
+	senior_title = list("Intelligence Officer", "Chief Investigator")
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician")
-	senior_title = "Man-at-Arms"
+	alt_titles = list("Security Guard", "Hazardous Device Technician", "NT Military Police")
+	senior_title = list("Man-at-Arms", "Sergeant Officer")
 
 //Supply
 /datum/job/mining
@@ -122,8 +124,8 @@
 	senior_title = "Chief Military Police"
 
 /datum/job/cmo
-	alt_titles = list("Medical Director", "Head Surgeon")
-	senior_title = "Senior Medical Officer"
+	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
+	senior_title = list("Senior Medical Officer", "Medical Professor")
 
 /datum/job/rd
 	alt_titles = list("Research Supervisor", "Head of Research", "Chief Researcher")
@@ -133,7 +135,7 @@
 	alt_titles = list("Chief Atmospherics Technician", "Chief Electrical Technician")
 	senior_title = "Senior Project Manager"
 
-/datum/job/tegu/secretary
+/datum/job/secretary
 	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
 	senior_title = "Diplomat"
 
@@ -142,6 +144,11 @@
 	senior_title = "Customs Officer"
 
 /datum/job/captain
-	alt_titles = list("Commanding Officer")
+	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
+
+
+//Funny role
+/datum/job/staff_officer
+	alt_titles = list("Field Officer")
 

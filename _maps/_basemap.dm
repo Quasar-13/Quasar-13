@@ -25,16 +25,16 @@
 		#include "map_files\GalaxyStation\GalaxyStation.dmm" //marg
 		#include "map_files\GalaxyStation\Galaxystation_LVL2.dmm"
 		#include "map_files\RemoraStation\RemoraStation.dmm"
+		#include "map_files\Fermistation\Fermistation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\CasioStation\Casiostation.dmm"
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
 
 		//Admin only maps
-		#include "map_files\HelioStation\HelioStation.dmm"
-		#include "map_files\KiloStation\KiloStation.dmm"
-		#include "map_files\IceBoxStation\IceBoxStation.dmm"
-		#include "map_files\PhoboStation\PhoboStation.dmm"
+		#include "map_files\RemusFacility\RemusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
+		#include "map_files\NTBlacksite\NTBlacksite.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

@@ -92,6 +92,7 @@
 	new /obj/item/storage/photo_album/cmo(src)
 	/* START EDIT BUNGALOW */
 	new /obj/item/card/id/departmental_budget/med(src)
+	new /obj/item/clothing/head/beret/cmo
 	/* END EDIT BUNGALOW */
 
 /obj/structure/closet/secure_closet/spareparts

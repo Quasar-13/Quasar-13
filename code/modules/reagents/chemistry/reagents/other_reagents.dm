@@ -360,6 +360,7 @@
 	name = "Hell Water"
 	description = "YOUR FLESH! IT BURNS!"
 	taste_description = "burning"
+	accelerant_quality = 20
 
 /datum/reagent/hellwater/on_mob_life(mob/living/carbon/M)
 	M.set_fire_stacks(min(5, M.fire_stacks + 3))
@@ -1040,6 +1041,7 @@
 	glass_desc = "Unless you're an industrial tool, this is probably not safe for consumption."
 	penetrates_skin = NONE
 	addiction_types = list(/datum/addiction/alcohol = 4)
+	accelerant_quality = 10
 
 /datum/reagent/fuel/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume)//Splashing people with welding fuel to make them easy to ignite!
 	. = ..()

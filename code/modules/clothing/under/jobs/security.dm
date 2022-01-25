@@ -235,4 +235,4 @@
 	desc = "A police uniform often found in the lines at donut shops."
 	icon_state = "spacepolice_families"
 	inhand_icon_state = "spacepolice_families"
-	can_adjust = FALSE
+	can_adjust = TRUE

@@ -414,11 +414,28 @@
 
 	var/list/department_categories = list()
 
-	if(SSmaptype.maptype != "syndicate")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
+
+	if(SSmaptype.maptype == "ship")
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
+
+	if(SSmaptype.maptype == "planetary")
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
+
+	if(SSmaptype.maptype == "casio")
+		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "NT Marines", "Silicon")
 
 	if(SSmaptype.maptype == "syndicate")
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
+
+	if(SSmaptype.maptype == "solgov")
+		department_categories = list("Solgov")
+
+	if(SSmaptype.maptype == "blacksite")
+		department_categories = list("NT Marines")
+
+
 
 
 	for(var/category in department_categories)
@@ -427,7 +444,6 @@
 		var/cat_color = GLOB.position_categories[category]["color"]
 		var/list/dept_dat = list()
 
-//		if(SSmaptype.maptype != "syndicate")
 		dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 		dat += "<legend align='center' style='color: [cat_color]'>[category]</legend>"
 
@@ -446,7 +462,6 @@
 					dept_dat += "<a class='job[command_bold]' href='byond://?src=[REF(src)];SelectedJob=[job_datum.title]'>[job_datum.title] [altjobline] ([job_datum.current_positions])</a>"//bungalow edit - alt job titled
 
 		if(!dept_dat.len)
-//			if(SSmaptype.maptype != "syndicate")
 			dept_dat += "<span class='nopositions'>No positions open.</span>"
 
 		dat += jointext(dept_dat, "")

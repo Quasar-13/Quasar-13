@@ -34,7 +34,7 @@ SUBSYSTEM_DEF(traumas)
 		"birds"            = construct_phobia_regex("birds"),
 		"falling"          = construct_phobia_regex("falling"),
 		"anime"            = construct_phobia_regex("anime"),
-		"insects"			 = construct_phobia_regex("insects"),
+		"insects"			= construct_phobia_regex("insects"),
 	)
 
 	phobia_mobs = list("spiders"  = typecacheof(list(/mob/living/simple_animal/hostile/poison/giant_spider)),
@@ -192,7 +192,7 @@ SUBSYSTEM_DEF(traumas)
 		"the supernatural" = typecacheof(list(/datum/species/golem/runic)),
 		"aliens" = typecacheof(list(/datum/species/abductor, /datum/species/jelly, /datum/species/pod,/datum/species/shadow)),
 		"anime" = typecacheof(list(/datum/species/human/felinid)),
-		"insects" = typecacheof(list(/datum/species/fly, /datum/species/moth))
+		"insects" = typecacheof(list(/datum/species/fly, /datum/species/moth, /datum/species/beepeople))
 	)
 
 	return ..()

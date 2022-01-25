@@ -207,6 +207,13 @@
 	H.equipOutfit(outfit)
 
 
+/datum/antagonist/ert/marine
+	outfit = /datum/outfit/job/ntmarine
+
+/datum/antagonist/ert/marine/leader
+	outfit = /datum/outfit/job/ntsquadleader
+
+
 /datum/antagonist/ert/greet()
 	if(!ert_team)
 		return

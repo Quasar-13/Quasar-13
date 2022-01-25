@@ -2,8 +2,8 @@
 /obj/item/clothing/head/beret
 	name = "beret"
 	desc = "A beret, a mime's favorite headwear."
-	icon = 'ModularBungalow/zbungalowicons/clothing/head.dmi'
-	worn_icon = 'ModularBungalow/zbungalowicons/clothing/head_worn.dmi'
+	icon = 'ModularBungalow/clothing/icons/beret.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/beretw.dmi'
 	icon_state = "beret"
 	dog_fashion = /datum/dog_fashion/head/beret //i think ian wearing any beret is broken, to test later
 	dynamic_hair_suffix = ""
@@ -35,7 +35,7 @@
 
 /obj/item/clothing/head/beret/durathread
 	name = "durathread beret"
-	desc =  "A beret made from durathread, its resilient fibres provide some protection to the wearer."
+	desc = "A beret made from durathread, its resilient fibres provide some protection to the wearer."
 	icon_state = "beretdurathread"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 25, BOMB = 10, BIO = 0, RAD = 0, FIRE = 30, ACID = 5, WOUND = 4)
 
@@ -43,28 +43,28 @@
 
 /obj/item/clothing/head/beret/grey
 	name = "grey beret"
-	desc =  "A standard grey beret. Why an assistant would need a beret is unknown."
+	desc = "A standard grey beret. Why an assistant would need a beret is unknown."
 	icon_state = "beret_grey"
 
 /obj/item/clothing/head/beret/service
 	name = "service beret"
-	desc =  "A standard service beret. Held by those with the sanity to serve everyone else on the Nanotrasen stations."
+	desc = "A standard service beret. Held by those with the sanity to serve everyone else on the Nanotrasen stations."
 	icon_state = "beret_serv"
 
 /obj/item/clothing/head/beret/qm
 	name = "quartermaster beret"
-	desc =  "A cargo beret with a faded medal haphazardly stitched into it. Worn by a true cargonian, it commands respect from everyone."
+	desc = "A cargo beret with a faded medal haphazardly stitched into it. Worn by a true cargonian, it commands respect from everyone."
 	icon_state = "beret_qm"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5)
 
 /obj/item/clothing/head/beret/cargo
 	name = "cargo beret"
-	desc =  "A slightly faded mustard yellow beret. Usually held by the members of cargonia."
+	desc = "A slightly faded mustard yellow beret. Usually held by the members of cargonia."
 	icon_state = "beret_cargo"
 
 /obj/item/clothing/head/beret/mining
 	name = "mining beret"
-	desc =  "A grey beret with a pickaxe insignia sewn into it. Seems to be padded and fireproofed to offer the wearer some protection."
+	desc = "A grey beret with a pickaxe insignia sewn into it. Seems to be padded and fireproofed to offer the wearer some protection."
 	icon_state = "beret_mining"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 30, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 50)
 
@@ -207,6 +207,14 @@
 	icon_state = "beret_com"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 90
+
+/obj/item/clothing/head/beret/centcom
+	name = "centcom beret"
+	desc = "A green beret for those of the highest caliber"
+	icon_state = "beret_cc"
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	strip_delay = 90
+
 /*	//unused
 /obj/item/clothing/head/beret/lt
 	name = "officer beret"

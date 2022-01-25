@@ -187,3 +187,9 @@
 	name = "CentCom intern envirogloves"
 	icon_state = "internplasma"
 	inhand_icon_state = "internplasma"
+
+/obj/item/clothing/gloves/color/plasmaman/syndicate/generic
+	name = "standard syndicate envirogloves"
+	icon_state = "syndicateplasma"
+	inhand_icon_state = "syndicateplasma"
+	siemens_coefficient = 0

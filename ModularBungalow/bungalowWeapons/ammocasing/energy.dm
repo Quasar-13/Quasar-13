@@ -30,10 +30,14 @@
 //Beam casings
 /obj/item/ammo_casing/energy/disabler/hitscan
 	projectile_type = /obj/projectile/beam/disabler/beam
-	select_name  = "disable"
+	select_name = "disable"
 	e_cost = 100
 	fire_sound = 'sound/weapons/taser2.ogg'
 	harmful = FALSE
+
+
+/obj/item/ammo_casing/energy/disabler/hitscan/heavy
+	projectile_type = /obj/projectile/beam/disabler/beam/heavy
 
 
 //Disabler Beam
@@ -56,4 +60,7 @@
 	impact_light_range = 2.5
 	impact_light_color_override = COLOR_CYAN
 
+
+/obj/projectile/beam/disabler/beam/heavy
+	damage = 40
 

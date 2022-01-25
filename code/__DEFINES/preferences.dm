@@ -81,11 +81,19 @@
 #define EXP_TYPE_SILICON		"Silicon"
 #define EXP_TYPE_SERVICE		"Service"
 
+//Syndiestation
 #define EXP_TYPE_SYNDICATE		"Syndicate Command"
 #define EXP_TYPE_OPERATIONS		"Operations"
 #define EXP_TYPE_LOGISTICS		"Logistics"
 #define EXP_TYPE_TRIAGE		"Triage"
 #define EXP_TYPE_POLICE		"Military Police"
+
+//Blacksite
+#define EXP_TYPE_NTMARINE		"NT Marines"
+
+//Other Gamemodes
+#define EXP_TYPE_SOLGOV		"Solgov"
+
 
 #define EXP_TYPE_ANTAG			"Antag"
 #define EXP_TYPE_SPECIAL		"Special"

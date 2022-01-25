@@ -37,6 +37,9 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_antennae, GLOB.moth_antennae_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/monkey, GLOB.tails_list_monkey)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/bee, GLOB.bee_tails_list) //bee tail
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings/bee, GLOB.bee_wings_list) // bee wings
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_antennae/bee, GLOB.bee_antennae_list) //bee antennae
 	load_trusted_players()
 
 	//Species

@@ -13,35 +13,44 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	light_color = COLOR_LIGHT_GRAYISH_RED
 	light_range = 5
+	move_force = MOVE_FORCE_STRONG
+	move_resist = MOVE_FORCE_STRONG
+	pull_force = MOVE_FORCE_STRONG
+	mob_size = MOB_SIZE_LARGE
+	dextrous = TRUE // Hands!
+	held_items = list(null, null)
+	a_intent = "disarm" // So it doesn't break machines when trying to interact and can place items on tables
 	movement_type = GROUND
 	speak_emote = list("says")
 	armour_penetration = 30
 	melee_damage_lower = 24
-	melee_damage_upper = 24
+	melee_damage_upper = 28
+	mouse_opacity = MOUSE_OPACITY_ICON
+	possible_a_intents = list(INTENT_DISARM, INTENT_HARM)
 	ranged = TRUE
-	speed = 4
-	move_to_delay = 4
-	pixel_x = 0
-	base_pixel_x = 0
+	speed = 1
+	move_to_delay = 1
 	crusher_loot = list(/obj/item/card/id/ert/deathsquad, /obj/item/documents/nanotrasen)
 	loot = list(/obj/item/card/id/ert/deathsquad, /obj/item/documents/nanotrasen)
 	wander = FALSE
 	del_on_death = TRUE
 	blood_volume = BLOOD_VOLUME_NORMAL
 	gps_name = "NTAF-V"
-	deathmessage = "falls to the ground, decaying into glowing particles."
-	deathsound = "bodyfall"
+	deathmessage = "briefly falls to the ground before teleporting away."
+	deathsound = 'ModularTegustation/Tegusounds/claw/death.ogg'
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	attack_action_types = list(/datum/action/innate/megafauna_attack/ultimatum,
 							   /datum/action/innate/megafauna_attack/swift_dash,
-							   /datum/action/innate/megafauna_attack/swift_dash_long)
+							   /datum/action/innate/megafauna_attack/swift_dash_long,
+							   /datum/action/innate/megafauna_attack/no_attack,
+							   )
 	var/ultimatum_cooldown = 0
-	var/ultimatum_cooldown_time = 40 SECONDS
+	var/ultimatum_cooldown_time = 30 SECONDS
 	var/charging = FALSE
 	var/dash_num_short = 4
 	var/dash_num_long = 18
 	var/dash_cooldown = 0
-	var/dash_cooldown_time = 4 // cooldown_time * distance:
+	var/dash_cooldown_time = 3 // cooldown_time * distance:
 	// 4 * 4 = 16 (1.6 seconds)
 	// 4 * 18 = 72 (7.2 seconds)
 
@@ -66,15 +75,34 @@
 	chosen_message = "<span class='colossus'>You will now dash forward for a long distance.</span>"
 	chosen_attack_num = 3
 
+/datum/action/innate/megafauna_attack/no_attack
+	name = "Disable Attacks"
+	icon_icon = 'icons/effects/effects.dmi'
+	button_icon_state = "holo_medical"
+	chosen_message = "<span class='colossus'>You will now avoid performing special attacks.</span>"
+	chosen_attack_num = 10000
+
 /obj/effect/target_field
 	name = "target field"
 	desc = "You have a bad feeling about this..."
 	icon = 'ModularTegustation/Teguicons/tegu_effects.dmi'
 	icon_state = "target_field"
 
+/obj/item/implant/radio/claw
+	name = "prototype radio implant"
+	radio_key = /obj/item/encryptionkey/heads/captain/cent
+	subspace_transmission = TRUE
+
+/obj/item/implant/radio/claw/Initialize(mapload)
+	. = ..()
+	radio.command = TRUE // big voice
+
 /mob/living/simple_animal/hostile/megafauna/claw/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_FLOATING_ANIM, ROUNDSTART_TRAIT) // Imagine floating.
+	access_card = new /obj/item/card/id/ert/deathsquad(src) // Full access almost everywhere.
+	var/obj/item/implant/radio/claw/imp = new(src)
+	imp.implant(src, src)
 
 /mob/living/simple_animal/hostile/megafauna/claw/OpenFire()
 	if(client)
