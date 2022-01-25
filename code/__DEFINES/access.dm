@@ -111,7 +111,10 @@
 //Whitelist only access. No one should really have access to these except the whitelist.
 #define ACCESS_BLUESHIELD 111
 #define ACCESS_PACKEDARMORY 112
-#define ACCESS_PACKEDHOS 112
+#define ACCESS_PACKEDHOS 113
+
+//Stupid Access. Only used on one or two maps
+#define ACCESS_COMMSOFFICER 600
 
 	//The Syndicate
 /// General Syndicate Access. Includes Syndicate mechs and ruins.

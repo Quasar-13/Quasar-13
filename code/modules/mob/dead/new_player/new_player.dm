@@ -423,7 +423,7 @@
 	if(SSmaptype.maptype == "planetary")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
-	if(SSmaptype.maptype == "casio")
+	if(SSmaptype.maptype == "packed")
 		department_categories = list("Command", "Service", "Engineering", "Medical", "Research", "Security")
 
 	if(SSmaptype.maptype == "casio")

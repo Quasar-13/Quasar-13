@@ -3,7 +3,7 @@ GLOBAL_LIST_INIT(command_positions,list(
 
 	//Nonstandard heads
 	"Blueshield",
-	"Communications Officer",
+	"Communication Officer",
 
 	//Other Heads of staff
 	"Head of Personnel",

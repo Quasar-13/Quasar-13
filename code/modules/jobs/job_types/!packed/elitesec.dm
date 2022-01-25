@@ -36,22 +36,23 @@
 	name = "Nanotrasen Security Operative"
 	jobtype = /datum/job/elitesec
 
-	belt = /obj/item/pda/shaftminer
+	mask = /obj/item/clothing/mask/gas/sechailer
+	uniform = /obj/item/clothing/under/rank/security/officer
+	shoes = /obj/item/clothing/shoes/combat/swat
+	id = /obj/item/card/id/ert/security
+	belt = /obj/item/pda/warden
 	ears = /obj/item/radio/headset/headset_cargo/mining
-	shoes = /obj/item/clothing/shoes/workboots/mining
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/sec
 	gloves = /obj/item/clothing/gloves/color/black
-	uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
-	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
-	r_pocket = /obj/item/storage/bag/ore	//causes issues if spawned in backpack
 	backpack_contents = list(
-		/obj/item/flashlight/seclite=1,\
-		/obj/item/kitchen/knife/combat/survival=1,\
-		/obj/item/mining_voucher=1,\
-		/obj/item/stack/marker_beacon/ten=1)
+		/obj/item/storage/box/handcuffs = 1,
+		/obj/item/melee/baton/loaded = 1)
 
-	backpack = /obj/item/storage/backpack/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	duffelbag = /obj/item/storage/backpack/duffelbag/explorer
-	box = /obj/item/storage/box/survival/mining
+	backpack = /obj/item/storage/backpack/security
+	satchel = /obj/item/storage/backpack/satchel/sec
+	duffelbag = /obj/item/storage/backpack/duffelbag/sec
+	box = /obj/item/storage/box/survival/security
+
+	implants = list(/obj/item/implant/mindshield)
 
 	chameleon_extras = /obj/item/gun/energy/kinetic_accelerator
