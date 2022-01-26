@@ -6,7 +6,7 @@
 
 /datum/blackmarket_item/language/roundstartrace
 	name = "Random racial language book"
-	desc = "Group of xeno-specie schemes together in their language ? Learn their language with one of our books !"
+	desc = "Group of xeno-specie schemes together in their language? Learn their language with one of our books!"
 	item = /obj/item/language_manual/roundstart_species
 	price_min = 100
 	price_max = 500
@@ -15,7 +15,7 @@
 
 /datum/blackmarket_item/language/roundstartrace_five
 	name = "Random multi usage racial language book"
-	desc = "Group of xeno-specie schemes together in their language ? Learn their language with one of our books ! This one has five users to share among your friends !"
+	desc = "Group of xeno-specie schemes together in their language? Learn their language with one of our books! This one has five users to share among your friends!"
 	item = /obj/item/language_manual/roundstart_species
 	price_min = 100
 	price_max = 500
@@ -24,7 +24,7 @@
 
 /datum/blackmarket_item/language/common
 	name = "Common language book"
-	desc = "Someone doesn't speak Common ? Gift them this book ! We don't question the ethics behind it."
+	desc = "Someone doesn't speak Common? Gift them this book! We don't question the ethics behind it."
 	item = /obj/item/book/granter/language_book/common
 	price_min = 250
 	price_max = 750
@@ -51,7 +51,7 @@
 
 /datum/blackmarket_item/language/narsian
 	name = "Narsian language book"
-	desc = "Have you ever heard of our Mother of All, Nar'Sie ? We can sell you this book to extend your knowledge in Her !"
+	desc = "Have you ever heard of our Mother of All, Nar'Sie? We can sell you this book to extend your knowledge in Her!"
 	item = /obj/item/book/granter/language_book/narsian
 	price_min = 750
 	price_max = 1500
@@ -69,7 +69,7 @@
 
 /datum/blackmarket_item/language/slime
 	name = "Slime language book"
-	desc = "Who knew that every chirps and chimes from a slime was actually words? Decipher it with this book !"
+	desc = "Who knew that every chirps and chimes from a slime was actually words? Decipher it with this book!"
 	item = /obj/item/book/granter/language_book/slime
 	price_min = 250
 	price_max = 750
@@ -101,7 +101,7 @@
 
 /datum/blackmarket_item/magic/smoke_lesser
 	name = "Lesser smoke spellbook"
-	desc = "Want to learn magic ? This is the first standard spell the Wizard Confederation teaches !"
+	desc = "Want to learn magic? This is the first standard spell the Wizard Confederation teaches!"
 	item = /obj/item/book/granter/spell/smoke/lesser
 	price_min = 500
 	price_max = 1000
@@ -110,7 +110,7 @@
 
 /datum/blackmarket_item/magic/smoke
 	name = "Smoke moke spellbook"
-	desc = "A better version of the smoke spell ! It has a bigger radius."
+	desc = "A better version of the smoke spell! It has a bigger radius."
 	item = /obj/item/book/granter/spell/smoke
 	price_min = 750
 	price_max = 1500
@@ -178,7 +178,7 @@
 
 /datum/blackmarket_item/organ/penguinears
 	name = "Penguin ears"
-	desc = "Want to waddle like a penguin ? Those ears will help you lose your balance !"
+	desc = "Want to waddle like a penguin? Those ears will help you lose your balance"
 	item = /obj/item/organ/ears/penguin
 	price_min = 250
 	price_max = 750
@@ -210,7 +210,7 @@
 
 /datum/blackmarket_item/treasure/kiriekit
 	name = "Faded Medikit"
-	desc = "We found this limited edition of a purple medikit somewhere ! It seems already used altough."
+	desc = "We found this limited edition of a purple medikit somewhere! It seems already used altough."
 	item = /obj/item/storage/firstaid/kirie
 	price_min = 2500
 	price_max = 5000

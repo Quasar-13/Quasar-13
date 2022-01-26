@@ -21,8 +21,8 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/circuitboard,
 		/obj/item/electronics,
-		/obj/item/wallframe
-		))
+		/obj/item/wallframe,
+	))
 
 
 /datum/design/bsconstruction

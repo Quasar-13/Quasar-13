@@ -248,7 +248,7 @@
 				dat += "<h4>[active_record.fields["name"]][body_only ? " - BODY-ONLY" : ""]</h4>"
 				dat += "Scan ID [active_record.fields["id"]] \
 					[!body_only ? "<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]]'>Clone</a>" : "" ]\
-				 	<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]];empty=TRUE'>Empty Clone</a><br>"
+					<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]];empty=TRUE'>Empty Clone</a><br>"
 
 				var/obj/item/implant/health/H = locate(active_record.fields["imp"])
 
@@ -474,7 +474,7 @@
 				playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 			var/obj/machinery/clonepod/pod = GetAvailablePod()
 			var/success = FALSE
-			//Can't clone without someone to clone.  Or a pod.  Or if the pod is busy. Or full of gibs.
+			//Can't clone without someone to clone. Or a pod. Or if the pod is busy. Or full of gibs.
 			if(!LAZYLEN(pods))
 				temp = "<font class='bad'>No Clonepods detected.</font>"
 				playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
@@ -604,7 +604,7 @@
 	R.fields["body_only"] = body_only
 
 	if(!body_only)
-	    //Add an implant if needed
+		//Add an implant if needed
 		var/obj/item/implant/health/imp
 		for(var/obj/item/implant/health/HI in mob_occupant.implants)
 			imp = HI

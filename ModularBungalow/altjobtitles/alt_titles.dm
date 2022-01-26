@@ -1,5 +1,7 @@
 /datum/job
+	///Possible alt titles players can choose.
 	var/list/alt_titles = list()
+	///Titles selectable after getting enough playtime on the job.
 	var/senior_title
 
 //Engineering
@@ -11,7 +13,7 @@
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
 	senior_title = "Fusion Technician"
 
-/datum/job/tegu/voidtech
+/datum/job/voidtech
 	alt_titles = list("Space Explorer", "Salvager")
 	senior_title = "Space Marine"
 
@@ -69,7 +71,7 @@
 	alt_titles = list("Geneologist", "Medical Geneticist")
 	senior_title = "Genetic Engineer"
 
-/datum/job/tegu/chemre
+/datum/job/chemre
 	alt_titles = list("Chemical Researcher", "Chemical Scientist")
 	senior_title = "Chemical Engineer"
 
@@ -100,7 +102,7 @@
 	senior_title = list("Intelligence Officer", "Chief Investigator")
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Deputy", "Hazardous Device Technician", "NT Military Police")
+	alt_titles = list("Security Guard", "Hazardous Device Technician", "NT Military Police")
 	senior_title = list("Man-at-Arms", "Sergeant Officer")
 
 //Supply
@@ -123,7 +125,7 @@
 
 /datum/job/cmo
 	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
-	senior_title = "Senior Medical Officer"
+	senior_title = list("Senior Medical Officer", "Medical Professor")
 
 /datum/job/rd
 	alt_titles = list("Research Supervisor", "Head of Research", "Chief Researcher")

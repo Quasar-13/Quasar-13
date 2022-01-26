@@ -159,6 +159,7 @@
 	H.client?.give_award(/datum/award/achievement/misc/rust_ascension, H)
 	RegisterSignal(H,COMSIG_MOVABLE_MOVED,.proc/on_move)
 	priority_announce("$^@&#*$^@(#&$(@&#^$&#^@# Fear the decay, for the Rustbringer, [user.real_name] has ascended! None shall escape the corrosion! $^@&#*$^@(#&$(@&#^$&#^@#","#$^@&#*$^@(#&$(@&#^$&#^@#", ANNOUNCER_SPANOMALIES)
+	set_security_level(SEC_LEVEL_GAMMA)
 	new /datum/rust_spread(loc)
 	return ..()
 

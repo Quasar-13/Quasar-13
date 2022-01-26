@@ -3,17 +3,18 @@
 	Procedures for parsing expressions.
 */
 
-/*
-	Macros: Expression Macros
-	OPERATOR   - A value indicating the parser currently expects a binary operator.
-	VALUE			 - A value indicating the parser currently expects a value.
-	SHIFT      - Tells the parser to push the current operator onto the stack.
-	REDUCE		 - Tells the parser to reduce the stack.
-*/
-#define OPERATOR  1
-#define VALUE     2
-#define SHIFT     0
-#define REDUCE    1
+/**
+ * Macros: Expression Macros
+ * OPERATOR - A value indicating the parser currently expects a binary operator.
+ * VALUE - A value indicating the parser currently expects a value.
+ * SHIFT - Tells the parser to push the current operator onto the stack.
+ * REDUCE - Tells the parser to reduce the stack.
+ */
+
+#define OPERATOR 1
+#define VALUE 2
+#define SHIFT 0
+#define REDUCE 1
 
 /*
 	Class: nS_Parser
@@ -55,21 +56,20 @@
 		if(/token/number, /token/string)
 			return new/node/expression/value/literal(T.value, T)
 
-/*
-	Proc: GetOperator
-	Gets a path related to a token or string and returns an instance of the given type. This is used to get an instance of either a binary or unary
-	operator from a token.
+/**
+ * Proc: GetOperator
+ * Gets a path related to a token or string and returns an instance of the given type. This is used to get an instance of either a binary or unary
+ * operator from a token.
+ * Parameters:
+ * O	- The input value. If this is a token, O is reset to the token's value.
+ * When O is a string and is in L, its associated value is used as the path to instantiate.
+ * type - The desired type of the returned object.
+ * L	- The list in which to search for O.
+ * See Also:
+ * - <GetBinaryOperator()>
+ * - <GetUnaryOperator()>
+ */
 
-	Parameters:
-	O		 - The input value. If this is a token, O is reset to the token's value.
-			   When O is a string and is in L, its associated value is used as the path to instantiate.
-	type - The desired type of the returned object.
-	L		 - The list in which to search for O.
-
-	See Also:
-	- <GetBinaryOperator()>
-	- <GetUnaryOperator()>
-*/
 /n_Parser/nS_Parser/proc/GetOperator(O, type=/node/expression/operator, L[])
 	var/token/T
 	if(istype(O, type)) return O		//O is already the desired type
@@ -105,7 +105,7 @@
 	- <GetBinaryOperator()>
 */
 /n_Parser/nS_Parser/proc/GetUnaryOperator(O)
-	return GetOperator(O, /node/expression/operator/unary,  options.unary_operators)
+	return GetOperator(O, /node/expression/operator/unary, options.unary_operators)
 
 /*
 	Proc: Reduce
@@ -153,7 +153,7 @@
 
 	Notes:
 	- When an opening parenthesis is found, then <ParseParenExpression()> is called to handle it.
-	- The <expecting>  variable helps distinguish unary operators from binary operators (for cases like the - operator, which can be either).
+	- The <expecting> variable helps distinguish unary operators from binary operators (for cases like the - operator, which can be either).
 
 	Articles:
 	- <http://epaperpress.com/oper/>
@@ -262,8 +262,8 @@
 		NextToken()
 
 	while(opr.Top()) Reduce(opr, val, check_assignments) 																//Reduce the value stack completely
-	.=val.Pop()                       																//Return what should be the last value on the stack
-	if(val.Top())                     																//
+	.=val.Pop()            																//Return what should be the last value on the stack
+	if(val.Top())           																//
 		var/node/N=val.Pop()
 		errors+=new/scriptError("Error parsing expression. Unexpected value left on stack: [N.ToString()].")
 		return null

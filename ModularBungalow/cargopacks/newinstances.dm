@@ -23,13 +23,13 @@
 	icon_state = "box"
 
 /obj/item/storage/box/glowsticks/PopulateContents()
-		new /obj/item/flashlight/glowstick/red (src)
-		new /obj/item/flashlight/glowstick/orange (src)
+		new /obj/item/flashlight/glowstick/red(src)
+		new /obj/item/flashlight/glowstick/orange(src)
 		new /obj/item/flashlight/glowstick/yellow(src)
-		new /obj/item/flashlight/glowstick (src)
-		new /obj/item/flashlight/glowstick/cyan (src)
-		new /obj/item/flashlight/glowstick/blue (src)
-		new /obj/item/flashlight/glowstick/pink (src)
+		new /obj/item/flashlight/glowstick(src)
+		new /obj/item/flashlight/glowstick/cyan(src)
+		new /obj/item/flashlight/glowstick/blue(src)
+		new /obj/item/flashlight/glowstick/pink(src)
 
 /obj/item/storage/box/flares
 	name = "flares box"

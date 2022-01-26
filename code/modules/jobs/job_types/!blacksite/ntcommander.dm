@@ -31,3 +31,4 @@
 	l_pocket = /obj/item/ammo_box/a357
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id/centcom
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/cpt

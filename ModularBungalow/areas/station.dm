@@ -19,7 +19,7 @@
 	name = "NT Marine Police Station"
 	icon_state = "marine_warden"
 
-/area/marines/SL
+/area/marines/squad_office
 	name = "NT Marine Squad Leader Office"
 	icon_state = "marine_sl"
 

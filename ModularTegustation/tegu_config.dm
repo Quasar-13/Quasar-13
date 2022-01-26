@@ -55,4 +55,15 @@
 	config_entry_value = "You are here to get rid of filthy humans and sabotage their work. Avoid attacking non-human crew and low-ranking workers. \
 	If there will be a chance - Kill every TerraGov or CentCom official, they have to pay for their crimes."
 
+/// If server population is above this number - certain gamemodes can randomly allow all jobs to be antagonists
+/datum/config_entry/number/no_job_restriction_pop
+	config_entry_value = 5
+	min_val = 0
+
+/// Chance for certain antagonists to get their job restrictions removed; Will only work if population is above number above
+/datum/config_entry/number/no_job_restriction_chance
+	config_entry_value = 5
+	min_val = 0
+ 
+//Tombworld enabled flag
 /datum/config_entry/flag/tombworld_enabled
