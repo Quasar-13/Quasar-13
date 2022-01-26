@@ -1,4 +1,3 @@
-// "RAW" WEAPONS//
 /obj/item/melee/baseball_bat/toolbox
 	name = "toolbox bat"
 	desc = "There ain't a skull in the league that can withstand a toolbox."

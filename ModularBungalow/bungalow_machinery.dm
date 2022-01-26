@@ -23,7 +23,7 @@
 	icon = 'ModularBungalow/zbungalowicons/vending.dmi'
 	product_ads = "Take some time, help your patients."
 	req_access = list(ACCESS_PSYCHOLOGY)
-	products = list( /obj/item/storage/pill_bottle/mannitol/small = 2,
+	products = list(/obj/item/storage/pill_bottle/mannitol/small = 2,
 					/obj/item/storage/pill_bottle/lsdpsych = 2,
 					/obj/item/storage/pill_bottle/happinesspsych = 2,
 					/obj/item/storage/pill_bottle/paxpsych = 2,
@@ -32,6 +32,7 @@
 					/obj/item/storage/pill_bottle/synaptazine = 2,
 					/obj/item/storage/pill_bottle/haloperidol = 2,
 					/obj/item/storage/pill_bottle/morphine/small = 2)
+
 	default_price = 40
 	extra_price = 680
 	payment_department = ACCOUNT_MED

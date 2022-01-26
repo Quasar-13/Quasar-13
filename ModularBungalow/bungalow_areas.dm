@@ -1,11 +1,11 @@
-//RUINS//
+//RUINS
 /area/crew_quarters/devious_lick
 	name = "Devious Lick"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "amongus"
 	ambientsounds = list('ModularBungalow/zbungalowsounds/ruins/among_Us_Drip_Theme.ogg')
 
-//SERVICE//
+//SERVICE
 /area/office/clown
 	name = "Clown's office"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
@@ -18,7 +18,7 @@
 	icon_state ="mime"
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
-//Marine areas for Casio//
+//Marine areas for Casio
 /area/marines
 	name = "NT Marine Brig"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
@@ -54,7 +54,7 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "blueshield"
 
-//Operations for syndiecorps//
+//Operations for syndiecorps
 /area/operations
 	name = "Hangar"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
@@ -66,7 +66,7 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "voidtech"
 
-//CREW_QUARTERS AKA OFFICES
+//CREW QUARTERS AKA OFFICES
 /area/crew_quarters/office/secretary
 	name = "secretary office"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'

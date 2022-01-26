@@ -1,7 +1,4 @@
-
-//////////////////////////////
 ////////// BACKPACK///////////
-/////////////////////////////
 /obj/item/storage/backpack/centcom
 	name = "centcom backpack"
 	desc = "It's a special backpack made exclusively for Nanotrasen officers. Green for Navy baby."
@@ -12,9 +9,7 @@
 	righthand_file = 'ModularBungalow/zbungalowicons/items_righthand.dmi'
 	inhand_icon_state = "gcaptainpack"
 
-//////////////////////////////
 ////////// BRIEFCASE//////////
-/////////////////////////////
 /obj/item/storage/briefcase/secretary
 	folder_path = /obj/item/folder/blue
 	icon = 'ModularBungalow/clothing/icons/storage.dmi'
@@ -28,9 +23,7 @@
 	new /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass(src)
 	..()
 
-//////////////////////////////
 //////////// BAG/////////////
-/////////////////////////////
 /obj/item/storage/bag/construction/bluespace
 	name = "bluespace construction bag"
 	icon = 'icons/obj/mining.dmi'
@@ -85,7 +78,7 @@
 	for(var/i in 1 to 30)
 		new /obj/item/reagent_containers/syringe(src)
 
-/**
+/*
  * # PULSE RIFLE KIT BLACKSITE
  */
 /obj/item/storage/backpack/duffelbag/deathsquad
@@ -95,7 +88,7 @@
 /obj/item/storage/backpack/duffelbag/deathsquad/PopulateContents()
 	new /obj/item/gun/energy/pulse/carbine(src)
 
-/**
+/*
  * # MINIGUN KIT BLACKSITE
  */
 /obj/item/storage/backpack/duffelbag/deathsquad/minigun
@@ -106,7 +99,7 @@
 	new /obj/item/minigunpack(src)
 	new /obj/item/gun/energy/pulse/pistol(src)
 
-/**
+/*
  * # RIFLE AND ION KIT BLACKSITE ERT
  */
 /obj/item/storage/backpack/duffelbag/ert
@@ -118,7 +111,7 @@
 	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-/**
+/*
  * # LASER SNIPER KIT BLACK SITE ERT
  */
 /obj/item/storage/backpack/duffelbag/ert/laser
@@ -129,7 +122,7 @@
 	new /obj/item/gun/energy/sniper/pin(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-/**
+/*
  * # X-RAY KIT BLACKSITE ERT
  */
 /obj/item/storage/backpack/duffelbag/ert/xray
@@ -140,7 +133,7 @@
 	new /obj/item/gun/energy/xray(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-/**
+/*
  * # ACCELERATION RIFLE KIT BLACKSITE ERT
  */
 /obj/item/storage/backpack/duffelbag/ert/pkr
@@ -151,7 +144,7 @@
 	new /obj/item/gun/energy/beam_rifle(src)
 	new /obj/item/gun/energy/e_gun/mini(src)
 
-/**
+/*
  * # DEFAULT MARINE KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine
@@ -168,7 +161,7 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-/**
+/*
  * # MEDIC KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/medic
@@ -189,7 +182,7 @@
 	new /obj/item/extinguisher/mini(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-/**
+/*
  * # ENGINEERING KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/engi
@@ -209,7 +202,7 @@
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
-/**
+/*
  * # SHOTGUN KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/shotgun
@@ -234,7 +227,7 @@
 	new /obj/item/storage/belt/bandolier/marine(src)
 	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
-/**
+/*
  * # SMG KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/smg
@@ -252,7 +245,7 @@
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-/**
+/*
  * # MOSIN KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/mosin
@@ -269,7 +262,7 @@
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
-/**
+/*
  * # SAMURAI KIT BLACKSITE MARINE
  */
 /obj/item/storage/backpack/duffelbag/marine/samurai

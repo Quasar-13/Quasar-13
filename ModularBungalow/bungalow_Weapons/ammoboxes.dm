@@ -67,3 +67,4 @@
 /obj/item/storage/box/shotgun/frag/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/frag12(src)
+
