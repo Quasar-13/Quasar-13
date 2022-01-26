@@ -1030,7 +1030,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/vibro_weapon/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(wielded)
-		final_block_chance *= 2
+		final_block_chance *= 4
 	if(wielded || attack_type != PROJECTILE_ATTACK)
 		if(prob(final_block_chance))
 			if(attack_type == PROJECTILE_ATTACK)
