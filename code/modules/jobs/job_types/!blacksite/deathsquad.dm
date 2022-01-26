@@ -35,6 +35,7 @@
 	id = /obj/item/card/id/ert/deathsquad
 
 	skillchips = list(/obj/item/skillchip/disk_verifier)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lcdr
 
 	backpack_contents = list(
 		/obj/item/storage/box/survival/engineer = 1,
