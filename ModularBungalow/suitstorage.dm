@@ -8,5 +8,3 @@
 /obj/machinery/suit_storage_unit/engine/pubby
 	suit_type = /obj/item/clothing/suit/space/hardsuit/ancient
 	mask_type = /obj/item/clothing/mask/breath
-
-

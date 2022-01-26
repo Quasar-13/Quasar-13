@@ -6,15 +6,17 @@
 	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	initial_caliber = CALIBER_38
-	fire_sound = 'sound/weapons/gun/revolver/shot_alt.ogg'
-	load_sound = 'sound/weapons/gun/revolver/load_bullet.ogg'
-	eject_sound = 'sound/weapons/gun/revolver/empty.ogg'
-	vary_fire_sound = FALSE
-	fire_sound_volume = 90
-	dry_fire_sound = 'sound/weapons/gun/revolver/dry_fire.ogg'
-	casing_ejector = FALSE
-	internal_magazine = TRUE
-	bolt_type = BOLT_TYPE_NO_BOLT
-	tac_reloads = FALSE
-	spin_delay = 10
-	recent_spin = 0
+
+//Sequoia
+/obj/item/gun/ballistic/revolver/sequoia
+	name = "Captain's Sequoia Pistol"
+	desc = "A pistol for solgov captains. Engraved on the bottom is 'Thank you for your 20 years of service.'"
+	icon_state = "sequoia"
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+
+//Hakita
+/obj/item/gun/ballistic/revolver/hakita
+	name = "Hakita Special Revolver"
+	desc = "A special pistol used by centcom admirals. Looks sleek, kicks ass."
+	icon_state = "hakita"
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'

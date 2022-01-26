@@ -47,6 +47,8 @@
 /obj/item/storage/lockbox/medal/cmo/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/ribbon/cmo(src)
+	new /obj/item/clothing/accessory/medal/med_medal
+	new /obj/item/clothing/accessory/medal/med_medal2
 
 /obj/item/clothing/accessory/medal/ribbon/cmo
 	name = "\"medical excellence\" award"

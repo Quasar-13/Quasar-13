@@ -55,8 +55,8 @@
 	STR.display_numerical_stacking = TRUE
 	STR.set_holdable(list(
 		/obj/item/ammo_casing/shotgun,
-		/obj/item/ammo_casing/a762
-		))
+		/obj/item/ammo_casing/a762,
+	))
 
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/side

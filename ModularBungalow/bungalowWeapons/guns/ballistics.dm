@@ -6,7 +6,15 @@
 	icon_state = "syringerifle"
 	max_syringes = 3
 
-//Syndiecorps pistols
+//Pistols
+/obj/item/gun/ballistic/automatic/pistol/mk23
+	name = "Mark 23 SOCOM"
+	desc = "A pistol used by special forces across the galaxy."
+	icon_state = "mk23"
+	icon = 'ModularBungalow/bungalowWeapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/glock
+	can_suppress = FALSE
+
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
 	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."

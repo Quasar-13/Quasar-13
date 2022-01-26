@@ -6,7 +6,7 @@
 	icon = 'ModularBungalow/zbungalowicons/weapons/shotguns.dmi'
 	fire_delay = 8
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/four
-	can_be_sawn_off  = FALSE
+	can_be_sawn_off = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_box/magazine/internal/shot/four
@@ -36,7 +36,7 @@
 	obj_flags = UNIQUE_RENAME
 	semi_auto = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT
-	can_be_sawn_off  = FALSE
+	can_be_sawn_off = FALSE
 	pb_knockback = 3 // it's a super shotgun!
 
 
@@ -49,7 +49,7 @@
 	icon_state = "breachingshotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/breaching
 	w_class = WEIGHT_CLASS_NORMAL //compact so it fits in backpacks
-	can_be_sawn_off  = FALSE
+	can_be_sawn_off = FALSE
 
 /obj/item/ammo_box/magazine/internal/shot/breaching
 	name = "breaching shotgun internal magazine"

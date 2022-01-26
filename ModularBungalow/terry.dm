@@ -1,3 +1,6 @@
+/**
+ * TG LRP players are leaking in, it seems.
+ */
 /mob/living/simple_animal/hostile/retaliate/goose/terry
 	name = "Terry"
 	desc = "Security's loyal... Duck? Something seems off about this duck. The words FATAL FURY is sewn into his hat."
