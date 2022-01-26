@@ -6,7 +6,7 @@
 	spawn_positions = 3
 	supervisors = "the quartermaster"
 	selection_color = "#dcba97"
-	mapexclude = list("packed")
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/miner
 

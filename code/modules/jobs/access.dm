@@ -383,8 +383,7 @@
 /proc/get_all_jobs()
 	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
-//				"Deputy", // Tegustation Deputy edit: Add all Tegu-only jobs here!
-				"Void Technician", "Chemist", "Secretary", //Bungalowstation edit
+				"Deputy","Void Technician", "Chemist", "Secretary", //Bungalowstation edit
 
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Pharmacist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
@@ -394,7 +393,16 @@
 
 				//Bungalow Station Marine Corps
 				"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
-				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden")
+				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden",
+
+				//Solgov
+				"Commander", "Administrator", "Engineer", "Bunker Crew", "Lab Technician", "Medical Technician", "Soldier", "Security", "Civilian",
+
+				//Goon Stations
+				"Communication Officer", "Nanotrasen Security Operative", "Miner",
+
+				//Naval Stations
+				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield")
 
 
 

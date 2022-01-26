@@ -6,7 +6,7 @@
 	spawn_positions = 2
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	maptype = "packed"
+	maptype = "goonlite"
 
 	outfit = /datum/outfit/job/cargo_tech
 

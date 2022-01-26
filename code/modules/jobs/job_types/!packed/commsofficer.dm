@@ -13,7 +13,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SERVICE
 	exp_type_department = EXP_TYPE_SERVICE
-	maptype = "packed"
+	maptype = "goonlite"
 
 	outfit = /datum/outfit/job/commsofficer
 
@@ -40,7 +40,7 @@
 	jobtype = /datum/job/commsofficer
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/heads/hop
+	belt = /obj/item/pda/secretary
 	ears = /obj/item/radio/headset/heads
 	uniform = /obj/item/clothing/under/misc/parade/comms
 	shoes = /obj/item/clothing/shoes/sneakers/brown

@@ -179,12 +179,12 @@
 		"Silicon"
 		)
 
-	if(SSmaptype.maptype == "packed")
+	if(SSmaptype.maptype == "goonlite")
 		manifest_out = list(
 		"Command",
 		"Security",
 		"Logistics",
-		"Research",
+		"Medsci",
 		"Service",
 		"Silicon"
 		)
@@ -260,12 +260,12 @@
 			"Silicon" = GLOB.nonhuman_positions)
 
 
-	if(SSmaptype.maptype == "packed")
+	if(SSmaptype.maptype == "goonlite")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
 			"Logistics" = GLOB.logistics_positions,
-			"Research" = GLOB.research_positions,
+			"Medsci" = GLOB.medical_positions + GLOB.science_positions,
 			"Service" = GLOB.service_positions,
 			"Silicon" = GLOB.nonhuman_positions)
 

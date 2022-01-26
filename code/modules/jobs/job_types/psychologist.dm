@@ -6,7 +6,7 @@
 	spawn_positions = 1
 	supervisors = "the head of personnel and the chief medical officer"
 	selection_color = "#bbe291"
-	mapexclude = list("packed")
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/psychologist
 

@@ -110,8 +110,8 @@
 
 //Whitelist only access. No one should really have access to these except the whitelist.
 #define ACCESS_BLUESHIELD 111
-#define ACCESS_PACKEDARMORY 112
-#define ACCESS_PACKEDHOS 113
+#define ACCESS_GOONARMORY 112
+#define ACCESS_GOONHOS 113
 
 //Stupid Access. Only used on one or two maps
 #define ACCESS_COMMSOFFICER 600

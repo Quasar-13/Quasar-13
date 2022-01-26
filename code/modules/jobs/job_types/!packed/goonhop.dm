@@ -13,9 +13,9 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SERVICE
 	exp_type_department = EXP_TYPE_SERVICE
-	maptype = "packed"
+	maptype = "goonlite"
 
-	outfit = /datum/outfit/job/goonhop
+	outfit = /datum/outfit/job/hop/goon
 
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS,
 						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS,
@@ -39,17 +39,11 @@
 
 	display_order = JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL
 
-/datum/outfit/job/goonhop
-	name = "Head Of Personnel (Goon)"
+/datum/outfit/job/hop/goon
+	name = "Head of Personnel (Goon)"
 	jobtype = /datum/job/goonhop
 
-	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/heads/hop
-	ears = /obj/item/radio/headset/heads/hop
 	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
-	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = null
-	backpack_contents = list(/obj/item/storage/box/ids=1,\
-		/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced/command = 1)
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/hop)

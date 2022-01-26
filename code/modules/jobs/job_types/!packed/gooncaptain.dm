@@ -12,10 +12,10 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "packed"
+	maptype = "goonlite"
 
 	//Uses NT Captain outfit, this is a good idea I swear
-	outfit = /datum/outfit/job/ntcaptain
+	outfit = /datum/outfit/job/captain/nt
 
 
 	access = list() 			//See get_access()

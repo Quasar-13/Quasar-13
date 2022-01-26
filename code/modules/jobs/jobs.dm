@@ -131,15 +131,6 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"NT Vehicle Operator",
 	"NT Marine"))
 
-//Goonstation stuff
-GLOBAL_LIST_INIT(research_positions, list(
-	"Research Director",
-	"Chief Medical Officer",
-	"Scientist",
-	"Roboticist",
-	"Geneticist",
-	"Medical Doctor",))
-
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(
 	"Commander",
@@ -171,7 +162,6 @@ GLOBAL_LIST_INIT(position_categories, list(
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),
-	EXP_TYPE_RESEARCH = list("jobs" = research_positions, "color" = "#ffddff"),
 	EXP_TYPE_NTMARINE = list("jobs" = ntmarines_positions, "color" = "##134975"),
 ))
 
@@ -186,7 +176,6 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = service_positions),
 	EXP_TYPE_NTMARINE = list("titles" = ntmarines_positions),
-	EXP_TYPE_RESEARCH = list("titles" = research_positions),
 
 //Syndiestation
 	EXP_TYPE_SYNDICATE = list("titles" = syncommand_positions),

@@ -12,6 +12,15 @@
 	icon_state = "naga"
 	force = 20
 
+//Taser gun
+/obj/item/gun/energy/taser/neo
+	name = "mark 2 taser gun"
+	desc = "A low-capacity, energy-based stun gun used by security teams to subdue targets at range."
+	icon = 'ModularBungalow/bungalowWeapons/_icon/energy.dmi'
+	icon_state = "tasermk2"
+	inhand_icon_state = null	//so the human update icon uses the icon_state instead.
+
+
 //Home Defender pistol
 /obj/item/gun/energy/e_gun/homedef
 	name = "\improper E-220 Home Defender Beam Revolver"

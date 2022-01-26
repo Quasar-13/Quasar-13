@@ -7,7 +7,7 @@
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
 	var/lawyers = 0 //Counts lawyer amount
-	mapexclude = list("packed")
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/lawyer
 
