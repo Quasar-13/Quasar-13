@@ -1042,6 +1042,29 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 				return TRUE
 	return FALSE
 
+/obj/item/vibro_weapon/pun_pun
+	icon_state = "hfrequency0"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	name = "Pun Pun's Blade"
+	desc = "A potent weapon capable of cutting through nearly anything. Wielding it in two hands will allow you to deflect all projectiles. This blade is owned by Rear Admiral Pun Pun the 12th, a legendary swordsman."
+	armour_penetration = 100
+	block_chance = 40
+	force = 20
+	throwforce = 20
+	throw_speed = 4
+	sharpness = SHARP_EDGED
+	attack_verb_continuous = list("cuts", "slices", "dices")
+	attack_verb_simple = list("cut", "slice", "dice")
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	wielded = FALSE // track wielded status on item
+
+/obj/item/vibro_weapon/pun_pun/IsReflect()
+	if(wielded)
+		return 1
+
 /obj/item/melee/moonlight_greatsword
 	name = "moonlight greatsword"
 	desc = "Don't tell anyone you put any points into dex, though."
