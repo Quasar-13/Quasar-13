@@ -147,7 +147,7 @@
 		qdel(src)
 		return
 	SSbluespace_locker.external_locker = src
-	..()
+	return ..()
 
 /obj/structure/closet/bluespace/external/Destroy()
 	SSbluespace_locker.external_locker = null
