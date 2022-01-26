@@ -31,6 +31,7 @@
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	back = /obj/item/storage/backpack/ert/security
 	belt = /obj/item/storage/belt/security/full
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
 	backpack_contents = list(
 		/obj/item/storage/box/survival/engineer = 1,
 		/obj/item/choice_beacon/bungalow/deathsquad/ert = 1,
