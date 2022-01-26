@@ -1057,13 +1057,20 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb_continuous = list("cuts", "slices", "dices")
 	attack_verb_simple = list("cut", "slice", "dice")
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK || ITEM_SLOT_BELT
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	wielded = FALSE // track wielded status on item
+
+/obj/item/vibro_weapon/pun_pun/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+		final_block_chance *= 4
+		if(prob(final_block_chance) || attack_type == PROJECTILE_ATTACK)
+				owner.visible_message("<span class='danger'>[owner] deflects [attack_text] with [src]!</span>")
+				playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 75, TRUE)
+				return TRUE
+				owner.visible_message("<span class='danger'>[owner] parries [attack_text] with [src]!</span>")
+				return TRUE
 
 /obj/item/vibro_weapon/pun_pun/IsReflect()
-	if(wielded)
-		return 1
+	return 1
 
 /obj/item/melee/moonlight_greatsword
 	name = "moonlight greatsword"
