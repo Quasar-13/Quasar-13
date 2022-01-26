@@ -7,8 +7,8 @@
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/engineering/head(src)
-	new /obj/item/gun/energy/disabler/head(src)
 	new /obj/item/storage/lockbox/medal/ce(src)
+	new /obj/item/clothing/under/rank/engineering/chief_engineer/atmos(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/chief_medical/Initialize()
@@ -16,6 +16,7 @@
 	new /obj/item/clothing/glasses/sunglasses/chemical(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/head(src)
 	new /obj/item/gun/syringe/rifle(src)
+	new /obj/item/clothing/head/beret/cmo(src)
 	new /obj/item/storage/lockbox/medal/cmo(src)
 	. = ..()
 

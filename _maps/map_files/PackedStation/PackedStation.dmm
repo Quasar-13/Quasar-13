@@ -2439,7 +2439,22 @@
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "afr" = (
-/obj/structure/closet/secure_closet/hop,
+/obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntmp";
+	name = "\proper Head of Personnel's locker";
+	req_access = null;
+	req_access_txt = "57"
+	},
+/obj/item/gun/energy/e_gun/hop,
+/obj/item/clothing/under/misc/parade/hop,
+/obj/item/clothing/under/rank/civilian/head_of_personnel/goon,
+/obj/item/clothing/under/rank/civilian/head_of_personnel/suit,
+/obj/item/door_remote/civilian,
+/obj/item/storage/box/pdas,
+/obj/item/storage/box/ids,
+/obj/item/storage/box/ids,
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/clothing/suit/armor/vest/alt,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "aft" = (
@@ -5848,6 +5863,13 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/gun/energy/disabler/advanced/markii/nopin{
+	pixel_y = 6
+	},
+/obj/item/gun/energy/disabler/advanced/markii/nopin{
+	pixel_y = 3
+	},
+/obj/item/gun/energy/disabler/advanced/markii/nopin,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "amW" = (
@@ -6115,7 +6137,7 @@
 "anv" = (
 /obj/machinery/door/airlock/medical{
 	name = "Morgue";
-	req_access_txt = "6;47"
+	req_one_access_txt = "5;47;39"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -6898,7 +6920,7 @@
 "apq" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Pharmacy";
-	req_access_txt = "5; 69; 47"
+	req_one_access_txt = "5; 69; 47"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -7152,7 +7174,7 @@
 "apN" = (
 /obj/machinery/door/airlock/research{
 	name = "Research Division Access";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -7248,7 +7270,7 @@
 "apW" = (
 /obj/machinery/door/airlock/research{
 	name = "Research Division Access";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -10710,7 +10732,7 @@
 	frequency = 1449;
 	id_tag = "virology_airlock_exterior";
 	name = "Virology Exterior Airlock";
-	req_access_txt = "5;47;39"
+	req_one_access_txt = "5;47;39"
 	},
 /obj/machinery/door_buttons/access_button{
 	idDoor = "virology_airlock_exterior";
@@ -11707,7 +11729,7 @@
 	frequency = 1449;
 	id_tag = "virology_airlock_interior";
 	name = "Virology Interior Airlock";
-	req_access_txt = "5;47;39"
+	req_one_access_txt = "5;47;39"
 	},
 /obj/machinery/door_buttons/access_button{
 	idDoor = "virology_airlock_interior";
@@ -12265,7 +12287,7 @@
 /obj/item/bedsheet/blue,
 /obj/structure/bed,
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "aAn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 6
@@ -13360,19 +13382,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
-"aCF" = (
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/psychology)
 "aCH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -14252,7 +14261,7 @@
 /obj/item/clothing/under/rank/medical/doctor/nurse,
 /obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "aEC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral{
@@ -14460,8 +14469,11 @@
 	pixel_y = 2
 	},
 /obj/item/storage/firstaid/ancient,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "aEV" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
@@ -15538,9 +15550,6 @@
 "aLk" = (
 /turf/open/floor/plasteel/dark,
 /area/storage/tech)
-"aLl" = (
-/turf/closed/wall,
-/area/medical/psychology)
 "aLz" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/plasteel/cafeteria,
@@ -16443,7 +16452,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
@@ -16706,7 +16715,7 @@
 "aUQ" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "aUX" = (
 /obj/item/radio/intercom{
 	frequency = 1485;
@@ -16716,7 +16725,8 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "aVa" = (
-/obj/structure/closet/secure_closet/captains,
+/obj/structure/closet/secure_closet/captains_casio,
+/obj/item/choice_beacon/bungalow/captain/sabre,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "aVk" = (
@@ -16728,6 +16738,7 @@
 	},
 /obj/item/clothing/mask/cigarette/cigar,
 /obj/item/reagent_containers/food/drinks/flask/gold,
+/obj/item/clothing/suit/armor/captain/bath,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "aVm" = (
@@ -17127,7 +17138,9 @@
 /area/janitor)
 "aYa" = (
 /obj/structure/closet/secure_closet/centcom{
-	name = "\proper communicaions officer locker";
+	icon_state = "ntmp";
+	name = "\proper communication officer locker";
+	req_access = null;
 	req_one_access_txt = "600;20"
 	},
 /obj/item/clothing/under/misc/parade/comms,
@@ -17510,7 +17523,7 @@
 /obj/structure/table,
 /obj/item/healthanalyzer/paramed,
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "bgx" = (
 /obj/effect/turf_decal{
 	dir = 4
@@ -17717,8 +17730,11 @@
 "bsT" = (
 /obj/structure/table,
 /obj/item/healthanalyzer/chem,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "btH" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -19596,7 +19612,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /turf/open/floor/plasteel/white,
 /area/maintenance/fore/secondary)
@@ -21563,7 +21579,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
@@ -21850,7 +21866,7 @@
 "gMV" = (
 /obj/machinery/door/airlock/research{
 	name = "Research Division Access";
-	req_access_txt = "5;47"
+	req_one_access_txt = "5;47"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -25868,6 +25884,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
+"lDK" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Medbay Treatment Room";
+	req_one_access_txt = "5;47"
+	},
+/obj/effect/mapping_helpers/airlock/unres,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/medical/medbay/central)
 "lDL" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/purple{
@@ -29091,10 +29116,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-"ptM" = (
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plating,
-/area/medical/psychology)
 "ptN" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -29676,6 +29697,7 @@
 /obj/structure/table/wood,
 /obj/item/folder/red,
 /obj/item/stamp/hos,
+/obj/item/gun/energy/disabler/advanced/rifle,
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
 "qkD" = (
@@ -31225,6 +31247,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntsl";
 	name = "\proper Nanotrasen Security Operative locker";
 	req_access = null;
 	req_access_txt = "112
@@ -34558,8 +34581,18 @@
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "wIk" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
-/area/medical/psychology)
+/area/medical/medbay/central)
 "wIN" = (
 /obj/effect/turf_decal/stripes/end{
 	dir = 4
@@ -72157,11 +72190,11 @@ aGL
 aGL
 afy
 nuG
-aLl
-ptM
-ptM
-ptM
-aLl
+aPs
+ufR
+ufR
+ufR
+aPs
 awO
 gyC
 byU
@@ -72414,11 +72447,11 @@ aex
 aGL
 acQ
 bQS
-aLl
+aPs
 aAm
 aUQ
 aAm
-wIk
+aPs
 awO
 gyC
 byU
@@ -72672,10 +72705,10 @@ aGL
 acQ
 acz
 mOR
+abw
+abw
 wIk
-aCF
-wIk
-wIk
+abw
 awO
 gyC
 xOI
@@ -72928,10 +72961,10 @@ aNz
 aGL
 acQ
 hYi
-aLl
-aCF
-aCF
-aCF
+aPs
+abw
+wIk
+wIk
 wIk
 awR
 fuk
@@ -73185,11 +73218,11 @@ aRl
 aGL
 alH
 acQ
-aLl
+aPs
 aEB
-aCF
+abw
 wIk
-wIk
+abw
 awO
 gyC
 gsc
@@ -73442,11 +73475,11 @@ akQ
 aGL
 aGL
 acz
-aLl
+aPs
 aEU
 bgb
 bsT
-aLl
+aPs
 awV
 uRO
 awX
@@ -76532,7 +76565,7 @@ saV
 aMn
 anh
 cqm
-aIu
+lDK
 kTL
 abw
 abw
