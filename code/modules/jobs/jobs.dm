@@ -1,9 +1,9 @@
 GLOBAL_LIST_INIT(command_positions,list(
 	"Captain",
 
-	//Fucking Casiostation
-	"NT Captain",
+	//Nonstandard heads
 	"Blueshield",
+	"Communication Officer",
 
 	//Other Heads of staff
 	"Head of Personnel",
@@ -63,9 +63,10 @@ GLOBAL_LIST_INIT(service_positions, list(
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Head of Security",
+	"Nanotrasen Security Operative",
 	"Warden",
 	"Detective",
-//	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
+	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
 	"Security Officer"))
 
 
@@ -103,6 +104,11 @@ GLOBAL_LIST_INIT(logistics_positions, list(
 	"Requisitions Chief",
 	"Deckhand",
 	"Ordinance Technician",
+	//Goonpacked stuff
+	"Chief Engineer",
+	"Station Engineer",
+	"Cargo Technician",
+	"Miner",
 	"Mechanic"))
 
 GLOBAL_LIST_INIT(police_positions, list(
@@ -124,7 +130,6 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"NT Military Police",
 	"NT Vehicle Operator",
 	"NT Marine"))
-
 
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(

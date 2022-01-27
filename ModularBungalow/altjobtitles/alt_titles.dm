@@ -6,7 +6,7 @@
 
 //Engineering
 /datum/job/engineer
-	alt_titles = list("Maintenance Technician", "Engine Technician", "Mechanic", "Electrician", "Signal Technician")
+	alt_titles = list("Maintenance Technician", "Engine Technician", "Electrician", "Signal Technician")
 	senior_title = "Project Co-ordinator"
 
 /datum/job/atmos
