@@ -1,12 +1,12 @@
-/datum/job/cargo_tech
+/datum/job/gooncargo
 	title = "Cargo Technician"
-	department_head = list("Quartermaster")
+	department_head = list("Chief Engineer")
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the quartermaster"
-	selection_color = "#dcba97"
-	mapexclude = list("goonlite")
+	supervisors = "the chief engineer"
+	selection_color = "#fff5cc"
+	maptype = "goonlite"
 
 	outfit = /datum/outfit/job/cargo_tech
 
@@ -22,7 +22,7 @@
 	jobtype = /datum/job/cargo_tech
 
 	belt = /obj/item/pda/cargo
-	ears = /obj/item/radio/headset/headset_cargo
+	ears = /obj/item/radio/headset/headset_eng
 	uniform = /obj/item/clothing/under/rank/cargo/tech
 	l_hand = /obj/item/export_scanner
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/cargo=1)
