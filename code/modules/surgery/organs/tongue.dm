@@ -29,7 +29,7 @@
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
 		/datum/language/nekomimetic,
-		/datum/language/beecommon //BUNGALOW EDIT START
+		/datum/language/beecommon, //BUNGALOW EDIT START
 		/datum/language/spacer,
 		/datum/language/russian // BUNGALOW EDIT END
 	))
