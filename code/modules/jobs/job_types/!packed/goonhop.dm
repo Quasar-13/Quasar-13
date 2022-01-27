@@ -1,4 +1,4 @@
-/datum/job/hop
+/datum/job/goonhop
 	title = "Head of Personnel"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list("Captain")
@@ -7,15 +7,15 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the captain"
-	selection_color = "#809965"
+	selection_color = "#10cc74"
 	req_admin_notify = 1
 	minimal_player_age = 10
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SERVICE
 	exp_type_department = EXP_TYPE_SERVICE
-	mapexclude = list("galaxy", "goonlite")
+	maptype = "goonlite"
 
-	outfit = /datum/outfit/job/hop
+	outfit = /datum/outfit/job/hop/goon
 
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS,
 						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS,
@@ -39,23 +39,11 @@
 
 	display_order = JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL
 
-/datum/outfit/job/hop
-	name = "Head of Personnel"
-	jobtype = /datum/job/hop
+/datum/outfit/job/hop/goon
+	name = "Head of Personnel (Goon)"
+	jobtype = /datum/job/goonhop
 
-	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/heads/hop
-	ears = /obj/item/radio/headset/heads/hop
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
-	shoes = /obj/item/clothing/shoes/sneakers/brown
-	head = /obj/item/clothing/head/hopcap
-	backpack_contents = list(/obj/item/storage/box/ids=1,\
-		/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced/command = 1)
+	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
+	head = null
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/hop)
-
-/datum/outfit/job/hop/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(locate(/datum/holiday/ianbirthday) in SSevents.holidays)
-		undershirt = /datum/sprite_accessory/undershirt/ian
-

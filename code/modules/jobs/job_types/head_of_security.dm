@@ -13,7 +13,7 @@
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_SECURITY
-	mapexclude = list("casio")
+	mapexclude = list("casio", "goonlite")
 
 	outfit = /datum/outfit/job/hos
 

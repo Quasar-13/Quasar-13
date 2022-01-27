@@ -423,6 +423,9 @@
 	if(SSmaptype.maptype == "planetary")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
+	if(SSmaptype.maptype == "goonlite")
+		department_categories = list("Command", "Service", "Security", "Logistics", "Medical", "Science")
+
 	if(SSmaptype.maptype == "casio")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "NT Marines", "Silicon")
 
