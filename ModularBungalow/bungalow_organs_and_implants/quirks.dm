@@ -1,5 +1,5 @@
-//Prosthetic Limbs
-//Right Arm
+/*Prosthetic Limbs
+Right Arm */
 /datum/quirk/prosthetic_limb/r_arm
 	name = "Prosthetic Right Arm"
 	desc = "An accident caused you to your right arm. Because of this, you now have a prosthetic arm!"

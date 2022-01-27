@@ -19,3 +19,4 @@ GLOBAL_LIST(trusted_players)
 
 #undef TRUSTEDPLAYERS
 //Thank god for skyrat.
+
