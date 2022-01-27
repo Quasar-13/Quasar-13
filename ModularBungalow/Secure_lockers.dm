@@ -1,5 +1,4 @@
 //Galaxy Lockers
-
 /obj/structure/closet/secure_closet/captains_galaxy
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper captain's locker"
@@ -115,7 +114,6 @@
 	new /obj/item/storage/photo_album/hos(src)
 	new /obj/item/card/id/departmental_budget/sec(src)
 
-
 /obj/structure/closet/secure_closet/nt_mp
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper Marine Military Police's locker"
@@ -136,4 +134,3 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/choice_beacon/bungalow/spec(src)
 	new /obj/item/door_remote/head_of_security(src)
-

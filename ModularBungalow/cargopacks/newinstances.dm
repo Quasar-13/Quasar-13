@@ -1,6 +1,5 @@
 //This is to create new instances of current items in the code, like having stacks of 20 silver directly.
 
-
 //MINERALS
 
 /obj/item/stack/sheet/mineral/silver/twenty
