@@ -102,7 +102,7 @@
 	infectionpwrdisplay.plane = ABOVE_HUD_PLANE
 	infodisplay += infectionpwrdisplay
 
-	healths = new /obj/screen/healths/blob()
+	healths = new /atom/movable/screen/healths/blob()
 	infodisplay += healths
 
 	using = new /obj/screen/infection/InfectionHelp()
