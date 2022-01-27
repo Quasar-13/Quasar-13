@@ -16,8 +16,7 @@
 	contains = list(/obj/item/choice_beacon/bungalow/structures/workplaces)
 	crate_name = "Structure capsules"
 
-//SECURITY
-
+//SECURITY//
 
 //ARMORY
 
