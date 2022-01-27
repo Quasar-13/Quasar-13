@@ -1,5 +1,4 @@
 //LANGUAGE BOOKS
-
 /datum/blackmarket_item/language
 	category = "Language"
 
@@ -85,7 +84,6 @@
 	availability_prob = 40
 
 //MAGIC
-
 /datum/blackmarket_item/magic
 	category = "Supernatural"
 
@@ -126,7 +124,6 @@
 	availability_prob = 100
 
 //ORGANS
-
 /datum/blackmarket_item/organ
 	category = "Organs"
 
@@ -194,7 +191,6 @@
 	availability_prob = 80
 
 //TREASURES
-
 /datum/blackmarket_item/treasure
 	category = "Treasures"
 

@@ -44,10 +44,10 @@
 	min_val = 0
 
 /datum/config_entry/number/infiltrator_faction_lufr
-	config_entry_value = 18 // It won't appear for human infiltrators.
+	config_entry_value = 18// It won't appear for human infiltrators.
 	min_val = 0
 
-/datum/config_entry/flag/infiltrator_give_codespeak	//If infils should get codespeak on start
+/datum/config_entry/flag/infiltrator_give_codespeak//If infils should get codespeak on start
 
 /datum/config_entry/string/infiltrator_syndicate_message
 	config_entry_value = "You are a syndicate infiltrator, and you are free to complete your objectives in any way you desire, as long as it helps to finish them, of course."

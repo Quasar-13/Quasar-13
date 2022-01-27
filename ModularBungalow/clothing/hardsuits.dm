@@ -58,7 +58,6 @@
 	desc = "Rip and tear, until it is done."
 	slowdown = -0.5
 
-//void tech
 /obj/item/clothing/suit/space/hardsuit/mining/compact
 	name = "compact mining hardsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Although similar to normal mining harsduit, this one seems to be a bit weaker."

@@ -16,8 +16,8 @@
 	crate_name = "Structure capsules"
 
 /////SECURITY/////
-//ARMORY
 
+//ARMORY
 /datum/supply_pack/security/armory/breacherguns
 	name = "Tactical breaching shotguns crate"
 	cost = CARGO_CRATE_VALUE * 6

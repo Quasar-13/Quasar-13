@@ -1,4 +1,4 @@
-//Prosthetic Limb
+//Prosthetic Limbs
 //Right Arm
 /datum/quirk/prosthetic_limb/r_arm
 	name = "Prosthetic Right Arm"
