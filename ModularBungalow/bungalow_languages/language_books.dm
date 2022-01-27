@@ -144,4 +144,3 @@
 	var/real_type = pick(subtypesof(/obj/item/book/granter/language_book))
 	new real_type(loc)
 	return INITIALIZE_HINT_QDEL
-

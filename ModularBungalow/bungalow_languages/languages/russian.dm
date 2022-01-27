@@ -8,7 +8,6 @@
 	icon = 'ModularBungalow/bungalow_languages/icons/language_icons.dmi'
 	icon_state = "commie"
 	default_priority = 90
-	flags = TONGUELESS_SPEECH
 
 /datum/language_holder/russian
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
