@@ -1,15 +1,12 @@
-/*
- 	This file is for any additions to existing object classes that don't explicitly
- 	belong to another subject (such as checking for Vampire status on a mob).
- */
-
-// REAGENTS / FOOD //
+/*	This file is for any additions to existing object classes that don't explicitly
+ 	belong to another subject (such as checking for Vampire status on a mob).*/
+//REAGENTS / FOO
 /obj/item/reagent_containers
-	var/attack_from_any_intent = FALSE		// Now reagents will continue not to splash except in HARM, but food can do it in any intent (though HELP skips and makes you eat it)
+	var/attack_from_any_intent = FALSE// Now reagents will continue not to splash except in HARM, but food can do it in any intent (though HELP skips and makes you eat it)
 /obj/item/reagent_containers/food
 	attack_from_any_intent = TRUE
 
-//  CLOTHING  //
+//CLOTHING
 /obj/item/clothing
 	var/tegu_item = FALSE
 	// icon =  'icons/mob/uniforms.dmi'   <--- This already exists! This is for the item on the floor, NOT the sprite.

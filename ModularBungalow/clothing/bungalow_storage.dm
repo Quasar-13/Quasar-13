@@ -79,8 +79,8 @@
 		new /obj/item/reagent_containers/syringe(src)
 
 /*
- * # PULSE RIFLE KIT BLACKSITE
- */
+	PULSE RIFLE KIT BLACKSITE
+*/
 /obj/item/storage/backpack/duffelbag/deathsquad
 	name = "Pulse Rifle Kit"
 	desc = "The classic deathsquad weapon. Set to Destroy"
@@ -89,8 +89,8 @@
 	new /obj/item/gun/energy/pulse/carbine(src)
 
 /*
- * # MINIGUN KIT BLACKSITE
- */
+	MINIGUN KIT BLACKSITE
+*/
 /obj/item/storage/backpack/duffelbag/deathsquad/minigun
 	name = "Laser Minigun Kit"
 	desc = "Contains the new and improved Deathsquad minigun with a pulse pistol sidearm."
@@ -100,8 +100,8 @@
 	new /obj/item/gun/energy/pulse/pistol(src)
 
 /*
- * # RIFLE AND ION KIT BLACKSITE ERT
- */
+	RIFLE AND ION KIT BLACKSITE ERT
+*/
 /obj/item/storage/backpack/duffelbag/ert
 	name = "E-000 Laser Rifle Kit and Ion Rifle"
 	desc = "Usually given to NT station captains, this rifle is in your hands as well for delicate missions"
@@ -112,8 +112,8 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 /*
- * # LASER SNIPER KIT BLACK SITE ERT
- */
+	LASER SNIPER KIT BLACK SITE ERT
+*/
 /obj/item/storage/backpack/duffelbag/ert/laser
 	name = "Laser Sniper Kit"
 	desc = "Contains one M76 Lethal laser beam rifle and a usable sidearm."
@@ -123,8 +123,8 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 /*
- * # X-RAY KIT BLACKSITE ERT
- */
+	X-RAY KIT BLACKSITE ERT
+*/
 /obj/item/storage/backpack/duffelbag/ert/xray
 	name = "Ultramaterial Rifle Kit"
 	desc = "Contains one fully modified L-792 Ultramaterial laser rifle and a usable sidearm."
@@ -134,8 +134,8 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 /*
- * # ACCELERATION RIFLE KIT BLACKSITE ERT
- */
+	ACCELERATION RIFLE KIT BLACKSITE ERT
+*/
 /obj/item/storage/backpack/duffelbag/ert/pkr
 	name = "Particle Acceleration Rifle Kit"
 	desc = "Contains one Particle Acceleration rifle and sidearm."
@@ -145,8 +145,8 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 /*
- * # DEFAULT MARINE KIT BLACKSITE MARINE
- */
+	DEFAULT MARINE KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine
 	name = "Marine Assault Kit"
 	desc = "The classic ballistic NT weapon. Fires in bursts."
@@ -162,8 +162,8 @@
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 /*
- * # MEDIC KIT BLACKSITE MARINE
- */
+	MEDIC KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/medic
 	name = "Marine Medic Kit"
 	desc = "Contains two medical kits and a PDW."
@@ -183,8 +183,8 @@
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 /*
- * # ENGINEERING KIT BLACKSITE MARINE
- */
+	ENGINEERING KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/engi
 	name = "Marine Engineering Kit"
 	desc = "Contains a toolbelt, a bolt action rifle, and a turret."
@@ -203,8 +203,8 @@
 	new /obj/item/storage/belt/utility/full/engi(src)
 
 /*
- * # SHOTGUN KIT BLACKSITE MARINE
- */
+	SHOTGUN KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/shotgun
 	name = "Marine Trenchman Kit"
 	desc = "This shotgun is for pointmen who are going in first with a shotgun full of buck and a shield."
@@ -228,8 +228,8 @@
 	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
 /*
- * # SMG KIT BLACKSITE MARINE
- */
+	SMG KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/smg
 	name = "Marine SMG Kit"
 	desc = "This semi-auto gun has a fast fire rate for clearing rooms."
@@ -246,8 +246,8 @@
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 /*
- * # MOSIN KIT BLACKSITE MARINE
- */
+	MOSIN KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/mosin
 	name = "Marine Ranger Kit"
 	desc = "This kit is perfect for scouting out areas for enemies.."
@@ -263,8 +263,8 @@
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 
 /*
- * # SAMURAI KIT BLACKSITE MARINE
- */
+  	SAMURAI KIT BLACKSITE MARINE
+*/
 /obj/item/storage/backpack/duffelbag/marine/samurai
 	name = "Marine Blademaster Kit"
 	desc = "This kit is great for frontlining, with a bullet deflecting blade."

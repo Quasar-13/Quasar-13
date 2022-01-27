@@ -5,8 +5,7 @@
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(
 		/obj/item/choice_beacon/bungalow/structures/workplaces,
-		/obj/item/choice_beacon/bungalow/structures/workplaces,
-	)
+		/obj/item/choice_beacon/bungalow/structures/workplaces,)
 	crate_name = "Structure capsules"
 
 /datum/supply_pack/emergency/beacon_workplaces
@@ -16,8 +15,7 @@
 	contains = list(/obj/item/choice_beacon/bungalow/structures/workplaces)
 	crate_name = "Structure capsules"
 
-//SECURITY//
-
+/////SECURITY/////
 //ARMORY
 
 /datum/supply_pack/security/armory/breacherguns

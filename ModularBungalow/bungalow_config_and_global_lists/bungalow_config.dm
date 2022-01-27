@@ -85,10 +85,8 @@
 /datum/config_entry/flag/tombworld_enabled
 
 
-//BUNGALOW DYNAMIC RULESETS
-//////////////////////////////////////////////
-//SYNDICATE INFILTRATORS//
-//////////////////////////////////////////////
+//BUNGALOW DYNAMIC RULESETS//
+//SYNDICATE INFILTRATORS
 /datum/dynamic_ruleset/roundstart/infiltrator
 	name = "Infiltrators"
 	persistent = TRUE

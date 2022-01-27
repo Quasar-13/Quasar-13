@@ -50,7 +50,7 @@
 /client/proc/playcreditsmusic(vol = 85)
 	set waitfor = FALSE
 	if(prefs && (prefs.toggles & SOUND_LOBBY))
-		SEND_SOUND(src, sound(returncreditsmusic(), repeat = 0, wait = 0, volume = vol, channel = CHANNEL_LOBBYMUSIC)) // TEGUSTATION: Play end music! SO SAD!
+		SEND_SOUND(src, sound(returncreditsmusic(), repeat = 0, wait = 0, volume = vol, channel = CHANNEL_LOBBYMUSIC))//TEGUSTATION: Play end music! SO SAD!
 
 /mob/living/carbon/proc/getBruteLoss_nonProsthetic()
 	var/amount = 0
