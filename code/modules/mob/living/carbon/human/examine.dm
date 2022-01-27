@@ -261,7 +261,6 @@
 
 		var/num_bleeds = LAZYLEN(bleeding_limbs)
 		var/list/bleed_text
-
 		if(appears_dead)
 			bleed_text = list("<span class='deadsay'><B>Blood is visible in [t_his] open")
 		else

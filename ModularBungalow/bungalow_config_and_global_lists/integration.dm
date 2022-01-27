@@ -6,6 +6,9 @@
 /obj/item/reagent_containers/food
 	attack_from_any_intent = TRUE
 
+/atom
+	var/use_without_hands = FALSE // Now you can use something regardless of having a hand.
+
 //CLOTHING
 /obj/item/clothing
 	var/tegu_item = FALSE
