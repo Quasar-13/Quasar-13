@@ -1,7 +1,6 @@
 //This is to create new instances of current items in the code, like having stacks of 20 silver directly.
 
 //MINERALS
-
 /obj/item/stack/sheet/mineral/silver/twenty
 	amount = 20
 
@@ -15,7 +14,6 @@
 	amount = 20
 
 //BOXES
-
 /obj/item/storage/box/glowsticks
 	name = "glowsticks box"
 	desc = "A box filled with different colorfull glowsticks. Either for emergency or for partying hard."

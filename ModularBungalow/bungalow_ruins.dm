@@ -1,6 +1,5 @@
 //This is varied code for many random space ruins for BungalowStation
 /*
-
 Search and find code with this to help you port things:
 FSS goes like this : Areas, Objects,Code., ETC
 
@@ -9,7 +8,6 @@ FSS2: Prototype Station
 FSS3: DND Mansion
 FSS4: Bio-Sphere
 DATU: Datums for map templates
-
 */
 /datum/map_template/ruin/space/bungalow/interdyne
 	name = "Old Interdyne Station"
@@ -27,12 +25,10 @@ DATU: Datums for map templates
 	description = "A outpost that used to be a staging area for nuclear operatives. The Syndicate have moved to another location, but this still remains."
 	suffix = "icemoon_underground_abandoned_newcops.dmm"
 
-//////////////////////////////////////////////
-///////////////SPACE RUINs////////////////////
-//////////////////////////////////////////////
-
+///////////////////////////////////
+///////////SPACE RUINs/////////////
+///////////////////////////////////
 //This is varied code for many random space ruins for BungalowStation
-
 /obj/item/paper/crumpled/bloody/Newshowers
 	name = "note"
 	info = {"I certainly did not expect this<br>
@@ -41,62 +37,6 @@ DATU: Datums for map templates
 
 /turf/open/floor/noslip/airless
 	initial_gas_mix = AIRLESS_ATMOS
-
-//FSS2: Prototype Station
-
-/area/ruin/has_grav/prototype
-	requires_power = TRUE
-	outdoors = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
-
-/area/ruin/has_grav/DnDmansion
-	requires_power = FALSE
-	outdoors = FALSE
-	power_light = TRUE
-	power_equip = TRUE
-	power_environ = TRUE
-
-/area/ruin/has_grav/prototype/Captain
-	name = "Prototype Captain's quarter"
-	icon_state = "blue"
-
-/area/ruin/has_grav/prototype/arrivals
-	name = "Prototype Arrivals"
-	icon_state = "hallP"
-
-/area/ruin/has_grav/prototype/hallway
-	name = "Prototype Main Hallway"
-	icon_state = "hallS"
-
-/area/ruin/has_grav/prototype/medsci
-	name = "Prototype Med-Sci"
-	icon_state = "green"
-
-/area/ruin/has_grav/prototype/botany
-	name = "Prototype Botany"
-	icon_state = "garden"
-
-/area/ruin/has_grav/prototype/engineering
-	name = "Prototype Engineering"
-	icon_state = "engi_storage"
-
-/area/ruin/has_grav/prototype/solars
-	name = "Prototype Solars"
-	icon_state = "engi_storage"
-
-/area/ruin/has_grav/prototype/kitchen
-	name = "Prototype Kitchen"
-	icon_state = "kitchen"
-
-/area/ruin/has_grav/prototype/brig
-	name = "Prototype Brig"
-	icon_state = "maint_brig"
-
-/area/ruin/has_grav/prototype/dorms
-	name = "Prototype Dormitories"
-	icon_state = "dorms"
 
 /obj/item/book/story/ProtoStory
 	icon = 'icons/obj/library.dmi'
@@ -204,7 +144,6 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	new /obj/item/circuitboard/computer/solar_control(src)
 
 // FSS3 : DND
-
 /obj/effect/mob_spawn/human/Dndplayer
 	name = "DnD player"
 	roundstart = FALSE
@@ -257,7 +196,6 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	id = /obj/item/card/id/syndicate/anyone
 
 //FSS4: Bio Sphere
-
 /obj/item/card/id/away/biosphere
 	name = "Security ID"
 	desc = "Basic security ID used to access most of facilities inside the sphere."
@@ -278,36 +216,7 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 	back = /obj/item/storage/backpack/security
 	id = /obj/item/card/id/away/biosphere
 
-//FSS4 Areas
-
-/area/ruin/space/has_grav/powered/biosphere
-	name = "Bio Sphere"
-	ambientsounds = list('sound/ambience/ambitech2.ogg', 'sound/ambience/ambitech3.ogg', 'sound/ambience/aurora_caelus_short.ogg')
-
-/area/ruin/space/has_grav/powered/biosphere/dorm_m
-	name = "Bio Sphere Male Dormitories"
-	icon_state = "dorms_male"
-
-/area/ruin/space/has_grav/powered/biosphere/dorm_f
-	name = "Bio Sphere Female Dormitories"
-	icon_state = "dorms_female"
-
-//TEG ruin
-
-/area/ruin/has_grav/teg
-	name = "Abandoned TEG Room"
-	icon_state = "engine"
-
-/area/ruin/has_grav/teg/storage
-	name = "Abandoned TEG Facility Storage"
-	icon_state = "cargo_warehouse"
-
-/area/ruin/has_grav/teg/eva
-	name = "Abadoned TEG Facility EVA"
-	icon_state = "eva"
-
-//DATU
-
+//DATUM
 /datum/map_template/ruin/space/tegu_asteroid
 	id = "bluespaceasteroid"
 	suffix = "tegu_asteroid.dmm"

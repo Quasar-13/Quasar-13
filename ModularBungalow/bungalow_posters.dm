@@ -11,7 +11,6 @@
 
 // Legit
 // Moth poster sprites are created by Azlanon and AyyRobotics
-
 /obj/structure/sign/poster/official/moth1
 	name = "Safety Moth - Poisoning"
 	desc = "This informational poster uses Safety Moth(TM) to ask the viewer not to poison the station donuts."

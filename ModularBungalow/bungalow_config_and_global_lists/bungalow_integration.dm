@@ -17,7 +17,6 @@
 		//  CLOTHING  //
 
 /obj/item/clothing
-
 	var/tegu_item = FALSE
 
 	// icon =  'icons/mob/uniforms.dmi'   <--- This already exists! This is for the item on the floor, NOT the sprite.

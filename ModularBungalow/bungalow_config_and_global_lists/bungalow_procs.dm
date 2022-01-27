@@ -7,7 +7,6 @@
 	return 'ModularTegustation/tegusounds/Tegu_Piano.ogg'
 
 // Can someone see the turf indicated? //
-//
 /proc/check_location_seen(atom/subject, turf/T)
 	if (!isturf(T)) // Only check if I wasn't given a locker or something
 		return FALSE
@@ -33,7 +32,6 @@
 	if (check_turf_is_valid(target, checkFloor))
 		return target
 	return null
-
 
 /proc/check_turf_is_valid(turf/T, checkFloor = TRUE)
 	// Checking for Floor...

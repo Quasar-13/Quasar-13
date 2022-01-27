@@ -71,8 +71,7 @@
 	icon_state = "book_narsie"
 	language_name = "Nar'sian"
 
-
-/*obj/item/book/granter/language_book/ratvarian
+/*/obj/item/book/granter/language_book/ratvarian
 	name = "Your Guide to the One True God"
 	desc = "This guide details how to speak Ratvarian, without being a cultist! The entire tome is making an unsettling ticking noise."
 	learnable_language = /datum/language/ratvar
@@ -80,13 +79,13 @@
 	icon_state = "book_ratvar"
 	language_name = "Ratvarian"*/
 
-///obj/item/book/granter/language_book/piratespeak  //not actually assigned to pirates, so currently unused
-//	name = "To Hornswagle a Bilgerat"
-//	desc = "A longwinded and dull nautical romance novel featuring an alarming amount of sailing jargon. Piratical tripe."
-//	learnable_language = /datum/language/piratespeak
-//	remarks = list("Fore is the front of the ship, aft is the back...", "Port is the ship's left, starboard is the right...", "What even is a piece of eight?", "I wonder if they serve grog at the bar..?", "How to effectively gesture with a hook hand...")
-//	icon_state = "book_pirate"
-//	language_name = "Pirate"
+/*/obj/item/book/granter/language_book/piratespeak  //not actually assigned to pirates, so currently unused
+	name = "To Hornswagle a Bilgerat"
+	desc = "A longwinded and dull nautical romance novel featuring an alarming amount of sailing jargon. Piratical tripe."
+	learnable_language = /datum/language/piratespeak
+	remarks = list("Fore is the front of the ship, aft is the back...", "Port is the ship's left, starboard is the right...", "What even is a piece of eight?", "I wonder if they serve grog at the bar..?", "How to effectively gesture with a hook hand...")
+	icon_state = "book_pirate"
+	language_name = "Pirate"*/
 
 /obj/item/book/granter/language_book/monkey
 	name = "A Book Made Out of a Monkey"
@@ -96,13 +95,14 @@
 	icon_state = "book_monkey"
 	language_name = "Monkey"
 
-///obj/item/book/granter/language_book/mushroom //attached to a commented-out race
-//	name = "'A Fun Guide to Mushrooms' by Mike O'Phile"
-//	desc = "All the puns in this book dont leave mushroom to spore."
-//	learnable_language = /datum/language/mushroom
-//	remarks = list("These puns are positively crimini...", "The writing in this book is very porcini...", "Absolute shittake...", "Please God no morel!", "My first cellium...", "This is giving me trama...")
-//	icon_state = "book_mushroom"
-//	language_name = "Mushroom"
+/*/obj/item/book/granter/language_book/mushroom //attached to a commented-out race
+	name = "'A Fun Guide to Mushrooms' by Mike O'Phile"
+	desc = "All the puns in this book dont leave mushroom to spore."
+	learnable_language = /datum/language/mushroom
+	remarks = list("These puns are positively crimini...", "The writing in this book is very porcini...", "Absolute shittake...", "Please God no morel!", "My first cellium...", "This is giving me trama...")
+	icon_state = "book_mushroom"
+	language_name = "Mushroom"*/
+
 
 /obj/item/book/granter/language_book/draconic
 	name = "Draconic for Dummies"

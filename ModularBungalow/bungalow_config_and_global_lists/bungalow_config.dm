@@ -87,9 +87,7 @@
 
 //BUNGALOW DYNAMIC RULESETS
 //////////////////////////////////////////////
-//                                          //
-//           SYNDICATE INFILTRATORS         //
-//                                          //
+//SYNDICATE INFILTRATORS//
 //////////////////////////////////////////////
 /datum/dynamic_ruleset/roundstart/infiltrator
 	name = "Infiltrators"
