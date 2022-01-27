@@ -276,3 +276,17 @@
 	new /obj/item/clothing/neck/cloak/samurai(src)
 	new /obj/item/vibro_weapon(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
+
+//void tech
+/obj/item/storage/backpack/duffelbag/space_exploration
+	name = "space exploration kit"
+	desc = "A kit containing everything a miner needs to qualify for space exploration."
+	icon_state = "duffel-explorer"
+	inhand_icon_state = "duffel-explorer"
+
+/obj/item/storage/backpack/duffelbag/space_exploration/PopulateContents()
+	new /obj/item/clothing/suit/space/hardsuit/mining/compact(src)
+	new /obj/item/tank/jetpack/oxygen/harness(src)
+	new /obj/item/tank/internals/oxygen(src)
+	new /obj/item/binoculars(src)
+	new /obj/item/gps/mining(src)

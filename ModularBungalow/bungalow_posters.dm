@@ -82,4 +82,3 @@
 	name = "Clown Station 13"
 	desc = "In Space, no one can hear you honk."
 	icon_state = "poster50"
-
