@@ -77,8 +77,3 @@
 /// Bungalow Cloning Flags
 #define CLONING_SUCCESS (1<<0)
 #define CLONING_DELETE_RECORD (1<<1)
-
-/*
- * # Race Defines
- */
-#define isbeefman(A) (is_species(A,/datum/species/beefman))
