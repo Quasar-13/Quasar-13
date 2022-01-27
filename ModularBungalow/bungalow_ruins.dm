@@ -2,15 +2,14 @@
 /*
 
 Search and find code with this to help you port things:
-
 FSS goes like this : Areas, Objects,Code., ETC
 
 FSS1: Space shower
 FSS2: Prototype Station
 FSS3: DND Mansion
 FSS4: Bio-Sphere
-
 DATU: Datums for map templates
+
 */
 /datum/map_template/ruin/space/bungalow/interdyne
 	name = "Old Interdyne Station"
@@ -31,7 +30,6 @@ DATU: Datums for map templates
 //////////////////////////////////////////////
 ///////////////SPACE RUINs////////////////////
 //////////////////////////////////////////////
-
 
 //This is varied code for many random space ruins for BungalowStation
 
@@ -151,7 +149,6 @@ There is no point for a testament, but maybe a confession is appropriate. I've n
 				</body>
 				</html>
 				"}
-
 
 /obj/effect/mob_spawn/human/syndicate_engineer
 	name = "Syndicate Engineer Corps"

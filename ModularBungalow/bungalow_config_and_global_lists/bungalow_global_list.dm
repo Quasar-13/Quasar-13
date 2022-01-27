@@ -9,7 +9,7 @@ GLOBAL_LIST_INIT(mining_traits, list(
 	"rockplanet" = ZTRAITS_ROCKPLANET))
 
 //TEGU
-GLOBAL_LIST_INIT(tegu_job_assignment, list(/*"Deputy",*/"Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative",
+GLOBAL_LIST_INIT(tegu_job_assignment, list("Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative",
 	"Syndicate Engineer", "Syndicate Operative", "Syndicate Overlord", "Syndicate Mastermind", "Syndicate Admiral", "Syndicate Official", "Syndicate", "Syndicate Commander",
 	"Syndicate Ship Captain", "TerraGov Official"))
 

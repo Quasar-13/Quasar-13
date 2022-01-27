@@ -1,12 +1,4 @@
 /*
- * # Traits
- */
-/// Beefmen: Your body is literal room temperature. Does not make you immune to the temp.
-#define TRAIT_COLDBLOODED "coldblooded"
-/// Beefmen: You don't make blood.
-#define TRAIT_NOMARROW "nomarrow"
-
-/*
  * # Defines
  */
 /// Mentorhelp keybind

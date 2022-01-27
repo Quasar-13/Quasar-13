@@ -13,11 +13,11 @@
 			continue
 		GLOB.banned_kids += line
 
-//tegu
+//bungalow
 /datum/config_entry/string/servercaption	// caption name (goes next to server name in BYOND hub)
 
 /datum/config_entry/string/discordurl
-	config_entry_value = "https://discord.gg/SVu782A"
+	config_entry_value = "https://discord.gg/mt9azWXJUq"
 
 /datum/config_entry/number/infiltrator_objectives_amount
 	config_entry_value = 3
@@ -85,13 +85,12 @@
 /datum/config_entry/flag/tombworld_enabled
 
 
-//TEGU DYNAMIC RULESETS
+//BUNGALOW DYNAMIC RULESETS
 //////////////////////////////////////////////
 //                                          //
 //           SYNDICATE INFILTRATORS         //
 //                                          //
 //////////////////////////////////////////////
-
 /datum/dynamic_ruleset/roundstart/infiltrator
 	name = "Infiltrators"
 	persistent = TRUE

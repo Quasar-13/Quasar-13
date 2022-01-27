@@ -1,4 +1,4 @@
-// Tegustation T5 parts DESGNS
+// BungalowStation T5 parts DESGNS
 /datum/design/quantum_cap
 	name = "Quantum Capacitor"
 	desc = "A capacitor engineered with a mix of bluespace and quantum technologies."
@@ -105,7 +105,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 100000)
 
 // OBJECT [XEON]
-
 /obj/item/stock_parts/capacitor/quantumcap
 	name = "Quantum Capacitor"
 	desc = "A capacitor engineered with a mix of bluespace and quantum technologies."
@@ -171,7 +170,7 @@
 	charge = 0
 	update_icon()
 
-/// RPED
+///RPED
 /obj/item/storage/part_replacer/bluespace/tier5
 
 /obj/item/storage/part_replacer/bluespace/tier5/PopulateContents()

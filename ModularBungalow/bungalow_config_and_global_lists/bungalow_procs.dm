@@ -1,5 +1,3 @@
-
-
 // Called from sound.dm to find a track to play
 /client/proc/returncreditsmusic() // TEGUSTATION
 	if (prob(15))
@@ -7,7 +5,6 @@
 	if (prob(5))
 		return 'ModularTegustation/tegusounds/Tegu_Piano_Old.ogg'
 	return 'ModularTegustation/tegusounds/Tegu_Piano.ogg'
-
 
 // Can someone see the turf indicated? //
 //
@@ -69,4 +66,3 @@
 		if (BP.status < 2)
 			amount += BP.burn_dam
 	return amount
-
