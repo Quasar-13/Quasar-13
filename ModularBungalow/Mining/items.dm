@@ -7,4 +7,3 @@
 	if(!ishuman(AM))
 		return
 	. = ..()
-	
