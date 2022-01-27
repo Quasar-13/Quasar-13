@@ -170,7 +170,7 @@ GLOBAL_LIST_EMPTY(infection_commanders)
 		hud_used.healths.maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#e36600'>[round(infection_core.obj_integrity)]</font></div>"
 
 /mob/camera/commander/proc/add_points(points)
-	infection_points = CLAMP(infection_points + points, 0, max_infection_points)
+	infection_points = clamp(infection_points + points, 0, max_infection_points)
 	hud_used.infectionpwrdisplay.maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#82ed00'>[round(infection_points)]</font></div>"
 
 /mob/camera/commander/say(message, bubble_type, var/list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)

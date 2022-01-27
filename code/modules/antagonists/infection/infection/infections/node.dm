@@ -17,9 +17,6 @@
 	. = ..()
 	base_pulse_cd = pulse_cooldown
 
-/obj/structure/infection/node/show_description()
-	return
-
 /obj/structure/infection/node/scannerreport()
 	return "Gradually expands and sustains nearby infectious structures."
 
@@ -41,6 +38,6 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-	pulse_cooldown = base_pulse_cd * CLAMP((world.time - timecreated) / 300, 1, 8)
+	pulse_cooldown = base_pulse_cd * clamp((world.time - timecreated) / 300, 1, 8)
 	if(overmind && world.time >= next_pulse)
 		overmind.infection_core.topulse += src
