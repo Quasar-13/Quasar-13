@@ -1,5 +1,4 @@
 #define TRUSTEDPLAYERS "[global.config.directory]/trusted_players.txt"
-
 GLOBAL_LIST(trusted_players)
 
 /proc/load_trusted_players()
@@ -20,3 +19,4 @@ GLOBAL_LIST(trusted_players)
 
 #undef TRUSTEDPLAYERS
 //Thank god for skyrat.
+

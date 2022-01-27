@@ -1,4 +1,4 @@
-// Tegustation T5 parts DESGNS
+// BungalowStation T5 parts DESGNS
 /datum/design/quantum_cap
 	name = "Quantum Capacitor"
 	desc = "A capacitor engineered with a mix of bluespace and quantum technologies."
@@ -76,7 +76,7 @@
 	lathe_time_factor = 0.2
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
 
-// TECHWEB [XEON]
+// TECHWEB XEON
 /datum/techweb_node/quantum_tech
 	id = "quantum_tech"
 	starting_node = FALSE
@@ -104,8 +104,7 @@
 	prereq_ids = list("emp_super")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 100000)
 
-// OBJECT [XEON]
-
+// OBJECT XEON
 /obj/item/stock_parts/capacitor/quantumcap
 	name = "Quantum Capacitor"
 	desc = "A capacitor engineered with a mix of bluespace and quantum technologies."
@@ -171,7 +170,7 @@
 	charge = 0
 	update_icon()
 
-/// RPED
+///RPED
 /obj/item/storage/part_replacer/bluespace/tier5
 
 /obj/item/storage/part_replacer/bluespace/tier5/PopulateContents()
@@ -184,7 +183,6 @@
 		new /obj/item/reagent_containers/glass/beaker/quantum(src)
 
 ///T5 Motorized wheelchair code///
-
 /obj/vehicle/ridden/wheelchair/motorized/proc/RunOver(mob/living/carbon/H)
 	var/bloodiness = 0
 	log_combat(src, H, "run over", null, "(DAMTYPE: [uppertext(BRUTE)])")

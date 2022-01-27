@@ -143,10 +143,6 @@ List of things to be done:
 
 Codewords to search PRs by:
 
-// Tegustation Deputy - Deputies
-
-// Tegustation Beefmen - Beefmen
-
 // Tegustation Infiltration - Infiltrators
 
 // Tegustation TerraGov - TerraGov events + encryption keys

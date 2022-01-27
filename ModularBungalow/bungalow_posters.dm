@@ -1,5 +1,4 @@
 // Contraband
-
 /obj/structure/sign/poster/contraband/steppy
 	name = "Steppy Flag"
 	desc = "A poster making a simple statement: \"Fuck around, Find out.\" There's a tiny Cargonia logo in the bottom right."
@@ -12,7 +11,6 @@
 
 // Legit
 // Moth poster sprites are created by Azlanon and AyyRobotics
-
 /obj/structure/sign/poster/official/moth1
 	name = "Safety Moth - Poisoning"
 	desc = "This informational poster uses Safety Moth(TM) to ask the viewer not to poison the station donuts."
@@ -82,4 +80,3 @@
 	name = "Clown Station 13"
 	desc = "In Space, no one can hear you honk."
 	icon_state = "poster50"
-

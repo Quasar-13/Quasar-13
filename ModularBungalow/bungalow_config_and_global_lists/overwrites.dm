@@ -38,7 +38,6 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/security/head(src)
 	. = ..()
 
-
 //Medalboxes, was apparently removed at one point? Either way, it was supposed to be ported over.
 /obj/item/storage/lockbox/medal/cmo
 	name = "Chief Medical Officer's medal box"
