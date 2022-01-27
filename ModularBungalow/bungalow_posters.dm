@@ -1,5 +1,4 @@
 // Contraband
-
 /obj/structure/sign/poster/contraband/steppy
 	name = "Steppy Flag"
 	desc = "A poster making a simple statement: \"Fuck around, Find out.\" There's a tiny Cargonia logo in the bottom right."
