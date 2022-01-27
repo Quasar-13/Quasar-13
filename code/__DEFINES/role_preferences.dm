@@ -20,6 +20,7 @@
 #define ROLE_CULTIST			"Cultist"
 #define ROLE_HERETIC			"Heretic"
 #define ROLE_BLOB				"Blob"
+#define ROLE_INFECTION			"infection"
 #define ROLE_NINJA				"Space Ninja"
 #define ROLE_MONKEY				"Monkey"
 #define ROLE_MONKEY_HELMET		"Monkey Mind Magnification Helmet"
@@ -59,6 +60,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_PAI,
 	ROLE_CULTIST = /datum/game_mode/cult,
 	ROLE_BLOB,
+	ROLE_INFECTION,
 	ROLE_NINJA,
 	ROLE_OBSESSED,
 	ROLE_SPACE_DRAGON,

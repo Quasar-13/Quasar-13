@@ -31,6 +31,8 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 	var/atom/movable/screen/blobpwrdisplay
 
+	var/atom/movable/screen/infectionpwrdisplay
+
 	var/atom/movable/screen/alien_plasma_display
 	var/atom/movable/screen/alien_queen_finder
 
@@ -123,6 +125,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	lingchemdisplay = null
 	lingstingdisplay = null
 	blobpwrdisplay = null
+	infectionpwrdisplay = null
 	alien_plasma_display = null
 	alien_queen_finder = null
 	combo_display = null
