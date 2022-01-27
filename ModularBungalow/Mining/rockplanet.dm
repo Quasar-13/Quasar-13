@@ -46,7 +46,6 @@
 	name = "Rockplanet Labor Camp"
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | NO_ALERTS
 
-
 ////////////////////////MAP GENERATOR////////////////////////////////
 
 /datum/map_generator/cave_generator/rockplanet

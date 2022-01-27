@@ -3,7 +3,6 @@
 	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
 	icon_state = "healthmini"
 	inhand_icon_state = "healthanalyzer"
-
 	worn_icon_state = "healthanalyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
@@ -44,7 +43,6 @@
 
 	healthscanparamed(user, M, mode, advanced)
 	add_fingerprint(user)
-
 
 // Used by the PDA medical scanner too
 /proc/healthscanparamed(mob/user, mob/living/M, advanced = FALSE)
