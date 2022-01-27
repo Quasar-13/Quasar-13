@@ -9,6 +9,7 @@
 		"tu", "ego", "vos", "nos", "ea", "ille", "idem", "ipse", "dex", "re", "vi",
 		"fe", "min", "stra", "tum", "iter", "vol", "kris", "vol", "ex"
 	)
+	icon = 'ModularBungalow/bungalow_languages/icons/language_icons.dmi'
 	icon_state = "spacer"
 	default_priority = 90
 

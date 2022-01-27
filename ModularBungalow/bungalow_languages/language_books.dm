@@ -128,6 +128,14 @@
 	icon_state = "book_xeno"
 	language_name = "Xenomorph"
 
+/obj/item/book/granter/language_book/russian
+	name = "Guide to Space-Russian"
+	desc = "A nu cheeki breeki iv damke!"
+	learnable_language = /datum/language/russian
+	remarks = list("What if the space workers owned the means of space production..?", "Permanent revolution or socialism in one star system..?", "Boy I'd sure go for some cheap grain alcohol right now...", "Squatting and you; hip drive...", "Huh, lying down protects you from bears...")
+	language_name = "Space Russian"
+	icon_state = "book_russian"
+
 /obj/item/book/granter/language_book/random
 	icon_state = "random_book"
 
@@ -136,3 +144,4 @@
 	var/real_type = pick(subtypesof(/obj/item/book/granter/language_book))
 	new real_type(loc)
 	return INITIALIZE_HINT_QDEL
+
