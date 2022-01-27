@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/gator
 	name = "alligator"
 	desc = "Thats an alligator. Probably shouldn't wrestle it."
-	icon = 'ModularTegustation/Teguicons/tegumobs.dmi'
+	icon = 'ModularBungalow/zbungalowicons/mobs.dmi'
 	icon_state = "gator"
 	icon_living = "gator"
 	icon_dead ="gator_dead"
