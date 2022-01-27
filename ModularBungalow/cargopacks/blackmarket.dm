@@ -75,15 +75,6 @@
 	stock_max = 3
 	availability_prob = 80
 
-/datum/blackmarket_item/language/russian
-	name = "Russian language book"
-	desc = "A nu cheeki breeki iv damke!"
-	item = /obj/item/book/granter/language_book/russian
-	price_min = 250
-	price_max = 750
-	stock_max = 3
-	availability_prob = 100 //Unbiaised.
-
 /datum/blackmarket_item/language/xeno
 	name = "Xenomorphs language book"
 	desc = "Let's hope you buy this for xenobiological ressearch..."

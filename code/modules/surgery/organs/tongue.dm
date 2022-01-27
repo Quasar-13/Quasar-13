@@ -29,7 +29,6 @@
 		/datum/language/shadowtongue,
 		/datum/language/spacer,
 		/datum/language/terrum,
-		/datum/language/russian, // TEGU
 		/datum/language/nekomimetic,
 		/datum/language/beecommon //bee
 	))
