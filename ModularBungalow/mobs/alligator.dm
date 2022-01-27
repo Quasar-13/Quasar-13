@@ -24,6 +24,9 @@
 	speed = 8
 	glide_size = 2
 	footstep_type = FOOTSTEP_MOB_CLAW
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/weapons/bite.ogg'
 
 /mob/living/simple_animal/hostile/retaliate/gator/steppy
 	name = "Steppy"
@@ -31,14 +34,3 @@
 	gender = MALE
 	gold_core_spawnable = NO_SPAWN
 
-/mob/living/simple_animal/sloth/paperwork/Initialize(mapload) // Shitty way of replacing sloth pets, without editing maps.
-	. = ..()
-	var/turf/T = get_turf(src)
-	new /mob/living/simple_animal/hostile/retaliate/gator/steppy(T)
-	return INITIALIZE_HINT_QDEL
-
-/mob/living/simple_animal/sloth/citrus/Initialize(mapload)
-	. = ..()
-	var/turf/T = get_turf(src)
-	new /mob/living/simple_animal/hostile/retaliate/gator/steppy(T)
-	return INITIALIZE_HINT_QDEL
