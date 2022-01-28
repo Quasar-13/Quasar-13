@@ -8,22 +8,13 @@
 	selection_color = "#073052"
 	maptype = "solgov2"
 
-	outfit = /datum/outfit/job/outpostleader
+	outfit = /datum/outfit/job/outpostagent
 
-	access = list(ACCESS_SYNDICATE, ACCESS_CENT_CAPTAIN)
-	minimal_access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_CAPTAIN)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	paycheck = PAYCHECK_MEDIUM
 
 	display_order = JOB_DISPLAY_ORDER_OUTPOSTLEADER
-
-/datum/outfit/job/outpostleader
-	name = "Syndicate Outpost Leader"
-	jobtype = /datum/job/outpostleader
-
-	id = /obj/item/card/id/black
-	uniform = /obj/item/clothing/under/syndicate/coldres
-	belt = null
-
 
 /obj/effect/landmark/start/outpostleader
 	name = "Syndicate Outpost Leader"
