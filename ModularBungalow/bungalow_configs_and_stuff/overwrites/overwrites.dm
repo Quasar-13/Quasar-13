@@ -23,6 +23,7 @@
 /obj/structure/closet/secure_closet/research_director/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/science/head(src)
 	new /obj/item/gun/energy/e_gun/homedef(src)
+	new /obj/item/clothing/glasses/hud/diagnostic/sunglasses(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/captains/Initialize()
