@@ -323,10 +323,7 @@
 	belt = /obj/item/lighter
 	r_pocket = /obj/item/gun/ballistic/revolver/hakita
 	head = /obj/item/clothing/head/beret/sec/navyhos/black
-	backpack_contents = list(/obj/item/clothing/suit/armor/captain/flag/admiral/fancy=1,\
-		/obj/item/clothing/suit/armor/captain/flag/admiral/combat=1,\
-		/obj/item/clothing/suit/armor/captain/flag/admiral/offduty=1)
-	accessory = /obj/item/clothing/accessory/medal/rank/nt/adm
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/gadm
 
 
 
