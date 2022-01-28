@@ -35,6 +35,7 @@
 					   You should see our reinforcements warp in near the emergency shuttle outpost as we send them in.\n\n\
 					   Good luck. I'll be here to notify you should anything change for better or for worse.",
 					  "Biohazard Containment Commander", 'sound/misc/notice1.ogg')
+	set_security_level(SEC_LEVEL_GAMMA)
 
 /obj/structure/infection/core/show_infection_menu(var/mob/camera/commander/C)
 	return
