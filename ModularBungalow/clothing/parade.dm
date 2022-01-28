@@ -9,6 +9,11 @@
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
+//Parade suit
+/obj/item/clothing/under/misc/parade/comms
+	desc = "A black suit blue trim. Worn by the cheerful Communications Officer"
+	name = "communication officer's parade uniform"
+	icon_state = "spaceship_comms"
 
 //QM Parade suit
 /obj/item/clothing/under/misc/parade/qm
