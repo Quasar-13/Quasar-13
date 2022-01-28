@@ -13,6 +13,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SUPPLY
 	exp_type_department = EXP_TYPE_CREW // This is so the jobs menu can work properly
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/quartermaster
 

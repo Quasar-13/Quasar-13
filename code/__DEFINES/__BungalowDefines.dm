@@ -1,12 +1,4 @@
 /*
- * # Traits
- */
-/// Beefmen: Your body is literal room temperature. Does not make you immune to the temp.
-#define TRAIT_COLDBLOODED "coldblooded"
-/// Beefmen: You don't make blood.
-#define TRAIT_NOMARROW "nomarrow"
-
-/*
  * # Defines
  */
 /// Mentorhelp keybind
@@ -77,8 +69,3 @@
 /// Bungalow Cloning Flags
 #define CLONING_SUCCESS (1<<0)
 #define CLONING_DELETE_RECORD (1<<1)
-
-/*
- * # Race Defines
- */
-#define isbeefman(A) (is_species(A,/datum/species/beefman))

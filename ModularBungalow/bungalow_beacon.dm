@@ -115,14 +115,14 @@
 	new /obj/item/katana/captain(src)
 
 //BLACKSITE
-/obj/item/choice_beacon/bungalow/deathsquad
+/obj/item/choice_beacon/bungalow/combat/deathsquad
 	name = "NT Death Commando beacon"
 	desc = "A beacon the Death Commando uses to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/deathsquad
 	selection_message = "<span class='hear'>Get out there!</span>"
 
 //BLACKSITE ERT
-/obj/item/choice_beacon/bungalow/deathsquad/ert
+/obj/item/choice_beacon/bungalow/combat/ert
 	name = "ERT Officer beacon"
 	desc = "A beacon the ERT officers use to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/ert
@@ -132,7 +132,7 @@
 
  * This is a subtype of the ERT beacon, to avoid needless copypaste.
  */
-/obj/item/choice_beacon/bungalow/deathsquad/marine
+/obj/item/choice_beacon/bungalow/combat/marine
 	name = "NT marine beacon"
 	desc = "A beacon the marines use to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/marine
