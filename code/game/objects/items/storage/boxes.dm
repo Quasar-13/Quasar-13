@@ -872,6 +872,17 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/beanbag(src)
 
+/obj/item/storage/box/wt550ammo
+	name = "box of wt550 magazines"
+	desc = "A box full of wt550 magazines."
+	icon_state = "box"
+	illustration = null
+
+/obj/item/storage/box/wt550ammo/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_box/magazine/wt550m9(src)
+
+
 /obj/item/storage/box/actionfigure
 	name = "box of action figures"
 	desc = "The latest set of collectable action figures."
