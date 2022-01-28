@@ -1,12 +1,12 @@
 /datum/job/outpostagent
-	title = "Syndicate Outpost Agent"
+	title = "Syndicate Agent"
 	department_head = list("Outpost Leader")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the outpost leader"
-	selection_color = "#073052"
-	maptype = "solgov2"
+	selection_color = "#ff3322"
+	maptype = "solgov"
 
 	outfit = /datum/outfit/job/outpostagent
 

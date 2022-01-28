@@ -6,7 +6,7 @@
 	spawn_positions = 1
 	supervisors = "No one"
 	selection_color = "#073052"
-	maptype = "solgov2"
+	maptype = "solgov"
 
 	outfit = /datum/outfit/job/remlieutenant
 

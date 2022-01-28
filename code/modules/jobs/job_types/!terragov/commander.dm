@@ -7,7 +7,6 @@
 	supervisors = "space law"
 	selection_color = "#89c7b1"
 	maptype = "solgov"
-	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/solgov
 

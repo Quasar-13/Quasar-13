@@ -15,7 +15,7 @@
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_COMMAND
 
 
 

@@ -1,12 +1,12 @@
 /datum/job/remaux
-	title = "NT Remnant Auxilliary"
+	title = "NT Remnant Auxiliary"
 	department_head = list("NT Remnant Lieutenant")
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "NT Remnant Lieutenant"
-	selection_color = "#073052"
-	maptype = "solgov2"
+	selection_color = "#134975"
+	maptype = "solgov"
 
 	outfit = /datum/outfit/job/remprivate
 
@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVEAUX
 
 /obj/effect/landmark/start/remaux
-	name = "NT Remnant Auxilliary"
+	name = "NT Remnant Auxiliary"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/ntremnant/Initialize()

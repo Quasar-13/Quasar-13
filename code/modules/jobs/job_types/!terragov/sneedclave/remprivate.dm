@@ -1,12 +1,12 @@
 /datum/job/remprivate
-	title = "NT Remnant Private"
+	title = "NT Remnant Cadet"
 	department_head = list("NT Remnant Lieutenant")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "NT Remnant Lieutenant"
-	selection_color = "#073052"
-	maptype = "solgov2"
+	selection_color = "#134975"
+	maptype = "solgov"
 
 	outfit = /datum/outfit/job/remprivate
 
@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVEPVT
 
 /datum/outfit/job/remprivate
-	name = "NT Remnant (Private)"
+	name = "NT Remnant (Cadet)"
 	jobtype = /datum/job/remprivate
 
 	id = /obj/item/card/id
@@ -27,7 +27,7 @@
 
 
 /obj/effect/landmark/start/remprivate
-	name = "NT Remnant Private"
+	name = "NT Remnant Cadet"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/ntremnant/Initialize()

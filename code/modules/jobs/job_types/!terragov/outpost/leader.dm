@@ -1,18 +1,18 @@
 /datum/job/outpostleader
-	title = "Syndicate Outpost Leader"
+	title = "Outpost Leader"
 	department_head = list("Syndicate Command")
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Syndicate Command"
-	selection_color = "#073052"
-	maptype = "solgov2"
+	selection_color = "#ab1f18"
+	maptype = "solgov"
 
 	outfit = /datum/outfit/job/outpostagent
 
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
-	paycheck = PAYCHECK_MEDIUM
+	paycheck = PAYCHECK_COMMAND
 
 	display_order = JOB_DISPLAY_ORDER_OUTPOSTLEADER
 
