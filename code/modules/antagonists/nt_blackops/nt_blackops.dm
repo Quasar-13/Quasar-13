@@ -25,6 +25,9 @@
 	if(give_objectives)
 		forge_traitor_objectives()
 	finalize_traitor()
+	var/datum/component/uplink/U = owner.find_syndicate_uplink()
+	if (U)
+		U.set_gamemode(/datum/game_mode/traitor/nt_blackops) //So NT Black Ops can access the NT-specific uplink
 	return ..()
 
 /datum/antagonist/traitor/nt_blackops/on_removal()

@@ -38,21 +38,23 @@
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/nuclear)
 
+var/uplink_type = /obj/item/uplink/nt
+
 /obj/item/uplink/nt
-name = "NT Uplink"
+	name = "NT Black Ops Uplink"
 
 /obj/item/uplink/nt/Initialize()
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/traitor/nt_blackops)
 
-/obj/item/uplink/nt
-name = "NT Uplink"
+/obj/item/uplink/iaa
+	name = "NT IAA Uplink"
 
-/obj/item/uplink/nt/Initialize()
+/obj/item/uplink/iaa/Initialize()
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
-	hidden_uplink.set_gamemode(/datum/game_mode/traitor/nt_blackops)
+	hidden_uplink.set_gamemode(/datum/game_mode/traitor/internal_affairs)
 /obj/item/uplink/nuclear/debug
 	name = "debug nuclear uplink"
 

@@ -55,3 +55,11 @@
 	..()
 	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis(src)
 	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis/l(src)
+
+/obj/item/storage/briefcase/nano_mantis
+	desc = "A sleek briefcase. It has the letters HEPHAESTUS. Industries, printed in gold on it"
+
+/obj/item/storage/briefcase/syndie_mantis/PopulateContents()
+	..()
+	new /obj/item/autosurgeon/organ/nano_mantis(src)
+	new /obj/item/autosurgeon/organ/nano_mantis/l(src)

@@ -37,6 +37,17 @@ BUNDLES
 			as well as talk on an encrypted CentCom channel with other agents that have the same key."
 	item = /obj/item/encryptionkey/cent_agent
 	cost = 2
-	surplus = 75
+	surplus = 0
 	restricted = TRUE
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+//IMPLANTS
+
+/datum/uplink_item/implants/nano_mantis
+	name = "HEPHAESTUS. Industries Mantis Blades Kit"
+	desc = "A Briefcase containing Mantis Blades redesigned by our poached HEPHAESTUS. Industries robotocists, based on the old design\
+			Unlike the reverse-engineered deisgns of the G.O.R.L.E.X Mantis Blades, these are designed in a more defensive nature, able to block most melee attacks\
+			The Briefcase comes with two autosurgeons, remember to use them wisely"
+	item = /obj/item/storage/briefcase/nano_mantis
+	cost = 16
+	surplus = 0
