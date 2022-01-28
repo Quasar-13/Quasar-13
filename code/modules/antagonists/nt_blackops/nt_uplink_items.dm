@@ -15,8 +15,8 @@ BUNDLES
 
 /datum/uplink_item/dangerous/pulse_carbine
 	name = "P-05 Pulse Rifle"
-	desc = "The strongest and loudest item we are allowed to give you, make sure to use it wisely\
-			Commonly used by our Death Commandos, our Pulse weapons have incredible power, able to destroy reinforced walls in few shots\
+	desc = "The strongest and loudest item we are allowed to give you, make sure to use it wisely. \
+			Commonly used by our Death Commandos, our Pulse weapons have incredible power, able to destroy reinforced walls in few shots. \
 			Remember, don't lose it"
 	item = /obj/item/gun/energy/pulse/carbine
 	cost = 20
@@ -50,6 +50,6 @@ BUNDLES
 			Unlike the reverse-engineered deisgns of the G.O.R.L.E.X Mantis Blades, these are designed in a more defensive nature, able to block most melee attacks. \
 			The Briefcase comes with two autosurgeons, remember to use them wisely"
 	item = /obj/item/storage/briefcase/nano_mantis
-		include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 	cost = 16
 	surplus = 0
