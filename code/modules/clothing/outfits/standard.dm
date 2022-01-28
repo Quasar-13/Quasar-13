@@ -274,7 +274,7 @@
 	suit = /obj/item/clothing/suit/armor/captain/flag/provost
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
 	belt = /obj/item/lighter
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	r_pocket = /obj/item/gun/ballistic/revolver/hakita
 	head = /obj/item/clothing/head/beret/sec
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/pvst
 
@@ -285,7 +285,7 @@
 	suit = /obj/item/clothing/suit/armor/captain/flag
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/lighter
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	r_pocket = /obj/item/gun/ballistic/revolver/hakita
 	head = null
 	neck = /obj/item/clothing/neck/cloak/flag
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/radm
@@ -297,21 +297,35 @@
 	suit = /obj/item/clothing/suit/armor/captain/flag/vadm
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/lighter
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	r_pocket = /obj/item/gun/ballistic/revolver/hakita
 	head = /obj/item/clothing/head/beret/ce
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/vadm
 
 
-/datum/outfit/centcom/commander/admiral
-	name = "Admiral"
+/datum/outfit/centcom/commander/fadm
+	name = "Fleet Admiral"
 	uniform = /obj/item/clothing/under/bni/officer
-	suit = /obj/item/clothing/suit/armor/captain/flag/admiral
-	glasses = /obj/item/clothing/glasses/thermal/eyepatch
+	suit = /obj/item/clothing/suit/armor/captain/flag/fadm
+	glasses = null
 	belt = /obj/item/lighter
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol/deagle/camo
+	r_pocket = /obj/item/gun/ballistic/revolver/hakita
+	head = /obj/item/clothing/head/beret/sec/navyhos/black
+	backpack_contents = list(/obj/item/clothing/suit/armor/captain/flag/fadm/fancy=1,\
+		/obj/item/clothing/suit/armor/captain/flag/fadm/combat=1,\
+		/obj/item/clothing/suit/armor/captain/flag/fadm/offduty=1)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/fadm
+
+/datum/outfit/centcom/commander/gadm
+	name = "Grand Admiral"
+	uniform = /obj/item/clothing/under/bni/officer
+	suit = /obj/item/clothing/suit/armor/captain/flag/gadm
+	glasses = null
+	belt = /obj/item/lighter
+	r_pocket = /obj/item/gun/ballistic/revolver/hakita
 	head = /obj/item/clothing/head/beret/sec/navyhos/black
 	backpack_contents = list(/obj/item/clothing/suit/armor/captain/flag/admiral/fancy=1,\
-		/obj/item/clothing/suit/armor/captain/flag/admiral/combat=1)
+		/obj/item/clothing/suit/armor/captain/flag/admiral/combat=1,\
+		/obj/item/clothing/suit/armor/captain/flag/admiral/offduty=1)
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/adm
 
 
