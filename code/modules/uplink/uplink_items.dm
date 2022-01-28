@@ -1570,6 +1570,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 2
 	surplus = 75
 	restricted = TRUE
+	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
 /datum/uplink_item/device_tools/syndietome
 	name = "Syndicate Tome"
