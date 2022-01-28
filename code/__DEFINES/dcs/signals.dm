@@ -554,6 +554,10 @@
 #define COMSIG_HOSTILE_ATTACKINGTARGET "hostile_attackingtarget"
 	#define COMPONENT_HOSTILE_NO_ATTACK (1<<0)
 
+// /mob/living/simple_animal/hostile signals
+#define COMSIG_HOSTILE_ATTACKINGTARGET "hostile_attackingtarget"
+	#define COMPONENT_HOSTILE_NO_ATTACK 1
+
 // /obj signals
 
 ///from base of [/obj/proc/take_damage]: (damage_amount, damage_type, damage_flag, sound_effect, attack_dir, aurmor_penetration)
@@ -720,6 +724,9 @@
 #define COMSIG_RADIO_NEW_FREQUENCY "radio_new_frequency"
 
 // /obj/item/pen signals
+
+// /obj/item/projectile signals
+#define COMSIG_PROJECTILE_ON_HIT "projectile_on_hit"			// called in projectile on_hit and sends signal to the firer of the projectile
 
 ///called after rotation in /obj/item/pen/attack_self(): (rotation, mob/living/carbon/user)
 #define COMSIG_PEN_ROTATED "pen_rotated"
@@ -976,6 +983,9 @@
 ///from base of datum/action/proc/Trigger(): (datum/action)
 #define COMSIG_ACTION_TRIGGER "action_trigger"
 	#define COMPONENT_ACTION_BLOCK_TRIGGER (1<<0)
+
+// /datum/component/infection/upgrade signals
+#define COMSIG_INFECTION_ALTER_PROJECTILE "infection_alter_projectile" 			// /obj/structure/infection/turret before projectile is shot
 
 //Xenobio hotkeys
 
