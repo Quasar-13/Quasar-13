@@ -328,6 +328,13 @@
 	suffix = "icemoon_underground_techcult.dmm"
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/jungleplanet/techcult
+	name = "Adeptus Mechanicus"
+	id = "techcult"
+	description = "An old base, filled with religious fanatics praising the entity they call 'Machine God'."
+	suffix = "jungle_techcult.dmm"
+	allow_duplicates = FALSE
+
 /***************** Researches *****************/
 
 //Main Tech

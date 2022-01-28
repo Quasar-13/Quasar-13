@@ -1,5 +1,4 @@
 //LANGUAGE BOOKS
-
 /datum/blackmarket_item/language
 	category = "Language"
 
@@ -75,15 +74,6 @@
 	stock_max = 3
 	availability_prob = 80
 
-/datum/blackmarket_item/language/russian
-	name = "Russian language book"
-	desc = "A nu cheeki breeki iv damke!"
-	item = /obj/item/book/granter/language_book/russian
-	price_min = 250
-	price_max = 750
-	stock_max = 3
-	availability_prob = 100 //Unbiaised.
-
 /datum/blackmarket_item/language/xeno
 	name = "Xenomorphs language book"
 	desc = "Let's hope you buy this for xenobiological ressearch..."
@@ -94,7 +84,6 @@
 	availability_prob = 40
 
 //MAGIC
-
 /datum/blackmarket_item/magic
 	category = "Supernatural"
 
@@ -135,7 +124,6 @@
 	availability_prob = 100
 
 //ORGANS
-
 /datum/blackmarket_item/organ
 	category = "Organs"
 
@@ -203,7 +191,6 @@
 	availability_prob = 80
 
 //TREASURES
-
 /datum/blackmarket_item/treasure
 	category = "Treasures"
 

@@ -1,0 +1,17 @@
+/*	This file is for any additions to existing object classes that don't explicitly
+ 	belong to another subject (such as checking for Vampire status on a mob).*/
+//REAGENTS / FOOD
+/obj/item/reagent_containers
+	var/attack_from_any_intent = FALSE// Now reagents will continue not to splash except in HARM, but food can do it in any intent (though HELP skips and makes you eat it)
+/obj/item/reagent_containers/food
+	attack_from_any_intent = TRUE
+
+/atom
+	var/use_without_hands = FALSE // Now you can use something regardless of having a hand.
+
+//CLOTHING
+/obj/item/clothing
+	var/tegu_item = FALSE
+	// icon =  'icons/mob/uniforms.dmi'   <--- This already exists! This is for the item on the floor, NOT the sprite.
+	//var/worn_icon = 'icon/mob/clothing/under/default.dmi' // 'icons/mob/uniform.dmi'  // We created this to add to the sprite! (human/update_icons.dm)
+	// REMOVED They did it for us.
