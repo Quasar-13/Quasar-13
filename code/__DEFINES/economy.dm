@@ -11,6 +11,9 @@
 #define PAYCHECK_COMMAND 200
 #define PAYCHECK_CENTCOM 350
 #define PAYCHECK_CENTCOMCOMMAND 500
+//SKYRAT STUFF, GODDAMIT THOSE FURRIES HAVE COOL STUFF
+#define PAYCHECK_CYCLE_WAIT 4 //How many cycles of SSeconomy firing we're waiting till we get a paycheck. Each cycle is 5 minutes, i think
+#define PAYCHECK_CYCLE_AMOUNT 4 //How many paychecks we get when we finally do get it
 
 #define STATION_TARGET_BUFFER 40
 
