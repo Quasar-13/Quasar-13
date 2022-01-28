@@ -32,3 +32,6 @@
 	SIGNAL_HANDLER
 
 	return gravity_check(null, source, gravs)
+
+/datum/component/forced_gravity/space
+	ignore_space = TRUE
