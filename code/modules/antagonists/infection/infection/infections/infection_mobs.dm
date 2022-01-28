@@ -201,10 +201,6 @@
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/Initialize(mapload, var/obj/structure/infection/factory/linked_node, commander)
 	. = ..()
-	if(overmind)
-		upgrade_points = overmind.all_upgrade_points
-	else
-		upgrade_points = 5
 	for(var/upgrade_type in upgrade_types)
 		AddComponent(upgrade_type)
 
@@ -250,8 +246,6 @@
 	var/list/choices = list()
 	var/list/upgrades_temp = list()
 	for(var/datum/component/infection/upgrade/U in get_upgrades())
-		if(U.times == 0)
-			continue
 		var/upgrade_index = "[U.name] ([U.cost])"
 		choices[upgrade_index] = image(icon = U.radial_icon, icon_state = U.radial_icon_state)
 		upgrades_temp += U
@@ -297,6 +291,7 @@
 	. = ..()
 	if(updating_health)
 		update_health_hud()
+		SEND_SIGNAL(src, COMSIG_INFECTION_TAKE_DAMAGE)
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/update_health_hud()
 	if(hud_used)
