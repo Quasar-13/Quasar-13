@@ -38,8 +38,6 @@
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/nuclear)
 
-var/uplink_type = /obj/item/uplink/nt
-
 /obj/item/uplink/nt
 	name = "NT Black Ops Uplink"
 
