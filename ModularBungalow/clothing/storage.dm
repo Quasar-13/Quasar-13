@@ -277,7 +277,7 @@
 	new /obj/item/vibro_weapon(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 
-//void tech
+//Space miner
 /obj/item/storage/backpack/duffelbag/space_exploration
 	name = "space exploration kit"
 	desc = "A kit containing everything a miner needs to qualify for space exploration."
