@@ -15,7 +15,6 @@
 
 /obj/structure/infection/core/Initialize(mapload, client/new_overmind = null, new_rate = 2, placed = 0)
 	GLOB.infection_core = src
-	START_PROCESSING(SSobj, src)
 	GLOB.poi_list |= src
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
@@ -28,6 +27,7 @@
 	SSevents.frequency_upper = DOOM_CLOCK_EVENT_DELAY
 	SSevents.reschedule()
 	. = ..()
+	START_PROCESSING(SSobj, src)
 
 /obj/structure/infection/core/proc/generate_announcement()
 	priority_announce("The infection core has landed, I hope you've prepared well.\n\n\

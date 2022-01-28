@@ -196,15 +196,16 @@
 	var/spent_upgrade_points = 0
 	var/max_upgrade_points = 1000
 	var/cycle_cooldown = 0 // cooldown before you can cycle nodes again
-	var/list/upgrade_types = list(/datum/component/infection/upgrade/spore/type_change/myconid_spore,
-								  /datum/component/infection/upgrade/spore/type_change/infector_spore,
-								  /datum/component/infection/upgrade/spore/type_change/hunter_spore,
-								  /datum/component/infection/upgrade/spore/type_change/destructive_spore)
+	var/list/upgrade_types = list(/datum/infection_upgrade/spore_type_change/myconid_spore,
+								  /datum/infection_upgrade/spore_type_change/infector_spore,
+								  /datum/infection_upgrade/spore_type_change/hunter_spore,
+								  /datum/infection_upgrade/spore_type_change/destructive_spore)
+	var/list/upgrades = list()
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/Initialize(mapload, var/obj/structure/infection/factory/linked_node, commander)
 	. = ..()
 	for(var/upgrade_type in upgrade_types)
-		AddComponent(upgrade_type)
+		upgrades += new upgrade_type()
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/Stat()
 	..()
@@ -258,7 +259,7 @@
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/upgrade_menu(var/found_node)
 	var/list/choices = list()
 	var/list/upgrades_temp = list()
-	for(var/datum/component/infection/upgrade/U in get_upgrades())
+	for(var/datum/infection_upgrade/U in get_upgrades())
 		var/upgrade_index = "[U.name] ([U.cost])"
 		choices[upgrade_index] = image(icon = U.radial_icon, icon_state = U.radial_icon_state)
 		upgrades_temp += U
@@ -269,15 +270,15 @@
 	var/upgrade_index = choices.Find(choice)
 	if(!upgrade_index)
 		return
-	var/datum/component/infection/upgrade/Chosen = upgrades_temp[upgrade_index]
+	var/datum/infection_upgrade/Chosen = upgrades_temp[upgrade_index]
 	if(can_upgrade(Chosen.cost))
 		spent_upgrade_points += Chosen.cost
-		Chosen.do_upgrade()
+		Chosen.do_upgrade(src)
 		to_chat(src, "<span class='warning'>Successfully upgraded [Chosen.name]!</span>")
 	return
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/get_upgrades()
-	return GetComponents(/datum/component/infection/upgrade)
+	return upgrades
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/can_upgrade(cost = 1)
 	var/diff = upgrade_points - cost
@@ -289,7 +290,7 @@
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/show_description()
 	to_chat(src, "<span class='cultlarge'>Upgrades List</span>")
-	for(var/datum/component/infection/upgrade/U in get_upgrades())
+	for(var/datum/infection_upgrade/U in get_upgrades())
 		if(U.times == 0)
 			continue
 		to_chat(src, "<b>[U.name]:</b> [U.description]")
@@ -305,7 +306,6 @@
 	. = ..()
 	if(updating_health)
 		update_health_hud()
-		SEND_SIGNAL(src, COMSIG_INFECTION_TAKE_DAMAGE)
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/update_health_hud()
 	if(hud_used)
@@ -392,7 +392,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	can_cross_beacons = TRUE
-	upgrade_types = list(/datum/component/infection/upgrade/spore/pulling)
+	upgrade_types = list()
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/infector
 	name = "infector spore"
@@ -403,7 +403,7 @@
 	maxHealth = 80
 	melee_damage_lower = 20
 	melee_damage_upper = 20
-	upgrade_types = list(/datum/component/infection/upgrade/spore/zombification)
+	upgrade_types = list()
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/hunter
 	name = "hunter spore"
@@ -415,7 +415,7 @@
 	speed = -1
 	melee_damage_lower = 20
 	melee_damage_upper = 20
-	upgrade_types = list(/datum/component/infection/upgrade/spore/lifesteal)
+	upgrade_types = list(/datum/infection_upgrade/lifesteal)
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/destructive
 	name = "destructive spore"
@@ -427,4 +427,4 @@
 	speed = 1
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	upgrade_types = list(/datum/component/infection/upgrade/spore/knockback)
+	upgrade_types = list(/datum/infection_upgrade/hydraulic_fists)
