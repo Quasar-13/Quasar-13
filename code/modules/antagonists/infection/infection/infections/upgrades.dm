@@ -32,10 +32,7 @@
 	cost = 1
 
 /datum/infection/upgrade/defensive_spore/upgrade_effect(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/IS)
-	var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/defensive/DS = new /mob/living/simple_animal/hostile/infection/infectionspore/sentient/defensive(IS.loc, null, IS.overmind)
-	IS.mind.transfer_to(DS)
-	DS.upgrade_points = IS.upgrade_points
-	qdel(IS)
+	IS.transfer_to_type(/mob/living/simple_animal/hostile/infection/infectionspore/sentient/defensive)
 	return
 
 /datum/infection/upgrade/offensive_spore
@@ -45,10 +42,7 @@
 	cost = 1
 
 /datum/infection/upgrade/offensive_spore/upgrade_effect(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/IS)
-	var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/offensive/OS = new /mob/living/simple_animal/hostile/infection/infectionspore/sentient/offensive(IS.loc, null, IS.overmind)
-	IS.mind.transfer_to(OS)
-	OS.upgrade_points = IS.upgrade_points
-	qdel(IS)
+	IS.transfer_to_type(/mob/living/simple_animal/hostile/infection/infectionspore/sentient/offensive)
 	return
 
 /datum/infection/upgrade/supportive_spore
@@ -58,27 +52,7 @@
 	cost = 1
 
 /datum/infection/upgrade/supportive_spore/upgrade_effect(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/IS)
-	var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/supportive/SS = new /mob/living/simple_animal/hostile/infection/infectionspore/sentient/supportive(IS.loc, null, IS.overmind)
-	IS.mind.transfer_to(SS)
-	SS.upgrade_points = IS.upgrade_points
-	qdel(IS)
-	return
-
-/*
-//
-// Offensive Spore Upgrades
-//
-*/
-
-/datum/infection/upgrade/spore/speed_boost
-	name = "Speed Boost"
-	description = "Increases your movement speed."
-	radial_icon_state = "speed_boost"
-	cost = 1
-	times = 3
-
-/datum/infection/upgrade/spore/speed_boost/upgrade_effect(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/offensive/OS)
-	OS.move_to_delay *= 0.8
+	IS.transfer_to_type(/mob/living/simple_animal/hostile/infection/infectionspore/sentient/supportive)
 	return
 
 /*
@@ -230,7 +204,8 @@
 /datum/infection/upgrade/turret/knockback/projectile_hit(var/obj/structure/infection/turret/T, atom/target)
 	if(ismovableatom(target))
 		var/atom/movable/throwTarget = target
-		throwTarget.throw_at(get_ranged_target_turf(throwTarget, get_dir(T, throwTarget), 3), 3, 4)
+		if(!throwTarget.anchored)
+			throwTarget.throw_at(get_ranged_target_turf(throwTarget, get_dir(T, throwTarget), 3), 3, 4)
 	return
 
 /datum/infection/upgrade/turret/shield_creator

@@ -34,9 +34,9 @@
 	add_overlay(mutable_appearance('icons/mob/blob.dmi', "blob_node_overlay"))
 
 /obj/structure/infection/node/Destroy()
+	. = ..()
 	GLOB.infection_nodes -= src
 	STOP_PROCESSING(SSobj, src)
-	return ..()
 
 	pulse_cooldown = base_pulse_cd * clamp((world.time - timecreated) / 300, 1, 8)
 	if(overmind && world.time >= next_pulse)

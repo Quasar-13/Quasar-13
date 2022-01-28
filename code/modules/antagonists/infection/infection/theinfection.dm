@@ -75,6 +75,7 @@
 	var/datum/infection/upgrade/Chosen = upgrades_temp[upgrade_index]
 	if(overmind.can_buy(Chosen.cost))
 		Chosen.do_upgrade(src)
+		to_chat(overmind, "<span class='warning'>Successfully upgraded [Chosen.name]!</span>")
 	return
 
 /obj/structure/infection/proc/show_description()
@@ -83,11 +84,19 @@
 		to_chat(overmind, "<span class='notice'>[U.name]: [U.description]</span>")
 	return
 
+/obj/structure/infection/relaymove(mob/user)
+	if(istype(user, /mob/living/simple_animal/hostile/infection/infectionspore/sentient))
+		var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/I = user
+		I.cycle_node()
+	return
+
 /obj/structure/infection/Destroy()
 	if(atmosblock)
 		atmosblock = FALSE
 		air_update_turf(1)
 	GLOB.infections -= src //it's no longer in the all infections list either
+	for(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/I in contents)
+		I.cycle_node()
 	return ..()
 
 /obj/structure/infection/blob_act()
@@ -235,7 +244,7 @@
 	return
 
 /obj/structure/infection/ex_act(severity)
-	take_damage(rand(30/severity, 60/severity), BRUTE, "bomb", 0)
+	take_damage(rand(30/severity, 60/severity) * 4, BRUTE, "bomb", 0)
 
 /obj/structure/infection/tesla_act(power)
 	..()
@@ -352,16 +361,6 @@
 	if(ismob(mover))
 		var/mob/M = mover
 		M.add_movespeed_modifier(MOVESPEED_ID_INFECTION_STRUCTURE, update=TRUE, priority=100, multiplicative_slowdown=3)
-	// ambience, would use area code but fairly certain you cant change areas in runtime properly, if you can just use that for tons of this stuff tbh
-	if(isliving(mover))
-		var/mob/living/L = mover
-		if(prob(35))
-			if(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE))
-				var/sound = pick(MINING)
-				if(!L.client.played)
-					SEND_SOUND(L, sound(sound, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
-					L.client.played = TRUE
-					addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
 
 /obj/structure/infection/normal/Uncrossed(atom/movable/mover)
 	if(ismob(mover))
