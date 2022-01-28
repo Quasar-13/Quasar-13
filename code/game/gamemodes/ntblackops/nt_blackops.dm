@@ -65,6 +65,6 @@
 	character.add_antag_datum(new_antag)
 
 
-/datum/game_mode/traitor/internal_affairs/generate_report()
+/datum/game_mode/traitor/nt_blackops/generate_report()
 	return "Nanotrasen denies any accusations of placing BNI agents onboard your station to eliminate inconvenient employees and conduct off-grid operations.  Any further accusations against CentCom for such \
 			actions will be met with a conversation with an official internal affairs agent."
