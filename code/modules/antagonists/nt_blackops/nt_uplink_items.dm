@@ -7,7 +7,7 @@ BUNDLES
 /datum/uplink_item/bundles_tc/marine_kit
 	name= "Marine Kit Beacon"
 	desc = "We procured a beacon normally used by our Marines for Operations, use it if you need to go loud or need extra firepower"
-	item = /obj/item/choice_beacon/bungalow/deathsquad/marine
+	item = /obj/item/choice_beacon/marine
 	cost = 10
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
