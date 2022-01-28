@@ -153,5 +153,5 @@
 /obj/item/encryptionkey/cent_agent
 	name = "agent encryption key"
 	icon_state = "cent_cypherkey"
-	channels = list(RADIO_CHANNEL_CENTCOM = 1)
+	channels = list(RADIO_CHANNEL_CENTCOM = 1, RADIO_CHANNEL_SYNDICATE = 1)
 	syndie = TRUE//Signifies that it de-crypts Syndicate transmissions
