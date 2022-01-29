@@ -37,7 +37,7 @@
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/nuclear)
-
+/*
 /obj/item/uplink/nt
 	name = "NT Black Ops Uplink"
 
@@ -53,6 +53,8 @@
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/traitor/internal_affairs)
+*/
+
 /obj/item/uplink/nuclear/debug
 	name = "debug nuclear uplink"
 
