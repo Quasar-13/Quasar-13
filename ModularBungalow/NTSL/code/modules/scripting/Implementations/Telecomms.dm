@@ -325,9 +325,9 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	signal.virt.verb_yell		= script_signal.get_clean_property("yell")
 	signal.virt.verb_exclaim	= script_signal.get_clean_property("exclaim")
 	var/newlang = NTSL_LANG_TODATUM(script_signal.get_clean_property("language"))
-	if(newlang != oldlang)// makes sure that we only clean out unallowed languages when a translation is taking place otherwise we run an unnecessary proc to filter newlang on foreign untranslated languages.
-		if(!LAZYFIND(GLOB.allowed_translations, oldlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek
-			newlang = oldlang
+	//if(newlang != oldlang)// makes sure that we only clean out unallowed languages when a translation is taking place otherwise we run an unnecessary proc to filter newlang on foreign untranslated languages.
+	//	if(!LAZYFIND(GLOB.allowed_translations, oldlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek
+	//		newlang = oldlang
 	signal.language = newlang || oldlang
 	var/list/setspans 			= script_signal.get_clean_property("filters") //Save the span vector/list to a holder list
 	if(islist(setspans)) //Players cannot be trusted with ANYTHING. At all. Ever.
@@ -359,7 +359,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 // makes a new signal object
 
-// arguments: message, freq, source, job
+// arguments: message, freq, source, job, language
 // if you want to change anything else do it yourself
 /datum/n_function/default/signal
 	name = "signal"
@@ -374,6 +374,8 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		S.properties["source"] = params[3]
 	if(params.len >= 4)
 		S.properties["job"] = params[4]
+	if(params.len >= 5)
+		S.properties["language"] = params[5]
 	return S
 
 
