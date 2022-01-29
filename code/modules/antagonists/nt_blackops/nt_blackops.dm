@@ -304,6 +304,5 @@
 
 	return message
 
-
 /datum/antagonist/traitor/nt_blackops/is_gamemode_hero()
 	return SSticker.mode.name == "traitor"

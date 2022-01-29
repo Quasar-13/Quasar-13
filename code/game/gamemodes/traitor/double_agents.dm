@@ -7,9 +7,9 @@
 	config_tag = "internal_affairs"
 	report_type = "internal_affairs"
 	false_report_weight = 10
-	required_players = 5
-	required_enemies = 1
-	recommended_enemies = 4
+	required_players = 25
+	required_enemies = 5
+	recommended_enemies = 8
 	reroll_friendly = 0
 	traitor_name = "Nanotrasen Internal Affairs Agent"
 	antag_flag = ROLE_INTERNAL_AFFAIRS
