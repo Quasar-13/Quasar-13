@@ -76,7 +76,7 @@
 		if(RAD_LEVEL_VERY_HIGH + 1 to RAD_LEVEL_CRITICAL)
 			. += "<span class='suicide'>Ambient radiation levels nearing critical level.</span>"
 		if(RAD_LEVEL_CRITICAL + 1 to INFINITY)
-			. += span_boldannounce("
+			. += "<span class='boldannounce'>Ambient radiation levels above critical level!</span>"
 
 	. += "<span class='notice'>The last radiation amount detected was [last_tick_amount]</span>"
 
@@ -143,10 +143,10 @@
 		if(!M.radiation)
 			to_chat(user, "<span class='notice'>[icon2html(src, user)] Radiation levels within normal boundaries.</span>")
 		else
-			to_chat(user, span_boldannounce("
+			to_chat(user, "<span class='boldannounce'>[icon2html(src, user)] Subject is irradiated. Radiation levels: [M.radiation].</span>")
 
 	if(rad_strength)
-		to_chat(user, span_boldannounce("et contains radioactive contamination. Radioactive strength: [rad_strength]</span>")
+		to_chat(user, "<span class='boldannounce'>[icon2html(src, user)] Target contains radioactive contamination. Radioactive strength: [rad_strength]</span>")
 	else
 		to_chat(user, "<span class='notice'>[icon2html(src, user)] Target is free of radioactive contamination.</span>")
 

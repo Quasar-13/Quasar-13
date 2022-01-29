@@ -97,7 +97,7 @@
 	return nation
 
 /datum/antagonist/separatist/greet()
-	to_chat(owner, span_boldannounce("st for an independent [nation.nation_department]! [nation.name] forever! Protect the sovereignty of your newfound land with your comrades (fellow department members) in arms!</span>")
+	to_chat(owner, "<span class='boldannounce'>You are a separatist for an independent [nation.nation_department]! [nation.name] forever! Protect the sovereignty of your newfound land with your comrades (fellow department members) in arms!</span>")
 	owner.announce_objectives()
 
 //objectives

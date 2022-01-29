@@ -343,7 +343,7 @@
 	name = "old manual"
 	martialname = "close quarters combat"
 	desc = "A small, black manual. There are drawn instructions of tactical hand-to-hand combat."
-	greet = span_boldannounce("
+	greet = "<span class='boldannounce'>You've mastered the basics of CQC.</span>"
 	icon_state = "cqcmanual"
 	remarks = list("Kick... Slam...", "Lock... Kick...", "Strike their abdomen, neck and back for critical damage...", "Slam... Lock...", "I could probably combine this with some other martial arts!", "Words that kill...", "The last and final moment is yours...")
 
@@ -385,7 +385,7 @@
 	name = "frayed scroll"
 	martialname = "plasma fist"
 	desc = "An aged and frayed scrap of paper written in shifting runes. There are hand-drawn illustrations of pugilism."
-	greet = span_boldannounce(" art of Plasma Fist. Your combos are extremely hard to pull off, but include some of the most deadly moves ever seen including \
+	greet = "<span class='boldannounce'>You have learned the ancient martial art of Plasma Fist. Your combos are extremely hard to pull off, but include some of the most deadly moves ever seen including \
 	the plasma fist, which when pulled off will make someone violently explode.</span>"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state ="scroll2"

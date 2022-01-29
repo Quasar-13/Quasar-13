@@ -366,7 +366,7 @@
 
 /mob/living/simple_animal/bot/cleanbot/explode()
 	on = FALSE
-	visible_message(span_boldannounce("
+	visible_message("<span class='boldannounce'>[src] blows apart!</span>")
 	var/atom/Tsec = drop_location()
 
 	new /obj/item/reagent_containers/glass/bucket(Tsec)

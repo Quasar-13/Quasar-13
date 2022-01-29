@@ -16,7 +16,7 @@
 		to_chat(user, "<span class='boldwarning'>You start skimming through [src], but you already know [initial(language.name)].</span>")
 		return
 
-	to_chat(user, span_boldannounce(" skimming through [src], and [flavour_text].</span>")
+	to_chat(user, "<span class='boldannounce'>You start skimming through [src], and [flavour_text].</span>")
 	user.grant_language(language, TRUE, TRUE, LANGUAGE_MIND)
 
 	use_charge(user)

@@ -460,7 +460,7 @@ Auto Patrol: []"},
 /mob/living/simple_animal/bot/secbot/explode()
 
 	walk_to(src,0)
-	visible_message(span_boldannounce("ws apart!</span>")
+	visible_message("<span class='boldannounce'>[src] blows apart!</span>")
 	var/atom/Tsec = drop_location()
 	if(ranged)
 		var/obj/item/bot_assembly/ed209/Sa = new (Tsec)

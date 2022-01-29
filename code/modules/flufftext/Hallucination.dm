@@ -1074,7 +1074,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			SEND_SOUND(target, SSstation.announcer.event_sounds[ANNOUNCER_METEORS])
 		if("supermatter")
 			SEND_SOUND(target, 'sound/magic/charge.ogg')
-			to_chat(target, span_boldannounce("reality distort for a moment...</span>")
+			to_chat(target, "<span class='boldannounce'>You feel reality distort for a moment...</span>")
 
 /datum/hallucination/hudscrew
 

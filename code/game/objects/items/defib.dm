@@ -519,7 +519,7 @@
 				busy = FALSE
 				update_icon()
 				return
-			user.visible_message(span_boldannounce("the [src]!</span>", "<span class='warning'>You shock [H] with \the [src]!</span>")
+			user.visible_message("<span class='boldannounce'><i>[user] shocks [H] with \the [src]!</span>", "<span class='warning'>You shock [H] with \the [src]!</span>")
 			playsound(src, 'sound/machines/defib_zap.ogg', 100, TRUE, -1)
 			playsound(src, 'sound/weapons/egloves.ogg', 100, TRUE, -1)
 			H.emote("scream")

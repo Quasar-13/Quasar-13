@@ -135,7 +135,7 @@
 				return FALSE
 			var/mob/living/silicon/ai/tempAI = usr
 			if(!length(tempAI.aicamera.stored))
-				to_chat(usr, span_boldannounce("No images saved.</span>")
+				to_chat(usr, "<span class='boldannounce'>No images saved.</span>")
 				return
 			var/datum/picture/selection = tempAI.aicamera.selectpicture(usr)
 			var/obj/item/photo/photo = new(loc, selection) // AI prints color photos only.

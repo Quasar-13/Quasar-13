@@ -237,7 +237,7 @@
 			pixel_y = 0
 			maxHealth = 200
 	adjustHealth(0) //Make the health HUD look correct.
-	visible_message(span_boldannounce("etting out of hands. Now there are three of them!</span>")
+	visible_message("<span class='boldannounce'>This is getting out of hands. Now there are three of them!</span>")
 	for(var/i in 1 to 2) //Create three skulls in total
 		var/mob/living/simple_animal/hostile/megafauna/legion/L = new(loc)
 		L.setVarsAfterSplit(src)

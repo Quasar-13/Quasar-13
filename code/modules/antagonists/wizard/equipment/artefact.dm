@@ -26,7 +26,7 @@
 	if(charges > 0)
 		new /obj/effect/rend(get_turf(user), spawn_type, spawn_amt, rend_desc, spawn_fast)
 		charges--
-		user.visible_message(span_boldannounce("wer as [user] deals a blow to [activate_descriptor] itself!</span>")
+		user.visible_message("<span class='boldannounce'>[src] hums with power as [user] deals a blow to [activate_descriptor] itself!</span>")
 	else
 		to_chat(user, "<span class='danger'>The unearthly energies that powered the blade are now dormant.</span>")
 

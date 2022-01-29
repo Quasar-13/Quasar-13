@@ -151,7 +151,7 @@
 
 /datum/quirk/monochromatic/post_add()
 	if(quirk_holder.mind.assigned_role == "Detective")
-		to_chat(quirk_holder, span_boldannounce("
+		to_chat(quirk_holder, "<span class='boldannounce'>Mmm. Nothing's ever clear on this station. It's all shades of gray...</span>")
 		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
 
 /datum/quirk/monochromatic/remove()
@@ -283,7 +283,7 @@
 		H.put_in_hands(gloves)
 
 /datum/quirk/tongue_tied/post_add()
-	to_chat(quirk_holder, span_boldannounce("with your hands, having them full hinders your ability to communicate!</span>")
+	to_chat(quirk_holder, "<span class='boldannounce'>Because you speak with your hands, having them full hinders your ability to communicate!</span>")
 
 /datum/quirk/photographer
 	name = "Photographer"

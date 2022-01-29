@@ -353,7 +353,7 @@
 	icon_living = "necromancer_winged[has_sword]"
 	icon = 'ModularTegustation/Teguicons/megafauna.dmi'
 	update_icon()
-	visible_message(span_boldannounce("The [src] shivers for a moment as a pair of skeletal wings grow from his back!</span>")
+	visible_message("<span class='boldannounce'>The [src] shivers for a moment as a pair of skeletal wings grow from his back!</span>")
 	playsound(src, 'sound/effects/wounds/crack2.ogg', 100, 1)
 	for(var/action_type in stage_two_actions)
 		var/datum/action/innate/megafauna_attack/attack_action = new action_type()
@@ -436,7 +436,7 @@
 	max_revived = 6
 	repulse_range = 5
 	strike_range = 6
-	visible_message(span_boldannounce("The [src] raises arm in the air as a sword materializes in his hand!</span>")
+	visible_message("<span class='boldannounce'>The [src] raises arm in the air as a sword materializes in his hand!</span>")
 	playsound(src, 'sound/magic/wand_teleport.ogg', 100, 1)
 	sword = new(src)
 	has_sword = TRUE

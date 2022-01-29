@@ -76,11 +76,11 @@
 		return
 	switch(stat)
 		if(DEAD,UNCONSCIOUS)
-			. += span_boldannounce("[src] is not moving.</span>"
+			. += "<span class='boldannounce'>[src] is not moving.</span>"
 		if(CONSCIOUS)
-			. += span_boldannounce("
+			. += "<span class='boldannounce'>[src] seems to be active!</span>"
 	if (sterile)
-		. += span_boldannounce(" removed.</span>"
+		. += "<span class='boldannounce'>It looks like the proboscis has been removed.</span>"
 
 /obj/item/clothing/mask/facehugger/should_atmos_process(datum/gas_mixture/air, exposed_temperature)
 	return (exposed_temperature > 300)

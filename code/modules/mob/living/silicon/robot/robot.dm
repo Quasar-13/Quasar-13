@@ -97,7 +97,7 @@
 			mind.transfer_to(mmi.brainmob)
 			mmi.update_icon()
 		else
-			to_chat(src, span_boldannounce("ve been ghosted. Please make a bug report so we can fix this bug.</span>")
+			to_chat(src, "<span class='boldannounce'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
 			ghostize()
 			stack_trace("Borg MMI lacked a brainmob")
 		mmi = null

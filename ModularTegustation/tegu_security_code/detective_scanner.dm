@@ -23,7 +23,7 @@
 			if(istype(A, /mob/living))
 				var/mob/living/M = A
 				if(LAZYLEN(M.mind.active_addictions))
-					reagent_report +=span_boldannounce("Subject is addicted to the following reagents:<br></span>"
+					reagent_report +="<span class='boldannounce'>Subject is addicted to the following reagents:<br></span>"
 					for(var/datum/addiction/addiction_type as anything in M.mind.active_addictions)
 						reagent_report += "<span class='alert'>[initial(addiction_type.name)]</span><br>"
 				else

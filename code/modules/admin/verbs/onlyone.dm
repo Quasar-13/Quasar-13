@@ -6,7 +6,7 @@ GLOBAL_VAR_INIT(highlander, FALSE)
 	GLOB.highlander = TRUE
 
 	sound_to_playing_players('sound/misc/highlander.ogg')
-	send_to_playing_players(span_boldannounce("NLY ONE</font></span>")
+	send_to_playing_players("<span class='boldannounce'><font size=6>THERE CAN BE ONLY ONE</font></span>")
 
 	for(var/obj/item/disk/nuclear/N in GLOB.poi_list)
 		var/datum/component/stationloving/component = N.GetComponent(/datum/component/stationloving)

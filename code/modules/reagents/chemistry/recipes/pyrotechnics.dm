@@ -170,7 +170,7 @@
 	required_temp = 474
 	strengthdiv = 10
 	modifier = 5
-	mix_message = span_boldannounce("Sparks start flying around the gunpowder!</span>"
+	mix_message = "<span class='boldannounce'>Sparks start flying around the gunpowder!</span>"
 
 /datum/chemical_reaction/reagent_explosion/gunpowder_explosion/on_reaction(datum/reagents/holder, created_volume)
 	addtimer(CALLBACK(src, .proc/explode, holder, created_volume), rand(5,10) SECONDS)
@@ -448,7 +448,7 @@
 	required_reagents = list(/datum/reagent/teslium = 1, /datum/reagent/water = 1)
 	strengthdiv = 100
 	modifier = -100
-	mix_message = span_boldannounce("The teslium starts to spark as electricity arcs away from it!</span>"
+	mix_message = "<span class='boldannounce'>The teslium starts to spark as electricity arcs away from it!</span>"
 	mix_sound = 'sound/machines/defib_zap.ogg'
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
 
@@ -503,4 +503,4 @@
 /datum/chemical_reaction/reagent_explosion/patriotism_overload
 	required_reagents = list(/datum/reagent/consumable/ethanol/planet_cracker = 1, /datum/reagent/consumable/ethanol/triumphal_arch = 1)
 	strengthdiv = 20
-	mix_message = span_boldannounce("atriotic drinks instantly reject each other!</span>"
+	mix_message = "<span class='boldannounce'>The two patriotic drinks instantly reject each other!</span>"

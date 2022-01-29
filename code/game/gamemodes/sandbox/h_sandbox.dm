@@ -114,7 +114,7 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 			if("hsbtobj")
 				if(!admin) return
 				if(GLOB.hsboxspawn)
-					to_chat(world, span_boldannounce("sr.key] has disabled object spawning!</b>")
+					to_chat(world, "<span class='boldannounce'>Sandbox:</span> <b>\black[usr.key] has disabled object spawning!</b>")
 					GLOB.hsboxspawn = FALSE
 					return
 				else

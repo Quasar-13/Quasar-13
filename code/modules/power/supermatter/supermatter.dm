@@ -455,10 +455,10 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			SEND_SOUND(M, 'sound/magic/charge.ogg')
 
 			if (M.z == z)
-				to_chat(M, span_boldannounce("You feel reality distort for a moment...</span>")
+				to_chat(M, "<span class='boldannounce'>You feel reality distort for a moment...</span>")
 				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "delam", /datum/mood_event/delam)
 			else
-				to_chat(M, span_boldannounce("You hold onto \the [M.loc] as hard as you can, as reality distorts around you. You feel safe.</span>")
+				to_chat(M, "<span class='boldannounce'>You hold onto \the [M.loc] as hard as you can, as reality distorts around you. You feel safe.</span>")
 
 	if(combined_gas > MOLE_PENALTY_THRESHOLD)
 		investigate_log("has collapsed into a singularity.", INVESTIGATE_SUPERMATTER)
@@ -844,7 +844,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	for(var/mob/M in GLOB.player_list)
 		if(M.z == z)
 			SEND_SOUND(M, 'sound/effects/supermatter.ogg') //everyone goan know bout this
-			to_chat(M, span_boldannounce("A horrible screeching fills your ears, and a wave of dread washes over you...</span>")
+			to_chat(M, "<span class='boldannounce'>A horrible screeching fills your ears, and a wave of dread washes over you...</span>")
 	qdel(src)
 	return gain
 

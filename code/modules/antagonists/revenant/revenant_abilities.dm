@@ -53,7 +53,7 @@
 			if(do_after(src, rand(15, 25), target, timed_action_flags = IGNORE_HELD_ITEM)) //how about now
 				if(!target.stat)
 					to_chat(src, "<span class='revenwarning'>[target.p_theyre(TRUE)] now powerful enough to fight off your draining.</span>")
-					to_chat(target, span_boldannounce("across your body before subsiding.</span>")
+					to_chat(target, "<span class='boldannounce'>You feel something tugging across your body before subsiding.</span>")
 					draining = 0
 					essence_drained = 0
 					return //hey, wait a minute...

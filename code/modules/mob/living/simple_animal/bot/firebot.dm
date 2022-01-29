@@ -306,7 +306,7 @@
 
 /mob/living/simple_animal/bot/firebot/explode()
 	on = FALSE
-	visible_message(span_boldannounce("[src] blows apart!</span>")
+	visible_message("<span class='boldannounce'>[src] blows apart!</span>")
 
 	var/atom/Tsec = drop_location()
 
