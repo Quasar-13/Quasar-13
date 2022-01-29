@@ -2,7 +2,7 @@
 
 
 /* --- Traffic Control Scripting Language --- */
-	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu and 'ported' by Horologium
+	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu and repaired by Horologium
 
 #define NTSL_LANG_APHASIA 1
 #define NTSL_LANG_BEACHBUM 2
@@ -136,7 +136,9 @@
 			return /datum/language/drone
 
 GLOBAL_LIST_INIT(allowed_custom_spans,list(SPAN_ROBOT,SPAN_YELL,SPAN_ITALICS,SPAN_SANS,SPAN_COMMAND,SPAN_CLOWN))//Span classes that players are allowed to set in a radio transmission.
-GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/language/machine,/datum/language/draconic,/datum/language/moffic))// language datums that players are allowed to translate to in a radio transmission.
+//Bungalow races (in alphabetical order to languages below: Beepeople, Ethereal, Felinid, Human, Jelly, Lizard, Moth, Plasmaman). Piratespeak is on here for lols and so poly can speak like a proper bird. If you do not want this, remove the last element of the allowed_translations list.
+//The original comment saying this part didnt work, wasnt quite right but was on the right track.
+GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/buzzwords,/datum/language/voltaic,/datum/language/nekomimetic,/datum/language/common,/datum/language/slime,/datum/language/draconic,/datum/language/moffic,/datum/language/calcic,/datum/language/piratespeak))// language datums that players are allowed to translate to in a radio transmission.
 
 /n_Interpreter/TCS_Interpreter
 	var/datum/TCS_Compiler/Compiler
