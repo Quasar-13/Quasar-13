@@ -82,7 +82,7 @@ GLOBAL_LIST_EMPTY(doom_event_mobs)
 		boss_spore.death()
 		var/mob/living/simple_animal/boss = new boss_type(start)
 		boss.add_atom_colour(C.color, FIXED_COLOUR_PRIORITY)
-		boss.AddComponent(/datum/component/mindcontroller, boss_spore, list(ROLE_INFECTION))
+		boss.AddComponent(/datum/component/homing, boss_spore, list(ROLE_INFECTION))
 		boss.AddComponent(/datum/component/no_beacon_crossing)
 		boss.loot = boss_drop_list
 		boss.pass_flags |= PASSBLOB
@@ -96,7 +96,7 @@ GLOBAL_LIST_EMPTY(doom_event_mobs)
 			var/minion_type = pickweight(minion_types)
 			var/mob/living/simple_animal/minion = new minion_type(start)
 			minion.add_atom_colour(C.color, FIXED_COLOUR_PRIORITY)
-			minion.AddComponent(/datum/component/mindcontroller, spore, list(ROLE_INFECTION))
+			minion.AddComponent(/datum/component/homing, spore, list(ROLE_INFECTION))
 			minion.AddComponent(/datum/component/no_beacon_crossing)
 			minion.loot = minion_drop_list
 			minion.pass_flags |= PASSBLOB
@@ -117,7 +117,7 @@ GLOBAL_LIST_EMPTY(doom_event_mobs)
 	typepath = /datum/round_event/infection/space
 
 /datum/round_event/infection/space
-	boss_type = /mob/living/simple_animal/hostile/megafauna/dragon/space_dragon
+	boss_type = /mob/living/simple_animal/hostile/space_dragon
 	boss_drop_list = list(/obj/item/infectionkiller/excaliju)
 	minion_types = list(/mob/living/simple_animal/hostile/hivebot/strong=1,
 						/mob/living/simple_animal/hostile/skeleton=2,
@@ -163,7 +163,7 @@ GLOBAL_LIST_EMPTY(doom_event_mobs)
 /datum/round_event/infection/jungle
 	boss_type = /mob/living/simple_animal/hostile/jungle/mega_arachnid
 	boss_drop_list = list(/obj/item/infectionkiller/tonic)
-	minion_types = list(/mob/living/simple_animal/hostile/asteroid/wasp=2,
+	minion_types = list(/mob/living/simple_animal/hostile/jungle/mook=3,
 						/mob/living/simple_animal/hostile/jungle/seedling=1)
 	minion_drop_list = list()
 	warning_message = "Jungle Creatures are invading the station!"
