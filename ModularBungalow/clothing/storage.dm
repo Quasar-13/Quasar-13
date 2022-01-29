@@ -149,7 +149,7 @@
 */
 /obj/item/storage/backpack/duffelbag/marine
 	name = "Marine Assault Kit"
-	desc = "The classic ballistic NT weapon. Fires in bursts."
+	desc = "The classic ballistic NT weapon. Fires semi-auto."
 
 /obj/item/storage/backpack/duffelbag/marine/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine(src)
