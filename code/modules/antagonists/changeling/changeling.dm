@@ -376,7 +376,7 @@
 
 /datum/antagonist/changeling/greet()
 	if (you_are_greet)
-		to_chat(owner.current, "<span class='boldannounce'>You are a changeling! You have absorbed and taken the form of a human.</span>")
+		to_chat(owner.current, span_boldannounce("
 	to_chat(owner.current, "<b>You must complete the following tasks:</b>")
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/ling_aler.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
@@ -461,7 +461,7 @@
 
 /datum/antagonist/changeling/admin_add(datum/mind/new_owner,mob/admin)
 	. = ..()
-	to_chat(new_owner.current, "<span class='boldannounce'>Our powers have awoken. A flash of memory returns to us...we are a changeling!</span>")
+	to_chat(new_owner.current, span_boldannounce("oken. A flash of memory returns to us...we are a changeling!</span>")
 
 /datum/antagonist/changeling/get_admin_commands()
 	. = ..()

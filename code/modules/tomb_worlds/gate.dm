@@ -9,9 +9,9 @@
 		if(safety == "Abort" || !in_range(src, user) || !src || open || changing_openness || user.incapacitated())
 			return
 		if(faction_check(list("tomb", "tomb_player"), user.faction, FALSE))
-			user.visible_message("<span class='warning'>[user] attempts to open the [src], but seal of damnation is too strong for them to handle!</span>", "<span class='boldannounce'>You are incapable of opening the [src].</span>")
+			user.visible_message("<span class='warning'>[user] attempts to open the [src], but seal of damnation is too strong for them to handle!</span>", span_boldannounce("You are incapable of opening the [src].</span>")
 			return
-		user.visible_message("<span class='warning'>[user] opens the [src]...</span>", "<span class='boldannounce'>You tentatively knock on [src]...</span>")
+		user.visible_message("<span class='warning'>[user] opens the [src]...</span>", span_boldannounce("You tentatively knock on [src]...</span>")
 	return ..()
 
 /obj/structure/necropolis_gate/tomb_gate/toggle_the_gate(mob/user)

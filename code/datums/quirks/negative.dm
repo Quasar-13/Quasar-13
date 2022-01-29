@@ -442,7 +442,7 @@
 	H.regenerate_icons()
 
 /datum/quirk/prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your [slot_string] has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
+	to_chat(quirk_holder, span_boldannounce(" has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
 	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
 
 /datum/quirk/pushover

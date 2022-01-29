@@ -753,7 +753,7 @@
 				combined_msg += "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>"
 
 	for(var/t in missing)
-		combined_msg += "<span class='boldannounce'>Your [parse_zone(t)] is missing!</span>"
+		combined_msg += span_boldannounce("
 
 	if(is_bleeding())
 		var/list/obj/item/bodypart/bleeding_limbs = list()

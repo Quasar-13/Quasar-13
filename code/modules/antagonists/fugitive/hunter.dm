@@ -31,7 +31,7 @@
 /datum/antagonist/fugitive_hunter/greet()
 	switch(backstory)
 		if("space cop")
-			to_chat(owner, "<span class='boldannounce'>Justice has arrived. I am a member of the Spacepol!</span>")
+			to_chat(owner, span_boldannounce("
 			to_chat(owner, "<B>The criminals should be on the station, we have special huds implanted to recognize them.</B>")
 			to_chat(owner, "<B>As we have lost pretty much all power over these damned lawless megacorporations, it's a mystery if their security will cooperate with us.</B>")
 		if("russian")
@@ -40,7 +40,7 @@
 			to_chat(src, "<span class='danger'>There is a local station housing fugitives that the man is after, he wants them returned; dead or alive.</span>")
 			to_chat(src, "<span class='danger'>We will not be able to make ends meet without our cargo, so we must do as he says and capture them.</span>")
 
-	to_chat(owner, "<span class='boldannounce'>You are not an antagonist in that you may kill whomever you please, but you can do anything to ensure the capture of the fugitives, even if that means going through the station.</span>")
+	to_chat(owner, span_boldannounce("n that you may kill whomever you please, but you can do anything to ensure the capture of the fugitives, even if that means going through the station.</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/fugitive_hunter/create_team(datum/team/fugitive_hunters/new_team)

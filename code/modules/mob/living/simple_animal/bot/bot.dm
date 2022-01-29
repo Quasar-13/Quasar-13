@@ -876,7 +876,7 @@ Pass a positive integer as an argument to override a bot's default speed.
 				log_game("Safety lock of [src] was disabled by [key_name(usr)] in [AREACOORD(src)]")
 				bot_reset()
 			else if(!hacked)
-				to_chat(usr, "<span class='boldannounce'>[text_dehack_fail]</span>")
+				to_chat(usr, span_boldannounce("
 			else
 				emagged = FALSE
 				hacked = FALSE

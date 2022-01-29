@@ -211,7 +211,7 @@ SUBSYSTEM_DEF(ticker)
 
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, "<span class='boldannounce'>Starting game...</span>")
+	to_chat(world, span_boldannounce("Starting game...</span>")
 	var/init_start = world.timeofday
 		//Create and announce mode
 	var/list/datum/game_mode/runnable_modes
@@ -652,17 +652,17 @@ In addition, responsible for spawning the cyborg shell if there are no roundstar
 
 	var/skip_delay = check_rights()
 	if(delay_end && !skip_delay)
-		to_chat(world, "<span class='boldannounce'>An admin has delayed the round end.</span>")
+		to_chat(world, span_boldannounce("
 		return
 
-	to_chat(world, "<span class='boldannounce'>Rebooting World in [DisplayTimeText(delay)]. [reason]</span>")
+	to_chat(world, span_boldannounce("
 
 	var/start_wait = world.time
 	UNTIL(round_end_sound_sent || (world.time - start_wait) > (delay * 2))	//don't wait forever
 	sleep(delay - (world.time - start_wait))
 
 	if(delay_end && !skip_delay)
-		to_chat(world, "<span class='boldannounce'>Reboot was cancelled by an admin.</span>")
+		to_chat(world, span_boldannounce("
 		return
 	if(end_string)
 		end_state = end_string
@@ -674,7 +674,7 @@ In addition, responsible for spawning the cyborg shell if there are no roundstar
 	else if(gamelogloc)
 		to_chat(world, "<span class='info'>Round logs can be located <a href=\"[gamelogloc]\">at this website!</a></span>")
 
-	log_game("<span class='boldannounce'>Rebooting World. [reason]</span>")
+	log_game(span_boldannounce(" World. [reason]</span>")
 
 	world.Reboot()
 

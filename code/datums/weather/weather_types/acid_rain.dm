@@ -14,7 +14,7 @@
 	weather_sound = 'sound/ambience/acidrain_mid.ogg'
 
 	end_duration = 100
-	end_message = "<span class='boldannounce'>The downpour gradually slows to a light shower. It should be safe outside now.</span>"
+	end_message = span_boldannounce("s to a light shower. It should be safe outside now.</span>"
 	end_sound = 'sound/ambience/acidrain_end.ogg'
 
 	area_type = /area

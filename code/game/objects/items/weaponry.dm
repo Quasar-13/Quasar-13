@@ -180,15 +180,15 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 			new_name = "many-notched claymore"
 			add_atom_colour(rgb(255, 195, 195), ADMIN_COLOUR_PRIORITY)
 		if(5)
-			to_chat(user, "<span class='boldannounce'>Five voices now echo in your mind, cheering the slaughter.</span>")
+			to_chat(user, span_boldannounce("
 			new_name = "battle-tested claymore"
 			add_atom_colour(rgb(255, 175, 175), ADMIN_COLOUR_PRIORITY)
 		if(6)
-			to_chat(user, "<span class='boldannounce'>Is this what the vikings felt like? Visions of glory fill your head as you slay your sixth foe.</span>")
+			to_chat(user, span_boldannounce("
 			new_name = "battle-scarred claymore"
 			add_atom_colour(rgb(255, 155, 155), ADMIN_COLOUR_PRIORITY)
 		if(7)
-			to_chat(user, "<span class='boldannounce'>Kill. Butcher. <i>Conquer.</i></span>")
+			to_chat(user, span_boldannounce("/i></span>")
 			new_name = "vicious claymore"
 			add_atom_colour(rgb(255, 135, 135), ADMIN_COLOUR_PRIORITY)
 		if(8)

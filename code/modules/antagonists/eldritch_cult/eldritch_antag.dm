@@ -20,7 +20,7 @@
 
 /datum/antagonist/heretic/greet()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/ecult_op.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)//subject to change
-	to_chat(owner, "<span class='boldannounce'>You are the Heretic!</span><br>\
+	to_chat(owner, span_boldannounce("c!</span><br>\
 	<B>The old ones gave you these tasks to fulfill:</B>")
 	owner.announce_objectives()
 	to_chat(owner, "<span class='cult'>The book whispers softly, its forbidden knowledge walks this plane once again!<br>\

@@ -126,7 +126,7 @@
 		if(!do_after(user, rand(300, 400), target = user) || open || !locked || !(user in occupants))
 			return
 		loc.visible_message("<span class='warning'>[user] flips the lock switch on [src] by reaching through!</span>", null, null, null, user)
-		to_chat(user, "<span class='boldannounce'>Bingo! The lock pops open!</span>")
+		to_chat(user, span_boldannounce("ps open!</span>")
 		locked = FALSE
 		playsound(src, 'sound/machines/boltsup.ogg', 30, TRUE)
 		update_icon()

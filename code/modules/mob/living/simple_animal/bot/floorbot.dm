@@ -394,7 +394,7 @@
 /mob/living/simple_animal/bot/floorbot/explode()
 	on = FALSE
 	target = null
-	visible_message("<span class='boldannounce'>[src] blows apart!</span>")
+	visible_message(span_boldannounce("ws apart!</span>")
 	var/atom/Tsec = drop_location()
 
 	drop_part(toolbox, Tsec)

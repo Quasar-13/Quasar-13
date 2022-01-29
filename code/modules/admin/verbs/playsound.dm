@@ -23,7 +23,7 @@
 	var/res = alert(usr, "Show the title of this song to the players?",, "Yes","No", "Cancel")
 	switch(res)
 		if("Yes")
-			to_chat(world, "<span class='boldannounce'>An admin played: [S]</span>", confidential = TRUE)
+			to_chat(world, span_boldannounce("
 		if("Cancel")
 			return
 
@@ -116,7 +116,7 @@
 					var/res = alert(usr, "Show the title of and link to this song to the players?\n[title]",, "No", "Yes", "Cancel")
 					switch(res)
 						if("Yes")
-							to_chat(world, "<span class='boldannounce'>An admin played: [webpage_url]</span>", confidential = TRUE)
+							to_chat(world, span_boldannounce("webpage_url]</span>", confidential = TRUE)
 						if("Cancel")
 							return
 
