@@ -103,7 +103,7 @@
 	desc = "A pair of restraints fashioned from long strands of flesh."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "sinewcuff"
-	inhand_icon_state = "sinewcuff"
+	inhand_icon_state = "coil_red"
 	custom_materials = null
 	color = null
 
