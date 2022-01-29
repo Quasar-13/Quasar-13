@@ -1,7 +1,7 @@
 /obj/structure/infection/turret
 	name = "infection turret"
 	icon = 'icons/mob/infection/infection.dmi'
-	icon_state = "infection_turret_icon" // needed so when building you can see the type
+	icon_state = "infection_turret" // needed so when building you can see the type
 	desc = "A solid wall with a radiating material on the inside."
 	max_integrity = 150
 	point_return = 10
@@ -103,7 +103,7 @@
 
 	update_icon()
 	var/obj/item/projectile/bullet/infection/A = new projectile_type(T)
-	playsound(loc, 'sound/weapons/gun/smg/shot.ogg', 75, 1)
+	playsound(loc, 'sound/weapons/gunshot_smg.ogg', 75, 1)
 
 	//Shooting Code:
 	A.preparePixelProjectile(target, T)
