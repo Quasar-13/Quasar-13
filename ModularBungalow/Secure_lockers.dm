@@ -25,8 +25,8 @@
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/color/captain/galaxy(src)
-	new /obj/item/choice_beacon/bungalow/captain/sabre(src)
-	new /obj/item/choice_beacon/bungalow/captain/gun(src)
+	new /obj/item/choice_beacon/sabre(src)
+	new /obj/item/choice_beacon/gun(src)
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/hop_galaxy
@@ -132,5 +132,4 @@
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
-	new /obj/item/choice_beacon/bungalow/spec(src)
 	new /obj/item/door_remote/head_of_security(src)

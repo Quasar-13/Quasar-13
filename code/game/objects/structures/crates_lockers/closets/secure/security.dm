@@ -23,8 +23,8 @@
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/color/captain(src)
-	new /obj/item/choice_beacon/bungalow/captain/gun(src)
-	new /obj/item/choice_beacon/bungalow/captain/sabre(src)
+	new /obj/item/choice_beacon/gun(src)
+	new /obj/item/choice_beacon/sabre(src)
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/hop
@@ -111,7 +111,7 @@
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
-	new /obj/item/choice_beacon/bungalow/spec(src)
+	new /obj/item/choice_beacon/spec(src)
 	new /obj/item/door_remote/head_of_security(src)
 
 /obj/structure/closet/secure_closet/security
