@@ -2,7 +2,7 @@
 	element_flags = ELEMENT_BESPOKE
 	id_arg_index = 2
 	var/gravity
-	var/ignore_space
+	var/ignore_space //If forced gravity should also work on space turfs
 
 /datum/element/forced_gravity/Attach(datum/target, gravity=1, ignore_space=FALSE)
 	. = ..()

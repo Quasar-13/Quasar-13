@@ -26,7 +26,11 @@ SUBSYSTEM_DEF(research)
 	var/list/techweb_nodes_hidden = list()		//Node ids that should be hidden by default.
 	var/list/techweb_nodes_experimental = list()	//Node ids that are exclusive to the BEPIS.
 	var/list/techweb_point_items = list(		//path = list(point type = value)
-	/obj/item/assembly/signaler/anomaly = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	/obj/item/assembly/signaler/anomaly = list(TECHWEB_POINT_TYPE_GENERIC = 10000),
+	/obj/item/crystal_shards = list(TECHWEB_POINT_TYPE_INFECTION = 500)
+	)
+	var/list/techweb_repeatable_items = list(	//items that can be repeatably deconstructed for research, have to also be in the point items list
+	/obj/item/crystal_shards = TRUE
 	)
 	var/list/errored_datums = list()
 	var/list/point_types = list()				//typecache style type = TRUE list

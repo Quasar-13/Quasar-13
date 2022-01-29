@@ -747,6 +747,7 @@
  *
  * * Unset machines if "mach_close" sent
  * * refresh the inventory of machines in range if "refresh" sent
+ * * moves the mob to a referenced target
  * * handles the strip panel equip and unequip as well if "item" sent
  */
 /mob/Topic(href, href_list)
@@ -756,6 +757,11 @@
 		var/t1 = text("window=[href_list["mach_close"]]")
 		unset_machine()
 		src << browse(null, t1)
+
+	if(href_list["walk_to"])
+		var/target = locate(href_list["walk_to"])
+		if(target && isatom(target))
+			walk_to(src, target, 0, movement_delay())
 
 	if(user != src)
 		if(href_list["item"] && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))

@@ -1622,16 +1622,31 @@
 	desc = "Featuring a line up of Donk Co.'s most popular pastry!"
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/box/donkpockets/donkpocketspicy,
-	/obj/item/storage/box/donkpockets/donkpocketteriyaki,
-	/obj/item/storage/box/donkpockets/donkpocketpizza,
-	/obj/item/storage/box/donkpockets/donkpocketberry,
-	/obj/item/storage/box/donkpockets/donkpockethonk)
+					/obj/item/storage/box/donkpockets/donkpocketteriyaki,
+					/obj/item/storage/box/donkpockets/donkpocketpizza,
+					/obj/item/storage/box/donkpockets/donkpocketberry,
+					/obj/item/storage/box/donkpockets/donkpockethonk)
 	crate_name = "donk pocket crate"
 
 /datum/supply_pack/service/randomized/donkpockets/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
 		var/item = pick(contains)
 		new item(C)
+
+	/datum/supply_pack/clearance/targettingcomputer
+	name = "Laser Rifle Targetting Upgrade Crate"
+	desc = "A 9-pack upgrade kit of 'smartfire' targetting computers for standard issue NT laser rifles. Applying one of these to a laser will allow it to fire around friendlies."
+	cost = CARGO_CRATE_VALUE * 4
+	contains = list(/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer,
+					/obj/item/targettingcomputer)
+	crate_name = "laser rifle upgrade crate"
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Organic /////////////////////////////////////////

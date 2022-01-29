@@ -60,7 +60,8 @@
 //! Associative names for techweb point values, see: [all_nodes][code/modules/research/techweb/all_nodes.dm]
 #define TECHWEB_POINT_TYPE_LIST_ASSOCIATIVE_NAMES list(\
 	TECHWEB_POINT_TYPE_GENERIC = "General Research",\
-	TECHWEB_POINT_TYPE_NANITES = "Nanite Research"\
+	TECHWEB_POINT_TYPE_NANITES = "Nanite Research",\
+	TECHWEB_POINT_TYPE_INFECTION = "Infection Research"\
 	)
 
 /// R&D point value for a maxcap bomb. Can be adjusted if need be. Current Value Cap Radius: 100

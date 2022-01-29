@@ -153,6 +153,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isovermind(A) (istype(A, /mob/camera/blob))
 
+#define iscommander(A) (istype(A, /mob/camera/commander))
+
 #define iscameramob(A) (istype(A, /mob/camera))
 
 #define isaicamera(A) (istype(A, /mob/camera/ai_eye))
@@ -222,6 +224,8 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 #define isholoeffect(O) (istype(O, /obj/effect/holodeck_effect))
 
 #define isblobmonster(O) (istype(O, /mob/living/simple_animal/hostile/blob))
+
+#define isinfectionmonster(O) (istype(O, /mob/living/simple_animal/hostile/infection))
 
 #define isshuttleturf(T) (length(T.baseturfs) && (/turf/baseturf_skipover/shuttle in T.baseturfs))
 

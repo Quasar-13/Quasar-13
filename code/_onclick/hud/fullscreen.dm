@@ -111,6 +111,15 @@
 	layer = CURSE_LAYER
 	plane = FULLSCREEN_PLANE
 
+/atom/movable/screen/fullscreen/curse/infection
+	alpha = 150
+
+/obj/screen/fullscreen/infection_covered
+	icon_state = "infection"
+	layer = INFECTION_LAYER
+	plane = FULLSCREEN_PLANE
+	alpha = 150
+
 /atom/movable/screen/fullscreen/impaired
 	icon_state = "impairedoverlay"
 
