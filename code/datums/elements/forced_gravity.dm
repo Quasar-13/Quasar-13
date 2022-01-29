@@ -31,7 +31,4 @@
 /datum/element/forced_gravity/proc/turf_gravity_check(datum/source, atom/checker, list/gravs)
 	SIGNAL_HANDLER
 
-	return gravity_check(null, source, gravs)
-
-/datum/component/forced_gravity/space
-	ignore_space = TRUE
+	return gravity_check(null, parent, gravs)
