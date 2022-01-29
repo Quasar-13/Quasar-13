@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/remlieutenant
 
-	access = list(ACCESS_CENT_GENERAL)
-	minimal_access = list(ACCESS_CENT_GENERAL)
+	access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_CAPTAIN)
+	minimal_access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_CAPTAIN)
 	paycheck = PAYCHECK_COMMAND
 
 	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVELT
