@@ -17,18 +17,23 @@
 	var/list/topulse = list()
 
 /obj/structure/infection/core/Initialize(mapload, client/new_overmind = null, new_rate = 2, placed = 0)
+	if(GLOB.infection_core)
+		return INITIALIZE_HINT_QDEL // just making sure admins can't break everything
+	. = ..()
 	GLOB.infection_core = src
 	GLOB.poi_list |= src
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
 		return INITIALIZE_HINT_QDEL
-	. = ..()
 	if(overmind)
 		update_icon()
+		for(var/mob/living/simple_animal/hostile/infection/infectionspore/sentient/S in overmind.contents)
+			S.forceMove(get_turf(src))
 	point_rate = new_rate
 	addtimer(CALLBACK(src, .proc/generate_announcement), 40)
 	SSevents.frequency_lower = DOOM_CLOCK_EVENT_DELAY
 	SSevents.frequency_upper = DOOM_CLOCK_EVENT_DELAY
+	SSevents.toggleInfectionmode()
 	SSevents.reschedule()
 	START_PROCESSING(SSobj, src)
 
@@ -37,7 +42,6 @@
 					   You should see our reinforcements warp in near the emergency shuttle outpost as we send them in.\n\n\
 					   Good luck. I'll be here to notify you should anything change for better or for worse.",
 					  "Biohazard Containment Commander", 'sound/misc/notice1.ogg')
-	set_security_level(SEC_LEVEL_GAMMA)
 
 /obj/structure/infection/core/show_infection_menu(var/mob/camera/commander/C)
 	return
@@ -60,6 +64,7 @@
 	overmind = null
 	STOP_PROCESSING(SSobj, src)
 	GLOB.poi_list -= src
+	SSevents.toggleInfectionmode()
 	. = ..()
 
 /obj/structure/infection/core/proc/deathExplosion()

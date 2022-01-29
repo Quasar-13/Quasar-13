@@ -52,7 +52,7 @@
 	if(istype(src, /mob/living/simple_animal/hostile/infection/infectionspore/sentient))
 		return
 	if(exposed_temperature)
-		adjustFireLoss(clamp(0.01 * exposed_temperature, 1, 5))
+		adjustFireLoss(CLAMP(0.01 * exposed_temperature, 1, 5))
 	else
 		adjustFireLoss(5)
 
@@ -178,11 +178,10 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 
-/*
-//
-// Player Controlled
-//
-*/
+
+//////////////////////
+// Player Controlled//
+//////////////////////
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient
 	name = "evolving spore"
@@ -263,6 +262,8 @@
 	var/list/choices = list()
 	var/list/upgrades_temp = list()
 	for(var/datum/infection_upgrade/U in get_upgrades())
+		if(U.times == 0)
+			continue
 		var/upgrade_index = "[U.name] ([U.cost])"
 		choices[upgrade_index] = image(icon = U.radial_icon, icon_state = U.radial_icon_state)
 		upgrades_temp += U
@@ -294,8 +295,6 @@
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/show_description()
 	to_chat(src, "<span class='cultlarge'>Upgrades List</span>")
 	for(var/datum/infection_upgrade/U in get_upgrades())
-		if(U.times == 0)
-			continue
 		to_chat(src, "<b>[U.name]:</b> [U.description]")
 	return
 
@@ -353,6 +352,7 @@
 		INVOKE_ASYNC(new_spore, .proc/respawn, current_respawn_time)
 	overmind.infection_mobs += new_spore
 	qdel(src)
+	new_spore.update_icons()
 
 /mob/living/simple_animal/hostile/infection/infectionspore/sentient/proc/refund_upgrades()
 	if(spent_upgrade_points == 0)
@@ -377,7 +377,7 @@
 	if(curr == GLOB.infection_nodes.len && GLOB.infection_nodes.len)
 		forceMove(overmind.infection_core)
 		to_chat(src, "<span class='warning'>Shifted spawn location to core.</span>")
-	else
+	else if(GLOB.infection_nodes.len)
 		forceMove(GLOB.infection_nodes[curr + 1])
 		to_chat(src, "<span class='warning'>Shifted spawn location to node [curr + 1].</span>")
 	cycle_cooldown = world.time + 5
@@ -430,4 +430,5 @@
 	speed = 1
 	melee_damage_lower = 40
 	melee_damage_upper = 40
+	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	upgrade_subtype = /datum/infection_upgrade/destructive

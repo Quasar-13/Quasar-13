@@ -25,27 +25,34 @@ GLOBAL_VAR(infection_commander)
 	var/obj/effect/meteor/infection/meteor = null // The infection's incoming meteor
 	var/infection_points = 0
 	var/max_infection_points = 300
-	var/upgrade_points = 0 // obtained by destroying beacons
-	var/all_upgrade_points = 0 // all upgrade points earned so far
+	var/upgrade_points = 10 // obtained by destroying beacons
 	var/last_attack = 0
 	var/list/infection_mobs = list()
 	var/list/resource_infection = list()
-	var/nodes_required = 1 //if the infection needs nodes to place resource and factory blobs
+	var/nodes_required = TRUE //if the infection needs nodes to place resource and factory blobs
 	var/placed = FALSE
+	var/freecam = FALSE
 	var/base_point_rate = 2 //for core placement
 	var/autoplace_time = 200 // a few seconds, just so it isnt sudden at game start
 	var/place_beacons_delay = 100
 	var/victory_in_progress = FALSE
 	var/infection_color = "#ffffff"
-	var/list/default_actions = list(/datum/action/innate/infection/creator/shield,
-									/datum/action/innate/infection/creator/resource,
-									/datum/action/innate/infection/creator/node,
-									/datum/action/innate/infection/creator/factory)
-	var/list/unlockable_actions = list(/datum/action/innate/infection/creator/turret)
+	var/datum/atom_hud/medical_hud
+
+	var/list/default_actions = list(/datum/action/cooldown/infection/creator/shield,
+									/datum/action/cooldown/infection/creator/resource,
+									/datum/action/cooldown/infection/creator/node,
+									/datum/action/cooldown/infection/creator/factory)
+
+	var/list/unlockable_actions = list(/datum/action/cooldown/infection/creator/turret,
+									   /datum/action/cooldown/infection/freecam,
+									   /datum/action/cooldown/infection/emppulse,
+									   /datum/action/cooldown/infection/medicalhud)
 
 /mob/camera/commander/Initialize(mapload, starting_points = 0)
 	if(GLOB.infection_commander)
 		return INITIALIZE_HINT_QDEL // there can be only one
+	. = ..()
 	GLOB.infection_commander = src
 	infection_points = starting_points
 	autoplace_time += world.time
@@ -56,9 +63,9 @@ GLOBAL_VAR(infection_commander)
 	addtimer(CALLBACK(src, .proc/generate_announcement), place_beacons_delay / 2)
 	addtimer(CALLBACK(src, .proc/place_beacons), place_beacons_delay)
 	for(var/type_action in default_actions)
-		var/datum/action/innate/infection/add_action = new type_action()
+		var/datum/action/cooldown/infection/add_action = new type_action()
 		add_action.Grant(src)
-	.= ..()
+	SSmobs.clients_by_zlevel[z] += src
 	START_PROCESSING(SSobj, src)
 
 /mob/camera/commander/proc/generate_announcement()
@@ -67,12 +74,10 @@ GLOBAL_VAR(infection_commander)
 					   Our calculations estimate the infection core will arrive in [(autoplace_time - world.time)/600] minutes.\n\n\
 					   Forcefield Generators are being deployed to defend your station. Protect these from the bulk of the infection.",
 					  "Biohazard Containment Commander", 'sound/misc/notice1.ogg')
-	set_security_level(SEC_LEVEL_RED)
 
 /mob/camera/commander/proc/defeated_announcement()
 	priority_announce("You've defeated the infection, congratulations.",
 					  "Biohazard Containment Commander", 'sound/misc/notice2.ogg')
-	set_security_level(SEC_LEVEL_RED)
 
 /mob/camera/commander/proc/place_beacons()
 	for(var/obj/effect/landmark/beacon_start/B in GLOB.beacon_spawns)
@@ -97,7 +102,7 @@ GLOBAL_VAR(infection_commander)
 		max_infection_points = INFINITY
 		infection_points = INFINITY
 		addtimer(CALLBACK(src, .proc/victory), 250)
-	..()
+	. = ..()
 
 
 /mob/camera/commander/proc/victory()
@@ -161,19 +166,21 @@ GLOBAL_VAR(infection_commander)
 
 	SSshuttle.clearHostileEnvironment(src)
 
-	addtimer(CALLBACK(src, .proc/defeated_announcement), 80)
+	SSmobs.clients_by_zlevel[z] -= src
+
+	addtimer(CALLBACK(src, .proc/defeated_announcement), 40)
 
 	return ..()
 
 /mob/camera/commander/Login()
-	..()
+	. = ..()
 	to_chat(src, "<span class='notice'>You are the infection!</span>")
 	infection_help()
 	update_health_hud()
 	add_points(0)
 
 /mob/camera/commander/examine(mob/user)
-	..()
+	. = ..()
 	to_chat(user, "<font color=[infection_color]>The commander of the infection.</font>")
 
 /mob/camera/commander/update_health_hud()
@@ -181,7 +188,7 @@ GLOBAL_VAR(infection_commander)
 		hud_used.healths.maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#e36600'>[round(infection_core.obj_integrity)]</font></div>"
 
 /mob/camera/commander/proc/add_points(points)
-	infection_points = clamp(infection_points + points, 0, max_infection_points)
+	infection_points = CLAMP(infection_points + points, 0, max_infection_points)
 	hud_used.infectionpwrdisplay.maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#82ed00'>[round(infection_points)]</font></div>"
 
 /mob/camera/commander/say(message, bubble_type, var/list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
@@ -222,8 +229,17 @@ GLOBAL_VAR(infection_commander)
 /mob/camera/commander/blob_act(obj/structure/infection/I)
 	return
 
+/mob/camera/commander/proc/toggle_medical_hud()
+	if(medical_hud)
+		medical_hud.remove_hud_from(src)
+		medical_hud = null
+	else
+		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
+		hud.add_hud_to(src)
+		medical_hud = hud
+
 /mob/camera/commander/Stat()
-	..()
+	. = ..()
 	if(statpanel("Status"))
 		if(infection_core)
 			stat(null, "Core Health: [infection_core.obj_integrity]")
@@ -236,5 +252,14 @@ GLOBAL_VAR(infection_commander)
 /mob/camera/commander/Move(NewLoc, Dir = 0)
 	if(meteor)
 		return FALSE
-	forceMove(NewLoc)
+	if(freecam || !placed)
+		forceMove(NewLoc)
+		return TRUE
+	if(placed)
+		var/obj/structure/infection/I = locate() in range("3x3", NewLoc)
+		if(I)
+			forceMove(NewLoc)
+			return TRUE
+		else
+			return FALSE
 	return TRUE
