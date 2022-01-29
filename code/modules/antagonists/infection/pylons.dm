@@ -8,7 +8,7 @@
 	var/contained_pylon = /obj/structure/destructible/infection_pylon
 
 /obj/item/pylon_spawner/attack_self(mob/user)
-	to_chat(user, span_notice("You activate [src], and the pylon expands!"))
+	to_chat(user, "<span class = 'notice'>You activate [src], and the pylon expands!</span>")
 	new contained_pylon(get_turf(src))
 	qdel(src)
 
@@ -51,7 +51,7 @@
 		for(var/obj/structure/destructible/infection_pylon/P in orange(PYLON_RANGE, src))
 			if(P.anchored)
 				if(!silent)
-					to_chat(user, span_warning("A safety light flashes on the side of [src], placing two of these this close would prevent either from drawing their power."))
+					to_chat(user, "<span class = 'warning'>A safety light flashes on the side of [src], placing two of these this close would prevent either from drawing their power.</span>")
 				return FAILED_UNFASTEN
 	return SUCCESSFUL_UNFASTEN
 
