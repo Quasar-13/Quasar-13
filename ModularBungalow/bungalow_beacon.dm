@@ -1,12 +1,14 @@
 /**
  * The base type of ALL Bungalow choice-beacons
  * All Bungalow choice beacons are subtypes of this one, to avoid copy-paste.
- */
+ * Kirie note: This does NOT work. All of htem get the captain gun subtype. This is fucking gross.
+ * I'll fix it sometime
+
 /obj/item/choice_beacon/bungalow
 	name = "bungalow beacon"
 	desc = "A debug beacon, if you see this, welcome to Bungalow!"
 	///The typesof item this choice beacon will allow you to choose from.
-	var/typesof_options
+	var/typesof_options =
 	///The message played after selecting something with this beacon.
 	var/selection_message = "<span class='hear'>Get out there!</span>"
 
@@ -19,13 +21,19 @@
 /obj/item/choice_beacon/bungalow/spawn_option(obj/choice, mob/living/gifted_person)
 	new choice(get_turf(gifted_person))
 	to_chat(gifted_person, selection_message)
+ */
 
-//Gun beacon
-/obj/item/choice_beacon/bungalow/captain/gun
+/obj/item/choice_beacon/gun
 	name = "captain's gun beacon"
-	desc = "A beacon the captain uses to select his weapon of choice."
-	typesof_options = /obj/item/storage/box/captain/gun
-	selection_message = "<span class='hear'>Thank you for your service. Captain.</span>"
+	desc = "Summon a box of ingredients to help you get started cooking."
+	icon_state = "gangtool-white"
+
+/obj/item/choice_beacon/gun/generate_display_names()
+	var/list/gun = list()
+	for(var/V in subtypesof(/obj/item/storage/box/captain/gun))
+		var/obj/item/storage/box/gun/A = V
+		gun[initial(A.theme_name)] = A
+	return gun
 
 /obj/item/storage/box/captain/gun
 	name = "Energy Gun, Standard Issue"
@@ -81,10 +89,17 @@
 	new /obj/item/gun/energy/laser/scatter(src)
 
 //Captain blade beacon
-/obj/item/choice_beacon/bungalow/captain/sabre
-	name = "captain's blade beacon"
-	desc = "A beacon the captain uses to select his weapon of choice."
-	typesof_options = /obj/item/storage/box/sabre
+/obj/item/choice_beacon/sabre
+	name = "captain's gun beacon"
+	desc = "Summon a box of ingredients to help you get started cooking."
+	icon_state = "gangtool-white"
+
+/obj/item/choice_beacon/sabre/generate_display_names()
+	var/list/sabre = list()
+	for(var/V in subtypesof(/obj/item/storage/box/sabre))
+		var/obj/item/storage/box/sabre/A = V
+		sabre[initial(A.theme_name)] = A
+	return sabre
 
 /obj/item/storage/box/sabre
 	name = "Sabre, Standard Issues"
@@ -115,14 +130,14 @@
 	new /obj/item/katana/captain(src)
 
 //BLACKSITE
-/obj/item/choice_beacon/bungalow/combat/deathsquad
+/obj/item/choice_beacon/bungalow/deathsquad
 	name = "NT Death Commando beacon"
 	desc = "A beacon the Death Commando uses to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/deathsquad
 	selection_message = "<span class='hear'>Get out there!</span>"
 
 //BLACKSITE ERT
-/obj/item/choice_beacon/bungalow/combat/ert
+/obj/item/choice_beacon/bungalow/deathsquad/ert
 	name = "ERT Officer beacon"
 	desc = "A beacon the ERT officers use to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/ert
@@ -132,21 +147,31 @@
 
  * This is a subtype of the ERT beacon, to avoid needless copypaste.
  */
-/obj/item/choice_beacon/bungalow/combat/marine
+/obj/item/choice_beacon/marine
 	name = "NT marine beacon"
 	desc = "A beacon the marines use to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/marine
+
+/obj/item/choice_beacon/marine/generate_display_names()
+	var/list/marine = list()
+	for(var/V in subtypesof(/obj/item/storage/backpack/duffelbag/marine))
+		var/obj/item/storage/backpack/duffelbag/marine/A = V
+		marine[initial(A.theme_name)] = A
+	return marine
 
 /*
  * # Turret ERT beacon BLACKSITE
 
  * This is a subtype of the ERT beacon, to avoid needless copypaste.
  */
-/obj/item/choice_beacon/bungalow/turret
+/obj/item/choice_beacon/turret
 	name = "turret beacon"
 	desc = "A beacon to be used to call down a turret for engineering use."
 	typesof_options = /obj/machinery/manned_turret/scatter
-	selection_message = "<span class='hear'>Stand by for titanfall.</span>"
+
+/obj/item/choice_beacon/bungalow/turret/generate_display_names()
+	var/list/turreta = list(/obj/machinery/manned_turret/scatter)
+	return turreta
 
 /*
  * # HEAVY Turret ERT beacon BLACKSITE
