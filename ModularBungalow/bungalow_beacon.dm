@@ -132,10 +132,23 @@
 
  * This is a subtype of the ERT beacon, to avoid needless copypaste.
  */
-/obj/item/choice_beacon/bungalow/combat/marine
+/obj/item/choice_beacon/combat/marine
 	name = "NT marine beacon"
 	desc = "A beacon the marines use to choose their weapons."
-	typesof_options = /obj/item/storage/backpack/duffelbag/marine
+
+/obj/item/choice_beacon/marine/generate_display_names()
+	var/static/list/marine_item_list
+	if(!marine_item_list)
+		marine_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/marine) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			marine_item_list[initial(A.name)] = A
+	return marine_item_list
+
+/obj/item/choice_beacon/marine/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Get out there!</span>")
 
 /*
  * # Turret ERT beacon BLACKSITE
