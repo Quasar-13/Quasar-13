@@ -1,8 +1,5 @@
 //This is to create new instances of current items in the code, like having stacks of 20 silver directly.
-
-
 //MINERALS
-
 /obj/item/stack/sheet/mineral/silver/twenty
 	amount = 20
 
@@ -16,7 +13,6 @@
 	amount = 20
 
 //BOXES
-
 /obj/item/storage/box/glowsticks
 	name = "glowsticks box"
 	desc = "A box filled with different colorfull glowsticks. Either for emergency or for partying hard."
@@ -39,3 +35,10 @@
 /obj/item/storage/box/flares/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/flashlight/flare(src)
+
+/datum/export/slime/get_cost(obj/O, allowed_categories = NONE, apply_elastic = TRUE)
+	var/costfromparent = ..()
+	if (istype(O,/obj/item/slime_extract))
+		var/obj/item/slime_extract/slimething = O
+		if (slimething.sparkly == TRUE)
+			return costfromparent*2
