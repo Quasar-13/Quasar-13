@@ -114,7 +114,7 @@
 /atom/movable/screen/fullscreen/curse/infection
 	alpha = 150
 
-/obj/screen/fullscreen/infection_covered
+/atom/movable/screen/fullscreen/infection_covered
 	icon_state = "infection"
 	layer = INFECTION_LAYER
 	plane = FULLSCREEN_PLANE

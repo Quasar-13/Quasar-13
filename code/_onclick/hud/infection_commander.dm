@@ -1,58 +1,58 @@
 
-/obj/screen/infection
+/atom/movable/screen/infection
 	icon = 'icons/mob/infection/action_icons.dmi'
 
-/obj/screen/infection/MouseEntered(location,control,params)
+/atom/movable/screen/infection/MouseEntered(location,control,params)
 	openToolTip(usr,src,params,title = name,content = desc, theme = "blob")
 
-/obj/screen/infection/MouseExited()
+/atom/movable/screen/infection/MouseExited()
 	closeToolTip(usr)
 
-/obj/screen/infection/InfectionHelp
+/atom/movable/screen/infection/InfectionHelp
 	icon_state = "help_hud"
 	name = "Infection Help"
 	desc = "Help on playing the infection!"
 
-/obj/screen/infection/InfectionHelp/Click()
+/atom/movable/screen/infection/InfectionHelp/Click()
 	if(iscommander(usr))
 		var/mob/camera/commander/I = usr
 		I.infection_help()
 
-/obj/screen/infection/JumpToNode
+/atom/movable/screen/infection/JumpToNode
 	icon_state = "node_hud"
 	name = "Jump to Node"
 	desc = "Moves your camera to a selected node."
 
-/obj/screen/infection/JumpToNode/Click()
+/atom/movable/screen/infection/JumpToNode/Click()
 	if(iscommander(usr))
 		var/mob/camera/commander/I = usr
 		I.jump_to_node()
 
-/obj/screen/infection/JumpToCore
+/atom/movable/screen/infection/JumpToCore
 	icon_state = "core_hud"
 	name = "Jump to Core"
 	desc = "Moves your camera to your core."
 
-/obj/screen/infection/JumpToCore/Click()
+/atom/movable/screen/infection/JumpToCore/Click()
 	if(iscommander(usr))
 		var/mob/camera/commander/I = usr
 		I.transport_core()
 
-/obj/screen/infection/Evolve
+/atom/movable/screen/infection/Evolve
 	icon_state = "upgrade_hud"
 	name = "Evolution"
 	desc = "Purchase traits that make you stronger."
 
-/obj/screen/infection/Evolve/Click()
+/atom/movable/screen/infection/Evolve/Click()
 	if(iscommander(usr))
 		var/mob/camera/commander/I = usr
 		I.evolve_menu()
 
 /datum/hud/infection_commander/New(mob/owner)
 	..()
-	var/obj/screen/using
+	var/atom/movable/screen/using
 
-	infectionpwrdisplay = new /obj/screen()
+	infectionpwrdisplay = new /atom/movable/screen()
 	infectionpwrdisplay.name = "infection power"
 	infectionpwrdisplay.icon_state = "block"
 	infectionpwrdisplay.screen_loc = ui_health
@@ -64,19 +64,19 @@
 	healths = new /atom/movable/screen/healths/blob()
 	infodisplay += healths
 
-	using = new /obj/screen/infection/JumpToNode()
+	using = new /atom/movable/screen/infection/JumpToNode()
 	using.screen_loc = ui_inventory
 	static_inventory += using
 
-	using = new /obj/screen/infection/JumpToCore()
+	using = new /atom/movable/screen/infection/JumpToCore()
 	using.screen_loc = ui_zonesel
 	using.hud = src
 	static_inventory += using
 
-	using = new /obj/screen/infection/Evolve()
+	using = new /atom/movable/screen/infection/Evolve()
 	using.screen_loc = ui_hand_position(1)
 	static_inventory += using
 
-	using = new /obj/screen/infection/InfectionHelp()
+	using = new /atom/movable/screen/infection/InfectionHelp()
 	using.screen_loc = ui_hand_position(2)
 	static_inventory += using

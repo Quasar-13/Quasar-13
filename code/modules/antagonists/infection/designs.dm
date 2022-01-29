@@ -6,7 +6,7 @@
 	materials = list(/datum/material/bluespace = 4000, /datum/material/glass = 500, /datum/material/diamond = 1500, /datum/material/iron = 200)
 	build_path = /obj/item/pylon_spawner/charger
 	category = list("equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
+	departmental_flags = ALL
 
 /datum/design/turretpylon
 	name = "Turret Pylon"
@@ -16,7 +16,7 @@
 	materials = list(/datum/material/bluespace = 4000, /datum/material/glass = 500, /datum/material/diamond = 1500, /datum/material/iron = 200)
 	build_path = /obj/item/pylon_spawner/turret
 	category = list("equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
+	departmental_flags = ALL
 
 /datum/design/sleeperup
 	name = "Infection Sleeper Upgrade"
@@ -26,7 +26,7 @@
 	materials = list(/datum/material/iron = 1200, /datum/material/glass = 1200, /datum/material/plastic = 5000, /datum/material/bluespace = 500, /datum/material/diamond = 250) //oh yes I A M going to do this
 	build_path = /obj/item/sleeper_enhancer
 	category = list("Medical Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
+	departmental_flags = ALL
 
 /datum/design/healinjector
 	name = "Infection Reusable Medical Injector"
@@ -36,4 +36,4 @@
 	materials = list(/datum/material/iron = 1200, /datum/material/glass = 1200, /datum/material/plastic = 500, /datum/material/bluespace = 1500, /datum/material/diamond = 500)
 	build_path = /obj/item/healing_injector
 	category = list("Medical Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
+	departmental_flags = ALL
