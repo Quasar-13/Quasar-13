@@ -196,7 +196,6 @@
 	var/list/possible_mobs = list(/mob/living/simple_animal/hostile/retaliate/clown/clownhulk=2,
 						/mob/living/simple_animal/hostile/retaliate/clown/longface=3,
 						/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown=2,
-						/mob/living/simple_animal/hostile/retaliate/clown/mutant/blob=3,
 						/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/destroyer=2,
 						/mob/living/simple_animal/hostile/retaliate/clown/fleshclown=2,
 						/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/honcmunculus=2,
