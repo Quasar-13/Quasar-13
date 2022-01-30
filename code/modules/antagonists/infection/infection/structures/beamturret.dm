@@ -13,7 +13,7 @@
 	point_return = 10
 	upgrade_subtype = /datum/infection_upgrade/beamturret
 	scan_range = 4 // range to search for targets
-	projectile_type = /obj/item/projectile/bullet/infection/beam // the bullet fired for this turret
+	projectile_type = /obj/projectile/bullet/infection/beam // the bullet fired for this turret
 	projectile_sound = null
 	hit_sound = 'sound/effects/hitscan_zap.ogg'
 	// the actual beam of the turret, deleted when not firing
@@ -44,7 +44,7 @@
 	if(T)
 		B = T.Beam(target, icon_state="lightning-hitscan", icon='icons/mob/infection/crystal_effect.dmi', time=INFINITY, maxdistance=scan_range+1, beam_type=/obj/effect/ebeam/infection_beam, beam_sleep_time=1)
 
-/obj/item/projectile/bullet/infection/beam
+/obj/projectile/bullet/infection/beam
 	name = "lightning beam"
 	damage = 10
 	damage_type = BURN

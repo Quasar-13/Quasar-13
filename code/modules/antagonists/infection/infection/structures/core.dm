@@ -76,7 +76,7 @@
 
 /obj/structure/infection/core/Destroy()
 	playsound(src, 'sound/machines/clockcult/ark_scream.ogg', 60, 1, 10, pressure_affected = FALSE)
-	visible_message(span_boldwarning("Cracks begin to quickly develop across the entirety of [src]'s surface, and it begins resonating at an unearthly frequency!"))
+	visible_message("<span class='warning'>Cracks begin to quickly develop across the entirety of [src]'s surface, and it begins resonating at an unearthly frequency!</span>")
 	sleep(5 SECONDS)
 	deathExplosion()
 	GLOB.infection_core = null
@@ -102,7 +102,7 @@
 /obj/structure/infection/core/ex_act(severity, target)
 	return
 
-/obj/structure/infection/core/bullet_act(obj/item/projectile/P)
+/obj/structure/infection/core/bullet_act(obj/projectile/P)
 	// doesn't include infectionkiller for a reason, ranged weapons killing the core is just kind of lame (unless they smash it with the gun of course)
 	var/obj/effect/temp_visual/at_shield/AT = new /obj/effect/temp_visual/at_shield(loc, src)
 	var/random_x = rand(-32, 32)
@@ -111,7 +111,7 @@
 	var/random_y = rand(-32, 32)
 	AT.pixel_y += random_y
 	playsound(loc, pick('sound/weapons/effects/ric1.ogg', 'sound/weapons/effects/ric2.ogg', 'sound/weapons/effects/ric3.ogg', 'sound/weapons/effects/ric4.ogg', 'sound/weapons/effects/ric5.ogg'), 100, 1, 10, pressure_affected = FALSE)
-	visible_message(span_notice("[P] plinks off of [src]!"))
+	visible_message("<span class='notice'>[P] plinks off of [src]!</span>")
 
 /obj/structure/infection/core/attacked_by(obj/item/I, mob/living/user)
 	if(!istype(I, /obj/item/infectionkiller))
@@ -122,10 +122,10 @@
 		var/random_y = rand(-32, 32)
 		AT.pixel_y += random_y
 		playsound(src.loc, 'sound/effects/bang.ogg', 100, 1, 10, pressure_affected = FALSE)
-		user.visible_message(span_warning("[user]'s [I] plinks off of [src]!"), span_notice("[user]'s [I] plinks off of [src]!"))
+		user.visible_message("<span class='warning'>[user]'s [I] plinks off of [src]!", "<span class='notice'>[user]'s [I] plinks off of [src]!")
 		return
 	if(I.force)
-		visible_message(span_danger("A mass of cracks appear in [src] as [user] hits it with [I]!"), null, null, COMBAT_MESSAGE_RANGE)
+		visible_message("<span class='danger'>A mass of cracks appear in [src] as [user] hits it with [I]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 		//only witnesses close by and the victim see a hit message.
 		log_combat(user, src, "attacked", I)
 	take_damage(I.force*5, I.damtype, "melee", 1, override = "infection_core")
@@ -172,7 +172,7 @@
 */
 /obj/structure/infection/core/proc/convert_carbon(mob/living/carbon/C)
 	var/timeleft = world.time + CORE_CONVERSION_TIME
-	C.visible_message(span_notice("[src] begins to draw something from [C] as they enter its radius!"))
+	C.visible_message("<span class='notice'>[src] begins to draw something from [C] as they enter its radius!")
 	var/stored_mind = C.mind
 	var/turf/T = get_turf(src)
 	var/datum/beam/B = T.Beam(C, icon_state="drain_life", time=INFINITY, maxdistance=INFINITY)
@@ -183,7 +183,7 @@
 			qdel(B)
 			return
 	qdel(B)
-	C.visible_message(span_notice("[C] disintegrates as [src] begins to glow brighter..."))
+	C.visible_message("<span class='notice'>[C] disintegrates as [src] begins to glow brighter...")
 	C.dust()
 	converting.Remove(stored_mind)
 	overmind.create_spore()

@@ -60,7 +60,7 @@
 		adjustFireLoss(5)
 
 /mob/living/simple_animal/hostile/infection/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /obj/structure/infection) || istype(mover, /obj/item/projectile/bullet/infection))
+	if(istype(mover, /obj/structure/infection) || istype(mover, /obj/projectile/bullet/infection))
 		return 1
 	return ..()
 
@@ -113,7 +113,7 @@
 	melee_damage_upper = 10
 	obj_damage = 20
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
-	attacktext = "hits"
+	attack_verb_continuous = "hits"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	movement_type = FLYING
 	del_on_death = 1

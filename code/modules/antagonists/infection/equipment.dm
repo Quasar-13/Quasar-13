@@ -8,11 +8,11 @@
 	if(istype(target, /obj/machinery/sleeper))
 		var/obj/machinery/sleeper/S = target
 		if(S.heal_rate != initial(S.heal_rate))
-			to_chat(user, span_notice("The slot for [src] is already occupied!"))
+			to_chat(user, "<span class='notice'>The slot for [src] is already occupied!</span>")
 			return FALSE
 		S.heal_rate *= 3
 		S.color = "#382a57"
-		to_chat(user, span_notice("You install [src] into [S], and a purple gel overtakes the interior of its cover. Hopefully this doesn't backfire..."))
+		to_chat(user, "<span class='notice'>You install [src] into [S], and a purple gel overtakes the interior of its cover. Hopefully this doesn't backfire...</span>")
 		qdel(src)
 		return FALSE
 	return ..()
@@ -35,7 +35,7 @@
 	if(!cd_check(user))
 		update_overlays(user)
 		return
-	user.visible_message(span_warning("[user] injects [M] with [src]!"), span_notice("You inject [M] with [src], and it seems to draw something from the air around you!"))
+	user.visible_message("<span class='warning'>[user] injects [M] with [src]!</span>", "<span class='notice'>You inject [M] with [src], and it seems to draw something from the air around you!</span>")
 	M.reagents.add_reagent(/datum/reagent/medicine/syndicate_nanites, 5)
 	user_cooldown[user] = TRUE
 	on_cooldown = TRUE
@@ -72,11 +72,11 @@
 	. = TRUE
 	if(user && listgetindex(user_cooldown, user))
 		if(!silent)
-			to_chat(user, span_warning("A warning light flashes on [src], it seems whatever it drew from you to recharge hasn't replenished."))
+			to_chat(user, "<span class='warning'>A warning light flashes on [src], it seems whatever it drew from you to recharge hasn't replenished.</span>")
 		return FALSE
 	if(on_cooldown)
 		if(!silent && user)
-			to_chat(user, span_warning("[src] hasn't finished recharging yet!"))
+			to_chat(user, "<span class='warning'>[src] hasn't finished recharging yet!</spam>")
 		return FALSE
 
 /obj/item/targettingcomputer
@@ -87,18 +87,18 @@
 
 /obj/item/targettingcomputer/pre_attack(atom/target, mob/living/user)
 	if(istype(target, /obj/item/gun/energy) && !(target.type == /obj/item/gun/energy/laser)) //exact type match to prevent projectile shenanigans
-		to_chat(user, span_warning("[target] is not compatible with [src]!"))
+		to_chat(user, "<span class='warning'>[target] is not compatible with [src]!</span>")
 		return
 	var/obj/item/gun/energy/laser/ourgun = target
 	if(!istype(ourgun))
 		return
 	var/obj/item/ammo_casing/energy/lasergun/L = ourgun.ammo_type[1]
 	if(L.projectile_type != initial(L.projectile_type))
-		to_chat(user, span_warning("[target] has already been modified too heavily for [src] to be compatible!"))
+		to_chat(user, "<span class='warning'>[target] has already been modified too heavily for [src] to be compatible!</span>")
 		return
-	to_chat(user, span_notice("You install [src] into [target]."))
+	to_chat(user, "<span class='notice'>You install [src] into [target].</span>")
 	ourgun.name = "modified [L.name]"
-	L.projectile_type = /obj/item/projectile/beam/laser/passfriendlies
+	L.projectile_type = /obj/projectile/beam/laser/passfriendlies
 	QDEL_NULL(L.BB) //goodbye, old bullet
 	L.newshot() //hello, new bullet
 	qdel(src)

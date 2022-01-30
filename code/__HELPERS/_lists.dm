@@ -90,6 +90,16 @@
 
 			return "[output][and_text][input[index]]"
 
+/// Returns list element or null. Should prevent "index out of bounds" error.
+/proc/listgetindex(list/L, index)
+	if(LAZYLEN(L))
+		if(isnum(index) && ISINTEGER(index))
+			if(ISINRANGE(index,1,L.len))
+				return L[index]
+		else if(index in L)
+			return L[index]
+	return
+
 //Checks for specific types in a list
 /proc/is_type_in_list(atom/A, list/L)
 	if(!LAZYLEN(L) || !A)

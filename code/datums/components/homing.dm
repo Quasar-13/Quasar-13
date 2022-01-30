@@ -25,13 +25,13 @@
 /*
 	Gets the projectile fired from the structure
 */
-/datum/component/homing/proc/projectile_firing(atom/fired_from, obj/item/projectile/fired, atom/target)
+/datum/component/homing/proc/projectile_firing(atom/fired_from, obj/projectile/fired, atom/target)
 	do_homing(fired, target)
 
 /*
 	Turns the projectile into a homing projectile
 */
-/datum/component/homing/proc/do_homing(obj/item/projectile/fired, atom/target)
+/datum/component/homing/proc/do_homing(obj/projectile/fired, atom/target)
 	fired.set_homing_target(target)
 	fired.homing_turn_speed = turning_speed
 	if(override_projectile_range != null)

@@ -1,3 +1,14 @@
+///Can the atom pass this mob (always true for /mob)
+/**
+ * Get the current movespeed delay of the mob
+ *
+ * DO NOT OVERRIDE THIS UNLESS YOU ABSOLUTELY HAVE TO.
+ * THIS IS BEING PHASED OUT FOR THE MOVESPEED MODIFICATION SYSTEM.
+ * See mob_movespeed.dm
+ */
+/mob/proc/movement_delay()	//update /living/movement_delay() if you change this
+	return cached_multiplicative_slowdown
+
 /**
  * If your mob is concious, drop the item in the active hand
  *

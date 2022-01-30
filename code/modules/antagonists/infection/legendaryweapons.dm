@@ -96,11 +96,10 @@
 	name = "Excaliju"
 	desc = "An ancient sword with several runes carved along the blade. Deathblows to infested creatures massively increase its damage for 5 seconds."
 	icon_state = "excaliju"
-	item_state = "excaliju"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/wpnHit1.ogg'
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb_simple = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	force = 25
 	armour_penetration = 50
 	block_chance = 75
@@ -155,7 +154,6 @@
 	name = "Drill of Legends"
 	desc = "A glowing golden drill, bluespace energies infused into the drill bit allow it to slice thick infection with ease."
 	icon_state = "drilloflegends"
-	item_state = "drilloflegends"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	force = 30
@@ -163,20 +161,19 @@
 	tool_behaviour = TOOL_MINING
 	toolspeed = 0.01
 	usesound = list('sound/effects/picaxe1.ogg', 'sound/effects/picaxe2.ogg', 'sound/effects/picaxe3.ogg')
-	attack_verb = list("hit", "pierced", "sliced", "attacked")
+	attack_verb_simple = list("hit", "pierced", "sliced", "attacked")
 
 /obj/item/infectionkiller/staff
 	name = "Golden Staff of the Honkmother"
 	desc = "The golden staff of the honkmother, containing a stable bluespace portal to a clown monastary on clown planet."
 	icon = 'icons/obj/guns/magic.dmi'
 	icon_state = "honker"
-	item_state = "honker"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
 	color = "#ffbb00"
 	force = 25
 	hitsound = list('sound/items/airhorn.ogg')
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb_simple = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	actions_types = list(/datum/action/item_action/summon_clowns)
 
 /datum/action/item_action/summon_clowns

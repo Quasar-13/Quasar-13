@@ -27,10 +27,10 @@
 	wound_bonus = -30
 	bare_wound_bonus = 40
 
-/obj/item/projectile/beam/laser/passfriendlies
+/obj/projectile/beam/laser/passfriendlies
 	name = "targetted laser"
 
-/obj/item/projectile/beam/laser/passfriendlies/can_hit_target(atom/target, list/passthrough, direct_target = FALSE, ignore_loc = FALSE)
+/obj/projectile/beam/laser/passfriendlies/can_hit_target(atom/target, list/passthrough, direct_target = FALSE, ignore_loc = FALSE)
 	if(ismob(target) && ismob(firer))
 		var/mob/M = target
 		var/mob/F = firer

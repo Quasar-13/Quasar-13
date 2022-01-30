@@ -54,7 +54,7 @@
 	var/crystal_drop = 0
 	// types of objects to eat
 	var/list/types_to_eat = list(/obj/singularity,
-								 /obj/singularity/energy_ball,
+								 /obj/energy_ball,
 								 /obj/machinery/power/supermatter_crystal,
 								 /obj/machinery/gravity_generator)
 
@@ -127,7 +127,7 @@
 /obj/structure/infection/singularity_act()
 	return
 
-/obj/structure/infection/tesla_act(power)
+/obj/structure/infection/zap_act(power)
 	. = ..()
 	return
 

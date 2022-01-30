@@ -19,7 +19,7 @@
 	// the range that this turret will search to find targets
 	var/scan_range = 8
 	// the projectile shot from this turret
-	var/projectile_type = /obj/item/projectile/bullet/infection
+	var/projectile_type = /obj/projectile/bullet/infection
 	// the projectiles sound when it is fired
 	var/projectile_sound = 'sound/effects/crystal_fire.ogg'
 	// the sound when the projectile hits the person
@@ -135,7 +135,7 @@
 
 	setDir(get_dir(src, target))
 	update_icon()
-	var/obj/item/projectile/bullet/infection/A = new projectile_type(T)
+	var/obj/projectile/bullet/infection/A = new projectile_type(T)
 	playsound(loc, projectile_sound, 75, 1, pressure_affected = FALSE)
 	A.hitsound = hit_sound
 
@@ -146,7 +146,7 @@
 	A.fire()
 	return A
 
-/obj/item/projectile/bullet/infection
+/obj/projectile/bullet/infection
 	name = "energy shot"
 	icon = 'icons/mob/infection/crystal_effect.dmi'
 	icon_state = "lightning-projectile"
@@ -160,7 +160,7 @@
 	hitsound_wall = "ricochet"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 
-/obj/item/projectile/bullet/infection/flak
+/obj/projectile/bullet/infection/flak
 	name = "energy burst"
 	damage = 10
 	speed = 2

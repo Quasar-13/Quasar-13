@@ -282,7 +282,7 @@
 	cost = 50
 
 /datum/infection_upgrade/turret/flak_bullets/upgrade_effect(atom/parent)
-	parent.AddComponent(/datum/component/shrapnel, /obj/item/projectile/bullet/infection/flak, 2)
+	parent.AddComponent(/datum/component/mirv, /obj/projectile/bullet/infection/flak, 2)
 
 /*
 	Upgrade types for the infection resource generators
