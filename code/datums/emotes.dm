@@ -77,6 +77,8 @@
 	else
 		user.visible_message(msg, visible_message_flags = EMOTE_MESSAGE)
 
+	SEND_SIGNAL(user, COMSIG_MOB_EMOTED(key))
+
 /// For handling emote cooldown, return true to allow the emote to happen
 /datum/emote/proc/check_cooldown(mob/user, intentional)
 	if(!intentional)

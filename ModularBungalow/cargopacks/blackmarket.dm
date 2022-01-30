@@ -1,8 +1,6 @@
 //LANGUAGE BOOKS
-
 /datum/blackmarket_item/language
 	category = "Language"
-
 
 /datum/blackmarket_item/language/roundstartrace
 	name = "Random racial language book"
@@ -76,15 +74,6 @@
 	stock_max = 3
 	availability_prob = 80
 
-/datum/blackmarket_item/language/russian
-	name = "Russian language book"
-	desc = "A nu cheeki breeki iv damke!"
-	item = /obj/item/book/granter/language_book/russian
-	price_min = 250
-	price_max = 750
-	stock_max = 3
-	availability_prob = 100 //Unbiaised.
-
 /datum/blackmarket_item/language/xeno
 	name = "Xenomorphs language book"
 	desc = "Let's hope you buy this for xenobiological ressearch..."
@@ -95,7 +84,6 @@
 	availability_prob = 40
 
 //MAGIC
-
 /datum/blackmarket_item/magic
 	category = "Supernatural"
 
@@ -136,7 +124,6 @@
 	availability_prob = 100
 
 //ORGANS
-
 /datum/blackmarket_item/organ
 	category = "Organs"
 
@@ -204,7 +191,6 @@
 	availability_prob = 80
 
 //TREASURES
-
 /datum/blackmarket_item/treasure
 	category = "Treasures"
 
@@ -226,8 +212,6 @@
 	stock_max = 1
 	availability_prob = 100
 
-
-
 /datum/blackmarket_item/treasure/svetdisabler
 	name = "Brass Ray"
 	desc = "A modified disabler designed by someone with awfull tastes. Self rechargeable and uses 'rays' instead of 'beams' to shoot."
@@ -237,7 +221,6 @@
 	stock_max = 1
 	availability_prob = 100
 
-
 /datum/blackmarket_item/treasure/svetbaton
 	name = "Brass Stringer"
 	desc = "A modified baton designed by someone with awfull tastes. Retracts into pockets and works on silicons."
@@ -246,7 +229,6 @@
 	price_max = 10000
 	stock_max = 1
 	availability_prob = 100
-
 
 /datum/blackmarket_item/treasure/svetshotgun
 	name = "Brass Cannon"
@@ -265,4 +247,3 @@
 	price_max = 10000
 	stock_max = 1
 	availability_prob = 100
-
