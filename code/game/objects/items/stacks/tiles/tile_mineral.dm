@@ -183,6 +183,14 @@
 	material_flags = MATERIAL_NO_EFFECTS
 	merge_type = /obj/item/stack/tile/mineral/plastitanium
 
+/obj/item/stack/tile/mineral/plastitanium/red
+	name = "red plastitanium tile"
+	singular_name = "red plastitanium floor tile"
+	desc = "A tile made of plastitanium, used for very red shuttles."
+	turf_type = /turf/open/floor/mineral/plastitanium/red
+	icon_state = "tile_darkshuttle_red"
+	merge_type = /obj/item/stack/tile/mineral/plastitanium/red
+
 /obj/item/stack/tile/mineral/snow
 	name = "snow tile"
 	singular_name = "snow tile"

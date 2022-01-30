@@ -112,7 +112,7 @@
 	base_icon_state = "ridged"
 
 /turf/open/floor/plasteel/showroomfloor
-	icon = '/icons/turf/floors.dmi'
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "showroomfloor"
 	base_icon_state = "showroomfloor"
 	color = null
