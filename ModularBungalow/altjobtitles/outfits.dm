@@ -120,6 +120,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
 	gloves = /obj/item/clothing/gloves/color/captain/commodore
 	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cdre
+	backpack = /obj/item/storage/backpack/centcom
 
 /datum/outfit/job/captain/marshal
 	name = "Captain (Marshal)"
