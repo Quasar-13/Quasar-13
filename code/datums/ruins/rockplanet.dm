@@ -65,7 +65,23 @@
 	description = "Wizards have reached all the ways out here too."
 	suffix = "rockplanet_wizard.dmm"
 
+/datum/map_template/ruin/rockplanet/arena
+	name = "Grand Arena"
+	id = "arena"
+	description = "An ancient gladitorial arena containing a deadly warrior within."
+	suffix = "rockplanet_marked.dmm"
+	cost = 0
+	always_place = TRUE //WOULD BE UNFAIR IF SOMETHING THAT IS ALWAYS PLACED HAD A COST...
+	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/platinum
+	name = "Platinum Angel"
+	id = "platinum"
+	description = "You cannot win, She cannot lose."
+	suffix = "rockplanet_platinum.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
 
 

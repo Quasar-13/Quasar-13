@@ -28,8 +28,8 @@
 /datum/n_function/default/find/execute(this_obj, list/params)
 	var/haystack = params.len >= 1 ? params[1] : null
 	var/needle = params.len >= 2 ? params[2] : null
-	var/start  = params.len >= 3 ? params[3] :  1
-	var/end  = params.len >= 4 ? params[4] :  0
+	var/start = params.len >= 3 ? params[3] : 1
+	var/end = params.len >= 4 ? params[4] : 0
 	if(haystack && needle)
 		if(isobject(haystack))
 			if(istype(haystack, /list))
@@ -47,8 +47,8 @@
 	name = "substr"
 /datum/n_function/default/substr/execute(this_obj, list/params)
 	var/string = params.len >= 1 ? params[1] : null
-	var/start  = params.len >= 2 ? params[2] :  1
-	var/end  = params.len >= 3 ? params[3] :  0
+	var/start = params.len >= 2 ? params[2] : 1
+	var/end = params.len >= 3 ? params[3] : 0
 	if(istext(string) && isnum(start) && isnum(end))
 		if(start > 0)
 			return copytext(string, start, end)
@@ -84,7 +84,7 @@
 	name = "explode"
 /datum/n_function/default/explode/execute(this_obj, list/params)
 	var/string = params.len >= 1 ? params[1] : null
-	var/separator  = params.len >= 2 ? params[2] :  ""
+	var/separator = params.len >= 2 ? params[2] : ""
 	if(istext(string) && (istext(separator) || isnull(separator)))
 		return splittext(string, separator)
 
@@ -329,7 +329,7 @@
 		var/count = 0
 		while(1)
 			count += 1
-			if(count >  SCRIPT_MAX_REPLACEMENTS_ALLOWED)
+			if(count > SCRIPT_MAX_REPLACEMENTS_ALLOWED)
 				break
 			var/found = findtext(text, find, last_found, 0)
 			. += copytext(text, last_found, found)

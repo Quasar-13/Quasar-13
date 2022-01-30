@@ -392,12 +392,6 @@ Key procs
 
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/spacer = list(LANGUAGE_ATOM))
-/datum/language_holder/beepeople
-	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/beecommon = list(LANGUAGE_ATOM))
-
-	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/beecommon = list(LANGUAGE_ATOM))
 
 /datum/language_holder/empty
 	understood_languages = list()

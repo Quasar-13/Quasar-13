@@ -393,37 +393,6 @@
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "bitterness"
 
-/datum/reagent/drug/mushroomhallucinogen
-	name = "Mushroom Hallucinogen"
-	description = "A strong hallucinogenic drug derived from certain species of mushroom."
-	color = "#E700E7" // rgb: 231, 0, 231
-	metabolization_rate = 0.2 * REAGENTS_METABOLISM
-	taste_description = "mushroom"
-	addiction_types = list(/datum/addiction/hallucinogens = 12)
-
-/datum/reagent/drug/mushroomhallucinogen/on_mob_life(mob/living/carbon/M)
-	if(!M.slurring)
-		M.slurring = 1
-	switch(current_cycle)
-		if(1 to 5)
-			M.Dizzy(5)
-			M.set_drugginess(30)
-			if(prob(10))
-				M.emote(pick("twitch","giggle"))
-		if(5 to 10)
-			M.Jitter(10)
-			M.Dizzy(10)
-			M.set_drugginess(35)
-			if(prob(20))
-				M.emote(pick("twitch","giggle"))
-		if (10 to INFINITY)
-			M.Jitter(20)
-			M.Dizzy(20)
-			M.set_drugginess(40)
-			if(prob(30))
-				M.emote(pick("twitch","giggle"))
-	..()
-
 /datum/reagent/consumable/garlic //NOTE: having garlic in your blood stops vampires from biting you.
 	name = "Garlic Juice"
 	description = "Crushed garlic. Chefs love it, but it can make you smell bad."

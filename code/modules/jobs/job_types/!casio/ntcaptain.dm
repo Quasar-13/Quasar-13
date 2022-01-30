@@ -1,5 +1,5 @@
 /datum/job/ntcaptain
-	title = "NT Captain"
+	title = "Captain"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
 	faction = "Station"
@@ -14,7 +14,7 @@
 	exp_type_department = EXP_TYPE_COMMAND
 	maptype = "casio"
 
-	outfit = /datum/outfit/job/ntcaptain
+	outfit = /datum/outfit/job/captain/nt
 
 
 	access = list() 			//See get_access()
@@ -37,30 +37,16 @@
 	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "[H.real_name] is now in command of the station!")) // Tegu Edit: Alt Titles end
 //	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "[displayed_rank] [H.real_name] is on deck!")) // original
 
-/datum/outfit/job/ntcaptain
-	name = "NT Captain"
+/datum/outfit/job/captain/nt
+	name = "Captain (Naval)"
 	jobtype = /datum/job/ntcaptain
 
-	id = /obj/item/card/id/gold
-	belt = /obj/item/pda/captain
-	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/heads/headset_cent/commander
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/centcom/officer/captain
 	suit = /obj/item/clothing/suit/armor/captain/casio
 	head = /obj/item/clothing/head/beret/centcom
-	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
-	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/station_charter=1)
-
-	skillchips = list(/obj/item/skillchip/disk_verifier)
-
-	backpack = /obj/item/storage/backpack/captain
-	satchel = /obj/item/storage/backpack/satchel/cap
-	duffelbag = /obj/item/storage/backpack/duffelbag/captain
-
-	implants = list(/obj/item/implant/mindshield)
-	accessory = /obj/item/clothing/accessory/medal/gold/captain
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/captain)
 

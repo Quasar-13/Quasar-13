@@ -58,7 +58,9 @@
 #define SEC_LEVEL_GREEN	0
 #define SEC_LEVEL_BLUE	1
 #define SEC_LEVEL_RED	2
-#define SEC_LEVEL_DELTA	3
+#define SEC_LEVEL_GAMMA 3
+#define SEC_LEVEL_EPSILON 4
+#define SEC_LEVEL_DELTA	5
 
 //some arbitrary defines to be used by self-pruning global lists. (see master_controller)
 #define PROCESS_KILL 26	//Used to trigger removal from a processing list
@@ -540,6 +542,8 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 #define IGNORE_TARGET_LOC_CHANGE (1<<1)
 #define IGNORE_HELD_ITEM (1<<2)
 #define IGNORE_INCAPACITATED (1<<3)
+///Used to prevent important slowdowns from being abused by drugs like kronkaine
+#define IGNORE_SLOWDOWNS (1<<4)
 
 // Skillchip categories
 //Various skillchip categories. Use these when setting which categories a skillchip restricts being paired with

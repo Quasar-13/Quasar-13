@@ -2,7 +2,7 @@
 
 
 /* --- Traffic Control Scripting Language --- */
-	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu
+	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu and repaired by Horologium
 
 #define NTSL_LANG_APHASIA 1
 #define NTSL_LANG_BEACHBUM 2
@@ -136,8 +136,9 @@
 			return /datum/language/drone
 
 GLOBAL_LIST_INIT(allowed_custom_spans,list(SPAN_ROBOT,SPAN_YELL,SPAN_ITALICS,SPAN_SANS,SPAN_COMMAND,SPAN_CLOWN))//Span classes that players are allowed to set in a radio transmission.
-//this is fucking broken
-GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/language/machine,/datum/language/draconic))// language datums that players are allowed to translate to in a radio transmission.
+//Bungalow races (in alphabetical order to languages below: Beepeople, Ethereal, Felinid, Human, Jelly, Lizard, Moth, Plasmaman). Piratespeak is on here for lols and so poly can speak like a proper bird. If you do not want this, remove the last element of the allowed_translations list.
+//The original comment saying this part didnt work, wasnt quite right but was on the right track.
+GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/buzzwords,/datum/language/voltaic,/datum/language/nekomimetic,/datum/language/common,/datum/language/slime,/datum/language/draconic,/datum/language/moffic,/datum/language/calcic,/datum/language/piratespeak))// language datums that players are allowed to translate to in a radio transmission.
 
 /n_Interpreter/TCS_Interpreter
 	var/datum/TCS_Compiler/Compiler
@@ -167,10 +168,10 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 /datum/TCS_Compiler/proc/Compile(code as message)
 	var/n_scriptOptions/nS_Options/options = new()
-	var/n_Scanner/nS_Scanner/scanner       = new(code, options)
-	var/list/tokens                        = scanner.Scan()
-	var/n_Parser/nS_Parser/parser          = new(tokens, options)
-	var/node/BlockDefinition/GlobalBlock/program   	 = parser.Parse()
+	var/n_Scanner/nS_Scanner/scanner = new(code, options)
+	var/list/tokens = scanner.Scan()
+	var/n_Parser/nS_Parser/parser = new(tokens, options)
+	var/node/BlockDefinition/GlobalBlock/program = parser.Parse()
 
 	var/list/returnerrors = list()
 
@@ -188,15 +189,15 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	interpreter.SetVar("PI"		, 	3.141592653)	// value of pi
 	interpreter.SetVar("E" 		, 	2.718281828)	// value of e
 	interpreter.SetVar("SQURT2" , 	1.414213562)	// value of the square root of 2
-	interpreter.SetVar("FALSE"  , 	0)				// boolean shortcut to 0
-	interpreter.SetVar("false"  , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("FALSE" , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("false" , 	0)				// boolean shortcut to 0
 	interpreter.SetVar("TRUE"	,	1)				// boolean shortcut to 1
 	interpreter.SetVar("true"	,	1)				// boolean shortcut to 1
 
 	interpreter.SetVar("NORTH" 	, 	NORTH)			// NORTH (1)
 	interpreter.SetVar("SOUTH" 	, 	SOUTH)			// SOUTH (2)
-	interpreter.SetVar("EAST" 	, 	EAST)			// EAST  (4)
-	interpreter.SetVar("WEST" 	, 	WEST)			// WEST  (8)
+	interpreter.SetVar("EAST" 	, 	EAST)			// EAST (4)
+	interpreter.SetVar("WEST" 	, 	WEST)			// WEST (8)
 
 	// Channel macros
 	interpreter.SetVar("channels", new /datum/n_enum(list(
@@ -326,7 +327,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	signal.virt.verb_exclaim	= script_signal.get_clean_property("exclaim")
 	var/newlang = NTSL_LANG_TODATUM(script_signal.get_clean_property("language"))
 	if(newlang != oldlang)// makes sure that we only clean out unallowed languages when a translation is taking place otherwise we run an unnecessary proc to filter newlang on foreign untranslated languages.
-		if(!LAZYFIND(GLOB.allowed_translations, oldlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek
+		if(!LAZYFIND(GLOB.allowed_translations, newlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek | You know who else is dead? MY MOM (shit wait) - Horologium
 			newlang = oldlang
 	signal.language = newlang || oldlang
 	var/list/setspans 			= script_signal.get_clean_property("filters") //Save the span vector/list to a holder list
@@ -377,7 +378,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	return S
 
 
-/*  -- Actual language proc code --  */
+/* -- Actual language proc code -- */
 
 #define SIGNAL_COOLDOWN 20 // 2 seconds
 #define MAX_MEM_VARS 500 // The maximum number of variables that can be stored by NTSL via mem()

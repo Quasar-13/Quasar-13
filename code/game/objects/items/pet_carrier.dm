@@ -195,4 +195,101 @@
 	occupant_weight -= occupant.mob_size
 	occupant.setDir(SOUTH)
 
+// Chinese torture
+/obj/item/pet_carrier/cage
+	name = "metal cage"
+	desc = "A big metal cage with retractable bottom part. You don't like where this is going..."
+	icon = 'icons/obj/pet_carrier.dmi'
+	icon_state = "rat_cage_open"
+	inhand_icon_state = "pet_carrier"
+	slot_flags = ITEM_SLOT_OCLOTHING
+	custom_materials = list(/datum/material/iron = 7500)
+	max_occupants = 5
+	var/heated = 0
+
+/obj/item/pet_carrier/cage/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/item/pet_carrier/cage/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/item/pet_carrier/cage/update_icon_state()
+	if(open)
+		icon_state = initial(icon_state)
+	else
+		icon_state = "rat_cage_[!occupants.len ? "closed" : "occupied"]"
+
+/obj/item/pet_carrier/cage/update_overlays()
+	. = ..()
+	if(!open)
+		. += "[locked ? "" : "un"]locked_rat"
+
+/obj/item/pet_carrier/cage/attack(mob/living/target, mob/living/user)
+	if(user.a_intent == INTENT_HARM)
+		return ..()
+	if(!open)
+		to_chat(user, "<span class='warning'>You need to open [src]'s door!</span>")
+		return
+	if(!istype(target, /mob/living/simple_animal/mouse))
+		return
+	if(target.stat == DEAD)
+		to_chat(user, "<span class='warning'>[target] is dead!</span>")
+		return
+	load_occupant(user, target)
+
+/obj/item/pet_carrier/cage/examine(mob/user)
+	. = ..()
+	switch(heated)
+		if(20 to 40)
+			. += "<span class='warning'>It is quite hot.</span>"
+		if(40 to 60)
+			. += "<span class='warning'>It is very hot.</span>"
+		if(60 to 80)
+			. += "<span class='warning'>It is terrifyingly hot!</span>"
+		if(80 to INFINITY)
+			. += "<span class='danger'>The metal rods are nearly red from the heat!</span>"
+
+// THE FUNNY PART!!!
+/obj/item/pet_carrier/cage/process()
+	if(occupants.len)
+		for(var/mob/living/simple_animal/mouse/mice in occupants)
+			if(prob(max(2, heated)))
+				addtimer(CALLBACK(src, .proc/commotion, mice), rand(0,9), TIMER_STOPPABLE)
+	if(prob(50) && heated > 0)
+		heated -= 1
+	..()
+
+/obj/item/pet_carrier/cage/proc/commotion(mob/living/simple_animal/mouse/mice)
+	if(mice.loc == src)
+		playsound(src, 'sound/effects/mousesqueek.ogg', rand(max(5, heated/2), max(10, heated)), TRUE)
+		var/mob/living/carbon/human/user = src.loc
+		if(!user || !ishuman(user) || !(user.wear_suit == src))
+			if(prob(20))
+				loc.visible_message("<span class='notice'>[mice] runs around the [src].</span>")
+			return
+		if(heated > 20)
+			user.visible_message("<span class='warning'>Mice in [src] dig into [user.name]'s flesh!</span>", \
+			"<span class='userdanger'>Mice in [src] dig into your flesh!</span>")
+			playsound(src, 'sound/weapons/bite.ogg', rand(max(2, heated/4), max(8, heated/2)), TRUE)
+			user.apply_damage(damage = rand(1,3), damagetype = BRUTE, def_zone = BODY_ZONE_CHEST, blocked = FALSE, forced = TRUE, spread_damage = FALSE, wound_bonus = heated, bare_wound_bonus = heated*2, sharpness = SHARP_POINTY)
+			if(prob(5))
+				user.emote("scream")
+			if(prob(5) && user.jitteriness < 10)
+				user.jitteriness += 2
+			if(prob(5))
+				user.blur_eyes(2)
+
+/obj/item/pet_carrier/cage/attackby(obj/item/I, mob/user, params)
+	if(I.tool_behaviour == TOOL_WELDER)
+		if(heated > 100)
+			to_chat(user, "<span class='notice'>[src] is already too hot.</span>")
+		if(I.use_tool(src, user, 5, volume=10))
+			user.visible_message("<span class='notice'>[user.name] heated [src] with [I].</span>", \
+			"<span class='notice'>You heat [src] with [I].</span>", \
+			"<span class='hear'>You hear welding.</span>")
+			heated += 5
+	return ..()
+
 #undef pet_carrier_full

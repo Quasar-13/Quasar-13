@@ -116,3 +116,23 @@
 	name = "URGENT!"
 	info = "A hastily written note has been scribbled here... <br><br> Please use the ore redemption machine in the cargo office for smelting. PLEASE! <br><br>--The Research Staff"
 
+
+/////////// Station ruins
+
+/obj/item/paper/fluff/stations/remora/audio_log
+	name = "paper- 'Audio log'"
+	info = {"<center>__Audio log transcription__</center>
+	Unkown: This is janitor Tehun recording my possible last moments alive on this shit show.
+	NT Announcment system: 15 seconds until station implosion
+	Unkown: I was able to steal some plasteel, I reinforced the walls on my janitorial office and boarded up the door.
+	Unkown 2: I am telling you if the nuke explodes this will not hold!
+	NT Announcment system: 10 second until station implosion
+	Unkown: WELL ITS WORTH A TRY, THE CLOWNS STOLE THE DAMN PODS!
+	Unkown 2: Well its not MY FAULT THAT THE HEAD OF PERSONNEL HIRED 9 CLOWNS!
+	NT Announcment system: 5 second until station implosion
+	(Buckling type noise)
+	Unkown 2: Just hope these chairs keep us in here. The suits will do the re-
+	(Large explosion)
+	<center>__End of audio log transcription__</center>"}
+
+

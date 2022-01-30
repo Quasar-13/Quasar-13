@@ -52,7 +52,7 @@
 
 		if(sortTag != O.currTag)
 			var/tag = uppertext(GLOB.TAGGERLOCATIONS[O.currTag])
-			to_chat(user, "<span class='notice'>*[tag]*</span>")
+			to_chat(src, "<span class='notice'>SELECTED DESTINATION: [tag]</span>")
 			sortTag = O.currTag
 			playsound(loc, 'sound/machines/twobeep_high.ogg', 100, TRUE)
 
@@ -348,38 +348,35 @@
 /obj/item/dest_tagger/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] begins tagging [user.p_their()] final destination! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	if (islizard(user))
-		to_chat(user, "<span class='notice'>*HELL*</span>")//lizard nerf
+		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HELL</span>")//lizard nerf
 	else
-		to_chat(user, "<span class='notice'>*HEAVEN*</span>")
+		to_chat(src, "<span class='notice'>SELECTED DESTINATION: HEAVEN</span>")
 	playsound(src, 'sound/machines/twobeep_high.ogg', 100, TRUE)
 	return BRUTELOSS
 
-/obj/item/dest_tagger/proc/openwindow(mob/user)
-	var/dat = "<tt><center><h1><b>TagMaster 2.2</b></h1></center>"
+/obj/item/dest_tagger/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user,src,ui)
+	if(!ui)
+		ui = new(user,src,"DestinationTagger")
+		ui.open()
 
-	dat += "<table style='width:100%; padding:4px;'><tr>"
-	for (var/i = 1, i <= GLOB.TAGGERLOCATIONS.len, i++)
-		dat += "<td><a href='?src=[REF(src)];nextTag=[i]'>[GLOB.TAGGERLOCATIONS[i]]</a></td>"
-
-		if(i%4==0)
-			dat += "</tr><tr>"
-
-	dat += "</tr></table><br>Current Selection: [currTag ? GLOB.TAGGERLOCATIONS[currTag] : "None"]</tt>"
-
-	user << browse(dat, "window=destTagScreen;size=450x350")
-	onclose(user, "destTagScreen")
-
-/obj/item/dest_tagger/attack_self(mob/user)
-	if(!locked_destination)
-		openwindow(user)
+/obj/item/dest_tagger/ui_act(action,list/params)
+	if(..())
 		return
 
-/obj/item/dest_tagger/Topic(href, href_list)
-	add_fingerprint(usr)
-	if(href_list["nextTag"])
-		var/n = text2num(href_list["nextTag"])
-		currTag = n
-	openwindow(usr)
+	switch(action)
+		if("ChangeSelectedTag")
+			var/selectedTag = GLOB.TAGGERLOCATIONS.Find(params["tag"])
+			if(selectedTag != 0)
+				currTag = selectedTag
+			world.log << params["tag"]
+
+/obj/item/dest_tagger/ui_data(mob/user)
+	var/list/data = list()
+	data["destinations"] = GLOB.TAGGERLOCATIONS
+	data["currentTag"] = currTag
+
+	return data
 
 /obj/item/sales_tagger
 	name = "sales tagger"
