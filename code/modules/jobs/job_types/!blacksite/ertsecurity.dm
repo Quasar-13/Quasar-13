@@ -34,7 +34,7 @@
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
 	backpack_contents = list(
 		/obj/item/storage/box/survival/engineer = 1,
-		/obj/item/choice_beacon/bungalow/deathsquad/ert = 1,
+		/obj/item/choice_beacon/bungalow/combat/ert = 1,
 		/obj/item/storage/box/handcuffs = 1,
 		/obj/item/gun/energy/pulse/pistol = 1,
 		/obj/item/choice_beacon/bungalow/turret/heavy = 1,

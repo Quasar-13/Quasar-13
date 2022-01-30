@@ -104,6 +104,7 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
+//Goon HOP.
 /obj/item/clothing/under/rank/civilian/head_of_personnel/goon
 	icon_state = "hop_goon"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'

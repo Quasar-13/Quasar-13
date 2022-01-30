@@ -1,6 +1,6 @@
 import { sortBy } from "common/collections";
 import { useBackend } from "../backend";
-import { Box, Flex, ProgressBar, Section, Table } from "../components";
+import { Box, Button, Flex, ProgressBar, Section, Table } from "../components";
 import { Window } from "../layouts";
 
 const JOB_REPORT_MENU_FAIL_REASON_TRACKING_DISABLED = 1;
@@ -50,12 +50,13 @@ const PlaytimeSection = props => {
 };
 
 export const TrackedPlaytime = (props, context) => {
-  const { data } = useBackend(context);
+  const { act, data } = useBackend(context);
   const {
     failReason,
     jobPlaytimes,
     specialPlaytimes,
-
+    exemptStatus,
+    isAdmin,
     livingTime,
     ghostTime,
   } = data;
@@ -82,12 +83,19 @@ export const TrackedPlaytime = (props, context) => {
               />
             </Section>
 
-            <Section title="Jobs">
+            <Section
+              title="Jobs"
+              buttons={!!isAdmin && (
+                <Button.Checkbox
+                  checked={!!exemptStatus}
+                  onClick={() => act("toggle_exempt")}>
+                  Job Playtime Exempt
+                </Button.Checkbox>
+              )}>
               <PlaytimeSection
                 playtimes={jobPlaytimes}
               />
             </Section>
-
             <Section title="Special">
               <PlaytimeSection
                 playtimes={specialPlaytimes}

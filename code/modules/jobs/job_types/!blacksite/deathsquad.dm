@@ -40,7 +40,7 @@
 	backpack_contents = list(
 		/obj/item/storage/box/survival/engineer = 1,
 		/obj/item/ammo_box/a357 = 1,
-		/obj/item/choice_beacon/bungalow/deathsquad = 1,
+		/obj/item/choice_beacon/bungalow/combat/deathsquad = 1,
 		/obj/item/flashlight = 1,
 		/obj/item/tank/internals/emergency_oxygen/double = 1,
 	)
