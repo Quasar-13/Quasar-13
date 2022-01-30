@@ -3,72 +3,81 @@
 	name = "Instant Structure Capsules"
 	desc = "Contains two beacons that contains capsules able to build premade structures."
 	cost = CARGO_CRATE_VALUE * 4
-	contains = list(/obj/item/choice_beacon/structures,
-					/obj/item/choice_beacon/structures)
+	contains = list(
+		/obj/item/choice_beacon/bungalow/structures/workplaces,
+		/obj/item/choice_beacon/bungalow/structures/workplaces,)
 	crate_name = "Structure capsules"
 
 /datum/supply_pack/emergency/beacon_workplaces
 	name = "Instant Workshop Capsules"
 	desc = "Contains one beacon that contains a capsule able to build premade and functional workplaces."
 	cost = CARGO_CRATE_VALUE * 16
-	contains = list(/obj/item/choice_beacon/workplaces)
+	contains = list(/obj/item/choice_beacon/bungalow/structures/workplaces)
 	crate_name = "Structure capsules"
 
-//SECURITY
-
+/////SECURITY/////
 
 //ARMORY
-
 /datum/supply_pack/security/armory/breacherguns
 	name = "Tactical breaching shotguns crate"
 	cost = CARGO_CRATE_VALUE * 6
 	desc = "When you need a way in but dont want to cause an explosion or minimize damage. Crate contains three pre-loaded Tactical Breaching Shotguns and three bandoliers to hold your shells. Requires Armory access to Open"
-	contains = list(/obj/item/gun/ballistic/shotgun/automatic/breaching,
-					/obj/item/gun/ballistic/shotgun/automatic/breaching,
-					/obj/item/gun/ballistic/shotgun/automatic/breaching,
-					/obj/item/storage/belt/bandolier,
-					/obj/item/storage/belt/bandolier,
-					/obj/item/storage/belt/bandolier)
+	contains = list(
+		/obj/item/gun/ballistic/shotgun/automatic/breaching,
+		/obj/item/gun/ballistic/shotgun/automatic/breaching,
+		/obj/item/gun/ballistic/shotgun/automatic/breaching,
+		/obj/item/storage/belt/bandolier,
+		/obj/item/storage/belt/bandolier,
+		/obj/item/storage/belt/bandolier,
+	)
 	crate_name = "tactical breaching shotguns crate"
 
 /datum/supply_pack/security/armory/box_breachershots
 	name = "Breacherslugs boxes crate"
 	desc = "Contains 4 boxes of Tacical Breach Shotgun slugs. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/storage/box/breachingshells,
-					/obj/item/storage/box/breachingshells,
-					/obj/item/storage/box/breachingshells,
-					/obj/item/storage/box/breachingshells)
+	contains = list(
+		/obj/item/storage/box/breachingshells,
+		/obj/item/storage/box/breachingshells,
+		/obj/item/storage/box/breachingshells,
+		/obj/item/storage/box/breachingshells,
+	)
 	crate_name = "Breacherslugs crate"
 
 /datum/supply_pack/security/armory/box_rubbershots
 	name = "Rubbershots boxes crate"
 	desc = "Contains 4 boxes of rubbershot shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot)
+	contains = list(
+		/obj/item/storage/box/rubbershot,
+		/obj/item/storage/box/rubbershot,
+		/obj/item/storage/box/rubbershot,
+		/obj/item/storage/box/rubbershot,
+	)
 	crate_name = "rubbershots box crate"
 
 /datum/supply_pack/security/armory/box_beanbags
 	name = "Beanbags boxes crate"
 	desc = "Contains 4 boxes of beanbag shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/storage/box/beanbag,
-					/obj/item/storage/box/beanbag,
-					/obj/item/storage/box/beanbag,
-					/obj/item/storage/box/beanbag)
+	contains = list(
+		/obj/item/storage/box/beanbag,
+		/obj/item/storage/box/beanbag,
+		/obj/item/storage/box/beanbag,
+		/obj/item/storage/box/beanbag,
+	)
 	crate_name = "beanbags box crate"
 
 /datum/supply_pack/security/armory/box_buckshots
 	name = "Buckshots boxes crate"
 	desc = "Contains 4 boxes of buckshots shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 5
-	contains = list(/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot)
+	contains = list(
+		/obj/item/storage/box/lethalshot,
+		/obj/item/storage/box/lethalshot,
+		/obj/item/storage/box/lethalshot,
+		/obj/item/storage/box/lethalshot,
+	)
 	crate_name = "buckshots box crate"
 
 /datum/supply_pack/security/armory/sechardsuit
@@ -82,8 +91,10 @@
 	name = "Security biosuit"
 	desc = "Contains a security biosuit to deal with biohazard criminals ! Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
-	contains = list(/obj/item/clothing/suit/bio_suit/security,
-					/obj/item/clothing/head/bio_hood/security)
+	contains = list(
+		/obj/item/clothing/suit/bio_suit/security,
+		/obj/item/clothing/head/bio_hood/security,
+	)
 	crate_name = "security biosuit box crate"
 
 //MATERIALS
@@ -128,12 +139,11 @@
 	crate_name = "slime crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 
+///This is loaded before the contents is actually added
 /datum/supply_pack/critter/slime/generate()
 	. = ..()
 	if(prob(5))//Why not
-		var/mob/living/simple_animal/slime/C = locate() in .
-		qdel(C)
-		new /mob/living/simple_animal/hostile/blob/blobbernaut/independent(.)
+		contains = list(/mob/living/simple_animal/hostile/blob/blobbernaut/independent)
 
 //MEDICAL
 
@@ -173,7 +183,7 @@
 	access = ACCESS_MEDICAL
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 10
-	contains = list(/obj/item/defibrillator/compact/loaded )
+	contains = list(/obj/item/defibrillator/compact/loaded)
 	crate_name = "compact defibrillator crate"
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
@@ -182,9 +192,11 @@
 	desc = "A crate containing 3 first-aid kits, fit for healing most types of bodily harm."
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/storage/firstaid/regular,
-					/obj/item/storage/firstaid/regular,
-					/obj/item/storage/firstaid/regular)
+	contains = list(
+		/obj/item/storage/firstaid/regular,
+		/obj/item/storage/firstaid/regular,
+		/obj/item/storage/firstaid/regular,
+	)
 	crate_name = "first aid crate"
 
 /datum/supply_pack/medical/firstaidbruises_triple
@@ -192,9 +204,11 @@
 	desc = "A crate containing 3 bruise treatment kits."
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 3.5
-	contains = list(/obj/item/storage/firstaid/brute,
-					/obj/item/storage/firstaid/brute,
-					/obj/item/storage/firstaid/brute)
+	contains = list(
+		/obj/item/storage/firstaid/brute,
+		/obj/item/storage/firstaid/brute,
+		/obj/item/storage/firstaid/brute,
+	)
 	crate_name = "brute treatment crate"
 
 /datum/supply_pack/medical/firstaidburns_triple
@@ -202,9 +216,11 @@
 	desc = "A crate containing 3 burn treatment kits."
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 3.5
-	contains = list(/obj/item/storage/firstaid/fire,
-					/obj/item/storage/firstaid/fire,
-					/obj/item/storage/firstaid/fire)
+	contains = list(
+		/obj/item/storage/firstaid/fire,
+		/obj/item/storage/firstaid/fire,
+		/obj/item/storage/firstaid/fire,
+	)
 	crate_name = "burn treatment crate"
 
 /datum/supply_pack/medical/firstaidtoxins_triple
@@ -212,9 +228,11 @@
 	desc = "A crate containing 3 toxin treatment kits."
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 3.5
-	contains = list(/obj/item/storage/firstaid/toxin,
-					/obj/item/storage/firstaid/toxin,
-					/obj/item/storage/firstaid/toxin)
+	contains = list(
+		/obj/item/storage/firstaid/toxin,
+		/obj/item/storage/firstaid/toxin,
+		/obj/item/storage/firstaid/toxin,
+	)
 	crate_name = "toxin treatment crate"
 
 /datum/supply_pack/medical/firstaidoxygen_triple
@@ -222,34 +240,42 @@
 	desc = "A crate containing 3 oxygen treatment kits."
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 3.5
-	contains = list(/obj/item/storage/firstaid/o2,
-					/obj/item/storage/firstaid/o2,
-					/obj/item/storage/firstaid/o2)
+	contains = list(
+		/obj/item/storage/firstaid/o2,
+		/obj/item/storage/firstaid/o2,
+		/obj/item/storage/firstaid/o2,
+	)
 	crate_name = "oxygen treatment crate"
 
 /datum/supply_pack/medical/firstaidemergency_triple
 	name = "3 Emergency First Aid Kits"
 	desc = "A crate containing 3 oxygen treatment kits."
 	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/storage/firstaid/emergency,
-					/obj/item/storage/firstaid/emergency,
-					/obj/item/storage/firstaid/emergency)
+	contains = list(
+		/obj/item/storage/firstaid/emergency,
+		/obj/item/storage/firstaid/emergency,
+		/obj/item/storage/firstaid/emergency,
+	)
 	crate_name = "emergency first aid crate"
 
 /datum/supply_pack/medical/bodybagboxes
 	name = "2 Bodybags boxes"
 	desc = "A crate containing 2 bodybags boxes. For when you can't deal with all the corpses."
 	cost = CARGO_CRATE_VALUE * 1.5
-	contains = list(/obj/item/storage/box/bodybags,
-					/obj/item/storage/box/bodybags)
+	contains = list(
+		/obj/item/storage/box/bodybags,
+		/obj/item/storage/box/bodybags,
+	)
 	crate_name = "bodybags boxes crate"
 
 /datum/supply_pack/medical/latexmaskandgloves
 	name = "Latex gloves and mask boxes."
 	desc = "A crate containing one box of latex gloves and one box of masks."
 	cost = CARGO_CRATE_VALUE * 1.5
-	contains = list(/obj/item/storage/box/masks,
-					/obj/item/storage/box/gloves)
+	contains = list(
+		/obj/item/storage/box/masks,
+		/obj/item/storage/box/gloves,
+	)
 	crate_name = "latex gloves and masks crate"
 
 /datum/supply_pack/medical/anesthetics
@@ -258,14 +284,16 @@
 	access = ACCESS_MEDICAL
 	access_view = ACCESS_MEDICAL
 	cost = CARGO_CRATE_VALUE * 6.5
-	contains = list(/obj/item/reagent_containers/glass/bottle/morphine,
-                    /obj/item/reagent_containers/glass/bottle/morphine,
-                    /obj/item/reagent_containers/syringe,
-                    /obj/item/reagent_containers/syringe,
-                    /obj/item/clothing/mask/breath,
-                    /obj/item/clothing/mask/breath,
-                    /obj/item/tank/internals/anesthetic,
-                    /obj/item/tank/internals/anesthetic,)
+	contains = list(
+		/obj/item/reagent_containers/glass/bottle/morphine,
+		/obj/item/reagent_containers/glass/bottle/morphine,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/clothing/mask/breath,
+		/obj/item/clothing/mask/breath,
+		/obj/item/tank/internals/anesthetic,
+		/obj/item/tank/internals/anesthetic,
+	)
 	crate_name = "anesthetics crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
@@ -273,11 +301,13 @@
 	name = "5 Roller beds"
 	desc = "A crate containing 5 roller beds. For easier patient transportation."
 	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/roller,
-					/obj/item/roller,
-					/obj/item/roller,
-					/obj/item/roller,
-					/obj/item/roller)
+	contains = list(
+		/obj/item/roller,
+		/obj/item/roller,
+		/obj/item/roller,
+		/obj/item/roller,
+		/obj/item/roller,
+	)
 	crate_name = "roller beds crate"
 
 //ENGINEERING
@@ -322,9 +352,11 @@
 	name = "Double extended emergency tank Crate"
 	desc = "Contains four double extended-capacity emergency tanks."
 	access_view = ACCESS_ENGINE_EQUIP
-	contains = list(/obj/item/tank/internals/emergency_oxygen/double,
-					/obj/item/tank/internals/emergency_oxygen/double,
-					/obj/item/tank/internals/emergency_oxygen/double,
-					/obj/item/tank/internals/emergency_oxygen/double)
+	contains = list(
+		/obj/item/tank/internals/emergency_oxygen/double,
+		/obj/item/tank/internals/emergency_oxygen/double,
+		/obj/item/tank/internals/emergency_oxygen/double,
+		/obj/item/tank/internals/emergency_oxygen/double,
+	)
 	cost = CARGO_CRATE_VALUE * 9
 	crate_name = "double extended emergency tank crate"

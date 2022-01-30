@@ -15,7 +15,7 @@
 	See Also:
 	- <scriptError>
 */
-			errors   = new
+			errors = new
 /*
 	Var: warnings
 	A list of non-fatal problems in the source code found by the scanner.
@@ -53,9 +53,10 @@
 	Variable: codepos
 	The scanner's position in the source code.
 */
-		codepos				 = 1
-		line				 = 1
-		linepos 			 = 0 										 //column=codepos-linepos
+		codepos = 1
+		line = 1
+		linepos = 0
+//		column=codepos-linepos
 		n_scriptOptions/nS_Options/options
 
 /*
@@ -64,14 +65,14 @@
 	Default Value:
 	Whitespace
 */
-		list/ignore 			 = list(" ", "\t", "\n") //Don't add tokens for whitespace
+		list/ignore = list(" ", "\t", "\n") //Don't add tokens for whitespace
 /*
 	Variable: end_stmt
 	A list of characters that end a statement. Each item may only be one character long.
 	Default Value:
 	Semicolon
 */
-		list/end_stmt		 = list(";")
+		list/end_stmt = list(";")
 /*
 	Variable: string_delim
 	A list of characters that can start and end strings.
@@ -83,7 +84,7 @@
 	Variable: delim
 	A list of characters that denote the start of a new token. This list is automatically populated.
 */
-		list/delim 			 = new
+		list/delim = new
 
 /*
 	Macro: COL
@@ -94,7 +95,7 @@
 /*
 	Constructor: New
 	Parameters:
-	code	 	- The source code to tokenize.
+	code - The source code to tokenize.
 	options - An <nS_Options> object used to configure the scanner.
 */
 /n_Scanner/nS_Scanner/New(code, n_scriptOptions/nS_Options/options)
@@ -147,10 +148,10 @@
 		var/char=copytext(code, codepos, codepos+1)
 		switch(char)
 			if("\\")					//Backslash (\) encountered in string
-				codepos++       //Skip next character in string, since it was escaped by a backslash
+				codepos++    //Skip next character in string, since it was escaped by a backslash
 				char=copytext(code, codepos, codepos+1)
 				switch(char)
-					if("\\")      //Double backslash
+					if("\\")   //Double backslash
 						buf+="\\"
 					if("n")				//\n Newline
 						buf+="\n"
@@ -169,7 +170,7 @@
 				if(char==start) //string delimiter found, end string
 					break
 				else
-					buf+=char     //Just a normal character in a string
+					buf+=char   //Just a normal character in a string
 	if(!.) return new/token/string(buf, line, COL)
 
 /*
@@ -221,7 +222,7 @@
 		char=copytext(code, codepos, codepos+1)
 	var/token/number/T=new(buf, line, COL)
 	if(isnull(text2num(buf)))
-		errors+=new/scriptError("Bad number: ", T)
+		errors += new/scriptError("Bad number: ", T)
 		T.value=0
 	codepos-- //allow main Scan() proc to read the next character
 	return T
@@ -229,9 +230,9 @@
 /*
 	Proc: ReadComment
 	Reads a comment. Wow.
-	 I'm glad I wrote this proc description for you to explain that.
+	I'm glad I wrote this proc description for you to explain that.
 	Unlike the other Read functions, this one doesn't have to return any tokens,
-	 since it's just "reading" comments.
+	since it's just "reading" comments.
 	All it does is just pass var/codepos through the comments until it reaches the end of'em.
 */
 /n_Scanner/nS_Scanner/proc/ReadComment()

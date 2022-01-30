@@ -30,10 +30,13 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/ert
 	back = /obj/item/storage/backpack/ert
 	belt = /obj/item/storage/belt/utility/full
-	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
-		/obj/item/choice_beacon/ert=1,\
-		/obj/item/storage/firstaid/regular=1,\
-		/obj/item/melee/baton/loaded=1)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/cdr
+	backpack_contents = list(
+		/obj/item/storage/box/survival/engineer = 1,
+		/obj/item/choice_beacon/bungalow/combat/ert = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/melee/baton/loaded = 1,
+	)
 	l_pocket = /obj/item/switchblade
 
 

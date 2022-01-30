@@ -6,13 +6,13 @@
 */
 /*
 	Macros: Status Macros
-	RETURNING  - Indicates that the current function is returning a value.
-	BREAKING   - Indicates that the current loop is being terminated.
+	RETURNING - Indicates that the current function is returning a value.
+	BREAKING  - Indicates that the current loop is being terminated.
 	CONTINUING - Indicates that the rest of the current iteration of a loop is being skipped.
 	RESET_STATUS - Indicates that we are entering a new function and the allowed_status var should be cleared
 */
-#define RETURNING  1
-#define BREAKING   2
+#define RETURNING 1
+#define BREAKING  2
 #define CONTINUING 4
 #define RESET_STATUS 8
 
@@ -42,18 +42,18 @@
 	Var: status
 	A variable indicating that the rest of the current block should be skipped. This may be set to any combination of <Status Macros>.
 */
-		status=0
+		status = 0
 		returnVal
 
-		cur_statements=0    // current amount of statements called
-		alertadmins=0		// set to 1 if the admins shouldn't be notified of anymore issues
-		cur_recursion=0	   	// current amount of recursion
+		cur_statements = 0 // current amount of statements called
+		alertadmins = 0 // set to 1 if the admins shouldn't be notified of anymore issues
+		cur_recursion = 0 // current amount of recursion
 /*
 	Var: persist
 	If 0, global variables will be reset after Run() finishes.
 */
-		persist=1
-		paused=0
+		persist = 1
+		paused = 0
 
 /*
 	Constructor: New

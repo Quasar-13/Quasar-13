@@ -15,7 +15,8 @@
 	var/default_mutation_genes[DNA_MUTATION_BLOCKS] //List of the default genes from this mutation to allow DNA Scanner highlighting
 	var/stability = 100
 	var/scrambled = FALSE //Did we take something like mutagen? In that case we cant get our genes scanned to instantly cheese all the powers.
-	var/delete_species = TRUE //Bungalow Cloning
+	///Bungalow edit - Should we delete the species upon being destroyed?
+	var/delete_species = TRUE
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))

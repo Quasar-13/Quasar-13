@@ -152,7 +152,7 @@
 
 /obj/item/clothing/head/beret/req
 	name = "requisition officer's beret"
-	desc =  "A beret 'requisitioned' from god knows where. Not the most stylish, and looks kinda dirty. But you're always glad to see it."
+	desc = "A beret 'requisitioned' from god knows where. Not the most stylish, and looks kinda dirty. But you're always glad to see it."
 	icon_state = "beret_qm"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5)
 
