@@ -1,22 +1,3 @@
-/obj/item/sleeper_enhancer
-	name = "Sleeper Upgrade Unit"
-	desc = "A small attachment for a sleeper unit that massively increases its healing speed using infection-based technology"
-	icon = 'icons/mob/infection/infection.dmi'
-	icon_state = "sleeperup"
-
-/obj/item/sleeper_enhancer/pre_attack(atom/target, mob/living/user)
-	if(istype(target, /obj/machinery/sleeper))
-		var/obj/machinery/sleeper/S = target
-		if(S.heal_rate != initial(S.heal_rate))
-			to_chat(user, "<span class='notice'>The slot for [src] is already occupied!</span>")
-			return FALSE
-		S.heal_rate *= 3
-		S.color = "#382a57"
-		to_chat(user, "<span class='notice'>You install [src] into [S], and a purple gel overtakes the interior of its cover. Hopefully this doesn't backfire...</span>")
-		qdel(src)
-		return FALSE
-	return ..()
-
 /obj/item/healing_injector
 	name = "portable medical injector"
 	desc = "A handheld autoinjector containing a strange blue fluid."

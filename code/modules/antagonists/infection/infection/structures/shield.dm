@@ -7,7 +7,6 @@
 	desc = "A solid wall of slightly twitching tendrils."
 	icon = 'icons/obj/smooth_structures/infection_wall.dmi'
 	icon_state = "smooth"
-	smooth = SMOOTH_TRUE
 	max_integrity = 150
 	brute_resist = 0.6
 	fire_resist = 0.8
@@ -95,8 +94,6 @@
 	desc = "A solid wall of reflective crystal. It appears extremely brittle"
 	icon = 'icons/mob/infection/infection.dmi'
 	icon_state = "reflective"
-	smooth = SMOOTH_FALSE
-	flags_1 = CHECK_RICOCHET_1
 	brute_resist = 3
 	fire_resist = 0.2
 	explosion_block = 2
@@ -129,7 +126,6 @@
 	desc = "A thin mesh barrier preventing voluntary entry of non infectious creatures."
 	icon = 'icons/mob/infection/infection.dmi'
 	icon_state = "door"
-	smooth = SMOOTH_FALSE
 
 /obj/structure/infection/shield/barrier/Initialize(mapload)
 	. = ..()

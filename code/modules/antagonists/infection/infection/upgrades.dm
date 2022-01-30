@@ -147,8 +147,8 @@
 	description = "The stored air in your body allows you to move anywhere, including space, with ease."
 	cost = 200
 
-/datum/infection_upgrade/infector/spacewalk/upgrade_effect(mob/living/simple_animal/hostile/infection/infectionspore/sentient/infector/parentinfector)
-	parentinfector.spacewalk = TRUE
+// /datum/infection_upgrade/infector/spacewalk/upgrade_effect(mob/living/simple_animal/hostile/infection/infectionspore/sentient/infector/parentinfector)
+//	parentinfector.spacewalk = TRUE
 
 /datum/infection_upgrade/infector/suction
 	name = "Suction Cups"

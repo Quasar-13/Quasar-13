@@ -15,6 +15,8 @@
 
 	var/area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
 
+	///Does it count for blobs score? By default, all areas count. (ported for infection gamemode, will figure it out someday)
+	var/blob_allowed = TRUE
 	///Do we have an active fire alarm?
 	var/fire = FALSE
 	///How many fire alarm sources do we have?

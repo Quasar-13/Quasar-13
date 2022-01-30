@@ -49,7 +49,6 @@ GLOBAL_LIST_EMPTY(infection_gravity_spawns)
 				if(isliving(thing))
 					var/mob/M = thing
 					M.visible_message("<span class='warning'>The infection meteor slams into [M]!</span>")
-					M.gib()
 				else
 					thing.blob_act()
 	template.load(start, centered = TRUE)

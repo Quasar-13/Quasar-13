@@ -174,10 +174,10 @@ GLOBAL_VAR(infection_commander)
 		if(L in GLOB.overminds || (L.pass_flags & PASSBLOB))
 			continue
 
-		var/area/Ablob = get_area(T)
+//		var/area/Ablob = get_area(T)
 
-		if(!Ablob.blob_allowed)
-			continue
+//		if(!Ablob.blob_allowed)
+//			continue
 
 		if(!(ROLE_INFECTION in L.faction))
 			playsound(L, 'sound/effects/splat.ogg', 50, 1)

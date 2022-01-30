@@ -18,16 +18,6 @@
 	category = list("equipment")
 	departmental_flags = ALL
 
-/datum/design/sleeperup
-	name = "Infection Sleeper Upgrade"
-	desc = "An upgrade to increase the efficiency of sleepers"
-	id = "infection_sleeper_upgrade"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 1200, /datum/material/glass = 1200, /datum/material/plastic = 5000, /datum/material/bluespace = 500, /datum/material/diamond = 250) //oh yes I A M going to do this
-	build_path = /obj/item/sleeper_enhancer
-	category = list("Medical Designs")
-	departmental_flags = ALL
-
 /datum/design/healinjector
 	name = "Infection Reusable Medical Injector"
 	desc = "A reusable medical injector using infection-based technology"
