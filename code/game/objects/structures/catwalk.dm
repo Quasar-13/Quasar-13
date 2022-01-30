@@ -14,7 +14,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_LATTICE, SMOOTH_GROUP_CATWALK, SMOOTH_GROUP_OPEN_FLOOR)
 	canSmoothWith = list(SMOOTH_GROUP_CATWALK)
 	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
-	var/number_of_rods = 2
+	var/number_of_rods = 1
 	var/hatch_open = FALSE
 	var/obj/item/stack/tile/plated_tile
 
@@ -57,10 +57,6 @@
 		. += "<span class='notice'>The supporting rods look like they could be <b>sliced</b>.</span>"
 
 /obj/structure/catwalk/attackby(obj/item/C, mob/user, params)
-	if(C.tool_behaviour == TOOL_WELDER && !(resistance_flags & INDESTRUCTIBLE))
-		to_chat(user, "<span class='notice'>You slice off [src]</span>")
-		deconstruct()
-		return
 	if(C.tool_behaviour == TOOL_CROWBAR && plated_tile)
 		hatch_open = !hatch_open
 		if(hatch_open)
@@ -83,6 +79,14 @@
 				update_icon()
 		return
 	return ..()
+
+/obj/structure/catwalk/welder_act(mob/living/user, obj/item/I)
+	. = ..()
+	if(!(resistance_flags & INDESTRUCTIBLE))
+		if(I.use_tool(src, user, 0, volume=50, amount=1))
+			to_chat(user, "<span class='notice'>You slice off [src]</span>")
+			deconstruct()
+			return
 
 /obj/structure/catwalk/Move(atom/newloc)
 	var/turf/T = loc
