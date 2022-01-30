@@ -220,3 +220,6 @@
 	base_icon_state = "tcomms"
 	icon = 'icons/turf/floors.dmi'
 	color = null
+
+/turf/open/floor/plasteel/telecomms_floor/telecomm_atmos
+	initial_gas_mix = TCOMMS_ATMOS
