@@ -33,7 +33,7 @@ export const infection_menu = (props, context) => {
                       name: upgrade.name,
                     })} />
                   {' '}
-                  Cost: {upgrade.upgrade_cost}
+                  Cost: {upgrade.upgrade_cost} {' '}
                   Remaining Upgrades: {upgrade.times}
                 </Box >
                 <Box my={1}>
