@@ -44,7 +44,7 @@
 	. = ..()
 	update_overlays() //makes it refresh based on global cooldown vs personal cooldown if it's dropped
 
-/obj/item/healing_injector/proc/update_overlays(mob/user)
+/obj/item/healing_injector/update_overlays(mob/user)
 	cut_overlays()
 	if(cd_check(user, TRUE))
 		add_overlay("i_active")
