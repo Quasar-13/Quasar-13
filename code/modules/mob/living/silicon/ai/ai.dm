@@ -763,6 +763,7 @@
 /mob/living/silicon/ai/proc/set_centcom_radio()
 	if(radio)
 		radio.make_centcom()
+//DWAFAWFG{OWAW{JGJGPWAG{}}}
 
 /mob/living/silicon/ai/proc/set_automatic_say_channel()
 	set name = "Set Auto Announce Mode"
