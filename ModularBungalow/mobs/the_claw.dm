@@ -8,7 +8,7 @@
 	attack_sound = 'ModularTegustation/Tegusounds/claw/attack.ogg'
 	icon_state = "claw"
 	icon_living = "claw"
-	icon = 'ModularTegustation/Teguicons/tegumobs.dmi'
+	icon = 'ModularBungalow/zbungalowicons/mobs.dmi'
 	health_doll_icon = "miner"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	light_color = COLOR_LIGHT_GRAYISH_RED
