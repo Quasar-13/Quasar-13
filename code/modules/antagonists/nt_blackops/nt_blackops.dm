@@ -199,7 +199,7 @@
 	var/mob/living/silicon/ai/A = M
 	if(istype(A) && traitor_kind == TRAITOR_AI)
 		A.hack_software = TRUE
-	RegisterSignal(M, COMSIG_MOVABLE_HEAR, .handle_hearing)
+	RegisterSignal(M, COMSIG_MOVABLE_HEAR, .proc/handle_hearing)
 
 /datum/antagonist/traitor/nt_blackops/remove_innate_effects(mob/living/mob_override)
 	. = ..()
