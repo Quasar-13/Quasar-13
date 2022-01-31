@@ -1,3 +1,4 @@
+//I have to have this here cause it runs first then traitor so guess it's here
 #define TRAITOR_HUMAN "human"
 #define TRAITOR_AI	  "AI"
 
@@ -236,7 +237,7 @@
 	var/law = "Accomplish your objectives at all costs."
 	var/law_borg = "Accomplish your AI's objectives at all costs."
 	killer.set_zeroth_law(law, law_borg)
-	killer.set_syndie_radio()
+	killer.set_centcom_radio()
 	to_chat(killer, "Your radio has been upgraded! Use :y to speak on an encrypted channel with BNI Agents!")
 	killer.add_malf_picker()
 
