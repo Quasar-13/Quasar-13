@@ -112,9 +112,14 @@
 	desc = "A ribbon denoting the flag officer rank of vice admiral, FO-3. A extremely rare rank in the NT Navy denoting the right hand of the admiral."
 	icon_state = "nt_vadm"
 
-/obj/item/clothing/accessory/medal/rank/nt/adm
+/obj/item/clothing/accessory/medal/rank/nt/fadm
 	name = "ADM rank ribbon"
 	desc = "A ribbon denoting the flag officer rank of fleet admiral, FO-4. A extremely rare rank in the NT Navy denoting the admiral of the sector."
+	icon_state = "nt_adm"
+
+/obj/item/clothing/accessory/medal/rank/nt/gadm
+	name = "GADM rank ribbon"
+	desc = "A ribbon denoting the flag officer rank of grand admiral, FO-5. This medal is awarded to NT Navy's single Grand Admiral."
 	icon_state = "nt_adm"
 
 //BNI

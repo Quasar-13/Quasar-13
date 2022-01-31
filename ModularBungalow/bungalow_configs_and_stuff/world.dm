@@ -1,5 +1,3 @@
-
-
 /world/proc/update_status_tegu()
 
 	var/list/features = list()

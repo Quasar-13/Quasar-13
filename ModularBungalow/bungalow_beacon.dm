@@ -1,7 +1,11 @@
 /**
  * The base type of ALL Bungalow choice-beacons
  * All Bungalow choice beacons are subtypes of this one, to avoid copy-paste.
+
+
+ That was the plan, but this does not work. I am manually going back in to fix
  */
+
 /obj/item/choice_beacon/bungalow
 	name = "bungalow beacon"
 	desc = "A debug beacon, if you see this, welcome to Bungalow!"
@@ -20,12 +24,24 @@
 	new choice(get_turf(gifted_person))
 	to_chat(gifted_person, selection_message)
 
-//Gun beacon
-/obj/item/choice_beacon/bungalow/captain/gun
+//Captain blade beacon
+/obj/item/choice_beacon/gun
 	name = "captain's gun beacon"
 	desc = "A beacon the captain uses to select his weapon of choice."
-	typesof_options = /obj/item/storage/box/captain/gun
-	selection_message = "<span class='hear'>Thank you for your service. Captain.</span>"
+
+/obj/item/choice_beacon/gun/generate_display_names()
+	var/static/list/sord_item_list
+	if(!sord_item_list)
+		sord_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/box/captain/gun) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			sord_item_list[initial(A.name)] = A
+	return sord_item_list
+
+/obj/item/choice_beacon/sabre/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Thank you for your service. Captain.</span>")
 
 /obj/item/storage/box/captain/gun
 	name = "Energy Gun, Standard Issue"
@@ -80,6 +96,23 @@
 /obj/item/storage/box/captain/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
 
+
+
+//captain sabre
+/obj/item/choice_beacon/sabre
+	name = "captain's blade beacon"
+	desc = "A beacon the captain uses to select his weapon of choice."
+
+/obj/item/choice_beacon/sabre/generate_display_names()
+	var/static/list/cap_item_list
+	if(!cap_item_list)
+		cap_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/box/sabre) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			cap_item_list[initial(A.name)] = A
+	return cap_item_list
+
 //Captain blade beacon
 /obj/item/choice_beacon/bungalow/captain/sabre
 	name = "captain's blade beacon"
@@ -115,14 +148,14 @@
 	new /obj/item/katana/captain(src)
 
 //BLACKSITE
-/obj/item/choice_beacon/bungalow/deathsquad
+/obj/item/choice_beacon/bungalow/combat/deathsquad
 	name = "NT Death Commando beacon"
 	desc = "A beacon the Death Commando uses to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/deathsquad
 	selection_message = "<span class='hear'>Get out there!</span>"
 
 //BLACKSITE ERT
-/obj/item/choice_beacon/bungalow/deathsquad/ert
+/obj/item/choice_beacon/bungalow/combat/ert
 	name = "ERT Officer beacon"
 	desc = "A beacon the ERT officers use to choose their weapons."
 	typesof_options = /obj/item/storage/backpack/duffelbag/ert
@@ -132,10 +165,23 @@
 
  * This is a subtype of the ERT beacon, to avoid needless copypaste.
  */
-/obj/item/choice_beacon/bungalow/deathsquad/marine
+/obj/item/choice_beacon/combat/marine
 	name = "NT marine beacon"
 	desc = "A beacon the marines use to choose their weapons."
-	typesof_options = /obj/item/storage/backpack/duffelbag/marine
+
+/obj/item/choice_beacon/marine/generate_display_names()
+	var/static/list/marine_item_list
+	if(!marine_item_list)
+		marine_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/marine) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			marine_item_list[initial(A.name)] = A
+	return marine_item_list
+
+/obj/item/choice_beacon/marine/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Get out there!</span>")
 
 /*
  * # Turret ERT beacon BLACKSITE

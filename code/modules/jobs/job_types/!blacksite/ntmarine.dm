@@ -30,5 +30,5 @@
 	back = null
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(
-		/obj/item/choice_beacon/bungalow/deathsquad/marine = 1,
+		/obj/item/choice_beacon/marine = 1,
 	)
