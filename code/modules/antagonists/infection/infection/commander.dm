@@ -109,6 +109,7 @@ GLOBAL_VAR(infection_commander)
 					   Be advised the infection can overwhelm these generators if it maintains direct contact with them. The generators are irreplacable so do not let them be destroyed. \n\
 					   There will also be a gravity generator near your arrivals shuttle, we recommend that you power it unless you want to fight while floating around.",
 					  "CentCom Exotic Materials Research Division", 'sound/misc/notice1.ogg')
+	set_security_level(SEC_LEVEL_GAMMA)
 
 /*
 	Extra info announcement to hopefully avoid people running in and dying to an unkillable enemy
@@ -126,6 +127,7 @@ GLOBAL_VAR(infection_commander)
 /mob/camera/commander/proc/defeated_announcement()
 	priority_announce("The core's energy signature has terminated. Fragments will be brought in for research. Excellent field work.",
 					  "CentCom Exotic Materials Research Division", 'sound/misc/notice2.ogg')
+	set_security_level(SEC_LEVEL_RED)
 
 /*
 	Places the beacons down at all of the landmarks in the map files, slightly delayed to make it look cool
