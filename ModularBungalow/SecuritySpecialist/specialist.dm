@@ -1,8 +1,22 @@
-/obj/item/choice_beacon/bungalow/spec
+/obj/item/choice_beacon/spec
 	name = "security specialist beacon"
 	desc = "A beacon security can use to give one of it's officers extra utility or firepower."
-	typesof_options = /obj/item/storage/backpack/duffelbag/sec/spec
-	selection_message = "<span class='hear'>Good luck, Soldier.</span>"
+
+/obj/item/choice_beacon/spec/generate_display_names()
+	var/static/list/spec_item_list
+	if(!spec_item_list)
+		spec_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/sec/spec) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			spec_item_list[initial(A.name)] = A
+	return spec_item_list
+
+/obj/item/choice_beacon/spec/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Good luck, Soldier.</span>")
+
+
 
 
 //Wetwork
@@ -57,7 +71,7 @@
 	desc = "A large duffel bag containing all you need for armored support."
 
 /obj/item/storage/backpack/duffelbag/sec/spec/pilot/PopulateContents()
-	new /obj/item/choice_beacon/bungalow/mech(src)
+	new /obj/item/choice_beacon/mech(src)
 	new /obj/item/mecha_parts/mecha_equipment/weapon/energy/disabler(src)
 	new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang(src)
 	new /obj/item/clothing/under/costume/mech_suit(src)

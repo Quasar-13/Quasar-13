@@ -93,20 +93,25 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
-//Captain
+//Chief Engineer
+/datum/outfit/job/chief_engineer/chiefatmosphericstechnician
+	name = "Chief Engineer (Chief Atmospherics Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
 
+//Captain
 /datum/outfit/job/captain/stationcommander
 	name = "Captain (Station Commander)"
 	head = null
 	uniform = /obj/item/clothing/under/misc/parade/cdr
 	suit = /obj/item/clothing/suit/armor/captain/cdr_jacket
-
+	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cdr
 
 /datum/outfit/job/captain/commandingofficer
 	name = "Captain (Commanding Officer)"
 	head = /obj/item/clothing/head/beret/captain
 	uniform = /obj/item/clothing/under/misc/parade/co
 	suit = /obj/item/clothing/suit/armor/captain/co
+	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cpt
 
 /datum/outfit/job/captain/commodore
 	name = "Captain (Commodore)"
@@ -114,6 +119,8 @@
 	uniform = /obj/item/clothing/under/misc/parade/com
 	suit = /obj/item/clothing/suit/armor/vest/centcom_formal/cap
 	gloves = /obj/item/clothing/gloves/color/captain/commodore
+	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cdre
+	backpack = /obj/item/storage/backpack/centcom
 
 /datum/outfit/job/captain/marshal
 	name = "Captain (Marshal)"
@@ -121,6 +128,7 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	uniform = /obj/item/clothing/under/misc/parade/mar
 	suit = /obj/item/clothing/suit/armor/captain/marshal
+	r_hand = /obj/item/clothing/accessory/medal/rank/nt/cdre
 
 //They get a cool ID so this manages that
 /datum/outfit/job/captain/commodore/post_equip(mob/living/carbon/human/H)
@@ -132,7 +140,3 @@
 	var/obj/item/card/id/W = H.wear_id
 	W.access = get_centcom_access(ACCESS_CENT_GENERAL, ACCESS_CENT_MEDICAL, ACCESS_CENT_LIVING)
 	..()
-
-
-
-

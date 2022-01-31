@@ -13,7 +13,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SERVICE
 	exp_type_department = EXP_TYPE_SERVICE
-	mapexclude = list("galaxy")
+	mapexclude = list("galaxy", "goonlite")
 
 	outfit = /datum/outfit/job/hop
 

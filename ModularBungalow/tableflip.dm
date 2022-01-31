@@ -50,7 +50,6 @@
 		qdel(src)
 
 //TABLES
-
 /obj/structure/table/CtrlShiftClick(mob/living/user)
 	. = ..()
 	if(!istype(user) || !user.can_interact_with(src))

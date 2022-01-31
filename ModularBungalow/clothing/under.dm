@@ -84,3 +84,37 @@
 	righthand_file = 'ModularTegustation/Teguicons/kirie_stuff/right.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 10)
 	resistance_flags = NONE
+
+//Femcap (Don't tell anyone I added this)
+/obj/item/clothing/under/captainf
+	name = "Female Captain's Pyjamas"
+	desc = "An outfit for bedtime."
+	icon_state = "cap_f"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "suit"
+	can_adjust = FALSE
+
+//Chief Atmos (Nicole wanted this so I guess I'm doing it
+/obj/item/clothing/under/rank/engineering/chief_engineer/atmos
+	name = "Chief Atmos Technician's Jumpsuit"
+	desc = "An outfit for an Atmos-Inclined Head of Engineering."
+	icon_state = "chief_atmos"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//Goon HOP.
+/obj/item/clothing/under/rank/civilian/head_of_personnel/goon
+	icon_state = "hop_goon"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
+	name = "Chief Medical Officer's turtleneck"
+	desc = "Surprisingly comfortable, and stain resistant."
+	icon_state = "cmoturtle"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
