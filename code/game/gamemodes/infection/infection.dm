@@ -3,11 +3,11 @@
 	config_tag = "infection"
 	report_type = "infection"
 	false_report_weight = 10
-	required_players = 20 // this is an all out station war
-	required_enemies = 4
-	recommended_enemies = 2
+	required_players = 1 // this is an all out station war
+	required_enemies = 0
+	recommended_enemies = 0
 	antag_flag = ROLE_INFECTION
-	enemy_minimum_age = 14 // these should be somewhat experienced players for an all out war mode
+	enemy_minimum_age = 0 // these should be somewhat experienced players for an all out war mode
 	round_ends_with_antag_death = TRUE
 
 	announce_span = "danger"
