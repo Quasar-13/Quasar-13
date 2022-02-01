@@ -8,7 +8,8 @@
 	righthand_file = 'ModularBungalow/spoon/spoon_icon/righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 32
-	w_class = WEIGHT_CLASS_TINY
+	transform = matrix(1.9, 0, 0, 0, 1.9, 0)
+	w_class = WEIGHT_CLASS_NORMAL
 	force = 4
 	throw_speed = 2
 	throw_range = 4
@@ -21,8 +22,8 @@
 	toolspeed = 10 // Literally 10 times worse
 
 /obj/item/kitchen/spoon/big/gold
-	name = "Fortunate Son"
-	desc = "THIS IS A DESCRIPTION, CONTACT YOUR LOCAL CODER"
+	name = "Midas' spoon"
+	desc = "THIS IS A DESCRIPTION, PLEASE CONTACT A CODER IF YOU SEE THIS."
 	icon_state = "gold_spoon"
 	inhand_icon_state = "gold_spoon"
 	force = 80 //BEGONE!
