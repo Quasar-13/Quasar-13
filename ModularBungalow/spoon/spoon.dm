@@ -22,7 +22,7 @@
 	toolspeed = 5 // Literally 5 times worse
 
 /obj/item/kitchen/spoon/big/gold
-	name = "Midas' spoon"
+	name = "Mida's spoon"
 	desc = "The last thing Midas touched before his final death."
 	icon_state = "gold_spoon"
 	inhand_icon_state = "gold_spoon"
