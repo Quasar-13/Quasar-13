@@ -1,11 +1,11 @@
 /obj/item/kitchen/spoon/big
 	name = "Silver spoon"
 	desc = "I ain't no senator's son."
-	icon = 'ModularBungalow/spoon/icon/icons.dmi'
+	icon = 'ModularBungalow/spoon/spoon_icon/icons.dmi'
 	icon_state = "big_spoon"
 	inhand_icon_state = "big_spoon"
-	lefthand_file = 'ModularBungalow/spoon/icon/lefthand.dmi'
-	righthand_file = 'ModularBungalow/spoon/icon/righthand.dmi'
+	lefthand_file = 'ModularBungalow/spoon/spoon_icon/lefthand.dmi'
+	righthand_file = 'ModularBungalow/spoon/spoon_icon/righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 32
 	w_class = WEIGHT_CLASS_TINY
