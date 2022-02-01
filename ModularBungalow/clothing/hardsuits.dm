@@ -71,25 +71,25 @@
 
 obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
 
-/obj/item/clothing/suit/space/hardsuit/ert/paranormal/rabbit_team
-	name = "paranormal response team hardsuit"
-	desc = "Powerful wards are built into this hardsuit, protecting the user from all manner of paranormal threats."
+/obj/item/clothing/suit/space/hardsuit/ert/bni
+	name = "BNI Agent Hardsuiit"
+	desc = "A hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind"
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "knight_grey"
-	inhand_icon_state = "knight_grey"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
+	icon_state = "ert_bni"
+	inhand_icon_state = "hardsuit0-ert_security"
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/bni
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
+/obj/item/clothing/head/helmet/space/hardsuit/ert/bni
 	name = "paranormal response team helmet"
-	desc = "A helmet worn by those who deal with paranormal threats for a living."
+	desc = "A hlemet for a hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind"
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
-	icon_state = "hardsuit0-prt"
-	inhand_icon_state = "hardsuit0-prt"
-	hardsuit_type = "prt"
+	icon_state = "hardsuit0-ert_bni"
+	inhand_icon_state = "ert_security"
+	hardsuit_type = "ert_bni"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	actions_types = list()
 	resistance_flags = FIRE_PROOF
