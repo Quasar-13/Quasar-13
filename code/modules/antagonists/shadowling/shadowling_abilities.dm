@@ -1,6 +1,6 @@
 #define EMPOWERED_THRALL_LIMIT 3
 
-/obj/effect/proc_holder/spell/proc/shadowling_check(var/mob/living/carbon/human/H)
+/obj/effect/proc_holder/spell/proc/shadowling_check(mob/living/carbon/human/H)
 	if(!H || !istype(H)) return
 	if(H.dna && H.dna.species && H.dna.species.id == "shadowling" && is_shadow(H)) return TRUE
 	if(H.dna && H.dna.species && H.dna.species.id == "l_shadowling" && is_thrall(H)) return TRUE
@@ -350,7 +350,7 @@
 		revert_cast()
 		return
 	user.visible_message(span_warning("[user]'s skin suddenly bubbles and shifts around their body!"), \
-						 span_shadowling("You regenerate your protective armor and cleanse your form of defects."))
+						span_shadowling("You regenerate your protective armor and cleanse your form of defects."))
 	user.setCloneLoss(0)
 	user.equip_to_slot_or_del(new /obj/item/clothing/suit/space/shadowling(user), ITEM_SLOT_OCLOTHING)
 	user.equip_to_slot_or_del(new /obj/item/clothing/head/shadowling(user), ITEM_SLOT_HEAD)
