@@ -29,5 +29,8 @@
 	head = /obj/item/clothing/head/beret/command
 	suit = /obj/item/clothing/suit/armor/vest/ntmarine/command
 	belt = /obj/item/storage/belt/military/assault
-	backpack_contents = list(/obj/item/choice_beacon/marine=1)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lcdr
+	backpack_contents = list(
+		/obj/item/choice_beacon/marine = 1,
+	)
 

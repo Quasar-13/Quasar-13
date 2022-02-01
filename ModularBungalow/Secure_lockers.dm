@@ -1,5 +1,4 @@
 //Galaxy Lockers
-
 /obj/structure/closet/secure_closet/captains_galaxy
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper captain's locker"
@@ -27,7 +26,7 @@
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/color/captain/galaxy(src)
 	new /obj/item/choice_beacon/sabre(src)
-	new /obj/item/choice_beacon/captain(src)
+	new /obj/item/choice_beacon/gun(src)
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/hop_galaxy
@@ -115,7 +114,6 @@
 	new /obj/item/storage/photo_album/hos(src)
 	new /obj/item/card/id/departmental_budget/sec(src)
 
-
 /obj/structure/closet/secure_closet/nt_mp
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper Marine Military Police's locker"
@@ -134,6 +132,4 @@
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
-	new /obj/item/choice_beacon/spec(src)
 	new /obj/item/door_remote/head_of_security(src)
-

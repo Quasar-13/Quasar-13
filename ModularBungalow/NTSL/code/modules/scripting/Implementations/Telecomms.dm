@@ -2,8 +2,9 @@
 
 
 /* --- Traffic Control Scripting Language --- */
-	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu
+	// Nanotrasen TCS Language - Made by Doohl, ported to Yogs by Altoids, ported to Skyrat by Tf4, and Ported to Bungalow by Kitsunemitsu and updated by Horologium
 
+//These numerics translate to how you want to reference them in-game.
 #define NTSL_LANG_APHASIA 1
 #define NTSL_LANG_BEACHBUM 2
 #define NTSL_LANG_BUZZWORDS 3
@@ -136,8 +137,9 @@
 			return /datum/language/drone
 
 GLOBAL_LIST_INIT(allowed_custom_spans,list(SPAN_ROBOT,SPAN_YELL,SPAN_ITALICS,SPAN_SANS,SPAN_COMMAND,SPAN_CLOWN))//Span classes that players are allowed to set in a radio transmission.
-//this is fucking broken
-GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/language/machine,/datum/language/draconic))// language datums that players are allowed to translate to in a radio transmission.
+//Bungalow races (in alphabetical order to languages below: Beepeople, Ethereal, Felinid, Human, Jelly, Lizard, Moth, Plasmaman and Monkey). Piratespeak is on here for lols and so poly can speak like a proper bird. If you do not want this, remove the last element of the allowed_translations list.
+//The original comment saying this part didnt work, wasnt quite right but was on the right track.
+GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/buzzwords,/datum/language/voltaic,/datum/language/nekomimetic,/datum/language/common,/datum/language/slime,/datum/language/draconic,/datum/language/moffic,/datum/language/calcic,/datum/language/monkey,/datum/language/piratespeak))// language datums that players are allowed to translate to in a radio transmission.
 
 /n_Interpreter/TCS_Interpreter
 	var/datum/TCS_Compiler/Compiler
@@ -167,10 +169,10 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 /datum/TCS_Compiler/proc/Compile(code as message)
 	var/n_scriptOptions/nS_Options/options = new()
-	var/n_Scanner/nS_Scanner/scanner       = new(code, options)
-	var/list/tokens                        = scanner.Scan()
-	var/n_Parser/nS_Parser/parser          = new(tokens, options)
-	var/node/BlockDefinition/GlobalBlock/program   	 = parser.Parse()
+	var/n_Scanner/nS_Scanner/scanner = new(code, options)
+	var/list/tokens = scanner.Scan()
+	var/n_Parser/nS_Parser/parser = new(tokens, options)
+	var/node/BlockDefinition/GlobalBlock/program = parser.Parse()
 
 	var/list/returnerrors = list()
 
@@ -188,15 +190,15 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	interpreter.SetVar("PI"		, 	3.141592653)	// value of pi
 	interpreter.SetVar("E" 		, 	2.718281828)	// value of e
 	interpreter.SetVar("SQURT2" , 	1.414213562)	// value of the square root of 2
-	interpreter.SetVar("FALSE"  , 	0)				// boolean shortcut to 0
-	interpreter.SetVar("false"  , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("FALSE" , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("false" , 	0)				// boolean shortcut to 0
 	interpreter.SetVar("TRUE"	,	1)				// boolean shortcut to 1
 	interpreter.SetVar("true"	,	1)				// boolean shortcut to 1
 
 	interpreter.SetVar("NORTH" 	, 	NORTH)			// NORTH (1)
 	interpreter.SetVar("SOUTH" 	, 	SOUTH)			// SOUTH (2)
-	interpreter.SetVar("EAST" 	, 	EAST)			// EAST  (4)
-	interpreter.SetVar("WEST" 	, 	WEST)			// WEST  (8)
+	interpreter.SetVar("EAST" 	, 	EAST)			// EAST (4)
+	interpreter.SetVar("WEST" 	, 	WEST)			// WEST (8)
 
 	// Channel macros
 	interpreter.SetVar("channels", new /datum/n_enum(list(
@@ -222,28 +224,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		"wacky" = SPAN_SANS,
 		"commanding" = SPAN_COMMAND
 	)))
-	//Current allowed span classes
 
-	//Language bitflags
-	/* (Following comment written 26 Jan 2019)
-	So, language doesn't work with bitflags anymore
-	But having them be bitflags inside of NTSL makes more sense in its context
-	So, when we get the signal back from NTSL, if the language has been altered, we'll set it to a new language datum,
-	based on the bitflag the guy used.
-
-	However, I think the signal can only have one language
-	So, the lowest bit set within $language overrides any higher ones that are set.
-	*/
-	/*
-	interpreter.SetVar("languages", new /datum/n_enum(list(
-		"human" = HUMAN,
-		"monkey" = MONKEY,
-		"robot" = ROBOT,
-		"polysmorph" = POLYSMORPH,
-		"draconic" = DRACONIC,
-		"beachtounge" = BEACHTONGUE
-	)))
-	*/
 
 	interpreter.Run() // run the thing
 
@@ -299,14 +280,13 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 	// Backwards-apply variables onto signal data
 	/* sanitize EVERYTHING. fucking players can't be trusted with SHIT */
-
+	//Horologium: i am moving these blocks closer together to remind other that they are in the same method
 	var/msg = script_signal.get_clean_property("content", signal.data["message"])
 	if(isnum(msg))
 		msg = "[msg]"
 	else if(!msg)
 		msg = "*beep*"
 	signal.data["message"] = msg
-
 
 	signal.frequency = script_signal.get_clean_property("freq", signal.frequency)
 
@@ -326,7 +306,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	signal.virt.verb_exclaim	= script_signal.get_clean_property("exclaim")
 	var/newlang = NTSL_LANG_TODATUM(script_signal.get_clean_property("language"))
 	if(newlang != oldlang)// makes sure that we only clean out unallowed languages when a translation is taking place otherwise we run an unnecessary proc to filter newlang on foreign untranslated languages.
-		if(!LAZYFIND(GLOB.allowed_translations, oldlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek
+		if(!LAZYFIND(GLOB.allowed_translations, newlang)) // cleans out any unallowed translations by making sure the new language is on the allowed translation list. Tcomms powergaming is dead! - Hopek | You know who else is dead? MY MOM (shit wait) - Horologium
 			newlang = oldlang
 	signal.language = newlang || oldlang
 	var/list/setspans 			= script_signal.get_clean_property("filters") //Save the span vector/list to a holder list
@@ -374,13 +354,15 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		S.properties["source"] = params[3]
 	if(params.len >= 4)
 		S.properties["job"] = params[4]
+	if(params.len >= 5)
+		S.properties["language"] = params[5]
 	return S
 
 
-/*  -- Actual language proc code --  */
+/* -- Actual language proc code -- */
 
 #define SIGNAL_COOLDOWN 20 // 2 seconds
-#define MAX_MEM_VARS 500 // The maximum number of variables that can be stored by NTSL via mem()
+#define MAX_MEM_VARS 400 // The maximum number of variables that can be stored by NTSL via mem(). Decreased from 500 to 400 because my goodness anything to let this run faster.
 
 /datum/n_function/default/mem
 	name = "mem"
@@ -448,6 +430,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 		message_admins("Telecomms server \"[S.id]\" sent a signal command, which was triggered by NTSL<B>: </B> [format_frequency(freq)]/[code]")
 
+//Determines the broadcast function, give it a FULLY AND PROPERLY FORMATTED SIGNAL OBJECT to watch the magic happen. Does nothing otherwise - 'bad-code-safe'. - Horologium
 /datum/n_function/default/broadcast
 	name = "broadcast"
 	interp_type = /n_Interpreter/TCS_Interpreter
@@ -541,3 +524,55 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	return pass // Returns, as of Jan 23 2019, the number of machines that received this broadcast's message.
 #undef SIGNAL_COOLDOWN
 #undef MAX_MEM_VARS
+
+/* I KNOW NTSL - I CAN DO ANYTHING
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKKKKKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNN0:.....cKNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWNNWWMMMMMMWWO;...       .c0WWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWk;,,,,:0WMMMWWk;.             .c0WMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx;,,,,,,,,:OWk:;.                 'c0MMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx:,';cccccc;';:.                      'cOWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNxc,';ccccccccc:.                          oWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMXx:. .'lkl,,:cccc:.                          'lOWMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMXxl:,. 'cOW0l;,,:cc:.                            cNMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMM0c:ll:c0MMMMMx. .,,'.                            'd0WMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMW0cc0WMMMMXOc. .............              .,,'. .'cx0NMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0OO0NMX0l...,okkkkkkkkdoll:'.         .,oOXXo':dl;lXMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO,..'d0c.'clldkOOOOOOOOc..ldxd,.     .'oo'.kMWXd,lKNWMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO. ';....;xl..lxkOOOkxx;   .lxxo'   .oxkd..xMMMNXNWMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO. ,:. ,oxxc. ..lkkkc..     .'ox;   'xkko'.kMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO'.,:. ;kl'.    .'lk;.   .coooxkdl' .c:',d0NMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOd,.  ;kxl, .;lllxkdol' .dOOx:'lk;  .  .OMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOo. ;ko,,:lkOOOOOOOOdl:,'',:ldk;     .OMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX; ;ko,cOkc:dOOkl;;l0o.  .lkl,.   .cxXMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWklc;cdk0d. .:xO:  .;,  'cdk,   .cxNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNkoooc;;:lkx:'. 'c.    .':xkl;.   .coooodKMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNko:,,;oOc .;lxx:'''''''':odl;. .,;,.  .,,;lxKMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO..;lllxOc  .;cllccccccccldo;'',cdOKo..:llc::kWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMN0OOOOOOOKWMMMMWKOOOXWN0l.     ,l, 'kk:''.. .....;oddddo' ,d:  .,,:OWWMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMNKx,.......:OXWWXk:...lNk.           .dxxxxo' 'cloo:.           .o0XNWMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMO'.,:::::::,.:Ok;.,;. cNk.             ....                       ,0MMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMO'.;:ccccccc:,'';:c:. cN0c.            .''                        .xNWMMMWNNXNXXXNNNNNXXXXXXNWMMM
+MMMNKx,.;c:ccccc:;;ccc:. :Xx.         .,;;,.                          .,OMMWx'.''''''''''''''..;0MMM
+MMMMMN0x;...,:cccccc:..  .'.        .,:ccc:;'                          .xMMWo .',,,,,,,,,,,,,. .kMMM
+MMMMMMMW0xxx:........               .ccc;....    .''.                  .xMMWo  ......;c,...... .kMMM
+MMMMMMMMMMMMKxddddc.            ... .ccc:,.      .:c:,.                 'cOWKxddddc. ':. 'oddddxXMMM
+MMMMMMMMMMMMMMMMMMNkool.     .:ll:. .ccccc:,.    .:ccc:'.                 oWMMMMMM0, ':. :NMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMWOlllllxXWKx:..',ccc:,.    .:ccccc:'.               'lOWMMMM0, ':. cNMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkc..''''....  ..';ccccc:. ..             'oONMMK, ':. cNMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKx;    .','.    .',,,,'  .'.    ..    .;;;dNNOo,.;c. :NMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWo             .'.            .;;.   ;xkkkko'.;c;,,,dNMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWk,.           ;Kx.     ......',,...........;::;,,xNWMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNx,.         :Xk.     :kKNNNk;',,,;,,,;,,;;;',xNWMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx.        :Xk.      .lKNWWXO;...........,xXWMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNNNNk'.':lo'  :Xk..coc;. .'lKNNX0OOOOO00KK0KKWMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKl,,,,,,,,,;codxkx;  :Xk..lkxxolll:,,,,,,,,,,dNWMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMKc;clllolloooc,......  :Xk. ........;lllolloool:;dNMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO..o000000000o.        :Xk.         ,k00000000O: ;XMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMO. .,,,;;,,;;:looooooodOWXxooool.   .,;;,;;,;;;coONMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMXxlllllllllllxXMMMMMMMMMMMMMMMMWOllllllllllllloOWMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*/

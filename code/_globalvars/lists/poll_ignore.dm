@@ -43,7 +43,7 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_SPLITPERSONALITY = "Split Personality",
 	POLL_IGNORE_CONTRACTOR_SUPPORT = "Contractor Support Unit",
 	POLL_IGNORE_ACADEMY_WIZARD = "Academy Wizard Defender",
-	POLL_IGNORE_DEFECTIVECLONE = "Defective clone" //bungalow edit
+	POLL_IGNORE_DEFECTIVECLONE = "Defective clone", //bungalow edit
 ))
 GLOBAL_LIST_INIT(poll_ignore, init_poll_ignore())
 

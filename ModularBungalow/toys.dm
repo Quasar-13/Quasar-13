@@ -1,3 +1,4 @@
+// PLUSHIES //
 /obj/item/toy/plush/moth/hos
 	name = "Pyx plushie"
 	desc = "A plushie depicting Pyx, the Syndiemoth!"
@@ -40,8 +41,8 @@
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "jone"
 	inhand_icon_state = null
-	attack_verb_continuous = list("bap","sus")
-	attack_verb_simple = list("bap","sus")
+	attack_verb_continuous = list("bap", "sus") // wtf
+	attack_verb_simple = list("bap", "sus")
 	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
 
 /obj/item/toy/plush/lizardplushie/booker
@@ -49,3 +50,10 @@
 	desc = "An adorable stuffed toy that resembles the hardboiled detective, Booker!"
 	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
 	icon_state = "booka"
+
+// FIGUERES //
+/obj/item/toy/figure/secretary
+	name = "Secretary action figure"
+	icon = 'ModularBungalow/zbungalowicons/toys.dmi'
+	icon_state = "secretary"
+	toysay = "Im going to steal the AA!"

@@ -18,6 +18,7 @@
 
 
 
+
 //Wetwork
 /obj/item/storage/backpack/duffelbag/sec/spec
 	name = "wetwork kit"

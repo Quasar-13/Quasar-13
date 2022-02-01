@@ -1,10 +1,12 @@
 /datum/job
+	///Possible alt titles players can choose.
 	var/list/alt_titles = list()
+	///Titles selectable after getting enough playtime on the job.
 	var/senior_title
 
 //Engineering
 /datum/job/engineer
-	alt_titles = list("Maintenance Technician", "Engine Technician", "Mechanic", "Electrician", "Signal Technician")
+	alt_titles = list("Maintenance Technician", "Engine Technician", "Electrician", "Signal Technician")
 	senior_title = "Project Co-ordinator"
 
 /datum/job/atmos
@@ -145,8 +147,6 @@
 	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
 
-
 //Funny role
 /datum/job/staff_officer
 	alt_titles = list("Field Officer")
-

@@ -29,11 +29,15 @@
 
 
 /datum/game_mode/traitor/pre_setup()
+	var/no_restrictions = FALSE
+	if(prob(CONFIG_GET(number/no_job_restriction_chance)) && (GLOB.player_list.len > CONFIG_GET(number/no_job_restriction_pop)))
+		message_admins("RANDOM ALERT! Traitor gamemode's job restrictions were removed! Any role can become an antagonist this round!")
+		no_restrictions = TRUE
 
-	if(CONFIG_GET(flag/protect_roles_from_antagonist))
+	if(CONFIG_GET(flag/protect_roles_from_antagonist) && !no_restrictions)
 		restricted_jobs += protected_jobs
 
-	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
+	if(CONFIG_GET(flag/protect_assistant_from_antagonist) && !no_restrictions)
 		restricted_jobs += "Assistant"
 
 	var/num_traitors = 1

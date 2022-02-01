@@ -620,10 +620,11 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	w_class = WEIGHT_CLASS_HUGE
 	var/homerun_ready = 0
 	var/homerun_able = 0
+	var/can_be_cricket = TRUE //bungalow edit
 
 /obj/item/melee/baseball_bat/Initialize()
 	. = ..()
-	if(prob(1))
+	if(prob(1) && can_be_cricket)
 		name = "cricket bat"
 		desc = "You've got red on you."
 		icon_state = "baseball_bat_brit"

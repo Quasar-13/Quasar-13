@@ -9,6 +9,11 @@
 	can_adjust = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 5)
 
+//Parade suit
+/obj/item/clothing/under/misc/parade/comms
+	desc = "A black suit blue trim. Worn by the cheerful Communications Officer"
+	name = "communication officer's parade uniform"
+	icon_state = "spaceship_comms"
 
 //QM Parade suit
 /obj/item/clothing/under/misc/parade/qm
@@ -60,6 +65,13 @@
 	icon_state = "spaceship_mar"
 
 
+
+//*****************************************************
+//*****************************************************
+//***				JACKETS							***
+//*****************************************************
+//*****************************************************
+
 /obj/item/clothing/suit/armor/captain
 	name = "debug captain's armor"
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'
@@ -102,3 +114,53 @@
 	name = "Solgov Commander's coat"
 	desc = "The coat of a Solgov base commander"
 	icon_state = "Solgov_jacket"
+
+// Bath Robes
+/obj/item/clothing/suit/armor/captain/bath
+	name = "captain's bathrobes"
+	desc = "Ah, Time alone."
+	icon_state = "captain_robes"
+
+
+//Flag Officer Jackets
+/obj/item/clothing/suit/armor/captain/flag
+	name = "Rear Admiral's combat jacket"
+	desc = "The combat jacket of a Rear Admiral. A military job, the protection it grants is welcome."
+	icon_state = "radm"
+	armor = list(MELEE = 80, BULLET = 80, LASER = 90, ENERGY = 90, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+
+/obj/item/clothing/suit/armor/captain/flag/vadm
+	name = "Vice Admiral's parade jacket"
+	desc = "The coat of a Vice Admiral. Absolutely a ceremonial job. Still flashy, even flashier than the admiral's."
+	icon_state = "vadm"
+
+/obj/item/clothing/suit/armor/captain/flag/provost
+	name = "The Provost's parade jacket"
+	desc = "The coat of a Provost Officer. Rank FO-2, Above even the Commodores, this Flag officer is entirely ceremonial, and their sole job is to take out unruly captains."
+	icon_state = "provost"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm
+	name = "The Fleet Admiral's parade jacket"
+	desc = "FO-4. This belongs to the sector's one and only fleet admiral. Fear them."
+	icon_state = "admiral"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm/fancy
+	name = "The Fleet Admiral's fancy jacket"
+	desc = "The Fleet Admiral has decided to bring out their best. Be warned."
+	icon_state = "admiral_fancy"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm/combat
+	name = "The Fleet Admiral's combat jacket"
+	desc = "The Fleet Admiral's jacket, ready for combat. Prepare yourself."
+	icon_state = "admiral_combat"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm/offduty
+	name = "The Fleet Admiral's black robes"
+	desc = "The Fleet Admiral's robes. Or one of them. They are currently off-duty"
+	icon_state = "admiral_offduty"
+
+/obj/item/clothing/suit/armor/captain/flag/gadm
+	name = "The Grand Admiral's coat"
+	desc = "The Grand Admiral's robes. The Admiral of Admirals, your boss's boss four times over."
+	icon_state = "gadm"
+
