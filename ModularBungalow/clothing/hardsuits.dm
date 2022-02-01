@@ -73,7 +73,7 @@ obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
 
 /obj/item/clothing/suit/space/hardsuit/ert/bni
 	name = "BNI Agent Hardsuiit"
-	desc = "A hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind"
+	desc = "A hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "ert_bni"
@@ -84,7 +84,7 @@ obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
 
 /obj/item/clothing/head/helmet/space/hardsuit/ert/bni
 	name = "paranormal response team helmet"
-	desc = "A hlemet for a hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind"
+	desc = "A hlemet for a hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind."
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "hardsuit0-ert_bni"
