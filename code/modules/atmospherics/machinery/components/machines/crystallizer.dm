@@ -106,14 +106,14 @@
 	return FALSE
 
 ///Injects the gases from the input inside the internal gasmix, the amount is dependant on the gas_input var
-/obj/machinery/atmospherics/components/binary/crystallizer/proc/inject_gases(delta_time)
+/obj/machinery/atmospherics/components/binary/crystallizer/proc/inject_gases()
 	var/datum/gas_mixture/contents = airs[2]
 	for(var/gas_type in selected_recipe.requirements)
 		if(!contents.gases[gas_type] || !contents.gases[gas_type][MOLES])
 			continue
 		if(internal.gases[gas_type] && internal.gases[gas_type][MOLES] >= selected_recipe.requirements[gas_type] * 2)
 			continue
-		internal.merge(contents.remove_specific(gas_type, contents.gases[gas_type][MOLES] * (gas_input  * delta_time)))
+		internal.merge(contents.remove_specific(gas_type, contents.gases[gas_type][MOLES] * gas_input))
 
 ///Checks if the gases required are all inside
 /obj/machinery/atmospherics/components/binary/crystallizer/proc/internal_check()
