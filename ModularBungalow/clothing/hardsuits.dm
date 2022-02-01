@@ -69,8 +69,6 @@
 	name = "compact mining hardsuit helmet"
 	armor = list(MELEE = 25, BULLET = 5, LASER = 10, ENERGY = 15, BOMB = 50, BIO = 100, RAD = 40, FIRE = 30, ACID = 75, WOUND = 5)
 
-obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
-
 /obj/item/clothing/suit/space/hardsuit/ert/bni
 	name = "BNI Agent Hardsuiit"
 	desc = "A hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind."
