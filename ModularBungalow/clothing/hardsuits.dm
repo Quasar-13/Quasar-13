@@ -88,7 +88,7 @@ obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "hardsuit0-ert_bni"
-	inhand_icon_state = "ert_security"
+	inhand_icon_state = "ert_bni"
 	hardsuit_type = "ert_bni"
 	strip_delay = 130
 	light_range = 7
