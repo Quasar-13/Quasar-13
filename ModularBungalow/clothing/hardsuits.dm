@@ -90,6 +90,7 @@ obj/item/clothing/head/helmet/space/hardsuit/ert/paranormal
 	icon_state = "hardsuit0-ert_bni"
 	inhand_icon_state = "ert_security"
 	hardsuit_type = "ert_bni"
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	actions_types = list()
+	strip_delay = 130
+	light_range = 7
 	resistance_flags = FIRE_PROOF
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
