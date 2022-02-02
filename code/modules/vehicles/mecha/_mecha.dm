@@ -551,24 +551,21 @@
 	if(internal_damage & MECHA_INT_CONTROL_LOST)
 		target = pick(view(3,target))
 	var/mob/living/livinguser = user
-		if(!target)
-			return
-	var/mob/living/L = user
 	if(selected)
 		if(!(livinguser in return_controllers_with_flag(VEHICLE_CONTROL_EQUIPMENT)))
 			balloon_alert(user, "wrong seat for equipment!")
 			return
 		if(!Adjacent(target) && (selected.range & MECHA_RANGED))
-			if(HAS_TRAIT(L, TRAIT_PACIFISM) && selected.harmful)
-				to_chat(L, "<span class='warning'>You don't want to harm other living beings!</span>")
+			if(HAS_TRAIT(livinguser, TRAIT_PACIFISM) && selected.harmful)
+				to_chat(livinguser, "<span class='warning'>You don't want to harm other living beings!</span>")
 				return
 			if(SEND_SIGNAL(src, COMSIG_MECHA_EQUIPMENT_CLICK, livinguser, target) & COMPONENT_CANCEL_EQUIPMENT_CLICK)
 				return
 			INVOKE_ASYNC(selected, /obj/item/mecha_parts/mecha_equipment.proc/action, user, target, params)
 			return
 		if((selected.range & MECHA_MELEE) && Adjacent(target))
-			if(isliving(target) && selected.harmful && HAS_TRAIT(L, TRAIT_PACIFISM))
-				to_chat(L, "<span class='warning'>You don't want to harm other living beings!</span>")
+			if(isliving(target) && selected.harmful && HAS_TRAIT(livinguser, TRAIT_PACIFISM))
+				to_chat(livinguser, "<span class='warning'>You don't want to harm other living beings!</span>")
 				return
 			if(SEND_SIGNAL(src, COMSIG_MECHA_EQUIPMENT_CLICK, livinguser, target) & COMPONENT_CANCEL_EQUIPMENT_CLICK)
 				return
