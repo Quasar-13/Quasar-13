@@ -276,9 +276,6 @@
 
 	var/special_role_text = lowertext(name)
 
-	if (contractor_hub)
-		result += contractor_round_end()
-
 	if(traitorwin)
 		result += "<span class='greentext'>The [special_role_text] was successful!</span>"
 	else
@@ -297,4 +294,4 @@
 	return message
 
 /datum/antagonist/traitor/nt_blackops/is_gamemode_hero()
-	return SSticker.mode.name == "traitor"
+	return SSticker.mode.name == "BNI Agent"
