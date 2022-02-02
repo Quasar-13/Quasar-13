@@ -14,7 +14,7 @@
 	employer = "BNI"
 	give_objectives = TRUE
 	should_give_codewords = TRUE
-	should_equip = TRUE
+//	should_equip = TRUE
 	traitor_kind = TRAITOR_HUMAN //Set on initial assignment
 
 /datum/antagonist/traitor/nt_blackops/on_gain()
@@ -26,10 +26,11 @@
 	if(give_objectives)
 		forge_traitor_objectives()
 	finalize_traitor()
-	return ..()
 	var/datum/component/uplink/U = owner.find_syndicate_uplink()
 	if (U)
 		U.set_gamemode(/datum/game_mode/traitor/nt_blackops) //So NT Black Ops can access the NT-specific uplink
+	return ..()
+
 
 /datum/antagonist/traitor/nt_blackops/on_removal()
 	//Remove malf powers.
