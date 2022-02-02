@@ -241,10 +241,6 @@
 	to_chat(killer, "Your radio has been upgraded! Use :y to speak on an encrypted channel with BNI Agents!")
 	killer.add_malf_picker()
 
-/datum/antagonist/traitor/nt_blackops/equip(silent = FALSE)
-	if(traitor_kind == TRAITOR_HUMAN)
-		owner.equip_traitor(employer, silent, src)
-
 //TODO Collate
 /datum/antagonist/traitor/nt_blackops/roundend_report()
 	var/list/result = list()
