@@ -13,22 +13,12 @@ BUNDLES
 
 // Dangerous Items
 
-/datum/uplink_item/dangerous/pulse_carbine
-	name = "P-05 Pulse Rifle"
-	desc = "The strongest and loudest item we are allowed to give you, make sure to use it wisely. \
-			Commonly used by our Death Commandos, our Pulse weapons have incredible power, able to destroy reinforced walls in few shots. \
-			Remember, don't lose it"
-	item = /obj/item/gun/energy/pulse/carbine
-	cost = 20
-	surplus = 0
-	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
-
 /datum/uplink_item/dangerous/pulse_pistol
 	name = "P-24 Pulse Pistol"
 	desc = "A more miniaturized version of the P-05 Pulse Rifle, if one needs to have a more compact version \
 			Remember, don't lose it"
 	item = /obj/item/gun/energy/pulse/pistol
-	cost = 12
+	cost = 35
 	surplus = 0
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
@@ -53,3 +43,27 @@ BUNDLES
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 	cost = 16
 	surplus = 0
+
+//Pointless Badassery
+/*datum/uplink_item/badass
+	category = "(Pointless) Badassery"
+	surplus = 0
+*/
+
+/datum/uplink_item/badass/bni_outfit
+	name = "BNI Agent Outfit"
+	desc = "Normally on operations such as these, you would simply wear your designated cover disguise. \
+			However for a small fee, we can package you with your rank ribbon and standard uniform in a secure briefcase"
+	item = /obj/item/storage/secure/briefcase/bni
+	cost = 1
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+/datum/uplink_item/badass/centcom_outfit
+	name = "CentCom Official Outfit"
+	desc = "If needed, we are able to give you a copy of the standard uniform of the CentCom Officials if need be, radio inclued. \
+			Do note that due to current protocols, we are unable to proof announcements to give you legitamacy."
+	item = /obj/item/storage/secure/briefcase/bni/cc_official
+	cost = 2
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
