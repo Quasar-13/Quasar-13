@@ -210,5 +210,5 @@
 	.["admins"] = presentmins
 	.["admins"] += afkmins
 
-	return list2params(.)	
+	return list2params(.)
 
