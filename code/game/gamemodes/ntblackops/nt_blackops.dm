@@ -3,8 +3,8 @@
 	config_tag = "nt_blackops"
 	report_type = "nt_blackops"
 	false_report_weight = 0
-	required_players = 25
-	required_enemies = 5
+	required_players = 10
+	required_enemies = 3
 	recommended_enemies = 8
 	reroll_friendly = 0
 	traitor_name = "Nanotrasen BNI Operative"
