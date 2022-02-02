@@ -1,6 +1,3 @@
-#define TRAITOR_HUMAN "human"
-#define TRAITOR_AI	  "AI"
-
 /datum/antagonist/traitor/nt_blackops
 	name = "BNI Agent"
 	roundend_category = "NT Black Ops"
@@ -17,32 +14,10 @@
 	traitor_kind = TRAITOR_HUMAN //Set on initial assignment
 
 /datum/antagonist/traitor/nt_blackops/on_gain()
-	if(owner.current && isAI(owner.current))
-		traitor_kind = TRAITOR_AI
-
-	SSticker.mode.traitors += owner
-	owner.special_role = special_role
-	if(give_objectives)
-		forge_traitor_objectives()
-	finalize_traitor()
+	. = ..()
 	var/datum/component/uplink/U = owner.find_syndicate_uplink()
 	if (U)
 		U.set_gamemode(/datum/game_mode/traitor/nt_blackops) //So NT Black Ops can access the NT-specific uplink
-	return ..()
-
-
-/datum/antagonist/traitor/nt_blackops/on_removal()
-	//Remove malf powers.
-	if(traitor_kind == TRAITOR_AI && owner.current && isAI(owner.current))
-		var/mob/living/silicon/ai/A = owner.current
-		A.set_zeroth_law("")
-		A.remove_malf_abilities()
-		QDEL_NULL(A.malf_picker)
-	SSticker.mode.traitors -= owner
-	if(!silent && owner.current)
-		to_chat(owner.current,"<span class='userdanger'>You are no longer the [special_role]!</span>")
-	owner.special_role = null
-	return ..()
 
 /datum/antagonist/traitor/nt_blackops/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]
@@ -53,11 +28,11 @@
 /datum/antagonist/traitor/nt_blackops/forge_traitor_objectives()
 	switch(traitor_kind)
 		if(TRAITOR_AI)
-			forge_ai_objectives()
+			forge_nt_ai_objectives()
 		else
-			forge_human_objectives()
+			forge_nt_human_objectives()
 
-/datum/antagonist/traitor/nt_blackops/forge_human_objectives()
+/datum/antagonist/traitor/nt_blackops/proc/forge_nt_human_objectives()
 	var/is_hijacker = FALSE //BNI can't hijack because they're NT-aligned
 	var/martyr_chance = FALSE //BNI dont want Agents sacrificing themselves willy nilly
 	var/objective_count = is_hijacker 			//Hijacking counts towards number of objectives
@@ -100,7 +75,7 @@
 			return
 
 
-/datum/antagonist/traitor/nt_blackops/forge_ai_objectives()
+/datum/antagonist/traitor/nt_blackops/proc/forge_nt_ai_objectives()
 	var/objective_count = 0
 
 	if(prob(30))
@@ -109,7 +84,7 @@
 	for(var/i = objective_count, i < CONFIG_GET(number/traitor_objectives_amount), i++)
 		var/datum/objective/assassinate/kill_objective = new
 		kill_objective.owner = owner
-		kill_objective.find_target()
+		kill_objective.find_target_by_role(role = ROLE_TRAITOR, role_type = TRUE, invert = FALSE)
 		add_objective(kill_objective)
 
 	var/datum/objective/survive/malf/dont_die_objective = new
@@ -117,31 +92,31 @@
 	add_objective(dont_die_objective)
 
 
-/datum/antagonist/traitor/nt_blackops/forge_single_objective()
+/datum/antagonist/traitor/nt_blackops/proc/forge_blackops_single_objective()
 	switch(traitor_kind)
 		if(TRAITOR_AI)
-			return forge_single_AI_objective()
+			return forge_single_nt_AI_objective()
 		else
-			return forge_single_human_objective()
+			return forge_single_nt_human_objective()
 
-/datum/antagonist/traitor/nt_blackops/forge_single_human_objective() //Returns how many objectives are added
+/datum/antagonist/traitor/nt_blackops/proc/forge_single_nt_human_objective() //Returns how many objectives are added
 	.=1
 	if(prob(50))
 		var/list/active_ais = active_ais()
 		if(active_ais.len && prob(100/GLOB.joined_player_list.len))
 			var/datum/objective/destroy/destroy_objective = new
 			destroy_objective.owner = owner
-			destroy_objective.find_target()
+			destroy_objective.find_target_by_role(role = ROLE_TRAITOR, role_type = TRUE, invert = FALSE)
 			add_objective(destroy_objective)
 		else if(prob(30))
 			var/datum/objective/maroon/maroon_objective = new
 			maroon_objective.owner = owner
-			maroon_objective.find_target()
+			maroon_objective.find_target_by_role(role = ROLE_TRAITOR, role_type = TRUE, invert = FALSE)
 			add_objective(maroon_objective)
 		else
 			var/datum/objective/assassinate/kill_objective = new
 			kill_objective.owner = owner
-			kill_objective.find_target()
+			kill_objective.find_target_by_role(role = ROLE_TRAITOR, role_type = TRUE, invert = FALSE)
 			add_objective(kill_objective)
 	else
 		if(prob(15) && !(locate(/datum/objective/download) in objectives) && !(owner.assigned_role in list("Research Director", "Scientist", "Roboticist")))
@@ -155,7 +130,7 @@
 			steal_objective.find_target()
 			add_objective(steal_objective)
 
-/datum/antagonist/traitor/nt_blackops/forge_single_AI_objective()
+/datum/antagonist/traitor/nt_blackops/proc/forge_single_nt_AI_objective()
 	.=1
 	var/special_pick = rand(1)
 	switch(special_pick)
@@ -177,35 +152,6 @@
 	if(should_give_codewords)
 		give_codewords()
 
-/datum/antagonist/traitor/nt_blackops/finalize_traitor()
-	switch(traitor_kind)
-		if(TRAITOR_AI)
-			add_law_zero()
-			owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/malf.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
-		if(TRAITOR_HUMAN)
-			if(should_equip)
-				equip(silent)
-			owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
-
-/datum/antagonist/traitor/nt_blackops/apply_innate_effects(mob/living/mob_override)
-	. = ..()
-	var/mob/living/M = mob_override || owner.current
-	add_antag_hud(antag_hud_type, antag_hud_name, M)
-	handle_clown_mutation(M, mob_override ? null : "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself.")
-	var/mob/living/silicon/ai/A = M
-	if(istype(A) && traitor_kind == TRAITOR_AI)
-		A.hack_software = TRUE
-	RegisterSignal(M, COMSIG_MOVABLE_HEAR, .proc/handle_hearing)
-
-/datum/antagonist/traitor/nt_blackops/remove_innate_effects(mob/living/mob_override)
-	. = ..()
-	var/mob/living/M = mob_override || owner.current
-	remove_antag_hud(antag_hud_type, M)
-	handle_clown_mutation(M, removing = FALSE)
-	var/mob/living/silicon/ai/A = M
-	if(istype(A)  && traitor_kind == TRAITOR_AI)
-		A.hack_software = FALSE
-	UnregisterSignal(M, COMSIG_MOVABLE_HEAR)
 
 /datum/antagonist/traitor/nt_blackops/give_codewords()
 	if(!owner.current)
@@ -225,7 +171,7 @@
 	to_chat(traitor_mob, "Use the codewords during regular conversation to identify other agents. Proceed with caution, however, as everyone is a potential foe.")
 	to_chat(traitor_mob, "<span class='alertwarning'>You memorize the codewords, allowing you to recognise them when heard.</span>")
 
-/datum/antagonist/traitor/nt_blackops/add_law_zero()
+/datum/antagonist/traitor/nt_blackops/proc/add_law_blackops_zero()
 	var/mob/living/silicon/ai/killer = owner.current
 	if(!killer || !istype(killer))
 		return
