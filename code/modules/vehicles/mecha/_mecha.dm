@@ -550,6 +550,7 @@
 		return
 	if(internal_damage & MECHA_INT_CONTROL_LOST)
 		target = pick(view(3,target))
+	var/mob/living/livinguser = user
 		if(!target)
 			return
 	var/mob/living/L = user
