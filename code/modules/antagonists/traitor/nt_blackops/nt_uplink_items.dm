@@ -53,3 +53,27 @@ BUNDLES
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 	cost = 16
 	surplus = 0
+
+//Pointless Badassery
+/*datum/uplink_item/badass
+	category = "(Pointless) Badassery"
+	surplus = 0
+*/
+
+datum/uplink_item/badass/bni_outfit
+	name = "BNI Agent Outfit"
+	desc = "Normally on operations such as these, you would simply wear your designated cover disguise. \
+			However for a small fee, we can package you with your rank ribbon and standard uniform in a secure briefcase"
+	item = /obj/item/encryptionkey/cent_agent
+	cost = 1
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+datum/uplink_item/badass/centcom_outfit
+	name = "CentCom Official Outfit"
+	desc = "If needed, we are able to give you a copy of the standard uniform of the CentCom Officials if need be, radio inclued. \
+			Do note that due to current protocols, we are unable to proof announcements to give you legitamacy."
+	item = /obj/item/storage/secure/briefcase/bni/cc_official
+	cost = 2
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
