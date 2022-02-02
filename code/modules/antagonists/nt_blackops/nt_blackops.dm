@@ -59,22 +59,21 @@
 
 /datum/antagonist/traitor/nt_blackops/forge_human_objectives()
 	var/is_hijacker = FALSE //BNI can't hijack because they're NT-aligned
-	var/martyr_chance = prob(0) //BNI don't want wasted agents
+	var/martyr_chance = FALSE //BNI dont want Agents sacrificing themselves willy nilly
 	var/objective_count = is_hijacker 			//Hijacking counts towards number of objectives
 
 	var/toa = CONFIG_GET(number/traitor_objectives_amount)
 	for(var/i = objective_count, i < toa, i++)
 		forge_single_objective()
 
-	if(is_hijacker && objective_count <= toa) //Don't assign hijack if it would exceed the number of objectives set in config.traitor_objectives_amount
+	if(is_hijacker && objective_count <= toa)
 		if (!(locate(/datum/objective/hijack) in objectives))
 			var/datum/objective/hijack/hijack_objective = new
 			hijack_objective.owner = owner
 			add_objective(hijack_objective)
 			return
 
-
-	var/martyr_compatibility = 1 //You can't succeed in stealing if you're dead.
+	var/martyr_compatibility = 1
 	for(var/datum/objective/O in objectives)
 		if(!O.martyr_compatible)
 			martyr_compatibility = 0
@@ -86,12 +85,20 @@
 		add_objective(martyr_objective)
 		return
 
-	else
+	if(prob(20))
 		if(!(locate(/datum/objective/escape) in objectives))
 			var/datum/objective/escape/escape_objective = new
 			escape_objective.owner = owner
 			add_objective(escape_objective)
 			return
+
+	else
+		if(!(locate(/datum/objective/survive) in objectives)) //Infiltrators can just be picked up after
+			var/datum/objective/survive/survive_objective = new
+			survive_objective.owner = owner
+			add_objective(survive_objective)
+			return
+
 
 /datum/antagonist/traitor/nt_blackops/forge_ai_objectives()
 	var/objective_count = 0
@@ -150,21 +157,9 @@
 
 /datum/antagonist/traitor/nt_blackops/forge_single_AI_objective()
 	.=1
-	var/special_pick = rand(1,4)
+	var/special_pick = rand(1)
 	switch(special_pick)
-		if(1)
-			var/datum/objective/block/block_objective = new
-			block_objective.owner = owner
-			add_objective(block_objective)
-		if(2)
-			var/datum/objective/purge/purge_objective = new
-			purge_objective.owner = owner
-			add_objective(purge_objective)
-		if(3)
-			var/datum/objective/robot_army/robot_objective = new
-			robot_objective.owner = owner
-			add_objective(robot_objective)
-		if(4) //Protect and strand a target
+		if(1) //Protect and strand a target
 			var/datum/objective/protect/yandere_one = new
 			yandere_one.owner = owner
 			add_objective(yandere_one)
