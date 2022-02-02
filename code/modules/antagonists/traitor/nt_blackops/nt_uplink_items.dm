@@ -13,22 +13,12 @@ BUNDLES
 
 // Dangerous Items
 
-/datum/uplink_item/dangerous/pulse_carbine
-	name = "P-05 Pulse Rifle"
-	desc = "The strongest and loudest item we are allowed to give you, make sure to use it wisely. \
-			Commonly used by our Death Commandos, our Pulse weapons have incredible power, able to destroy reinforced walls in few shots. \
-			Remember, don't lose it"
-	item = /obj/item/gun/energy/pulse/carbine
-	cost = 20
-	surplus = 0
-	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
-
 /datum/uplink_item/dangerous/pulse_pistol
 	name = "P-24 Pulse Pistol"
 	desc = "A more miniaturized version of the P-05 Pulse Rifle, if one needs to have a more compact version \
 			Remember, don't lose it"
 	item = /obj/item/gun/energy/pulse/pistol
-	cost = 12
+	cost = 35
 	surplus = 0
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
