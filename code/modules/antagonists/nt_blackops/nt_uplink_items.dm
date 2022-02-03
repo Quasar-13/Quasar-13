@@ -54,8 +54,8 @@ BUNDLES
 	name = "Stolen Contractor Baton"
 	desc = "We acquired a Baton used by the Syndicate Contractors. \
 			Stronger than a normal baton and collapsible, it's a fine tool to use."
-	item = /obj/item/pen/edagger
-	cost = 2
+	item = /obj/item/melee/classic_baton/telescopic/contractor_baton
+	cost = 4
 
 
 //IMPLANTS
