@@ -219,6 +219,13 @@
 	name = "security operative's black beret"
 	desc = "A black beret with the NT's insignia emblazoned on it. A remnant for the ."
 
+/obj/item/clothing/head/beret/xan
+	name = "centcom beret"
+	desc = "The beret of the esteemed Admiral Crux"
+	icon_state = "xberet"
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	strip_delay = 90
+
 /*	//unused
 /obj/item/clothing/head/beret/lt
 	name = "officer beret"
