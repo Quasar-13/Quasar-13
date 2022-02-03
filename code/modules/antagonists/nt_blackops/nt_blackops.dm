@@ -22,6 +22,13 @@
 	var/datum/component/uplink/U = owner.find_syndicate_uplink()
 	if (U)
 		U.set_gamemode(/datum/game_mode/traitor/nt_blackops) //So NT Black Ops can access the NT-specific uplink
+	var/mob/living/H = owner.current
+	H.faction |= "Deathsquad" //:D
+
+/datum/antagonist/traitor/nt_blackops/on_removal()
+	. = ..()
+	var/mob/living/H = owner.current
+	H.faction -= "Deathsquad" //:(
 
 /datum/antagonist/traitor/nt_blackops/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]
