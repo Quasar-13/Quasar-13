@@ -38,6 +38,16 @@ BUNDLES
 	surplus = 0
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
+/datum/uplink_item/dangerous/socom
+	name = "Mark 23 SOCOM"
+	desc = "Your standard sidearm during most duties, Agent. Uses 9mm and is highly capable, uncapable of being supressed though"
+
+	item = /obj/item/gun/ballistic/automatic/pistol/mk23
+	cost = 6
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+//TOOLS AND DEVICES
+
 /datum/uplink_item/device_tools/ccencryptionkey
 	name = "Agent Encryption Key"
 	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \

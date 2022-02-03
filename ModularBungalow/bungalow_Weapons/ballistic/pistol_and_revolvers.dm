@@ -8,7 +8,7 @@
 	icon_state = "mk23"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/glock
-	can_suppress = FALSE
+	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
