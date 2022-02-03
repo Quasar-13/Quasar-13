@@ -253,4 +253,3 @@
 	worn_icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoats.dmi'
 	icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoathoods.dmi'
 	icon_state = "winterhood_chap"
-
