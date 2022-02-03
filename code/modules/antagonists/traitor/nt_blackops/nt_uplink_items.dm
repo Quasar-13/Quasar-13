@@ -13,15 +13,6 @@ BUNDLES
 
 // Dangerous Items
 
-/datum/uplink_item/dangerous/pulse_pistol
-	name = "P-24 Pulse Pistol"
-	desc = "A more miniaturized version of the P-05 Pulse Rifle, if one needs to have a more compact version \
-			Remember, don't lose it"
-	item = /obj/item/gun/energy/pulse/pistol
-	cost = 35
-	surplus = 0
-	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
-
 /datum/uplink_item/device_tools/ccencryptionkey
 	name = "Agent Encryption Key"
 	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \

@@ -13,12 +13,28 @@ BUNDLES
 
 // Dangerous Items
 
-/datum/uplink_item/dangerous/pulse_pistol
-	name = "P-24 Pulse Pistol"
-	desc = "A more miniaturized version of the P-05 Pulse Rifle, if one needs to have a more compact version \
-			Remember, don't lose it"
-	item = /obj/item/gun/energy/pulse/pistol
-	cost = 35
+/datum/uplink_item/dangerous/small_aeg
+	name = "Compartmentalized X-07 Nuclear Energy Rifle"
+	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell. \
+			Modified to fit in a bag. Be careful around EMPs"
+	item = /obj/item/gun/energy/e_gun/nuclear/small
+	cost = 5
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+/datum/uplink_item/dangerous/small_tac
+	name = "Compartmentalized XX-01 Tactical Energy Rifle"
+	desc = "Military issue energy gun, is able to fire stun rounds.is able to fire stun rounds. Modified to be smaller"
+	item = /obj/item/gun/energy/e_gun/stun/small
+	cost = 5
+	surplus = 0
+	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+/datum/uplink_item/dangerous/small_laser
+	name = "Compartmentalized L-504 Laser Gun"
+	desc = "Nanotrasen’s 5th series rifle, an old and outdated rifle. but can serve some use.. Modified to be smaller"
+	item = /obj/item/gun/energy/laser/fifth/small
+	cost = 3
 	surplus = 0
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
@@ -31,6 +47,16 @@ BUNDLES
 	surplus = 0
 	restricted = TRUE
 	include_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+
+//STEALTH WEAPONS
+
+/datum/uplink_item/stealthy_weapons/baton
+	name = "Stolen Contractor Baton"
+	desc = "We acquired a Baton used by the Syndicate Contractors. \
+			Stronger than a normal baton and collapsible, it's a fine tool to use."
+	item = /obj/item/pen/edagger
+	cost = 2
+
 
 //IMPLANTS
 
