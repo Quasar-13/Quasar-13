@@ -27,8 +27,16 @@
 #define ACCESS_SYNDICATE_POLICE 153
 //Syndicate Command access
 #define ACCESS_SYNDICATE_COMMAND 154
+//Syndicate Medical Access
+#define ACCESS_SYNDICATE_MEDICAL 156
+//Syndicate Engineering Access
+#define ACCESS_SYNDICATE_ENGINEERING 157
+//Syndicate Armory Access
+#define ACCESS_SYNDICATE_ARMORY 158
+//Syndicate Bridge Access
+#define ACCESS_SYNDICATE_BRIDGE 159
 //Syndicate Commandant
-#define ACCESS_SYNDICATE_COMMANDANT 155
+#define ACCESS_SYNDICATE_COMMANDANT 160
 
 /// Bungalow Cloning defines
 #define CLONER_FRESH_CLONE "fresh"

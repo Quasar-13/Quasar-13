@@ -35,6 +35,8 @@
 		#include "map_files\RemusFacility\RemusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
 		#include "map_files\NTBlacksite\NTBlacksite.dmm"
+		#include "map_files\CrashSite\CrashSite_LVL1.dmm"
+		#include "map_files\CrashSite\CrashSite_LVL2.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
