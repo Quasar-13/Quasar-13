@@ -1,8 +1,21 @@
-/obj/item/choice_beacon/bungalow/mech
+/obj/item/choice_beacon/mech
 	name = "mecha pilot beacon"
 	desc = "A beacon to be used to call down a mecha."
-	typesof_options = /obj/vehicle/sealed/mecha/combat/pilot
-	selection_message = "<span class='hear'>Stand by for titanfall.</span>"
+
+/obj/item/choice_beacon/mech/generate_display_names()
+	var/static/list/mech_item_list
+	if(!mech_item_list)
+		mech_item_list = list()
+		var/list/templist = typesof(/obj/vehicle/sealed/mecha/combat/pilot) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			mech_item_list[initial(A.name)] = A
+	return mech_item_list
+
+/obj/item/choice_beacon/spec/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Stand by for titanfall.</span>")
+
 
 
 /obj/item/choice_beacon/bungalow/mech/operator_mechs

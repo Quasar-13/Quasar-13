@@ -139,17 +139,28 @@
 	desc = "The coat of a Provost Officer. Rank FO-2, Above even the Commodores, this Flag officer is entirely ceremonial, and their sole job is to take out unruly captains."
 	icon_state = "provost"
 
-/obj/item/clothing/suit/armor/captain/flag/admiral
+/obj/item/clothing/suit/armor/captain/flag/fadm
 	name = "The Fleet Admiral's parade jacket"
 	desc = "FO-4. This belongs to the sector's one and only fleet admiral. Fear them."
 	icon_state = "admiral"
 
-/obj/item/clothing/suit/armor/captain/flag/admiral/fancy
-	name = "The Admiral's fancy jacket"
+/obj/item/clothing/suit/armor/captain/flag/fadm/fancy
+	name = "The Fleet Admiral's fancy jacket"
 	desc = "The Fleet Admiral has decided to bring out their best. Be warned."
 	icon_state = "admiral_fancy"
 
-/obj/item/clothing/suit/armor/captain/flag/admiral/combat
-	name = "The Admiral's combat jacket"
+/obj/item/clothing/suit/armor/captain/flag/fadm/combat
+	name = "The Fleet Admiral's combat jacket"
 	desc = "The Fleet Admiral's jacket, ready for combat. Prepare yourself."
 	icon_state = "admiral_combat"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm/offduty
+	name = "The Fleet Admiral's black robes"
+	desc = "The Fleet Admiral's robes. Or one of them. They are currently off-duty"
+	icon_state = "admiral_offduty"
+
+/obj/item/clothing/suit/armor/captain/flag/gadm
+	name = "The Grand Admiral's coat"
+	desc = "The Grand Admiral's robes. The Admiral of Admirals, your boss's boss four times over."
+	icon_state = "gadm"
+
