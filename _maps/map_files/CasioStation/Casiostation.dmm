@@ -1760,6 +1760,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bCX" = (
@@ -7926,6 +7927,7 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 5
 	},
+/obj/structure/reagent_dispensers/plumbed/fuel,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "gtP" = (
@@ -16557,6 +16559,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+"nGM" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/yellow{
+	color = "#FFD700";
+	dir = 8;
+	name = "Engineering yellow corner"
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
 "nGX" = (
 /obj/structure/table,
 /obj/item/stack/cable_coil{
@@ -16638,6 +16650,13 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"nMD" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/plumbed/fuel,
+/turf/open/floor/plasteel,
+/area/engine/break_room)
 "nMP" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
@@ -19228,10 +19247,17 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "pPF" = (
-/obj/structure/transit_tube/horizontal,
-/obj/machinery/portable_atmospherics/canister/air,
-/turf/open/space/basic,
-/area/space/nearstation)
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
 "pPO" = (
 /obj/machinery/camera/autoname{
 	dir = 1
@@ -19552,7 +19578,7 @@
 	name = "Port Docking Bay 2"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/hallway/primary/starboard)
 "qhc" = (
 /obj/structure/window/reinforced,
 /obj/effect/turf_decal/tile/blue{
@@ -22786,8 +22812,9 @@
 /turf/closed/wall/r_wall,
 /area/chapel)
 "sWe" = (
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
-/area/space)
+/area/maintenance/port/fore)
 "sWw" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/bot,
@@ -28438,9 +28465,9 @@
 /turf/open/floor/plating,
 /area/hallway/primary/starboard)
 "xCw" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
-/area/space)
+/area/maintenance/port/fore)
 "xCE" = (
 /turf/open/floor/plating/airless,
 /area/space)
@@ -49236,7 +49263,7 @@ yjP
 ylO
 wcT
 ylO
-yjP
+sWe
 yjP
 ylO
 xlc
@@ -50259,7 +50286,7 @@ ylO
 yjP
 sLN
 ylO
-yjP
+sWe
 ylO
 vUb
 yjP
@@ -53611,7 +53638,7 @@ bgr
 xlI
 bEy
 yjP
-yjP
+xCw
 uUO
 khY
 oCf
@@ -53868,7 +53895,7 @@ bgE
 vBj
 uwG
 yjP
-yjP
+sWe
 uUO
 wKb
 wKb
@@ -58536,8 +58563,8 @@ xUS
 vuW
 sFO
 grX
-jfy
-jfy
+nMD
+nMD
 jfy
 rFi
 mlU
@@ -60829,7 +60856,7 @@ kBp
 kBp
 kBp
 ojl
-oVr
+oUH
 pqB
 pNj
 qjn
@@ -61086,7 +61113,7 @@ mau
 kBp
 nzP
 ojl
-oUH
+pPF
 pqB
 pNj
 qjn
@@ -62628,7 +62655,7 @@ kCK
 kCK
 lsS
 omI
-oUH
+pPF
 pqB
 pNj
 qjn
@@ -63142,7 +63169,7 @@ mfC
 ltS
 ltS
 omI
-oVr
+oUH
 pqB
 pNj
 qjn
@@ -63399,9 +63426,9 @@ mgc
 mTP
 nFp
 omI
-oUH
-pqB
-pNj
+oUE
+psx
+pOo
 qjn
 wKb
 wKb
@@ -63656,10 +63683,10 @@ mgm
 ltS
 ltS
 omI
-oUE
-psx
-pOo
-qjn
+khY
+psy
+pOE
+qku
 khY
 khY
 khY
@@ -66742,7 +66769,7 @@ nJi
 org
 khY
 psy
-pPF
+pOE
 qku
 qHc
 kIU
@@ -67540,7 +67567,7 @@ tSU
 tSU
 aZk
 tSU
-fAH
+nGM
 hrU
 khY
 khY
@@ -83460,9 +83487,9 @@ khY
 khY
 khY
 khY
-xCw
-sWe
-xCw
+xzg
+pdG
+xzg
 khY
 khY
 khY
@@ -83717,9 +83744,9 @@ khY
 khY
 khY
 khY
-xCw
+xzg
 qgm
-xCw
+xzg
 khY
 khY
 khY
