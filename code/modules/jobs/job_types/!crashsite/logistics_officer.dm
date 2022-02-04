@@ -1,14 +1,14 @@
 /datum/job/logistics_officer
 	title = "Logistics Officer"
 	department_head = list("First Officer", "Commandant")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the wing commander and staff officer"
 	selection_color = "#BBBB11"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_LOGISTICS
-	maptype = "syndicate"
+	maptype = "crashsite"
 
 	outfit = /datum/outfit/job/logistics_officer
 

@@ -1,14 +1,14 @@
 /datum/job/marine
 	title = "Marine"
 	department_head = list("Wing Commander", "Staff Officer")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 28
 	spawn_positions = 18
 	supervisors = "the wing commander and staff officer"
 	selection_color = "#884488"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_OPERATIONS
-	maptype = "syndicate"
+	maptype = "crashsite"
 
 	outfit = /datum/outfit/job/marine
 

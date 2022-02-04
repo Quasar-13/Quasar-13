@@ -1,18 +1,18 @@
-/datum/job/medical_officer
-	title = "Medical Officer"
+/datum/job/head_syndi_doctor
+	title = "Chief Medical Officer"
 	department_head = list("Commandant")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
 	selection_color = "#335522"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_TRIAGE
-	maptype = "syndicate"
+	maptype = "crashsite"
 
 	outfit = /datum/outfit/job/medical_officer
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_MEDICAL, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND, ACCESS_HEADS)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND, ACCESS_HEADS)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND, ACCESS_HEADS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_MED

@@ -1,14 +1,14 @@
 /datum/job/first_officer
 	title = "First Officer"
 	department_head = list("Commandant")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
 	selection_color = "#ff3322"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_SYNDICATE
-	maptype = "syndicate"
+	maptype = "crashsite"
 
 	outfit = /datum/outfit/job/first_officer
 

@@ -1,14 +1,14 @@
 /datum/job/requisitions_chief
 	title = "Requisitions Chief"
 	department_head = list("First Officer", "Logistics Officer")
-	faction = "Station"
+	faction = "Syndicate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the logistics officer and first officer"
 	selection_color = "#DDDD33"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_LOGISTICS
-	maptype = "syndicate"
+	maptype = "crashsite"
 
 	outfit = /datum/outfit/job/requisitions_chief
 
