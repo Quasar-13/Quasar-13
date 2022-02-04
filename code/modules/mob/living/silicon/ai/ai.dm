@@ -760,6 +760,11 @@
 	if(radio)
 		radio.make_syndie()
 
+/mob/living/silicon/ai/proc/set_centcom_radio()
+	if(radio)
+		radio.make_centcom()
+//DWAFAWFG{OWAW{JGJGPWAG{}}}
+
 /mob/living/silicon/ai/proc/set_automatic_say_channel()
 	set name = "Set Auto Announce Mode"
 	set desc = "Modify the default radio setting for your automatic announcements."
