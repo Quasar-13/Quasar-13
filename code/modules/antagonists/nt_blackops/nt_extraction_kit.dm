@@ -1,4 +1,4 @@
-
+/*
 /obj/item/storage/box/syndicate/extraction_kit
 	name = "Extraction Kit"
 	desc = "Supplied to BNI Agents for extraction purposes"
@@ -88,3 +88,4 @@
 
 	// Paper guide
 	new /obj/item/paper/contractor_guide(src)
+*/

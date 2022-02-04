@@ -172,6 +172,7 @@
 	var/phrases = jointext(GLOB.nanotrasen_code_phrase, ", ")
 	var/responses = jointext(GLOB.nanotrasen_code_response, ", ")
 
+	to_chat(traitor_mob, "<U><B>You are not to align with security, as they may interfere. Do not reveal your identity as an NT agent under penalty of death.</B></U>")
 	to_chat(traitor_mob, "<U><B>Your BNI Handler have provided you with the following codewords to identify fellow agents:</B></U>")
 	to_chat(traitor_mob, "<B>Code Phrase</B>: <span class='blue'>[phrases]</span>")
 	to_chat(traitor_mob, "<B>Code Response</B>: <span class='red'>[responses]</span>")
