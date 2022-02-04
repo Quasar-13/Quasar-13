@@ -1,5 +1,5 @@
-/datum/job/logistics_officer
-	title = "Logistics Officer"
+/datum/job/chief_syndicate_engineer
+	title = "Chief Syndicate Engineer"
 	department_head = list("First Officer", "Commandant")
 	faction = "Syndicate"
 	total_positions = 1
@@ -12,7 +12,7 @@
 
 	outfit = /datum/outfit/job/logistics_officer
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_ENGINEERING, ACCESS_SYNDICATE_OFFICER, ACCESS_ENGINE_EQUIP, ACCESS_SYNDICATE_LEADER, ACCESS_ENGINE, ACCESS_SYNDICATE_BRIDGE, ACCESS_SYNDICATE_COMMAND)
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
