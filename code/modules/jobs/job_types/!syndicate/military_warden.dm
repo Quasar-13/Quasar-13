@@ -31,4 +31,3 @@
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/sig
 
 	belt = null
-
