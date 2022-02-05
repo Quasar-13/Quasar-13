@@ -221,7 +221,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "alJ" = (
 /turf/open/floor/plating,
 /area/maintenance/department/science)
@@ -3781,9 +3781,12 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar)
 "diH" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/space)
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance{
+	req_one_access_txt = "12"
+	},
+/turf/open/floor/plating,
+/area/maintenance/central)
 "diS" = (
 /obj/structure/table,
 /obj/item/stack/cable_coil{
@@ -12345,7 +12348,7 @@
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "kqj" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -12827,12 +12830,14 @@
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "kHU" = (
+/obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance{
-	req_one_access_txt = "12"
+	name = "Science Maintenance";
+	req_access_txt = "47"
 	},
-/turf/open/floor/plating,
-/area/maintenance/central)
+/turf/open/floor/plasteel,
+/area/maintenance/department/science)
 "kIU" = (
 /obj/machinery/airalarm/directional/north,
 /obj/structure/bed/dogbed/ian,
@@ -13767,7 +13772,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "lzd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -15624,7 +15629,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/aisat/foyer)
+/area/ai_monitored/turret_protected/aisat_interior)
 "ncI" = (
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -22922,7 +22927,7 @@
 /obj/structure/window/reinforced,
 /obj/structure/lattice,
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "sNI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -23755,15 +23760,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"txW" = (
-/obj/machinery/door/firedoor,
-/obj/structure/cable,
-/obj/machinery/door/airlock/maintenance{
-	name = "Science Maintenance";
-	req_access_txt = "47"
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/department/science)
 "tyz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -23992,7 +23988,7 @@
 	dir = 4
 	},
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "tIf" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
@@ -48357,7 +48353,7 @@ abt
 abt
 ldP
 qZw
-txW
+kHU
 nrM
 nrM
 nrM
@@ -68375,7 +68371,7 @@ bTt
 xVS
 tYd
 lre
-kHU
+diH
 epD
 gee
 mFI
@@ -78182,7 +78178,7 @@ khY
 khY
 khY
 khY
-diH
+bXW
 khY
 khY
 eZE
@@ -78432,7 +78428,7 @@ fHM
 khY
 khY
 khY
-diH
+bXW
 khY
 nug
 nug
@@ -81516,7 +81512,7 @@ fHM
 khY
 khY
 khY
-diH
+bXW
 khY
 nug
 nug
@@ -81780,7 +81776,7 @@ khY
 khY
 khY
 khY
-diH
+bXW
 khY
 khY
 eZE
