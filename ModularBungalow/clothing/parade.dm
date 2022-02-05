@@ -144,14 +144,19 @@
 	desc = "FO-4. This belongs to the sector's one and only fleet admiral. Fear them."
 	icon_state = "admiral"
 
+/obj/item/clothing/suit/armor/captain/flag/fadm/xan
+	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
+	desc = "FO-4. This belongs to the sector's one and only fleet admiral Caelumbyrn Crux. Fear them."
+	icon_state = "xadm"
+
 /obj/item/clothing/suit/armor/captain/flag/fadm/xan/offduty
 	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
-	desc = "Fleet Admiral Caelumbyrn Crux's robe. Fear them."
+	desc = "FO-4. This belongs to the sector's one and only fleet admiral Caelumbyrn Crux. Fear them."
 	icon_state = "xoffduty"
 
 /obj/item/clothing/suit/armor/captain/flag/fadm/fancy
 	name = "The Fleet Admiral's fancy jacket"
-	desc = "The Fleet Admiral has decided to bring out their best. Be warned."
+	desc = "The Fleet Admiral Caelumbyrn Crux's robes. Or one of them. They are currently off-duty"
 	icon_state = "admiral_fancy"
 
 /obj/item/clothing/suit/armor/captain/flag/fadm/combat
