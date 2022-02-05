@@ -45,6 +45,10 @@
 /datum/antagonist/traitor/internal_affairs/on_gain()
 	START_PROCESSING(SSprocessing, src)
 	. = ..()
+	var/datum/component/uplink/U = owner.find_syndicate_uplink()
+	if (U)
+		U.set_gamemode(/datum/game_mode/traitor/internal_affairs) //Specific Uplink for IAA
+
 /datum/antagonist/traitor/internal_affairs/on_removal()
 	STOP_PROCESSING(SSprocessing,src)
 	. = ..()
