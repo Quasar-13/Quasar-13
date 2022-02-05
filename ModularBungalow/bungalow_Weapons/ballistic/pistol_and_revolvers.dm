@@ -7,7 +7,7 @@
 	desc = "A pistol used by special forces across the galaxy."
 	icon_state = "mk23"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/glock
+	mag_type = /obj/item/ammo_box/magazine/m10mm
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/sig
