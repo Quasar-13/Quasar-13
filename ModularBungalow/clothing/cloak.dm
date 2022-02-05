@@ -41,7 +41,7 @@
 	icon_state = "centcloak"
 
 /obj/item/clothing/neck/cloak/xan
-	name = "fleet admiral Caelumbyrn Crux's cloak"
+	name = "Fleet Admiral Caelumbyrn Crux's Cloak"
 	desc = "A cloak used by Caelumbyrn Crux."
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'

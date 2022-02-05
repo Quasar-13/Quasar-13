@@ -348,8 +348,8 @@
 	update_icon()
 
 /obj/item/energy_katana/xan
-	name = "Crux's Katana"
-	desc = "Fleet admiral Crux's Katana"
+	name = "Fleet Admiral Caelumbyrn Crux's Katana"
+	desc = "Fleet Admiral Caelumbyrn Crux's Katana"
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "xkatana"
 	inhand_icon_state = "xkatana"
