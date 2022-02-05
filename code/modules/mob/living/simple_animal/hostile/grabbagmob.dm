@@ -721,74 +721,74 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/engorge
-    name = "Imp"
-    desc = "A small, demonic creature that moves relatively fast, but doesn't do a lot of damage."
-    icon = 'icons/mob/newmobs32x64.dmi'
-    icon_state = "engorgedemon"
-    icon_living = "engorgedemon"
-    icon_dead = "demondead"
-    mob_biotypes = MOB_SPIRIT
-    speak_chance = 0
-    turns_per_move = 5
-    butcher_results = list(/obj/item/stack/sheet/runed_metal/ten = 1)
-    response_help_continuous = "pets"
-    response_help_simple = "pet"
-    response_disarm_continuous = "gently pushes aside"
-    response_disarm_simple = "gently push aside"
-    emote_taunt = list("cackles manically")
-    taunt_chance = 30
-    speed = 0
-    maxHealth = 120
-    health = 120
-    harm_intent_damage = 8
-    obj_damage = 20
-    melee_damage_lower = 10
-    melee_damage_upper =10
-    attack_verb_continuous = "claws"
-    attack_verb_simple = "slice"
-    attack_sound = 'sound/weapons/bladeslice.ogg'
-    speak_emote = list("chitters")
-    atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-    minbodytemp = 0
-    maxbodytemp = 1500
-    faction = list("hostile")
-    pressure_resistance = 200
-    gold_core_spawnable = NO_SPAWN
+	name = "Imp"
+	desc = "A small, demonic creature that moves relatively fast, but doesn't do a lot of damage."
+	icon = 'icons/mob/newmobs32x64.dmi'
+	icon_state = "engorgedemon"
+	icon_living = "engorgedemon"
+	icon_dead = "demondead"
+	mob_biotypes = MOB_SPIRIT
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/stack/sheet/runed_metal/ten = 1)
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently pushes aside"
+	response_disarm_simple = "gently push aside"
+	emote_taunt = list("cackles manically")
+	taunt_chance = 30
+	speed = 0
+	maxHealth = 120
+	health = 120
+	harm_intent_damage = 8
+	obj_damage = 20
+	melee_damage_lower = 10
+	melee_damage_upper =10
+	attack_verb_continuous = "claws"
+	attack_verb_simple = "slice"
+	attack_sound = 'sound/weapons/bladeslice.ogg'
+	speak_emote = list("chitters")
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+	faction = list("hostile")
+	pressure_resistance = 200
+	gold_core_spawnable = NO_SPAWN
 
 /mob/living/simple_animal/hostile/devourdem
-    name = "Devour Lord"
-    desc = "This creature is terror itself, a manifestation of the raw hunger and avarice of mortals."
-    icon = 'icons/mob/newmobs32x64.dmi'
-    icon_state = "devourdemon"
-    icon_living = "devourdemon"
-    icon_dead = "demondead"
-    mob_biotypes = MOB_SPIRIT
-    speak_chance = 0
-    turns_per_move = 5
-    butcher_results = list(/obj/item/stack/sheet/runed_metal/ten = 1)
-    response_help_continuous = "pets"
-    response_help_simple = "pet"
-    response_disarm_continuous = "gently pushes aside"
-    response_disarm_simple = "gently push aside"
-    emote_taunt = list("lets out a low, but horrifying sound")
-    taunt_chance = 30
-    speed = 3
-    maxHealth = 250
-    health = 250
-    harm_intent_damage = 12
-    obj_damage = 40
-    melee_damage_lower = 25
-    melee_damage_upper =25
-    attack_verb_continuous = "slices"
-    attack_verb_simple = "slice"
-    attack_sound = 'sound/effects/wounds/crackandbleed.ogg'
-    speak_emote = list("hums ominously")
-    atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-    minbodytemp = 0
-    maxbodytemp = 1500
-    faction = list("hostile")
-    pressure_resistance = 200
-    gold_core_spawnable = NO_SPAWN
+	name = "Devour Lord"
+	desc = "This creature is terror itself, a manifestation of the raw hunger and avarice of mortals."
+	icon = 'icons/mob/newmobs32x64.dmi'
+	icon_state = "devourdemon"
+	icon_living = "devourdemon"
+	icon_dead = "demondead"
+	mob_biotypes = MOB_SPIRIT
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/stack/sheet/runed_metal/ten = 1)
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently pushes aside"
+	response_disarm_simple = "gently push aside"
+	emote_taunt = list("lets out a low, but horrifying sound")
+	taunt_chance = 30
+	speed = 3
+	maxHealth = 250
+	health = 250
+	harm_intent_damage = 12
+	obj_damage = 40
+	melee_damage_lower = 25
+	melee_damage_upper =25
+	attack_verb_continuous = "slices"
+	attack_verb_simple = "slice"
+	attack_sound = 'sound/effects/wounds/crackandbleed.ogg'
+	speak_emote = list("hums ominously")
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+	faction = list("hostile")
+	pressure_resistance = 200
+	gold_core_spawnable = NO_SPAWN
 
 // Vox Raiders
 
