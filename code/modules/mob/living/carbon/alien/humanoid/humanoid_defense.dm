@@ -41,7 +41,7 @@
 			if ("disarm")
 				if (body_position == STANDING_UP)
 					if (prob(5))
-						Unconscious(40)
+						Knockdown(10)
 						playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
 						log_combat(M, src, "pushed")
 						visible_message("<span class='danger'>[M] pushes [src] down!</span>", \
