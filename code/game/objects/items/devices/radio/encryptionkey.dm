@@ -149,10 +149,3 @@
 
 /obj/item/encryptionkey/secbot
 	channels = list(RADIO_CHANNEL_AI_PRIVATE = 1, RADIO_CHANNEL_SECURITY = 1)
-
-/obj/item/encryptionkey/cent_agent
-	name = "agent encryption key"
-	icon_state = "cent_cypherkey"
-	channels = list(RADIO_CHANNEL_CENTCOM = 1, RADIO_CHANNEL_SYNDICATE = 1)
-	independent = TRUE
-	syndie = TRUE

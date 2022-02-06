@@ -68,27 +68,3 @@
 /obj/item/clothing/head/helmet/space/hardsuit/mining/compact
 	name = "compact mining hardsuit helmet"
 	armor = list(MELEE = 25, BULLET = 5, LASER = 10, ENERGY = 15, BOMB = 50, BIO = 100, RAD = 40, FIRE = 30, ACID = 75, WOUND = 5)
-
-/obj/item/clothing/suit/space/hardsuit/ert/bni
-	name = "BNI Agent Hardsuiit"
-	desc = "A hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind."
-	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "ert_bni"
-	inhand_icon_state = "hardsuit0-ert_security"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/bni
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/head/helmet/space/hardsuit/ert/bni
-	name = "paranormal response team helmet"
-	desc = "A hlemet for a hardsuit designed for BNI Agents looking for a more covert suit, designed with mobility yet protection in mind."
-	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
-	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
-	icon_state = "hardsuit0-ert_bni"
-	inhand_icon_state = "ert_bni"
-	hardsuit_type = "ert_bni"
-	strip_delay = 130
-	light_range = 7
-	resistance_flags = FIRE_PROOF
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT

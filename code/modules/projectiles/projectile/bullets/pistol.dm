@@ -26,17 +26,16 @@
 
 /obj/projectile/bullet/c10mm
 	name = "10mm bullet"
-	damage = 35
-	armour_penetration = 20
+	damage = 40
 
 /obj/projectile/bullet/c10mm_ap
 	name = "10mm armor-piercing bullet"
-	damage = 30
+	damage = 37
 	armour_penetration = 40
 
 /obj/projectile/bullet/c10mm_hp
 	name = "10mm hollow-point bullet"
-	damage = 45
+	damage = 60
 	armour_penetration = -50
 
 /obj/projectile/bullet/incendiary/c10mm

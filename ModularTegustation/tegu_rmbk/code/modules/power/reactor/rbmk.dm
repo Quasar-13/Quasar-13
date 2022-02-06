@@ -812,18 +812,18 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 //Preset subtypes for mappers
 /obj/machinery/computer/reactor/pump/rbmk_input
 	name = "Reactor inlet valve computer"
-	icon_screen = "oldcomp_rbmk_input"
-	id = "rbmk_input"
+	icon_screen = "rbmk_input"
+	id = "oldcomp_rbmk_input"
 
 /obj/machinery/computer/reactor/pump/rbmk_output
 	name = "Reactor output valve computer"
-	icon_screen = "oldcomp_rbmk_output"
-	id = "rbmk_output"
+	icon_screen = "rbmk_output"
+	id = "oldcomp_rbmk_output"
 
 /obj/machinery/computer/reactor/pump/rbmk_moderator
 	name = "Reactor moderator valve computer"
-	icon_screen = "oldcomp_rbmk_moderator"
-	id = "rbmk_moderator"
+	icon_screen = "rbmk_moderator"
+	id = "oldcomp_rbmk_moderator"
 
 //Monitoring program.
 /datum/computer_file/program/nuclear_monitor

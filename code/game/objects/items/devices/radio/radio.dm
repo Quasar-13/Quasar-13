@@ -85,12 +85,6 @@
 	syndie = 1
 	recalculateChannels()
 
-/obj/item/radio/proc/make_centcom() // Turns normal radios into CC radios (Mostly for BlackOps AI)!
-	qdel(keyslot)
-	keyslot = new /obj/item/encryptionkey/headset_cent
-	independent = 1
-	recalculateChannels()
-
 /obj/item/radio/Destroy()
 	remove_radio_all(src) //Just to be sure
 	QDEL_NULL(wires)

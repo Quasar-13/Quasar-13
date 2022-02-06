@@ -120,7 +120,7 @@
 /obj/item/clothing/accessory/medal/rank/nt/gadm
 	name = "GADM rank ribbon"
 	desc = "A ribbon denoting the flag officer rank of grand admiral, FO-5. This medal is awarded to NT Navy's single Grand Admiral."
-	icon_state = "nt_gadm"
+	icon_state = "nt_adm"
 
 //BNI
 /obj/item/clothing/accessory/medal/rank/nt/bni

@@ -136,15 +136,6 @@ GLOBAL_VAR(syndicate_code_response) //Code response for traitors.
 GLOBAL_DATUM(syndicate_code_phrase_regex, /regex)
 GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 
-//BNI Agents code words.
-GLOBAL_VAR(nanotrasen_code_phrase) //Code phrase for traitors.
-GLOBAL_VAR(nanotrasen_code_response) //Code response for traitors.
-
-//Cached regex search - for checking if codewords are used.
-GLOBAL_DATUM(nanotrasen_code_phrase_regex, /regex)
-GLOBAL_DATUM(nanotrasen_code_response_regex, /regex)
-
-
 	/*
 	Should be expanded.
 	How this works:

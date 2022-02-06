@@ -22,7 +22,7 @@
 			return
 
 	user.do_attack_animation(M)
-	M.Knockdown(10)
+	M.Paralyze(100)
 	M.apply_effect(EFFECT_STUTTER, 5)
 
 	M.visible_message("<span class='danger'>[user] prods [M] with [src]!</span>", \

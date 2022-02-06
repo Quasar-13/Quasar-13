@@ -37,11 +37,3 @@
 	inhand_icon_state = "m_mask"
 	permeability_coefficient = 0.01
 	equip_delay_other = 10
-
-/obj/item/clothing/mask/gas/glass
-	icon = 'icons/obj/clothing/masks.dmi'
-	worn_icon = 'icons/mob/clothing/mask.dmi'
-	name = "glass gas mask"
-	desc = "A face-covering mask that can be connected to an air supply. This one doesn't obscure your face however."
-	icon_state = "gas_clear"
-	flags_inv = HIDEEYES

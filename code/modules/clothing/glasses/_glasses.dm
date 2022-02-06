@@ -535,7 +535,6 @@
 	darkness_view = 8
 	flash_protect = FLASH_PROTECTION_WELDER
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	glass_colour_type = FALSE
 	clothing_flags = SCAN_REAGENTS
 	vision_flags = SEE_TURFS

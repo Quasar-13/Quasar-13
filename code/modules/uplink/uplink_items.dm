@@ -206,7 +206,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/storage/box/syndicate/contract_kit
 	cost = 20
 	player_minimum = 20
-	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops, /datum/game_mode/traitor/nt_blackops)
+	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
 
 /datum/uplink_item/bundles_tc/bundle_a
 	name = "Syndi-kit Tactical"
@@ -535,7 +535,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/gun/ballistic/automatic/c20r/toy
 	cost = 5
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops, /datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
+	include_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
 
 /datum/uplink_item/dangerous/foammachinegun
 	name = "Toy Machine Gun"
@@ -641,7 +641,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			On death, these nodules take control of the dead body, causing limited revivification, \
 			along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs,)
 	cost = 40
 	cant_discount = TRUE
 
@@ -1052,14 +1051,12 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			be defused, and some crew may attempt to do so. \
 			The bomb core can be pried out and manually detonated with other explosives."
 	item = /obj/item/sbeacondrop/bomb
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 	cost = 11
 
 /datum/uplink_item/explosives/syndicate_bomb/emp
 	name = "Syndicate EMP Bomb"
 	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
 	item = /obj/item/sbeacondrop/emp
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 	cost = 7
 
 /datum/uplink_item/explosives/syndicate_detonator
@@ -1513,7 +1510,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			in containment. Because of its size, it cannot be carried. Ordering this \
 			sends you a small beacon that will teleport the larger beacon to your location upon activation."
 	item = /obj/item/sbeacondrop
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs,)
 	cost = 10
 
 /datum/uplink_item/device_tools/powersink
@@ -1574,7 +1570,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 2
 	surplus = 75
 	restricted = TRUE
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs)
 
 /datum/uplink_item/device_tools/syndietome
 	name = "Syndicate Tome"
@@ -1737,7 +1732,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "G.O.R.L.E.X.. Mantis Blades Kit"
 	desc = "Comes with 2 G.O.R.L.E.X. Mantis blades. All packaged with autosurgeons."
 	item = /obj/item/storage/briefcase/syndie_mantis
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs,)
 	cost = 16
 	surplus = 0
 
@@ -1792,7 +1786,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			blast wave \"projectile\". Aspiring scientists may find this highly useful, as forcing the pressure shockwave into a narrow angle seems to be able to bypass whatever quirk of physics \
 			disallows explosive ranges above a certain distance, allowing for the device to use the theoretical yield of a transfer valve bomb, instead of the factual yield. It's simple design makes it easy to conceal."
 	item = /obj/item/gun/blastcannon
-	exclude_modes = list(/datum/game_mode/traitor/nt_blackops, /datum/game_mode/traitor/internal_affairs,)
 	cost = 14							//High cost because of the potential for extreme damage in the hands of a skilled scientist.
 	restricted_roles = list("Research Director", "Scientist")
 
