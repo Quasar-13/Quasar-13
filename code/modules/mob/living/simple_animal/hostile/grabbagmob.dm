@@ -19,13 +19,6 @@
 	icon_state = "syndilizard"
 	icon_living = "syndilizard"
 
-/mob/living/simple_animal/hostile/syndicate/ranged/space/anthro/cat
-	icon = 'icons/mob/newmobs.dmi'
-	icon_state = "syndicat"
-	icon_living = "syndicat"
-	name = "Syndicate Commando Feline"
-	desc = "An anthromorphic feline member of the Syndicate."
-
 //Cult
 /mob/living/simple_animal/hostile/cult
 	name = "Blood Cultist"
