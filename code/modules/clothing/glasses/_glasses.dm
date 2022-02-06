@@ -540,6 +540,10 @@
 	vision_flags = SEE_TURFS
 	var/list/hudlist = list(DATA_HUD_MEDICAL_ADVANCED, DATA_HUD_DIAGNOSTIC_ADVANCED, DATA_HUD_SECURITY_ADVANCED)
 	var/xray = FALSE
+	UNACIDABLE
+	LAVA_PROOF
+	FREEZE_PROOF
+	INDESTRUCTIBLE
 
 /obj/item/clothing/glasses/debug/equipped(mob/user, slot)
 	. = ..()
