@@ -347,6 +347,28 @@
 	new /obj/item/melee/nano_blade(src)
 	update_icon()
 
+/obj/item/energy_katana/xan
+	name = "Fleet Admiral Caelumbyrn Crux's Katana"
+	desc = "Fleet Admiral Caelumbyrn Crux's Katana"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "xkatana"
+	inhand_icon_state = "xkatana"
+	worn_icon_state = "xkatana"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 50
+	throwforce = 30
+	block_chance = 70
+	armour_penetration = 50
+	w_class = WEIGHT_CLASS_NORMAL
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
+	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	slot_flags = ITEM_SLOT_BELT
+	sharpness = SHARP_EDGED
+	max_integrity = 200
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
 /* 	Add this back later, fuck it
 //Katana
 /obj/item/melee/ckatana
