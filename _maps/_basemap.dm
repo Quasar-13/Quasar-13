@@ -33,6 +33,7 @@
 
 		//Admin only maps
 		#include "map_files\RemusFacility\RemusFacility.dmm"
+		#include "map_files\RomulusFacility\RomulusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
 		#include "map_files\NTBlacksite\NTBlacksite.dmm"
 
