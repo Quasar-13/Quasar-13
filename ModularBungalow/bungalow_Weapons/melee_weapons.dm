@@ -370,97 +370,15 @@
 	sharpness = SHARP_EDGED
 	max_integrity = 200
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	var/primed = FALSE
-	var/dash_cooldown // Current cooldown to compare to world.time
-	var/dash_cooldown_time = 5 SECONDS // Cooldown time after dash
-	var/dash_sound = 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg'
-	var/beam_effect = "blood_beam"
-	var/phasein = /obj/effect/temp_visual/dir_setting/cult/phase
-	var/phaseout = /obj/effect/temp_visual/dir_setting/cult/phase
-
-/obj/item/melee/xan_blade/Initialize()
-	. = ..()
-	AddComponent(/datum/component/butchering, 25, 90, 5) //Not made for scalping victims, but will work nonetheless
-
-/obj/item/melee/xan_blade/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = block_chance / 2 //Pretty good...
-	return ..()
-
-/obj/item/melee/xan_blade/on_exit_storage(datum/component/storage/concrete/S)
-	var/obj/item/storage/belt/xan_blade/B = S.real_location()
-	if(istype(B))
-		playsound(B, 'sound/items/unsheath.ogg', 25, TRUE)
-
-/obj/item/melee/xan_blade/on_enter_storage(datum/component/storage/concrete/S)
-	var/obj/item/storage/belt/xan_blade/B = S.real_location()
-	if(istype(B))
-		playsound(B, 'sound/items/sheath.ogg', 25, TRUE)
-
-/obj/item/melee/xan_blade/suicide_act(mob/user)
-	if(prob(70))
-		user.visible_message("<span class='suicide'>[user] carves deep into [user.p_their()] torso! It looks like [user.p_theyre()] trying to commit seppuku...</span>")
-	else
-		user.visible_message("<span class='suicide'>[user] carves a grid into [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit sudoku...</span>")
-	return (BRUTELOSS)
-
-/obj/item/melee/xan_blade/examine(mob/user)
-	. = ..()
-	. += "<span class='info'>Use [src] in your hand to prime for a swift dash.</span>"
-
-/obj/item/melee/xan_blade/attack_self(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
-		return
-	if(primed)
-		to_chat(user, "<span class='notice'>You return your stance.</span>")
-		primed = FALSE
-	else
-		if(dash_cooldown > world.time)
-			to_chat(user, "<span class='notice'>The [src] isn't ready for another dash attack yet.</span>")
-			return
-		user.visible_message("<span class='warning'>[user] grips the blade within [src] and primes to attack.</span>", "<span class='warning'>You take an opening stance...</span>", "<span class='warning'>You hear a weapon being drawn...</span>")
-		primed = TRUE
-
-/obj/item/melee/xan_blade/afterattack(atom/A, mob/living/user, proximity_flag, params)
-	. = ..()
-	var/turf/T = get_turf(A)
-	if(!T)
-		return
-	if(primed && dash_cooldown < world.time)
-		if(!(T in view(user.client.view, user)))
-			return
-		primed = FALSE
-		dash_cooldown = world.time + dash_cooldown_time
-		primed_attack(T, user)
-
-/obj/item/melee/xan_blade/proc/primed_attack(turf/target, mob/living/user)
-	var/turf/end = get_turf(user)
-	var/turf/start = get_turf(user)
-	var/obj/spot1 = new phaseout(start, user.dir)
-	// Stolen dash code
-	for(var/turf/T in getline(start, get_turf(target)))
-		for(var/mob/living/victim in T)
-			if(victim != user)
-				playsound(victim, 'ModularTegustation/Tegusounds/weapons/anime_slash.ogg', 30, TRUE)
-				victim.take_bodypart_damage(15)
-		// Unlike actual ninjas, we stop noclip-dashing here.
-		if(isclosedturf(T))
-			break
-		else
-			end = T
-	user.forceMove(end) // YEET
-	playsound(start, dash_sound, 35, TRUE)
-	var/obj/spot2 = new phasein(end, user.dir)
-	spot1.Beam(spot2, beam_effect, time=20)
-	user.visible_message("<span class='warning'>In a flash of purple light, [user] dashes forward with [user.p_their()] blade!</span>", "<span class='notice'>You dash forward with [src]!</span>", "<span class='warning'>You hear a blade slice through the air at impossible speeds!</span>")
 
 // Sheath
 /obj/item/storage/belt/xan_blade
-	name = "nanoforged blade sheath"
-	desc = "It yearns to bath in the blood of your enemies... but you hold it back!"
+	name = "Admiral Caelumbyrn Crux's Energy Katana"
+	desc = "Admiral Caelumbyrn Crux's Energy Katana, It pulses with purple energy"
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "xkatana_sheath"
-	worn_icon_state = "sheath"
+	inhand_icon_state = null
+	worn_icon_state = "xkatana_sheathw"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 3
 
@@ -493,16 +411,19 @@
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 
 /obj/item/storage/belt/xan_blade/update_icon_state()
-	icon_state = "xkatana_sheath"
-	worn_icon_state = "sheath"
+	icon_state = initial(inhand_icon_state)
+	inhand_icon_state = initial(inhand_icon_state)
+	worn_icon_state = initial(worn_icon_state)
 	if(contents.len)
-		icon_state += "-blade"
-		worn_icon_state += "-sabre"
-		inhand_icon_state = initial(inhand_icon_state)
+		icon_state += "xkatana_sheath-blade"
+		worn_icon_state += "xkatana_sheath-blade"
+		inhand_icon_state = "xkatana_sheath-blade"
 
 /obj/item/storage/belt/xan_blade/PopulateContents()
 	new /obj/item/melee/xan_blade(src)
 	update_icon()
+
+//Dash
 
 
 /* 	Add this back later, fuck it
