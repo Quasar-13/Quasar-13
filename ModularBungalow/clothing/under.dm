@@ -119,7 +119,7 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
-obj/item/clothing/under/rank/centcom/fadm/xan
+/obj/item/clothing/under/rank/centcom/fadm/xan
 	name = "The Fleet Admiral Caelumbyrn Crux's Uniform"
 	desc = "The Uniform for Fleet Admiral Caelumbyrn Crux"
 	icon_state = "xadm"
