@@ -370,6 +370,46 @@
 	sharpness = SHARP_EDGED
 	max_integrity = 200
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/datum/effect_system/spark_spread/spark_system
+	var/datum/action/innate/dash/ninja/jaunt
+	var/dash_toggled = TRUE
+
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 30, 95, 5) //fast and effective, but as a sword, it might damage the results.
+
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	jaunt = new(src)
+	spark_system = new /datum/effect_system/spark_spread()
+	spark_system.set_up(5, 0, src)
+	spark_system.attach(src)
+
+/obj/item/melee/xan_blade/attack_self(mob/user)
+	dash_toggled = !dash_toggled
+	to_chat(user, "<span class='notice'>You [dash_toggled ? "enable" : "disable"] the dash function on [src].</span>")
+
+/obj/item/melee/xan_blade/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(dash_toggled && !Adjacent(target) && !target.density)
+		jaunt.Teleport(user, target)
+
+/obj/item/melee/xan_blade/pickup(mob/living/user)
+	. = ..()
+	jaunt.Grant(user, src)
+	user.update_icons()
+	playsound(src, 'sound/items/unsheath.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+
+/obj/item/melee/xan_blade/dropped(mob/user)
+	. = ..()
+	jaunt.Remove(user)
+	user.update_icons()
+
+/datum/action/innate/xdash
+	current_charges = 3
+	max_charges = 3
+	charge_rate = 200
+	recharge_sound = null
 
 // Sheath
 /obj/item/storage/belt/xan_blade
@@ -380,7 +420,6 @@
 	inhand_icon_state = null
 	worn_icon_state = "xkatana_sheathw"
 	w_class = WEIGHT_CLASS_BULKY
-	force = 3
 
 /obj/item/storage/belt/xan_blade/ComponentInitialize()
 	. = ..()
@@ -424,6 +463,71 @@
 	update_icon()
 
 //Dash
+
+/atom/proc/Beam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/mobs.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
+	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
+	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)
+	return newbeam
+
+/obj/effect/temp_visual/dir_setting/xan/phase
+	name = "Xan Phase"
+	icon = 'ModularBungalow/zbungalowicons/mobs.dmi'
+	icon_state = "phasein"
+
+/obj/effect/temp_visual/dir_setting/xan/phase/out
+	icon_state = "phaseout"
+
+
+/datum/action/innate/xdash
+	name = "Dash"
+	desc = "Teleport to the targeted location."
+	icon_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon_state = "jetboot"
+	var/current_charges = 1
+	var/max_charges = 1
+	var/charge_rate = 250
+	var/mob/living/carbon/human/holder
+	var/obj/item/dashing_item
+	var/dash_sound = 'sound/magic/blink.ogg'
+	var/recharge_sound = 'sound/magic/charge.ogg'
+	var/beam_effect = "xbeam"
+	var/phasein = /obj/effect/temp_visual/dir_setting/xdash/phase
+	var/phaseout = /obj/effect/temp_visual/dir_setting/xdashphase/out
+
+/datum/action/innate/xdash/Grant(mob/user, obj/dasher)
+	. = ..()
+	dashing_item = dasher
+	holder = user
+
+/datum/action/innate/xdash/IsAvailable()
+	if(current_charges > 0)
+		return TRUE
+	else
+		return FALSE
+
+/datum/action/innate/xdash/Activate()
+	dashing_item.attack_self(holder) //Used to toggle dash behavior in the dashing item
+
+/datum/action/innate/xdash/proc/Teleport(mob/user, atom/target)
+	if(!IsAvailable())
+		return
+	var/turf/T = get_turf(target)
+	if(target in view(user.client.view, user))
+		var/obj/spot1 = new phaseout(get_turf(user), user.dir)
+		user.forceMove(T)
+		playsound(T, dash_sound, 25, TRUE)
+		var/obj/spot2 = new phasein(get_turf(user), user.dir)
+		spot1.Beam(spot2,beam_effect,time=2 SECONDS)
+		current_charges--
+		holder.update_action_buttons_icon()
+		addtimer(CALLBACK(src, .proc/charge), charge_rate)
+
+/datum/action/innate/xdash/proc/charge()
+	current_charges = clamp(current_charges + 1, 0, max_charges)
+	holder.update_action_buttons_icon()
+	if(recharge_sound)
+		playsound(dashing_item, recharge_sound, 50, TRUE)
+	to_chat(holder, "<span class='notice'>[src] now has [current_charges]/[max_charges] charges.</span>")
 
 
 /* 	Add this back later, fuck it
