@@ -14,7 +14,7 @@
 	minimal_access = list(ACCESS_HEADS)
 	paycheck = PAYCHECK_CENTCOM
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_COMMAND
 
 /datum/outfit/job/bridge
 	name = "NT Bridge Officer"

@@ -26,7 +26,7 @@
 	paycheck_department = ACCOUNT_SEC
 
 	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_HIGH_COMMAND
 
 
 /datum/outfit/job/blueshield
