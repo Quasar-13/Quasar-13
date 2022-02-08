@@ -167,10 +167,10 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 
 /datum/TCS_Compiler/proc/Compile(code as message)
 	var/n_scriptOptions/nS_Options/options = new()
-	var/n_Scanner/nS_Scanner/scanner       = new(code, options)
-	var/list/tokens                        = scanner.Scan()
-	var/n_Parser/nS_Parser/parser          = new(tokens, options)
-	var/node/BlockDefinition/GlobalBlock/program   	 = parser.Parse()
+	var/n_Scanner/nS_Scanner/scanner = new(code, options)
+	var/list/tokens = scanner.Scan()
+	var/n_Parser/nS_Parser/parser = new(tokens, options)
+	var/node/BlockDefinition/GlobalBlock/program = parser.Parse()
 
 	var/list/returnerrors = list()
 
@@ -188,15 +188,15 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	interpreter.SetVar("PI"		, 	3.141592653)	// value of pi
 	interpreter.SetVar("E" 		, 	2.718281828)	// value of e
 	interpreter.SetVar("SQURT2" , 	1.414213562)	// value of the square root of 2
-	interpreter.SetVar("FALSE"  , 	0)				// boolean shortcut to 0
-	interpreter.SetVar("false"  , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("FALSE" , 	0)				// boolean shortcut to 0
+	interpreter.SetVar("false" , 	0)				// boolean shortcut to 0
 	interpreter.SetVar("TRUE"	,	1)				// boolean shortcut to 1
 	interpreter.SetVar("true"	,	1)				// boolean shortcut to 1
 
 	interpreter.SetVar("NORTH" 	, 	NORTH)			// NORTH (1)
 	interpreter.SetVar("SOUTH" 	, 	SOUTH)			// SOUTH (2)
-	interpreter.SetVar("EAST" 	, 	EAST)			// EAST  (4)
-	interpreter.SetVar("WEST" 	, 	WEST)			// WEST  (8)
+	interpreter.SetVar("EAST" 	, 	EAST)			// EAST (4)
+	interpreter.SetVar("WEST" 	, 	WEST)			// WEST (8)
 
 	// Channel macros
 	interpreter.SetVar("channels", new /datum/n_enum(list(
@@ -377,7 +377,7 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	return S
 
 
-/*  -- Actual language proc code --  */
+/* -- Actual language proc code -- */
 
 #define SIGNAL_COOLDOWN 20 // 2 seconds
 #define MAX_MEM_VARS 500 // The maximum number of variables that can be stored by NTSL via mem()

@@ -143,7 +143,7 @@
 	var/list/manifest_out
 
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -175,6 +175,16 @@
 		"Medical",
 		"Science",
 		"Supply",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "goonlite")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Logistics",
+		"Medsci",
 		"Service",
 		"Silicon"
 		)
@@ -214,7 +224,7 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -250,6 +260,14 @@
 			"Silicon" = GLOB.nonhuman_positions)
 
 
+	if(SSmaptype.maptype == "goonlite")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Logistics" = GLOB.logistics_positions,
+			"Medsci" = GLOB.medical_positions + GLOB.science_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
 
 	if(SSmaptype.maptype == "casio")
 		departments = list(

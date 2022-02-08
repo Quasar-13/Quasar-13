@@ -14,9 +14,8 @@ Discord is the place where most of the discussion happens, due to absence of a f
 **Space Station 13** is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
 
 ## Information
-* **Code:** https://github.com/Kitsunemitsu/KirieStation
-* **SS13 Coderbus Discord:** https://discord.gg/Vh8TJp9
-* **/tg/Station Wiki:** https://tgstation13.org/wiki/Main_Page
+* **Code:** https://github.com/Bungalow-13/Bungalow-13
+* **BungalowStation Wiki:** https://bungalowstation.fandom.com/wiki/Bungalowstation_Wiki
 
 ## Downloading and running a server
 [Downloading](.github/DOWNLOADING.md)

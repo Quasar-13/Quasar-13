@@ -6,6 +6,7 @@
 	spawn_positions = 2
 	supervisors = "the quartermaster"
 	selection_color = "#dcba97"
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/cargo_tech
 

@@ -35,12 +35,15 @@
 	id = /obj/item/card/id/ert/deathsquad
 
 	skillchips = list(/obj/item/skillchip/disk_verifier)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lcdr
 
-	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
-		/obj/item/ammo_box/a357=1,\
-		/obj/item/choice_beacon/deathsquad=1,\
-		/obj/item/flashlight=1,\
-		/obj/item/tank/internals/emergency_oxygen/double=1)
+	backpack_contents = list(
+		/obj/item/storage/box/survival/engineer = 1,
+		/obj/item/ammo_box/a357 = 1,
+		/obj/item/choice_beacon/bungalow/combat/deathsquad = 1,
+		/obj/item/flashlight = 1,
+		/obj/item/tank/internals/emergency_oxygen/double = 1,
+	)
 
 /datum/outfit/centcom/death_commando/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
