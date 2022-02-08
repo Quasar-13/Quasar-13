@@ -458,19 +458,10 @@
 
 //Dash
 
-/atom/proc/xBeam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/effects.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/xbeam)
+/atom/proc/xBeam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/effects.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
 	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
 	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)
 	return newbeam
-
-/obj/effect/temp_visual/dir_setting/xdash/phase
-	name = "Xan Phase"
-	icon = 'ModularBungalow/zbungalowicons/effects.dmi'
-	icon_state = "xphasein"
-
-/obj/effect/temp_visual/dir_setting/xdash/phase/out
-
-	icon_state = "xphaseout"
 
 /datum/action/innate/xdash
 	name = "Dash"
@@ -487,6 +478,15 @@
 	var/beam_effect = "xbeam"
 	var/phasein = /obj/effect/temp_visual/dir_setting/xdash/phase
 	var/phaseout = /obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+/obj/effect/temp_visual/dir_setting/xdash/phase
+	name = "Xan Phase"
+	icon = 'ModularBungalow/zbungalowicons/effects.dmi'
+	icon_state = "xphasein"
+
+/obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+	icon_state = "xphaseout"
 
 /datum/action/innate/xdash/Grant(mob/user, obj/dasher)
 	. = ..()
