@@ -405,12 +405,6 @@
 	jaunt.Remove(user)
 	user.update_icons()
 
-/datum/action/innate/xdash
-	current_charges = 3
-	max_charges = 3
-	charge_rate = 200
-	recharge_sound = null
-
 // Sheath
 /obj/item/storage/belt/xan_blade
 	name = "Admiral Caelumbyrn Crux's Energy Katana"
@@ -464,19 +458,19 @@
 
 //Dash
 
-/atom/proc/Beam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/mobs.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
+/atom/proc/xBeam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/effects.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/xbeam)
 	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
 	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)
 	return newbeam
 
-/obj/effect/temp_visual/dir_setting/xan/phase
+/obj/effect/temp_visual/dir_setting/xdash/phase
 	name = "Xan Phase"
-	icon = 'ModularBungalow/zbungalowicons/mobs.dmi'
-	icon_state = "phasein"
+	icon = 'ModularBungalow/zbungalowicons/effects.dmi'
+	icon_state = "xphasein"
 
-/obj/effect/temp_visual/dir_setting/xan/phase/out
-	icon_state = "phaseout"
+/obj/effect/temp_visual/dir_setting/xdash/phase/out
 
+	icon_state = "xphaseout"
 
 /datum/action/innate/xdash
 	name = "Dash"
@@ -492,7 +486,7 @@
 	var/recharge_sound = 'sound/magic/charge.ogg'
 	var/beam_effect = "xbeam"
 	var/phasein = /obj/effect/temp_visual/dir_setting/xdash/phase
-	var/phaseout = /obj/effect/temp_visual/dir_setting/xdashphase/out
+	var/phaseout = /obj/effect/temp_visual/dir_setting/xdash/phase/out
 
 /datum/action/innate/xdash/Grant(mob/user, obj/dasher)
 	. = ..()
@@ -517,7 +511,7 @@
 		user.forceMove(T)
 		playsound(T, dash_sound, 25, TRUE)
 		var/obj/spot2 = new phasein(get_turf(user), user.dir)
-		spot1.Beam(spot2,beam_effect,time=2 SECONDS)
+		spot1.xBeam(spot2,beam_effect,time=2 SECONDS)
 		current_charges--
 		holder.update_action_buttons_icon()
 		addtimer(CALLBACK(src, .proc/charge), charge_rate)
@@ -529,6 +523,11 @@
 		playsound(dashing_item, recharge_sound, 50, TRUE)
 	to_chat(holder, "<span class='notice'>[src] now has [current_charges]/[max_charges] charges.</span>")
 
+/datum/action/innate/xdash
+	current_charges = 3
+	max_charges = 3
+	charge_rate = 200
+	recharge_sound = null
 
 /* 	Add this back later, fuck it
 //Katana
