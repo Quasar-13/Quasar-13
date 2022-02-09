@@ -24,6 +24,11 @@
 	if(attached_light)
 		alight = new(src)
 
+/obj/item/clothing/head/helmet/solgov
+	name = "solgov helmet"
+	desc = "Standard Mk4 Solgov Military Helmet."
+	icon_state = "sgvhelmet"
+	inhand_icon_state = "helmet"
 
 /obj/item/clothing/head/helmet/Destroy()
 	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
