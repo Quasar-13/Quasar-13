@@ -10,6 +10,7 @@ In rotation:
 * Packedstation
 * Remorastation
 * Chimerastation
+* TaliStation
 
 Admin only:
 * Heliostation
