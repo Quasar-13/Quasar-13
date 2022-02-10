@@ -26,9 +26,6 @@
 	ranged_message = "breathes fire at"
 	vision_range = 9
 	aggro_vision_range = 9
-	move_force = MOVE_FORCE_VERY_STRONG
-	move_resist = MOVE_FORCE_VERY_STRONG
-	pull_force = MOVE_FORCE_VERY_STRONG
 	butcher_results = list(/obj/item/stack/ore/diamond = 3, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/bone = 10, /obj/item/stack/sheet/animalhide/ashdrake = 1)
 	loot = list()
 	crusher_loot = /obj/item/crusher_trophy/tail_spike

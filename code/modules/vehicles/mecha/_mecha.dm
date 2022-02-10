@@ -150,8 +150,8 @@
 	///Cooldown between using smoke
 	var/smoke_cooldown = 10 SECONDS
 
-	///Bool for if the mech is currently phasing
-	var/phasing = FALSE
+	///check for phasing, if it is set to text (to describe how it is phasing: "flying", "phasing") it will let the mech walk through walls.
+	var/phasing = ""
 	///Power we use every time we phaze through something
 	var/phasing_energy_drain = 200
 	///icon_state for flick() when phazing
@@ -233,14 +233,22 @@
 	GLOB.mechas_list -= src //global mech list
 	return ..()
 
-/obj/vehicle/sealed/mecha/update_icon_state()
-	if((mecha_flags & SILICON_PILOT) && silicon_icon_state)
-		icon_state = silicon_icon_state
-	else if(LAZYLEN(occupants))
-		icon_state = base_icon_state
-	else
-		icon_state = "[base_icon_state]-open"
 
+/obj/vehicle/sealed/mecha/update_icon_state()
+	icon_state = get_mecha_occupancy_state()
+	return ..()
+
+//override this proc if you need to split up mecha control between multiple people (see savannah_ivanov.dm)
+/obj/vehicle/sealed/mecha/auto_assign_occupant_flags(mob/M)
+	if(driver_amount() < max_drivers)
+		add_control_flags(M, FULL_MECHA_CONTROL)
+
+/obj/vehicle/sealed/mecha/proc/get_mecha_occupancy_state()
+	if((mecha_flags & SILICON_PILOT) && silicon_icon_state)
+		return silicon_icon_state
+	if(LAZYLEN(occupants))
+		return base_icon_state
+	return "[base_icon_state]-open"
 
 /obj/vehicle/sealed/mecha/get_cell()
 	return cell
@@ -520,20 +528,18 @@
 	SIGNAL_HANDLER
 	if(!locate(/turf) in list(target,target.loc)) // Prevents inventory from being drilled
 		return
-	if(completely_disabled)
-		return
-	if(is_currently_ejecting)
+	if(completely_disabled || is_currently_ejecting || (mecha_flags & CANNOT_INTERACT))
 		return
 	var/list/modifiers = params2list(params)
 	if(isAI(user) == !LAZYACCESS(modifiers, MIDDLE_CLICK))//BASICALLY if a human uses MMB, or an AI doesn't, then do nothing.
 		return
 	if(phasing)
-		to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>Unable to interact with objects while phasing.</span>")
+		balloon_alert(user, "not while [phasing]!")
 		return
 	if(user.incapacitated())
 		return
 	if(construction_state)
-		to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>Maintenance protocols in effect.</span>")
+		balloon_alert(user, "end maintenance first!")
 		return
 	if(!get_charge())
 		return
@@ -544,29 +550,42 @@
 		return
 	if(internal_damage & MECHA_INT_CONTROL_LOST)
 		target = pick(view(3,target))
-		if(!target)
-			return
-	var/mob/living/L = user
+	var/mob/living/livinguser = user
 	if(selected)
+		if(!(livinguser in return_controllers_with_flag(VEHICLE_CONTROL_EQUIPMENT)))
+			balloon_alert(user, "wrong seat for equipment!")
+			return
 		if(!Adjacent(target) && (selected.range & MECHA_RANGED))
-			if(HAS_TRAIT(L, TRAIT_PACIFISM) && selected.harmful)
-				to_chat(L, "<span class='warning'>You don't want to harm other living beings!</span>")
+			if(HAS_TRAIT(livinguser, TRAIT_PACIFISM) && selected.harmful)
+				to_chat(livinguser, "<span class='warning'>You don't want to harm other living beings!</span>")
+				return
+			if(SEND_SIGNAL(src, COMSIG_MECHA_EQUIPMENT_CLICK, livinguser, target) & COMPONENT_CANCEL_EQUIPMENT_CLICK)
 				return
 			INVOKE_ASYNC(selected, /obj/item/mecha_parts/mecha_equipment.proc/action, user, target, params)
 			return
 		if((selected.range & MECHA_MELEE) && Adjacent(target))
-			if(isliving(target) && selected.harmful && HAS_TRAIT(L, TRAIT_PACIFISM))
-				to_chat(L, "<span class='warning'>You don't want to harm other living beings!</span>")
+			if(isliving(target) && selected.harmful && HAS_TRAIT(livinguser, TRAIT_PACIFISM))
+				to_chat(livinguser, "<span class='warning'>You don't want to harm other living beings!</span>")
+				return
+			if(SEND_SIGNAL(src, COMSIG_MECHA_EQUIPMENT_CLICK, livinguser, target) & COMPONENT_CANCEL_EQUIPMENT_CLICK)
 				return
 			INVOKE_ASYNC(selected, /obj/item/mecha_parts/mecha_equipment.proc/action, user, target, params)
 			return
-	if(TIMER_COOLDOWN_CHECK(src, COOLDOWN_MECHA_MELEE_ATTACK) || !istype(target, /atom) || !Adjacent(target))
+	if(!(livinguser in return_controllers_with_flag(VEHICLE_CONTROL_MELEE)))
+		to_chat(livinguser, "<span class='warning'>You're in the wrong seat to interact with your hands.</span>")
+		return
+	var/on_cooldown = TIMER_COOLDOWN_CHECK(src, COOLDOWN_MECHA_MELEE_ATTACK)
+	var/adjacent = Adjacent(target)
+	if(SEND_SIGNAL(src, COMSIG_MECHA_MELEE_CLICK, livinguser, target, on_cooldown, adjacent) & COMPONENT_CANCEL_MELEE_CLICK)
+		return
+	if(on_cooldown || !adjacent)
 		return
 	if(internal_damage & MECHA_INT_CONTROL_LOST)
 		var/list/possible_targets = oview(1,src)
 		if(!length(possible_targets))
 			return
 		target = pick(possible_targets)
+
 	target.mech_melee_attack(src, user)
 	TIMER_COOLDOWN_START(src, COOLDOWN_MECHA_MELEE_ATTACK, melee_cooldown)
 
@@ -611,9 +630,10 @@
 	return FALSE
 
 /obj/vehicle/sealed/mecha/relaymove(mob/living/user, direction)
-	if(canmove)
-		vehicle_move(direction)
-	return TRUE
+	. = TRUE
+	if(!canmove || !(user in return_drivers()))
+		return
+	vehicle_move(direction)
 
 /obj/vehicle/sealed/mecha/vehicle_move(direction, forcerotate = FALSE)
 	if(!COOLDOWN_FINISHED(src, cooldown_vehicle_move))
@@ -701,7 +721,7 @@
 		var/turf/destination = get_step(src,dir)
 		var/area/destination_area = destination.loc
 		if(destination_area.area_flags & NOTELEPORT)
-			to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>A dull, universal force is preventing you from phasing here!</span>")
+			to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>A dull, universal force is preventing you from [phasing] here!</span>")
 			spark_system.start()
 		else
 			forceMove(destination)//This is jank I hate it thanks, this should be done thrugh move not this dumb shit
@@ -974,11 +994,11 @@
 
 /obj/vehicle/sealed/mecha/generate_actions()
 	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_eject)
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_internals)
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip)
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_lights)
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_view_stats)
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/strafe)
+	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_internals, VEHICLE_CONTROL_SETTINGS)
+	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip, VEHICLE_CONTROL_EQUIPMENT)
+	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_lights, VEHICLE_CONTROL_SETTINGS)
+	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_view_stats, VEHICLE_CONTROL_SETTINGS)
+	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/strafe, VEHICLE_CONTROL_DRIVE)
 
 /obj/vehicle/sealed/mecha/proc/moved_inside(mob/living/newoccupant)
 	if(!(newoccupant?.client))
