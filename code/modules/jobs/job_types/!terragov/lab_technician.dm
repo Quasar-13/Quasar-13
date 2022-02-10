@@ -8,7 +8,7 @@
 	selection_color = "#b7edda"
 	maptype = "solgov"
 
-	outfit = /datum/outfit/job/lab_technician
+	outfit = /datum/outfit/job/solgov
 
 	access = list(ACCESS_RND)
 	minimal_access = list(ACCESS_RND)
@@ -16,9 +16,4 @@
 
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 
-/datum/outfit/job/lab_technician
-	name = "Solgov Survivor (Lab Technician)"
-	id = /obj/item/card/id/solgov
-	jobtype = /datum/job/lab_technician
-	belt = null
 

@@ -376,6 +376,14 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define CAT_QUIRK_MINOR_DISABILITY 2
 #define CAT_QUIRK_MAJOR_DISABILITY 3
 
+/* Traits for ventcrawling.
+ * Both give access to ventcrawling, but *_NUDE requires the user to be
+ * wearing no clothes and holding no items. If both present, *_ALWAYS
+ * takes precedence.
+ */
+#define TRAIT_VENTCRAWLER_ALWAYS "ventcrawler_always"
+#define TRAIT_VENTCRAWLER_NUDE "ventcrawler_nude"
+
 // common trait sources
 #define TRAIT_GENERIC "generic"
 #define GENERIC_ITEM_TRAIT "generic_item"

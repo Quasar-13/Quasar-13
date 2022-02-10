@@ -433,7 +433,7 @@
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
 
 	if(SSmaptype.maptype == "solgov")
-		department_categories = list("Solgov")
+		department_categories = list("Solgov", "NT Marines", "Operations")
 
 	if(SSmaptype.maptype == "blacksite")
 		department_categories = list("NT Marines")
