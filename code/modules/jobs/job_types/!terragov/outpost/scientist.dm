@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_OUTPOSTSCI
 
 /obj/effect/landmark/start/outpostscientist
-	name = "Syndicate Outpost Medic"
+	name = "Syndicate Scientist"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/syndicatewhatever/Initialize()
