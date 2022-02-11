@@ -19,13 +19,6 @@
 	icon_state = "syndilizard"
 	icon_living = "syndilizard"
 
-/mob/living/simple_animal/hostile/syndicate/ranged/space/anthro/cat
-	icon = 'icons/mob/newmobs.dmi'
-	icon_state = "syndicat"
-	icon_living = "syndicat"
-	name = "Syndicate Commando Feline"
-	desc = "An anthromorphic feline member of the Syndicate."
-
 //Cult
 /mob/living/simple_animal/hostile/cult
 	name = "Blood Cultist"
@@ -393,20 +386,6 @@
 	attack_verb_continuous = "pokes"
 	attack_verb_simple = "stab"
 	attack_sound = 'sound/weapons/genhit2.ogg'
-
-/mob/living/simple_animal/hostile/evilborg/dogstrong
-	name = "Corrupt Hound"
-	desc = "A canine-borg, hacked or malfunctioning. This one is large, imposing, and can pack a big punch."
-	icon = 'icons/mob/newmobs64x32.dmi'
-	icon_state = "evilbotelite" //ported from VORE
-	icon_living = "evilbotelite"
-	health = 130
-	maxHealth = 130
-	melee_damage_lower = 18
-	melee_damage_upper = 18
-	attack_verb_continuous = "bites"
-	attack_verb_simple = "bite"
-	attack_sound = 'sound/weapons/bite.ogg'
 
 /mob/living/simple_animal/hostile/evilborg/bigguy
 	name = "Malfunctioning Military robot"
@@ -789,103 +768,3 @@
 	faction = list("hostile")
 	pressure_resistance = 200
 	gold_core_spawnable = NO_SPAWN
-
-// Vox Raiders
-
-/mob/living/simple_animal/hostile/vox
-	name = "Vox Raider"
-	desc = "Vox are typically one of two things. Shady traders or hostile raiders. This one seems to be pretty hostile."
-	icon = 'icons/mob/newmobs.dmi'
-	icon_state = "vox"
-	icon_living = "vox"
-	icon_dead = "voxdead"
-	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_ORGANIC
-	speak_chance = 0
-	turns_per_move = 5
-	speed = 0
-	stat_attack = HARD_CRIT
-	robust_searching = 0
-	maxHealth = 90
-	health = 90
-	harm_intent_damage = 8
-	melee_damage_lower = 10
-	melee_damage_upper = 10
-	attack_verb_continuous = "claws"
-	attack_verb_simple = "claw"
-	attack_sound = 'sound/weapons/pierce_slow.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/maintenance/three = 1)
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 5, "max_n2" = 0)
-	unsuitable_atmos_damage = 7.5
-	faction = list("hostile")
-	check_friendly_fire = 1
-	status_flags = CANPUSH
-	del_on_death = 1
-	dodging = TRUE
-	rapid_melee = 2
-
-/mob/living/simple_animal/hostile/vox/melee
-	name = "Vox Shanker"
-	desc = "A Vox pirate armed with a knife."
-	icon_state = "voxmelee"
-	icon_living = "voxmelee"
-	icon_dead = "voxmeleedead"
-	melee_damage_lower = 15
-	melee_damage_upper = 15
-	loot = list(/obj/effect/spawner/lootdrop/medical/firstaid = 1)
-	attack_verb_continuous = "slashes"
-	attack_verb_simple = "slash"
-	attack_sound = 'sound/weapons/bladeslice.ogg'
-	status_flags = 0
-	var/projectile_deflect_chance = 0
-
-/mob/living/simple_animal/hostile/vox/ranged
-	name = "Vox Gunman"
-	desc = "SKREEEEE!"
-	icon_state = "voxbow"
-	icon_living = "voxbow"
-	icon_dead = "voxdead"
-	melee_damage_lower = 10
-	melee_damage_upper = 10
-	ranged = 1
-	retreat_distance = 5
-	minimum_distance = 5
-	casingtype = /obj/item/ammo_casing/c9mm
-	projectilesound = 'sound/weapons/gun/pistol/shot.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/space/material = 2)
-	dodging = FALSE
-	rapid_melee = 1
-
-/mob/living/simple_animal/hostile/vox/ranged/laser
-	name = "Vox Laser Gunman"
-	desc = "Vox pirates often utilize a mix of energy and ballistic weapons in combat."
-	icon_state = "voxlaser"
-	icon_living = "voxlaser"
-	icon_dead = "voxsuitdead"
-	projectiletype = /obj/projectile/beam/laser
-	projectilesound = 'sound/weapons/laser3.ogg'
-
-/mob/living/simple_animal/hostile/vox/ranged/space
-	name = "Vox Space Raider"
-	desc = "A Vox in a hardsuit, with a gun!"
-	icon_state = "voxspace"
-	icon_living = "voxspace"
-	icon_dead = "voxspacedead"
-	ranged = 1
-	retreat_distance = 5
-	minimum_distance = 5
-	casingtype = /obj/item/ammo_casing/c9mm
-	projectilesound = 'sound/weapons/gun/pistol/shot.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/maintenance/five = 1)
-	dodging = FALSE
-	rapid_melee = 1
-
-/mob/living/simple_animal/hostile/vox/ranged/space/laser
-	name = "Vox Helmsman"
-	desc = "Space-faring Vox raider, armed with a laser rifle and wearing a hardsuit."
-	icon_state = "voxspacelaser"
-	icon_living = "voxspacelaser"
-	icon_dead = "voxspacedead"
-	loot = list(/obj/effect/spawner/lootdrop/space/material = 4)
-	projectiletype = /obj/projectile/beam/laser
-	projectilesound = 'sound/weapons/laser3.ogg'
