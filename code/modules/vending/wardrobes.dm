@@ -87,12 +87,14 @@
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering/void = 3,
 					/obj/item/clothing/under/rank/engineering/engineer = 3,
 					/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
+					/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
 					/obj/item/clothing/under/rank/engineering/signal_tech = 3,
 					/obj/item/clothing/under/rank/engineering/signal_tech/skirt = 3,
 					/obj/item/clothing/under/rank/engineering/void = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
+					/obj/item/clothing/under/rank/engineering/mech = 3,
 					/obj/item/clothing/suit/hazardvest = 3,
 					/obj/item/clothing/shoes/workboots = 3,
 					/obj/item/clothing/head/hardhat = 3,
@@ -117,6 +119,9 @@
 					/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/skirt = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/hazard = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/green = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/old = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/atmos_wardrobe
 	payment_department = ACCOUNT_ENG
