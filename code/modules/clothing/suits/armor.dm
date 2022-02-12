@@ -150,6 +150,16 @@
 	strip_delay = 80
 	equip_delay_other = 60
 
+/obj/item/clothing/suit/armor/riot/syndie
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big red Syndicate S on the back."
+	icon_state = "riotsyn"
+
+/obj/item/clothing/suit/armor/riot/nanotrasen
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big white NT on the back."
+	icon_state = "riotnt"
+
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"
 	desc = "A tribal armor plate, crafted from animal bone."
