@@ -139,9 +139,17 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
-	name = "Chief Medical Officer's turtleneck"
+	name = "Medical Professor's turtleneck"
 	desc = "Surprisingly comfortable, and stain resistant."
 	icon_state = "cmoturtle"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/medical/chief_medical_officer/suit
+	name = "Senior Medical Officer's turtleneck"
+	desc = "The suit of an extremely Senior CMO."
+	icon_state = "cmosuit"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
