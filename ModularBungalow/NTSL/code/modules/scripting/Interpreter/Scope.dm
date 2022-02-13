@@ -3,17 +3,22 @@
 	A runtime instance of a block. Used internally by the interpreter.
 */
 /scope
+	//The base object
 	var/scope/parent
+	//This is a collection of all of the values that can be made in each parent object.
 	var/scope/variables_parent
+	//This represents a block of NTSL code written in-game.
 	var/node/BlockDefinition/block
 	var/list/functions
 	var/list/variables
+	//
 	var/status = 0
+	//Determines if the code is allowed to run. Similar to how a server needs to set its signal
 	var/allowed_status = 0
 	var/recursion = 0
 	var/node/statement/FunctionDefinition/function
 	var/node/expression/FunctionCall/call_node
-	var/return_val
+	var/list/return_val
 
 /scope/New(node/BlockDefinition/B, scope/parent, scope/variables_parent, allowed_status = 0)
 	src.block = B
@@ -41,14 +46,22 @@
 		if(S.variables.Find(name))
 			return S
 		S = S.variables_parent
-
+//Adds new execution process to the queue for tcomms. This means the code blocks will attempt to fire again.
+//Possibly runs after an ALWAYS signal returns from a server
 /scope/proc/push(node/BlockDefinition/B, scope/variables_parent = src, allowed_status = 0)
 	return new /scope(B, src, variables_parent, allowed_status)
 
+// Good example of when this is called: the return statement  of process_signal - Horologium
 /scope/proc/pop(keep_status = (BREAKING | CONTINUING | RETURNING)) // keep_status is which flags you want to copy to the parent.
 	parent.status = (parent.status & ~keep_status) | (status & keep_status)
 	if(parent.status & RETURNING)
-		parent.return_val = return_val
+		if(length(return_val == 1))
+			parent.return_val = return_val
+			parent.recursion = 0
+		else
+			parent.return_val = return_val
+			parent.recursion = 1
+
 	return parent
 
 /scope/proc/get_var(name, n_Interpreter/interp, node/node)
@@ -78,3 +91,4 @@
 	if(variables.Find(name) && interp)
 		interp.RaiseError(new/runtimeError/DuplicateVariableDeclaration(name), src, node)
 	variables[name] = val
+

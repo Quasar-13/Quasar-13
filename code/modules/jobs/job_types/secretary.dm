@@ -19,7 +19,7 @@
 		ACCESS_EVA, ACCESS_GATEWAY)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_COMMAND
 
 /datum/outfit/job/secretary
 	name = "Secretary"

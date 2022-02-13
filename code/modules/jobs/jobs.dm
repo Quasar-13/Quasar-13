@@ -97,13 +97,21 @@ GLOBAL_LIST_INIT(operations_positions, list(
 	"Pilot Officer",
 	"Staff Officer",
 	"Marine",
-	"Survivor"))
+	"Survivor",
+
+	//Romulus
+	"Syndicate Outpost Leader",
+	"Syndicate Outpost Agent",
+	"Syndicate Outpost Medic",
+	"Syndicate Outpost Scientist",
+	"Syndicate Outpost Explorer"))
 
 GLOBAL_LIST_INIT(logistics_positions, list(
 	"Logistics Officer",
 	"Requisitions Chief",
 	"Deckhand",
 	"Ordinance Technician",
+
 	//Goonpacked stuff
 	"Chief Engineer",
 	"Station Engineer",
@@ -129,7 +137,12 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"NT Squad Leader",
 	"NT Military Police",
 	"NT Vehicle Operator",
-	"NT Marine"))
+	"NT Marine",
+
+//Romulus
+	"NT Remnant Lieutenant",
+	"NT Remnant Cadet",
+	"NT Remnant Auxiliary"))
 
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(
@@ -142,6 +155,7 @@ GLOBAL_LIST_INIT(solgov_positions, list(
 	"Soldier",
 	"Security",
 	"Civillian"))
+
 
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_COMMAND = list("jobs" = command_positions, "color" = "#ccccff"),

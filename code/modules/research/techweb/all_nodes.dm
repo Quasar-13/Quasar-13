@@ -147,8 +147,8 @@
 	design_ids = list("solarcontrol", "recharger", "powermonitor", "rped", "pacman", "adv_capacitor", "adv_scanning", "w-recycler" , "emitter", "high_cell", "adv_matter_bin", "scanner_gate",
 	"atmosalerts", "atmos_control", "recycler", "autolathe", "high_micro_laser", "nano_mani", "mesons", "welding_goggles", "thermomachine", "rad_collector", "tesla_coil", "grounding_rod",
 	"apc_control", "cell_charger", "power control", "airlock_board", "firelock_board", "airalarm_electronics", "firealarm_electronics", "cell_charger", "stack_console", "stack_machine",
-	"oxygen_tank", "plasma_tank", "emergency_oxygen", "emergency_oxygen_engi", "plasmaman_tank_belt", "electrolyzer", "adv_electrolite", "pneumatic_seal")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
+	"oxygen_tank", "plasma_tank", "emergency_oxygen", "emergency_oxygen_engi", "plasmaman_tank_belt", "electrolyzer", "adv_electrolite", "pneumatic_seal", "crystallizer")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 
 /datum/techweb_node/adv_engi
 	id = "adv_engi"
@@ -683,6 +683,26 @@
 	prereq_ids = list("adv_mecha", "weaponry" , "micro_bluespace")
 	design_ids = list("phazon_chassis", "phazon_torso", "phazon_head", "phazon_left_arm", "phazon_right_arm", "phazon_left_leg", "phazon_right_leg", "phazon_main",
 	"phazon_peri", "phazon_targ", "phazon_armor")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
+/datum/techweb_node/savannah_ivanov
+	id = "mecha_savannah_ivanov"
+	display_name = "EXOSUIT: Savannah-Ivanov"
+	description = "Savannah-Ivanov exosuit designs"
+	prereq_ids = list("adv_mecha", "weaponry", "exp_tools")
+	design_ids = list(
+		"savannah_ivanov_armor",
+		"savannah_ivanov_chassis",
+		"savannah_ivanov_head",
+		"savannah_ivanov_left_arm",
+		"savannah_ivanov_left_leg",
+		"savannah_ivanov_main",
+		"savannah_ivanov_peri",
+		"savannah_ivanov_right_arm",
+		"savannah_ivanov_right_leg",
+		"savannah_ivanov_targ",
+		"savannah_ivanov_torso",
+	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/adv_mecha_tools

@@ -127,7 +127,7 @@
 	name = "Rear Admiral's combat jacket"
 	desc = "The combat jacket of a Rear Admiral. A military job, the protection it grants is welcome."
 	icon_state = "radm"
-	armor = list(MELEE = 80, BULLET = 80, LASER = 90, ENERGY = 90, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+	armor = list(MELEE = 80, BULLET = 80, LASER = 90, ENERGY = 90, BOMB = 100, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 
 /obj/item/clothing/suit/armor/captain/flag/vadm
 	name = "Vice Admiral's parade jacket"
@@ -163,4 +163,9 @@
 	name = "The Grand Admiral's coat"
 	desc = "The Grand Admiral's robes. The Admiral of Admirals, your boss's boss four times over."
 	icon_state = "gadm"
+
+/obj/item/clothing/suit/armor/captain/flag/fadm/xan/offduty
+	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
+	desc = "FO-4. Fleet Admiral Caelumbyrn Crux's robe. Fear them."
+	icon_state = "xoffduty"
 

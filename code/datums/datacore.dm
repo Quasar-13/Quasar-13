@@ -222,6 +222,13 @@
 			"Solgov"
 		)
 
+	if(SSmaptype.maptype == "solgov2")
+		manifest_out = list(
+			"Solgov",
+			"NT Marines",
+			"Operations"
+		)
+
 	var/list/departments
 
 	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
@@ -296,8 +303,9 @@
 
 	if(SSmaptype.maptype == "solgov")
 		departments = list(
-			"Solgov Personnel" = GLOB.solgov_positions)
-
+			"Solgov Personnel" = GLOB.solgov_positions,
+			"NT Remnants" = GLOB.ntmarines_positions,
+			"Syndicate Outpost" = GLOB.operations_positions)
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]
