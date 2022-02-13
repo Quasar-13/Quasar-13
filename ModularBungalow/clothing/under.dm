@@ -104,6 +104,33 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
+//Atmos white
+/obj/item/clothing/under/rank/engineering/atmospheric_technician/hazard
+	name = "white hazard jumpsuit"
+	desc = "An outfit for people mixing deadly gasses."
+	icon_state = "hazard_white"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//Atmos Green
+/obj/item/clothing/under/rank/engineering/atmospheric_technician/green
+	name = "green hazard jumpsuit"
+	desc = "An outfit for people mixing deadly gasses."
+	icon_state = "hazard_green"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//Atmos old
+/obj/item/clothing/under/rank/engineering/atmospheric_technician/old
+	name = "atmos hazard jumpsuit"
+	desc = "An old outfit for helping people breathe."
+	icon_state = "atmos"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
 //Goon HOP.
 /obj/item/clothing/under/rank/civilian/head_of_personnel/goon
 	icon_state = "hop_goon"
