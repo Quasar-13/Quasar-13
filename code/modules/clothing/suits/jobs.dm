@@ -83,7 +83,7 @@
 	icon_state = "detsuit"
 	inhand_icon_state = "detsuit"
 	
-/obj/item/clothing/suit/det_suit/noir
+/obj/item/clothing/suit/det_suit/noir/intel
 	name = "intel officer's suit"
 	desc = "A dapper intelligence agent's grey-blue suit coat."
 	icon_state = "intelsuit"
