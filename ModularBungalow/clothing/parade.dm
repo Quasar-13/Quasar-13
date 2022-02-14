@@ -168,9 +168,3 @@
 	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
 	desc = "FO-4. Fleet Admiral Caelumbyrn Crux's robe. Fear them."
 	icon_state = "xoffduty"
-
-/obj/item/clothing/suit/det_suit/noir/intel
-	name = "intelligence agent's jacket"
-	desc = "A dapper blue-grey jacket and complimentary vest (the jacket itself is not armored!)"
-	icon_state = "intelsuit"
-	inhand_icon_state = "detsuit"
