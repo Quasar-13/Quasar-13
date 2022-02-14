@@ -324,3 +324,24 @@
 	description = "<span class='boldwarning'>I have been excommunicated!</span>\n"
 	mood_change = -10
 	timeout = 10 MINUTES
+
+//Don't mind me, dementia here
+/datum/mood_event/nostalgia
+	description = "<span class='nicegreen'><B>I love the past, it was certainly the best of times!</B></span>\n" //i rember
+	mood_change = 6
+
+/datum/mood_event/i_rember_maybe
+		description = "Hmmm, what's his name again...?\n" //i rember?
+		mood_change = 0
+
+/datum/mood_event/i_forgor
+	description = "<span class='warning'><B>What is... security...? Who is [owner]...? Where am i?</B></span>\n" //i forgor
+	mood_change = -8
+
+/datum/mood_event/what
+	description = "<span class='cult'><B>WhatwhatwhowhereWHOWHEREHOWIAMCONFUSEDICANNOTREMEMBER!!!!!!</B></span>\n" //i forgor
+	mood_change = -16
+	
+/datum/mood_event/i_rember_now
+	description = "<span class='cultlarge'><B>I CAN REMEMBER!!!</B></span>\n" //i forgor
+	mood_change = 40

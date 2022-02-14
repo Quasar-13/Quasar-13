@@ -301,3 +301,56 @@
 /datum/brain_trauma/severe/hypnotic_trigger/proc/hypnotrigger()
 	to_chat(owner, "<span class='warning'>The words trigger something deep within you, and you feel your consciousness slipping away...</span>")
 	owner.apply_status_effect(/datum/status_effect/trance, rand(100,300), FALSE)
+	
+	
+	
+//I forgot what this was
+//First curable by neurine, then surgery, then not able to be cured at all. It's not my fault, it's a skill issue.
+//Incurable traumas have the flag TRAUMA_RESILIENCE_ABSOLUTE IIRC
+
+/datum/brain_trauma/severe/dementia
+	name = "Dementia"
+	desc = "A trauma that causes proceedural loss of memory."
+	scan_desc = "proceedural loss of memory" //description when detected by a health scanner
+	var/mob/living/carbon/owner 
+	var/obj/item/organ/brain/brain 
+	gain_text = ""
+	lose_text = "<span class='notice'><b>You rember!</b></span>"
+	can_gain = TRUE
+	random_gain = TRUE 
+	resilience = TRAUMA_RESILIENCE_BASIC
+	var/stage = 1
+	var/eta = 0
+	var/take_damage=FALSE
+
+/datum/brain_trauma/severe/dementia/proc/dementiaInducedActions() //I should optimize this as soon as i learn byond better.
+	if(stage==1)
+		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dementia", /datum/mood_event/nostalgia)
+	if(stage==2)
+		SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "dementia")
+		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dementia_rember", /datum/mood_event/i_rember_maybe)
+		resilience = TRAUMA_RESILIENCE_SURGERY
+	if(stage==3)
+		SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "dementia_rember")
+		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dementia_forgor", /datum/mood_event/i_forgor)
+	if(stage==4) //UH OH, YOU DID SOMETHING WACKY, TIME TO GET IN THE FOREVER BOX!! Also plays sick tunes yo.
+		SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "dementia_forgor")
+		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "forever_box", /datum/mood_event/what)
+		resilience = TRAUMA_RESILIENCE_ABSOLUTE
+	if(stage==5)
+		//you start remembering but dying
+		SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "forever_box")
+		take_damage=TRUE
+		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "rembertime", /datum/mood_event/i_rember_now)
+		
+
+/datum/brain_trauma/severe/dementia/proc/updateStage(amt)
+	stage+=1
+	return
+
+/datum/brain_trauma/severe/dementia/proc/scanForUpdate()
+	if(eta!=150)
+		return
+	else
+		updateStage()
+		
