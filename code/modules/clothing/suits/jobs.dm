@@ -82,6 +82,12 @@
 	desc = "A dapper private investigator's grey suit coat."
 	icon_state = "detsuit"
 	inhand_icon_state = "detsuit"
+	
+/obj/item/clothing/suit/det_suit/noir
+	name = "intel officer's suit"
+	desc = "A dapper intelligence agent's grey-blue suit coat."
+	icon_state = "intelsuit"
+	inhand_icon_state = "detsuit"
 
 //Engineering
 /obj/item/clothing/suit/hazardvest
