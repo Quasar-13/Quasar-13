@@ -109,7 +109,7 @@
 	icon_state = "officerberetblack"
 	
 /obj/item/clothing/head/beret/sec/bni
-	desc = "A beret made out of slick blue reinforced fabric with an "intelligence" insignia emblazoned on it. For agents with class."
+	desc = "A beret made out of slick blue reinforced fabric with an 'intelligence' insignia emblazoned on it. For agents with class."
 	icon_state = "bniberet"
 
 /obj/item/clothing/head/beret/sec/medical
