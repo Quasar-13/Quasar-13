@@ -103,7 +103,6 @@
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
 	suit_store = /obj/item/gun/ballistic/revolver/rhino
 	shoes = /obj/item/clothing/shoes/jackboots
-	gloves = /obj/item/clothing/gloves/color/black
 	backpack = /obj/item/storage/backpack/security
 	//the backpack is for style (also because det doesn't have officer armory access yet)
 
