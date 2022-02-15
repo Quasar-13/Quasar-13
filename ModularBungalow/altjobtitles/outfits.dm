@@ -93,6 +93,21 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//det
+/datum/outfit/job/detective/intelligenceofficer
+	name = "Detective (Intelligence Officer)"
+	head = obj/item/clothing/head/beret/sec/bni
+	uniform = /obj/item/clothing/under/bni
+	suit = /obj/item/clothing/suit/det_suit/noir/intel
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
+	suit_store = /obj/item/gun/ballistic/revolver/rhino
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/color/black
+	r_hand = /obj/item/encryptionkey/intel
+	backpack = /obj/item/storage/backpack/security
+	satchel = /obj/item/storage/backpack/satchel/sec
+	duffelbag = /obj/item/storage/backpack/duffelbag/sec
+
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
 	name = "Chief Medical Officer (Medical Professor)"
