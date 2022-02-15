@@ -98,6 +98,7 @@
 	name = "Detective (Intelligence Officer)"
 	head = /obj/item/clothing/head/beret/sec/bni
 	uniform = /obj/item/clothing/under/bni
+	neck = null
 	suit = /obj/item/clothing/suit/det_suit/noir/intel
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
 	suit_store = /obj/item/gun/ballistic/revolver/rhino
