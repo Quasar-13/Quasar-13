@@ -104,10 +104,8 @@
 	suit_store = /obj/item/gun/ballistic/revolver/rhino
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
-	r_hand = /obj/item/encryptionkey/intel
 	backpack = /obj/item/storage/backpack/security
-	satchel = /obj/item/storage/backpack/satchel/sec
-	duffelbag = /obj/item/storage/backpack/duffelbag/sec
+	//the backpack is for style (also because det doesn't have officer armory access yet)
 
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
