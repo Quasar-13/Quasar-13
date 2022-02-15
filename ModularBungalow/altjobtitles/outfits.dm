@@ -96,7 +96,7 @@
 //det
 /datum/outfit/job/detective/intelligenceofficer
 	name = "Detective (Intelligence Officer)"
-	head = obj/item/clothing/head/beret/sec/bni
+	head = /obj/item/clothing/head/beret/sec/bni
 	uniform = /obj/item/clothing/under/bni
 	suit = /obj/item/clothing/suit/det_suit/noir/intel
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
