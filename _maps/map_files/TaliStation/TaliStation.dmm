@@ -351,7 +351,8 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "First Aid Station";
-	req_one_access = "5;9"
+	req_one_access = null;
+	req_one_access_txt = "5;9"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -368,7 +369,8 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "First Aid Station";
-	req_one_access = "5;9"
+	req_one_access = null;
+	req_one_access_txt = "5;9"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/lobby)
@@ -4457,6 +4459,9 @@
 	pixel_x = -6;
 	pixel_y = -24
 	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "cOF" = (
@@ -7696,8 +7701,13 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
-/obj/structure/sign/warning/fire{
-	pixel_x = -32
+/obj/machinery/button/door{
+	desc = "A remote control-switch for secure storage.";
+	id = "Secure Storage";
+	name = "Engineering Secure Storage";
+	pixel_x = -24;
+	pixel_y = 7;
+	req_access_txt = "11"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_smes)
@@ -8860,18 +8870,6 @@
 /obj/machinery/holopad,
 /turf/open/floor/engine,
 /area/engine/engineering)
-"fxR" = (
-/obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/unres{
-	dir = 8
-	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "First Aid Station";
-	req_one_access = "5;9"
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
 "fxS" = (
 /obj/machinery/porta_turret/ai,
 /obj/machinery/light{
@@ -11079,7 +11077,8 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "First Aid Station";
-	req_one_access = "5;9"
+	req_one_access = null;
+	req_one_access_txt = "5;9"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -13592,6 +13591,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/processing)
+"ipA" = (
+/obj/machinery/door/poddoor/incinerator_atmos_aux,
+/turf/open/space/basic,
+/area/maintenance/disposal/incinerator)
 "ipF" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/west,
@@ -14319,7 +14322,6 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_smes)
 "iJN" = (
-/obj/structure/table,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/vacant_room/commissary)
@@ -19015,6 +19017,9 @@
 	dir = 9
 	},
 /obj/machinery/camera/autoname,
+/obj/structure/sign/warning/fire{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_smes)
 "lzN" = (
@@ -21034,6 +21039,15 @@
 "mDT" = (
 /turf/open/floor/plasteel/dark,
 /area/storage/art)
+"mDU" = (
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "brigde";
+	name = "Privacy Shutters"
+	},
+/turf/open/floor/plating,
+/area/hallway/secondary/command)
 "mEd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 5
@@ -36499,12 +36513,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/button/door{
 	id = "commissaryshutter";
-	name = "Commissary Shutter Control";
+	name = "Commissary Door Lock";
 	pixel_x = 26;
 	pixel_y = 6
 	},
 /obj/machinery/button/door{
-	id = "commissarydoor";
+	id = "commissaryshutter2";
 	name = "Commissary Door Lock";
 	normaldoorcontrol = 1;
 	pixel_x = 26;
@@ -38059,13 +38073,14 @@
 /area/engine/atmos)
 "wTn" = (
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 8
+	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "First Aid Station";
-	req_one_access = "5;9"
-	},
-/obj/effect/mapping_helpers/airlock/unres{
-	dir = 8
+	req_one_access = null;
+	req_one_access_txt = "5;9"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -38331,7 +38346,8 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "First Aid Station";
-	req_one_access = "5;9"
+	req_one_access = null;
+	req_one_access_txt = "5;9"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -75082,7 +75098,7 @@ lqI
 lqI
 grS
 wTn
-fxR
+wTn
 bYD
 cuM
 cuM
@@ -76085,9 +76101,9 @@ gWE
 ePX
 ePX
 fTf
-lis
+mDU
 aNw
-lis
+mDU
 fTf
 fTf
 fTf
@@ -77708,7 +77724,7 @@ ldH
 gwC
 cPz
 wzM
-jlR
+ipA
 wzM
 vuF
 vuF
