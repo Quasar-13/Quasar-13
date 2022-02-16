@@ -168,4 +168,3 @@
 	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
 	desc = "FO-4. Fleet Admiral Caelumbyrn Crux's robe. Fear them."
 	icon_state = "xoffduty"
-
