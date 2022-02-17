@@ -66,7 +66,7 @@
  	suit = null
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
-	
+
 //ge
 /datum/outfit/job/geneticist/freakofgenetics
  	name = "Geneticist (Freak of Genetics)"
