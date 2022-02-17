@@ -73,7 +73,6 @@
  	uniform = /obj/item/clothing/under/shorts/purple
  	suit = null
  	suit_store = null
-	backpack = /obj/item/storage/backpack/satchel/leather
 
 //se
 /datum/outfit/job/engineer/electrician
