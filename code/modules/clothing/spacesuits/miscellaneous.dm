@@ -59,7 +59,7 @@ Contains:
 /obj/item/clothing/head/helmet/space/beret
 	name = "officer's beret"
 	desc = "An armored beret commonly used by special operations officers. Uses advanced force field technology to protect the head from space."
-	icon_state = "beret_badge"
+	icon_state = "hosberetblack"
 	dynamic_hair_suffix = "+generic"
 	dynamic_fhair_suffix = "+generic"
 	flags_inv = 0
@@ -71,8 +71,8 @@ Contains:
 /obj/item/clothing/suit/space/officer
 	name = "officer's jacket"
 	desc = "An armored, space-proof jacket used in special operations."
-	icon_state = "detective"
-	inhand_icon_state = "det_suit"
+	icon_state = "bnitrenchcoat"
+	inhand_icon_state = "hostrench"
 	blood_overlay_type = "coat"
 	slowdown = 0
 	flags_inv = 0

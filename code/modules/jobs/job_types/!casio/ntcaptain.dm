@@ -47,6 +47,7 @@
 	suit = /obj/item/clothing/suit/armor/captain/casio
 	head = /obj/item/clothing/head/beret/centcom
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
+	backpack = /obj/item/storage/backpack/centcom
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/captain)
 

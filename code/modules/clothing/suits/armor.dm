@@ -28,6 +28,11 @@
 	desc = "A C2-A armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	inhand_icon_state = "armor"
+	
+/obj/item/clothing/suit/armor/vest/solgov
+	desc = "A standard Solgov Mk3 combat rig for the Solgov Army and Marines."
+	icon_state = "sgvarmor"
+	inhand_icon_state = "armor"
 
 /obj/item/clothing/suit/armor/vest/old
 	name = "degrading armor vest"
@@ -144,6 +149,16 @@
 	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN
 	strip_delay = 80
 	equip_delay_other = 60
+
+/obj/item/clothing/suit/armor/riot/syndie
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big red Syndicate S on the back."
+	icon_state = "riotsyn"
+
+/obj/item/clothing/suit/armor/riot/nanotrasen
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big white NT on the back."
+	icon_state = "riotnt"
 
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"

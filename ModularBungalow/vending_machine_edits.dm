@@ -21,8 +21,12 @@
 	. = ..()
 
 //ENGINER WARDROBE VENDING MACHINE
+
+//This makes the menu look REALLY gross, I'm going to move this to the original file.
+/*
 /obj/machinery/vending/wardrobe/engi_wardrobe/Initialize()
 	products += list(
 		/obj/item/clothing/suit/hooded/wintercoat/engineering/void = 3,
 	)
 	.=..()
+*/

@@ -93,8 +93,22 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//Chief Medical Officer
+/datum/outfit/job/cmo/medicalprofessor
+	name = "Chief Medical Officer (Medical Professor)"
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	head = /obj/item/clothing/head/beret/cmo/ice
+
+
+/datum/outfit/job/cmo/seniormedicalofficer
+	name = "Chief Medical Officer (Senior Medical Officer)"
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/suit
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	head = /obj/item/clothing/head/beret/cmo/ice
+
 //Chief Engineer
-/datum/outfit/job/chief_engineer/chiefatmosphericstechnician
+/datum/outfit/job/ce/chiefatmosphericstechnician
 	name = "Chief Engineer (Chief Atmospherics Technician)"
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
 

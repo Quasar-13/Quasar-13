@@ -164,3 +164,7 @@
 	desc = "The Grand Admiral's robes. The Admiral of Admirals, your boss's boss four times over."
 	icon_state = "gadm"
 
+/obj/item/clothing/suit/armor/captain/flag/fadm/xan/offduty
+	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
+	desc = "FO-4. Fleet Admiral Caelumbyrn Crux's robe. Fear them."
+	icon_state = "xoffduty"
