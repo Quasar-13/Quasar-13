@@ -287,13 +287,13 @@
 	bulb_colour = "#FF3232"
 	nightshift_allowed = FALSE
 	no_emergency = TRUE
-	brightness = 2
+	brightness = 4
 	bulb_power = 0.7
 
 /obj/machinery/light/blacklight
 	bulb_colour = "#A700FF"
 	nightshift_allowed = FALSE
-	brightness = 2
+	brightness = 4
 	bulb_power = 0.8
 
 /obj/machinery/light/dim
@@ -330,13 +330,13 @@
 	bulb_colour = "#FF3232"
 	no_emergency = TRUE
 	nightshift_allowed = FALSE
-	brightness = 1
+	brightness = 2
 	bulb_power = 0.8
 
 /obj/machinery/light/small/blacklight
 	bulb_colour = "#A700FF"
 	nightshift_allowed = FALSE
-	brightness = 1
+	brightness = 2
 	bulb_power = 0.9
 
 /obj/machinery/light/Move()
@@ -362,11 +362,9 @@
 	. = ..()
 	switch(fitting)
 		if("tube")
-			brightness = 8
 			if(prob(2))
 				break_light_tube(1)
 		if("bulb")
-			brightness = 4
 			if(prob(5))
 				break_light_tube(1)
 	addtimer(CALLBACK(src, .proc/update, 0), 1)
