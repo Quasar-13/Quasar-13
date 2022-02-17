@@ -74,7 +74,7 @@
  	suit = null
  	suit_store = null
 	backpack = /obj/item/storage/backpack/satchel/leather
-	
+
 //se
 /datum/outfit/job/engineer/electrician
 	name = "Station Engineer (Electrician)"
