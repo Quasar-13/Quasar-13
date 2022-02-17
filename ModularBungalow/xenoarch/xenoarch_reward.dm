@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(tier1_reward, list(
 GLOBAL_LIST_INIT(tier2_reward, list(
 	/obj/item/xenoarch/broken_item/tech = 1,
 	/obj/item/xenoarch/broken_item/plant = 1,
-	/obj/item/xenoarch/useless_relic = 5,
+	/obj/item/xenoarch/useless_relic = 2,
 ))
 
 GLOBAL_LIST_INIT(tier3_reward, list(

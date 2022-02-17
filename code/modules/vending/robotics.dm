@@ -13,7 +13,7 @@
 					/obj/item/stock_parts/cell/high = 12,
 					/obj/item/assembly/prox_sensor = 3,
 					/obj/item/assembly/signaler = 3,
-					/obj/item/healthanalyzer = 3,
+					/obj/item/healthanalyzer/paramed = 3,
 					/obj/item/scalpel = 2,
 					/obj/item/circular_saw = 2,
 					/obj/item/bonesetter = 2,
