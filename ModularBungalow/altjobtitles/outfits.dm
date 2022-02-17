@@ -69,10 +69,10 @@
 
 //ge
 /datum/outfit/job/geneticist/freakofgenetics
- 	name = "Geneticist (Freak of Genetics)"
- 	uniform = /obj/item/clothing/under/shorts/purple
- 	suit = null
- 	suit_store = null
+	name = "Geneticist (Freak of Genetics)"
+	uniform = /obj/item/clothing/under/shorts/purple
+	suit = null
+	suit_store = null
 	shoes = /obj/item/clothing/shoes/sandal
 	backpack = /obj/item/storage/backpack/satchel/leather
 
