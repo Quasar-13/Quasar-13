@@ -33,6 +33,8 @@ SUBSYSTEM_DEF(persistence)
 		LoadAntagReputation()
 	LoadRandomizedRecipes()
 	LoadPaintings()
+
+	GLOB.explorer_drone_adventures = load_adventures()
 	load_custom_outfits()
 	return ..()
 
