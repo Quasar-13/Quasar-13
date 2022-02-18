@@ -84,3 +84,6 @@ GLOBAL_LIST_INIT(heretic_start_knowledge,list(/datum/eldritch_knowledge/spell/ba
 /// TC to charge someone if they get a free implant through choice or
 /// because they have nothing else that supports an implant.
 #define UPLINK_IMPLANT_TELECRYSTAL_COST 4
+/// Yoggers shadow lings :D
+#define ANTAG_DATUM_THRALL		/datum/antagonist/thrall
+#define ANTAG_DATUM_SLING		/datum/antagonist/shadowling
