@@ -67,6 +67,15 @@
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
 
+//ge
+/datum/outfit/job/geneticist/freakofgenetics
+	name = "Geneticist (Freak of Genetics)"
+	uniform = /obj/item/clothing/under/shorts/purple
+	suit = null
+	suit_store = null
+	shoes = /obj/item/clothing/shoes/sandal
+	backpack = /obj/item/storage/backpack/satchel/leather
+
 //se
 /datum/outfit/job/engineer/electrician
 	name = "Station Engineer (Electrician)"
