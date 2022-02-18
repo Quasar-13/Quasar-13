@@ -150,6 +150,16 @@
 	strip_delay = 80
 	equip_delay_other = 60
 
+/obj/item/clothing/suit/armor/riot/syndie
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big red Syndicate S on the back."
+	icon_state = "riotsyn"
+
+/obj/item/clothing/suit/armor/riot/nanotrasen
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters. Has a big white NT on the back."
+	icon_state = "riotnt"
+
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"
 	desc = "A tribal armor plate, crafted from animal bone."
@@ -194,6 +204,7 @@
 	icon_state = "detective-armor"
 	resistance_flags = FLAMMABLE
 	dog_fashion = null
+	armor = list(MELEE = 35, BULLET = 40, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/vest/det_suit/Initialize()
 	. = ..()
@@ -339,3 +350,15 @@
 	desc = "A stylish coat given to CentCom Commodores. Perfect for sending ERTs to suicide missions with style!"
 	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 
+/obj/item/clothing/suit/toggle/armor/hos/hos_formal
+	name = "\improper Head of Security's parade jacket"
+	desc = "For when an armoured vest isn't fashionable enough."
+	icon_state = "hosformal"
+	inhand_icon_state = "hostrench"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 70, ACID = 90, WOUND = 10)
+	togglename = "buttons"
+
+/obj/item/clothing/suit/toggle/armor/hos/hos_formal/Initialize()
+	. = ..()
+	allowed = GLOB.security_wintercoat_allowed

@@ -284,6 +284,7 @@
 		A.on_removal()
 
 /datum/mind/proc/has_antag_datum(datum_type, check_subtypes = TRUE)
+	RETURN_TYPE(/datum/antagonist)
 	if(!datum_type)
 		return
 	for(var/a in antag_datums)

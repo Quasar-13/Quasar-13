@@ -107,6 +107,10 @@
 /obj/item/clothing/head/beret/sec/navyofficer/black
 	desc = "A beret made out of black reinforced fabric with the security insignia emblazoned on it. For officers with class."
 	icon_state = "officerberetblack"
+	
+/obj/item/clothing/head/beret/sec/bni
+	desc = "A beret made out of slick blue reinforced fabric with an 'intelligence' insignia emblazoned on it. For agents with class."
+	icon_state = "bniberet"
 
 /obj/item/clothing/head/beret/sec/medical
 	name = "combat medic's beret"
@@ -217,7 +221,19 @@
 
 /obj/item/clothing/head/beret/sec/navyhos/black/nso
 	name = "security operative's black beret"
-	desc = "A black beret with the NT's insignia emblazoned on it. A remnant for the ."
+	desc = "A black beret with the NT's insignia emblazoned on it. A remnant from the cadet days."
+
+/obj/item/clothing/head/beret/xan
+	name = "Fleet Admiral Caelumbyrn Crux's Beret"
+	desc = "The beret of the esteemed Admiral Crux"
+	icon_state = "xberet"
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+
+
+/obj/item/clothing/head/beret/cmo/ice //the only true head
+	name = "chief medical officer's ice-blue beret"
+	desc = "An ice blue beret with a threatening aura used by only the most senior of medical officer."
+	icon_state = "beret_mint"
 
 /*	//unused
 /obj/item/clothing/head/beret/lt

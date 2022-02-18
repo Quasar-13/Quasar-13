@@ -67,6 +67,15 @@
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
 
+//ge
+/datum/outfit/job/geneticist/freakofgenetics
+	name = "Geneticist (Freak of Genetics)"
+	uniform = /obj/item/clothing/under/shorts/purple
+	suit = null
+	suit_store = null
+	shoes = /obj/item/clothing/shoes/sandal
+	backpack = /obj/item/storage/backpack/satchel/leather
+
 //se
 /datum/outfit/job/engineer/electrician
 	name = "Station Engineer (Electrician)"
@@ -93,8 +102,35 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//det
+/datum/outfit/job/detective/intelligenceofficer
+	name = "Detective (Intelligence Officer)"
+	head = /obj/item/clothing/head/beret/sec/bni
+	uniform = /obj/item/clothing/under/bni
+	neck = null
+	suit = /obj/item/clothing/suit/det_suit/noir/intel
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
+	suit_store = /obj/item/gun/ballistic/revolver/rhino
+	shoes = /obj/item/clothing/shoes/jackboots
+	backpack = /obj/item/storage/backpack/security
+	//the backpack is for style (also because det doesn't have officer armory access yet)
+
+//Chief Medical Officer
+/datum/outfit/job/cmo/medicalprofessor
+	name = "Chief Medical Officer (Medical Professor)"
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	head = /obj/item/clothing/head/beret/cmo/ice
+
+
+/datum/outfit/job/cmo/seniormedicalofficer
+	name = "Chief Medical Officer (Senior Medical Officer)"
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/suit
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	head = /obj/item/clothing/head/beret/cmo/ice
+
 //Chief Engineer
-/datum/outfit/job/chief_engineer/chiefatmosphericstechnician
+/datum/outfit/job/ce/chiefatmosphericstechnician
 	name = "Chief Engineer (Chief Atmospherics Technician)"
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
 

@@ -347,6 +347,188 @@
 	new /obj/item/melee/nano_blade(src)
 	update_icon()
 
+/obj/item/melee/xan_blade
+	name = "Fleet Admiral Caelumbyrn Crux's Katana"
+	desc = "Fleet Admiral Caelumbyrn Crux's Katana"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "xkatana"
+	inhand_icon_state = "xkatana"
+	worn_icon_state = "xkatana"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 50
+	throw_speed = 4
+	throw_range = 5
+	throwforce = 30
+	block_chance = 70
+	armour_penetration = 50
+	w_class = WEIGHT_CLASS_NORMAL
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
+	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	slot_flags = ITEM_SLOT_BELT
+	sharpness = SHARP_EDGED
+	max_integrity = 200
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/datum/effect_system/spark_spread/spark_system
+	var/datum/action/innate/dash/ninja/jaunt
+	var/dash_toggled = TRUE
+
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 30, 95, 5) //fast and effective, but as a sword, it might damage the results.
+
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	jaunt = new(src)
+	spark_system = new /datum/effect_system/spark_spread()
+	spark_system.set_up(5, 0, src)
+	spark_system.attach(src)
+
+/obj/item/melee/xan_blade/attack_self(mob/user)
+	dash_toggled = !dash_toggled
+	to_chat(user, "<span class='notice'>You [dash_toggled ? "enable" : "disable"] the dash function on [src].</span>")
+
+/obj/item/melee/xan_blade/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(dash_toggled && !Adjacent(target) && !target.density)
+		jaunt.Teleport(user, target)
+
+/obj/item/melee/xan_blade/pickup(mob/living/user)
+	. = ..()
+	jaunt.Grant(user, src)
+	user.update_icons()
+	playsound(src, 'sound/items/unsheath.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+
+/obj/item/melee/xan_blade/dropped(mob/user)
+	. = ..()
+	jaunt.Remove(user)
+	user.update_icons()
+
+// Sheath
+/obj/item/storage/belt/xan_blade
+	name = "Admiral Caelumbyrn Crux's Energy Katana"
+	desc = "Admiral Caelumbyrn Crux's Energy Katana, It pulses with purple energy"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "xkatana_sheath"
+	inhand_icon_state = null
+	worn_icon_state = "xkatana_sheathw"
+	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/storage/belt/xan_blade/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.rustle_sound = FALSE
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/melee/xan_blade
+		))
+
+/obj/item/storage/belt/xan_blade/examine(mob/user)
+	. = ..()
+	if(length(contents))
+		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
+
+/obj/item/storage/belt/xan_blade/AltClick(mob/user)
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	if(length(contents))
+		var/obj/item/I = contents[1]
+		playsound(user, 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg', 25, TRUE)
+		user.visible_message("<span class='notice'>[user] swiftly draws \the [I].</span>", "<span class='notice'>You draw \the [I].</span>")
+		user.put_in_hands(I)
+		update_icon()
+	else
+		to_chat(user, "<span class='warning'>[src] is empty!</span>")
+
+/obj/item/storage/belt/xan_blade/update_icon_state()
+	icon_state = initial(inhand_icon_state)
+	inhand_icon_state = initial(inhand_icon_state)
+	worn_icon_state = initial(worn_icon_state)
+	if(contents.len)
+		icon_state += "xkatana_sheath-blade"
+		worn_icon_state += "xkatana_sheath-blade"
+		inhand_icon_state = "xkatana_sheath-blade"
+
+/obj/item/storage/belt/xan_blade/PopulateContents()
+	new /obj/item/melee/xan_blade(src)
+	update_icon()
+
+//Dash
+
+/atom/proc/xBeam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/effects.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
+	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
+	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)
+	return newbeam
+
+/datum/action/innate/xdash
+	name = "Dash"
+	desc = "Teleport to the targeted location."
+	icon_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon_state = "jetboot"
+	var/current_charges = 1
+	var/max_charges = 1
+	var/charge_rate = 250
+	var/mob/living/carbon/human/holder
+	var/obj/item/dashing_item
+	var/dash_sound = 'sound/magic/blink.ogg'
+	var/recharge_sound = 'sound/magic/charge.ogg'
+	var/beam_effect = "xbeam"
+	var/phasein = /obj/effect/temp_visual/dir_setting/xdash/phase
+	var/phaseout = /obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+/obj/effect/temp_visual/dir_setting/xdash/phase
+	name = "Xan Phase"
+	icon = 'ModularBungalow/zbungalowicons/effects.dmi'
+	icon_state = "xphasein"
+
+/obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+	icon_state = "xphaseout"
+
+/datum/action/innate/xdash/Grant(mob/user, obj/dasher)
+	. = ..()
+	dashing_item = dasher
+	holder = user
+
+/datum/action/innate/xdash/IsAvailable()
+	if(current_charges > 0)
+		return TRUE
+	else
+		return FALSE
+
+/datum/action/innate/xdash/Activate()
+	dashing_item.attack_self(holder) //Used to toggle dash behavior in the dashing item
+
+/datum/action/innate/xdash/proc/Teleport(mob/user, atom/target)
+	if(!IsAvailable())
+		return
+	var/turf/T = get_turf(target)
+	if(target in view(user.client.view, user))
+		var/obj/spot1 = new phaseout(get_turf(user), user.dir)
+		user.forceMove(T)
+		playsound(T, dash_sound, 25, TRUE)
+		var/obj/spot2 = new phasein(get_turf(user), user.dir)
+		spot1.xBeam(spot2,beam_effect,time=2 SECONDS)
+		current_charges--
+		holder.update_action_buttons_icon()
+		addtimer(CALLBACK(src, .proc/charge), charge_rate)
+
+/datum/action/innate/xdash/proc/charge()
+	current_charges = clamp(current_charges + 1, 0, max_charges)
+	holder.update_action_buttons_icon()
+	if(recharge_sound)
+		playsound(dashing_item, recharge_sound, 50, TRUE)
+	to_chat(holder, "<span class='notice'>[src] now has [current_charges]/[max_charges] charges.</span>")
+
+/datum/action/innate/xdash
+	current_charges = 3
+	max_charges = 3
+	charge_rate = 200
+	recharge_sound = null
+
 /* 	Add this back later, fuck it
 //Katana
 /obj/item/melee/ckatana

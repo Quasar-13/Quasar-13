@@ -7,15 +7,15 @@
 //Engineering
 /datum/job/engineer
 	alt_titles = list("Maintenance Technician", "Engine Technician", "Electrician", "Signal Technician")
-	senior_title = "Project Co-ordinator"
+	senior_title = list("Project Co-ordinator")
 
 /datum/job/atmos
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
-	senior_title = "Fusion Technician"
+	senior_title = list("Fusion Technician")
 
 /datum/job/voidtech
 	alt_titles = list("Space Explorer", "Salvager")
-	senior_title = "Space Marine"
+	senior_title = list("Space Marine")
 
 //Service
 /datum/job/assistant
@@ -24,56 +24,56 @@
 
 /datum/job/cook
 	alt_titles = list("Butcher", "Grillmaster")
-	senior_title = "Chef"
+	senior_title = list("Chef")
 
 /datum/job/bartender
 	alt_titles = list("Barkeep", "Mixologist")
-	senior_title = "Master Mixologist"
+	senior_title = list("Master Mixologist")
 
 /datum/job/hydro
 	alt_titles = list("Gardener", "Herbalist", "Botanical Scientist", "Hydroponicist", "Beekeeper")
-	senior_title = "Groundskeeper"
+	senior_title = list("Groundskeeper")
 
 /datum/job/curator
 	alt_titles = list("Journalist", "Librarian")
-	senior_title = "Dungeon Master"
+	senior_title = list("Dungeon Master")
 
 /datum/job/janitor
 	alt_titles = list("Custodian", "Sanitation Technician")
-	senior_title = "Jannie"
+	senior_title = list("Jannie")
 
 /datum/job/lawyer
 	alt_titles = list("Attorney", "Nanotrasen Censor", "Human Resources Representative")
-	senior_title = "Ace Attorney"
+	senior_title = list("Ace Attorney")
 
 /datum/job/chaplain
 	alt_titles = list("Counselor", "Priest")
-	senior_title = "Prophet"
+	senior_title = list("Prophet")
 
 /datum/job/clown
 	alt_titles = list("Jester", "Comedian")
-	senior_title = "Cluwne"
+	senior_title = list("Cluwne")
 
 /datum/job/mime
 	alt_titles = list("Performer")
-	senior_title = "Frenchman"
+	senior_title = list("Frenchman")
 
 //Science
 /datum/job/scientist
 	alt_titles = list("Xenobiologist", "Nanites Researcher", "Cytologist", "Explosives Expert")
-	senior_title = "Research Associate"
+	senior_title = list("Research Associate")
 
 /datum/job/roboticist
 	alt_titles = list("Biomechanical Engineer", "Robotical Engineer", "Computer Engineer")
-	senior_title = "Mecha Pilot"
+	senior_title = list("Mecha Pilot")
 
 /datum/job/geneticist
 	alt_titles = list("Geneologist", "Medical Geneticist")
-	senior_title = "Genetic Engineer"
+	senior_title = list("Genetic Engineer", "Freak of Genetics")
 
 /datum/job/chemre
 	alt_titles = list("Chemical Researcher", "Chemical Scientist")
-	senior_title = "Chemical Engineer"
+	senior_title = list("Chemical Engineer")
 
 //Medical
 /datum/job/doctor
@@ -82,15 +82,15 @@
 
 /datum/job/paramedic
 	alt_titles = list("Emergency Medical Technician")
-	senior_title = "Field Medic"
+	senior_title = list("Field Medic")
 
 /datum/job/pharmacist
 	alt_titles = list("Pharmacologist")
-	senior_title = "Pharmacy Co-Ordinator"
+	senior_title = list("Pharmacy Co-Ordinator")
 
 /datum/job/virologist
 	alt_titles = list("Pathologist", "Microbiologist", "Epidemiologist", "Serologist")
-	senior_title = "Medical Laboratory Technologist"
+	senior_title = list("Medical Laboratory Technologist")
 
 //Security
 /datum/job/warden
@@ -108,20 +108,20 @@
 //Supply
 /datum/job/mining
 	alt_titles = list("Space Miner", "Hunter", "Prospector")
-	senior_title = "Geological Surveyor"
+	senior_title = list("Geological Surveyor")
 
 /datum/job/cargo_tech
 	alt_titles = list("Mailroom Technician", "Deliveries Officer")
-	senior_title = "Requisitions Technician"
+	senior_title = list("Requisitions Technician")
 
 //Command
 /datum/job/qm
 	alt_titles = list("Supply Chief")
-	senior_title = "Requisitions Officer"
+	senior_title = list("Requisitions Officer")
 
 /datum/job/hos
 	alt_titles = list("Security Commander", "Chief of Security", "Lieutenant Commander")
-	senior_title = "Chief Military Police"
+	senior_title = list("Chief Military Police")
 
 /datum/job/cmo
 	alt_titles = list("Medical Director", "Head Surgeon", "Medical Professor")
@@ -129,19 +129,19 @@
 
 /datum/job/rd
 	alt_titles = list("Research Supervisor", "Head of Research", "Chief Researcher")
-	senior_title = "Chief Science Officer"
+	senior_title = list("Chief Science Officer")
 
 /datum/job/chief_engineer
 	alt_titles = list("Chief Atmospherics Technician", "Chief Electrical Technician")
-	senior_title = "Senior Project Manager"
+	senior_title = list("Senior Project Manager")
 
 /datum/job/secretary
-	alt_titles = list("Lieutenant", "Union Representative", "Ambassador")
-	senior_title = "Diplomat"
+	alt_titles = list("Lieutenant", "Union Representative", "Ambassador", "Diplomat")
+	senior_title = list("Junior Bridge Officer")
 
 /datum/job/hop
 	alt_titles = list("Executive Officer", "Head of Service", "Service Co-Ordinator")
-	senior_title = "Customs Officer"
+	senior_title = list("Customs Officer")
 
 /datum/job/captain
 	alt_titles = list("Commanding Officer", "Station Commander")
