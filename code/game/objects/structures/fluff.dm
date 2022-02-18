@@ -277,7 +277,7 @@
 /obj/structure/fluff/tram_rail
 	name = "tram rail"
 	desc = "Great for trams, not so great for skating."
-	icon = 'icons/obj/tram_rail.dmi'
+	icon = 'icons/obj/tram_rails.dmi'
 	icon_state = "rail"
 	layer = ABOVE_OPEN_TURF_LAYER
 	plane = FLOOR_PLANE
