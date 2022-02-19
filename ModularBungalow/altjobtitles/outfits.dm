@@ -103,7 +103,7 @@
 	head = null
 
 //pris
-/datum/job/prisoner/protectedcustody
+/datum/outfit/job/prisoner/protectedcustody
 	uniform = /obj/item/clothing/under/rank/prisoner/custody
 	shoes = /obj/item/clothing/shoes/laceup
 
