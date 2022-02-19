@@ -102,6 +102,11 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//pris
+/datum/job/prisoner/protectedcustody
+	uniform = /obj/item/clothing/under/rank/prisoner/custody
+	shoes = /obj/item/clothing/shoes/laceup
+
 //det
 /datum/outfit/job/detective/intelligenceofficer
 	name = "Detective (Intelligence Officer)"
