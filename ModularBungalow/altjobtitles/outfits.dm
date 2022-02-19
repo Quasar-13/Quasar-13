@@ -104,8 +104,12 @@
 
 //pris
 /datum/outfit/job/prisoner/protectedcustody
+	name = "Prisoner (Protected Custody)"
 	uniform = /obj/item/clothing/under/rank/prisoner/custody
 	shoes = /obj/item/clothing/shoes/laceup
+	r_pocket = /obj/item/lighter
+	r_hand = /obj/item/fancy/cigarettes/cigars
+	ears = /obj/item/radio/headset
 
 //det
 /datum/outfit/job/detective/intelligenceofficer
