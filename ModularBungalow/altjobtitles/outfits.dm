@@ -108,7 +108,7 @@
 	uniform = /obj/item/clothing/under/rank/prisoner/custody
 	shoes = /obj/item/clothing/shoes/laceup
 	r_pocket = /obj/item/lighter
-	r_hand = /obj/item/fancy/cigarettes/cigars
+	r_hand = /obj/item/storage/fancy/cigarettes/cigars
 	ears = /obj/item/radio/headset
 
 //det
