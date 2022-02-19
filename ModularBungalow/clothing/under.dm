@@ -166,11 +166,11 @@
 	desc = "It's a standard uniform for informationally important persons. Its suit sensors are stuck in the \"Fully On\" position."
 	icon_state = "protected_custody"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
-	icon = 'ModularBungalow/clothing/worn/under.dmi'
+	icon = 'ModularBungalow/clothing/icon/under.dmi'
 
 /obj/item/clothing/under/rank/prisoner/custody/skirt
 	name = "protected custody jumpskirt"
 	desc = "It's standardised skirt for informationally important persons. Its suit sensors are stuck in the \"Fully On\" position."
 	icon_state = "protected_custody_skirt"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
-	icon = 'ModularBungalow/clothing/worn/under.dmi'
+	icon = 'ModularBungalow/clothing/icon/under.dmi'
