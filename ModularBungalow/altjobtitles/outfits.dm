@@ -107,6 +107,8 @@
 	name = "Prisoner (Protected Custody)"
 	uniform = /obj/item/clothing/under/rank/prisoner/custody
 	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/bowler
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	r_pocket = /obj/item/lighter
 	r_hand = /obj/item/storage/fancy/cigarettes/cigars
 	ears = /obj/item/radio/headset
