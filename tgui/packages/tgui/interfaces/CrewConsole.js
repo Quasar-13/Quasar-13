@@ -34,12 +34,6 @@ const jobToColor = jobId => {
   if (jobId >= 50 && jobId < 60) {
     return COLORS.department.cargo;
   }
-  if (jobId >= 150 && jobId < 159) {
-    return COLORS.department.terragov;
-  }
-  if (jobId >= 160 && jobId < 200) {
-    return COLORS.department.syndicate;
-  }
   if (jobId >= 200 && jobId < 230) {
     return COLORS.department.centcom;
   }
@@ -136,12 +130,16 @@ const CrewTableEntry = (props, context) => {
         {name}{assignment !== undefined ? ` (${assignment})` : ""}
       </Table.Cell>
       <Table.Cell collapsing textAlign="center">
-        <ColorBox
-          color={healthToColor(
-            oxydam,
-            toxdam,
-            burndam,
-            brutedam)} />
+        {life_status ? (
+          <ColorBox
+            color={healthToColor(
+              oxydam,
+              toxdam,
+              burndam,
+              brutedam)} />
+        ) : (
+          <ColorBox color={'#ed2814'} />
+        )}
       </Table.Cell>
       <Table.Cell collapsing textAlign="center">
         {oxydam !== undefined ? (
