@@ -535,6 +535,7 @@
 	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife."
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "cosmic"
+	slot_flags = ITEM_SLOT_BELT
 	force = 13
 	throwforce = 10
 	block_chance = 7
@@ -542,8 +543,7 @@
 	block_chance = 20
 
 //Captain Spear 2
-
-/obj/item/kitchen/knife/halberd
+/obj/item/melee/halberd
 	name = "gae bolg"
 	desc = "The weapon of an tough captain. Has extra reach."
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
