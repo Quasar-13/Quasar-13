@@ -17,6 +17,11 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	inhand_icon_state = "suit"
 
+/obj/item/clothing/under/suit/helltaker/justice
+	name = "special demon's suit"
+	desc = "A bloodred suit with black pants."
+	icon_state = "justice"
+
 //Solgov Suit. Formalwear for Solgov Officers
 /obj/item/clothing/under/solgov/suit
 	name = "solgov formal suit"
@@ -35,6 +40,36 @@
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	inhand_icon_state = "syndicate_suit"
+	can_adjust = FALSE
+
+//Kimonos
+/obj/item/clothing/under/kimono
+	name = "kimono"
+	desc = "A traditional japanese garb."
+	icon_state = "kimono"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/kimono/fancy
+	name = "fancy kimono"
+	icon_state = "fancy_kimono"
+
+//Dresses
+/obj/item/clothing/under/evildress
+	name = "fiend's dress"
+	desc = "A black dress with red undertones."
+	icon_state = "fienddress_s"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/reddress
+	name = "red dress"
+	desc = "A beautiful blood-red dress."
+	icon_state = "formalred_s"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
 //BNI Suit for BNI people
@@ -176,6 +211,21 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
+//QM stuff
+/obj/item/clothing/under/rank/cargo/qm/dark
+	name = "quartermaster's dark jumpsuit"
+	desc = "It's a jumpsuit worn by the quartermaster. It's got darker tones than usual"
+	icon_state = "qmsynd"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+
+/obj/item/clothing/under/rank/cargo/qm/turtle
+	name = "quartermaster's turtleneck"
+	desc = "It's a turtleneck worn by the quartermaster. Alleviates neck pain"
+	icon_state = "turtleneck_qm"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+
 //HOP stuff.
 /obj/item/clothing/under/rank/civilian/head_of_personnel/goon
 	icon_state = "hop_goon"
@@ -237,3 +287,12 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	icon_state = "protected_custody_skirt"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+
+//Comms Officer
+/obj/item/clothing/under/rank/civilian/communications_officer
+	name = "communication officer's jumpsuit"
+	desc = "The suit of the communications officer."
+	icon_state = "comms"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
