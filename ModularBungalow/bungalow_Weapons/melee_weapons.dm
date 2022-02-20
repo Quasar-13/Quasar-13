@@ -119,7 +119,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	obj_flags = UNIQUE_RENAME
-	force = 12
+	force = 13
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
 	block_chance = 60
@@ -532,15 +532,14 @@
 //Captain knife
 /obj/item/kitchen/knife/meteorknife
 	name = "Himmelsuralteisenmesser"
-	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife."
+	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife. Extremely high block chance, and can block bullets"
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "cosmic"
 	slot_flags = ITEM_SLOT_BELT
-	force = 13
+	force = 12
 	throwforce = 10
-	block_chance = 7
 	w_class = WEIGHT_CLASS_NORMAL
-	block_chance = 20
+	block_chance = 73
 
 //Captain Spear 2
 /obj/item/melee/halberd
