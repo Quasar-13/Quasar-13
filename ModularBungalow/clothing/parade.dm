@@ -103,6 +103,12 @@
 	desc = "The classic captain's carapace, in naval green."
 	icon_state = "casio"
 
+// Provost Carapace
+/obj/item/clothing/suit/armor/captain/provost
+	name = "Provost's carapace"
+	desc = "The stylish Provost's carapace, in ceremonial red."
+	icon_state = "provost_carapace"
+
 //CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
 	name = "co's coat"
