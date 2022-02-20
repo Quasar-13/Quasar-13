@@ -39,6 +39,20 @@
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "centcloak"
+	
+/obj/item/clothing/neck/cloak/provost
+	name = "Provost's cloak"
+	desc = "A cloak used by NT provosts."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "provostcloak"
+
+/obj/item/clothing/neck/cloak/vadm
+	name = "Vice Admiral's cloak"
+	desc = "A cloak used by the ceremonial NT Vice Admirals."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "viceadmiralcloak"
 
 /obj/item/clothing/neck/cloak/xan
 	name = "Fleet Admiral Caelumbyrn Crux's Cloak"
