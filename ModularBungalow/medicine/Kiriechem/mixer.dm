@@ -13,6 +13,8 @@
 	results = list(/datum/reagent/mixer = 3)
 	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/fuel/oil = 2)
 
+
+
 /datum/reagent/mixer/bicarbide
 	name = "Salt of Bicarbide"
 
@@ -20,77 +22,44 @@
 	results = list(/datum/reagent/mixer/bicarbide = 3)
 	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/silicon = 2)
 
-/datum/reagent/mixer/irimide
-	name = "Irimide"
 
-/datum/chemical_reaction/irimide
-	results = list(/datum/reagent/mixer/irimide = 3)
-	required_reagents = list(/datum/reagent/acetaldehyde = 1, /datum/reagent/ammonia = 1, /datum/reagent/acetone = 1)
+/datum/reagent/mixer/obicarbide
+	name = "Organic Bicarbide"
 
-
-/datum/reagent/mixer/dioxadide
-	name = "Dioxadide"
-
-/datum/chemical_reaction/dioxadide
-	results = list(/datum/reagent/mixer/dioxadide = 2)
-	required_reagents = list(/datum/reagent/cryptobiolin = 1, /datum/reagent/impedrezene = 1)
+/datum/chemical_reaction/obicarbide
+	results = list(/datum/reagent/mixer/obicarbide = 2)
+	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/mixer/bicarbide = 1)
 
 
-/datum/reagent/mixer/pensal
-	name = "Pentetic Salicide"
+/datum/reagent/mixer/sbicarbide
+	name = "Soap of Bicarbide"
 
-/datum/chemical_reaction/pensal
-	results = list(/datum/reagent/mixer/pensal = 2)
-	required_reagents = list(/datum/reagent/pentaerythritol = 1, /datum/reagent/consumable/salt = 1)
+/datum/chemical_reaction/sbicarbide
+	results = list(/datum/reagent/mixer/sbicarbide = 2)
+	required_reagents = list(/datum/reagent/mixer/bicarbide = 1, /datum/reagent/lye = 1)
 
-/datum/reagent/mixer/talcide
-	name = "Organic Talcide"
+/datum/reagent/mixer/pbicarbide
+	name = "Primal Bicarbide"
 
-/datum/chemical_reaction/talcide
-	results = list(/datum/reagent/mixer/talcide = 3)
-	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/medicine/atropine = 1, /datum/reagent/toxin/formaldehyde = 1)
+/datum/chemical_reaction/pbicarbide
+	results = list(/datum/reagent/mixer/pbicarbide = 2)
+	required_reagents = list(datum/reagent/drug/space_drugs = 1, /datum/reagent/mixer/bicarbide = 1)
 
-/datum/reagent/mixer/peroxidide
-	name = "Peroxidide"
 
-/datum/chemical_reaction/peroxidide
-	results = list(/datum/reagent/mixer/peroxidide = 2)
-	required_reagents = list(/datum/reagent/medicine/haloperidol = 1, /datum/reagent/hydrogen_peroxide = 1)
-
-/datum/reagent/mixer/meride
-	name = "Meride"
-
-/datum/chemical_reaction/meride
-	results = list(/datum/reagent/mixer/meride = 2)
-	required_reagents = list(/datum/reagent/toxin/cyanide = 1, /datum/reagent/fluorosurfactant = 1)
-
-/datum/reagent/mixer/polyethylide
-	name = "Polyethylide"
-
-/datum/chemical_reaction/polyethylide
-	results = list(/datum/reagent/mixer/polyethylide = 3)
-	required_reagents = list(/datum/reagent/diethylamine = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/copper = 1)
-
-/datum/reagent/mixer/haloride
-	name = "Haloride"
-
-/datum/chemical_reaction/haloride
-	results = list(/datum/reagent/mixer/haloride = 2)
-	required_reagents = list(/datum/reagent/acetaldehyde = 1, /datum/reagent/acetone_oxide = 1)
-
-/datum/reagent/mixer/meloride
-	name = "Meloride"
-
-/datum/chemical_reaction/meloride
-	results = list(/datum/reagent/mixer/meloride = 3)
-	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/acetone_oxide = 1, /datum/reagent/mercury = 1)
 
 /datum/reagent/mixer/caemide
 	name = "Caemide"
 
 /datum/chemical_reaction/caemide
-	results = list(/datum/reagent/mixer/caemide = 3)
-	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone_oxide = 1, /datum/reagent/cryptobiolin = 1)
+	results = list(/datum/reagent/mixer/caemide = 2)
+	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/cryptobiolin = 1)
+
+/datum/reagent/mixer/ncaemide
+	name = "Neo Caemide"
+
+/datum/chemical_reaction/ncaemide
+	results = list(/datum/reagent/mixer/ncaemide = 2)
+	required_reagents = list(/datum/reagent/mixer/caemide = 1, /datum/reagent/saltpetre = 1)
 
 //Table 2 chems
 
@@ -133,7 +102,7 @@
 	name = "Hebitide"
 
 /datum/chemical_reaction/hebitide
-	results = list(/datum/reagent/mixer/hebitide = 5)
+	results = list(/datum/reagent/mixer/hebitide = 3)
 	required_reagents = list(/datum/reagent/diethylamine = 1, /datum/reagent/lye = 1, /datum/reagent/acetone = 1)
 
 /datum/reagent/mixer/uhebitide

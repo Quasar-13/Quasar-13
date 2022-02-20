@@ -1,56 +1,46 @@
-//Omnizine
+//Toxin
 /datum/chemical_reaction/randomized/kiriechem
 	randomize_req_temperature = FALSE
 
 	randomize_inputs = TRUE
 	min_input_reagent_amount = 1
 	max_input_reagent_amount = 1
-	min_input_reagents = 4
-	max_input_reagents = 4
-	possible_reagents = list(/datum/reagent/mixer, /datum/reagent/mixer/bicarbide, /datum/reagent/mixer/irimide, /datum/reagent/mixer/talcide, /datum/reagent/mixer/kelaide,
-							/datum/reagent/mixer/dioxadide, /datum/reagent/mixer/pensal, /datum/reagent/mixer/etheride, /datum/reagent/mixer/peroxidide,
-							/datum/reagent/mixer/meride, /datum/reagent/mixer/polyethylide, /datum/reagent/mixer/haloride, /datum/reagent/mixer/meloride,
-							/datum/reagent/mixer/caemide)
+	min_input_reagents = 2
+	max_input_reagents = 2
+	possible_reagents = list(/datum/reagent/mixer, /datum/reagent/mixer/bicarbide, /datum/reagent/mixer/obicarbide, /datum/reagent/mixer/sbicarbide, /datum/reagent/mixer/pbicarbide,
+							/datum/reagent/mixer/caemide, /datum/reagent/mixer/ncaemide)
 
 	max_catalysts = 0
 
-	results = list(/datum/reagent/medicine/omnizine = 5)
+	results = list(/datum/reagent/toxin = 2)
 
-//Toxin
-/datum/chemical_reaction/randomized/kiriechem/toxin
-	min_input_reagents = 3
-	max_input_reagents = 3
-	results = list(/datum/reagent/toxin = 3)
+//impure Bicard
+/datum/chemical_reaction/randomized/kiriechem/sbicarid
+	results = list(/datum/reagent/medicine/sbicarid = 2)
 
-//Carpotoxin
-/datum/chemical_reaction/randomized/kiriechem/carpotoxin
-	min_input_reagents = 3
-	max_input_reagents = 3
-	results = list(/datum/reagent/toxin/carpotoxin = 3)
+//impure kelo
+/datum/chemical_reaction/randomized/kiriechem/skelo
+	results = list(/datum/reagent/medicine/skelo = 2)
+
+//Determination
+/datum/chemical_reaction/randomized/kiriechem/determination
+	results = list(/datum/reagent/determination = 2)
+
+//Venadone
+/datum/chemical_reaction/randomized/kiriechem/venadone
+	results = list(/datum/reagent/medicine/venadone = 2)
 
 //Mint Toxin
 /datum/chemical_reaction/randomized/kiriechem/mint
-	min_input_reagents = 4
-	max_input_reagents = 4
-	results = list(/datum/reagent/toxin/minttoxin = 5)
+	min_input_reagents = 3
+	max_input_reagents = 3
+	results = list(/datum/reagent/toxin/minttoxin = 3)
 
 //Tirizine
 /datum/chemical_reaction/randomized/kiriechem/tirizine
 	min_input_reagents = 3
 	max_input_reagents = 3
-	results = list(/datum/reagent/toxin/staminatoxin = 4)
-
-//Determination
-/datum/chemical_reaction/randomized/kiriechem/determination
-	min_input_reagents = 4
-	max_input_reagents = 4
-	results = list(/datum/reagent/determination = 5)
-
-//Venadone
-/datum/chemical_reaction/randomized/kiriechem/venadone
-	min_input_reagents = 3
-	max_input_reagents = 3
-	results = list(/datum/reagent/medicine/venadone = 3)
+	results = list(/datum/reagent/toxin/staminatoxin = 3)
 
 
 //Table 2, for easier healing chems
