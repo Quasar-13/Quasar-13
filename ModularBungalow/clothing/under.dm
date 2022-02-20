@@ -8,6 +8,15 @@
 	inhand_icon_state = "syndicate_suit"
 	can_adjust = FALSE
 
+//Helltaker Suit. I like Helltaker, Fuck you.
+/obj/item/clothing/under/suit/helltaker
+	name = "Demon's Suit"
+	desc = "A bloodred suit with white pants."
+	icon_state = "helltaker"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "suit"
+
 //Solgov Suit. Formalwear for Solgov Officers
 /obj/item/clothing/under/solgov/suit
 	name = "solgov formal suit"
@@ -86,10 +95,19 @@
 	resistance_flags = NONE
 
 //Femcap (Don't tell anyone I added this)
-/obj/item/clothing/under/captainf
+/obj/item/clothing/under/rank/captain/female
 	name = "Female Captain's Pyjamas"
 	desc = "An outfit for bedtime."
 	icon_state = "cap_f"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	inhand_icon_state = "suit"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/captain/dress
+	name = "Captain's dress"
+	desc = "An outfit for female captains."
+	icon_state = "capdress"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	inhand_icon_state = "suit"
@@ -100,6 +118,15 @@
 	name = "Chief Atmos Technician's Jumpsuit"
 	desc = "An outfit for an Atmos-Inclined Head of Engineering."
 	icon_state = "chief_atmos"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//CE Hazard
+/obj/item/clothing/under/rank/engineering/chief_engineer/hazard
+	name = "Chief Engineer's Hazard Jumpsuit"
+	desc = "An outfit for the Head of Engineering."
+	icon_state = "chief_engi"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
@@ -131,9 +158,44 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
-//Goon HOP.
+//Atmos turtleneck
+/obj/item/clothing/under/rank/engineering/atmospheric_technician/turtle
+	name = "atmospherics turtleneck"
+	desc = "An yellow and blue turtleneck."
+	icon_state = "atmos_turtle"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//Atmos suit
+/obj/item/clothing/under/rank/engineering/atmospheric_technician/suit
+	name = "atmospherics suit"
+	desc = "An yellow and blue suit."
+	icon_state = "atmos_suit"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//HOP stuff.
 /obj/item/clothing/under/rank/civilian/head_of_personnel/goon
 	icon_state = "hop_goon"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/civilian/head_of_personnel/formal
+	name = "Head Of Personnel's formal jacket"
+	desc = "A formal coat worn by the head of personnel."
+	icon_state = "hop"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//CMO
+/obj/item/clothing/under/rank/medical/chief_medical_officer/triage
+	name = "Chief Medical Officer's Triage Jumpsuit"
+	desc = "For combat purposes."
+	icon_state = "cmo"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
@@ -160,3 +222,18 @@
 	icon_state = "xadm"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
+
+//Prot-cust stuff
+/obj/item/clothing/under/rank/prisoner/custody
+	name = "protected custody jumpsuit"
+	desc = "It's a standard uniform for informationally important persons. Its suit sensors are stuck in the \"Fully On\" position."
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	icon_state = "protected_custody"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+
+/obj/item/clothing/under/rank/prisoner/custody/skirt
+	name = "protected custody jumpskirt"
+	desc = "It's standardised skirt for informationally important persons. Its suit sensors are stuck in the \"Fully On\" position."
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	icon_state = "protected_custody_skirt"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'

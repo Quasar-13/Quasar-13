@@ -67,6 +67,15 @@
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
 
+//ge
+/datum/outfit/job/geneticist/freakofgenetics
+	name = "Geneticist (Freak of Genetics)"
+	uniform = /obj/item/clothing/under/shorts/purple
+	suit = null
+	suit_store = null
+	shoes = /obj/item/clothing/shoes/sandal
+	backpack = /obj/item/storage/backpack/satchel/leather
+
 //se
 /datum/outfit/job/engineer/electrician
 	name = "Station Engineer (Electrician)"
@@ -92,6 +101,17 @@
 	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
+
+//pris
+/datum/outfit/job/prisoner/protectedcustody
+	name = "Prisoner (Protected Custody)"
+	uniform = /obj/item/clothing/under/rank/prisoner/custody
+	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/bowler
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	r_pocket = /obj/item/lighter
+	r_hand = /obj/item/storage/fancy/cigarettes/cigars
+	ears = /obj/item/radio/headset
 
 //det
 /datum/outfit/job/detective/intelligenceofficer
