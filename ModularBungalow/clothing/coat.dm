@@ -80,3 +80,11 @@
 	desc = "A coat popular among the female Head of Securities.."
 	icon_state = "hos"
 
+/obj/item/clothing/suit/qm
+	name = "quartermaster's coat"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A button-up jacket used by the quartermaster."
+	icon_state = "qmjacket"
+	inhand_icon_state = "armor"
+	dog_fashion = null
