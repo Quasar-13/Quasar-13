@@ -272,9 +272,11 @@
 	name = "Provost Officer"
 	uniform = /obj/item/clothing/under/bni/officer
 	suit = /obj/item/clothing/suit/armor/captain/flag/provost
+	gloves = /obj/item/clothing/gloves/color/captain/provost
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
 	belt = /obj/item/gun/ballistic/revolver/hakita
-	head = /obj/item/clothing/head/beret/sec
+	head = /obj/item/clothing/head/caphat/provost
+	neck = /obj/item/clothing/neck/cloak/provost
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/pvst
 
 
@@ -282,6 +284,7 @@
 	name = "Rear Admiral"
 	uniform = /obj/item/clothing/under/bni/officer
 	suit = /obj/item/clothing/suit/armor/captain/flag
+	gloves = /obj/item/clothing/gloves/color/captain/galaxy
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/gun/ballistic/revolver/hakita
 	head = null
@@ -295,7 +298,8 @@
 	suit = /obj/item/clothing/suit/armor/captain/flag/vadm
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/gun/ballistic/revolver/hakita
-	head = /obj/item/clothing/head/beret/ce
+	head = /obj/item/clothing/head/caphat/vadm
+	neck = /obj/item/clothing/neck/cloak/vadm
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/vadm
 
 
