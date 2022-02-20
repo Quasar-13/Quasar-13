@@ -155,8 +155,11 @@
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "aec" = (
-/obj/structure/grille,
-/turf/open/space/basic,
+/obj/machinery/power/solar{
+	id = "starboardsolarVOID";
+	name = "Void tech solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
 /area/space)
 "aei" = (
 /obj/structure/cable,
@@ -1078,6 +1081,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/aft)
+"aKQ" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Voidtech solar array";
+	req_access_txt = "10"
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/maintenance/solars/starboard)
 "aKW" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -3444,6 +3455,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/dogbed{
+	name = "cat bed"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/voidtech)
 "cgS" = (
@@ -4203,14 +4217,10 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/cmo)
 "cEj" = (
-/obj/structure/table,
-/obj/machinery/computer/pod/old/mass_driver_controller{
-	id = "voidtechvehicle";
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/turf/open/floor/plating/asteroid,
-/area/engine/voidtech)
+/obj/structure/lattice/catwalk,
+/obj/structure/cable,
+/turf/open/space/basic,
+/area/space)
 "cEX" = (
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/white/side,
@@ -6656,15 +6666,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/miningdock)
-"dZF" = (
-/obj/machinery/power/solar_control{
-	dir = 1;
-	id = "starboardsolarVOID";
-	name = "Void solar array computer"
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/asteroid,
-/area/maintenance/solars/starboard)
 "dZL" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white/side{
@@ -6888,6 +6889,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"egw" = (
+/obj/machinery/power/solar_control{
+	dir = 4;
+	id = "starboardsolarVOID";
+	name = "Void solar array computer"
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/maintenance/solars/starboard)
 "egy" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -10186,7 +10196,7 @@
 	name = "Voidtech massdriver blast door"
 	},
 /obj/structure/fans/tiny,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/dark,
 /area/engine/voidtech)
 "glL" = (
 /obj/structure/cable,
@@ -10489,6 +10499,9 @@
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet,
 /area/chapel/main)
+"gtJ" = (
+/turf/closed/mineral/random/stationside/asteroid,
+/area/space)
 "gtM" = (
 /obj/effect/spawner/randomcolavend,
 /obj/item/toy/figure/scientist{
@@ -12020,13 +12033,12 @@
 /turf/open/floor/plasteel/dark,
 /area/security/main)
 "hnq" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Voidtech solar array";
-	req_access_txt = "10"
+/obj/machinery/power/solar{
+	id = "starboardsolarVOID";
+	name = "Void tech solar Array"
 	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark,
-/area/maintenance/solars/starboard)
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/solar/starboard)
 "hns" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -13868,13 +13880,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/maintenance/department/science/xenobiology)
-"iqC" = (
-/obj/machinery/power/smes/engineering{
-	charge = 5e+006
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/asteroid,
-/area/maintenance/solars/starboard)
 "irj" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -15591,10 +15596,6 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
 /area/hallway/secondary/command)
-"jpV" = (
-/obj/structure/cable,
-/turf/open/floor/plating/asteroid,
-/area/maintenance/solars/starboard)
 "jqn" = (
 /obj/machinery/vending/boozeomat,
 /obj/machinery/light{
@@ -17668,6 +17669,13 @@
 "kCC" = (
 /turf/closed/wall/r_wall,
 /area/bridge)
+"kCK" = (
+/obj/machinery/power/smes/engineering{
+	charge = 5e+006
+	},
+/obj/structure/cable,
+/turf/open/floor/plating/asteroid,
+/area/maintenance/solars/starboard)
 "kCU" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/white/side{
@@ -21608,6 +21616,17 @@
 	dir = 8
 	},
 /area/quartermaster/miningdock)
+"mKh" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/external{
+	name = "Solar Maintenance";
+	req_access_txt = "10; 13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid,
+/area/maintenance/solars/starboard)
 "mKi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -22590,9 +22609,6 @@
 "nnm" = (
 /turf/open/floor/plasteel/white/side,
 /area/quartermaster/storage)
-"nnE" = (
-/turf/open/floor/plating/asteroid,
-/area/maintenance/solars/starboard)
 "nnS" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 5
@@ -22782,11 +22798,8 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
 "ntI" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/plating/asteroid,
-/area/engine/voidtech)
+/area/maintenance/solars/starboard)
 "ntM" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 8
@@ -23159,7 +23172,6 @@
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "nGg" = (
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable,
 /turf/open/floor/plating/asteroid,
 /area/maintenance/solars/starboard)
@@ -27740,15 +27752,7 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/office/secretary)
 "qsD" = (
-/obj/structure/cable,
-/obj/machinery/door/airlock/external{
-	name = "Solar Maintenance";
-	req_access_txt = "10; 13"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/turf/open/floor/plating/asteroid,
+/turf/closed/mineral/random/stationside/asteroid,
 /area/maintenance/solars/starboard)
 "qsS" = (
 /turf/open/floor/plasteel/white/side{
@@ -29994,17 +29998,6 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
-"rRi" = (
-/obj/structure/cable,
-/obj/machinery/door/airlock/external{
-	name = "Solar Maintenance";
-	req_access_txt = "10; 13"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/turf/open/floor/plating/asteroid,
-/area/maintenance/solars/starboard)
 "rRt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -30022,7 +30015,7 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/command)
 "rRQ" = (
-/turf/closed/mineral/random/stationside/asteroid,
+/turf/open/floor/plasteel/dark,
 /area/maintenance/solars/starboard)
 "rRS" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
@@ -30754,7 +30747,12 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal/incinerator)
 "snR" = (
-/turf/open/floor/plasteel/dark,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/light/small,
+/turf/open/floor/plating/asteroid,
 /area/maintenance/solars/starboard)
 "soc" = (
 /obj/structure/cable,
@@ -30764,11 +30762,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/storage)
 "soo" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/asteroid,
+/turf/closed/wall/r_wall,
 /area/maintenance/solars/starboard)
 "soH" = (
 /obj/machinery/door/firedoor,
@@ -32873,9 +32867,13 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit)
 "tBw" = (
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space)
+/obj/machinery/computer/pod/old/mass_driver_controller{
+	id = "voidtechvehicle";
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/turf/open/floor/plating/asteroid,
+/area/engine/voidtech)
 "tBx" = (
 /obj/machinery/shower{
 	dir = 4
@@ -33697,7 +33695,7 @@
 /area/hydroponics)
 "ubL" = (
 /obj/structure/table,
-/turf/open/floor/plating/asteroid,
+/turf/open/floor/plasteel/dark,
 /area/engine/voidtech)
 "ubR" = (
 /obj/structure/disposalpipe/segment,
@@ -37005,9 +37003,9 @@
 	},
 /area/hallway/secondary/command)
 "vWT" = (
+/obj/machinery/power/tracker,
 /obj/structure/cable,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard)
 "vXb" = (
 /obj/structure/cable,
@@ -37886,7 +37884,9 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "wyO" = (
-/turf/closed/wall/r_wall,
+/obj/machinery/power/apc/auto_name/north,
+/obj/structure/cable,
+/turf/open/floor/plating/asteroid,
 /area/maintenance/solars/starboard)
 "wze" = (
 /obj/machinery/disposal/bin,
@@ -38297,10 +38297,17 @@
 /turf/open/floor/engine/air,
 /area/engine/atmos)
 "wLk" = (
-/obj/machinery/power/tracker,
 /obj/structure/cable,
-/turf/open/floor/plasteel/airless/solarpanel,
-/area/solar/starboard)
+/obj/machinery/door/airlock/external{
+	name = "Solar Maintenance";
+	req_access_txt = "10; 13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating/asteroid,
+/area/maintenance/solars/starboard)
 "wLD" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/white/side{
@@ -89380,7 +89387,7 @@ vuF
 vuF
 vuF
 vuF
-tBw
+vuF
 vuF
 vuF
 vuF
@@ -90667,7 +90674,7 @@ vuF
 vuF
 vuF
 vuF
-vuF
+vWT
 vuF
 vuF
 vuF
@@ -90924,7 +90931,7 @@ vuF
 vuF
 vuF
 vuF
-vuF
+ogK
 vuF
 vuF
 vuF
@@ -91181,7 +91188,7 @@ vuF
 vuF
 vuF
 vuF
-vuF
+ogK
 vuF
 vuF
 vuF
@@ -91432,19 +91439,19 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
+psT
+psT
+psT
+psT
+psT
+psT
+ogK
+psT
+psT
+psT
+psT
+psT
+psT
 vuF
 vuF
 vuF
@@ -91688,21 +91695,21 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
+psT
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+psT
 vuF
 vuF
 vuF
@@ -91944,22 +91951,22 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
+psT
+ogK
+ogK
 psT
 psT
 psT
 psT
+psT
+ogK
+psT
+psT
+psT
+psT
+psT
+ogK
+ogK
 psT
 vuF
 vuF
@@ -92200,25 +92207,25 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-ogK
-ogK
-ogK
-ogK
-ogK
+psT
 ogK
 ogK
 psT
+aec
+hnq
+hnq
+hnq
+psT
+ogK
+psT
+hnq
+hnq
+hnq
+aec
+psT
+ogK
+ogK
+vuF
 vuF
 vuF
 vuF
@@ -92458,25 +92465,25 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-ogK
 ogK
 psT
-psT
-psT
-psT
-psT
+aec
+cEj
 ogK
 ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+ogK
+cEj
+aec
 psT
+ogK
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -92716,26 +92723,26 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
+aec
+cEj
+cEj
+aec
+aec
+aec
 vuF
 ogK
 vuF
+aec
+aec
+aec
+cEj
+cEj
+aec
 vuF
 vuF
 vuF
 vuF
 vuF
-psT
-ogK
-ogK
-psT
-psT
 vuF
 vuF
 vuF
@@ -92974,25 +92981,25 @@ vuF
 vuF
 vuF
 vuF
+cEj
+aec
+vuF
+vuF
+vuF
+qsD
+wLk
+soo
+vuF
+vuF
+vuF
+aec
+cEj
 vuF
 vuF
 vuF
 vuF
 vuF
 vuF
-rRQ
-rRi
-wyO
-vuF
-vuF
-vuF
-vuF
-vuF
-vuF
-psT
-ogK
-ogK
-psT
 vuF
 vuF
 vuF
@@ -93231,25 +93238,25 @@ vuF
 vuF
 vuF
 vuF
-vuF
-vuF
+aec
 vuF
 vuF
 vuF
 mYn
-wyO
-jpV
-rRQ
+soo
+nGg
+qsD
+gtJ
+vuF
+vuF
+vuF
+aec
 vuF
 vuF
 vuF
 vuF
 vuF
 vuF
-vuF
-psT
-ogK
-psT
 vuF
 vuF
 vuF
@@ -93491,12 +93498,12 @@ vuF
 vuF
 vuF
 vuF
-vuF
 mYn
 mYn
-wyO
+soo
+mKh
 qsD
-rRQ
+mYn
 mYn
 vuF
 vuF
@@ -93504,9 +93511,9 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -93746,24 +93753,24 @@ vuF
 vuF
 vuF
 vuF
-vuF
 mYn
 mYn
 mYn
+qsD
 rRQ
-nnE
-jpV
-dZF
-wyO
+nGg
+egw
+soo
+mYn
 mYn
 vuF
 vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -94002,25 +94009,25 @@ vuF
 vuF
 vuF
 vuF
-vuF
 mYn
 mYn
 mYn
 mYn
+qsD
+ntI
 rRQ
-nnE
 snR
 soo
-wyO
+mYn
+mYn
 mYn
 vuF
 vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -94258,26 +94265,26 @@ vuF
 vuF
 vuF
 vuF
-vuF
 mYn
 mYn
 mYn
 mYn
 mYn
+soo
 wyO
 nGg
-jpV
-iqC
-rRQ
+kCK
+qsD
+mYn
+mYn
 mYn
 vuF
 vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -94515,7 +94522,6 @@ vuF
 vuF
 vuF
 vuF
-vuF
 mYn
 mYn
 mYn
@@ -94523,7 +94529,9 @@ sra
 sra
 mYn
 mYn
-hnq
+aKQ
+mYn
+mYn
 mYn
 mYn
 mYn
@@ -94532,9 +94540,8 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -94789,9 +94796,9 @@ mYn
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -95043,13 +95050,13 @@ mae
 ekO
 mYn
 mYn
+mYn
 vuF
 vuF
 vuF
-psT
-ogK
-psT
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -95286,12 +95293,12 @@ vuF
 vuF
 vuF
 vuF
-mYn
+sra
 mYn
 sra
 cgC
 wgc
-tMh
+eCx
 tMh
 ubL
 sKf
@@ -95300,14 +95307,14 @@ eCx
 ekO
 mYn
 mYn
+mYn
 vuF
 vuF
 vuF
-psT
-ogK
-vWT
-vWT
-wLk
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -95548,7 +95555,7 @@ mYn
 mYn
 pLZ
 pLZ
-ntI
+tMh
 eCx
 gbj
 gkp
@@ -95560,10 +95567,10 @@ mYn
 vuF
 vuF
 vuF
-psT
-ogK
-psT
-psT
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -95817,9 +95824,9 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -96063,8 +96070,8 @@ vuF
 mYn
 mYn
 mYn
-tMh
-cEj
+tBw
+sra
 mYn
 sra
 sra
@@ -96074,11 +96081,11 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
 vuF
-aec
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -96331,11 +96338,11 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
 vuF
-aec
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -96588,11 +96595,11 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-psT
 vuF
-aec
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -96844,12 +96851,12 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-ogK
-psT
 vuF
-aec
+vuF
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -97100,13 +97107,13 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-ogK
-psT
 vuF
 vuF
-aec
+vuF
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -97356,10 +97363,10 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-ogK
-psT
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -97612,10 +97619,10 @@ vuF
 vuF
 vuF
 vuF
-psT
-ogK
-ogK
-psT
+vuF
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
@@ -97869,9 +97876,9 @@ vuF
 vuF
 vuF
 vuF
-ogK
-ogK
-psT
+vuF
+vuF
+vuF
 vuF
 vuF
 vuF
