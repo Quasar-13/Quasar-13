@@ -53,3 +53,30 @@
 	armor = list(MELEE = 40, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/suit/armor/hopcoat
+	name = "HOP's Formal Coat"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A formal but simple coat worn by the Head of Personnel."
+	icon_state = "coathop"
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/suit/armor/hopjacket
+	name = "Head Of Personnel's Jacket"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A rather fancy coat worn by the Head of Personnel."
+	icon_state = "hopjacket"
+
+/obj/item/clothing/suit/armor/hopjacket/commjacket
+	name = "Communications Officer's Jacket"
+	desc = "A rather fancy coat worn by the communications officer."
+
+/obj/item/clothing/suit/armor/hos/peacoat
+	name = "Head Of Security's Peacoat"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A coat popular among the female Head of Securities.."
+	icon_state = "hos"
+

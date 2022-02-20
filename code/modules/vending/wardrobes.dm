@@ -122,6 +122,8 @@
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/hazard = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/green = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/old = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/turtle = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/suit = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/atmos_wardrobe
 	payment_department = ACCOUNT_ENG
@@ -363,6 +365,10 @@
 					/obj/item/clothing/under/rank/civilian/lawyer/black/skirt = 1,
 					/obj/item/clothing/shoes/laceup = 2,
 					/obj/item/clothing/accessory/lawyers_badge = 2)
+	contraband = list(/obj/item/clothing/under/suit/helltaker  = 3,
+					/obj/item/clothing/under/solgov/suit = 2,
+					/obj/item/clothing/under/syndicate/suit = 3,
+					/obj/item/clothing/under/bni = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/law_wardrobe
 	payment_department = ACCOUNT_SRV
 /obj/item/vending_refill/wardrobe/law_wardrobe

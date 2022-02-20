@@ -44,7 +44,7 @@
 /obj/machinery/vending/command
 	name = "\improper Command Time"
 	desc = "A command equipment vendor."
-	product_ads = "Come get your memories"
+	product_ads = "Everything you need for success"
 	icon_state = "wallcom"
 	icon_deny = "wallcom"
 	light_mask = "wallmed-light-mask"
@@ -59,7 +59,11 @@
 					/obj/item/clothing/head/beret/command = 7,
 					/obj/item/card/id/captains_spare = 1)
 	contraband = list(/obj/item/clothing/head/crown/fancy = 3,
-					/obj/item/clothing/glasses/sunglasses/gar/supergar = 2)
+					/obj/item/clothing/glasses/sunglasses/gar/supergar = 2,
+					/obj/item/clothing/under/suit/helltaker = 3,
+					/obj/item/clothing/under/bni = 1,
+					/obj/item/clothing/under/rank/captain/female = 1,
+					/obj/item/clothing/under/rank/captain/dress = 1)
 	premium = list(/obj/item/coin/antagtoken = 2,
 					/obj/item/clothing/glasses/sunglasses = 3)
 
