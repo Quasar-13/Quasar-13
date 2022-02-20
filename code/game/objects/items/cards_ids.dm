@@ -367,6 +367,18 @@ update_label()
 	assignment = "Reaper"
 	registered_name = "Thirteen"
 
+/obj/item/card/id/rainbow
+	name = "rainbow identification card"
+	id_type_name = "rainbow identification card"
+	desc = "A raindow card occasionally found in maints."
+	icon_state = "card_rainbow"
+
+/obj/item/card/id/carp
+	name = "carp identification card"
+	id_type_name = "carp identification card"
+	desc = "A purple carp id occasionally found in maints."
+	icon_state = "card_carp"
+
 /obj/item/card/id/gold
 	name = "gold identification card"
 	id_type_name = "gold identification card"
