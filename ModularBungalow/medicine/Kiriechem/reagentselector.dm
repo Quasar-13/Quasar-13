@@ -7,8 +7,7 @@
 	max_input_reagent_amount = 1
 	min_input_reagents = 4
 	max_input_reagents = 4
-	possible_reagents = list(/datum/reagent/mixer, /datum/reagent/mixer/bicarbide, /datum/reagent/mixer/irimide, /datum/reagent/mixer/talcide,
-							/datum/reagent/mixer/helioside, /datum/reagent/mixer/selenide, /datum/reagent/mixer/kelaide,
+	possible_reagents = list(/datum/reagent/mixer, /datum/reagent/mixer/bicarbide, /datum/reagent/mixer/irimide, /datum/reagent/mixer/talcide, /datum/reagent/mixer/kelaide,
 							/datum/reagent/mixer/dioxadide, /datum/reagent/mixer/pensal, /datum/reagent/mixer/etheride, /datum/reagent/mixer/peroxidide,
 							/datum/reagent/mixer/meride, /datum/reagent/mixer/polyethylide, /datum/reagent/mixer/haloride, /datum/reagent/mixer/meloride,
 							/datum/reagent/mixer/caemide)
@@ -29,42 +28,6 @@
 	max_input_reagents = 3
 	results = list(/datum/reagent/toxin/carpotoxin = 3)
 
-//Verafore
-/datum/chemical_reaction/randomized/kiriechem/verafore
-	min_input_reagents = 6
-	max_input_reagents = 6
-	results = list(/datum/reagent/medicine/verafore = 7)
-
-//Giadone
-/datum/chemical_reaction/randomized/kiriechem/giadone
-	min_input_reagents = 2
-	max_input_reagents = 2
-	results = list(/datum/reagent/medicine/giadone = 3)
-
-//Bicaridine
-/datum/chemical_reaction/randomized/kiriechem/bicaridine
-	min_input_reagents = 3
-	max_input_reagents = 3
-	results = list(/datum/reagent/medicine/bicaridine = 3)
-
-//Kelotane
-/datum/chemical_reaction/randomized/kiriechem/kelotane
-	min_input_reagents = 3
-	max_input_reagents = 3
-	results = list(/datum/reagent/medicine/kelotane = 3)
-
-//Omnidrite
-/datum/chemical_reaction/randomized/kiriechem/omnidrite
-	min_input_reagents = 4
-	max_input_reagents = 4
-	results = list(/datum/reagent/medicine/omnidrite = 4)
-
-//Mutation Toxin
-/datum/chemical_reaction/randomized/kiriechem/mutation
-	min_input_reagents = 5
-	max_input_reagents = 5
-	results = list(/datum/reagent/mutationtoxin = 6)
-
 //Mint Toxin
 /datum/chemical_reaction/randomized/kiriechem/mint
 	min_input_reagents = 4
@@ -77,25 +40,11 @@
 	max_input_reagents = 3
 	results = list(/datum/reagent/toxin/staminatoxin = 4)
 
-//Hellwater
-/datum/chemical_reaction/randomized/kiriechem/hellwater
-	min_input_reagents = 5
-	max_input_reagents = 5
-	results = list(/datum/reagent/hellwater = 6)
-
-
-//Super Lube
-/datum/chemical_reaction/randomized/kiriechem/superlube
-	min_input_reagents = 4
-	max_input_reagents = 4
-	results = list(/datum/reagent/lube/superlube = 5)
-
 //Determination
 /datum/chemical_reaction/randomized/kiriechem/determination
 	min_input_reagents = 4
 	max_input_reagents = 4
 	results = list(/datum/reagent/determination = 5)
-
 
 //Venadone
 /datum/chemical_reaction/randomized/kiriechem/venadone
@@ -120,41 +69,82 @@
 
 //Spirozrite
 /datum/chemical_reaction/randomized/kiriechem/table2/spirozrite
-	min_input_reagents = 2
-	max_input_reagents = 2
 	results = list(/datum/reagent/medicine/spirozrite = 2)
 
 //Citisrite
 /datum/chemical_reaction/randomized/kiriechem/table2/citisrite
-	min_input_reagents = 2
-	max_input_reagents = 2
 	results = list(/datum/reagent/medicine/citisrite = 2)
 
 //Purgrite
 /datum/chemical_reaction/randomized/kiriechem/table2/purgrite
-	min_input_reagents = 2
-	max_input_reagents = 2
 	results = list(/datum/reagent/medicine/purgrite = 2)
 
 //Sanguirite
 /datum/chemical_reaction/randomized/kiriechem/table2/sanguirite
-	min_input_reagents = 2
-	max_input_reagents = 2
 	results = list(/datum/reagent/medicine/coagulant = 2)
 
 //Giadone
 /datum/chemical_reaction/randomized/kiriechem/table2/giadone
-	min_input_reagents = 2
-	max_input_reagents = 2
-	results = list(/datum/reagent/medicine/giadone = 3)
+	results = list(/datum/reagent/medicine/giadone = 2)
 
 //Bicarbital
 /datum/chemical_reaction/randomized/kiriechem/table2/bicarbital
 	min_input_reagents = 3
 	max_input_reagents = 3
 	results = list(/datum/reagent/medicine/bicarbital = 3)
+
 //Keluri
 /datum/chemical_reaction/randomized/kiriechem/table2/keluri
 	min_input_reagents = 3
 	max_input_reagents = 3
 	results = list(/datum/reagent/medicine/keluri = 3)
+
+//Table 3
+//This is WAY harder to make but also very much worth it.
+
+//Omnizine
+/datum/chemical_reaction/randomized/kiriechem/table3
+	randomize_req_temperature = FALSE
+	randomize_inputs = TRUE
+	min_input_reagent_amount = 1
+	max_input_reagent_amount = 1
+	min_input_reagents = 2
+	max_input_reagents = 2
+	possible_reagents = list(/datum/reagent/mixer/selenide, /datum/reagent/mixer/helioside, /datum/reagent/mixer/kelaide, /datum/reagent/mixer/proteoside, /datum/reagent/mixer/meteoside,
+							/datum/reagent/mixer/hadronide, /datum/reagent/mixer/etheride, /datum/reagent/mixer/etherideii, /datum/reagent/mixer/etherideiii, /datum/reagent/mixer/etherideiv, /datum/reagent/mixer/etheridev)
+	max_catalysts = 0
+	results = list(/datum/reagent/medicine/omnizine = 2)
+
+//Omnidrite
+/datum/chemical_reaction/randomized/kiriechem/table3/omnidrite
+	results = list(/datum/reagent/medicine/omnidrite = 2)
+
+//Super Lube
+/datum/chemical_reaction/randomized/kiriechem/table3/superlube
+	results = list(/datum/reagent/lube/superlube = 2)
+
+//Bicaridine
+/datum/chemical_reaction/randomized/kiriechem/table3/bicaridine
+	results = list(/datum/reagent/medicine/bicaridine = 2)
+
+//Kelotane
+/datum/chemical_reaction/randomized/kiriechem/table3/kelotane
+	results = list(/datum/reagent/medicine/kelotane = 2)
+
+//Mutation Toxin
+/datum/chemical_reaction/randomized/kiriechem/table3/mutation
+	min_input_reagents = 3
+	max_input_reagents = 3
+	results = list(/datum/reagent/mutationtoxin = 3)
+
+//Verafore
+/datum/chemical_reaction/randomized/kiriechem/table3/verafore
+	min_input_reagents = 3
+	max_input_reagents = 3
+	results = list(/datum/reagent/medicine/verafore = 3)
+
+//Hellwater
+/datum/chemical_reaction/randomized/kiriechem/table3/hellwater
+	min_input_reagents = 3
+	max_input_reagents = 3
+	results = list(/datum/reagent/hellwater = 3)
