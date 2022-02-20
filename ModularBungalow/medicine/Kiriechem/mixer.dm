@@ -43,7 +43,7 @@
 
 /datum/chemical_reaction/pbicarbide
 	results = list(/datum/reagent/mixer/pbicarbide = 2)
-	required_reagents = list(datum/reagent/drug/space_drugs = 1, /datum/reagent/mixer/bicarbide = 1)
+	required_reagents = list(/datum/reagent/drug/space_drugs = 1, /datum/reagent/mixer/bicarbide = 1)
 
 
 
