@@ -529,82 +529,38 @@
 	charge_rate = 200
 	recharge_sound = null
 
-/* 	Add this back later, fuck it
-//Katana
-/obj/item/melee/ckatana
-	name = "captain's katana"
-	desc = "This Captain has some sort of 'class'"
-	icon_state = "ckatana"
-	inhand_icon_state = "ckatana"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	flags_1 = CONDUCT_1
-	force = 21
+//Captain knife
+/obj/item/kitchen/knife/meteorknife
+	name = "Himmelsuralteisenmesser"
+	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife."
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "cosmic"
+	force = 13
 	throwforce = 10
+	block_chance = 7
+	w_class = WEIGHT_CLASS_NORMAL
+	block_chance = 20
+
+//Captain Spear 2
+
+/obj/item/kitchen/knife/halberd
+	name = "gae bolg"
+	desc = "The weapon of an tough captain. Has extra reach."
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "gae_bolg"
+	inhand_icon_state = "gae_bolg"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	slot_flags = ITEM_SLOT_BELT
+	force = 16
+	slowdown = 0.12
+	throwforce = 20
+	reach = 2
+	armour_penetration = 14
+	sharpness = SHARP_POINTY
 	w_class = WEIGHT_CLASS_HUGE
+	attack_verb_continuous = list("stabs", "pierces", "slashes")
+	attack_verb_simple = list("stab", "pierces", "slash")
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	block_chance = 15
-	sharpness = SHARP_EDGED
-	max_integrity = 200
-	bare_wound_bonus = 5
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
-	resistance_flags = FIRE_PROOF
 
-/obj/item/melee/sabre/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = 0 //Don't bring a sword to a gunfight
-	return ..()
 
-//Katana Sheath
-
-/obj/item/storage/belt/katana
-	name = "katana sheath"
-	desc = "A plain, but still menacing purple sheath. Moon runes are written on the side."
-	icon_state = "ksheath"
-	inhand_icon_state = "ksheath"
-	worn_icon_state = "ksheath"
-	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/storage/belt/katana/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 1
-	STR.rustle_sound = FALSE
-	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.set_holdable(list(
-		/obj/item/melee/ckatana
-		))
-
-/obj/item/storage/belt/katana/examine(mob/user)
-	. = ..()
-	if(length(contents))
-		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
-
-/obj/item/storage/belt/rapier/AltClick(mob/user)
-	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
-		return
-	if(length(contents))
-		var/obj/item/I = contents[1]
-		user.visible_message("<span class='notice'>[user] takes [I] out of [src].</span>", "<span class='notice'>You take [I] out of [src].</span>")
-		user.put_in_hands(I)
-		update_icon()
-	else
-		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-
-/obj/item/storage/belt/katana/update_icon_state()
-	icon_state = initial(inhand_icon_state)
-	inhand_icon_state = initial(inhand_icon_state)
-	worn_icon_state = initial(worn_icon_state)
-	if(contents.len)
-		icon_state += "-katana"
-		inhand_icon_state += "-katana"
-		worn_icon_state += "-katana"
-
-/obj/item/storage/belt/katana/PopulateContents()
-	new /obj/item/melee/ckatana(src)
-	update_icon()
-
-	*/

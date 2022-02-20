@@ -93,7 +93,7 @@
 	name = "Energy Shotgun"
 	desc = "For the captain that wishes to be a doom marine."
 
-/obj/item/storage/box/captain/shotgun/PopulateContents()
+/obj/item/storage/box/captain/gun/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
 
 
@@ -146,6 +146,13 @@
 
 /obj/item/storage/box/sabre/katana/PopulateContents()
 	new /obj/item/katana/captain(src)
+
+/obj/item/storage/box/sabre/cosmic
+	name = "meteoric iron dagger"
+	desc = "A dagger made from ancient iron."
+
+/obj/item/storage/box/sabre/cosmic/PopulateContents()
+	new /obj/item/kitchen/knife/meteorknife(src)
 
 //BLACKSITE
 /obj/item/choice_beacon/bungalow/combat/deathsquad
