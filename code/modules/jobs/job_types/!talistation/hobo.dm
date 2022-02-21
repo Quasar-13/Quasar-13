@@ -4,7 +4,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "nobody"
+	supervisors = "the voices in your head."
 	selection_color = "#111111"
 	maptype = "vagabond"
 
@@ -16,13 +16,13 @@
 	name = "Vagabond"
 	jobtype = /datum/job/space_hobo
 
-	mask = /obj/item/clothing/mask/balaclava
+	ears = null
 	uniform = /obj/item/clothing/under/vagrant
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_hand = /obj/item/reagent_containers/food/drinks/bottle/whiskey
 	r_pocket = /obj/item/trash/can/food
 	shoes = /obj/item/clothing/shoes/sandal
-	backpack_contents = list(/obj/item/kitchen/knife/shiv = 1, /obj/item/trash/can/food/peaches/maint  = 1, /obj/item/storage/fancy/cigarettes = 1)
+	backpack_contents = list(/obj/item/kitchen/knife/shiv = 1, /obj/item/trash/can/food/peaches/maint  = 1, /obj/item/storage/fancy/cigarettes = 1, /obj/item/clothing/mask/balaclava, /obj/item/coin/iron = 1, /obj/item/storage/box/matches = 1 )
 
 /obj/effect/landmark/start/space_hobo
 	name = "Vagabond"
