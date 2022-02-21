@@ -15,11 +15,10 @@
 	jobtype = /datum/job/space_hobo
 
 	mask = /obj/item/clothing/mask/balaclava
-	uniform = /obj/item/clothing/under/color/grey
+	uniform = /obj/item/clothing/under/vagrant
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_hand = /obj/item/reagent_containers/food/drinks/bottle/whiskey
 	r_pocket = /obj/item/trash/can/food
-	suit = /obj/item/clothing/suit/jacket/miljacket
 	shoes = /obj/item/clothing/shoes/sandal
 	backpack_contents = list(/obj/item/kitchen/knife/shiv = 1, /obj/item/trash/can/food/peaches/maint  = 1, /obj/item/storage/fancy/cigarettes = 1)
 
