@@ -8,6 +8,16 @@
 	icon_state = "nso"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 60, WOUND = 10)
 
+//NSO helmet
+/obj/item/clothing/head/helmet/ranger
+	name = "head of security's ranger helmet"
+	desc = "Double plated."
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	icon_state = "vet"
+	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 60, WOUND = 10)
+
 //Provost Hat
 /obj/item/clothing/head/caphat/provost
 	name = "provost hat."
@@ -23,4 +33,4 @@
 	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "viceadmiral_hat"
-	
+
