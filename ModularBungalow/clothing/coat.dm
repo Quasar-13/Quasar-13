@@ -86,3 +86,11 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
+
+/obj/item/clothing/suit/qm
+	name = "quartermaster's coat"
+	desc = "A button-up jacket used by the quartermaster."
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon_state = "qmjacket"
+	inhand_icon_state = "armor"
