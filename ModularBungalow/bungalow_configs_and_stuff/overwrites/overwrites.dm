@@ -3,6 +3,9 @@
 	new /obj/item/gun/energy/disabler/head(src)
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/under/misc/parade/qm(src)
+	new /obj/item/clothing/under/rank/cargo/qm/dark(src)
+	new /obj/item/clothing/under/rank/cargo/qm/turtle(src)
+	new /obj/item/clothing/suit/qm(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
