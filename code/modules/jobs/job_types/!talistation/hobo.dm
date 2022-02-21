@@ -5,10 +5,12 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "nobody"
-	selection_color = "#442003"
-	mapexclude = list("goonlite")
+	selection_color = "#111111"
+	maptype = "vagabond"
 
 	outfit = /datum/outfit/job/space_hobo
+
+	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVEPVT
 
 /datum/outfit/job/space_hobo
 	name = "Vagabond"

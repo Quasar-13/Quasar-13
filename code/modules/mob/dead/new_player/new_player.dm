@@ -414,7 +414,7 @@
 
 	var/list/department_categories = list()
 
-	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy"|| SSmaptype.maptype == "vagabond")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
 	if(SSmaptype.maptype == "ship")

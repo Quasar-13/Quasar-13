@@ -6,7 +6,7 @@
 	spawn_positions = 2
 	supervisors = "the chief medical officer"
 	selection_color = "#ccddee"
-	mapexclude = list("goonlite")
+	mapexclude = list("goonlite", "vagabond")
 
 	outfit = /datum/outfit/job/paramedic
 
@@ -18,8 +18,6 @@
 	paycheck_department = ACCOUNT_MED
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
-
-	display_order = JOB_DISPLAY_ORDER_PARAMEDIC
 	bounty_types = CIV_JOB_MED
 
 /datum/outfit/job/paramedic
