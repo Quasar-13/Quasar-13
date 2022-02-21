@@ -237,3 +237,35 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	icon_state = "protected_custody_skirt"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+
+//Vagrant clothing
+/obj/item/clothing/under/vagrant
+	name = "disheveled clothing"
+	desc = "Worn out clothing for worn out people"
+	icon_state = "vagrant"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+//Vetranger clothes
+/obj/item/clothing/under/veteran
+	name = "veteran ranger flannel"
+	desc = "Clothing for the best bounty hunter"
+	icon_state = "vetranger"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/veteran/hos
+	name = "scrap ranger flannel"
+	desc = "Clothing made from scrap. Patched together from the clothes of the vagrants you slaughtered."
+
+//Brig Doc clothing
+/obj/item/clothing/under/brigdoc
+	name = "brig doctor's jumpsuit"
+	desc = "Clothing for the best bounty hunter"
+	icon_state = "utilmed"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
