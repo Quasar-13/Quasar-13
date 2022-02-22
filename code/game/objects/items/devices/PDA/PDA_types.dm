@@ -231,7 +231,7 @@
 	icon_state = "pda-genetics"
 
 /obj/item/pda/chemist
-	name = "chemist PDA"
+	name = "chemical researcher PDA"
 	default_cartridge = /obj/item/cartridge/chemistry
 	icon_state = "pda-chemre"
 
