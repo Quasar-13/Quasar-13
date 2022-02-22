@@ -317,7 +317,9 @@
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
 	},
-/obj/machinery/airalarm/directional/north,
+/obj/item/radio/intercom{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
 "aiO" = (
@@ -533,6 +535,22 @@
 "aox" = (
 /turf/closed/mineral/random/stationside/asteroid,
 /area/space/nearstation)
+"aoF" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/brown{
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "warehouse shutters button";
+	pixel_x = -8;
+	pixel_y = 34;
+	req_access_txt = "28"
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/storage)
 "aoV" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 4
@@ -8285,6 +8303,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
 	dir = 5
+	},
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "warehouse shutters button";
+	pixel_x = 8;
+	pixel_y = -34;
+	req_access_txt = "28"
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/warehouse)
@@ -18673,6 +18698,9 @@
 	pixel_y = -27;
 	req_access_txt = "57"
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
 "kIL" = (
@@ -18964,6 +18992,7 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
 "kQU" = (
+/obj/machinery/camera/autoname,
 /turf/open/floor/wood,
 /area/security/detectives_office)
 "kQX" = (
@@ -29745,7 +29774,7 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/dark,
 /area/security/brig)
 "rjL" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
@@ -31324,7 +31353,7 @@
 	name = "Cell 1 Locker"
 	},
 /obj/machinery/flasher{
-	id = "Cell 3";
+	id = "Cell 1";
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -32674,7 +32703,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/camera/autoname,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#c1caff"
+	},
 /turf/open/floor/wood,
 /area/security/detectives_office)
 "sRQ" = (
@@ -33653,12 +33685,10 @@
 /turf/open/floor/carpet/donk,
 /area/crew_quarters/dorms)
 "tse" = (
-/obj/item/radio/intercom{
-	pixel_y = 20
-	},
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
 	},
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
 "tsC" = (
@@ -37706,6 +37736,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/entry)
+"vOW" = (
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/has_grav)
 "vPb" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -65622,7 +65655,7 @@ dOh
 bky
 ipU
 ldb
-dGQ
+aoF
 jfR
 oHF
 sdm
@@ -99961,8 +99994,8 @@ cNT
 cNT
 cNT
 cNT
-nua
-nua
+vOW
+vOW
 vYC
 vYC
 vYC
@@ -100219,8 +100252,8 @@ cNT
 cNT
 cNT
 cNT
-nua
-nua
+vOW
+vOW
 vYC
 vYC
 vYC
@@ -100477,16 +100510,16 @@ cNT
 cNT
 cNT
 cNT
-nua
-nua
+vOW
+vOW
 vYC
 vYC
 vYC
 vYC
 vYC
 vYC
-nua
-nua
+vOW
+vOW
 vYC
 vYC
 cNT
@@ -100741,8 +100774,8 @@ cNT
 vYC
 vYC
 vYC
-nua
-nua
+vOW
+vOW
 cNT
 cNT
 cNT
