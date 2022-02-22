@@ -72,7 +72,7 @@
 	senior_title = list("Genetic Engineer", "Freak of Genetics")
 
 /datum/job/chemre
-	alt_titles = list("Chemical Researcher", "Chemical Scientist")
+	alt_titles = list("Chemist", "Chemical Scientist")
 	senior_title = list("Chemical Engineer")
 
 //Medical
@@ -104,7 +104,7 @@
 /datum/job/officer
 	alt_titles = list("Security Guard", "Hazardous Device Technician", "NT Military Police")
 	senior_title = list("Man-at-Arms", "Sergeant Officer")
-	
+
 /datum/job/prisoner
 	alt_titles = list("Protected Custody")
 	senior_title = list("Detained Warcriminal")

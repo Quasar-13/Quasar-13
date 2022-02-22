@@ -1,6 +1,6 @@
 /datum/job/chemre
-	title = "Chemist"
-	department_head = list("Research Director")
+	title = "Chemical Researcher"
+	department_head = list("Research Director", "Chief Medical Officer")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
@@ -23,7 +23,7 @@
 	bounty_types = CIV_JOB_CHEM
 
 /datum/outfit/job/chemre
-	name = "Chemist"
+	name = "Chemical Researcher"
 	jobtype = /datum/job/chemre
 
 	glasses = /obj/item/clothing/glasses/science
@@ -42,5 +42,5 @@
 
 //Spawn Point
 /obj/effect/landmark/start/chem
-	name = "Chemist"
-	icon_state = "Chemist"
+	name = "Chemical Researcher"
+	icon_state = "Chemical Researcher"

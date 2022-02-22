@@ -37,7 +37,7 @@
 
 //Chemical Researcher labcoat
 /obj/item/clothing/suit/neocoat/chemre
-	name = "Chemist's labcoat"
+	name = "Chemical Researcher's labcoat"
 	desc = "A beautiful purple and orange labcoat for the resarchers to wear. has outstanding acid resistance."
 	icon_state = "labcoat_chemre"
 	inhand_icon_state = "labcoat"
