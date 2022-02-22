@@ -29,6 +29,8 @@
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
 	force = 23
+	throwforce = 5
+	wound_bonus = -10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -81,7 +83,7 @@
 
 //Captain's katana
 /obj/item/katana/captain
-	name = "captain's katana"
+	name = "daisa's katana"
 	desc = "This Captain has some sort of 'class'"
 	icon_state = "katana"
 	inhand_icon_state = "katana"
@@ -91,7 +93,7 @@
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	force = 21
-	throwforce = 10
+	throwforce = 12
 	w_class = WEIGHT_CLASS_HUGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
@@ -115,7 +117,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 16
 	throwforce = 43
-	armour_penetration = 10
+	armour_penetration = 30
 	throw_speed = 5
 	throw_range = 7
 	bare_wound_bonus = 7
@@ -137,10 +139,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	obj_flags = UNIQUE_RENAME
-	force = 13
+	force = 11
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	block_chance = 60
+	block_chance = 70
 	armour_penetration = 90
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("stabs", "slashes")
@@ -554,10 +556,18 @@
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "cosmic"
 	slot_flags = ITEM_SLOT_BELT
-	force = 12
-	throwforce = 10
+	force = 16
+	armour_penetration = -10
+	throwforce = 15
 	w_class = WEIGHT_CLASS_NORMAL
-	block_chance = 73
+	sharpness = SHARP_EDGED
+	block_chance = 20
+
+/obj/item/melee/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(attack_type == PROJECTILE_ATTACK)
+		final_block_chance = 0 //Don't bring a sword to a gunfight
+	return ..()
+
 
 //Captain Spear 2
 /obj/item/melee/halberd
@@ -569,7 +579,7 @@
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
-	force = 16
+	force = 17
 	slowdown = 0.12
 	throwforce = 20
 	reach = 2
