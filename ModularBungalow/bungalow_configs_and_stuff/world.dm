@@ -25,8 +25,8 @@
 	var/map_name = SSmapping.config?.map_name
 	s+= "<b>[server_caption]</b>"
 	s += " ("
-	s += "<br><b>Best cuts this side of the andromeda!</b>"
-	s += "<br>Roleplay: \[<b>Medium</b>\]"
+	s += "<br><b>Classic TG... With plenty of new content!</b>"
+	s += "<br>Roleplay: \[<b>Mixed</b>\]"
 	s += "<br>Map: [map_name]"
 
 	var/players = GLOB.clients.len
