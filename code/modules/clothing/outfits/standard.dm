@@ -242,7 +242,7 @@
 	name = "CentCom Commander"
 
 	uniform = /obj/item/clothing/under/rank/centcom/commander
-	suit = /obj/item/clothing/suit/armor/captain/casio
+	suit = /obj/item/clothing/suit/armor/captain/naval
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/color/captain/commodore
 	ears = /obj/item/radio/headset/heads/headset_cent/commander

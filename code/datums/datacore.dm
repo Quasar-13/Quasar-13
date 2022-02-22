@@ -189,7 +189,7 @@
 		"Silicon"
 		)
 
-	if(SSmaptype.maptype == "casio")
+	if(SSmaptype.maptype == "naval")
 		manifest_out = list(
 		"Command",
 		"NT Marines",
@@ -276,7 +276,7 @@
 			"Service" = GLOB.service_positions,
 			"Silicon" = GLOB.nonhuman_positions)
 
-	if(SSmaptype.maptype == "casio")
+	if(SSmaptype.maptype == "naval")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"NT Marines" = GLOB.ntmarines_positions,

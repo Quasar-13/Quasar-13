@@ -7,7 +7,7 @@
 	supervisors = "the captain"
 	selection_color = "#073052"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = "casio"
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntsquadleader
 
