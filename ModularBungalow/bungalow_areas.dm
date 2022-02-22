@@ -99,7 +99,7 @@
 	icon_state ="mime"
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
-//Marine areas for Casio
+//Marine areas for Naval stations
 /area/marines
 	name = "NT Marine Brig"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'

@@ -11,7 +11,7 @@
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
 	loadalways = TRUE
-	mapexclude = list("casio","galaxy")
+	mapexclude = list("naval","galaxy")
 
 	outfit = /datum/outfit/job/security
 

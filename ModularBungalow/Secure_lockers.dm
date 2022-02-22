@@ -54,20 +54,20 @@
 	new /obj/item/storage/lockbox/medal/hop(src)
 	new /obj/item/card/id/departmental_budget/srv(src)
 
-//Casio lockers
+//Naval lockers
 /obj/structure/closet/secure_closet/centcom
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper centcom locker"
 	req_access = list(ACCESS_CENT_CAPTAIN)
 	icon_state = "capnaval"
 
-/obj/structure/closet/secure_closet/captains_casio
+/obj/structure/closet/secure_closet/captains_naval
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper captain's locker"
 	req_access = list(ACCESS_CAPTAIN)
 	icon_state = "capnaval"
 
-/obj/structure/closet/secure_closet/captains_casio/PopulateContents()
+/obj/structure/closet/secure_closet/captains_naval/PopulateContents()
 	..()
 	new /obj/item/clothing/suit/hooded/wintercoat/captain(src)
 	new /obj/item/storage/backpack/captain(src)
@@ -77,7 +77,7 @@
 	new /obj/item/clothing/under/rank/centcom/officer/captain(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)
 	new /obj/item/clothing/suit/captunic(src)
-	new /obj/item/clothing/suit/armor/captain/casio(src)
+	new /obj/item/clothing/suit/armor/captain/naval(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/headset_cent/commander(src)
