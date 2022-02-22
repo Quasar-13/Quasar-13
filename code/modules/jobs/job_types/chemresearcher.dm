@@ -43,4 +43,4 @@
 //Spawn Point
 /obj/effect/landmark/start/chem
 	name = "Chemical Researcher"
-	icon_state = "Chemical Researcher"
+	icon_state = "Chemist"
