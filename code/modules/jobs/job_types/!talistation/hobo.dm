@@ -15,6 +15,9 @@
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
 	bounty_types = CIV_JOB_RANDOM
 
+/datum/job/space_hobo/after_spawn(mob/living/H, mob/M)
+	to_chat(H, "I HATE JILL NESS")
+
 /datum/outfit/job/space_hobo
 	name = "Vagabond"
 	jobtype = /datum/job/space_hobo
