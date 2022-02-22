@@ -293,6 +293,8 @@
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
+	sensor_mode = SENSOR_OFF
+	random_sensor = FALSE
 
 //Vetranger clothes
 /obj/item/clothing/under/veteran
