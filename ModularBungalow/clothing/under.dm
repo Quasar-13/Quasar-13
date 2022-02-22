@@ -43,34 +43,31 @@
 	can_adjust = FALSE
 
 //Kimonos
-/obj/item/clothing/under/kimono
+/obj/item/clothing/under/dress/kimono
 	name = "kimono"
 	desc = "A traditional japanese garb."
 	icon_state = "kimono"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
-/obj/item/clothing/under/kimono/fancy
+/obj/item/clothing/under/dress/kimono/fancy
 	name = "fancy kimono"
 	icon_state = "fancy_kimono"
 
 //Dresses
-/obj/item/clothing/under/evildress
+/obj/item/clothing/under/dress/evildress
 	name = "fiend's dress"
 	desc = "A black dress with red undertones."
 	icon_state = "fienddress_s"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
-/obj/item/clothing/under/reddress
+/obj/item/clothing/under/dress/reddress
 	name = "red dress"
 	desc = "A beautiful blood-red dress."
 	icon_state = "formalred_s"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
 //BNI Suit for BNI people
 /obj/item/clothing/under/bni

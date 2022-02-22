@@ -383,7 +383,7 @@
 /proc/get_all_jobs()
 	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
-				"Deputy","Void Technician", "Chemist", "Secretary", "Brig Physician", //Bungalowstation edit
+				"Deputy","Void Technician", "Chemist", "Secretary", //Bungalowstation edit
 
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Pharmacist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
@@ -402,7 +402,10 @@
 				"Communication Officer", "Nanotrasen Security Operative", "Miner",
 
 				//Naval Stations
-				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield")
+				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield",
+
+				//One off jobs
+				"Brig Physician")
 
 
 

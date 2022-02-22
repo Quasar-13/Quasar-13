@@ -104,7 +104,7 @@
 /datum/job/officer
 	alt_titles = list("Security Guard", "Hazardous Device Technician", "NT Military Police")
 	senior_title = list("Man-at-Arms", "Sergeant Officer")
-	
+
 /datum/job/prisoner
 	alt_titles = list("Protected Custody")
 	senior_title = list("Detained Warcriminal")
@@ -150,6 +150,12 @@
 /datum/job/captain
 	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
+
+/datum/job/ntcaptain
+	senior_title = list("Commodore")
+
+/datum/job/gooncaptain
+	senior_title = list("Commodore")
 
 //Funny role
 /datum/job/staff_officer
