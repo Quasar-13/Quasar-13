@@ -5,7 +5,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the voices in your head." // I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS
-	selection_color = "#111111"
+	selection_color = "#666666"
 	maptype = "vagabond"
 
 	outfit = /datum/outfit/job/space_hobo
