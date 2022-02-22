@@ -40,6 +40,7 @@
 	new /obj/item/clothing/suit/armor/hopcoat(src)
 	new /obj/item/clothing/suit/armor/hopjacket(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/formal(src)
+	new /obj/item/storage/box/randomid(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/hos/Initialize()
