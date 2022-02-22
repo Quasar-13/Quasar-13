@@ -34,7 +34,7 @@
 
 /obj/item/paper/crumpled/thehoborules
 	name = "The hobo ettiquete"
-	icon_state = scrap_mud
+	icon_state = "scrap_mud"
 	info = {"<h4>The hobo Ettiquete</h4>
 	<h4>rule 1: YOU DO YOU</h4>
     Decide your own life, don't let another person run or rule you.
