@@ -1,6 +1,6 @@
-//Casio captain's hardsuit
-/obj/machinery/suit_storage_unit/captain/casio
-	suit_type = /obj/item/clothing/suit/space/hardsuit/swat/captain/casio
+//NAval captain's hardsuit
+/obj/machinery/suit_storage_unit/captain/naval
+	suit_type = /obj/item/clothing/suit/space/hardsuit/swat/captain/naval
 	mask_type = /obj/item/clothing/mask/gas/atmos
 	storage_type = /obj/item/tank/jetpack/oxygen/captain
 
@@ -35,25 +35,25 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/voidtech
 	slowdown = 0.25
 
-//Casio Captain Hardsuit//
-/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/casio
-	name = "\proper NT Captain's Hardsuit Helmet"
+//Naval Captain Hardsuit//
+/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/naval
+	name = "\proper Naval Captain's Hardsuit Helmet"
 	desc = "A hard, green armor shell used but NT captain. Space suitable, does not have the helmet however. Slightly unwieldy."
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	icon_state = "hardsuit-capspace"
 
-/obj/item/clothing/suit/space/hardsuit/swat/captain/casio
-	name = "\proper NT Captain's Armored Hardsuit"
-	desc = "A hard, green armor shell used but NT captain. Space suitable. Slightly unwieldy."
+/obj/item/clothing/suit/space/hardsuit/swat/captain/naval
+	name = "\proper Naval Captain's Armored Hardsuit"
+	desc = "A hard, green armor shell used by naval captains. Space suitable. Slightly unwieldy."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	icon_state = "hardsuit-capspace"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain/casio
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain/naval
 
 //Just for fun, Doom marine suit
-/obj/item/clothing/suit/space/hardsuit/swat/captain/casio/doom
+/obj/item/clothing/suit/space/hardsuit/swat/captain/naval/doom
 	name = "\improper Doom Marine Hardsuit"
 	desc = "Rip and tear, until it is done."
 	slowdown = -0.5

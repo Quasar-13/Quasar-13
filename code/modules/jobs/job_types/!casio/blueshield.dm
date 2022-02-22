@@ -8,7 +8,7 @@
 	selection_color = "#bbbbee"
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "casio"
+	maptype = "naval"
 	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield

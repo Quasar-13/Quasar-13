@@ -426,7 +426,7 @@
 	if(SSmaptype.maptype == "goonlite")
 		department_categories = list("Command", "Service", "Security", "Logistics", "Medical", "Science")
 
-	if(SSmaptype.maptype == "casio")
+	if(SSmaptype.maptype == "naval")
 		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "NT Marines", "Silicon")
 
 	if(SSmaptype.maptype == "syndicate")
