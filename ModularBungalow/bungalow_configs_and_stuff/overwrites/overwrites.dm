@@ -40,6 +40,10 @@
 	new /obj/item/clothing/suit/armor/hopcoat(src)
 	new /obj/item/clothing/suit/armor/hopjacket(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/formal(src)
+
+	//Random ID
+	var randomid = pick(subtypesof(/obj/item/card/id/random))
+	new randomid(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/hos/Initialize()

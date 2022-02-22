@@ -97,9 +97,9 @@
 	desc = "The coat of the station's commander. Lovely, personable and everpresent."
 	icon_state = "cdr_jacket"
 
-// Casio Armor
-/obj/item/clothing/suit/armor/captain/casio
-	name = "NT Captain's carapace"
+// Naval Armor
+/obj/item/clothing/suit/armor/captain/naval
+	name = "Naval Captain's carapace"
 	desc = "The classic captain's carapace, in naval green."
 	icon_state = "casio"
 

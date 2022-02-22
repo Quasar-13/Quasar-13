@@ -36,7 +36,7 @@ GLOBAL_LIST_INIT(science_positions, list(
 	"Scientist",
 	"Geneticist",
 	"Roboticist",
-	"Chemist"))
+	"Chemical Researcher"))
 
 
 GLOBAL_LIST_INIT(supply_positions, list(
