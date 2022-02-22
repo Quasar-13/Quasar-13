@@ -161,6 +161,15 @@
 /obj/item/storage/box/sabre/halberd/PopulateContents()
 	new /obj/item/melee/halberd(src)
 
+/obj/item/storage/box/sabre/drill
+	name = "Galaxy Breaker Spear"
+	desc = "A spear with a drill tip."
+
+/obj/item/storage/box/sabre/drill/PopulateContents()
+	new /obj/item/melee/drillspear(src)
+	new /obj/item/clothing/neck/cloak/simone(src)
+	new /obj/item/clothing/glasses/sunglasses/gar(src)
+
 //BLACKSITE
 /obj/item/choice_beacon/bungalow/combat/deathsquad
 	name = "NT Death Commando beacon"

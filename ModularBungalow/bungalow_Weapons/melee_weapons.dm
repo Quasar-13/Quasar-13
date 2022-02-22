@@ -18,6 +18,24 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
 
+
+//Drill Spear
+/obj/item/melee/drillspear
+	name = "drill spear"
+	desc = "Who the hell do you think I am!?"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "drill"
+	inhand_icon_state = "drill"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 23
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BELT
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb_continuous = list("spears", "pierces", "stabs")
+	attack_verb_simple = list("attack", "slash", "stab", "slice")
+
+
 //BATONS//
 /obj/item/melee/classic_baton/telescopic/svet_baton
 	name = "Brass Stinger"
