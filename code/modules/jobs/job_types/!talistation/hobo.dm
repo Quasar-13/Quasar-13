@@ -4,13 +4,16 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the voices in your head."
+	supervisors = "the voices in your head." // I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS
 	selection_color = "#111111"
 	maptype = "vagabond"
 
 	outfit = /datum/outfit/job/space_hobo
-
 	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVEPVT
+
+	access = list(ACCESS_MAINT_TUNNELS)
+	minimal_access = list(ACCESS_MAINT_TUNNELS)
+	bounty_types = CIV_JOB_RANDOM
 
 /datum/outfit/job/space_hobo
 	name = "Vagabond"
