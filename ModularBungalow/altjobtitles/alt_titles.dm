@@ -72,7 +72,7 @@
 	senior_title = list("Genetic Engineer", "Freak of Genetics")
 
 /datum/job/chemre
-	alt_titles = list("Chemical Researcher", "Chemical Scientist")
+	alt_titles = list("Chemist", "Chemical Scientist")
 	senior_title = list("Chemical Engineer")
 
 //Medical
