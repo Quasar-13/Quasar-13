@@ -44,7 +44,7 @@
 		M.Jitter(5)
 	return ..()
 
-/datum/reagent/consumable/ethanol/terreoto/overdose_start(mob/living/M)
+/datum/reagent/consumable/ethanol/terremoto/overdose_start(mob/living/M)
 	to_chat(M, "<span class='userdanger'>You feel like in a earthquake!</span>")
 	M.Jitter(20)
 	M.Stun(15)
