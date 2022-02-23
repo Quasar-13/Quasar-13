@@ -104,6 +104,11 @@
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/fingerless
 
+/obj/item/clothing/gloves/color/black/grey
+	desc = "Wait, is it dark grey or just a warm black? These gloves are fire-resistant."
+	name = "darkgrey gloves"
+	icon_state = "darkgrey"
+
 /obj/item/clothing/gloves/color/orange
 	name = "orange gloves"
 	desc = "A pair of gloves, they don't look special in any way."
