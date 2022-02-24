@@ -57,8 +57,8 @@ Contains:
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/head/helmet/space/beret
-	name = "officer's beret"
-	desc = "An armored beret commonly used by special operations officers. Uses advanced force field technology to protect the head from space."
+	name = "BNI officer's beret"
+	desc = "An armored beret commonly used by BNI Intelligence Officers. Uses advanced force field technology to protect the head from space."
 	icon_state = "hosberetblack"
 	dynamic_hair_suffix = "+generic"
 	dynamic_fhair_suffix = "+generic"
@@ -69,8 +69,8 @@ Contains:
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/suit/space/officer
-	name = "officer's jacket"
-	desc = "An armored, space-proof jacket used in special operations."
+	name = "BNI officer's jacket"
+	desc = "An armored, space-proof jacket used by Intelligence Officers."
 	icon_state = "bnitrenchcoat"
 	inhand_icon_state = "hostrench"
 	blood_overlay_type = "coat"
@@ -82,6 +82,17 @@ Contains:
 	strip_delay = 130
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/helmet/space/beret/old
+	name = "old beret"
+	desc = "An armored beret that used to be used by Intelligence officers, now it is just an antique in many old officers' wardrobes. It has been retrofitted with newer technology, making it space worthy."
+	icon_state = "beret_officer"
+
+/obj/item/clothing/suit/space/officer/old
+	name = "old jacket"
+	desc = "An old armored jacket that used to be used by Intelligence Officers. Has been retrofitted to be spaceworthy."
+	icon_state = "detective"
+	inhand_icon_state = "det_suit"
 
 	//NASA Voidsuit
 /obj/item/clothing/head/helmet/space/nasavoid
