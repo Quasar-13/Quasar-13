@@ -86,7 +86,7 @@ Contains:
 /obj/item/clothing/head/helmet/space/beret/old
 	name = "old beret"
 	desc = "An armored beret that used to be used by Intelligence officers, now it is just an antique in many old officers' wardrobes. It has been retrofitted with newer technology, making it space worthy."
-	icon_state = "beret_officer"
+	icon_state = "beret_badge"
 
 /obj/item/clothing/suit/space/officer/old
 	name = "old jacket"
