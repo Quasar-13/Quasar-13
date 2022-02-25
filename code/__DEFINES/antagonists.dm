@@ -87,3 +87,6 @@ GLOBAL_LIST_INIT(heretic_start_knowledge,list(/datum/eldritch_knowledge/spell/ba
 /// Yoggers shadow lings :D
 #define ANTAG_DATUM_THRALL		/datum/antagonist/thrall
 #define ANTAG_DATUM_SLING		/datum/antagonist/shadowling
+
+/// Checks if the given mob is a wizard
+#define IS_WIZARD(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/wizard))
