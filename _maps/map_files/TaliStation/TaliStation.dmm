@@ -9647,6 +9647,7 @@
 	dir = 1
 	},
 /obj/structure/bed/dogbed{
+	desc = "A comfy-looking cat bed. You can even strap your pet in, in case the gravity turns off.";
 	name = "cat bed"
 	},
 /obj/item/food/grilled_moonfish,
@@ -10170,6 +10171,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/entry)
+"fIp" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/item/food/fried_chicken,
+/turf/open/floor/plating,
+/area/maintenance/port)
 "fIB" = (
 /obj/structure/chair/sofa/right{
 	dir = 8
@@ -14421,7 +14428,11 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "iaW" = (
-/obj/vehicle/ridden/secway,
+/obj/structure/bed/dogbed{
+	desc = "A comfy-looking slime bed. You can even strap your pet in, in case the gravity turns off.";
+	name = "Slime bed"
+	},
+/mob/living/simple_animal/hostile/retaliate/pet_warden,
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
 "iaY" = (
@@ -18268,7 +18279,10 @@
 /turf/open/floor/wood,
 /area/security/courtroom)
 "kqC" = (
-/obj/structure/bed/dogbed,
+/obj/structure/bed/dogbed{
+	desc = "A comfy-looking cat bed. You can even strap your pet in, in case the gravity turns off.";
+	name = "cat bed"
+	},
 /turf/open/floor/grass,
 /area/hallway/secondary/exit)
 "kqE" = (
@@ -20599,6 +20613,11 @@
 	},
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
+"lFA" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maint_drugs,
+/turf/open/floor/plating,
+/area/maintenance/port)
 "lFF" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 8
@@ -24548,9 +24567,16 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "nKL" = (
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf,
-/turf/open/floor/plasteel,
-/area/maintenance/fore/secondary)
+/obj/vehicle/ridden/secway,
+/obj/machinery/button/door{
+	id = "armory";
+	name = "Armory shutters";
+	pixel_x = -6;
+	pixel_y = -26;
+	req_access_txt = "3"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/security/armory)
 "nLs" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
@@ -36749,6 +36775,13 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/machinery/button/door{
+	id = "armory";
+	name = "Armory shutters";
+	pixel_x = 4;
+	pixel_y = 38;
+	req_access_txt = "3"
 	},
 /turf/open/floor/plasteel/white/side{
 	dir = 6
@@ -58427,7 +58460,7 @@ kFF
 sxM
 kFF
 kFF
-kFF
+oGH
 aTh
 cNT
 cNT
@@ -58673,8 +58706,8 @@ pUC
 aTh
 aTh
 aTh
-kFF
-kFF
+ydo
+lFA
 kFF
 kFF
 kFF
@@ -58684,7 +58717,7 @@ kFF
 oVm
 kFF
 kFF
-seq
+fIp
 aTh
 aTh
 cNT
@@ -58932,7 +58965,7 @@ pUV
 aTh
 jZM
 jZM
-jZM
+aTh
 aTh
 gyr
 aTh
@@ -63005,7 +63038,7 @@ xWO
 btX
 kmM
 ebf
-kmM
+nKL
 riE
 uUB
 xJU
@@ -69945,7 +69978,7 @@ heB
 cNT
 pYn
 iKU
-nKL
+jqw
 mcX
 jqw
 pYn
@@ -79713,11 +79746,11 @@ lNL
 rhq
 lNL
 fAv
-fAv
+gzz
 heB
 heB
 fqE
-fqE
+ier
 heB
 heB
 cNT
