@@ -1,11 +1,22 @@
 GLOBAL_LIST_INIT(command_positions,list(
 	"Captain",
+
+	//Nonstandard heads
+	"Blueshield",
+	"Communication Officer",
+
+	//Other Heads of staff
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Quartermaster"))
+	"Quartermaster",
+
+	//Nt Marine command
+	"NT Commander",
+	"ERT Commander",
+	"NT Squad Leader"))
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
@@ -25,7 +36,7 @@ GLOBAL_LIST_INIT(science_positions, list(
 	"Scientist",
 	"Geneticist",
 	"Roboticist",
-	"Chemist"))
+	"Chemical Researcher"))
 
 
 GLOBAL_LIST_INIT(supply_positions, list(
@@ -52,9 +63,10 @@ GLOBAL_LIST_INIT(service_positions, list(
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Head of Security",
+	"Nanotrasen Security Operative",
 	"Warden",
 	"Detective",
-//	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
+	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
 	"Security Officer"))
 
 
@@ -85,13 +97,26 @@ GLOBAL_LIST_INIT(operations_positions, list(
 	"Pilot Officer",
 	"Staff Officer",
 	"Marine",
-	"Survivor"))
+	"Survivor",
+
+	//Romulus
+	"Syndicate Outpost Leader",
+	"Syndicate Outpost Agent",
+	"Syndicate Outpost Medic",
+	"Syndicate Outpost Scientist",
+	"Syndicate Outpost Explorer"))
 
 GLOBAL_LIST_INIT(logistics_positions, list(
 	"Logistics Officer",
 	"Requisitions Chief",
 	"Deckhand",
 	"Ordinance Technician",
+
+	//Goonpacked stuff
+	"Chief Engineer",
+	"Station Engineer",
+	"Cargo Technician",
+	"Miner",
 	"Mechanic"))
 
 GLOBAL_LIST_INIT(police_positions, list(
@@ -110,9 +135,14 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"ERT Security",
 	"Death Commando",
 	"NT Squad Leader",
+	"NT Military Police",
 	"NT Vehicle Operator",
-	"NT Marine"))
+	"NT Marine",
 
+//Romulus
+	"NT Remnant Lieutenant",
+	"NT Remnant Cadet",
+	"NT Remnant Auxiliary"))
 
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(
@@ -125,6 +155,7 @@ GLOBAL_LIST_INIT(solgov_positions, list(
 	"Soldier",
 	"Security",
 	"Civillian"))
+
 
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_COMMAND = list("jobs" = command_positions, "color" = "#ccccff"),
@@ -157,10 +188,22 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SUPPLY = list("titles" = supply_positions),
 	EXP_TYPE_SECURITY = list("titles" = security_positions),
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
-	EXP_TYPE_SERVICE = list("titles" = service_positions)
+	EXP_TYPE_SERVICE = list("titles" = service_positions),
+	EXP_TYPE_NTMARINE = list("titles" = ntmarines_positions),
+
+//Syndiestation
+	EXP_TYPE_SYNDICATE = list("titles" = syncommand_positions),
+	EXP_TYPE_OPERATIONS = list("titles" = operations_positions),
+	EXP_TYPE_TRIAGE = list("titles" = triage_positions),
+	EXP_TYPE_LOGISTICS = list("titles" = logistics_positions),
+	EXP_TYPE_POLICE = list("titles" = police_positions),
+
+//Other Gamemodes
+	EXP_TYPE_SOLGOV = list("titles" = solgov_positions)
 ))
 
 GLOBAL_LIST_INIT(exp_specialmap, list(
+
 	EXP_TYPE_LIVING = list(), // all living mobs
 	EXP_TYPE_ANTAG = list(),
 	EXP_TYPE_SPECIAL = list("Lifebringer","Ash Walker","Exile","Servant Golem","Free Golem","Hermit","Translocated Vet","Escaped Prisoner","Hotel Staff","SuperFriend","Space Syndicate",ROLE_SYNDICATE_CYBERSUN,ROLE_SYNDICATE_CYBERSUN_CAPTAIN,"Ancient Crew","Space Doctor","Space Bartender","Beach Bum","Skeleton","Zombie","Space Bar Patron","Lavaland Syndicate","Ghost Role"), // Ghost roles

@@ -56,6 +56,14 @@
 	back = /obj/item/spear/bonespear
 	backpack_contents = null
 
+/datum/outfit/lufr/ruin // For the ruin spawner specifically
+	name = "LUFR Soldier - Unarmed"
+	mask = /obj/item/clothing/mask/gas/syndicate
+	l_pocket = /obj/item/tank/internals/emergency_oxygen/engi
+	internals_slot = ITEM_SLOT_LPOCKET
+	suit_store = null
+	backpack_contents = null
+
   /* SPAWNERS */
 /obj/effect/mob_spawn/human/lufr
 	name = "LUFR Soldier"
@@ -87,7 +95,11 @@
 	outfit = /datum/outfit/lufr/ashen
 	important_info = "Avoid needless confontations with humans, protect your kind and do not attempt to get onto the Station!"
 
-/obj/effect/mob_spawn/human/lufr/ashwalker/Initialize(mapload) // Muh lore.
+/obj/effect/mob_spawn/human/lufr/ruin
+	outfit = /datum/outfit/lufr/ruin
+	important_info = "Avoid needless confontations with humans, protect your kind and do not attempt to get onto the Station!"
+
+/obj/effect/mob_spawn/human/lufr/ruin/Initialize(mapload) // Muh lore.
 	. = ..()
 	prev_job_lufr = pick("Captain", "Head of Security", "Head of Personnel", "Research Director", \
 	"Corporate Representative", "Internal Affairs Agent", "ERT member")
@@ -115,7 +127,7 @@
 	and ended up on Lavaland, where you've got in contact with the Syndicate, which promptly sent you supplies and offered \
 	you to work as [syndi_job_lufr], once they arrive here to pick you up."
 
-/obj/effect/mob_spawn/human/lufr/ashwalker/special(mob/living/new_spawn)
+/obj/effect/mob_spawn/human/lufr/ruin/special(mob/living/new_spawn)
 	. = ..()
 	new_spawn.mind.store_memory("Your previous job was: [prev_job_lufr]")
 	new_spawn.mind.store_memory("Syndicate offered you to work as: [syndi_job_lufr]")

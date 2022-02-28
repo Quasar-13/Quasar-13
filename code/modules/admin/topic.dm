@@ -48,15 +48,6 @@
 			return
 		cmd_show_exp_panel(M.client)
 
-	else if(href_list["toggleexempt"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/client/C = locate(href_list["toggleexempt"]) in GLOB.clients
-		if(!C)
-			to_chat(usr, "<span class='danger'>ERROR: Client not found.</span>", confidential = TRUE)
-			return
-		toggle_exempt_status(C)
-
 	else if(href_list["makeAntag"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -154,7 +145,13 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to create a revenant. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create a revenant.")
-
+			if("shadowling")
+				if(makeShadowling())
+					message_admins("[key_name(usr)] created a shadowling.")
+					log_admin("[key_name(usr)] created a shadowling.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a shadowling. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create a shadowling.")
 	else if(href_list["forceevent"])
 		if(!check_rights(R_FUN))
 			return

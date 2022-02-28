@@ -29,6 +29,7 @@ SUBSYSTEM_DEF(mapping)
 	var/list/shuttle_templates = list()
 	var/list/shelter_templates = list()
 	var/list/holodeck_templates = list()
+	var/list/random_room_templates = list()
 
 	var/list/areas_in_z = list()
 
@@ -215,6 +216,7 @@ Used by the AI doomsday and the self-destruct nuke.
 	turf_reservations = SSmapping.turf_reservations
 	used_turfs = SSmapping.used_turfs
 	holodeck_templates = SSmapping.holodeck_templates
+	random_room_templates = SSmapping.random_room_templates
 
 	config = SSmapping.config
 	next_map_config = SSmapping.next_map_config
@@ -295,22 +297,22 @@ Used by the AI doomsday and the self-destruct nuke.
 		++space_levels_so_far
 		add_new_zlevel("Empty Area [space_levels_so_far]", ZTRAITS_SPACE)
 
-	if(config.minetype == "lavaland")
-		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
+	if(config.minetype == "mining")
+		var/mining_map_to_load = SSrandommining.choosen_map
+		var/mining_traits_to_load = GLOB.mining_traits[SSrandommining.traits]
 
-		//Bungalow Edit Start
-
-	else if(config.minetype == "icemoon")
-		LoadGroup(FailedZs, "Icemoon", "map_files/Mining", "Icemoon.dmm", default_traits = ZTRAITS_ICEMOON)
-
-	else if(config.minetype == "jungle")
-		LoadGroup(FailedZs, "Jungle", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
-
-	else if(config.minetype == "rockplanet")
-		LoadGroup(FailedZs, "Rockplanet", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
-
-	else if(config.minetype == "tidalmoon")
-		LoadGroup(FailedZs, "Tidalmoon", "map_files/Mining", "Tidalmoon.dmm", default_traits = ZTRAITS_TIDALMOON)
+		if(mining_map_to_load)
+			to_chat(world, "<span class='boldannounce'>MINING MAP: Loading random mining level...</span>")
+			if(!mining_traits_to_load)
+				to_chat(world, "<span class='boldannounce'>MINING MAP ERROR: No z-level traits detected, loading without traits.</span>")
+			LoadGroup(FailedZs, "Mining Level", "map_files/Mining", mining_map_to_load, default_traits = mining_traits_to_load)
+			to_chat(world, "<span class='boldannounce'>MINING MAP: Loaded successfully.</span>")
+		else
+			INIT_ANNOUNCE("MINING MAP ERROR: No loadable map z-levels detected, reverting to backup mining system!")
+			if(config.minetype == "lavaland")
+				LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
+			else if (!isnull(config.minetype) && config.minetype != "none")
+				INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 
 		//Syndicate Marine Corps
 
@@ -321,9 +323,13 @@ Used by the AI doomsday and the self-destruct nuke.
 		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_ice.dmm", default_traits = ZTRAITS_ICEMISSION)
 		//Bungalow Edit End
 
-
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
+
+		// Tomb world
+		// It HAS to be loaded after lavaland, yes.
+	if(CONFIG_GET(flag/tombworld_enabled) && GLOB.tomb_portal_location)
+		createRandomTomb()
 #endif
 
 	if(LAZYLEN(FailedZs))	//but seriously, unless the server's filesystem is messed up this will never happen
@@ -406,8 +412,13 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			mapvotes.Remove(map)
 			continue
 
+
 		if(pmv)
 			mapvotes[map] = mapvotes[map]*VM.voteweight
+
+		else if(VM.map_file == config.map_file)
+		// Don't force them to play the same map when MAPROTATION actually rolls to change the map
+			mapvotes.Remove(map)
 
 	var/pickedmap = pickweight(mapvotes)
 	if (!pickedmap)
@@ -444,6 +455,16 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	preloadShuttleTemplates()
 	preloadShelterTemplates()
 	preloadHolodeckTemplates()
+	preloadRandomRoomTemplates()
+
+/datum/controller/subsystem/mapping/proc/preloadRandomRoomTemplates()
+	for(var/item in subtypesof(/datum/map_template/random_room))
+		var/datum/map_template/random_room/room_type = item
+		if(!(initial(room_type.mappath)))
+			continue
+		var/datum/map_template/random_room/R = new room_type()
+		random_room_templates[R.room_id] = R
+		map_templates[R.room_id] = R
 
 /datum/controller/subsystem/mapping/proc/preloadRuinTemplates()
 	// Still supporting bans by filename

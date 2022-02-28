@@ -17,20 +17,20 @@
 	item_flags = NONE
 
 /obj/item/gun/energy/laser/retro
-	name ="L-204 Laser Blaster"
-	icon_state = "retro"
+	name ="L-304 Laser Blaster"
+	icon_state = "retro2"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
 
 /obj/item/gun/energy/laser/retro/old
-	name ="L-204 Laser Blaster"
+	name ="L-104 Laser Blaster"
 	icon_state = "retro"
 	desc = "First generation lasergun, developed by Nanotrasen. Suffers from ammo issues but its unique ability to recharge its ammo without the need of a magazine helps compensate. You really hope someone has developed a better lasergun while you were in cryo."
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/old)
 	ammo_x_offset = 3
 
 /obj/item/gun/energy/laser/hellgun
-	name ="L-304 'Melter'"
+	name ="L-204 'Melter'"
 	desc = "A relic of a weapon, built before NT began installing regulators on its laser weaponry. This pattern of laser gun became infamous for the gruesome burn wounds it caused, and was quietly discontinued once it began to affect NT's reputation."
 	icon_state = "hellgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire)
@@ -48,7 +48,7 @@
 
 /obj/item/gun/energy/laser/captain/scattershot
 	name = "E-041 Self-Charging Laser Shotgun"
-	icon_state = "lasercannon"
+	icon_state = "lasershotgun"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "laser"
 	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lens to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theoretically infinite use."
@@ -75,7 +75,6 @@
 	inhand_icon_state = "shotgun"
 	desc = "A combat shotgun gutted and refitted with an internal laser system. Can switch between taser and scattered disabler shots."
 	shaded_charge = 0
-	pin = /obj/item/firing_pin/implant/mindshield
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/disabler, /obj/item/ammo_casing/energy/electrode)
 
 ///Laser Cannon
@@ -113,7 +112,7 @@
 ///X-ray gun
 
 /obj/item/gun/energy/xray
-	name = "\improper L-792 Ultramaterial Rifle"
+	name = "\improper L-807 Ultramaterial Rifle"
 	desc = "A high-power laser gun capable of expelling concentrated X-ray blasts that pass through multiple soft targets and heavier materials."
 	icon_state = "xray"
 	w_class = WEIGHT_CLASS_BULKY

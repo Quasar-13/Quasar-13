@@ -89,6 +89,10 @@
 	icon_state = "cap_cypherkey"
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 0, RADIO_CHANNEL_SCIENCE = 0, RADIO_CHANNEL_MEDICAL = 0, RADIO_CHANNEL_SUPPLY = 0, RADIO_CHANNEL_SERVICE = 0)
 
+/obj/item/encryptionkey/heads/captain/cent
+	name = "\proper the centcom captain's encryption key"
+	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1, RADIO_CHANNEL_SUPPLY = 1, RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_CENTCOM = 1)
+
 /obj/item/encryptionkey/heads/rd
 	name = "\proper the research director's encryption key"
 	icon_state = "rd_cypherkey"
@@ -145,3 +149,10 @@
 
 /obj/item/encryptionkey/secbot
 	channels = list(RADIO_CHANNEL_AI_PRIVATE = 1, RADIO_CHANNEL_SECURITY = 1)
+
+/obj/item/encryptionkey/cent_agent
+	name = "agent encryption key"
+	icon_state = "cent_cypherkey"
+	channels = list(RADIO_CHANNEL_CENTCOM = 1, RADIO_CHANNEL_SYNDICATE = 1)
+	independent = TRUE
+	syndie = TRUE

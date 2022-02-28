@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/ntoperator
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_CENT_SPECOPS)
+	minimal_access = list(ACCESS_CENT_SPECOPS)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_DETECTIVE
@@ -27,16 +27,7 @@
 	id = /obj/item/card/id
 	head = /obj/item/clothing/head/beret/black
 	belt = null
-	backpack_contents = list(/obj/item/choice_beacon/mech=1,
-		/obj/item/storage/box/mechapilot =1)
+	backpack_contents = list(
+		/obj/item/choice_beacon/bungalow/mech/operator_mechs = 1,
+	)
 
-
-
-/obj/item/storage/box/mechapilot
-	name = "mech pilot kit"
-	desc = "A large duffel bag containing all you need for armored support."
-
-/obj/item/storage/box/mechapilot/PopulateContents()
-		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
-		new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy(src)
-		new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)

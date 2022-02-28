@@ -18,6 +18,12 @@
 
 
 
+/obj/item/choice_beacon/bungalow/mech/operator_mechs
+	name = "mecha pilot beacon"
+	desc = "A beacon to be used to call down a mecha."
+	typesof_options = /obj/vehicle/sealed/mecha/combat/marauder/operator_mech
+
+
 /obj/vehicle/sealed/mecha/combat/pilot
 	desc = "A lightweight, security exosuit. Popular among private and corporate security."
 	name = "\improper Pilot Gygax"

@@ -471,6 +471,9 @@
 	lampButton?.update_icon()
 	update_icons()
 
+/mob/living/silicon/robot/proc/update_headlamp(turn_off = 0, cooldown = 100)
+	set_light(0)
+
 /mob/living/silicon/robot/proc/deconstruct()
 	SEND_SIGNAL(src, COMSIG_BORG_SAFE_DECONSTRUCT)
 	var/turf/T = get_turf(src)
@@ -925,16 +928,6 @@
 		lamp_doom = connected_ai.doomsday_device ? TRUE : FALSE
 	toggle_headlamp(FALSE, TRUE)
 
-/**
- * Records an IC event log entry in the cyborg's internal tablet.
- *
- * Creates an entry in the borglog list of the cyborg's internal tablet, listing the current
- * in-game time followed by the message given. These logs can be seen by the cyborg in their
- * BorgUI tablet app. By design, logging fails if the cyborg is dead.
- *
- * Arguments:
- * arg1: a string containing the message to log.
- */
 /mob/living/silicon/robot/proc/logevent(string = "")
 	if(!string)
 		return
@@ -947,3 +940,6 @@
 	var/datum/computer_file/program/robotact/program = modularInterface.get_robotact()
 	if(program)
 		program.force_full_update()
+/mob/living/silicon/robot/shell
+	shell = TRUE
+

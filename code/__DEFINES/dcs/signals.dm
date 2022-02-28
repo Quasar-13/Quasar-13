@@ -425,6 +425,7 @@
 	#define COMPONENT_BLOCK_SWAP (1<<0)
 ///from base of /mob/verb/pointed: (atom/A)
 #define COMSIG_MOB_POINTED "mob_pointed"
+#define COMSIG_MOB_EMOTED(emote_key) "mob_emoted_[emote_key]"
 ///from /obj/structure/door/crush(): (mob/living/crushed, /obj/machinery/door/crushing_door)
 #define COMSIG_LIVING_DOORCRUSHED "living_doorcrush"
 
@@ -769,6 +770,14 @@
 ///sent from mecha action buttons to the mecha they're linked to
 #define COMSIG_MECHA_ACTION_TRIGGER "mecha_action_activate"
 
+///sent from clicking while you have no equipment selected. Sent before cooldown and adjacency checks, so you can use this for infinite range things if you want.
+#define COMSIG_MECHA_MELEE_CLICK "mecha_action_melee_click"
+/// Prevents click from happening.
+#define COMPONENT_CANCEL_MELEE_CLICK (1<<0)
+///sent from clicking while you have equipment selected.
+#define COMSIG_MECHA_EQUIPMENT_CLICK "mecha_action_equipment_click"
+/// Prevents click from happening.
+#define COMPONENT_CANCEL_EQUIPMENT_CLICK (1<<0)
 
 // /mob/living/carbon/human signals
 
@@ -1047,3 +1056,27 @@
 #define COMSIG_AQUARIUM_BEFORE_INSERT_CHECK "aquarium_about_to_be_inserted"
 #define COMSIG_AQUARIUM_SURFACE_CHANGED "aquarium_surface_changed"
 #define COMSIG_AQUARIUM_FLUID_CHANGED "aquarium_fluid_changed"
+
+/// Exoprobe adventure finished: (result) result is ADVENTURE_RESULT_??? values
+#define COMSIG_ADVENTURE_FINISHED "adventure_done"
+
+/// Sent on initial adventure qualities generation from /datum/adventure/proc/initialize_qualities(): (list/quality_list)
+#define COMSIG_ADVENTURE_QUALITY_INIT "adventure_quality_init"
+
+/// Sent on adventure node delay start: (delay_time, delay_message)
+#define COMSIG_ADVENTURE_DELAY_START "adventure_delay_start"
+/// Sent on adventure delay finish: ()
+#define COMSIG_ADVENTURE_DELAY_END "adventure_delay_end"
+
+/// Exoprobe status changed : ()
+#define COMSIG_EXODRONE_STATUS_CHANGED "exodrone_status_changed"
+
+// Scanner controller signals
+/// Sent on begingging of new scan : (datum/exoscan/new_scan)
+#define COMSIG_EXOSCAN_STARTED "exoscan_started"
+/// Sent on successful finish of exoscan: (datum/exoscan/finished_scan)
+#define COMSIG_EXOSCAN_FINISHED "exoscan_finished"
+
+// Exosca signals
+/// Sent on exoscan failure/manual interruption: ()
+#define COMSIG_EXOSCAN_INTERRUPTED "exoscan_interrupted"

@@ -8,6 +8,7 @@ Assistant
 	spawn_positions = 5
 	supervisors = "absolutely everyone"
 	selection_color = "#dddddd"
+	loadalways = TRUE
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit = /datum/outfit/job/assistant

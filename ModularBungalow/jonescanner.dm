@@ -3,7 +3,6 @@
 	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
 	icon_state = "healthmini"
 	inhand_icon_state = "healthanalyzer"
-
 	worn_icon_state = "healthanalyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
@@ -44,7 +43,6 @@
 
 	healthscanparamed(user, M, mode, advanced)
 	add_fingerprint(user)
-
 
 // Used by the PDA medical scanner too
 /proc/healthscanparamed(mob/user, mob/living/M, advanced = FALSE)
@@ -136,7 +134,7 @@
 				var/mob/living/carbon/human/H = C
 				if(H.is_bleeding())
 					render_list += "<span class='alert ml-1'><b>Subject is bleeding!</b></span>\n"
-			var/blood_percent =  round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
+			var/blood_percent = round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
 			var/blood_type = C.dna.blood_type
 			if(blood_id != /datum/reagent/blood) // special blood substance
 				var/datum/reagent/R = GLOB.chemical_reagents_list[blood_id]

@@ -66,12 +66,14 @@ SUBSYSTEM_DEF(job)
 
 		if(job.maptype != SSmaptype.maptype)
 			if(job.maptype != "none")
-				continue
+				if(job.loadalways == FALSE)
+					continue
 
 	//Add back the moment you fix the other bugs
-//		if(SSmaptype.maptype == "syndicate")
-//			if(job.maptype == "none")
-//				continue
+		if(SSmaptype.maptype == "solgov")
+			if(job.maptype == "none")
+				if(job.loadalways == FALSE)
+					continue
 
 
 
@@ -741,6 +743,17 @@ SUBSYSTEM_DEF(job)
 	for(var/i in GLOB.mob_list)
 		var/mob/player = i
 		if(player.mind && (player.mind.assigned_role in GLOB.command_positions))
+			. |= player.mind
+
+//////////////////////////////////
+//Keeps track of all rev targets//
+//////////////////////////////////
+/datum/controller/subsystem/job/proc/get_all_targets()
+	. = list()
+	for(var/i in GLOB.mob_list)
+		var/mob/player = i
+		var/list/targets = list("Captain", "Head of Security", "Head of Personnel", "Warden", "Detective")
+		if(player.mind && (player.mind.assigned_role in targets))
 			. |= player.mind
 
 //////////////////////////////////////////////

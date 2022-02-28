@@ -13,6 +13,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SUPPLY
 	exp_type_department = EXP_TYPE_CREW // This is so the jobs menu can work properly
+	mapexclude = list("goonlite")
 
 	outfit = /datum/outfit/job/quartermaster
 
@@ -21,7 +22,7 @@
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_CAR
 
-	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
+	liver_traits = list(TRAIT_ROYAL_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_QUARTERMASTER
 	bounty_types = CIV_JOB_RANDOM

@@ -143,7 +143,7 @@
 	var/list/manifest_out
 
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		manifest_out = list(
 		"Command",
 		"Security",
@@ -178,6 +178,29 @@
 		"Service",
 		"Silicon"
 		)
+
+	if(SSmaptype.maptype == "goonlite")
+		manifest_out = list(
+		"Command",
+		"Security",
+		"Logistics",
+		"Medsci",
+		"Service",
+		"Silicon"
+		)
+
+	if(SSmaptype.maptype == "naval")
+		manifest_out = list(
+		"Command",
+		"NT Marines",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+		)
+
 
 	if(SSmaptype.maptype == "syndicate")
 		manifest_out = list(
@@ -190,8 +213,6 @@
 
 	if(SSmaptype.maptype == "blacksite")
 		manifest_out = list(
-			"NT Command",
-			"NT Specialist",
 			"NT Marines"
 		)
 
@@ -201,9 +222,16 @@
 			"Solgov"
 		)
 
+	if(SSmaptype.maptype == "solgov2")
+		manifest_out = list(
+			"Solgov",
+			"NT Marines",
+			"Operations"
+		)
+
 	var/list/departments
 
-	if(SSmaptype.maptype == "station")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -231,6 +259,27 @@
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
+			"Engineering" = GLOB.engineering_positions,
+			"Medical" = GLOB.medical_positions,
+			"Science" = GLOB.science_positions,
+			"Supply" = GLOB.supply_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+
+	if(SSmaptype.maptype == "goonlite")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"Security" = GLOB.security_positions,
+			"Logistics" = GLOB.logistics_positions,
+			"Medsci" = GLOB.medical_positions + GLOB.science_positions,
+			"Service" = GLOB.service_positions,
+			"Silicon" = GLOB.nonhuman_positions)
+
+	if(SSmaptype.maptype == "naval")
+		departments = list(
+			"Command" = GLOB.command_positions,
+			"NT Marines" = GLOB.ntmarines_positions,
 			"Engineering" = GLOB.engineering_positions,
 			"Medical" = GLOB.medical_positions,
 			"Science" = GLOB.science_positions,
@@ -254,8 +303,9 @@
 
 	if(SSmaptype.maptype == "solgov")
 		departments = list(
-			"Solgov Personnel" = GLOB.solgov_positions)
-
+			"Solgov Personnel" = GLOB.solgov_positions,
+			"NT Remnants" = GLOB.ntmarines_positions,
+			"Syndicate Outpost" = GLOB.operations_positions)
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

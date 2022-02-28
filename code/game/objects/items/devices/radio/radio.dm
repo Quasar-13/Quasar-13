@@ -43,6 +43,7 @@
 	var/syndie = FALSE  // If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel.
 	var/list/channels = list()  // Map from name (see communications.dm) to on/off. First entry is current department (:h)
 	var/list/secure_radio_connections
+	var/list/radio_sounds = list('sound/effects/radio/radio1.ogg','sound/effects/radio/radio2.ogg','sound/effects/radio/radio3.ogg')
 
 /obj/item/radio/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] starts bouncing [src] off [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -82,6 +83,12 @@
 	qdel(keyslot)
 	keyslot = new /obj/item/encryptionkey/syndicate
 	syndie = 1
+	recalculateChannels()
+
+/obj/item/radio/proc/make_centcom() // Turns normal radios into CC radios (Mostly for BlackOps AI)!
+	qdel(keyslot)
+	keyslot = new /obj/item/encryptionkey/headset_cent
+	independent = 1
 	recalculateChannels()
 
 /obj/item/radio/Destroy()
@@ -221,6 +228,9 @@
 		return
 	if(!M.IsVocal())
 		return
+	if(radio_sounds.len) //Sephora - Radios make small static sounds now.
+		var/sound/radio_sound = pick(radio_sounds)
+		playsound(M.loc, radio_sound, 50, 1)
 
 	if(use_command)
 		spans |= SPAN_COMMAND

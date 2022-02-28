@@ -400,16 +400,23 @@
 // Laser rifle (rechargeable magazine) //
 
 /obj/item/gun/ballistic/automatic/laser
-	name = "laser rifle"
-	desc = "Though sometimes mocked for the relatively weak firepower of their energy weapons, the logistic miracle of rechargeable ammunition has given Nanotrasen a decisive edge over many a foe."
-	icon_state = "oldrifle"
+	name = "L-804 Neo Laser Rifle"
+	desc = "The next generation of laser guns, in prototype form.."
+	icon_state = "lasernew"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/recharge
-	mag_display_ammo = TRUE
+	mag_display_ammo = FALSE
 	fire_delay = 2
 	can_suppress = FALSE
 	burst_size = 0
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+
+
+/obj/item/gun/ballistic/automatic/laser/burst
+	name = "L-807 Neo Laser Burst Rifle "
+	desc = "The Miracle of the L-804, in it's full burst fire glory."
+	icon_state = "laserburst"
+	burst_size = 3

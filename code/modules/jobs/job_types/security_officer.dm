@@ -10,6 +10,8 @@
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	loadalways = TRUE
+	mapexclude = list("naval","galaxy")
 
 	outfit = /datum/outfit/job/security
 

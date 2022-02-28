@@ -267,7 +267,9 @@
 		if(LH.target && LH.target.stat == DEAD)
 			to_chat(carbon_user,"<span class='danger'>Your patrons accepts your offer..</span>")
 			var/mob/living/carbon/human/H = LH.target
-			H.gib()
+			H.spill_organs()
+			H.adjustBruteLoss(250)
+			new /obj/effect/gibspawner/generic(get_turf(H))
 			LH.target = null
 			var/datum/antagonist/heretic/EC = carbon_user.mind.has_antag_datum(/datum/antagonist/heretic)
 

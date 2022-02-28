@@ -73,9 +73,14 @@
 
 	/// Job's station type. Will affect what kinds of station the job spawns on. Spawns on all types if set to none.
 	var/maptype = "none"
+	///Used to exclude jobs
+	var/list/mapexclude = list("none")
 
 	///Job's faction, for maps like the starfury
 	var/corp = "nanotrasen"
+
+	//If this job is needed to load, then this the flag that keeps it to load. Assistants and Sec officers can't be unloaded.
+	var/loadalways = FALSE
 
 	//To help with Whitelisting shit
 	var/trusted_only = FALSE

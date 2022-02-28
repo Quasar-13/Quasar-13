@@ -101,7 +101,7 @@
 		switch(screen)
 
 
-		  // --- Main Menu ---
+		// --- Main Menu ---
 
 			if(0)
 				dat += "<br>[temp]<br>"
@@ -117,12 +117,12 @@
 					dat += "<br>No servers detected. Scan for servers: <a href='?src=\ref[src];operation=scan'>\[Scan\]</a>"
 
 
-		  // --- Viewing Server ---
+		// --- Viewing Server ---
 
 			if(1)
 				if(SelectedServer)
 					dat += "<br>[temp]<br>"
-					dat += "<center><a href='?src=\ref[src];operation=mainmenu'>\[Main Menu\]</a>     <a href='?src=\ref[src];operation=refresh'>\[Refresh\]</a></center>"
+					dat += "<center><a href='?src=\ref[src];operation=mainmenu'>\[Main Menu\]</a>   <a href='?src=\ref[src];operation=refresh'>\[Refresh\]</a></center>"
 					dat += "<br>Current Network: [network]"
 					dat += "<br>Selected Server: [SelectedServer.id]"
 					dat += "<br><br>"

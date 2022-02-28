@@ -299,3 +299,10 @@
 	suffix = "hellfactory.dmm"
 	name = "Heck Brewery"
 	description = "An abandoned warehouse and brewing facility, which has been recently rediscovered. Reports claim that the security system entered an ultra-hard lockdown, but these reports are inconclusive."
+
+/datum/map_template/ruin/space/devious_lick
+	id = "devious_lick"
+	suffix = "devious_lick.dmm"
+	name = "Devious Lick"
+	description = "Who took out the entirety of pubbystation's bathroom!?"
+
