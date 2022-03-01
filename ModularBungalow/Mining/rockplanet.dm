@@ -40,7 +40,7 @@
 
 /area/rockplanet/surface/outdoors/unexplored/danger //megafauna will also spawn here
 	icon_state = "danger"
-	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | FLORA_ALLOWED | MOB_SPAWN_ALLOWED | MEGAFAUNA_SPAWN_ALLOWED | NO_ALERTS
+	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | FLORA_ALLOWED | MOB_SPAWN_ALLOWED | NO_ALERTS
 
 /area/rockplanet/surface/outdoors/explored
 	name = "Rockplanet Labor Camp"
@@ -62,7 +62,6 @@
 		/mob/living/simple_animal/hostile/asteroid/hivelord = 50,
 		/mob/living/simple_animal/hostile/netherworld/migo/asteroid = 10,
 		/mob/living/simple_animal/hostile/alien/asteroid = 20,
-		SPAWN_MEGAFAUNA = 3,
 		/mob/living/simple_animal/hostile/asteroid/goldgrub = 10)
 	flora_spawn_list = list(
 		/obj/structure/flora/rock/jungle = 2,
