@@ -45,6 +45,7 @@
 /datum/job/curator
 	alt_titles = list("Journalist", "Librarian")
 	senior_title = list("Dungeon Master")
+	ultra_senior_title = list("Dust Collector")
 
 /datum/job/janitor
 	alt_titles = list("Custodian", "Sanitation Technician")
@@ -59,6 +60,7 @@
 /datum/job/chaplain
 	alt_titles = list("Counselor", "Priest")
 	senior_title = list("Prophet")
+	ultra_senior_title = list("Summoner of Narsie")
 
 /datum/job/clown
 	alt_titles = list("Jester", "Comedian")
