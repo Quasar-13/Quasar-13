@@ -18,7 +18,7 @@
 	light_power = 1
 	light_on = FALSE
 	var/on = FALSE
-
+	var/brightness_on = 4 //range of light when on
 
 /obj/item/flashlight/Initialize()
 	. = ..()

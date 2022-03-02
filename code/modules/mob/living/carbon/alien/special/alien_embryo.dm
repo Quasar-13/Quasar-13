@@ -91,9 +91,6 @@
 
 	var/mob/dead/observer/ghost = pick(candidates)
 
-	var/mutable_appearance/overlay = mutable_appearance('icons/mob/alien.dmi', "burst_lie")
-	owner.add_overlay(overlay)
-
 	var/atom/xeno_loc = get_turf(owner)
 	var/mob/living/carbon/alien/larva/new_xeno = new(xeno_loc)
 	new_xeno.key = ghost.key
@@ -123,7 +120,6 @@
 	else
 		new_xeno.visible_message("<span class='danger'>[new_xeno] wriggles out of [owner]!</span>", "<span class='userdanger'>You exit [owner], your previous host.</span>")
 		owner.adjustBruteLoss(40)
-		owner.cut_overlay(overlay)
 	qdel(src)
 
 

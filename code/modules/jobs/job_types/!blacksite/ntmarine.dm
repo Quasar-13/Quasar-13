@@ -29,4 +29,6 @@
 	head = /obj/item/clothing/head/beret/black
 	back = null
 	belt = /obj/item/storage/belt/military/assault
-	backpack_contents = list(/obj/item/choice_beacon/marine=1)
+	backpack_contents = list(
+		/obj/item/choice_beacon/marine = 1,
+	)

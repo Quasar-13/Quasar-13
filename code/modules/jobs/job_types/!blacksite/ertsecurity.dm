@@ -31,12 +31,15 @@
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	back = /obj/item/storage/backpack/ert/security
 	belt = /obj/item/storage/belt/security/full
-	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
-		/obj/item/choice_beacon/ert=1,\
-		/obj/item/storage/box/handcuffs=1,\
-		/obj/item/gun/energy/pulse/pistol=1,\
-		/obj/item/choice_beacon/marines/turret/heavy=1,\
-		/obj/item/melee/baton/loaded=1)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
+	backpack_contents = list(
+		/obj/item/storage/box/survival/engineer = 1,
+		/obj/item/choice_beacon/bungalow/combat/ert = 1,
+		/obj/item/storage/box/handcuffs = 1,
+		/obj/item/gun/energy/pulse/pistol = 1,
+		/obj/item/choice_beacon/bungalow/turret/heavy = 1,
+		/obj/item/melee/baton/loaded = 1,
+	)
 
 
 //Spawn Point

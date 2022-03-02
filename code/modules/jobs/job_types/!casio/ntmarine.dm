@@ -1,4 +1,4 @@
-/datum/job/ntmarine
+/datum/job/ntmarinecasio
 	title = "NT Marine"
 	faction = "Station"
 	total_positions = 4
@@ -6,7 +6,7 @@
 	supervisors = "the NT Squad Leader"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = "casio"
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntmarine
 

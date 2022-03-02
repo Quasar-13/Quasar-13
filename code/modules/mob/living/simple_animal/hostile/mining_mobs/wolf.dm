@@ -25,9 +25,6 @@
 	attack_sound = 'sound/weapons/bite.ogg'
 	vision_range = 7
 	aggro_vision_range = 7
-	move_force = MOVE_FORCE_WEAK
-	move_resist = MOVE_FORCE_WEAK
-	pull_force = MOVE_FORCE_WEAK
 	butcher_results = list(/obj/item/food/meat/slab = 2, /obj/item/stack/sheet/sinew/wolf = 2, /obj/item/stack/sheet/bone = 2)
 	loot = list()
 	crusher_loot = /obj/item/crusher_trophy/wolf_ear

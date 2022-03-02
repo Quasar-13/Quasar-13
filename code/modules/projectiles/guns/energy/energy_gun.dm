@@ -37,6 +37,11 @@
 	ammo_x_offset = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode/spec, /obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser)
 
+/obj/item/gun/energy/e_gun/stun/small
+	name = "Compartmentalized XX-01 Tactical Energy Rifle"
+	desc = "Military issue energy gun, is able to fire stun rounds.is able to fire stun rounds. Modified to be smaller"
+	w_class = WEIGHT_CLASS_NORMAL
+
 /obj/item/gun/energy/e_gun/old
 	name = "NT-P 01 Protoype energy gun"
 	desc = "NT-P:01 Prototype Energy Gun. Early stage development of a unique laser rifle that has multifaceted energy lens allowing the gun to alter the form of projectile it fires on command."
@@ -57,7 +62,7 @@
 	icon_state = "hoslaser"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hos, /obj/item/ammo_casing/energy/laser/hos, /obj/item/ammo_casing/energy/ion/hos)
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hos, /obj/item/ammo_casing/energy/laser/hos, /obj/item/ammo_casing/energy/ion/hos, /obj/item/ammo_casing/energy/taser)
 	shaded_charge = TRUE
 	ammo_x_offset = 4
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -105,6 +110,11 @@
 	var/reactor_overloaded
 	var/fail_tick = 0
 	var/fail_chance = 0
+
+/obj/item/gun/energy/e_gun/nuclear/small
+	name = "Compartmentalized X-07 Nuclear Energy Rifle"
+	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell. Modified to be smaller"
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/energy/e_gun/nuclear/process(delta_time)
 	if(fail_tick > 0)

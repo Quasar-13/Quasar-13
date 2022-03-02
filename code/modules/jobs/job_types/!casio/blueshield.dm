@@ -8,32 +8,33 @@
 	selection_color = "#bbbbee"
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "casio"
+	maptype = "naval"
+	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield
 
 
-	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
-					ACCESS_MORGUE, ACCESS_MAINT_TUNNELS,ACCESS_AUX_BASE,
+	access = list(ACCESS_SECURITY, ACCESS_BLUESHIELD, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
+					ACCESS_MORGUE, ACCESS_MAINT_TUNNELS,ACCESS_AUX_BASE, ACCESS_CARGO,
 					ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING, ACCESS_EVA, ACCESS_TELEPORTER,
 					ACCESS_HEADS, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
-	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
-					ACCESS_MORGUE, ACCESS_MAINT_TUNNELS,ACCESS_AUX_BASE,
+	minimal_access = list(ACCESS_SECURITY, ACCESS_BLUESHIELD, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
+					ACCESS_MORGUE, ACCESS_MAINT_TUNNELS,ACCESS_AUX_BASE, ACCESS_CARGO,
 					ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING, ACCESS_EVA, ACCESS_TELEPORTER,
 					ACCESS_HEADS, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 
-	liver_traits = list(TRAIT_ROYAL_METABOLISM)
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
+	display_order = JOB_DISPLAY_ORDER_HIGH_COMMAND
 
 
 /datum/outfit/job/blueshield
 	name = "Blueshield"
-	jobtype = /datum/job/ntcaptain
+	jobtype = /datum/job/blueshield
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/pda/captain
+	belt = /obj/item/pda/blueshield
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_com
 	gloves = /obj/item/clothing/gloves/color/black

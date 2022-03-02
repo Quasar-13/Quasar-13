@@ -48,3 +48,42 @@
 	new /obj/item/ammo_box/magazine/sniper_rounds/soporific(src)
 	new /obj/item/suppressor/specialoffer(src)
 
+/obj/item/storage/briefcase/syndie_mantis
+	desc = "A sleek briefcase. It has the letters G.O.R.L.E.X. on it"
+
+/obj/item/storage/briefcase/syndie_mantis/PopulateContents()
+	..()
+	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis(src)
+	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis/l(src)
+
+/obj/item/storage/briefcase/nano_mantis
+	desc = "A sleek briefcase. It has the letters HEPHAESTUS. Industries, printed in gold on it"
+
+/obj/item/storage/briefcase/nano_mantis/PopulateContents()
+	..()
+	new /obj/item/autosurgeon/organ/nano_mantis(src)
+	new /obj/item/autosurgeon/organ/nano_mantis/l(src)
+
+//Secure Briefcase stuff
+
+/obj/item/storage/secure/briefcase/bni
+	desc = "A sleek briefcase. Futher analysis shows that it has the BNI logo faintly imprinted on it"
+	force = 15
+
+/obj/item/storage/secure/briefcase/bni/PopulateContents()
+	..()
+	new /obj/item/clothing/under/bni(src)
+	new /obj/item/clothing/accessory/medal/rank/nt/bni(src)
+
+/obj/item/storage/secure/briefcase/bni/cc_official
+
+/obj/item/storage/secure/briefcase/bni/cc_official/PopulateContents()
+	..()
+	new /obj/item/clothing/under/rank/centcom/officer(src)
+	new /obj/item/clothing/shoes/sneakers/black(src)
+	new /obj/item/clothing/gloves/color/black(src)
+	new /obj/item/radio/headset/headset_cent(src)
+	new /obj/item/clothing/glasses/sunglasses(src)
+	new /obj/item/storage/backpack/satchel(src)
+	new /obj/item/pda/heads(src)
+	new /obj/item/clipboard(src)

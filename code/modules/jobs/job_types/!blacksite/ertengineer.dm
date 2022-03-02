@@ -32,12 +32,15 @@
 	back = /obj/item/storage/backpack/ert/engineer
 	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/rcd_ammo/large
-	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
-		/obj/item/choice_beacon/ert=1,\
-		/obj/item/melee/baton/loaded=1,\
-		/obj/item/stack/sheet/mineral/sandbags=50,\
-		/obj/item/choice_beacon/marines/turret=1,\
-		/obj/item/construction/rcd/loaded=1)
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
+	backpack_contents = list(
+		/obj/item/storage/box/survival/engineer = 1,
+		/obj/item/choice_beacon/bungalow/combat/ert = 1,
+		/obj/item/melee/baton/loaded = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 50,
+		/obj/item/choice_beacon/bungalow/turret = 1,
+		/obj/item/construction/rcd/loaded=1,
+	)
 
 
 //Spawn Point

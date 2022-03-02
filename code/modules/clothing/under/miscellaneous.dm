@@ -155,3 +155,12 @@
 	icon_state = "captain_parade"
 	inhand_icon_state = "by_suit"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/misc/minecraft
+	name = "minecraft steve clothes"
+	desc = "The classic minecraft style."
+	icon_state = "minecraft"
+	inhand_icon_state = "minecraft"
+	can_adjust = FALSE
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 0, WOUND = 10)
+	resistance_flags = NONE

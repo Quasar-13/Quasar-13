@@ -49,8 +49,6 @@
 	var/lamp_color = COLOR_WHITE
 	///Set to true if a doomsday event is locking our lamp to on and RED
 	var/lamp_doom = FALSE
-	///Lamp brightness. Starts at 3, but can be 1 - 5.
-	var/lamp_intensity = 3
 
 	var/mutable_appearance/eye_lights
 
@@ -126,6 +124,10 @@
 	var/toner = 0
 	var/tonermax = 40
 
+	var/lamp_max = 10 ///Maximum brightness of a borg lamp. Set as a var for easy adjusting.
+	var/lamp_intensity = 0 ///Luminosity of the headlamp. 0 is off. Higher settings than the minimum require power.
+	var/lamp_cooldown = 0 ///Flag for if the lamp is on cooldown after being forcibly disabled.
+
 	var/list/upgrades = list()
 
 	var/hasExpanded = FALSE
@@ -150,7 +152,7 @@
 
 /mob/living/silicon/robot/shell
 	shell = TRUE
-	cell = null
+	cell = /obj/item/stock_parts/cell/high
 
 /mob/living/silicon/robot/model
 	var/set_model = /obj/item/robot_model

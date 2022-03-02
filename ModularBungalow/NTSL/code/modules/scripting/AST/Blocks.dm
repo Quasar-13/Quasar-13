@@ -11,7 +11,7 @@
 /node/BlockDefinition
 	var/list
 		statements = new
-		functions  = new
+		functions = new
 		initial_variables = new
 
 /*

@@ -8,7 +8,7 @@
 	selection_color = "#b7edda"
 	maptype = "solgov"
 
-	outfit = /datum/outfit/job/medical_technician
+	outfit = /datum/outfit/job/solgov
 
 	access = list(ACCESS_MEDICAL)
 	minimal_access = list(ACCESS_MEDICAL)
@@ -18,8 +18,3 @@
 
 	display_order = JOB_DISPLAY_ORDER_MEDICAL_DOCTOR
 
-/datum/outfit/job/medical_technician
-	name = "Solgov Survivor (Medical Technician)"
-	id = /obj/item/card/id/solgov
-	jobtype = /datum/job/medical_technician
-	belt = null

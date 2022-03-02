@@ -100,7 +100,7 @@
 				/obj/item/storage/box/matches = 3,
 				/obj/item/reagent_containers/syringe/contraband/space_drugs = 1,
 				/obj/item/reagent_containers/syringe/contraband/krokodil = 1,
-				/obj/item/reagent_containers/syringe/contraband/crank = 1,
+				/obj/item/reagent_containers/syringe/contraband/saturnx = 1,
 				/obj/item/reagent_containers/syringe/contraband/methamphetamine = 1,
 				/obj/item/reagent_containers/syringe/contraband/bath_salts = 1,
 				/obj/item/reagent_containers/syringe/contraband/fentanyl = 1,
@@ -492,6 +492,27 @@
 				/obj/item/circuitboard/machine/chem_master,
 				/obj/item/circuitboard/computer/pandemic
 				)
+
+/obj/effect/spawner/lootdrop/medical/firstaid_rare
+	name = "rare firstaid kit spawner"
+	icon_state = "firstaid"
+	loot = list(
+		/obj/item/storage/firstaid/emergency,
+		/obj/item/storage/firstaid/medical,
+		/obj/item/storage/firstaid/advanced,
+	)
+
+/obj/effect/spawner/lootdrop/medical/firstaid
+	name = "firstaid kit spawner"
+	icon_state = "firstaid"
+	loot = list(
+		/obj/item/storage/firstaid/regular = 10,
+		/obj/item/storage/firstaid/o2 = 10,
+		/obj/item/storage/firstaid/fire = 10,
+		/obj/item/storage/firstaid/brute = 10,
+		/obj/item/storage/firstaid/toxin = 10,
+		/obj/effect/spawner/lootdrop/medical/firstaid_rare = 1,
+	)
 
 /obj/effect/spawner/lootdrop/techstorage/ai
 	name = "secure AI circuit board spawner"

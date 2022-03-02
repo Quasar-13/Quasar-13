@@ -18,3 +18,59 @@
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "samurai"
+
+/obj/item/clothing/neck/cloak/gurren
+	name = "humanity cloak"
+	desc = "A cloak used by humans across the galaxy."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "gurren"
+
+/obj/item/clothing/neck/cloak/simone
+	name = "spiral cloak"
+	desc = "A blue cloak used by humans across the galaxy."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "simon"
+
+/obj/item/clothing/neck/cloak/admiral
+	name = "admiral cloak"
+	desc = "A cloak used by the admiral herself."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "admiral"
+
+/obj/item/clothing/neck/cloak/flag
+	name = "junior flag officer's cloak"
+	desc = "A cloak used by NT Junior flag officers. The lowest of the highest ranks achievable."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "ntcap"
+
+/obj/item/clothing/neck/cloak/ntcap
+	name = "NT Captain's cloak"
+	desc = "A cloak used by NT Naval captains."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "centcloak"
+
+/obj/item/clothing/neck/cloak/provost
+	name = "Provost's cloak"
+	desc = "A cloak used by NT provosts."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "provostcloak"
+
+/obj/item/clothing/neck/cloak/vadm
+	name = "Vice Admiral's cloak"
+	desc = "A cloak used by the ceremonial NT Vice Admirals."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "viceadmiralcloak"
+
+/obj/item/clothing/neck/cloak/xan
+	name = "Fleet Admiral Caelumbyrn Crux's Cloak"
+	desc = "A cloak used by Caelumbyrn Crux."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "xcloak"

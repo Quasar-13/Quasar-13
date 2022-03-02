@@ -1,5 +1,4 @@
 //Galaxy Lockers
-
 /obj/structure/closet/secure_closet/captains_galaxy
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper captain's locker"
@@ -27,7 +26,7 @@
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/color/captain/galaxy(src)
 	new /obj/item/choice_beacon/sabre(src)
-	new /obj/item/choice_beacon/captain(src)
+	new /obj/item/choice_beacon/gun(src)
 	new /obj/item/door_remote/captain(src)
 
 /obj/structure/closet/secure_closet/hop_galaxy
@@ -55,20 +54,20 @@
 	new /obj/item/storage/lockbox/medal/hop(src)
 	new /obj/item/card/id/departmental_budget/srv(src)
 
-//Casio lockers
+//Naval lockers
 /obj/structure/closet/secure_closet/centcom
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper centcom locker"
 	req_access = list(ACCESS_CENT_CAPTAIN)
 	icon_state = "capnaval"
 
-/obj/structure/closet/secure_closet/captains_casio
+/obj/structure/closet/secure_closet/captains_naval
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper captain's locker"
 	req_access = list(ACCESS_CAPTAIN)
 	icon_state = "capnaval"
 
-/obj/structure/closet/secure_closet/captains_casio/PopulateContents()
+/obj/structure/closet/secure_closet/captains_naval/PopulateContents()
 	..()
 	new /obj/item/clothing/suit/hooded/wintercoat/captain(src)
 	new /obj/item/storage/backpack/captain(src)
@@ -78,7 +77,7 @@
 	new /obj/item/clothing/under/rank/centcom/officer/captain(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)
 	new /obj/item/clothing/suit/captunic(src)
-	new /obj/item/clothing/suit/armor/captain/casio(src)
+	new /obj/item/clothing/suit/armor/captain/naval(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/headset_cent/commander(src)
@@ -115,7 +114,6 @@
 	new /obj/item/storage/photo_album/hos(src)
 	new /obj/item/card/id/departmental_budget/sec(src)
 
-
 /obj/structure/closet/secure_closet/nt_mp
 	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi'
 	name = "\proper Marine Military Police's locker"
@@ -134,6 +132,4 @@
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
-	new /obj/item/choice_beacon/spec(src)
 	new /obj/item/door_remote/head_of_security(src)
-

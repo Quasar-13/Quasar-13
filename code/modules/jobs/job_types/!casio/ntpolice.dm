@@ -8,7 +8,7 @@
 	supervisors = "the NT Squad Leader"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = "casio"
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntpolice
 
@@ -31,6 +31,7 @@
 	uniform = /obj/item/clothing/under/plasmaman/centcom_intern/marine
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/bulletproof
+	belt = /obj/item/pda/mp
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/beret/centcom
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses

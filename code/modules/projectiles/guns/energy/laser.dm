@@ -18,7 +18,7 @@
 
 /obj/item/gun/energy/laser/retro
 	name ="L-304 Laser Blaster"
-	icon_state = "retro"
+	icon_state = "retro2"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
 
@@ -48,7 +48,7 @@
 
 /obj/item/gun/energy/laser/captain/scattershot
 	name = "E-041 Self-Charging Laser Shotgun"
-	icon_state = "lasercannon"
+	icon_state = "lasershotgun"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "laser"
 	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lens to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theoretically infinite use."

@@ -244,6 +244,7 @@
 		"swarmer" = 'icons/UI_Icons/Achievements/Boss/swarmer.png',
 		"tendril" = 'icons/UI_Icons/Achievements/Boss/tendril.png',
 		"marine" = 'icons/UI_Icons/Achievements/Boss/marine.png',
+		"necromancer" = 'icons/UI_Icons/Achievements/Boss/necromancer.png',
 		"featofstrength" = 'icons/UI_Icons/Achievements/Misc/featofstrength.png',
 		"helbital" = 'icons/UI_Icons/Achievements/Misc/helbital.png',
 		"jackpot" = 'icons/UI_Icons/Achievements/Misc/jackpot.png',
@@ -540,6 +541,15 @@
 			continue
 		Insert(id, fish_icon, fish_icon_state)
 	..()
+
+/datum/asset/simple/adventure
+	assets = list(
+		"default" = 'icons/UI_Icons/adventure/default.png',
+		"grue" = 'icons/UI_Icons/adventure/grue.png',
+		"signal_lost" ='icons/UI_Icons/adventure/signal_lost.png',
+		"trade" = 'icons/UI_Icons/adventure/trade.png',
+	)
+
 
 /// Removes all non-alphanumerics from the text, keep in mind this can lead to id conflicts
 /proc/sanitize_css_class_name(name)

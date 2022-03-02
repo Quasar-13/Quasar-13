@@ -14,7 +14,7 @@
 	minimal_access = list(ACCESS_HEADS)
 	paycheck = PAYCHECK_CENTCOM
 	paycheck_department = ACCOUNT_SEC
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_COMMAND
 
 /datum/outfit/job/ntmedical
 	name = "NT Medical Officer"
@@ -28,6 +28,7 @@
 	belt = /obj/item/storage/belt/medical/surgeryfilled
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id/centcom
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/defibrillator/compact/combat/loaded/nanotrasen=1,\

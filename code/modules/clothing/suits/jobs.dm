@@ -63,7 +63,7 @@
 	inhand_icon_state = "det_suit"
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(MELEE = 25, BULLET = 10, LASER = 25, ENERGY = 35, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 45)
+	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
@@ -81,6 +81,12 @@
 	name = "noir suit coat"
 	desc = "A dapper private investigator's grey suit coat."
 	icon_state = "detsuit"
+	inhand_icon_state = "detsuit"
+	
+/obj/item/clothing/suit/det_suit/noir/intel
+	name = "intel officer's suit"
+	desc = "A dapper intelligence agent's grey-blue suit coat."
+	icon_state = "intelsuit"
 	inhand_icon_state = "detsuit"
 
 //Engineering
@@ -132,24 +138,24 @@
 //Security
 /obj/item/clothing/suit/security/officer
 	name = "security officer's jacket"
-	desc = "This jacket is for those special occasions when a security officer isn't required to wear their armor."
+	desc = "This jacket is for those special occasions when a security officer wants the NT ceritified DRIP."
 	icon_state = "officerbluejacket"
 	inhand_icon_state = "officerbluejacket"
 	body_parts_covered = CHEST|ARMS
+	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	allowed = list(/obj/item/gun, /obj/item/ammo_box,/obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/transforming/energy/sword/saber, /obj/item/restraints/handcuffs)
 
-/obj/item/clothing/suit/security/warden
+/obj/item/clothing/suit/security/officer/warden
 	name = "warden's jacket"
 	desc = "Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig."
 	icon_state = "wardenbluejacket"
 	inhand_icon_state = "wardenbluejacket"
-	body_parts_covered = CHEST|ARMS
 
-/obj/item/clothing/suit/security/hos
+/obj/item/clothing/suit/security/officer/hos
 	name = "head of security's jacket"
 	desc = "This piece of clothing was specifically designed for asserting superior authority."
 	icon_state = "hosbluejacket"
 	inhand_icon_state = "hosbluejacket"
-	body_parts_covered = CHEST|ARMS
 
 //Surgeon
 /obj/item/clothing/suit/apron/surgical
