@@ -143,19 +143,7 @@
 	var/list/manifest_out
 
 
-	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy"|| SSmaptype.maptype == "vagabond")
-		manifest_out = list(
-		"Command",
-		"Security",
-		"Engineering",
-		"Medical",
-		"Science",
-		"Supply",
-		"Service",
-		"Silicon"
-		)
-
-	if(SSmaptype.maptype == "ship")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy"|| SSmaptype.maptype == "vagabond" || SSmaptype.maptype == "ship")
 		manifest_out = list(
 		"Command",
 		"Security",
