@@ -9,11 +9,10 @@
 	health = 4000
 	maxHealth = 4000
 	icon_state = "norn"
-	icon_dead = "marked_dying"
 	attack_verb_simple = "rends"
 	attack_verb_continuous = "rends"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	deathmessage = "falls on his sword, ash evaporating from every hole in his armor."
+	deathmessage = "bursts into a shower of blood."
 	del_on_death = TRUE
 	gps_name = "August Signal"
 	speak_emote = list("hisses")
