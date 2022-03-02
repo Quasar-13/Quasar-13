@@ -39,6 +39,9 @@
 /// Bungalow CQC
 #define MARTIALART_QM "Close Quarters Crateing"
 
+//Samurai martial art
+#define MARTIALART_SAMURAI "kenjitsu"
+
 /*
  * # Flags
  */

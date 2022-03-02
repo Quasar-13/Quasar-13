@@ -93,7 +93,7 @@
 	name = "Energy Shotgun"
 	desc = "For the captain that wishes to be a doom marine."
 
-/obj/item/storage/box/captain/shotgun/PopulateContents()
+/obj/item/storage/box/captain/gun/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
 
 
@@ -146,6 +146,29 @@
 
 /obj/item/storage/box/sabre/katana/PopulateContents()
 	new /obj/item/katana/captain(src)
+
+/obj/item/storage/box/sabre/dagger
+	name = "Meteoric iron dagger"
+	desc = "A dagger made from ancient iron."
+
+/obj/item/storage/box/sabre/dagger/PopulateContents()
+	new /obj/item/kitchen/knife/meteorknife(src)
+
+/obj/item/storage/box/sabre/halberd
+	name = "Gae Bolg"
+	desc = "A halberd with long reach."
+
+/obj/item/storage/box/sabre/halberd/PopulateContents()
+	new /obj/item/melee/halberd(src)
+
+/obj/item/storage/box/sabre/drill
+	name = "Galaxy Breaker Spear"
+	desc = "A spear with a drill tip."
+
+/obj/item/storage/box/sabre/drill/PopulateContents()
+	new /obj/item/melee/drillspear(src)
+	new /obj/item/clothing/neck/cloak/simone(src)
+	new /obj/item/clothing/glasses/sunglasses/gar(src)
 
 //BLACKSITE
 /obj/item/choice_beacon/bungalow/combat/deathsquad
