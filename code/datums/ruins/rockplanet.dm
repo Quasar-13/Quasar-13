@@ -79,10 +79,25 @@
 	id = "platinum"
 	description = "You cannot win, She cannot lose."
 	suffix = "rockplanet_platinum.dmm"
-	cost = 0
-	always_place = TRUE
+
+/datum/map_template/ruin/rockplanet/praetor
+	name = "Praetor"
+	id = "praetor"
+	description = "A corpse-ridden hall containing a dangerous hero."
+	suffix = "rockplanet_praetor.dmm"
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/defender
+	name = "Clockwork defender"
+	id = "clockwork"
+	description = "A small room containing a clockwork defender."
+	suffix = "rockplanet_clockwork.dmm"
+
+/datum/map_template/ruin/rockplanet/cabin
+	name = "Syndicate Cabin"
+	id = "cabin"
+	description = "A ruined syndicate command outpost."
+	suffix = "rockplanet_cabin.dmm"
 
 
 
