@@ -185,7 +185,7 @@
 /datum/job/captain
 	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
-	ultra_senior_title = list("The Big Person")
+	ultra_senior_title = list("Condom")
 
 //Funny role
 /datum/job/staff_officer
