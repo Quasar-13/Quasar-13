@@ -1,4 +1,29 @@
 //Kiriechem Medicines
+/datum/reagent/medicine/sbicarid //brings it back kinda
+	name = "Impure Bicaridine"
+	description = "A bruise reliever with a low overdose"
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/sbicarid/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-0.5*REM)
+	..()
+	return TRUE
+
+/datum/reagent/medicine/skelo //brings it back kinda
+	name = "Impure Kelotane"
+	description = "A small burn reliever"
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/sbicarid/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-0.5*REM)
+	..()
+	return TRUE
+
+
 /datum/reagent/medicine/bicaridine //brings it back kinda
 	name = "Bicaridine"
 	description = "A bruise reliever with a low overdose"
