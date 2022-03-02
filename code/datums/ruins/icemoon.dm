@@ -72,14 +72,6 @@
 	description = "A once grand library, now lost to the confines of the Ice Moon."
 	suffix = "icemoon_underground_library.dmm"
 
-/datum/map_template/ruin/icemoon/underground/asteroid
-	name = "Clockie Site"
-	id = "asteroidsite"
-	description = "Surprised to see us here?"
-	suffix = "icemoon_surface_asteroid.dmm"
-	cost = 0
-	always_place = TRUE
-
 /datum/map_template/ruin/icemoon/underground/miner
 	name = "Demonic Miner's Lair"
 	id = "minerlair"
