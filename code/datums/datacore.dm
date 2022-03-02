@@ -214,7 +214,7 @@
 
 	var/list/departments
 
-	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy")
+	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy" || SSmaptype.maptype == "vagabond"|| SSmaptype.maptype == "ship")
 		departments = list(
 			"Command" = GLOB.command_positions,
 			"Security" = GLOB.security_positions,
@@ -238,18 +238,6 @@
 			"Silicon" = GLOB.nonhuman_positions)
 
 
-	if(SSmaptype.maptype == "ship")
-		departments = list(
-			"Command" = GLOB.command_positions,
-			"Security" = GLOB.security_positions,
-			"Engineering" = GLOB.engineering_positions,
-			"Medical" = GLOB.medical_positions,
-			"Science" = GLOB.science_positions,
-			"Supply" = GLOB.supply_positions,
-			"Service" = GLOB.service_positions,
-			"Silicon" = GLOB.nonhuman_positions)
-
-
 	if(SSmaptype.maptype == "goonlite")
 		departments = list(
 			"Command" = GLOB.command_positions,
@@ -258,6 +246,7 @@
 			"Medsci" = GLOB.medical_positions + GLOB.science_positions,
 			"Service" = GLOB.service_positions,
 			"Silicon" = GLOB.nonhuman_positions)
+
 
 	if(SSmaptype.maptype == "naval")
 		departments = list(
