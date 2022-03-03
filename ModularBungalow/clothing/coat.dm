@@ -20,6 +20,15 @@
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "winterhood_void"
 
+//RD Labcoat
+/obj/item/clothing/suit/toggle/labcoat/rd
+	name = "research director's labcoat"
+	desc = "Purpler than the standard model."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "labcoat_rd"
+
+
 /obj/item/clothing/suit/armor/ranger
 	name = "Ranger's Duster"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'

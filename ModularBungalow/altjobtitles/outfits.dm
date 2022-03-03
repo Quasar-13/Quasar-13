@@ -137,7 +137,7 @@
 /datum/outfit/job/cmo/seniormedicalofficer
 	name = "Chief Medical Officer (Senior Medical Officer)"
 	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/suit
-	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	suit = /obj/item/clothing/suit/neocoat/trench/cmo
 	head = /obj/item/clothing/head/beret/cmo/ice
 
 //Chief Engineer
