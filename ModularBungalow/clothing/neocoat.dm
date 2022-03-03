@@ -33,7 +33,7 @@
 /obj/item/clothing/suit/neocoat/rd
 	name = "rd's long labcoat"
 	desc = "A long purple labcoat with silver buttons. The RD can be seen with it sometimes."
-	icon_state = "labcoat_cmo_alt"
+	icon_state = "labcoat_rd_alt"
 
 //Pharmacist new
 /obj/item/clothing/suit/neocoat/pharm
