@@ -87,7 +87,7 @@
 /obj/item/clothing/suit/neocoat/trench
 	name = "doctor's military labcoat"
 	desc = "A Howie-style labcoat for military use. This one is plain white."
-	icon_state = "labcoat_doc_alt_long"
+	icon_state = "labcoat_doc_long"
 
 //Senior Medical Officer
 /obj/item/clothing/suit/neocoat/trench/cmo
