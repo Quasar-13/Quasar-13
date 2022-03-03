@@ -122,7 +122,7 @@
 /obj/item/clothing/suit/neocoat/trench/roboblack
 	name = "roboticist's black military labcoat"
 	desc = "A Howie-style labcoat for military use. Comes in black with red accents for the roboticists."
-	icon_state = "labcoat_robowblack_long"
+	icon_state = "labcoat_roboblack_long"
 
 //Scientist
 /obj/item/clothing/suit/neocoat/trench/sci
