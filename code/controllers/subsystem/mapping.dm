@@ -314,6 +314,9 @@ Used by the AI doomsday and the self-destruct nuke.
 			else if (!isnull(config.minetype) && config.minetype != "none")
 				INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 
+
+	else if(config.minetype == "asteroidbelt")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Asteroidbelt.dmm", default_traits = ZTRAITS_ASTEROIDBELT)
 		//Syndicate Marine Corps
 
 	else if(config.minetype == "phobos")

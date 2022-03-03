@@ -116,6 +116,13 @@ require only minor tweaks.
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
 
+//Bungalow extra mining
+#define ZTRAITS_ASTEROIDBELT list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_SPACE_RUINS = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/space)
+
 //SMC Missions
 #define ZTRAITS_MISSION list(\
 	ZTRAIT_MINING = TRUE, \
