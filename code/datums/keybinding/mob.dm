@@ -263,7 +263,7 @@
 	return TRUE
 
 /datum/keybinding/mob/prevent_movement
-	hotkey_keys = list("Ctrl")
+	hotkey_keys = list("Alt")
 	name = "block_movement"
 	full_name = "Block movement"
 	description = "Prevents you from moving"
