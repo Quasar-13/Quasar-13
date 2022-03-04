@@ -134,7 +134,7 @@
 	name = "Selenic Helioside"
 
 /datum/chemical_reaction/helioside
-	results = list(/datum/reagent/mixer/selenide = 2)
+	results = list(/datum/reagent/mixer/helioside = 2)
 	required_reagents = list(/datum/reagent/mixer/selenide = 1, /datum/reagent/acetone = 1)
 
 
