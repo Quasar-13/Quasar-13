@@ -58,7 +58,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/hopcoat
-	name = "HOP's Formal Coat"
+	name = "head of personnel's uniform"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A formal but simple coat worn by the Head of Personnel."
@@ -66,28 +66,35 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 
 /obj/item/clothing/suit/armor/hopjacket
-	name = "Head Of Personnel's Jacket"
+	name = "head of personnel's jacket"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A rather fancy coat worn by the Head of Personnel."
 	icon_state = "hopjacket"
 
 /obj/item/clothing/suit/armor/hopjacket/commjacket
-	name = "Communications Officer's Jacket"
+	name = "communications officer's jacket"
 	desc = "A rather fancy coat worn by the communications officer."
 
 /obj/item/clothing/suit/armor/hos/peacoat
-	name = "Head Of Security's Peacoat"
+	name = "head of security's Peacoat"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A coat popular among the female Head of Securities.."
 	icon_state = "hos"
 
-/obj/item/clothing/suit/qm
-	name = "quartermaster's coat"
+/obj/item/clothing/suit/armor/hos/ranger
+	name = "head of security's ranger duster"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "Made from all the miners you ruthlessly slaughtered."
+	icon_state = "hosranger"
+
+/obj/item/clothing/suit/qm
+	name = "quartermaster's coat"
 	desc = "A button-up jacket used by the quartermaster."
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon_state = "qmjacket"
 	inhand_icon_state = "armor"
 	dog_fashion = null

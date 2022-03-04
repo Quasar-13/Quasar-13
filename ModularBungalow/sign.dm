@@ -12,7 +12,6 @@
 	is_editable = FALSE
 	icon = 'ModularBungalow/zbungalowicons/decal.dmi'
 
-
 /obj/structure/sign/solgov
 	icon_state = "solgov"
 	name = "Solgov Colony sign"
