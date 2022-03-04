@@ -107,7 +107,7 @@
 /obj/item/clothing/head/beret/sec/navyofficer/black
 	desc = "A beret made out of black reinforced fabric with the security insignia emblazoned on it. For officers with class."
 	icon_state = "officerberetblack"
-	
+
 /obj/item/clothing/head/beret/sec/bni
 	desc = "A beret made out of slick blue reinforced fabric with an 'intelligence' insignia emblazoned on it. For agents with class."
 	icon_state = "bniberet"
@@ -200,18 +200,24 @@
 
 /obj/item/clothing/head/beret/hop
 	name = "head of personnel beret"
-	desc = "A lovely blue Head of Personnel's beret with a silver and white insignia. It smells faintly of paper and dogs."
+	desc = "A lovely blue Head of Personnel's beret with a crimson insignia. It smells faintly of paper and dogs."
 	icon_state = "beret_hop"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	strip_delay = 90
 
 /obj/item/clothing/head/beret/command
 	name = "command beret"
-	desc = "A modest blue command beret with a silver rank insignia. Smells of power and the sweat of assistants."
+	desc = "A modest blue command beret with a silver rank insignia. Used by showy bridge officers and command members alike."
 	icon_state = "beret_com"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 90
 
+/obj/item/clothing/head/beret/ensign
+	name = "ensign beret"
+	desc = "A cheap blue command beret with a brass rank insignia. Smells of power and the sweat of assistants."
+	icon_state = "beret_ens"
+
+//Extra Berets for other things
 /obj/item/clothing/head/beret/centcom
 	name = "centcom beret"
 	desc = "A green beret for those of the highest caliber"
@@ -230,10 +236,28 @@
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
 
-/obj/item/clothing/head/beret/cmo/ice //the only true head
+/obj/item/clothing/head/beret/cmo/ice //the best head, they get two berets. they deserve it.
 	name = "chief medical officer's ice-blue beret"
 	desc = "An ice blue beret with a threatening aura used by only the most senior of medical officer."
 	icon_state = "beret_mint"
+
+/obj/item/clothing/head/beret/mining/medical
+	name = "medical mining beret"
+	desc = "A grey beret with a cross insignia sewn into it. Offers some protection. Used by mining medics in the old days. Now mostly obselete."
+	icon_state = "beret_miningmed"
+	worn_icon_state = "beret_mining"
+
+/obj/item/clothing/head/beret/mining/civillian
+	name = "civillian mining beret"
+	desc = "A grey beret with a civillian insignia sewn into it. Offers some protection. Used by civillians on mining ships in the old days. Now mostly obselete."
+	icon_state = "beret_miningaux"
+	worn_icon_state = "beret_mining"
+
+/obj/item/clothing/head/beret/mining/engineer
+	name = "engineering mining beret"
+	desc = "A grey beret with a wrench insignia sewn into it. Offers some protection. Used by mining engineers in the old days. Now mostly obselete."
+	icon_state = "beret_miningeng"
+	worn_icon_state = "beret_mining"
 
 /*	//unused
 /obj/item/clothing/head/beret/lt
