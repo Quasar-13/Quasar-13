@@ -99,6 +99,13 @@
 	inhand_icon_state = "armor"
 	dog_fashion = null
 
+/obj/item/clothing/suit/CoCoat
+	name = "CoC coat"
+	desc = "The Chief Custodian's overcoat. Comfy, fancy, and with pockets for days."
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon_state = "pjanicoat"
+
 /obj/item/clothing/suit/firejacket
 	name = "fireman's jacket"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'

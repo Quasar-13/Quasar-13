@@ -270,6 +270,13 @@
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 
+/obj/item/clothing/under/coc
+	name = "CoC uniform"
+	desc = "For serious janitorial business"
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	icon_state = "pjani"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+
 //Prot-cust stuff
 /obj/item/clothing/under/rank/prisoner/custody
 	name = "protected custody jumpsuit"
