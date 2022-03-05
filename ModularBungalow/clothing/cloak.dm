@@ -19,6 +19,20 @@
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "samurai"
 
+/obj/item/clothing/neck/cloak/gurren
+	name = "humanity cloak"
+	desc = "A cloak used by humans across the galaxy."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "gurren"
+
+/obj/item/clothing/neck/cloak/simone
+	name = "spiral cloak"
+	desc = "A blue cloak used by humans across the galaxy."
+	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
+	icon_state = "simon"
+
 /obj/item/clothing/neck/cloak/admiral
 	name = "admiral cloak"
 	desc = "A cloak used by the admiral herself."
@@ -39,7 +53,7 @@
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "centcloak"
-	
+
 /obj/item/clothing/neck/cloak/provost
 	name = "Provost's cloak"
 	desc = "A cloak used by NT provosts."

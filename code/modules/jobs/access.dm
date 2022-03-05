@@ -402,7 +402,10 @@
 				"Communication Officer", "Nanotrasen Security Operative", "Miner",
 
 				//Naval Stations
-				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield")
+				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield",
+
+				//One off jobs
+				"Brig Physician")
 
 
 

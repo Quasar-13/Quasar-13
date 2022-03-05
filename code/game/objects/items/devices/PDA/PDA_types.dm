@@ -252,3 +252,9 @@
 	name = "military police PDA"
 	default_cartridge = /obj/item/cartridge/security
 	icon_state = "pda-mp"
+
+/obj/item/pda/brigdoc
+	name = "brig physician PDA"
+	default_cartridge = /obj/item/cartridge/security
+	icon_state = "pda-brigdoc"
+

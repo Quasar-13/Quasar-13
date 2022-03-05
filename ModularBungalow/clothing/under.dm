@@ -43,34 +43,31 @@
 	can_adjust = FALSE
 
 //Kimonos
-/obj/item/clothing/under/kimono
+/obj/item/clothing/under/dress/kimono
 	name = "kimono"
 	desc = "A traditional japanese garb."
 	icon_state = "kimono"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
-/obj/item/clothing/under/kimono/fancy
+/obj/item/clothing/under/dress/kimono/fancy
 	name = "fancy kimono"
 	icon_state = "fancy_kimono"
 
 //Dresses
-/obj/item/clothing/under/evildress
+/obj/item/clothing/under/dress/evildress
 	name = "fiend's dress"
 	desc = "A black dress with red undertones."
 	icon_state = "fienddress_s"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
-/obj/item/clothing/under/reddress
+/obj/item/clothing/under/dress/reddress
 	name = "red dress"
 	desc = "A beautiful blood-red dress."
 	icon_state = "formalred_s"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
-	can_adjust = FALSE
 
 //BNI Suit for BNI people
 /obj/item/clothing/under/bni
@@ -294,6 +291,39 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	icon_state = "protected_custody_skirt"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+
+//Vagrant clothing
+/obj/item/clothing/under/vagrant
+	name = "disheveled clothing"
+	desc = "Worn out clothing for worn out people"
+	icon_state = "vagrant"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+	sensor_mode = SENSOR_OFF
+	random_sensor = FALSE
+
+//Vetranger clothes
+/obj/item/clothing/under/veteran
+	name = "veteran ranger flannel"
+	desc = "Clothing for the best bounty hunter"
+	icon_state = "vetranger"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
+
+/obj/item/clothing/under/veteran/hos
+	name = "scrap ranger flannel"
+	desc = "Clothing made from scrap. Patched together from the clothes of the vagrants you slaughtered."
+
+//Brig Doc clothing
+/obj/item/clothing/under/brigdoc
+	name = "brig doctor's jumpsuit"
+	desc = "Clothing for the best bounty hunter"
+	icon_state = "utilmed"
+	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
+	icon = 'ModularBungalow/clothing/icons/under.dmi'
+	can_adjust = FALSE
 
 //Comms Officer
 /obj/item/clothing/under/rank/civilian/communications_officer

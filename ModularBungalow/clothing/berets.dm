@@ -107,12 +107,12 @@
 /obj/item/clothing/head/beret/sec/navyofficer/black
 	desc = "A beret made out of black reinforced fabric with the security insignia emblazoned on it. For officers with class."
 	icon_state = "officerberetblack"
-	
+
 /obj/item/clothing/head/beret/sec/bni
 	desc = "A beret made out of slick blue reinforced fabric with an 'intelligence' insignia emblazoned on it. For agents with class."
 	icon_state = "bniberet"
 
-/obj/item/clothing/head/beret/sec/medical
+/obj/item/clothing/head/beret/sec/brigphys
 	name = "combat medic's beret"
 	desc = "This proud white-blue beret is a welcome sight when the greytide descends on chemistry."
 	icon_state = "beret_brigphys"
