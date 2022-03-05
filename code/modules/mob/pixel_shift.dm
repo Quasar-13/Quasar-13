@@ -1,8 +1,3 @@
-/mob
-	///Whether the mob is pixel shifted or not
-	var/is_shifted
-	var/shifting //If we are in the shifting setting.
-
 /datum/keybinding/mob/pixel_shift
 	hotkey_keys = list("B")
 	name = "pixel_shift"
