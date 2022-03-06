@@ -283,6 +283,9 @@
 /mob/proc/get_item_by_slot(slot_id)
 	return null
 
+///Is the mob restrained
+/mob/proc/restrained(ignore_grab)
+	return
 
 ///Is the mob incapacitated
 /mob/proc/incapacitated(ignore_restraints = FALSE, ignore_grab = FALSE, ignore_stasis = FALSE)
