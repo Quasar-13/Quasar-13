@@ -71,6 +71,8 @@
 			user.jitteriness += (50)
 			user.do_jitter_animation(user.jitteriness)
 			apostle_use = FALSE
+			return
+	. = ..()
 
 /obj/item/clothing/suit/armor/apostle
 	name = "paradise lost"
@@ -80,11 +82,11 @@
 	item_flags = DROPDEL
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list(MELEE = 70, BULLET = 50, LASER = 50, ENERGY = 80, BOMB = 100, BIO = 100, RAD = 100, FIRE = 100, ACID = 95, WOUND = 15)
+	armor = list(MELEE = 55, BULLET = 40, LASER = 40, ENERGY = 80, BOMB = 100, BIO = 100, RAD = 100, FIRE = 100, ACID = 95, WOUND = 15)
 	transparent_protection = HIDEGLOVES|HIDESUITSTORAGE|HIDEJUMPSUIT|HIDESHOES
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
-	slowdown = 0.4
+	slowdown = 0.3
 
 /obj/item/clothing/suit/armor/apostle/Initialize()
 	. = ..()
@@ -99,7 +101,7 @@
 	visor_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	visor_flags_inv = HIDEFACIALHAIR
 	visor_flags_cover = MASKCOVERSMOUTH
-	armor = list(MELEE = 70, BULLET = 50, LASER = 50, ENERGY = 80, BOMB = 100, BIO = 100, RAD = 100, FIRE = 100, ACID = 95, WOUND = 45) // Wound bonus so you can't remove their head.
+	armor = list(MELEE = 55, BULLET = 40, LASER = 40, ENERGY = 80, BOMB = 100, BIO = 100, RAD = 100, FIRE = 100, ACID = 95, WOUND = 45) // Wound bonus so you can't remove their head.
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	heat_protection = HEAD
 	body_parts_covered = HEAD
@@ -127,10 +129,10 @@
 	name = "holy scythe"
 	desc = "None shall harm us."
 	hitsound = 'ModularTegustation/Tegusounds/apostle/antagonist/scythe.ogg'
-	force = 34
+	force = 30
 	throwforce = 14 // Why are you throwing scythe anyway?
 	armour_penetration = 25
-	block_chance = 15
+	block_chance = 0
 	wound_bonus = 10
 	bare_wound_bonus = 20
 	sharpness = SHARP_EDGED
@@ -156,14 +158,14 @@
 /obj/item/nullrod/scythe/apostle/guardian
 	name = "guardian scythe"
 	desc = "The divine light will grant you protection."
-	force = 38
+	force = 33
 	throwforce = 18
-	armour_penetration = 40
-	block_chance = 30
+	armour_penetration = 35
+	block_chance = 20
 	var/recharge_time
 	var/recharge_base = 6 SECONDS
 	var/spell_radius = 1
-	var/spin_force = 75
+	var/spin_force = 66
 
 /obj/item/nullrod/scythe/apostle/guardian/attack_self(mob/living/carbon/user)
 	var/list/target_turfs = list()
@@ -201,13 +203,12 @@
 	desc = "A particle of light, obtained from the heart of the evil."
 	icon_state = "ap_scythe_light"
 	inhand_icon_state = "ap_scythe_light"
-	force = 45
-	throwforce = 24
-	armour_penetration = 60
-	block_chance = 40
+	force = 40
+	throwforce = 20
+	armour_penetration = 40
 	recharge_base = 5 SECONDS
 	spell_radius = 2
-	spin_force = 90
+	spin_force = 80
 	faction_needed = "hero" // Yep. A hero.
 	var/bound = FALSE // If it's true - nobody can gain the faction required to use it.
 
@@ -245,8 +246,11 @@
 		to_chat(user, "<span class='warning'>You are not ready to charge the staff yet.</span>")
 		return
 	charge_cooldown = (world.time + 5 SECONDS)
-	playsound(src, 'ModularTegustation/Tegusounds/apostle/antagonist/staff_charge.ogg', 100, 1)
-	new /obj/effect/temp_visual/dir_setting/curse/grasp_portal/fading(target)
+	playsound(src, 'ModularTegustation/Tegusounds/apostle/antagonist/staff_charge.ogg', 60, 1)
+	var/user_turf = get_turf(user)
+	var/target_turf = get_turf(target)
+	new /obj/effect/temp_visual/dir_setting/curse(user_turf, user.dir)
+	new /obj/effect/temp_visual/dir_setting/curse/grasp_portal/fading(target_turf, user.dir)
 	user.visible_message("<span class='warning'>[user] points [src] towards [target]!</span>", \
 	"<span class='warning'>We start channeling the power of [src].</span>", \
 	"<span class='hear'>You can hear an ominous buzzing.</span>")
@@ -259,7 +263,7 @@
 	projectile_type = /obj/projectile/magic/arcane_barrage/apostle
 
 /obj/projectile/magic/arcane_barrage/apostle
-	damage = 16
+	damage = 20
 	damage_type = BURN
 	armour_penetration = 25
 
@@ -319,7 +323,7 @@
 	recharge_time = (world.time + (recharge_time_base * 0.5)) // This one here to avoid spam
 	to_chat(user, "<span class='warning'>You change your stance and prepare to dash forward.</span>")
 	playsound(src, 'ModularTegustation/Tegusounds/apostle/antagonist/spear_charge.ogg', 100, 1)
-	if(!do_after(user, 36))
+	if(!do_after(user, 25))
 		return
 	recharge_time = (world.time + recharge_time_base) // The real cooldown
 	user.forceMove(final_T)
