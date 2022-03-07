@@ -58,13 +58,3 @@
 	price_max = CARGO_CRATE_VALUE
 	stock_max = 2
 	availability_prob = 70
-
-/datum/market_item/clothing/rocket_boots
-	name = "Rocket Boots"
-	desc = "We found a pair of jump boots and overclocked the hell out of them. No liability for grevious harm to or with a body."
-	item = /obj/item/clothing/shoes/bhop/rocket
-
-	price_min = CARGO_CRATE_VALUE * 5
-	price_max = CARGO_CRATE_VALUE * 15
-	stock_max = 1
-	availability_prob = 40
