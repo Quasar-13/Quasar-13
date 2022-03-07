@@ -151,6 +151,12 @@
 	alt_titles = list("Commanding Officer", "Station Commander")
 	senior_title = list("Commodore", "Marshal")
 
+/datum/job/ntcaptain
+	senior_title = list("Commodore")
+
+/datum/job/gooncaptain
+	senior_title = list("Commodore")
+
 //Funny role
 /datum/job/staff_officer
 	alt_titles = list("Field Officer")
