@@ -1,10 +1,10 @@
 GLOBAL_LIST_EMPTY(apostles)
 
 /mob/living/simple_animal/hostile/megafauna/apostle
-	name = "apostle"
+	name = "white night"
 	desc = "The heavens' wrath. You might've fucked up real bad to summon one."
-	health = 800
-	maxHealth = 800
+	health = 1000
+	maxHealth = 1000
 	attack_verb_continuous = "purges"
 	attack_verb_simple = "purge"
 	attack_sound = 'sound/magic/mm_hit.ogg'
@@ -38,24 +38,19 @@ GLOBAL_LIST_EMPTY(apostles)
 	small_sprite_type = /datum/action/small_sprite/megafauna/tegu/angel
 	var/holy_revival_cooldown = 10 SECONDS
 	var/holy_revival_cooldown_base = 10 SECONDS
-	var/holy_revival_damage = 20 // Amount of damage OR heal, depending on target.
+	var/holy_revival_damage = 18 // Amount of damage OR heal, depending on target.
 	var/fire_field_cooldown = 20 SECONDS
 	var/fire_field_cooldown_base = 20 SECONDS
 	var/field_range = 4
 	var/scream_cooldown = 18 SECONDS
 	var/scream_cooldown_base = 18 SECONDS
-	var/scream_power = 25
-	var/apostle_cooldown = 20 SECONDS //Cooldown for conversion and revival of non-apostles.
-	var/apostle_cooldown_base = 20 SECONDS
-	var/blink_cooldown = 6 SECONDS
-	var/blink_cooldown_base = 6 SECONDS
+	var/scream_power = 20
+	var/blink_cooldown = 8 SECONDS
+	var/blink_cooldown_base = 8 SECONDS
 	var/apostle_num = 1 //Number of apostles. Used for revival and finale.
 	var/apostle_line
 	var/apostle_prev //Used for previous apostle's name, to reference in next line.
 	var/datum/action/innate/megafauna_attack/rapture/rapture_skill = new /datum/action/innate/megafauna_attack/rapture
-
-/mob/living/simple_animal/hostile/megafauna/apostle/Initialize()
-	. = ..()
 
 /mob/living/simple_animal/hostile/megafauna/apostle/ex_act(severity, target)
 	return //Resistant to explosions
@@ -63,7 +58,8 @@ GLOBAL_LIST_EMPTY(apostles)
 /mob/living/simple_animal/hostile/megafauna/apostle/bullet_act(obj/projectile/P)
 	if(istype(P, /obj/projectile/destabilizer)) // I hate you, miners.
 		visible_message("<span class='warning'>[src] absorbs [P]!</span>")
-		return BULLET_ACT_BLOCK
+		qdel(P)
+		return
 
 /datum/action/small_sprite/megafauna/tegu
 	small_icon = 'ModularTegustation/Teguicons/megafauna.dmi'
@@ -165,15 +161,13 @@ GLOBAL_LIST_EMPTY(apostles)
 		if(ishuman(i))
 			var/mob/living/carbon/human/H = i
 			if(!("apostle" in H.faction))
-				if(apostle_num < 13 && H.stat == DEAD && apostle_cooldown <= world.time && H.mind)
+				if(apostle_num < 13 && H.stat == DEAD && H.mind)
 					if(!H.client)
 						var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
 						if(!ghost?.can_reenter_corpse) // If there is nobody able to control it - skip.
 							continue
 						else // If it can reenter - do it.
 							H.grab_ghost(force = TRUE)
-					apostle_cooldown = (world.time + apostle_cooldown_base)
-					// H.set_species(/datum/species/human, 1)
 					H.regenerate_limbs()
 					H.regenerate_organs()
 					H.dna.species.GiveSpeciesFlight(H)
@@ -235,10 +229,10 @@ GLOBAL_LIST_EMPTY(apostles)
 					armour_penetration += 5
 					melee_damage_lower += 2
 					melee_damage_upper += 2
-					maxHealth += 100
+					maxHealth += 50
 					health = maxHealth
 					holy_revival_damage += 2 // More damage and healing from AOE spell.
-					scream_power += 2 // Deafen them all. Destroy their ears.
+					scream_power += 1 // Deafen them all. Destroy their ears.
 					light_range += 1 // More light, because why not.
 				else
 					playsound(H.loc, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE, -1)
@@ -297,7 +291,7 @@ GLOBAL_LIST_EMPTY(apostles)
 		if("apostle" in C.faction)
 			continue
 		shake_camera(C, 1, 2)
-		C.soundbang_act(2, scream_power, 4)
+		C.soundbang_act(1, scream_power, 4)
 		C.jitteriness += (scream_power * 0.5)
 		C.do_jitter_animation(jitteriness)
 		C.blur_eyes(scream_power * 0.3, 0.6)
