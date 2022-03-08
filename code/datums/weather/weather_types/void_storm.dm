@@ -31,7 +31,7 @@
 	L.adjust_bodytemperature(-rand(5,15))
 
 /datum/weather/void_storm/space
-	probability = 100
+	probability = 50
 	telegraph_duration = 300
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_VOIDSTORMSPACE
@@ -41,3 +41,11 @@
 	telegraph_message = "<span class='warning'>You see space warping around you. Seek shelter immediately.</span>"
 
 	end_message = "<span class='boldannounce'>The void's embrace ebbs. You are free to continue.</span>"
+
+/datum/weather/void_storm/space/weather_act(mob/living/carbon/L)
+	if(IS_HERETIC(L) || IS_HERETIC_MONSTER(L))
+		return
+	L.adjustOxyLoss(rand(1,3))
+	L.adjustFireLoss(rand(1,3))
+	L.adjust_blurriness(rand(0,1))
+	L.adjust_bodytemperature(-rand(5,15))

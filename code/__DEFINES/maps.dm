@@ -51,6 +51,8 @@ require only minor tweaks.
 #define ZTRAIT_ACIDRAIN "Weather_Acidrain"
 #define ZTRAIT_VOIDSTORM "Weather_Voidstorm"
 #define ZTRAIT_VOIDSTORMSPACE "Weather_Spacevoidstorm"
+#define ZTRAIT_SPACEWIND "Weather_Heavywind"
+#define ZTRAIT_DIAMONDSTORM "Weather_Diamondstorm"
 
 // number - bombcap is multiplied by this before being applied to bombs
 #define ZTRAIT_BOMBCAP_MULTIPLIER "Bombcap Multiplier"
@@ -107,6 +109,8 @@ require only minor tweaks.
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_ROCK_RUINS = TRUE, \
 	ZTRAIT_VOIDSTORMSPACE = TRUE, \
+	ZTRAIT_SPACEWIND = TRUE, \
+	ZTRAIT_DIAMONDSTORM = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 4, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
 
