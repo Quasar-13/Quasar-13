@@ -87,6 +87,10 @@ Difficulty: Medium
 						 //enough it will use a special attack then reset the variable to 0w
 	var/list/hit_things = list()
 
+/mob/living/simple_animal/hostile/megafauna/sif/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NO_FLOATING_ANIM, INNATE_TRAIT)
+
 /obj/item/gps/internal/sif
 	icon_state = null
 	gpstag = "Infinity Signal"
