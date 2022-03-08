@@ -3,6 +3,7 @@
 	desc = "A bee stinger"
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "stinger"
+	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_STINGER
 	var/stinger_type = "Standar"
 
