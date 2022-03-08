@@ -55,7 +55,6 @@
 	mob_spawn_chance = 3
 
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/mutantliz = 2,
 		/mob/living/simple_animal/hostile/hivebot = 30,
 		/mob/living/simple_animal/hostile/hivebot/strong = 5,
 		/mob/living/simple_animal/hostile/hivebot/range = 20,
