@@ -14,7 +14,7 @@
 	force = 2
 	throwforce = 15
 	throw_speed = 4
-	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 0, "embedded_ignore_throwspeed_threshold" = TRUE)
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 65, "embedded_fall_chance" = 0, "embedded_ignore_throwspeed_threshold" = TRUE)
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_POINTY
 	var/mob/living/carbon/human/fired_by
