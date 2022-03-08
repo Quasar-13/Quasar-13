@@ -5,10 +5,10 @@
 
 	telegraph_message = "<span class='warning'>You can see razor-sharp diamonds falling from the sky. Seek shelter.</span>"
 	telegraph_duration = 300
-	telegraph_overlay = "light_wind"
+	telegraph_overlay = "light_diamond"
 
 	weather_message = "<span class='userdanger'><i>The Diamonds pick up speed, threatening to cut you to ribbons</i></span>"
-	weather_overlay = "solar_wind"
+	weather_overlay = "diamond_storm"
 	weather_duration_lower = 600
 	weather_duration_upper = 1500
 
@@ -23,4 +23,4 @@
 
 
 /datum/weather/diamond_storm/weather_act(mob/living/carbon/L)
-	L.adjustBruteLoss(rand(4))
+	L.adjustBruteLoss(rand(2,6))
