@@ -23,13 +23,13 @@
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_ACIDRAIN
 
-	immunity_type = ACID // temp
+	immunity_type = ACID
 
 	barometer_predictable = TRUE
 
 
-/datum/weather/acid_rain/weather_act(mob/living/L)
-	var/resist = L.getarmor(null, ACID)
+/datum/weather/acid_rain/weather_act(mob/living/carbon/H)
+	var/resist = H.getarmor(null, ACID)
 	if(prob(max(0,100-resist)))
-		L.acid_act(20,20)
-		L.adjustFireLoss(rand(1,2))
+		H.acid_act(20,20)
+		H.adjustFireLoss(rand(1,2))

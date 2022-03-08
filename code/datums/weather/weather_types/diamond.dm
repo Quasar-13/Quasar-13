@@ -1,7 +1,7 @@
 /datum/weather/diamond_storm
 	name = "diamond storm"
 	desc = "razor sharp diamonds ravage the landscape."
-	probability = 150
+	probability = 9000
 
 	telegraph_message = "<span class='warning'>You can see razor-sharp diamonds falling from the sky. Seek shelter.</span>"
 	telegraph_duration = 300
@@ -14,7 +14,7 @@
 
 	end_duration = 100
 	end_message = "<span class='boldannounce'>The diamonds slow down. Nothing but diamond dust remains..</span>"
-
+	immunity_type = "general"
 	area_type = /area
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_DIAMONDSTORM
@@ -22,5 +22,5 @@
 	barometer_predictable = TRUE
 
 
-/datum/weather/diamond_storm/weather_act(mob/living/carbon/L)
-	L.adjustBruteLoss(rand(2,6))
+/datum/weather/diamond_storm/weather_act(mob/living/carbon/H)
+	H.adjustBruteLoss(rand(2,6))
