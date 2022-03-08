@@ -6,7 +6,7 @@
 
 	species_traits = list( LIPS, NOEYESPRITES, HAS_FLESH, HAS_BONE, TRAIT_ANTENNAE, HAIR)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
-	mutant_bodyparts = list("bee_wings" = "simple", "tail_bee" = "simple", "bee_antennae" = "simple")
+	mutant_bodyparts = list("bee_wings" = "Simple", "tail_bee" = "Simple", "bee_antennae" = "Simple")
 	attack_verb = "sting"
 	attack_sound = 'sound/weapons/beeattack.ogg'
 	miss_sound = 'sound/weapons/beemissattack.ogg'
@@ -16,8 +16,9 @@
 	toxic_food = MEAT | RAW | SEAFOOD | GROSS
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	mutanteyes = /obj/item/organ/eyes/bee //same as moths, just diferrent name
+	mutant_organs = list(/obj/item/organ/stinger)
 	payday_modifier = 0.9
-
+	var/datum/action/innate/stinger_attack/stinger_attack //ability
 	species_language_holder = /datum/language_holder/beepeople
 
 	//sorry
@@ -112,3 +113,49 @@
 	if(istype(weapon, /obj/item/melee/flyswatter))
 		return 10
 	return 1
+
+//removes ability
+/datum/species/beepeople/on_species_loss(mob/living/carbon/C)
+	..()
+
+	if(stinger_attack)
+		stinger_attack.Remove(C)
+
+//gives ability
+/datum/species/beepeople/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	..()
+	stinger_attack = new(src)
+	stinger_attack.Grant(C)
+
+//stinger attack ability
+/datum/action/innate/stinger_attack
+	name = "stingerattack"
+	desc = "launch your stinger"
+	icon_icon = 'icons/mob/actions/actions_bee.dmi'
+	button_icon_state = "stinger_attack"
+	background_icon_state = "bg_spell"
+	var/stinger_path = /obj/item/hardened_stinger
+
+//using the ability
+/datum/action/innate/stinger_attack/Activate(mob/user = usr)
+	var/mob/living/carbon/C = user
+	if(!iscarbon(user))
+		return
+
+	if(HAS_TRAIT(C, TRAIT_NODISMEMBER))
+		return
+
+	var/obj/item/organ/stinger
+	for(var/org in C.internal_organs)
+		if(istype(org, /obj/item/organ/stinger))
+			stinger = org
+			break
+
+	if(!stinger)
+		to_chat(C, "<span class='notice'>You don't have a stinger to shoot!</span>")
+		return
+
+	stinger.Remove(C, special = TRUE)
+	var/obj/item/hardened_stinger/stingers = new stinger_path(get_turf(C), C)
+	stinger.forceMove(stingers)
+	stingers.throw_at(get_edge_target_turf(C,C.dir), 14, 4, C)
