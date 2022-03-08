@@ -28,8 +28,8 @@
 	barometer_predictable = TRUE
 
 
-/datum/weather/acid_rain/weather_act(mob/living/carbon/H)
-	var/resist = H.getarmor(null, ACID)
+/datum/weather/acid_rain/weather_act(mob/living/L)
+	var/resist = L.getarmor(null, ACID)
 	if(prob(max(0,100-resist)))
-		H.acid_act(20,20)
-		H.adjustFireLoss(rand(1,2))
+		L.acid_act(20,20)
+		L.adjustFireLoss(rand(1,2))

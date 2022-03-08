@@ -1,7 +1,7 @@
 /datum/weather/diamond_storm
 	name = "diamond storm"
 	desc = "razor sharp diamonds ravage the landscape."
-	probability = 9000
+	probability = 90
 
 	telegraph_message = "<span class='warning'>You can see razor-sharp diamonds falling from the sky. Seek shelter.</span>"
 	telegraph_duration = 300
@@ -22,5 +22,5 @@
 	barometer_predictable = TRUE
 
 
-/datum/weather/diamond_storm/weather_act(mob/living/carbon/H)
-	H.adjustBruteLoss(rand(2,6))
+/datum/weather/diamond_storm/weather_act(mob/living/L)
+	L.adjustBruteLoss(rand(2,6))

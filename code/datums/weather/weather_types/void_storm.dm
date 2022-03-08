@@ -43,10 +43,10 @@
 
 	end_message = "<span class='boldannounce'>The void's embrace ebbs. You are free to continue.</span>"
 
-/datum/weather/void_storm/space/weather_act(mob/living/carbon/H)
-	if(IS_HERETIC(H) || IS_HERETIC_MONSTER(H))
+/datum/weather/void_storm/space/weather_act(mob/living/L)
+	if(IS_HERETIC(L) || IS_HERETIC_MONSTER(L))
 		return
-	H.adjustOxyLoss(rand(1,3))
-	H.adjustFireLoss(rand(1,3))
-	H.adjust_blurriness(rand(0,1))
-	H.adjust_bodytemperature(-rand(5,15))
+	L.adjustOxyLoss(rand(1,3))
+	L.adjustFireLoss(rand(1,3))
+	L.adjust_blurriness(rand(0,1))
+	L.adjust_bodytemperature(-rand(5,15))

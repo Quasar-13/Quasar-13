@@ -22,6 +22,6 @@
 	barometer_predictable = TRUE
 
 
-/datum/weather/space_wind/weather_act(mob/living/carbon/human/H)
-	H.adjustBruteLoss(rand(0,1))
-	H.Knockdown(20)
+/datum/weather/space_wind/weather_act(mob/living/L)
+	L.adjustBruteLoss(rand(0,1))
+	L.Knockdown(20)
