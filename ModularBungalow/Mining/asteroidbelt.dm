@@ -3,6 +3,7 @@
 /area/asteroidbelt
 	icon_state = "mining"
 	has_gravity = STANDARD_GRAVITY
+	outdoors = TRUE
 	flags_1 = NONE
 	area_flags = VALID_TERRITORY | UNIQUE_AREA
 	sound_environment = SOUND_AREA_ASTEROID

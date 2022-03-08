@@ -37,6 +37,7 @@
 	target_trait = ZTRAIT_VOIDSTORMSPACE
 	perpetual = FALSE
 	area_type = /area/asteroidbelt/space/generation
+	barometer_predictable = TRUE
 	telegraph_message = "<span class='warning'>You see space warping around you. Seek shelter immediately.</span>"
 
 	end_message = "<span class='boldannounce'>The void's embrace ebbs. You are free to continue.</span>"

@@ -10,15 +10,15 @@
 
 	weather_message = "<span class='userdanger'><i>Acidic rain pours down around you! Get inside!</i></span>"
 	weather_overlay = "acid_rain"
-	weather_duration_lower = 600
-	weather_duration_upper = 1500
+	weather_duration_lower = 300
+	weather_duration_upper = 600
 	weather_sound = 'sound/ambience/acidrain_mid.ogg'
 
 	end_duration = 100
 	end_message = "<span class='boldannounce'>The downpour gradually slows to a light shower. It should be safe outside now.</span>"
 	end_sound = 'sound/ambience/acidrain_end.ogg'
 
-	probability = 10
+	probability = 100
 	area_type = /area
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_ACIDRAIN
@@ -32,4 +32,3 @@
 	var/resist = L.getarmor(null, ACID)
 	if(prob(max(0,100-resist)))
 		L.acid_act(20,20)
-		L.adjustFireLoss(2)

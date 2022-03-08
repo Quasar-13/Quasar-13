@@ -321,6 +321,9 @@ Used by the AI doomsday and the self-destruct nuke.
 				INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 
 
+	else if(config.minetype == "jungle")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
+
 	else if(config.minetype == "asteroidbelt")
 		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Asteroidbelt.dmm", default_traits = ZTRAITS_ASTEROIDBELT)
 		//Syndicate Marine Corps
