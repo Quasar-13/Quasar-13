@@ -21,6 +21,11 @@
 	var/datum/action/innate/stinger_attack/stinger_attack //ability
 	species_language_holder = /datum/language_holder/beepeople
 
+
+	//NERF THEM THEY CAN THROW THEY ASSES!
+	brutemod = 1.1 //they are a lil more fragile than normal humans
+	burnmod = 1.2  // they burn faster
+	coldmod = 1.1 //cold
 	//sorry
 	ass_image = 'icons/ass/assbee.png'
 
