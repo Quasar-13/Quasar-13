@@ -40,9 +40,7 @@
 	mob_spawn_chance = 0.7
 
 	mob_spawn_list = list(/mob/living/simple_animal/hostile/carp = 20,
-		/mob/living/simple_animal/hostile/carp/megacarp = 4,
-		/mob/living/simple_animal/hostile/carp/ranged/chaos = 2,
-		/mob/living/simple_animal/hostile/carp/ranged = 1,
+		/mob/living/simple_animal/hostile/carp/megacarp = 3,
 		)
 	flora_spawn_list = list()
 	feature_spawn_list = list()
