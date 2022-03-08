@@ -30,3 +30,13 @@
 	L.adjust_blurriness(rand(0,1))
 	L.adjust_bodytemperature(-rand(5,15))
 
+/datum/weather/void_storm/space
+	probability = 100
+	telegraph_duration = 300
+	protect_indoors = TRUE
+	target_trait = ZTRAIT_VOIDSTORMSPACE
+	perpetual = FALSE
+	area_type = /area/asteroidbelt/space/generation
+	telegraph_message = "<span class='warning'>You see space warping around you. Seek shelter immediately.</span>"
+
+	end_message = "<span class='boldannounce'>The void's embrace ebbs. You are free to continue.</span>"

@@ -18,7 +18,7 @@
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | NO_ALERTS
 
 /area/asteroidbelt/space/generation
-	name = "Asteroid Belt generation"
+	name = "Asteroid Belt Unexplored"
 	icon_state = "unexplored"
 	ambience_index = AMBIENCE_CREEPY
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | MOB_SPAWN_ALLOWED | NO_ALERTS
