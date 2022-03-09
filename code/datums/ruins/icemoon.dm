@@ -118,6 +118,14 @@
 	cost = 0
 	always_place = TRUE
 
+/datum/map_template/ruin/icemoon/underground/clockwork
+	name = "Underground Clock Lair"
+	id = "iceclock"
+	description = "An old Clockwork defendered, protecting his goods."
+	suffix = "icemoon_underground_clockwork.dmm"
+	cost = 0
+	always_place = TRUE
+
 /datum/map_template/ruin/icemoon/underground/free_golem
 	name = "Free Golem Ship"
 	id = "golem-ship"
