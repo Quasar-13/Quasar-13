@@ -317,7 +317,7 @@
 		if("presetCrime")
 			var/value = text2num(params["preset"])
 			var/preset_crime = "N/A"
-			for(var/allcrimes in crimesinfraction + crimesmisdemeanor + crimesfelonymisdemeanors + crimesfelony + crimessevere)
+			for(var/allcrimes in crimesinfraction + crimesmisdemeanor + crimesfelonymisdemeanors)
 				if(params["crime"] == allcrimes["name"])
 					preset_crime = params["crime"]
 					break
