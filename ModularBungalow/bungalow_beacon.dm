@@ -148,7 +148,7 @@
 	new /obj/item/katana/captain(src)
 
 /obj/item/storage/box/sabre/dagger
-	name = "Meteoric iron dagger"
+	name = "Meteoric Iron Dagger"
 	desc = "A dagger made from ancient iron."
 
 /obj/item/storage/box/sabre/dagger/PopulateContents()
@@ -157,6 +157,20 @@
 /obj/item/storage/box/sabre/halberd
 	name = "Gae Bolg"
 	desc = "A halberd with long reach."
+
+/obj/item/storage/box/sabre/bamboo/PopulateContents()
+	new /obj/item/storage/belt/bamboo(src)
+
+/obj/item/storage/box/sabre/bamboo
+	name = "Bamboo Sword Bag"
+	desc = "A bag of bamboo swords."
+
+/obj/item/storage/box/sabre/whip/PopulateContents()
+	new /obj/item/melee/chainofcommand/upgraded(src)
+
+/obj/item/storage/box/sabre/whip
+	name = "Chain of Captaincy"
+	desc = "An upgraded chainwhip."
 
 /obj/item/storage/box/sabre/halberd/PopulateContents()
 	new /obj/item/melee/halberd(src)

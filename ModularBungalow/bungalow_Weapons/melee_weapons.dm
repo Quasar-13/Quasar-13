@@ -18,6 +18,14 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
 
+//Captain's Chain of command
+/obj/item/melee/chainofcommand/upgraded
+	name = "chain of captaincy"
+	w_class = WEIGHT_CLASS_BULKY
+	armour_penetration = -20
+	reach = 2
+	wound_bonus = 0
+	bare_wound_bonus = 70
 
 //Drill Spear
 /obj/item/melee/drillspear
