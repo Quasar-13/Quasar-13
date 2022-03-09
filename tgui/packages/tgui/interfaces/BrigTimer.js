@@ -114,21 +114,6 @@ export const BrigTimer = (props, context) => {
                 );
               })}
             </Flex.Item>
-            <Flex.Item>
-              <hr />
-              {Object.keys(data.felonyCrimes).map(felony => {
-                let value = data.felonyCrimes[felony];
-                return (
-                  <Button
-                    key={felony}
-                    content={value.name}
-                    color={value.colour}
-                    icon={value.icon}
-                    tooltip={value.tooltip}
-                    onClick={() => act('presetCrime', { preset: value.sentence, crime: value.name })} />
-                );
-              })}
-            </Flex.Item>
           </Flex>
         </Section>
       </Window.Content>
