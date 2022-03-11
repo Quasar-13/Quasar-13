@@ -18,7 +18,7 @@
 	taunt_chance = 25
 	speed = 1
 	is_flying_animal = TRUE
-	gold_core_spawnable = NO_SPAWN
+	gold_core_spawnable = FALSE
 	stat_attack = HARD_CRIT
 	robust_searching = 1
 	loot = list(/obj/item/clothing/suit/space/hardsuit/platinum)
