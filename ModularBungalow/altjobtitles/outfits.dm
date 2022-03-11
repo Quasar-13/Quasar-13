@@ -139,7 +139,7 @@
 	head = /obj/item/clothing/head/beret/command
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
-	laceups = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/laceup
 	
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
