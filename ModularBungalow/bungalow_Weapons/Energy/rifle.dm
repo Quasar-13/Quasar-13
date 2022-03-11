@@ -24,5 +24,6 @@
 	icon_state = "naga"
 	force = 20
 	light_system = MOVABLE_LIGHT
-	light_range = 1
+	light_range = 3
+	light_power = 1
 	light_color = COLOR_SOFT_RED
