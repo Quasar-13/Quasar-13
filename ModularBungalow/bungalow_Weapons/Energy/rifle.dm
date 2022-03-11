@@ -23,3 +23,6 @@
 	desc = "Nanotrasen’s 5th series rifle."
 	icon_state = "naga"
 	force = 20
+	light_system = MOVABLE_LIGHT
+	light_range = 1
+	light_color = COLOR_SOFT_RED
