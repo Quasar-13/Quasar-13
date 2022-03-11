@@ -126,13 +126,27 @@
 	backpack = /obj/item/storage/backpack/security
 	//the backpack is for style (also because det doesn't have officer armory access yet)
 
+//Secretary
+/datum/outfit/job/secretary/lieutenant
+	name = "Secretary (Lieutenant)"
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
+	head = /obj/item/clothing/head/beret/black
+	glasses = /obj/item/clothing/glasses/sunglasses
+	
+/datum/outfit/job/secretary/seniorbridgeofficer
+	name = "Secretary (Senior Bridge Officer)"
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
+	head = /obj/item/clothing/head/beret/command
+	glasses = /obj/item/clothing/glasses/sunglasses
+	gloves = /obj/item/clothing/gloves/color/black
+	laceups = /obj/item/clothing/shoes/laceup
+	
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
 	name = "Chief Medical Officer (Medical Professor)"
 	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
 	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
 	head = /obj/item/clothing/head/beret/cmo/ice
-
 
 /datum/outfit/job/cmo/seniormedicalofficer
 	name = "Chief Medical Officer (Senior Medical Officer)"
