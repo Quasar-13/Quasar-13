@@ -174,7 +174,7 @@
 
 /datum/job/secretary
 	alt_titles = list("Lieutenant", "Union Representative", "Ambassador", "Diplomat")
-	senior_title = list("Junior Bridge Officer")
+	senior_title = list("Senior Bridge Officer")
 	ultra_senior_title = list("Sharon")
 
 /datum/job/hop
