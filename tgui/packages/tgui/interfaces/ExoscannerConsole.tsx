@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { BlockQuote, Box, Button, Icon, Modal, Section, LabeledList, NoticeBox, Stack } from '../components';
+import { BlockQuote, Box, Button, Flex, Icon, Modal, Section, LabeledList, NoticeBox, Stack } from '../components';
 import { Window } from '../layouts';
 import { formatTime } from '../format';
 
@@ -22,24 +22,24 @@ type ScanData = {
   site_data: SiteData
 }
 
-const ScanFailedModal = (_, context) => {
-  const { act } = useBackend(context);
+const ScanFailedModal = (props, context) => {
+  const { act, data } = useBackend(context);
   return (
     <Modal>
-      <Stack fill vertical>
-        <Stack.Item>
+      <Flex direction="column">
+        <Flex.Item>
           <Box color="bad">SCAN FAILURE!</Box>
-        </Stack.Item>
-        <Stack.Item>
+        </Flex.Item>
+        <Flex.Item>
           <Button
             content="Confirm"
             onClick={() => act("confirm_fail")} />
-        </Stack.Item>
-      </Stack>
+        </Flex.Item>
+      </Flex>
     </Modal>);
 };
 
-const ScanSelectionSection = (_, context) => {
+const ScanSelectionSection = (props, context) => {
   const { act, data } = useBackend<ScanData>(context);
   const {
     scan_power,
@@ -53,7 +53,7 @@ const ScanSelectionSection = (_, context) => {
 
   const point_cost = scan_power > 0 ? formatTime(point_scan_eta, "short") : "∞";
   const deep_cost = scan_power > 0 ? formatTime(deep_scan_eta, "short") : "∞";
-  const scan_available = !point_scan_complete || !deep_scan_complete;
+  const scan_availible = !point_scan_complete || !deep_scan_complete;
   return (
     <Stack vertical fill>
       <Stack.Item grow>
@@ -79,12 +79,11 @@ const ScanSelectionSection = (_, context) => {
                 key={band}
                 label={band}>
                 {site.band_info[band]}
-              </LabeledList.Item>
-            ))}
+              </LabeledList.Item>))}
           </LabeledList>
         </Section>
       </Stack.Item>
-      {scan_available && (
+      {scan_availible && (
         <Stack.Item>
           <Section fill title="Scans">
             {!point_scan_complete && (
@@ -128,8 +127,7 @@ const ScanSelectionSection = (_, context) => {
           </Section>
         </Stack.Item>
       )}
-    </Stack>
-  );
+    </Stack>);
 };
 
 type ScanInProgressData = {
@@ -138,7 +136,7 @@ type ScanInProgressData = {
   scan_description: string,
 }
 
-const ScanInProgressModal = (_, context) => {
+const ScanInProgressModal = (props, context) => {
   const { act, data } = useBackend<ScanInProgressData>(context);
   const {
     scan_time,
@@ -172,8 +170,7 @@ const ScanInProgressModal = (_, context) => {
             onClick={() => act("stop_scan")} />
         </LabeledList.Item>
       </LabeledList>
-    </Modal>
-  );
+    </Modal>);
 };
 
 
@@ -187,7 +184,7 @@ type ExoscannerConsoleData = {
   scan_conditions: Array<string>,
 }
 
-export const ExoscannerConsole = (_, context) => {
+export const ExoscannerConsole = (props, context) => {
   const { act, data } = useBackend<ExoscannerConsoleData>(context);
   const {
     scan_in_progress,
@@ -202,13 +199,9 @@ export const ExoscannerConsole = (_, context) => {
   const can_start_wide_scan = scan_power > 0;
 
   return (
-    <Window width={550} height={600}>
-      {!!scan_in_progress && (
-        <ScanInProgressModal />
-      )}
-      {!!failed && (
-        <ScanFailedModal />
-      )}
+    <Window>
+      {!!scan_in_progress && (<ScanInProgressModal />)}
+      {!!failed && (<ScanFailedModal />)}
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>
@@ -233,30 +226,18 @@ export const ExoscannerConsole = (_, context) => {
                     key={condition}
                     warning>
                     {condition}
-                  </NoticeBox>
-                ))}
+                  </NoticeBox>))}
               </Section>
             </Section>
           </Stack.Item>
           {!!selected_site && (
             <Stack.Item grow>
               <ScanSelectionSection site_ref={selected_site} />
-            </Stack.Item>
-          )}
+            </Stack.Item>)}
           {!selected_site && (
             <>
               <Stack.Item>
-                <Section
-                  buttons={
-                    <Button
-                      icon="search"
-                      disabled={!can_start_wide_scan}
-                      onClick={() => act('start_wide_scan')}>
-                      Scan
-                    </Button>
-                  }
-                  fill
-                  title="Configure Wide Scan">
+                <Section fill title="Configure Wide Scan">
                   <Stack>
                     <Stack.Item>
                       <BlockQuote>
@@ -266,6 +247,13 @@ export const ExoscannerConsole = (_, context) => {
                     </Stack.Item>
                     <Stack.Item>
                       Cost estimate: {scan_power > 0 ? formatTime(wide_scan_eta, "short") : "∞ minutes"}
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button
+                        mt={2}
+                        content="Scan"
+                        disabled={!can_start_wide_scan}
+                        onClick={() => act("start_wide_scan")} />
                     </Stack.Item>
                   </Stack>
                 </Section>
@@ -292,10 +280,8 @@ export const ExoscannerConsole = (_, context) => {
                   </Stack>
                 </Section>
               </Stack.Item>
-            </>
-          )}
+            </>)}
         </Stack>
       </Window.Content>
-    </Window>
-  );
+    </Window>);
 };

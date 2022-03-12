@@ -18,6 +18,34 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
 
+//Captain's Chain of command
+/obj/item/melee/chainofcommand/upgraded
+	name = "chain of captaincy"
+	w_class = WEIGHT_CLASS_BULKY
+	armour_penetration = -20
+	reach = 2
+	wound_bonus = 0
+	bare_wound_bonus = 70
+
+//Drill Spear
+/obj/item/melee/drillspear
+	name = "drill spear"
+	desc = "Who the hell do you think I am!?"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "drill"
+	inhand_icon_state = "drill"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 23
+	throwforce = 5
+	wound_bonus = -10
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BELT
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb_continuous = list("spears", "pierces", "stabs")
+	attack_verb_simple = list("attack", "slash", "stab", "slice")
+
+
 //BATONS//
 /obj/item/melee/classic_baton/telescopic/svet_baton
 	name = "Brass Stinger"
@@ -63,7 +91,7 @@
 
 //Captain's katana
 /obj/item/katana/captain
-	name = "captain's katana"
+	name = "daisa's katana"
 	desc = "This Captain has some sort of 'class'"
 	icon_state = "katana"
 	inhand_icon_state = "katana"
@@ -73,7 +101,7 @@
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	force = 21
-	throwforce = 10
+	throwforce = 12
 	w_class = WEIGHT_CLASS_HUGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
@@ -97,7 +125,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 16
 	throwforce = 43
-	armour_penetration = 10
+	armour_penetration = 30
 	throw_speed = 5
 	throw_range = 7
 	bare_wound_bonus = 7
@@ -119,10 +147,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	obj_flags = UNIQUE_RENAME
-	force = 12
+	force = 11
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	block_chance = 60
+	block_chance = 70
 	armour_penetration = 90
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("stabs", "slashes")
@@ -529,82 +557,45 @@
 	charge_rate = 200
 	recharge_sound = null
 
-/* 	Add this back later, fuck it
-//Katana
-/obj/item/melee/ckatana
-	name = "captain's katana"
-	desc = "This Captain has some sort of 'class'"
-	icon_state = "ckatana"
-	inhand_icon_state = "ckatana"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	flags_1 = CONDUCT_1
-	force = 21
-	throwforce = 10
-	w_class = WEIGHT_CLASS_HUGE
-	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	block_chance = 15
+//Captain knife
+/obj/item/kitchen/knife/meteorknife
+	name = "Himmelsuralteisenmesser"
+	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife. Extremely high block chance, and can block bullets"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "cosmic"
+	slot_flags = ITEM_SLOT_BELT
+	force = 16
+	armour_penetration = -10
+	throwforce = 15
+	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_EDGED
-	max_integrity = 200
-	bare_wound_bonus = 5
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
-	resistance_flags = FIRE_PROOF
+	block_chance = 20
 
-/obj/item/melee/sabre/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/melee/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(attack_type == PROJECTILE_ATTACK)
 		final_block_chance = 0 //Don't bring a sword to a gunfight
 	return ..()
 
-//Katana Sheath
 
-/obj/item/storage/belt/katana
-	name = "katana sheath"
-	desc = "A plain, but still menacing purple sheath. Moon runes are written on the side."
-	icon_state = "ksheath"
-	inhand_icon_state = "ksheath"
-	worn_icon_state = "ksheath"
-	w_class = WEIGHT_CLASS_BULKY
+//Captain Spear 2
+/obj/item/melee/halberd
+	name = "gae bolg"
+	desc = "The weapon of an tough captain. Has extra reach."
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "gae_bolg"
+	inhand_icon_state = "gae_bolg"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	slot_flags = ITEM_SLOT_BELT
+	force = 17
+	slowdown = 0.12
+	throwforce = 20
+	reach = 2
+	armour_penetration = 14
+	sharpness = SHARP_POINTY
+	w_class = WEIGHT_CLASS_HUGE
+	attack_verb_continuous = list("stabs", "pierces", "slashes")
+	attack_verb_simple = list("stab", "pierces", "slash")
+	hitsound = 'sound/weapons/bladeslice.ogg'
 
-/obj/item/storage/belt/katana/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 1
-	STR.rustle_sound = FALSE
-	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.set_holdable(list(
-		/obj/item/melee/ckatana
-		))
 
-/obj/item/storage/belt/katana/examine(mob/user)
-	. = ..()
-	if(length(contents))
-		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
-
-/obj/item/storage/belt/rapier/AltClick(mob/user)
-	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
-		return
-	if(length(contents))
-		var/obj/item/I = contents[1]
-		user.visible_message("<span class='notice'>[user] takes [I] out of [src].</span>", "<span class='notice'>You take [I] out of [src].</span>")
-		user.put_in_hands(I)
-		update_icon()
-	else
-		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-
-/obj/item/storage/belt/katana/update_icon_state()
-	icon_state = initial(inhand_icon_state)
-	inhand_icon_state = initial(inhand_icon_state)
-	worn_icon_state = initial(worn_icon_state)
-	if(contents.len)
-		icon_state += "-katana"
-		inhand_icon_state += "-katana"
-		worn_icon_state += "-katana"
-
-/obj/item/storage/belt/katana/PopulateContents()
-	new /obj/item/melee/ckatana(src)
-	update_icon()
-
-	*/

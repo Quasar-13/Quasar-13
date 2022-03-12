@@ -30,3 +30,11 @@
 	)
 	.=..()
 */
+
+//SECURITY WARDROME VENDING MACHINE
+
+/obj/machinery/vending/wardrobe/sec_wardrobe/Initialize()
+    products += list(
+      /obj/item/clothing/head/beret/sec/navyofficer/black = 3, /obj/item/clothing/gloves/color/black/grey = 3,
+    )
+    . = ..()

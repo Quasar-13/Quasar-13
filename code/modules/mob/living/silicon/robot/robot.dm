@@ -471,6 +471,9 @@
 	lampButton?.update_icon()
 	update_icons()
 
+/mob/living/silicon/robot/proc/update_headlamp(turn_off = 0, cooldown = 100)
+	set_light(0)
+
 /mob/living/silicon/robot/proc/deconstruct()
 	SEND_SIGNAL(src, COMSIG_BORG_SAFE_DECONSTRUCT)
 	var/turf/T = get_turf(src)

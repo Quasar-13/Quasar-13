@@ -697,6 +697,14 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 	QDEL_NULL(Radio)
 	return ..()
 
+/obj/machinery/computer/cargo/attacked_by(obj/item/I, mob/living/user)
+	if(istype(I,/obj/item/trade_chip))
+		var/obj/item/trade_chip/contract = I
+		contract.try_to_unlock_contract(user)
+		return TRUE
+	else
+		return ..()
+
 /obj/machinery/computer/arcade/orion_trail/kobayashi
 	name = "Kobayashi Maru control computer"
 	desc = "A test for cadets"

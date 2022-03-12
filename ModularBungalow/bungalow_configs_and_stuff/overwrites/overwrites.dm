@@ -3,16 +3,20 @@
 	new /obj/item/gun/energy/disabler/head(src)
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/under/misc/parade/qm(src)
+	new /obj/item/clothing/under/rank/cargo/qm/dark(src)
+	new /obj/item/clothing/under/rank/cargo/qm/turtle(src)
+	new /obj/item/clothing/suit/qm(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/engineering/head(src)
 	new /obj/item/storage/lockbox/medal/ce(src)
-	new /obj/item/clothing/under/rank/engineering/chief_engineer/atmos(src)
+	new /obj/item/clothing/under/rank/engineering/chief_engineer/hazard(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/chief_medical/Initialize()
 	new /obj/item/storage/belt/medical/surgeryfilled(src)
+	new /obj/item/clothing/under/rank/medical/chief_medical_officer/triage(src)
 	new /obj/item/clothing/glasses/sunglasses/chemical(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/head(src)
 	new /obj/item/gun/syringe/rifle(src)
@@ -23,6 +27,8 @@
 /obj/structure/closet/secure_closet/research_director/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/science/head(src)
 	new /obj/item/gun/energy/e_gun/homedef(src)
+	new /obj/item/clothing/suit/neocoat/rd(src)
+	new /obj/item/clothing/suit/toggle/labcoat/rd(src)
 	new /obj/item/clothing/glasses/hud/diagnostic/sunglasses(src)
 	. = ..()
 
@@ -33,10 +39,18 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/captain/hop(src)
 	new /obj/item/clothing/under/misc/parade/hop(src)
 	new /obj/item/gun/energy/e_gun/hop(src)
+	new /obj/item/clothing/suit/armor/hopcoat(src)
+	new /obj/item/clothing/suit/armor/hopjacket(src)
+	new /obj/item/clothing/under/rank/civilian/head_of_personnel/formal(src)
+
+	//Random ID
+	var randomid = pick(subtypesof(/obj/item/card/id/random))
+	new randomid(src)
 	. = ..()
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	new /obj/item/clothing/suit/hooded/wintercoat/security/head(src)
+	new /obj/item/clothing/suit/armor/hos/peacoat(src)
 	. = ..()
 
 //Medalboxes, was apparently removed at one point? Either way, it was supposed to be ported over.

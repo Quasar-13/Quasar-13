@@ -67,6 +67,15 @@
  	suit_store = null
  	accessory = /obj/item/clothing/accessory/armband/medblue
 
+//ge
+/datum/outfit/job/geneticist/freakofgenetics
+	name = "Geneticist (Freak of Genetics)"
+	uniform = /obj/item/clothing/under/shorts/purple
+	suit = null
+	suit_store = null
+	shoes = /obj/item/clothing/shoes/sandal
+	backpack = /obj/item/storage/backpack/satchel/leather
+
 //se
 /datum/outfit/job/engineer/electrician
 	name = "Station Engineer (Electrician)"
@@ -93,6 +102,45 @@
 	l_pocket = /obj/item/pda/signal_tech
 	head = null
 
+//pris
+/datum/outfit/job/prisoner/protectedcustody
+	name = "Prisoner (Protected Custody)"
+	uniform = /obj/item/clothing/under/rank/prisoner/custody
+	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/bowler
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	r_pocket = /obj/item/lighter
+	r_hand = /obj/item/storage/fancy/cigarettes/cigars
+	ears = /obj/item/radio/headset
+
+//det
+/datum/outfit/job/detective/intelligenceofficer
+	name = "Detective (Intelligence Officer)"
+	head = /obj/item/clothing/head/beret/sec/bni
+	uniform = /obj/item/clothing/under/bni
+	neck = null
+	suit = /obj/item/clothing/suit/det_suit/noir/intel
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
+	suit_store = /obj/item/gun/ballistic/revolver/rhino
+	shoes = /obj/item/clothing/shoes/jackboots
+	backpack = /obj/item/storage/backpack/security
+	//the backpack is for style (also because det doesn't have officer armory access yet)
+
+//Secretary
+/datum/outfit/job/secretary/lieutenant
+	name = "Secretary (Lieutenant)"
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
+	head = /obj/item/clothing/head/beret/black
+	glasses = /obj/item/clothing/glasses/sunglasses
+	
+/datum/outfit/job/secretary/seniorbridgeofficer
+	name = "Secretary (Senior Bridge Officer)"
+	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
+	head = /obj/item/clothing/head/beret/command
+	glasses = /obj/item/clothing/glasses/sunglasses
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/laceup
+	
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
 	name = "Chief Medical Officer (Medical Professor)"
@@ -100,11 +148,10 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
 	head = /obj/item/clothing/head/beret/cmo/ice
 
-
 /datum/outfit/job/cmo/seniormedicalofficer
 	name = "Chief Medical Officer (Senior Medical Officer)"
 	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/suit
-	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	suit = /obj/item/clothing/suit/neocoat/trench/cmo
 	head = /obj/item/clothing/head/beret/cmo/ice
 
 //Chief Engineer

@@ -1,10 +1,45 @@
 //Kiriechem Medicines
+/datum/reagent/medicine/sbicarid //brings it back kinda
+	name = "Impure Bicaridine"
+	description = "A bruise reliever with a low overdose"
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	overdose_threshold = 10
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/sbicarid/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-0.5*REM)
+	..()
+	return TRUE
+
+/datum/reagent/medicine/bicarid/overdose_process(mob/living/M)
+	M.adjustBruteLoss(1*REM)
+	..()
+
+/datum/reagent/medicine/skelo //brings it back kinda
+	name = "Impure Kelotane"
+	description = "A small burn reliever"
+	color = "#A1240B" // rgb: 236	236	141
+	taste_description = "spicy"
+	overdose_threshold = 10
+	reagent_state = LIQUID
+
+/datum/reagent/medicine/skelo/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-0.5*REM)
+	..()
+	return TRUE
+
+/datum/reagent/medicine/skelo/overdose_process(mob/living/M)
+	M.adjustFireLoss(1*REM)
+	..()
+
+
 /datum/reagent/medicine/bicaridine //brings it back kinda
 	name = "Bicaridine"
 	description = "A bruise reliever with a low overdose"
 	color = "#A1240B" // rgb: 236	236	141
 	taste_description = "spicy"
-	overdose_threshold = 11
+	overdose_threshold = 10
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/M)
@@ -22,7 +57,7 @@
 	description = "A burn reliever with a low overdose."
 	color = "#F3F772" // rgb: 236	236	141
 	taste_description = "burning"
-	overdose_threshold = 11
+	overdose_threshold = 10
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/M)
@@ -47,7 +82,7 @@
 	M.adjustFireLoss(-2*REM)
 	M.adjustBruteLoss(-2*REM)
 	M.adjustToxLoss(-2*REM)
-	M.adjustCloneLoss(1.5*REM)
+	M.adjustCloneLoss(1*REM)
 	..()
 	return TRUE
 
@@ -68,7 +103,7 @@
 	M.adjustFireLoss(-2*REM)
 	M.adjustBruteLoss(-2*REM)
 	M.adjustToxLoss(-2*REM)
-	M.adjustCloneLoss(1.5*REM)
+	M.adjustCloneLoss(2*REM)
 	..()
 	return TRUE
 
@@ -124,7 +159,8 @@
 
 /datum/reagent/medicine/giadone/on_mob_life(mob/living/M)
 	M.adjustCloneLoss(-6*REM)
-	M.adjustBruteLoss(3*REM)
+	M.adjustBruteLoss(1*REM)
+	M.adjustFireLoss(1*REM)
 	..()
 	return TRUE
 
@@ -133,6 +169,7 @@
 	description = "Heals all organ damage."
 	color = "#DFF0ED" // rgb: 236	236	141
 	taste_description = "heaven."
+	overdose_threshold = 10
 	reagent_state = LIQUID
 
 /datum/reagent/medicine/omnidrite/on_mob_life(mob/living/M)
@@ -145,6 +182,9 @@
 	..()
 	return TRUE
 
+/datum/reagent/medicine/omnidrite/overdose_process(mob/living/M)
+	M.adjustCloneLoss(4*REM)
+	..()
 
 /datum/reagent/medicine/omnizidrite
 	name = "Omnizidrite"
@@ -171,7 +211,7 @@
 	return TRUE
 
 /datum/reagent/medicine/omnizidrite/overdose_process(mob/living/M)
-	M.adjustCloneLoss(3.3*REM)
+	M.adjustCloneLoss(3*REM)
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, 4*REM)
 	..()
 

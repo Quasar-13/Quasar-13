@@ -3,19 +3,21 @@
 Bungalowstation currently comes equipped with Nine maps, Six are currently maintained and in active rotation.
 
 In rotation:
-* Metastation
-* Deltastation
 * Newboxstation
 * Pubbystation
 * Packedstation
 * Remorastation
-* Chimerastation
+* CasioStation
+* FermiStation
+* TaliStation
 
 Admin only:
-* Heliostation
 * Iceboxstation
 * Kilostation
 * Phobosstation
+* Chimerastation
+* Deltastation
+* Metastation
 
 All maps have their own code file that is in the base of the _maps directory. Maps are loaded dynamically when the game starts. Follow this guideline when adding your own map, to your fork, for easy compatibility.
 

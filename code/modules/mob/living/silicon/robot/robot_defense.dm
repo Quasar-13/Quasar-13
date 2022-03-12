@@ -208,19 +208,23 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		to_chat(user, "<span class='notice'>You fill the toner level of [src] to its max capacity.</span>")
 		return
 
-	if(istype(W, /obj/item/flashlight))
+	else if(istype(W, /obj/item/light/bulb))
+		var/obj/item/light/bulb/B = W //yogs start
+		if(B.status)
+			to_chat(user, "<span class='warning'>[B] is broken!</span>")
+			return
 		if(!opened)
 			to_chat(user, "<span class='warning'>You need to open the panel to repair the headlamp!</span>")
 			return
 		if(lamp_functional)
 			to_chat(user, "<span class='warning'>The headlamp is already functional!</span>")
 			return
-		if(!user.temporarilyRemoveItemFromInventory(W))
-			to_chat(user, "<span class='warning'>[W] seems to be stuck to your hand. You'll have to find a different light.</span>")
+		if(!user.temporarilyRemoveItemFromInventory(B))
+			to_chat(user, "<span class='warning'>[B] seems to be stuck to your hand. You'll have to find a different light.</span>")
 			return
 		lamp_functional = TRUE
-		qdel(W)
-		to_chat(user, "<span class='notice'>You replace the headlamp bulbs.</span>")
+		qdel(B)
+		to_chat(user, "<span class='notice'>You replace the headlamp bulb.</span>") //yogs end
 		return
 
 	if(istype(W, /obj/item/computer_hardware/hard_drive/portable)) //Allows borgs to install new programs with human help

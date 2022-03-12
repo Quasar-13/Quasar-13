@@ -36,7 +36,7 @@ GLOBAL_LIST_INIT(science_positions, list(
 	"Scientist",
 	"Geneticist",
 	"Roboticist",
-	"Chemist"))
+	"Chemical Researcher"))
 
 
 GLOBAL_LIST_INIT(supply_positions, list(
@@ -58,6 +58,7 @@ GLOBAL_LIST_INIT(service_positions, list(
 	"Clown",
 	"Mime",
 	"Prisoner",
+	"Vagabond",
 	"Assistant"))
 
 
@@ -67,6 +68,7 @@ GLOBAL_LIST_INIT(security_positions, list(
 	"Warden",
 	"Detective",
 	"Deputy", // Tegustation Deupty edit: Adds them as a Security job
+	"Brig Physician",
 	"Security Officer"))
 
 
