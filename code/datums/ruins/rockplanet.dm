@@ -14,7 +14,7 @@
 /datum/map_template/ruin/rockplanet/heirophant
 	name = "Ancient Heirophant"
 	id = "rockheiro"
-	description = "something dangerous"
+	description = "a dangerous entity"
 	suffix = "rockplanet_heirophant.dmm"
 
 /datum/map_template/ruin/rockplanet/clock
