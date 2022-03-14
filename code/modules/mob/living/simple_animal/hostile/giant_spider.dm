@@ -4,6 +4,9 @@
  * A subtype of the hostile simplemob which injects reagents into its target on attack, assuming the target accepts reagents.
  */
 /mob/living/simple_animal/hostile/poison
+	//Need Acid immunity for Jungle weather
+	weather_immunities = list(ACID)
+
 	///How much of a reagent the mob injects on attack
 	var/poison_per_bite = 5
 	///What reagent the mob injects targets with

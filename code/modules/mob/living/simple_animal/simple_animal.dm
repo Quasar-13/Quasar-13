@@ -8,6 +8,9 @@
 	living_flags = MOVES_ON_ITS_OWN
 	status_flags = CANPUSH
 
+	//Giving them general weather immunity. This means taht only carbons should take damage from them.
+	weather_immunities = list("general")
+
 	var/icon_living = ""
 	///Icon when the animal is dead. Don't use animated icons for this.
 	var/icon_dead = ""
