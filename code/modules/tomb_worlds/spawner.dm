@@ -5,7 +5,6 @@ GLOBAL_LIST_EMPTY(tomb_spawn_list)			// All tomb spawners
 	desc = "Default spawner. You shouldn't see this."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "syndbeacon"
-	max_integrity = 1000
 	density = TRUE
 	roundstart = FALSE
 	death = FALSE
@@ -21,6 +20,7 @@ GLOBAL_LIST_EMPTY(tomb_spawn_list)			// All tomb spawners
 	var/enabled = FALSE //If tomb is open - allow players to spawn
 	var/cooldown = 1 MINUTES //The time to pass after spawning to make it available again
 	var/current_cooldown = 0
+	var/spawner_health = 10 // A hack, basically. Gotta use it because mob spawners are effects.
 
 /obj/effect/mob_spawn/human/tomb_spawn/ex_act()
 	return
@@ -29,9 +29,39 @@ GLOBAL_LIST_EMPTY(tomb_spawn_list)			// All tomb spawners
 	. = ..()
 	GLOB.tomb_spawn_list |= src
 
+/obj/effect/mob_spawn/human/tomb_spawn/Destroy()
+	visible_message("<span class='danger'>[src] falls apart!</span>")
+	playsound(src, 'sound/effects/meteorimpact.ogg', 50, TRUE)
+	GLOB.tomb_spawn_list -= src
+	. = ..()
+
 /obj/effect/mob_spawn/human/tomb_spawn/special(mob/user)
 	. = ..()
 	current_cooldown = world.time + cooldown
+
+/obj/effect/mob_spawn/human/tomb_spawn/attackby(obj/item/I, mob/user, params)
+	if(faction in user.faction)
+		to_chat(user, "<span class='notice'>You really shouldn't try to destroy \the [src]...</span>")
+		return
+	if(I.force >= 18)
+		to_chat(user, "<span class='warning'>You attempt to destroy \the [src]...</span>")
+		visible_message("<span class='warning'>[user] starts smashing \the [src] with \the [I]!</span>")
+		if(do_after(user, 100, target = src))
+			if(!user || !src)
+				return
+			spawner_health -= 1
+			playsound(src, 'sound/weapons/smash.ogg', 50, TRUE)
+			if(spawner_health <= 0)
+				to_chat(user, "<span class='warning'>You whack \the [src] with [I] and it falls apart!</span>")
+				qdel(src)
+			else
+				to_chat(user, "<span class='warning'>You whack \the [src] with [I]. Looks like you'd have to do it [spawner_health] more times.</span>")
+			return
+		return
+	else if(I.force > 0)
+		to_chat(user, "<span class='notice'>You'd need a stronger weapon to destroy \the [src]...</span>")
+		return
+	return
 
 /obj/effect/mob_spawn/human/tomb_spawn/allow_spawn(mob/user)
 	if(!enabled)
