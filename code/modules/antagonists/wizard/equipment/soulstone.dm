@@ -81,7 +81,7 @@
 		return ..()
 	if(iscultist(M))
 		if(iscultist(user))
-			if(!key)
+			if(!M.key)
 				to_chat(user, "<span class='cultlarge'>\"This brethren's soul has gone into a deep sleep... I will accept it.\"</span>")
 			else
 				to_chat(user, "<span class='cultlarge'>\"Come now, do not capture your bretheren's soul.\"</span>")
