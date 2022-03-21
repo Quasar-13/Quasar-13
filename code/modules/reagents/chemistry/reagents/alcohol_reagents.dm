@@ -2460,7 +2460,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/recurring_gag/on_mob_metabolize(mob/living/carbon/M)
 	if(prob(33))
 		M.vomit()
-	..()
 /datum/reagent/consumable/ethanol/dub
 	name = "Dub"
 	description = "Originally created by a bored wizard who wanted to fuck with language spells."
