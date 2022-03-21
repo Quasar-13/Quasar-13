@@ -2457,8 +2457,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 91
 	color = "#BFE600"
 	taste_description = "god's mistake"
-/datum/reagent/consumable/ethanol/recurring_gag/on_mob_metabolize(mob/living/carbon/M)
-	if(prob(33))
+/datum/reagent/consumable/ethanol/recurring_gag/on_mob_life(mob/living/carbon/M)
+	if(rand(0, 3)==2)
 		M.vomit()
 /datum/reagent/consumable/ethanol/dub
 	name = "Dub"
