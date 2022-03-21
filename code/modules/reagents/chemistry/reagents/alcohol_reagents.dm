@@ -2458,7 +2458,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#BFE600"
 	taste_description = "god's mistake"
 /datum/reagent/consumable/ethanol/recurring_gag/on_mob_life(mob/living/carbon/M)
-	if(rand(0, 3)==2)
+	if(prob(33))
 		M.vomit()
 /datum/reagent/consumable/ethanol/dub
 	name = "Dub"
