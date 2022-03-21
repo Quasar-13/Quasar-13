@@ -2453,7 +2453,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "This drink has a label on the side: Strategic Nuclear Moose"
 /datum/reagent/consumable/ethanol/recurring_gag
 	name = "Recurring Gag"
-	drink = "Who in their right mind would make this?"
+	description = "Who in their right mind would make this?"
 	boozepwr = 91
 	color = "#BFE600"
 	taste_description = "god's mistake"
