@@ -6280,9 +6280,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/break_room)
-"dEG" = (
-/turf/closed/wall,
-/area/hallway/primary/aft)
 "dFP" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -7076,7 +7073,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "emb" = (
-/mob/living/carbon/human/species/monkey,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 10
 	},
@@ -7085,6 +7081,7 @@
 	dir = 5;
 	network = list("ss13","medbay")
 	},
+/mob/living/carbon/human/species/monkey,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "emd" = (
@@ -7902,10 +7899,10 @@
 	dir = 1;
 	pixel_y = 1
 	},
-/mob/living/carbon/human/species/monkey,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
 	},
+/mob/living/carbon/human/species/monkey,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "eSP" = (
@@ -9435,10 +9432,6 @@
 	location = "QM #3"
 	},
 /obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/bot/mulebot{
-	home_destination = "QM #3";
-	suffix = "#3"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
@@ -9447,6 +9440,10 @@
 	pixel_y = 1
 	},
 /obj/structure/window/reinforced,
+/mob/living/simple_animal/bot/mulebot{
+	home_destination = "QM #3";
+	suffix = "#3"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "gqn" = (
@@ -10351,11 +10348,11 @@
 /area/engine/atmos)
 "heI" = (
 /obj/structure/filingcabinet/chestdrawer,
-/mob/living/simple_animal/parrot/poly,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#e8eaff"
 	},
+/mob/living/simple_animal/parrot/poly,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/chief)
 "heJ" = (
@@ -22187,11 +22184,6 @@
 	location = "QM #1"
 	},
 /obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/bot/mulebot{
-	beacon_freq = 1400;
-	home_destination = "QM #1";
-	suffix = "#1"
-	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -22201,6 +22193,11 @@
 	pixel_y = 1
 	},
 /obj/structure/window/reinforced,
+/mob/living/simple_animal/bot/mulebot{
+	beacon_freq = 1400;
+	home_destination = "QM #1";
+	suffix = "#1"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "rvN" = (
@@ -27191,7 +27188,9 @@
 /area/crew_quarters/heads/chief)
 "vDa" = (
 /obj/machinery/computer/telecomms/traffic{
-	dir = 1
+	dir = 1;
+	req_access = null;
+	req_one_access = list(19,61)
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
@@ -27409,9 +27408,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
-"vLl" = (
-/turf/closed/wall,
-/area/quartermaster/storage)
 "vLP" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
@@ -29470,10 +29466,10 @@
 /area/quartermaster/qm)
 "xwl" = (
 /obj/structure/bed/dogbed/ian,
-/mob/living/simple_animal/pet/dog/corgi/ian,
 /obj/structure/cable,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/west,
+/mob/living/simple_animal/pet/dog/corgi/ian,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "xwu" = (
@@ -30000,13 +29996,13 @@
 /area/medical/medbay/lobby)
 "xSg" = (
 /obj/structure/bed/dogbed,
-/mob/living/simple_animal/sloth/paperwork,
 /obj/machinery/airalarm{
 	dir = 8;
 	pixel_x = 23
 	},
 /obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable,
+/mob/living/simple_animal/sloth/paperwork,
 /turf/open/floor/wood,
 /area/quartermaster/qm)
 "xSt" = (
@@ -64124,7 +64120,7 @@ sXR
 bew
 sXR
 dHQ
-dEG
+biy
 rie
 aaa
 aaa
@@ -71062,8 +71058,8 @@ jah
 oSZ
 xKT
 awB
-vLl
-vLl
+kQk
+kQk
 xvE
 vTP
 aaa

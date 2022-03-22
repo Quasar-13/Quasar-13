@@ -22,7 +22,8 @@ GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
 	"Station Engineer",
 	"Atmospheric Technician",
-	"Void Technician"))
+	"Void Technician",
+	"Signal Technician"))
 
 GLOBAL_LIST_INIT(medical_positions, list(
 	"Chief Medical Officer",

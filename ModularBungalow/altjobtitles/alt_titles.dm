@@ -7,9 +7,14 @@
 
 //Engineering
 /datum/job/engineer
-	alt_titles = list("Maintenance Technician", "Engine Technician", "Electrician", "Signal Technician")
+	alt_titles = list("Maintenance Technician", "Engine Technician", "Electrician")
 	senior_title = list("Project Co-ordinator")
 	ultra_senior_title = list("Bob the Builder")
+
+/datum/job/signal_tech
+	alt_titles = list("DevOps")
+	senior_title = list("Power Coder")
+	ultra_senior_title = list("CentComm Systems Engineer")
 
 /datum/job/atmos
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")

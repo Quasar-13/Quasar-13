@@ -96,7 +96,7 @@
 	l_hand = /obj/item/storage/bag/construction
 
 /datum/outfit/job/engineer/signaltechnician
-	name = "Station Engineer (Signal Technician)"
+	name = "Signal Technician"
 	uniform = /obj/item/clothing/under/rank/engineering/signal_tech
 	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms
 	l_pocket = /obj/item/pda/signal_tech
@@ -132,7 +132,7 @@
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
 	head = /obj/item/clothing/head/beret/black
 	glasses = /obj/item/clothing/glasses/sunglasses
-	
+
 /datum/outfit/job/secretary/seniorbridgeofficer
 	name = "Secretary (Senior Bridge Officer)"
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
@@ -140,7 +140,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/laceup
-	
+
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
 	name = "Chief Medical Officer (Medical Professor)"

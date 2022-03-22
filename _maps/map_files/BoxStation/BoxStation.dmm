@@ -4614,8 +4614,8 @@
 /obj/structure/light_construct{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/retaliate/goose/vomit,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/retaliate/goose/vomit,
 /turf/open/floor/wood,
 /area/maintenance/port/aft)
 "alO" = (
@@ -22097,11 +22097,11 @@
 /area/crew_quarters/heads/hop)
 "bnQ" = (
 /obj/structure/bed/dogbed/ian,
+/obj/machinery/power/apc/auto_name/north,
+/obj/structure/cable,
 /mob/living/simple_animal/pet/dog/corgi/ian{
 	dir = 8
 	},
-/obj/machinery/power/apc/auto_name/north,
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/hop)
 "bnR" = (
@@ -31327,7 +31327,7 @@
 "bQK" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Control Room";
-	req_one_access_txt = "19"
+	req_one_access_txt = "19;61"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -33112,7 +33112,9 @@
 	dir = 8
 	},
 /obj/machinery/computer/telecomms/traffic{
-	dir = 4
+	dir = 4;
+	req_access = null;
+	req_one_access = list(61,19)
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)

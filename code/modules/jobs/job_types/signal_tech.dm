@@ -6,22 +6,23 @@
 	spawn_positions = 1
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	exp_requirements = 60
+	exp_requirements = 0
 	exp_type = EXP_TYPE_CREW
 
-	outfit = /datum/outfit/job/signal_tech
-//	plasmaman_outfit = /datum/outfit/plasmaman/signal_tech
 
-	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_ENG
+	outfit = /datum/outfit/job/engineer/signaltechnician
 
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
 
-//	display_order = JOB_DISPLAY_ORDER_SIGNAL_TECHNICIAN
+	access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_GATEWAY, ACCESS_TCOMSAT, ACCESS_MAINT_TUNNELS, ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,
+									ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_ATMOSPHERICS, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_GATEWAY, ACCESS_TCOMSAT, ACCESS_MAINT_TUNNELS,ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM)
+	paycheck = PAYCHECK_MEDIUM
+	paycheck_department = ACCOUNT_ENG
+	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER
 	bounty_types = CIV_JOB_ENG
-//	departments = DEPARTMENT_ENGINEERING
 
-//	family_heirlooms = list(/obj/item/clothing/head/hardhat, /obj/item/screwdriver, /obj/item/wrench, /obj/item/weldingtool, /obj/item/crowbar, /obj/item/wirecutters)
+
 
 /datum/outfit/job/signal_tech
 	name = "Signal Technician"
