@@ -6,7 +6,7 @@
 	spawn_positions = 1
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	exp_requirements = 0
+	exp_requirements = 600
 	exp_type = EXP_TYPE_CREW
 
 
