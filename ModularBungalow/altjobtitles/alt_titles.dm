@@ -14,7 +14,7 @@
 /datum/job/signal_tech
 	alt_titles = list("DevOps")
 	senior_title = list("Power Coder")
-	ultra_senior_title = list("CentComm Systems Engineer")
+	ultra_senior_title = list("CentCom Systems Engineer")
 
 /datum/job/atmos
 	alt_titles = list("Firefighter", "Life Support Specialist", "Subengine Technician", "Breathing Enthusiast")
