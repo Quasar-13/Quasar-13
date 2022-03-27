@@ -459,7 +459,7 @@
 
 /datum/reagent/medicine/c2/penthrite/on_mob_metabolize(mob/living/M)
 	. = ..()
-	to_chat(M,"<span class='notice'>Your heart begins to beat with great force!")
+	user.balloon_alert(user, "your heart beats with a great force")
 	ADD_TRAIT(M, TRAIT_STABLEHEART, type)
 	ADD_TRAIT(M, TRAIT_NOHARDCRIT,type)
 	ADD_TRAIT(M, TRAIT_NOSOFTCRIT,type)
@@ -494,6 +494,7 @@
 	. = ..()
 
 /datum/reagent/medicine/c2/penthrite/on_mob_end_metabolize(mob/living/M)
+	user.balloon_alert(user, "your heart relaxes")
 	REMOVE_TRAIT(M, TRAIT_STABLEHEART, type)
 	REMOVE_TRAIT(M, TRAIT_NOHARDCRIT,type)
 	REMOVE_TRAIT(M, TRAIT_NOSOFTCRIT,type)
