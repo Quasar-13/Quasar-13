@@ -19,7 +19,12 @@ GLOBAL_LIST_EMPTY(apostles)
 	armour_penetration = 20
 	melee_damage_lower = 24
 	melee_damage_upper = 24
-	speed = 0
+	move_force = MOVE_FORCE_STRONG
+	move_resist = MOVE_FORCE_STRONG
+	pull_force = MOVE_FORCE_STRONG
+	environment_smash = ENVIRONMENT_SMASH_WALLS // Reinforced walls can stop them.
+	obj_damage = 80 // As funny as it is, they shouldn't be able to annihilate structures in 0.001 seconds
+	speed = 2
 	ranged = TRUE
 	pixel_x = -16
 	base_pixel_x = -16
@@ -36,10 +41,11 @@ GLOBAL_LIST_EMPTY(apostles)
 							   /datum/action/innate/megafauna_attack/deafening_scream,
 							   /datum/action/innate/megafauna_attack/holy_blink)
 	small_sprite_type = /datum/action/small_sprite/megafauna/tegu/angel
-	var/holy_revival_cooldown = 10 SECONDS
+	var/holy_revival_cooldown = 14 SECONDS
 	var/holy_revival_cooldown_base = 14 SECONDS
 	var/holy_revival_damage = 18 // Amount of damage OR heal, depending on target.
-	var/holy_revival_range = 3
+	var/holy_revival_range = 4
+	var/last_revival_time // To prevent multiple conversions per one action
 	var/fire_field_cooldown = 20 SECONDS
 	var/fire_field_cooldown_base = 20 SECONDS
 	var/field_range = 4
@@ -155,20 +161,27 @@ GLOBAL_LIST_EMPTY(apostles)
 	if(holy_revival_cooldown > world.time)
 		return
 	holy_revival_cooldown = (world.time + holy_revival_cooldown_base)
-	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_spell.ogg', 100, 1, holy_revival_range)
+	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_spell.ogg', 75, 1, holy_revival_range)
 	var/turf/target_c = get_turf(src)
 	var/list/turf_list = list()
 	for(var/i = 1 to holy_revival_range)
 		turf_list = spiral_range_turfs(i, target_c) - spiral_range_turfs(i-1, target_c)
 		for(var/turf/open/T in turf_list)
-			new /obj/effect/temp_visual/cult/sparks(x)
-		for(var/mob/living/carbon/human/H in turf_list)
-			revive_target(H)
-		SLEEP_CHECK_DEATH(1)
+			new /obj/effect/temp_visual/cult/sparks(T)
+			for(var/mob/living/L in T.contents)
+				if(ishuman(L))
+					var/mob/living/carbon/human/H = L
+					new /obj/effect/temp_visual/dir_setting/cult/phase(T, H.dir)
+					addtimer(CALLBACK(src, .proc/revive_target, H, i))
+				else if(!("apostle" in L.faction))
+					playsound(L.loc, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE, -1)
+					L.adjustFireLoss(holy_revival_damage)
+					to_chat(L, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
+		SLEEP_CHECK_DEATH(1.5)
 
-/mob/living/simple_animal/hostile/megafauna/apostle/proc/revive_target(mob/living/carbon/human/H)
+/mob/living/simple_animal/hostile/megafauna/apostle/proc/revive_target(mob/living/carbon/human/H, attack_range = 1)
 	if(!("apostle" in H.faction))
-		if(apostle_num < 13 && H.stat == DEAD && H.mind)
+		if(apostle_num < 13 && H.stat == DEAD && H.mind && world.time > last_revival_time + 5 SECONDS)
 			if(!H.client)
 				var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
 				if(!ghost?.can_reenter_corpse) // If there is nobody able to control it - skip.
@@ -195,6 +208,7 @@ GLOBAL_LIST_EMPTY(apostles)
 				var/mutable_appearance/apostle_halo = mutable_appearance('ModularTegustation/Teguicons/32x64.dmi', "halo", -HALO_LAYER)
 				H.overlays_standing[HALO_LAYER] = apostle_halo
 				H.apply_overlay(HALO_LAYER)
+			last_revival_time = world.time
 			SLEEP_CHECK_DEATH(20)
 			// Executing rapture scenario
 			switch(apostle_num)
@@ -238,13 +252,15 @@ GLOBAL_LIST_EMPTY(apostles)
 			melee_damage_upper += 2
 			maxHealth += 50
 			health = maxHealth
-			holy_revival_damage += 2 // More damage and healing from AOE spell.
+			holy_revival_damage += 1 // More damage and healing from AOE spell.
 			scream_power += 1 // Deafen them all. Destroy their ears.
 			light_range += 1 // More light, because why not.
-		else
-			playsound(H.loc, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE, -1)
-			H.adjustFireLoss(holy_revival_damage)
-			H.emote("scream")
+		else if((holy_revival_damage - attack_range) >= 1)
+			playsound(H.loc, 'sound/machines/clockcult/ark_damage.ogg', 50 - attack_range, TRUE, -1)
+			// The farther you are from white night - the less damage it deals
+			H.adjustFireLoss(holy_revival_damage - attack_range)
+			if((holy_revival_damage - attack_range) > 15)
+				H.emote("scream")
 			to_chat(H, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
 	else
 		if(H.stat == DEAD && H.mind)
@@ -277,7 +293,7 @@ GLOBAL_LIST_EMPTY(apostles)
 	SLEEP_CHECK_DEATH(3)
 	for(var/i = 1 to field_range)
 		fire_zone = spiral_range_turfs(i, target_c) - spiral_range_turfs(i-1, target_c)
-		playsound(target_c, "explosion", 80, TRUE)
+		playsound(target_c, "explosion", 50, TRUE)
 		for(var/turf/open/T in fire_zone)
 			new /obj/effect/hotspot(T)
 			T.hotspot_expose(400, 30, 1)
@@ -292,7 +308,7 @@ GLOBAL_LIST_EMPTY(apostles)
 	if(scream_cooldown > world.time)
 		return
 	scream_cooldown = (world.time + scream_cooldown_base)
-	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_shout.ogg', 70, 1)
+	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_shout.ogg', 30, 1)
 	for(var/mob/living/carbon/C in get_hearers_in_view(6, src))
 		to_chat(C, "<span class='danger'>[src] shouts incredibly loud!</span>")
 		if("apostle" in C.faction)
@@ -300,7 +316,7 @@ GLOBAL_LIST_EMPTY(apostles)
 		shake_camera(C, 1, 2)
 		C.soundbang_act(1, scream_power, 4)
 		C.jitteriness += (scream_power * 0.5)
-		C.do_jitter_animation(jitteriness)
+		C.do_jitter_animation(C.jitteriness)
 		C.blur_eyes(scream_power * 0.3, 0.6)
 		C.stuttering += (scream_power)
 	if(apostle_num == 666)
@@ -308,7 +324,6 @@ GLOBAL_LIST_EMPTY(apostles)
 			L.on = TRUE
 			L.break_light_tube()
 			L.on = FALSE
-			stoplag()
 
 /mob/living/simple_animal/hostile/megafauna/apostle/proc/holy_blink(target)
 	if(blink_cooldown > world.time)
