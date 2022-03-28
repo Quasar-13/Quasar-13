@@ -572,3 +572,17 @@
 		reagent_names["[initial(reagent.name)] (Has Side-Effects)"] = reagent
 	else
 		reagent_names[initial(reagent.name)] = reagent
+
+//Mechandrites for the Mechanicus
+
+/obj/item/mechandrites
+	name = "\improper Mechandrite Implanter"
+	desc = "An implanter for mechandrites, allowing a follower of the Omnissiah to gain newly found dexterity and handiness"
+	icon = 'icons/obj/device.dmi'
+	icon_state = "autoimplanter"
+	var/oneuse = TRUE
+
+/obj/item/mechandrites/attack_self(mob/user)
+	var/limbs = user.held_items.len
+	user.change_number_of_hands(limbs+1)
+	to_chat(user, "Your mechandrites whirr with life")
