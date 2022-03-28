@@ -157,6 +157,7 @@
 	l_pocket = /obj/item/kitchen/knife/combat/survival
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
 	id = /obj/item/card/id/away/techcult
+	backpack_contents = list(/obj/item/mechandrites)
 
 /obj/effect/mob_spawn/human/techcult/leader
 	name = "Leader of the Machine Cult"
@@ -187,7 +188,7 @@
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/night
 	r_hand = /obj/item/gun/energy/sniper
 	back = /obj/item/storage/backpack/cultpack
-	backpack_contents = list(/obj/item/storage/book/bible/omnissiah, /obj/item/book/granter/spell/omnissiah, /obj/item/organ/heart/cybernetic/tier4)
+	backpack_contents = list(/obj/item/storage/book/bible/omnissiah, /obj/item/book/granter/spell/omnissiah, /obj/item/organ/heart/cybernetic/tier4, /obj/item/mechandrites)
 
 /***************** Credo Omnissiah *****************/
 
