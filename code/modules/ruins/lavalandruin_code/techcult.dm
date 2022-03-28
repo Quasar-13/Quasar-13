@@ -591,7 +591,7 @@
 	user.visible_message("<span class='notice'>[user] presses a button on [src], and you hear a short mechanical noise.</span>", "<span class='notice'>You feel a sharp sting as [src] plunges into your body.</span>")
 	to_chat(user, "Your mechandrites whirr with life")
 	playsound(get_turf(user), 'sound/weapons/circsawhit.ogg', 50, TRUE)
-	if(uses != 1)
+	if(uses == 1)
 		uses--
 	if(!uses)
 		desc = "[initial(desc)] Looks like it's been used up."
