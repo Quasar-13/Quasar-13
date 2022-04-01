@@ -37,6 +37,7 @@
 		#include "map_files\RomulusFacility\RomulusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
 		#include "map_files\NTBlacksite\NTBlacksite.dmm"
+		#include "map_files\error\error.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
