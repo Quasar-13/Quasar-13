@@ -86,7 +86,7 @@
 	if(isliving(target))
 		var/mob/living/L = target
 		if(obj_damage <= 0) // Not transformed
-			if(prob(10) && L in enemies)
+			if(prob(10) && (L in enemies))
 				enemies -= L
 				already_punished |= L
 				target = null
