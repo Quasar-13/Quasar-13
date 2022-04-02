@@ -95,11 +95,18 @@
 /obj/item/clothing/accessory/maidapron
 	name = "maid apron"
 	desc = "The best part of a maid costume."
-	icon_state = "maidapron"
+	icon_state = "maidapron_old"
 	inhand_icon_state = "maidapron"
 	minimize_when_attached = FALSE
 	attachment_slot = null
 
+/obj/item/clothing/accessory/maidapron/fools
+	name = "maid apron"
+	desc = "The best part of a maid costume."
+	icon_state = "maidapron"
+	inhand_icon_state = "maidapron"
+	minimize_when_attached = FALSE
+	attachment_slot = null
 //////////
 //Medals//
 //////////

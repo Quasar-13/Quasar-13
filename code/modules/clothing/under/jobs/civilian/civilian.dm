@@ -126,6 +126,15 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/civilian/janitor/maid/fools
+	name = "maid uniform"
+	desc = "A frilly maid uniform for housekeeping."
+	icon_state = "maid"
+	inhand_icon_state = "maid"
+	body_parts_covered = CHEST|GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
 /obj/item/clothing/under/rank/civilian/lawyer
 	desc = "Slick threads."
 	name = "Lawyer suit"
