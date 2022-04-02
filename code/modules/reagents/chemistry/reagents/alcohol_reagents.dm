@@ -2466,8 +2466,17 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 30
 	color = "#E5D824"
 	taste_description = "the wild, wild west"
+	glass_icon_state = "dub"
+	glass_name = "Dub"
+	glass_desc = "Fwfwfwfwfw..."
 /datum/reagent/consumable/ethanol/dub/on_mob_add(mob/living/carbon/M)
-	M.grant_language(/datum/language/moffic)
+	if (M.has_language(/datum/language/moffic))
+		M.spoke_moffic = TRUE //Why is this here? Check my comment on atoms_movable.dm line 74
+	else
+		M.grant_language(/datum/language/moffic)
 /datum/reagent/consumable/ethanol/dub/on_mob_delete(mob/living/carbon/M)
-	M.remove_language(/datum/language/moffic)
+	if (M.spoke_moffic)
+		M.spoke_moffic = FALSE //While playtesting, if you were a moth and now are not a moth, you still "spoke moffic" once. No longer.
+	else
+		M.remove_language(/datum/language/moffic)
 
