@@ -6,20 +6,21 @@
 	icon_living = "pbird"
 	icon_dead = "pbird_dead"
 	icon_gib = "pbird_dead"
-	turns_per_move = 1
+	turns_per_move = 2
 	response_help_continuous = "brushes aside"
 	response_help_simple = "brush aside"
 	response_disarm_continuous = "flails at"
 	response_disarm_simple = "flail at"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
-	maxHealth = 400
-	health = 400
+	maxHealth = 300
+	health = 300
 	see_in_dark = 10
 	harm_intent_damage = 5
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 	rapid_melee = 2
+	stat_attack = SOFTER_CRIT
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	pass_flags = PASSTABLE
@@ -40,8 +41,9 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 
-/mob/living/simple_animal/hostile/retaliate/punishing_bird/Retaliate(atom/movable/A)
-	if(enemies.len && health < maxHealth * 0.9 && obj_damage <= 0)
+/mob/living/simple_animal/hostile/retaliate/punishing_bird/Retaliate()
+	. = ..()
+	if(enemies.len && (health < maxHealth * 0.9) && (obj_damage <= 0))
 		TransformRed()
 
 /mob/living/simple_animal/hostile/retaliate/punishing_bird/proc/TransformRed()
@@ -54,6 +56,7 @@
 	melee_damage_upper = 75
 	obj_damage = 100
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
+	stat_attack = DEAD
 
 /mob/living/simple_animal/hostile/retaliate/punishing_bird/proc/TransformBack()
 	visible_message("<span class='notice'>\The [src] turns back into a fuzzy looking bird!</span>")
@@ -65,6 +68,7 @@
 	melee_damage_upper = initial(melee_damage_upper)
 	obj_damage = initial(obj_damage)
 	environment_smash = initial(environment_smash)
+	stat_attack = initial(stat_attack)
 	adjustHealth(-maxHealth) // Full restoration
 
 /mob/living/simple_animal/hostile/retaliate/punishing_bird/Life()
@@ -82,7 +86,7 @@
 				enemies |= le_target
 
 /mob/living/simple_animal/hostile/retaliate/punishing_bird/AttackingTarget()
-	..()
+	. = ..()
 	if(isliving(target))
 		var/mob/living/L = target
 		if(obj_damage <= 0) // Not transformed
