@@ -58,7 +58,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/hopcoat
-	name = "head of personnel's uniform"
+	name = "head of personnel's official coat"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A formal but simple coat worn by the Head of Personnel."
