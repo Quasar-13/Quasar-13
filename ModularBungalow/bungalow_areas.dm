@@ -153,3 +153,9 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "secretary"
 	sound_environment = SOUND_AREA_WOODFLOOR
+
+//NT remnant base
+/area/ruin/has_grav/prototype/ntremnant
+	name = "Nanotrasen Remnant Base"
+	icon_state = "blue"
+
