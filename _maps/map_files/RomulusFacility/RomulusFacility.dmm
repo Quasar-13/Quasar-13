@@ -17,6 +17,7 @@
 /obj/item/storage/belt/utility,
 /obj/item/storage/belt/utility,
 /obj/effect/spawner/lootdrop/maint_drugs,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "ae" = (
@@ -67,6 +68,12 @@
 	},
 /turf/open/floor/plasteel/airless/cafeteria,
 /area/crew_quarters/kitchen)
+"am" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ao" = (
 /obj/machinery/washing_machine,
 /turf/open/floor/wood,
@@ -108,7 +115,7 @@
 	},
 /obj/item/stack/sheet/metal/five,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "ax" = (
 /obj/structure/closet/xenoarch,
 /obj/structure/window/reinforced{
@@ -138,26 +145,26 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered)
 "aP" = (
-/obj/machinery/sleeper/syndie{
-	dir = 8
+/obj/machinery/door/airlock/vault{
+	name = "Medical Officer's Bunks";
+	req_access_txt = "150"
 	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "aQ" = (
-/obj/machinery/door/airlock/vault,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
+/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,
+/obj/item/gun/ballistic/rifle/boltaction,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/powered)
 "aR" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
 /obj/machinery/porta_turret/centcom_shuttle,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
-/area/security/nuke_storage)
+/area/ntremnant)
 "aS" = (
 /turf/open/floor/engine/air,
 /area/icemoon/underground/unexplored/rivers)
@@ -206,16 +213,18 @@
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "bm" = (
-/obj/structure/table/reinforced,
-/obj/item/food/meat/slab/meatproduct,
-/obj/item/food/meat/slab/meatproduct,
-/obj/item/food/meat/slab/meatproduct,
+/obj/structure/rack,
 /obj/machinery/light{
-	dir = 8
+	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/item/gun/ballistic/shotgun/doublebarrel,
+/obj/item/gun/ballistic/shotgun/doublebarrel{
+	pixel_y = 4
 	},
+/obj/item/gun/ballistic/shotgun/doublebarrel{
+	pixel_y = 8
+	},
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -228,10 +237,24 @@
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
 "bp" = (
-/obj/machinery/portable_atmospherics/pump,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/item/melee/transforming/energy/sword/saber/red,
+/obj/item/melee/transforming/energy/sword/saber/red{
+	pixel_x = 18
 	},
+/obj/item/pen/edagger{
+	pixel_x = -10
+	},
+/obj/item/pen/edagger{
+	pixel_x = -5
+	},
+/obj/item/pen/edagger{
+	pixel_x = 10
+	},
+/obj/item/dualsaber/red{
+	pixel_y = 8
+	},
+/obj/structure/rack,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "br" = (
 /obj/structure/window/reinforced/fulltile/ice{
@@ -262,6 +285,25 @@
 /obj/machinery/vending/sustenance,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"bz" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/clothing/under/syndicate/bloodred/sleepytime,
+/obj/item/clothing/under/syndicate/bloodred/sleepytime,
+/obj/item/clothing/under/syndicate/bloodred/sleepytime,
+/obj/item/clothing/under/syndicate/bloodred/sleepytime,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bA" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/mineral/plastitanium,
@@ -280,7 +322,7 @@
 "bF" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "bG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -317,7 +359,7 @@
 "bN" = (
 /obj/structure/cable,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "bO" = (
 /obj/structure/frame/computer{
 	dir = 4
@@ -375,25 +417,21 @@
 "ci" = (
 /obj/machinery/suit_storage_unit/ert/security,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "cj" = (
-/obj/item/melee/transforming/energy/sword/saber/red,
-/obj/item/melee/transforming/energy/sword/saber/red{
-	pixel_x = 18
-	},
-/obj/item/pen/edagger{
-	pixel_x = -10
-	},
-/obj/item/pen/edagger{
-	pixel_x = -5
-	},
-/obj/item/pen/edagger{
-	pixel_x = 10
-	},
-/obj/item/dualsaber/red{
-	pixel_y = 8
-	},
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds/soporific,
+/obj/item/ammo_box/magazine/sniper_rounds/soporific,
+/obj/item/ammo_box/magazine/sniper_rounds/soporific,
+/obj/item/ammo_box/magazine/sniper_rounds/soporific,
+/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ck" = (
@@ -488,8 +526,13 @@
 /area/ruin/space/has_grav/powered)
 "cB" = (
 /obj/structure/rack,
-/obj/item/flamethrower/full,
-/obj/item/flamethrower/full,
+/obj/item/gun/ballistic/revolver/rhino{
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/revolver/rhino,
+/obj/item/gun/ballistic/revolver/rhino{
+	pixel_y = 3
+	},
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cC" = (
@@ -507,13 +550,31 @@
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
 "cH" = (
-/obj/structure/swarmer/trap,
-/turf/open/floor/engine/air,
-/area/ruin/powered)
+/obj/structure/rack,
+/obj/item/clothing/suit/hooded/wintercoat/security/head{
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
+	name = "\improper Syndicate winter coat"
+	},
+/obj/item/clothing/suit/hooded/wintercoat/security/head{
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
+	name = "\improper Syndicate winter coat"
+	},
+/obj/item/clothing/suit/hooded/wintercoat/security/head{
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
+	name = "\improper Syndicate winter coat"
+	},
+/turf/open/floor/pod/light,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cJ" = (
 /obj/structure/dresser,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/minipost)
+"cL" = (
+/obj/effect/turf_decal/box,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cP" = (
 /turf/open/floor/plasteel,
 /area/science)
@@ -541,10 +602,21 @@
 /turf/closed/wall/r_wall/rust,
 /area/hallway/primary/central)
 "cV" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/rack,
+/obj/item/storage/toolbox/syndicate{
+	pixel_y = 3
 	},
-/turf/open/floor/carpet/red,
+/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate{
+	pixel_y = -3
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cX" = (
 /obj/structure/destructible/cult/pylon,
@@ -721,10 +793,12 @@
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
 "dU" = (
-/obj/effect/turf_decal/box,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/pistol/sig,
+/obj/item/gun/ballistic/automatic/pistol/sig,
+/obj/item/gun/ballistic/automatic/pistol/sig,
+/obj/item/gun/ballistic/automatic/pistol/sig,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "dV" = (
 /obj/structure/table,
@@ -764,11 +838,15 @@
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "ee" = (
-/obj/item/circuitboard/machine/ore_redemption,
-/obj/structure/frame/machine,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/rack,
+/obj/item/gun/energy/laser/fifth/cybersun{
+	pixel_y = 6
 	},
+/obj/item/gun/energy/laser/fifth/cybersun{
+	pixel_y = 3
+	},
+/obj/item/gun/energy/laser/fifth/cybersun,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "eg" = (
 /obj/machinery/porta_turret_construct,
@@ -944,7 +1022,7 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "fc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood,
@@ -1067,7 +1145,7 @@
 	dir = 8
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "fK" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -1111,7 +1189,7 @@
 	},
 /obj/effect/landmark/start/ntremnant,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "fV" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1132,6 +1210,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
+"fY" = (
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/protolathe,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "fZ" = (
 /obj/structure/rack,
 /obj/item/pickaxe,
@@ -1161,7 +1249,7 @@
 	dir = 1
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "gk" = (
 /obj/structure/table,
 /obj/item/gps,
@@ -1191,6 +1279,16 @@
 /obj/structure/closet/crate/secure/loot,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
+"gw" = (
+/obj/item/stack/sheet/glass{
+	amount = 5;
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "gx" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
@@ -1221,12 +1319,8 @@
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
 "gE" = (
-/obj/structure/table,
-/obj/machinery/light,
-/obj/item/storage/box/shotgun/slug,
-/obj/item/storage/box/shotgun/slug,
-/obj/item/storage/box/shotgun/slug,
-/obj/item/storage/box/shotgun/slug,
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/c20r/unrestricted,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "gG" = (
@@ -1265,9 +1359,12 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "gT" = (
-/obj/structure/table/wood,
-/obj/item/documents/syndicate/red,
-/turf/open/floor/carpet/red,
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/sniper_rifle,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "gU" = (
 /obj/structure/window/reinforced/fulltile/ice{
@@ -1366,8 +1463,8 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "hG" = (
-/obj/machinery/rnd/production/protolathe,
 /obj/structure/alien/weeds,
+/obj/item/circuitboard/machine/protolathe,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "hL" = (
@@ -1386,7 +1483,7 @@
 	dir = 8
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "hO" = (
 /obj/structure/destructible/cult/talisman,
 /turf/open/floor/plasteel/cult,
@@ -1462,10 +1559,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "im" = (
-/obj/structure/frame/machine,
-/obj/item/circuitboard/machine/protolathe,
-/obj/machinery/light{
-	dir = 1
+/obj/structure/chair/comfy{
+	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
@@ -1502,7 +1597,7 @@
 	name = "Air to Distro"
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "it" = (
 /mob/living/simple_animal/hostile/alien/queen/large,
 /mob/living/simple_animal/hostile/alien/sentinel,
@@ -1513,7 +1608,7 @@
 "iu" = (
 /obj/structure/displaycase/blueshield,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "ix" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -1528,11 +1623,10 @@
 /turf/closed/wall/r_wall,
 /area/awaymission/snowdin/sekret)
 "iz" = (
-/obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/sig,
-/obj/item/gun/ballistic/automatic/pistol/sig,
-/obj/item/gun/ballistic/automatic/pistol/sig,
-/obj/item/gun/ballistic/automatic/pistol/sig,
+/obj/structure/table,
+/obj/item/storage/belt/military,
+/obj/item/storage/belt/military,
+/obj/item/pda/syndicate,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "iB" = (
@@ -1547,11 +1641,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "iC" = (
+/obj/machinery/cell_charger,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/table/reinforced,
-/obj/item/circuitboard/machine/rtg,
-/obj/item/circuitboard/machine/rtg,
-/obj/item/clothing/under/costume/mech_suit,
-/turf/open/floor/mineral/plastitanium,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "iE" = (
 /obj/effect/turf_decal/tile/brown{
@@ -1896,19 +1992,28 @@
 /area/ruin/powered)
 "kn" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/c20r/unrestricted,
-/turf/open/floor/pod/light,
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = -4
+	},
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = 4
+	},
+/obj/item/ammo_box/magazine/m556,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "kp" = (
-/obj/effect/turf_decal/arrows{
-	dir = 4
-	},
 /obj/machinery/light{
-	dir = 8
+	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "kq" = (
 /obj/structure/table/wood,
@@ -1961,6 +2066,14 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
+"kI" = (
+/obj/machinery/sleeper/syndie{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "kJ" = (
 /obj/machinery/computer/teleporter,
 /turf/open/floor/wood,
@@ -2026,12 +2139,8 @@
 /turf/open/floor/plasteel,
 /area/science)
 "ld" = (
-/obj/machinery/computer/rdconsole{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/structure/table/reinforced,
+/obj/item/circuitboard/machine/griddle,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -2069,7 +2178,7 @@
 	pixel_x = -12
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "lp" = (
 /obj/effect/decal/remains/robot,
 /obj/effect/decal/cleanable/oil,
@@ -2095,6 +2204,14 @@
 /mob/living/simple_animal/hostile/construct/juggernaut/hostile,
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
+"lE" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/stockparts/basic,
+/obj/item/multitool,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "lG" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/engine/air,
@@ -2115,7 +2232,7 @@
 	},
 /obj/effect/landmark/start/ntremnant,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "lO" = (
 /obj/structure/sign/warning/gasmask,
 /turf/closed/wall/r_wall,
@@ -2137,7 +2254,7 @@
 /obj/structure/frame/machine,
 /obj/item/circuitboard/machine/ore_silo,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "lU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -2158,10 +2275,25 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "ma" = (
-/obj/machinery/portable_atmospherics/scrubber,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	icon_state = "hos";
+	name = "Outpost Explorer's Locker";
+	req_access_txt = "150"
 	},
+/obj/item/clothing/suit/armor/reqchief{
+	name = "explorer's armor vest"
+	},
+/obj/item/clothing/under/syndicate/suit,
+/obj/item/pda/security{
+	icon_state = "pda-syndi";
+	name = "Military PDA"
+	},
+/obj/item/clothing/glasses/night,
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto,
+/obj/item/storage/belt/military,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "mb" = (
 /obj/machinery/telecomms/allinone/indestructable,
@@ -2246,7 +2378,9 @@
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "my" = (
-/obj/machinery/door/airlock/security/glass,
+/obj/machinery/door/airlock/security/glass{
+	name = "Shared equipment door"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "mz" = (
@@ -2255,7 +2389,7 @@
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "mA" = (
 /obj/machinery/light{
 	dir = 1;
@@ -2263,7 +2397,7 @@
 	},
 /obj/machinery/mineral/equipment_vendor,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "mB" = (
 /obj/structure/sign/nanotrasen,
 /turf/closed/wall,
@@ -2361,7 +2495,7 @@
 	dir = 6
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "ne" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/blue,
@@ -2377,15 +2511,12 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "nj" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin/carbon,
-/obj/item/pen/fountain/captain,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#d1dfff"
+/obj/machinery/door/airlock/vault{
+	req_access_txt = "151"
 	},
-/obj/item/stack/spacecash/c10000,
-/turf/open/floor/carpet/red,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "nk" = (
 /obj/structure/closet/crate,
@@ -2397,7 +2528,7 @@
 	dir = 1
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "nl" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/north,
@@ -2505,7 +2636,7 @@
 	},
 /obj/effect/landmark/start/ntremnant,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "nQ" = (
 /obj/machinery/grill,
 /turf/open/floor/plating/snowed,
@@ -2618,10 +2749,33 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "on" = (
-/obj/structure/table/optable,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	icon_state = "hos";
+	name = "Captain's Locker";
+	req_access_txt = "151"
 	},
+/obj/item/clothing/under/syndicate,
+/obj/item/ammo_box/a357,
+/obj/item/ammo_box/a357,
+/obj/item/clothing/accessory/medal/gold/ordom{
+	name = "\proper Commanding Officer's Medal"
+	},
+/obj/item/storage/belt/nano_blade,
+/obj/item/gun/ballistic/revolver,
+/obj/item/clothing/under/syndicate/coldres,
+/obj/item/areaeditor/blueprints,
+/obj/item/clothing/glasses/thermal/eyepatch,
+/obj/item/megaphone/command,
+/obj/item/clothing/suit/armor/firstofficer{
+	name = "outpost leader's vest"
+	},
+/obj/item/clothing/head/hos/syndicate,
+/obj/item/pda/security{
+	icon_state = "pda-syndi";
+	name = "Military PDA"
+	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "oo" = (
 /obj/structure/cable,
@@ -2637,10 +2791,12 @@
 /obj/item/clothing/suit/hooded/wintercoat/engineering,
 /obj/item/clothing/suit/hooded/wintercoat/engineering,
 /obj/item/clothing/suit/hooded/wintercoat/engineering/head,
-/obj/effect/spawner/lootdrop/armory_contraband,
-/obj/effect/spawner/lootdrop/armory_contraband,
-/obj/effect/spawner/lootdrop/armory_contraband,
-/obj/effect/spawner/lootdrop/armory_contraband,
+/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/cell/high/empty,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "oq" = (
@@ -2668,7 +2824,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/visible,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "oF" = (
 /obj/structure/cable,
 /obj/machinery/light,
@@ -2692,12 +2848,11 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/kitchen)
 "oJ" = (
-/obj/machinery/light{
-	dir = 1
+/obj/structure/bed,
+/obj/item/bedsheet/syndie{
+	layer = 3
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "oK" = (
 /obj/machinery/smartfridge/organ,
@@ -2769,16 +2924,13 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
 "ph" = (
-/obj/structure/table/reinforced,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/structure/sign/poster/contraband/free_key{
-	pixel_x = -32
+/obj/structure/rack,
+/obj/item/paper/crumpled/bloody{
+	desc = "A bloody piece of paper with something written on it...";
+	info = "For your trophies.";
+	name = "Bloody paper"
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "pi" = (
 /obj/machinery/sleeper/survival_pod,
@@ -2805,7 +2957,7 @@
 /obj/structure/frame/machine,
 /obj/item/circuitboard/machine/ore_redemption,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "pq" = (
 /obj/machinery/atmospherics/components/unary/tank/air{
 	dir = 8
@@ -2847,7 +2999,7 @@
 	dir = 6
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "pH" = (
 /obj/effect/landmark/start/syndicatewhatever,
 /turf/open/floor/wood,
@@ -2905,7 +3057,7 @@
 	dir = 9
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "qh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -3004,13 +3156,16 @@
 /obj/item/seeds/onion,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/kitchen)
-"qF" = (
-/turf/closed/wall/mineral/titanium/survival/nodiagonal,
-/area/security/nuke_storage)
 "qH" = (
 /mob/living/simple_animal/hostile/russian/ranged/mosin,
 /turf/open/genturf,
 /area/icemoon/underground/unexplored/rivers)
+"qI" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "qO" = (
 /obj/structure/barricade/security,
 /obj/structure/barricade/sandbags,
@@ -3100,7 +3255,7 @@
 /area/medical/medbay)
 "rp" = (
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "rq" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -3120,9 +3275,10 @@
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
 "rv" = (
-/obj/structure/chair/comfy/black{
-	dir = 4
+/obj/machinery/light{
+	dir = 8
 	},
+/obj/structure/table/wood,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "rx" = (
@@ -3188,7 +3344,7 @@
 /obj/item/storage/firstaid/emergency,
 /obj/item/storage/firstaid/emergency,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "rT" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/grille,
@@ -3222,6 +3378,10 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "sd" = (
+/obj/machinery/door/airlock/vault{
+	name = "Armory";
+	req_access_txt = "150"
+	},
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "se" = (
@@ -3268,15 +3428,17 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "sp" = (
-/obj/structure/rack,
-/obj/item/storage/backpack/duffelbag/syndie/ammo/smg,
-/turf/open/floor/pod/light,
+/obj/structure/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "sr" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/armor/ranger/vet{
-	desc = "A duster used by the Veteran Ranger. This one was worn by a certain legend of the past. However, she is now long dead. alongside her lover here in this base. "
+	desc = "A duster used by the Veteran Ranger. This one was worn by a certain legend of the past. However, she is now long dead. alongside her lover here in this base. ";
+	icon_state = "foxranger_snow"
 	},
 /obj/item/gun/ballistic/automatic/pistol/PL14_nicole,
 /obj/item/ammo_box/magazine/m9mm/fire{
@@ -3325,6 +3487,11 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/closed/wall,
 /area/science)
+"sJ" = (
+/obj/structure/table/wood,
+/obj/item/clothing/glasses/hud/health/syndicate,
+/turf/open/floor/pod/dark,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "sL" = (
 /obj/structure/closet/secure_closet{
 	icon_state = "cap";
@@ -3355,15 +3522,30 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "sS" = (
-/obj/structure/rack,
-/obj/item/storage/firstaid/emergency{
-	pixel_y = 6
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 35
 	},
-/obj/item/storage/firstaid/emergency{
-	pixel_y = 3
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/item/storage/firstaid/emergency,
-/turf/open/floor/pod/light,
+/obj/item/stack/sheet/mineral/plasma/thirty,
+/obj/item/inducer/syndicate,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
+"sT" = (
+/obj/structure/table/reinforced,
+/obj/item/food/meat/slab/meatproduct,
+/obj/item/food/meat/slab/meatproduct,
+/obj/item/food/meat/slab/meatproduct,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "sY" = (
 /obj/item/wallframe/apc,
@@ -3375,7 +3557,7 @@
 /obj/structure/table,
 /obj/machinery/microwave,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "ta" = (
 /obj/structure/alien/weeds/node,
 /turf/open/floor/engine/air,
@@ -3533,18 +3715,7 @@
 /turf/open/floor/plasteel,
 /area/janitor)
 "tZ" = (
-/obj/structure/rack,
-/obj/item/storage/toolbox/syndicate{
-	pixel_y = 3
-	},
-/obj/item/storage/toolbox/syndicate,
-/obj/item/storage/toolbox/syndicate{
-	pixel_y = -3
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/pod/light,
+/turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ub" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -3604,49 +3775,15 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "un" = (
-/obj/structure/table/reinforced,
-/obj/item/clothing/under/smc/mechanic,
-/obj/item/clothing/suit/armor/labcoat/syndie,
-/obj/item/storage/box/stockparts/deluxe,
-/obj/item/storage/box/stockparts/deluxe,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/breaching,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse,
-/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
-/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
-/obj/item/mecha_ammo/missiles_br,
-/obj/item/mecha_ammo/missiles_br,
-/obj/item/mecha_ammo/missiles_br,
-/obj/item/mecha_ammo/missiles_br,
-/obj/item/mecha_ammo/missiles_he,
-/obj/item/mecha_ammo/missiles_he,
-/obj/item/mecha_ammo/missiles_he,
-/obj/item/mecha_ammo/missiles_he,
-/obj/item/mecha_ammo/missiles_he,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/scattershot,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/incendiary,
-/obj/item/mecha_ammo/lmg,
-/obj/item/mecha_ammo/lmg,
-/obj/item/mecha_ammo/lmg,
-/obj/item/mecha_ammo/lmg,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/table/wood,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fountain/captain,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#d1dfff"
 	},
+/obj/item/stack/spacecash/c10000,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "up" = (
 /obj/structure/rack,
@@ -3689,6 +3826,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/hallway/primary/central)
+"uz" = (
+/obj/structure/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "uC" = (
 /obj/machinery/door/airlock/survival_pod{
 	name = "Regional Chief Office"
@@ -3797,7 +3940,7 @@
 /obj/item/documents/nanotrasen,
 /obj/structure/table/wood/fancy/royalblue,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "vm" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -3908,22 +4051,27 @@
 	dir = 1
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "vQ" = (
-/obj/structure/table/wood,
-/obj/item/storage/lockbox/medal,
-/obj/item/clothing/accessory/medal/rank/wing{
-	desc = "A ribbon denoting the rank of lieutenant, O-3. This ribbon is given out to small outpost officer in the syndicate corps.";
-	name = "LT rank ribbon"
-	},
-/turf/open/floor/carpet/red,
+/obj/structure/rack,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38/match,
+/obj/item/ammo_box/c38,
+/obj/item/ammo_box/c38,
+/obj/item/ammo_box/c38,
+/obj/machinery/light,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "vR" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "vS" = (
 /obj/machinery/porta_turret/syndicate,
 /turf/closed/wall/rust,
@@ -3948,18 +4096,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "vW" = (
-/obj/structure/closet,
-/obj/item/pickaxe/drill,
-/obj/item/storage/bag/ore,
-/obj/machinery/light{
-	light_color = "#d1dfff"
+/obj/structure/rack,
+/obj/item/storage/firstaid/emergency{
+	pixel_y = 6
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/item/storage/firstaid/emergency{
+	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/obj/item/storage/firstaid/emergency,
+/turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "vX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3993,7 +4138,7 @@
 /obj/effect/landmark/start/ntremnant,
 /obj/item/beacon,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "wk" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/kitchen)
@@ -4014,10 +4159,7 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "ws" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/crate/bin,
+/obj/machinery/portable_atmospherics/pump,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -4206,20 +4348,14 @@
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
 "xs" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds/soporific,
-/obj/item/ammo_box/magazine/sniper_rounds/soporific,
-/obj/item/ammo_box/magazine/sniper_rounds/soporific,
-/obj/item/ammo_box/magazine/sniper_rounds/soporific,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/turf/open/floor/pod/light,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table,
+/obj/machinery/recharger,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "xw" = (
 /obj/machinery/shower{
@@ -4239,7 +4375,7 @@
 /obj/item/pickaxe/drill,
 /obj/item/storage/bag/ore,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "xB" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics"
@@ -4305,7 +4441,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/item/bedsheet/nanotrasen,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "yd" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -4393,13 +4529,13 @@
 /turf/closed/wall/r_wall,
 /area/crew_quarters/kitchen)
 "yF" = (
-/obj/structure/table,
-/obj/machinery/cell_charger,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/table/wood,
+/obj/item/storage/lockbox/medal,
+/obj/item/clothing/accessory/medal/rank/wing{
+	desc = "A ribbon denoting the rank of lieutenant, O-3. This ribbon is given out to small outpost officer in the syndicate corps.";
+	name = "LT rank ribbon"
 	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "yG" = (
 /obj/structure/closet/crate/bin,
@@ -4463,19 +4599,12 @@
 /turf/closed/wall/r_wall,
 /area/crew_quarters/dorms/barracks)
 "zh" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/item/ammo_box/magazine/sig,
-/obj/machinery/light,
-/turf/open/floor/pod/light,
+/obj/machinery/door/airlock/vault{
+	name = "Explorer's Office"
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "zn" = (
 /obj/structure/table/reinforced,
@@ -4488,6 +4617,9 @@
 /area/science)
 "zo" = (
 /obj/structure/table,
+/obj/effect/spawner/lootdrop/armory_contraband,
+/obj/effect/spawner/lootdrop/armory_contraband,
+/obj/effect/spawner/lootdrop/armory_contraband,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "zq" = (
@@ -4503,7 +4635,7 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/turf_decal/mining/survival,
 /turf/closed/wall/mineral/titanium/survival,
-/area/security/nuke_storage)
+/area/ntremnant)
 "zw" = (
 /obj/structure/flora/grass/green,
 /turf/open/floor/plating/asteroid/snow,
@@ -4599,7 +4731,7 @@
 /obj/item/storage/belt/military/assault,
 /obj/item/storage/belt/sabre,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "zY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
@@ -4615,13 +4747,6 @@
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/awaymission/snowdin/post/minipost)
-"Ad" = (
-/obj/structure/bed,
-/obj/item/bedsheet/syndie{
-	layer = 3
-	},
-/turf/open/floor/carpet/red,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Af" = (
 /obj/machinery/door/airlock/vault,
 /obj/structure/cable,
@@ -4676,18 +4801,12 @@
 /area/ruin/space/has_grav/powered)
 "At" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hooded/wintercoat/security/head{
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
-	name = "\improper Syndicate winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security/head{
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
-	name = "\improper Syndicate winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security/head{
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90);
-	name = "\improper Syndicate winter coat"
-	},
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/item/clothing/suit/armor/vest/infiltrator,
+/obj/item/clothing/suit/armor/vest/infiltrator,
+/obj/item/clothing/suit/armor/vest/syndicate,
+/obj/item/clothing/suit/armor/vest/syndicate,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Au" = (
@@ -4699,7 +4818,7 @@
 "Av" = (
 /obj/effect/turf_decal/arrows,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Aw" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable,
@@ -4713,7 +4832,7 @@
 	dir = 4
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "AB" = (
 /obj/structure/cable,
 /obj/structure/table/wood,
@@ -4761,7 +4880,7 @@
 	dir = 5
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "AO" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel,
@@ -4815,15 +4934,25 @@
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
 "AY" = (
-/obj/machinery/door/airlock/vault{
-	name = "Armory"
+/obj/machinery/mech_bay_recharge_port{
+	dir = 2
 	},
-/turf/open/floor/pod/dark,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Ba" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/stockparts/basic,
-/obj/item/multitool,
+/obj/item/storage/belt/utility,
+/obj/item/circuitboard/machine/rtg,
+/obj/item/circuitboard/machine/rtg,
+/obj/item/circuitboard/machine/rtg,
+/obj/item/circuitboard/machine/rtg,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -4900,6 +5029,17 @@
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/research)
+"Bz" = (
+/obj/machinery/computer/rdconsole{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "BA" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -4937,15 +5077,14 @@
 	dir = 8
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "BF" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "BG" = (
-/obj/machinery/porta_turret/centcom_shuttle,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
-/area/security/nuke_storage)
+/area/ntremnant)
 "BJ" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -5022,7 +5161,7 @@
 "Cc" = (
 /obj/structure/toilet,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Cd" = (
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
@@ -5039,8 +5178,9 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/box/stockparts/basic,
 /obj/item/multitool,
+/obj/item/circuitboard/machine/autolathe,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Ck" = (
 /mob/living/simple_animal/hostile/tree,
 /turf/open/floor/plating/asteroid/snow,
@@ -5049,20 +5189,9 @@
 /turf/closed/wall/r_wall,
 /area/janitor)
 "Cn" = (
-/obj/structure/table/reinforced,
-/obj/item/organ/cyberimp/arm/esword,
-/obj/item/organ/cyberimp/arm/esword,
-/obj/item/organ/cyberimp/eyes/hud/medical{
-	pixel_y = -3
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/item/organ/cyberimp/eyes/hud/medical{
-	pixel_y = -5
-	},
-/obj/item/organ/eyes/robotic/glow,
-/obj/item/organ/eyes/robotic/glow{
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/armor/labcoat/triagetech,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -5114,7 +5243,7 @@
 "CB" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "CC" = (
 /obj/machinery/mineral/unloading_machine{
 	dir = 1;
@@ -5128,21 +5257,26 @@
 /turf/open/floor/plating,
 /area/storage/mining)
 "CD" = (
-/obj/structure/table/reinforced,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 35
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/stack/sheet/mineral/plasma/thirty,
-/obj/item/inducer/syndicate,
+/obj/structure/closet/crate/bin,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "CE" = (
-/obj/item/stack/sheet/metal/five,
+/obj/item/circuitboard/mecha/durand/targeting,
+/obj/item/circuitboard/mecha/durand/peripherals,
+/obj/item/circuitboard/mecha/durand/main,
+/obj/item/mecha_parts/chassis/durand,
+/obj/item/mecha_parts/part/durand_armor,
+/obj/item/mecha_parts/part/durand_head,
+/obj/item/mecha_parts/part/durand_left_arm,
+/obj/item/mecha_parts/part/durand_left_leg,
+/obj/item/mecha_parts/part/durand_right_arm,
+/obj/item/mecha_parts/part/durand_right_leg,
+/obj/item/mecha_parts/part/durand_torso,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -5257,7 +5391,7 @@
 	dir = 1
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Dt" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -5309,31 +5443,29 @@
 /area/ruin/space/has_grav/powered)
 "DJ" = (
 /obj/structure/table/reinforced,
-/obj/item/organ/cyberimp/brain/anti_stun,
-/obj/item/organ/cyberimp/brain/anti_stun{
-	pixel_y = 5
+/obj/item/organ/cyberimp/arm/esword,
+/obj/item/organ/cyberimp/arm/esword,
+/obj/item/organ/cyberimp/eyes/hud/medical{
+	pixel_y = -3
 	},
-/obj/item/organ/cyberimp/brain/anti_drop{
-	pixel_y = 8
+/obj/item/organ/cyberimp/eyes/hud/medical{
+	pixel_y = -5
 	},
-/obj/item/organ/cyberimp/brain/anti_drop{
-	pixel_y = -2
+/obj/item/organ/eyes/robotic/glow,
+/obj/item/organ/eyes/robotic/glow{
+	pixel_y = 3
 	},
-/obj/item/organ/cyberimp/arm/gun/laser{
-	pixel_y = 4
-	},
-/obj/item/organ/cyberimp/arm/gun/laser,
-/obj/item/mantis/blade/syndicate,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "DK" = (
-/obj/machinery/cryopod,
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/door/airlock/vault{
+	name = "Research Bay"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "DL" = (
 /obj/structure/cable,
@@ -5519,7 +5651,7 @@
 "EV" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "EW" = (
 /obj/structure/table/wood,
 /obj/item/circuitboard/machine/chem_dispenser/drinks/beer,
@@ -5570,7 +5702,7 @@
 /area/ruin/space/has_grav/powered)
 "Fi" = (
 /turf/closed/wall/mineral/titanium/survival,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Fj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/frame/computer,
@@ -5697,15 +5829,8 @@
 /area/science)
 "FP" = (
 /obj/structure/rack,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/gun/ballistic/shotgun/doublebarrel,
-/obj/item/gun/ballistic/shotgun/doublebarrel{
-	pixel_y = 4
-	},
-/obj/item/gun/ballistic/shotgun/doublebarrel{
-	pixel_y = 8
+/obj/item/storage/backpack/duffelbag/syndie/ammo/smg{
+	pixel_y = 6
 	},
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
@@ -5730,23 +5855,10 @@
 /turf/open/floor/plasteel,
 /area/science)
 "FU" = (
-/obj/structure/closet/cabinet,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/suit,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/under/syndicate/bloodred/sleepytime,
-/obj/item/clothing/under/syndicate/bloodred/sleepytime,
-/obj/item/clothing/under/syndicate/bloodred/sleepytime,
-/obj/item/clothing/under/syndicate/bloodred/sleepytime,
-/turf/open/floor/wood,
+/obj/structure/tank_dispenser,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "FW" = (
 /obj/machinery/power/floodlight,
@@ -5762,14 +5874,10 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "Gb" = (
-/obj/item/stack/sheet/glass{
-	amount = 5;
-	pixel_x = -3;
-	pixel_y = 6
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Gc" = (
 /obj/structure/rack,
@@ -5783,7 +5891,7 @@
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Ge" = (
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable,
@@ -5826,7 +5934,7 @@
 	},
 /obj/structure/closet/crate/internals,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Gv" = (
 /turf/closed/wall,
 /area/awaymission/snowdin/post/research)
@@ -5851,6 +5959,13 @@
 /obj/machinery/rnd/server,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
+"GC" = (
+/obj/item/circuitboard/machine/ore_silo,
+/obj/structure/frame/machine,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "GD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -5902,7 +6017,18 @@
 	dir = 8
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
+"GQ" = (
+/obj/structure/closet,
+/obj/item/pickaxe/drill,
+/obj/item/storage/bag/ore,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "GS" = (
 /obj/machinery/vending/engineering,
 /turf/closed/wall/r_wall,
@@ -5912,11 +6038,7 @@
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
 "GU" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/table,
-/obj/machinery/recharger,
+/obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -5952,15 +6074,8 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "Hb" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/belt/utility,
-/obj/item/circuitboard/machine/rtg,
-/obj/item/circuitboard/machine/rtg,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/obj/structure/frame/machine,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Hc" = (
 /obj/machinery/vending/tool,
@@ -6121,10 +6236,48 @@
 /turf/open/floor/engine/air,
 /area/icemoon/underground/unexplored/rivers)
 "HN" = (
-/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,
-/obj/item/gun/ballistic/rifle/boltaction,
-/turf/open/floor/wood,
-/area/ruin/space/has_grav/powered)
+/obj/structure/table/reinforced,
+/obj/item/clothing/under/smc/mechanic,
+/obj/item/clothing/suit/armor/labcoat/syndie,
+/obj/item/storage/box/stockparts/deluxe,
+/obj/item/storage/box/stockparts/deluxe,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/breaching,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_ammo/missiles_br,
+/obj/item/mecha_ammo/missiles_br,
+/obj/item/mecha_ammo/missiles_br,
+/obj/item/mecha_ammo/missiles_br,
+/obj/item/mecha_ammo/missiles_he,
+/obj/item/mecha_ammo/missiles_he,
+/obj/item/mecha_ammo/missiles_he,
+/obj/item/mecha_ammo/missiles_he,
+/obj/item/mecha_ammo/missiles_he,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/scattershot,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/incendiary,
+/obj/item/mecha_ammo/lmg,
+/obj/item/mecha_ammo/lmg,
+/obj/item/mecha_ammo/lmg,
+/obj/item/mecha_ammo/lmg,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "HO" = (
 /obj/structure/fence,
 /turf/open/floor/plating/snowed,
@@ -6134,7 +6287,7 @@
 	dir = 4
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "HR" = (
 /obj/machinery/door/airlock/vault{
 	name = "Ripley Storage"
@@ -6154,6 +6307,12 @@
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
+"HZ" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/turf/closed/wall/r_wall/rust,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Ib" = (
 /obj/structure/window/reinforced/spawner{
 	dir = 4
@@ -6183,12 +6342,12 @@
 /obj/item/circuitboard/machine/rtg,
 /obj/item/circuitboard/machine/rtg,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Ii" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/turf_decal/mining,
 /turf/closed/wall/mineral/titanium/survival,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Im" = (
 /obj/structure/fence/door{
 	dir = 8
@@ -6235,7 +6394,10 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "Iz" = (
-/obj/machinery/vending/boozeomat/syndicate_access,
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -6297,7 +6459,7 @@
 /obj/effect/turf_decal/box,
 /obj/item/stack/cable_coil,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Jc" = (
 /obj/machinery/vending/boozeomat,
 /obj/effect/turf_decal/tile/bar{
@@ -6318,7 +6480,7 @@
 	dir = 6
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Jg" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/structure/sign/syndicate,
@@ -6382,7 +6544,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Jw" = (
 /obj/structure/table,
 /obj/item/circuitboard/computer/operating,
@@ -6447,7 +6609,7 @@
 /obj/item/gun/energy/laser/captain/ntgold/shotgun,
 /obj/item/gun/energy/laser/captain/ntgold/shotgun,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "JE" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -6491,10 +6653,15 @@
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "JR" = (
-/obj/machinery/autolathe/hacked,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/item/clothing/under/costume/mech_suit,
+/obj/item/clothing/suit/armor/labcoat/syndie,
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	icon_state = "hos";
+	name = "Outpost Scientist's Locker";
+	req_access_txt = "150"
 	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "JV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -6510,7 +6677,7 @@
 	dir = 10
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Kb" = (
 /obj/structure/bed/dogbed/runtime,
 /mob/living/simple_animal/pet/cat/runtime,
@@ -6541,11 +6708,6 @@
 /area/icemoon/surface/outdoors)
 "Kn" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
 /obj/item/clothing/under/syndicate/sniper,
 /obj/item/kitchen/knife,
 /obj/item/reagent_containers/glass/bowl,
@@ -6629,7 +6791,7 @@
 /obj/item/bedsheet/nanotrasen,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "KM" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "mining_internal";
@@ -6642,10 +6804,7 @@
 /turf/open/floor/plasteel,
 /area/storage/mining)
 "KP" = (
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
+/obj/machinery/vending/boozeomat/syndicate_access,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -6655,7 +6814,7 @@
 	dir = 4
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "KS" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Soldier Armory";
@@ -6726,22 +6885,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
-"Li" = (
-/obj/item/circuitboard/mecha/durand/targeting,
-/obj/item/circuitboard/mecha/durand/peripherals,
-/obj/item/circuitboard/mecha/durand/main,
-/obj/item/mecha_parts/chassis/durand,
-/obj/item/mecha_parts/part/durand_armor,
-/obj/item/mecha_parts/part/durand_head,
-/obj/item/mecha_parts/part/durand_left_arm,
-/obj/item/mecha_parts/part/durand_left_leg,
-/obj/item/mecha_parts/part/durand_right_arm,
-/obj/item/mecha_parts/part/durand_right_leg,
-/obj/item/mecha_parts/part/durand_torso,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Lj" = (
 /turf/open/floor/wood,
 /area/hallway/primary/central)
@@ -6764,8 +6907,6 @@
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/encryptionkey/headset_sec,
-/obj/item/clothing/head/helmet,
-/obj/item/clothing/suit/armor/vest/blueshirt,
 /obj/item/gps,
 /obj/item/kitchen/knife/combat/survival,
 /obj/item/clothing/gloves/color/black,
@@ -6775,21 +6916,18 @@
 	name = "Soldier's Locker"
 	},
 /obj/item/storage/belt/military/assault,
-/obj/machinery/light,
 /obj/item/clothing/suit/hooded/wintercoat/service/bartender{
 	name = "\improper Soldier's winter coat"
 	},
+/obj/item/clothing/suit/armor/vest/solgov,
+/obj/item/clothing/head/helmet/solgov,
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "Lr" = (
-/obj/structure/table/reinforced,
-/obj/machinery/microwave,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/obj/structure/bed/pod,
+/obj/item/bedsheet/grey,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Lt" = (
 /obj/structure/table,
@@ -6876,13 +7014,13 @@
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "LT" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
 	},
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
-/area/security/nuke_storage)
+/area/ntremnant)
 "LY" = (
 /obj/machinery/door/airlock/survival_pod/glass,
 /obj/structure/fans/tiny,
@@ -6975,19 +7113,11 @@
 /obj/structure/cable,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Mr" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/wood,
 /area/hallway/primary/central)
-"Mt" = (
-/obj/machinery/computer/mech_bay_power_console{
-	dir = 4
-	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Mu" = (
 /obj/structure/table/wood/fancy/blue,
 /obj/item/documents/syndicate/blue,
@@ -6999,7 +7129,7 @@
 "Mw" = (
 /obj/machinery/suit_storage_unit/ert/security,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Mx" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/plasteel/dark,
@@ -7019,7 +7149,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/snowed,
-/area/security/nuke_storage)
+/area/ntremnant)
 "MB" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/engine/air,
@@ -7063,11 +7193,7 @@
 /area/hallway/primary/central)
 "MN" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/sniper_rifle,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/pod/light,
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "MU" = (
 /obj/structure/sign/warning/explosives,
@@ -7109,7 +7235,7 @@
 /obj/item/melee/transforming/energy/sword/saber/blue,
 /obj/item/melee/transforming/energy/sword/saber/blue,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Ni" = (
 /turf/open/floor/plating/snowed/icemoon,
 /area/storage/mining)
@@ -7152,7 +7278,7 @@
 /obj/structure/curtain/cloth/fancy,
 /obj/item/bedsheet/nanotrasen,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Nv" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/armor/vest/russian_coat,
@@ -7214,7 +7340,7 @@
 	dir = 8
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "NU" = (
 /obj/machinery/door/airlock/vault{
 	name = "Secure Storage"
@@ -7281,6 +7407,12 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
+"Oh" = (
+/obj/item/stack/sheet/metal/five,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Oj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/airless/cafeteria,
@@ -7381,8 +7513,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/stock_parts/cell/super/empty,
 /obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high/empty,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay)
 "OL" = (
@@ -7426,8 +7558,10 @@
 /turf/open/floor/wood,
 /area/crew_quarters/dorms/barracks)
 "OZ" = (
-/obj/structure/chair/comfy{
-	dir = 4
+/obj/structure/rack,
+/obj/item/defibrillator,
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
@@ -7492,7 +7626,7 @@
 	},
 /obj/structure/curtain,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "PA" = (
 /obj/structure/bonfire/prelit,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -7546,7 +7680,7 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/turf_decal/mining/survival,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
-/area/security/nuke_storage)
+/area/ntremnant)
 "PO" = (
 /obj/item/stack/sheet/glass{
 	amount = 5;
@@ -7603,8 +7737,13 @@
 /turf/open/floor/engine/air,
 /area/icemoon/underground/unexplored/rivers)
 "PZ" = (
-/obj/structure/frame/machine,
-/obj/item/circuitboard/machine/circuit_imprinter,
+/obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/lootdrop/donkpockets,
+/obj/structure/sign/poster/contraband/free_key{
+	pixel_x = -32
+	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -7628,9 +7767,7 @@
 /turf/closed/mineral/snowmountain,
 /area/icemoon/underground/unexplored/rivers)
 "Qi" = (
-/obj/machinery/door/airlock/vault{
-	name = "Research Bay"
-	},
+/obj/structure/table/optable,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -7654,7 +7791,7 @@
 	name = "Lieutenant PDA"
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Qm" = (
 /obj/machinery/door/airlock/vault,
 /obj/structure/barricade/sandbags,
@@ -7679,7 +7816,7 @@
 	dir = 8
 	},
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Qs" = (
 /mob/living/simple_animal/hostile/mutantliz,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -7703,6 +7840,13 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/hallway/primary/central)
+"Qx" = (
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/circuit_imprinter,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Qz" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
@@ -7731,9 +7875,22 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "QF" = (
-/obj/machinery/door/airlock/vault{
-	name = "Medical Wing"
+/obj/structure/table/reinforced,
+/obj/item/organ/cyberimp/brain/anti_stun,
+/obj/item/organ/cyberimp/brain/anti_stun{
+	pixel_y = 5
 	},
+/obj/item/organ/cyberimp/brain/anti_drop{
+	pixel_y = 8
+	},
+/obj/item/organ/cyberimp/brain/anti_drop{
+	pixel_y = -2
+	},
+/obj/item/organ/cyberimp/arm/gun/laser{
+	pixel_y = 4
+	},
+/obj/item/organ/cyberimp/arm/gun/laser,
+/obj/item/mantis/blade/syndicate,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -7904,8 +8061,6 @@
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/encryptionkey/headset_sec,
-/obj/item/clothing/head/helmet,
-/obj/item/clothing/suit/armor/vest/blueshirt,
 /obj/item/gps,
 /obj/item/kitchen/knife/combat/survival,
 /obj/item/clothing/gloves/color/black,
@@ -7918,6 +8073,8 @@
 /obj/item/clothing/suit/hooded/wintercoat/service/bartender{
 	name = "\improper Soldier's winter coat"
 	},
+/obj/item/clothing/suit/armor/vest/solgov,
+/obj/item/clothing/head/helmet/solgov,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "Ru" = (
@@ -8061,16 +8218,22 @@
 	dir = 9
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/icemoon/surface/outdoors)
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Sh" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
 "Sj" = (
-/obj/structure/table,
-/obj/item/storage/belt/military,
-/obj/item/storage/belt/military,
-/obj/item/pda/syndicate,
-/turf/open/floor/pod/light,
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	icon_state = "hos";
+	name = "Outpost Medic's Locker";
+	req_access_txt = "150"
+	},
+/obj/item/storage/backpack/duffelbag/syndie/surgery,
+/obj/item/clothing/head/beret/triage,
+/obj/item/clothing/suit/armor/labcoat/triagetech,
+/obj/item/clothing/under/smc/triageofficer,
+/turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Sk" = (
 /obj/machinery/computer/operating,
@@ -8270,18 +8433,12 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
 "Tk" = (
-/obj/structure/rack,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38/match,
-/obj/item/ammo_box/c38,
-/obj/item/ammo_box/c38,
-/obj/item/ammo_box/c38,
-/obj/machinery/light,
-/turf/open/floor/pod/light,
+/obj/machinery/power/apc/auto_name/north,
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Tm" = (
 /obj/structure/fence/door{
@@ -8339,6 +8496,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
+/obj/item/stack/sheet/metal/five,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "TG" = (
@@ -8397,20 +8555,10 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/snowdin/post/secpost)
 "TX" = (
-/obj/structure/table/reinforced,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/obj/item/encryptionkey/syndicate,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/machinery/light{
+	dir = 1
 	},
+/turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "TY" = (
 /turf/closed/mineral/random,
@@ -8464,12 +8612,11 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "Up" = (
-/obj/machinery/power/apc/auto_name/north,
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable,
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
+/obj/structure/bed,
+/obj/item/bedsheet/syndie{
+	layer = 3
 	},
+/turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Uq" = (
 /obj/structure/chair/stool,
@@ -8621,6 +8768,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"Vf" = (
+/obj/item/circuitboard/machine/ore_redemption,
+/obj/structure/frame/machine,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Vg" = (
 /obj/structure/bed/maint,
 /obj/effect/decal/cleanable/dirt,
@@ -8640,7 +8794,7 @@
 "Vj" = (
 /obj/machinery/suit_storage_unit/ert/command,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Vl" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
@@ -8710,7 +8864,7 @@
 "VI" = (
 /obj/machinery/griddle,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "VM" = (
 /obj/structure/table,
 /obj/item/megaphone/command,
@@ -8723,6 +8877,8 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "VQ" = (
+/obj/structure/table/wood,
+/obj/item/documents/syndicate/red,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "VX" = (
@@ -8751,7 +8907,11 @@
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "We" = (
-/obj/structure/tank_dispenser,
+/obj/structure/table/reinforced,
+/obj/machinery/microwave,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -8774,6 +8934,13 @@
 /obj/machinery/power/floodlight,
 /turf/open/floor/plating/snowed/icemoon,
 /area/ruin/powered)
+"Wk" = (
+/obj/machinery/cryopod,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Wl" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/structure/barricade/wooden/snowed,
@@ -8809,13 +8976,17 @@
 /area/hallway/primary/central)
 "Ws" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/revolver/rhino{
-	pixel_y = -3
-	},
-/obj/item/gun/ballistic/revolver/rhino,
-/obj/item/gun/ballistic/revolver/rhino{
-	pixel_y = 3
-	},
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/item/ammo_box/magazine/sig,
+/obj/machinery/light,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Wt" = (
@@ -8841,7 +9012,7 @@
 	dir = 8
 	},
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Wy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
@@ -8869,31 +9040,9 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "WK" = (
-/obj/structure/closet/secure_closet{
-	anchored = 1;
-	icon_state = "hos";
-	name = "Captain's Locker";
-	req_access_txt = "151"
-	},
-/obj/item/clothing/under/syndicate,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/clothing/accessory/medal/gold/ordom{
-	name = "\proper Commanding Officer's Medal"
-	},
-/obj/item/storage/belt/nano_blade,
-/obj/item/gun/ballistic/revolver,
-/obj/item/clothing/under/syndicate/coldres,
-/obj/item/areaeditor/blueprints,
-/obj/item/clothing/glasses/thermal/eyepatch,
-/obj/item/megaphone/command,
-/obj/item/clothing/suit/armor/firstofficer{
-	name = "outpost leader's vest"
-	},
-/obj/item/clothing/head/hos/syndicate,
-/obj/item/pda/security{
-	icon_state = "pda-syndi";
-	name = "Military PDA"
+/obj/structure/table/wood,
+/obj/item/clothing/accessory/medal/rank/pilot{
+	name = "ENS rank ribbon"
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
@@ -8919,11 +9068,12 @@
 /turf/open/floor/wood,
 /area/crew_quarters/dorms/barracks)
 "WV" = (
-/obj/structure/rack,
-/obj/item/gun/energy/laser/fifth/cybersun{
-	pixel_y = 6
-	},
-/obj/item/gun/energy/laser/fifth/cybersun,
+/obj/structure/table,
+/obj/machinery/light,
+/obj/item/storage/box/shotgun/slug,
+/obj/item/storage/box/shotgun/slug,
+/obj/item/storage/box/shotgun/slug,
+/obj/item/storage/box/shotgun/slug,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "WY" = (
@@ -8942,7 +9092,6 @@
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
-/obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
@@ -8952,10 +9101,6 @@
 	},
 /obj/item/clothing/suit/fire/atmos,
 /obj/item/clothing/suit/fire/atmos,
-/obj/item/clothing/suit/fire/atmos,
-/obj/item/clothing/suit/fire/atmos,
-/obj/item/clothing/head/hardhat/atmos,
-/obj/item/clothing/head/hardhat/atmos,
 /obj/item/clothing/head/hardhat/atmos,
 /obj/item/clothing/head/hardhat/atmos,
 /obj/item/clothing/glasses/welding,
@@ -9104,14 +9249,15 @@
 "XQ" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/closed/wall/mineral/titanium/survival,
-/area/security/nuke_storage)
+/area/ntremnant)
 "XS" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/closed/wall/r_wall/rust,
 /area/science)
 "XT" = (
-/obj/structure/table/reinforced,
-/obj/item/circuitboard/machine/griddle,
+/obj/machinery/door/airlock/vault{
+	name = "Medical Wing"
+	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -9128,7 +9274,7 @@
 /obj/item/gun/energy/laser/captain/ntgold/pistol,
 /obj/item/storage/belt/military/assault,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "XZ" = (
 /obj/structure/table/wood,
 /obj/item/clothing/under/suit/tan,
@@ -9157,8 +9303,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "Ye" = (
-/obj/item/circuitboard/machine/ore_silo,
-/obj/structure/frame/machine,
+/obj/effect/turf_decal/arrows,
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -9178,7 +9323,7 @@
 "Yh" = (
 /obj/machinery/suit_storage_unit/ert/medical,
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Yj" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -9218,7 +9363,7 @@
 /obj/item/gun/energy/laser/captain/ntgold/pistol,
 /obj/item/storage/belt/military/assault,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Yz" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/remains/human,
@@ -9253,7 +9398,7 @@
 /area/icemoon/surface)
 "YM" = (
 /turf/open/floor/pod/light,
-/area/security/nuke_storage)
+/area/ntremnant)
 "YP" = (
 /obj/structure/closet/crate/grave,
 /obj/item/clothing/mask/bandana/red{
@@ -9262,15 +9407,7 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "YT" = (
-/obj/machinery/mech_bay_recharge_port{
-	dir = 2
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "YY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9293,26 +9430,19 @@
 /turf/open/floor/grass/snow,
 /area/ruin/powered)
 "Zg" = (
-/obj/machinery/door/airlock/survival_pod/glass,
 /obj/structure/fans/tiny,
+/obj/machinery/door/airlock/survival_pod,
 /turf/open/floor/pod/dark,
-/area/security/nuke_storage)
+/area/ntremnant)
 "Zk" = (
 /mob/living/simple_animal/hostile/evilborg/bigguy,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "Zn" = (
-/obj/structure/rack,
-/obj/item/defibrillator,
-/obj/item/storage/backpack/duffelbag/syndie/surgery,
-/obj/item/clothing/glasses/hud/health/syndicate,
-/obj/item/clothing/glasses/hud/health/syndicate,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/mineral/plastitanium{
-	name = "syndicate floor"
-	},
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "Zp" = (
 /obj/machinery/light,
@@ -9401,7 +9531,7 @@
 /area/security/brig)
 "ZP" = (
 /turf/open/floor/pod,
-/area/security/nuke_storage)
+/area/ntremnant)
 "ZR" = (
 /turf/open/floor/grass/snow,
 /area/icemoon/surface/outdoors)
@@ -9410,6 +9540,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "ZT" = (
@@ -11185,12 +11316,12 @@ bP
 bP
 bP
 bH
-qF
-qF
-qF
-qF
-qF
-qF
+BG
+BG
+BG
+BG
+BG
+BG
 LT
 LT
 aR
@@ -11472,7 +11603,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 gj
 rp
 Mw
@@ -11759,7 +11890,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 yb
 ZP
 ci
@@ -12046,7 +12177,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 Nr
 KR
 Yh
@@ -12333,7 +12464,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 Yy
 BD
 XW
@@ -12620,7 +12751,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 nk
 Qp
 XW
@@ -12907,7 +13038,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 Fi
 NQ
 Fi
@@ -13194,7 +13325,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 VI
 Qp
 Av
@@ -13481,7 +13612,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 sZ
 JX
 oA
@@ -13768,7 +13899,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 vN
 is
 LR
@@ -14055,14 +14186,14 @@ bP
 bP
 bP
 bH
-qF
+BG
 Jf
 CB
-qF
-qF
+BG
+BG
 rp
 rp
-qF
+BG
 PM
 cs
 qT
@@ -14342,10 +14473,10 @@ bP
 bP
 bP
 bH
-qF
+BG
 fI
 fI
-qF
+BG
 Gs
 rp
 rp
@@ -14629,15 +14760,15 @@ bP
 bP
 bP
 bH
-qF
-qF
-qF
-qF
+BG
+BG
+BG
+BG
 JD
 rp
 rp
 aw
-qF
+BG
 bH
 cs
 qT
@@ -14916,15 +15047,15 @@ bP
 bP
 bP
 bH
-qF
+BG
 Cc
 lo
-qF
+BG
 rS
 rp
 rp
 Nf
-qF
+BG
 bH
 cs
 qT
@@ -15203,7 +15334,7 @@ bP
 bP
 bP
 bH
-qF
+BG
 Px
 rp
 Zg
@@ -15211,7 +15342,7 @@ rp
 rp
 rp
 mz
-qF
+BG
 bH
 bH
 qT
@@ -15490,15 +15621,15 @@ bP
 bP
 bP
 bH
-qF
-qF
-qF
-qF
+BG
+BG
+BG
+BG
 Cj
 lT
 bN
 Mn
-qF
+BG
 bH
 bH
 qT
@@ -15780,11 +15911,11 @@ bH
 bH
 bH
 bH
-qF
-qF
-qF
-qF
-qF
+BG
+BG
+BG
+BG
+BG
 BG
 bH
 bH
@@ -30090,7 +30221,7 @@ GF
 Ah
 EO
 GF
-cH
+Xn
 hC
 KJ
 bH
@@ -30377,8 +30508,8 @@ GF
 Ah
 Ah
 GF
-cH
-cH
+Xn
+Xn
 KJ
 bH
 "}
@@ -44972,7 +45103,7 @@ br
 EA
 lf
 lf
-lf
+aQ
 OJ
 GV
 GV
@@ -45544,8 +45675,8 @@ JB
 JB
 br
 ZT
+aQ
 lf
-HN
 hn
 OJ
 GV
@@ -45832,7 +45963,7 @@ JB
 Hw
 oQ
 lf
-TV
+lf
 oQ
 aM
 GV
@@ -46118,8 +46249,8 @@ JB
 JB
 br
 oQ
+TV
 lf
-HN
 ka
 aM
 GV
@@ -51438,7 +51569,7 @@ vB
 tj
 Rp
 Rp
-Rp
+Lp
 fP
 vF
 nR
@@ -71398,7 +71529,7 @@ vR
 vR
 vR
 vR
-Ep
+HZ
 Vt
 GV
 GV
@@ -71668,22 +71799,22 @@ KF
 KF
 KF
 Dq
+bm
+tZ
+vQ
 DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
+AY
+CE
+Gb
+HN
+JR
+ZV
+fY
+lE
+UK
+GC
+dQ
+GQ
 DU
 WZ
 GV
@@ -71955,23 +72086,23 @@ KF
 KF
 KF
 Dq
+bp
+tZ
+vW
 DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
+Ba
+zQ
+YT
+YT
+YT
+DK
+zQ
+zQ
+UK
+zQ
+zQ
+zQ
+zQ
 Td
 GV
 GV
@@ -72242,23 +72373,23 @@ KF
 KF
 KF
 Dq
-DU
-DU
+cB
+tZ
 FP
-sd
-Tk
 DU
+Tk
+zQ
 YT
-Li
-Mt
+YT
+YT
 ZV
 im
-Ba
-UK
-kp
 zQ
-vW
-DU
+DK
+zQ
+zQ
+zQ
+zQ
 Td
 GV
 GV
@@ -72529,23 +72660,23 @@ KF
 KF
 KF
 Dq
-DU
-DU
+cH
+tZ
 cj
-sd
-sS
 DU
+sS
+zQ
 Hb
-zQ
-zQ
-Qi
-zQ
-zQ
+Hb
+Lr
+ZV
+Bz
+Qx
 UK
 Ye
+Vf
+cL
 zQ
-dQ
-DU
 Td
 GV
 GV
@@ -72816,23 +72947,23 @@ KF
 KF
 KF
 Dq
-DU
-DU
+cV
+tZ
 Ws
-sd
-sp
 DU
-Up
-zQ
-un
+DU
+DK
+DU
+DU
+DU
 ZV
-OZ
+ZV
+ZV
+ZV
+UK
+UK
 zQ
-Qi
-dU
 zQ
-zQ
-DU
 Td
 GV
 ae
@@ -73103,21 +73234,21 @@ KF
 KF
 KF
 Dq
-DU
-DU
+dU
+tZ
 At
-sd
-xs
 DU
-CD
+xs
+zQ
+zQ
 zQ
 iC
-ZV
+We
 ld
 PZ
-UK
-ee
-zQ
+sT
+mq
+am
 zQ
 DU
 Jg
@@ -73390,21 +73521,21 @@ KF
 KF
 KF
 Dq
-DU
-DU
+ee
+tZ
 tZ
 sd
-zh
-DU
-DU
-Qi
-DU
-ZV
-ZV
-ZV
-ZV
-UK
-UK
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+Oh
+gw
+zQ
 zQ
 dQ
 jR
@@ -73677,21 +73808,21 @@ KF
 KF
 KF
 Dq
-DU
-DU
+gE
+tZ
 iz
-sd
-cB
 DU
-GU
 zQ
-yF
-Lr
-XT
-ph
-bm
-TX
-JR
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
+zQ
 zQ
 zQ
 OE
@@ -73964,20 +74095,20 @@ KF
 KF
 KF
 Dq
-DU
-DU
+gT
+tZ
 WV
-sd
-sd
-AY
+DU
 zQ
 zQ
 zQ
 zQ
 zQ
 zQ
-CE
-Gb
+zQ
+zQ
+zQ
+zQ
 zQ
 zQ
 dQ
@@ -74253,10 +74384,10 @@ KF
 Dq
 DU
 DU
-kn
-sd
-Sj
 DU
+DU
+zQ
+zQ
 zQ
 zQ
 zQ
@@ -74538,18 +74669,18 @@ KF
 KF
 KF
 Dq
-DU
-DU
+kn
+ph
 MN
-sd
-gE
 DU
 zQ
 zQ
-KP
-Iz
 zQ
-mq
+Iz
+KP
+zQ
+qI
+qI
 mq
 Kn
 zQ
@@ -74825,17 +74956,17 @@ KF
 KF
 KF
 Dq
+kp
+YT
+YT
+zh
+zQ
+zQ
+zQ
 DU
 DU
+XT
 DU
-DU
-DU
-DU
-oJ
-bp
-DU
-DU
-QF
 DU
 DU
 DU
@@ -75112,17 +75243,17 @@ KF
 KF
 KF
 Dq
-DU
-DU
+ma
+oJ
 WK
-cV
-gT
 DU
 zQ
-bp
-UK
-Zn
 zQ
+zQ
+UK
+OZ
+zQ
+kI
 DU
 nB
 ZL
@@ -75401,14 +75532,14 @@ KF
 Dq
 DU
 DU
-VQ
-VQ
-VQ
-aQ
+DU
+DU
+Cn
 zQ
-ma
+zQ
 UK
-on
+Qi
+zQ
 zQ
 DU
 nB
@@ -75686,15 +75817,15 @@ KF
 KF
 KF
 Dq
-DU
-DU
-VQ
+on
 rv
 VQ
 DU
 zQ
-ma
+zQ
+ws
 UK
+QF
 DJ
 zQ
 DU
@@ -75973,22 +76104,22 @@ KF
 KF
 KF
 Dq
-DU
-DU
-Ad
+YT
+YT
+YT
 nj
-vQ
-DU
+zQ
+zQ
 ws
-We
 UK
-Cn
+ZV
+ZV
 aP
 DU
 nB
 ZL
-FU
-DK
+ZL
+ZL
 Dt
 Jp
 GV
@@ -76260,23 +76391,23 @@ KF
 KF
 KF
 Dq
+YT
+sp
+YT
 DU
+zQ
+zQ
+GU
 DU
+Sj
+tZ
+tZ
 DU
-DU
-DU
-DU
-DU
-DU
-ZV
-ZV
-ZV
-DU
-DU
-DU
-DU
-DU
-DU
+nB
+ZL
+ZL
+ZL
+ZL
 Td
 GV
 GV
@@ -76547,23 +76678,23 @@ KF
 KF
 KF
 Dq
+oJ
+un
+yF
 DU
+CD
+FU
+GU
 DU
+TX
+tZ
+uz
 DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
-DU
+bz
+ZL
+ZL
+ZL
+Wk
 Td
 Oy
 Oy
@@ -76841,11 +76972,11 @@ HQ
 HQ
 HQ
 HQ
-HQ
-HQ
-HQ
-HQ
-HQ
+DU
+Up
+Zn
+sJ
+DU
 HQ
 HQ
 HQ
@@ -77128,11 +77259,11 @@ KF
 KF
 KF
 KF
-KF
-KF
-KF
-KF
-KF
+AL
+HQ
+HQ
+HQ
+pG
 KF
 KF
 KF

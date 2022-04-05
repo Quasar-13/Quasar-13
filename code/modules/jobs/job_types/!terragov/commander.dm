@@ -23,5 +23,6 @@
 /datum/outfit/job/solgov
 	name = "Solgov Survivor"
 	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
 	belt = null
 
