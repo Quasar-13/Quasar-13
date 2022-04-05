@@ -18,6 +18,34 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=17)
 
+//Captain's Chain of command
+/obj/item/melee/chainofcommand/upgraded
+	name = "chain of captaincy"
+	w_class = WEIGHT_CLASS_BULKY
+	armour_penetration = -20
+	reach = 2
+	wound_bonus = 0
+	bare_wound_bonus = 70
+
+//Drill Spear
+/obj/item/melee/drillspear
+	name = "drill spear"
+	desc = "Who the hell do you think I am!?"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "drill"
+	inhand_icon_state = "drill"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 23
+	throwforce = 5
+	wound_bonus = -10
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BELT
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb_continuous = list("spears", "pierces", "stabs")
+	attack_verb_simple = list("attack", "slash", "stab", "slice")
+
+
 //BATONS//
 /obj/item/melee/classic_baton/telescopic/svet_baton
 	name = "Brass Stinger"
@@ -63,7 +91,7 @@
 
 //Captain's katana
 /obj/item/katana/captain
-	name = "captain's katana"
+	name = "daisa's katana"
 	desc = "This Captain has some sort of 'class'"
 	icon_state = "katana"
 	inhand_icon_state = "katana"
@@ -73,7 +101,7 @@
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	force = 21
-	throwforce = 10
+	throwforce = 12
 	w_class = WEIGHT_CLASS_HUGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
@@ -97,7 +125,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 16
 	throwforce = 43
-	armour_penetration = 10
+	armour_penetration = 30
 	throw_speed = 5
 	throw_range = 7
 	bare_wound_bonus = 7
@@ -119,10 +147,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	obj_flags = UNIQUE_RENAME
-	force = 12
+	force = 11
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	block_chance = 60
+	block_chance = 70
 	armour_penetration = 90
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("stabs", "slashes")
@@ -347,45 +375,75 @@
 	new /obj/item/melee/nano_blade(src)
 	update_icon()
 
-/* 	Add this back later, fuck it
-//Katana
-/obj/item/melee/ckatana
-	name = "captain's katana"
-	desc = "This Captain has some sort of 'class'"
-	icon_state = "ckatana"
-	inhand_icon_state = "ckatana"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	flags_1 = CONDUCT_1
-	force = 21
-	throwforce = 10
-	w_class = WEIGHT_CLASS_HUGE
+/obj/item/melee/xan_blade
+	name = "Fleet Admiral Caelumbyrn Crux's Katana"
+	desc = "Fleet Admiral Caelumbyrn Crux's Katana"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "xkatana"
+	inhand_icon_state = "xkatana"
+	worn_icon_state = "xkatana"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	force = 50
+	throw_speed = 4
+	throw_range = 5
+	throwforce = 30
+	block_chance = 70
+	armour_penetration = 50
+	w_class = WEIGHT_CLASS_NORMAL
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	block_chance = 15
+	slot_flags = ITEM_SLOT_BELT
 	sharpness = SHARP_EDGED
 	max_integrity = 200
-	bare_wound_bonus = 5
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
-	resistance_flags = FIRE_PROOF
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/datum/effect_system/spark_spread/spark_system
+	var/datum/action/innate/dash/ninja/jaunt
+	var/dash_toggled = TRUE
 
-/obj/item/melee/sabre/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = 0 //Don't bring a sword to a gunfight
-	return ..()
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 30, 95, 5) //fast and effective, but as a sword, it might damage the results.
 
-//Katana Sheath
+/obj/item/melee/xan_blade/Initialize()
+	. = ..()
+	jaunt = new(src)
+	spark_system = new /datum/effect_system/spark_spread()
+	spark_system.set_up(5, 0, src)
+	spark_system.attach(src)
 
-/obj/item/storage/belt/katana
-	name = "katana sheath"
-	desc = "A plain, but still menacing purple sheath. Moon runes are written on the side."
-	icon_state = "ksheath"
-	inhand_icon_state = "ksheath"
-	worn_icon_state = "ksheath"
+/obj/item/melee/xan_blade/attack_self(mob/user)
+	dash_toggled = !dash_toggled
+	to_chat(user, "<span class='notice'>You [dash_toggled ? "enable" : "disable"] the dash function on [src].</span>")
+
+/obj/item/melee/xan_blade/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(dash_toggled && !Adjacent(target) && !target.density)
+		jaunt.Teleport(user, target)
+
+/obj/item/melee/xan_blade/pickup(mob/living/user)
+	. = ..()
+	jaunt.Grant(user, src)
+	user.update_icons()
+	playsound(src, 'sound/items/unsheath.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+
+/obj/item/melee/xan_blade/dropped(mob/user)
+	. = ..()
+	jaunt.Remove(user)
+	user.update_icons()
+
+// Sheath
+/obj/item/storage/belt/xan_blade
+	name = "Admiral Caelumbyrn Crux's Energy Katana"
+	desc = "Admiral Caelumbyrn Crux's Energy Katana, It pulses with purple energy"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "xkatana_sheath"
+	inhand_icon_state = null
+	worn_icon_state = "xkatana_sheathw"
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/storage/belt/katana/ComponentInitialize()
+/obj/item/storage/belt/xan_blade/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -393,36 +451,151 @@
 	STR.rustle_sound = FALSE
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
-		/obj/item/melee/ckatana
+		/obj/item/melee/xan_blade
 		))
 
-/obj/item/storage/belt/katana/examine(mob/user)
+/obj/item/storage/belt/xan_blade/examine(mob/user)
 	. = ..()
 	if(length(contents))
-		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
+		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
 
-/obj/item/storage/belt/rapier/AltClick(mob/user)
-	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
+/obj/item/storage/belt/xan_blade/AltClick(mob/user)
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	if(length(contents))
 		var/obj/item/I = contents[1]
-		user.visible_message("<span class='notice'>[user] takes [I] out of [src].</span>", "<span class='notice'>You take [I] out of [src].</span>")
+		playsound(user, 'ModularTegustation/Tegusounds/weapons/unsheathed_blade.ogg', 25, TRUE)
+		user.visible_message("<span class='notice'>[user] swiftly draws \the [I].</span>", "<span class='notice'>You draw \the [I].</span>")
 		user.put_in_hands(I)
 		update_icon()
 	else
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 
-/obj/item/storage/belt/katana/update_icon_state()
+/obj/item/storage/belt/xan_blade/update_icon_state()
 	icon_state = initial(inhand_icon_state)
 	inhand_icon_state = initial(inhand_icon_state)
 	worn_icon_state = initial(worn_icon_state)
 	if(contents.len)
-		icon_state += "-katana"
-		inhand_icon_state += "-katana"
-		worn_icon_state += "-katana"
+		icon_state += "xkatana_sheath-blade"
+		worn_icon_state += "xkatana_sheath-blade"
+		inhand_icon_state = "xkatana_sheath-blade"
 
-/obj/item/storage/belt/katana/PopulateContents()
-	new /obj/item/melee/ckatana(src)
+/obj/item/storage/belt/xan_blade/PopulateContents()
+	new /obj/item/melee/xan_blade(src)
 	update_icon()
 
-	*/
+//Dash
+
+/atom/proc/xBeam(atom/BeamTarget,icon_state="xbeam",icon='ModularBungalow/zbungalowicons/effects.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
+	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
+	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)
+	return newbeam
+
+/datum/action/innate/xdash
+	name = "Dash"
+	desc = "Teleport to the targeted location."
+	icon_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon_state = "jetboot"
+	var/current_charges = 1
+	var/max_charges = 1
+	var/charge_rate = 250
+	var/mob/living/carbon/human/holder
+	var/obj/item/dashing_item
+	var/dash_sound = 'sound/magic/blink.ogg'
+	var/recharge_sound = 'sound/magic/charge.ogg'
+	var/beam_effect = "xbeam"
+	var/phasein = /obj/effect/temp_visual/dir_setting/xdash/phase
+	var/phaseout = /obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+/obj/effect/temp_visual/dir_setting/xdash/phase
+	name = "Xan Phase"
+	icon = 'ModularBungalow/zbungalowicons/effects.dmi'
+	icon_state = "xphasein"
+
+/obj/effect/temp_visual/dir_setting/xdash/phase/out
+
+	icon_state = "xphaseout"
+
+/datum/action/innate/xdash/Grant(mob/user, obj/dasher)
+	. = ..()
+	dashing_item = dasher
+	holder = user
+
+/datum/action/innate/xdash/IsAvailable()
+	if(current_charges > 0)
+		return TRUE
+	else
+		return FALSE
+
+/datum/action/innate/xdash/Activate()
+	dashing_item.attack_self(holder) //Used to toggle dash behavior in the dashing item
+
+/datum/action/innate/xdash/proc/Teleport(mob/user, atom/target)
+	if(!IsAvailable())
+		return
+	var/turf/T = get_turf(target)
+	if(target in view(user.client.view, user))
+		var/obj/spot1 = new phaseout(get_turf(user), user.dir)
+		user.forceMove(T)
+		playsound(T, dash_sound, 25, TRUE)
+		var/obj/spot2 = new phasein(get_turf(user), user.dir)
+		spot1.xBeam(spot2,beam_effect,time=2 SECONDS)
+		current_charges--
+		holder.update_action_buttons_icon()
+		addtimer(CALLBACK(src, .proc/charge), charge_rate)
+
+/datum/action/innate/xdash/proc/charge()
+	current_charges = clamp(current_charges + 1, 0, max_charges)
+	holder.update_action_buttons_icon()
+	if(recharge_sound)
+		playsound(dashing_item, recharge_sound, 50, TRUE)
+	to_chat(holder, "<span class='notice'>[src] now has [current_charges]/[max_charges] charges.</span>")
+
+/datum/action/innate/xdash
+	current_charges = 3
+	max_charges = 3
+	charge_rate = 200
+	recharge_sound = null
+
+//Captain knife
+/obj/item/kitchen/knife/meteorknife
+	name = "Himmelsuralteisenmesser"
+	desc = "A knife made from a meteorite shard that busted into the captain's office. Colloquially known as the Sky Knife. Extremely high block chance, and can block bullets"
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "cosmic"
+	slot_flags = ITEM_SLOT_BELT
+	force = 16
+	armour_penetration = -10
+	throwforce = 15
+	w_class = WEIGHT_CLASS_NORMAL
+	sharpness = SHARP_EDGED
+	block_chance = 20
+
+/obj/item/melee/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(attack_type == PROJECTILE_ATTACK)
+		final_block_chance = 0 //Don't bring a sword to a gunfight
+	return ..()
+
+
+//Captain Spear 2
+/obj/item/melee/halberd
+	name = "gae bolg"
+	desc = "The weapon of an tough captain. Has extra reach."
+	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
+	icon_state = "gae_bolg"
+	inhand_icon_state = "gae_bolg"
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/melee_righthand.dmi'
+	slot_flags = ITEM_SLOT_BELT
+	force = 17
+	slowdown = 0.12
+	throwforce = 20
+	reach = 2
+	armour_penetration = 14
+	sharpness = SHARP_POINTY
+	w_class = WEIGHT_CLASS_HUGE
+	attack_verb_continuous = list("stabs", "pierces", "slashes")
+	attack_verb_simple = list("stab", "pierces", "slash")
+	hitsound = 'sound/weapons/bladeslice.ogg'
+
+

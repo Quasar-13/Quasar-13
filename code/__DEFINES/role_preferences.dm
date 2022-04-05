@@ -43,6 +43,7 @@
 #define ROLE_SYNDICATE_CYBERSUN			"Cybersun Space Syndicate"		//Ghost role syndi from Forgottenship ruin
 #define ROLE_SYNDICATE_CYBERSUN_CAPTAIN	"Cybersun Space Syndicate Captain"		//Forgottenship captain syndie
 #define ROLE_INFILTRATOR 				"Infiltrator"							// Tegustation Infiltration edit
+#define ROLE_SHADOWLING 		"shadowling" // Yogs
 #define ROLE_NT_BLACK_OPS		"NT Black Ops Agent"
 
 //Missing assignment means it's not a gamemode specific role, IT'S NOT A BUG OR ERROR.
@@ -71,7 +72,8 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_NT_BLACK_OPS = /datum/game_mode/traitor/nt_blackops,
 	ROLE_SENTIENCE,
 	ROLE_FAMILIES = /datum/game_mode/gang,
-	ROLE_HERETIC = /datum/game_mode/heretics
+	ROLE_HERETIC = /datum/game_mode/heretics,
+	ROLE_SHADOWLING = /datum/game_mode/shadowling //yogs
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

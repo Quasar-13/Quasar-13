@@ -31,7 +31,8 @@
 					/obj/item/clothing/under/rank/security/officer/grey = 3,
 					/obj/item/clothing/under/pants/khaki = 3,
 					/obj/item/clothing/under/rank/security/officer/blueshirt = 3,
-					/obj/item/clothing/suit/neocoat/brigdoc = 2,)
+					/obj/item/clothing/suit/neocoat/brigdoc = 1,
+					/obj/item/clothing/suit/neocoat/trench/brigdoc = 1,)
 	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/suit/security/officer = 3,
 					/obj/item/clothing/head/beret/sec/navyofficer = 3)
@@ -64,6 +65,7 @@
 					/obj/item/clothing/under/rank/medical/doctor = 4,
 					/obj/item/clothing/suit/toggle/labcoat = 4,
 					/obj/item/clothing/suit/neocoat = 4,
+					/obj/item/clothing/suit/neocoat/trench = 4,
 					/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
 					/obj/item/clothing/shoes/sneakers/white = 4,
 					/obj/item/clothing/head/soft/paramedic = 4,
@@ -85,15 +87,17 @@
 					/obj/item/storage/backpack/duffelbag/engineering = 3,
 					/obj/item/storage/backpack/industrial = 3,
 					/obj/item/storage/backpack/satchel/eng = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms = 3,
 					/obj/item/clothing/under/rank/engineering/engineer = 3,
 					/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
+					/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
 					/obj/item/clothing/under/rank/engineering/signal_tech = 3,
 					/obj/item/clothing/under/rank/engineering/signal_tech/skirt = 3,
 					/obj/item/clothing/under/rank/engineering/void = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
+					/obj/item/clothing/under/rank/engineering/mech = 3,
 					/obj/item/clothing/suit/hazardvest = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering/void = 3,
 					/obj/item/clothing/shoes/workboots = 3,
 					/obj/item/clothing/head/hardhat = 3,
 					/obj/item/clothing/head/hardhat/weldhat = 3)
@@ -114,9 +118,16 @@
 					/obj/item/storage/backpack/duffelbag/engineering = 2,
 					/obj/item/storage/backpack/satchel/eng = 2,
 					/obj/item/storage/backpack/industrial = 2,
-					/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/skirt = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/hazard = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/green = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/old = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/turtle = 3,
+					/obj/item/clothing/under/rank/engineering/atmospheric_technician/suit = 3,
+					/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos = 3,
+					/obj/item/clothing/suit/firejacket = 3,
+					/obj/item/clothing/suit/firecoat = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/atmos_wardrobe
 	payment_department = ACCOUNT_ENG
@@ -139,6 +150,7 @@
 					/obj/item/clothing/head/soft = 3,
 					/obj/item/radio/headset/headset_cargo = 3)
 	premium = list(/obj/item/clothing/under/rank/cargo/miner = 3)
+	contraband = list(/obj/item/clothing/under/misc/minecraft = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/cargo_wardrobe
 	payment_department = ACCOUNT_CAR
 /obj/item/vending_refill/wardrobe/cargo_wardrobe
@@ -156,6 +168,8 @@
 					/obj/item/clothing/suit/toggle/labcoat/roboticist = 2,
 					/obj/item/clothing/suit/neocoat/robowhite = 2,
 					/obj/item/clothing/suit/neocoat/roboblack = 2,
+					/obj/item/clothing/suit/neocoat/trench/robo = 2,
+					/obj/item/clothing/suit/neocoat/trench/roboblack = 2,
 					/obj/item/clothing/shoes/sneakers/black = 2,
 					/obj/item/clothing/gloves/fingerless = 2,
 					/obj/item/clothing/head/soft/black = 2,
@@ -184,6 +198,7 @@
 					/obj/item/clothing/under/rank/rnd/scientist/skirt = 3,
 					/obj/item/clothing/suit/toggle/labcoat/science = 3,
 					/obj/item/clothing/suit/neocoat/sci = 3,
+					/obj/item/clothing/suit/neocoat/trench/sci = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/radio/headset/headset_sci = 3,
 					/obj/item/clothing/mask/gas = 3)
@@ -357,6 +372,10 @@
 					/obj/item/clothing/under/rank/civilian/lawyer/black/skirt = 1,
 					/obj/item/clothing/shoes/laceup = 2,
 					/obj/item/clothing/accessory/lawyers_badge = 2)
+	contraband = list(/obj/item/clothing/under/suit/helltaker  = 3,
+					/obj/item/clothing/under/solgov/suit = 2,
+					/obj/item/clothing/under/syndicate/suit = 3,
+					/obj/item/clothing/under/bni = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/law_wardrobe
 	payment_department = ACCOUNT_SRV
 /obj/item/vending_refill/wardrobe/law_wardrobe
@@ -409,6 +428,7 @@
 					/obj/item/clothing/suit/toggle/labcoat/pharmacist = 2,
 					/obj/item/clothing/suit/neocoat/chemre = 2,
 					/obj/item/clothing/suit/neocoat/pharm = 2,
+					/obj/item/clothing/suit/neocoat/trench/pharm = 2,
 					/obj/item/storage/backpack/chemistry = 2,
 					/obj/item/storage/backpack/satchel/chem = 4,
 					/obj/item/storage/backpack/duffelbag/chemistry = 2,
@@ -430,6 +450,7 @@
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/genetics = 2,
 					/obj/item/clothing/suit/neocoat/gene = 2,
+					/obj/item/clothing/suit/neocoat/trench/gene = 2,
 					/obj/item/storage/backpack/genetics = 2,
 					/obj/item/storage/backpack/satchel/gen = 2,
 					/obj/item/storage/backpack/duffelbag/genetics = 2)
@@ -449,6 +470,7 @@
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/virologist = 2,
 					/obj/item/clothing/suit/neocoat/viro = 2,
+					/obj/item/clothing/suit/neocoat/trench/viro = 2,
 					/obj/item/clothing/mask/surgical = 2,
 					/obj/item/storage/backpack/virology = 2,
 					/obj/item/storage/backpack/satchel/vir = 2,

@@ -42,7 +42,7 @@
 	id = /obj/item/card/id/silver
 	belt = /obj/item/pda/secretary
 	ears = /obj/item/radio/headset/heads
-	uniform = /obj/item/clothing/under/misc/parade/comms
+	uniform = /obj/item/clothing/under/rank/civilian/communications_officer
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced/command = 1)
 

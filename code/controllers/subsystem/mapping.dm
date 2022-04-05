@@ -22,6 +22,7 @@ SUBSYSTEM_DEF(mapping)
 	//Bungalowstation mining
 	var/list/rock_ruins_templates = list()
 	var/list/jungle_ruins_templates = list()
+	var/list/asteroid_ruins_templates = list()
 
 
 	var/datum/space_level/isolated_ruins_z //Created on demand during ruin loading.
@@ -129,6 +130,10 @@ SUBSYSTEM_DEF(mapping)
 	if (rock_ruins.len)
 		seedRuins(rock_ruins, CONFIG_GET(number/rock_budget), list(/area/rockplanet/surface/outdoors/unexplored), rock_ruins_templates)
 
+	var/list/asteroid_ruins = levels_by_trait(ZTRAIT_ASTEROID_RUINS)
+	if (asteroid_ruins.len)
+		seedRuins(asteroid_ruins, CONFIG_GET(number/asteroid_budget), list(/area/asteroidbelt/space/generation), asteroid_ruins_templates)
+
 
 	// Generate deep space ruins
 	var/list/space_ruins = levels_by_trait(ZTRAIT_SPACE_RUINS)
@@ -208,6 +213,7 @@ Used by the AI doomsday and the self-destruct nuke.
 	//Bungalow Mining
 	jungle_ruins_templates = SSmapping.jungle_ruins_templates
 	rock_ruins_templates = SSmapping.rock_ruins_templates
+	asteroid_ruins_templates = SSmapping.asteroid_ruins_templates
 
 
 	shuttle_templates = SSmapping.shuttle_templates
@@ -314,8 +320,17 @@ Used by the AI doomsday and the self-destruct nuke.
 			else if (!isnull(config.minetype) && config.minetype != "none")
 				INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 
-		//Syndicate Marine Corps
 
+	else if(config.minetype == "jungle")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Jungle.dmm", default_traits = ZTRAITS_JUNGLE)
+
+	else if(config.minetype == "asteroidbelt")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Asteroidbelt.dmm", default_traits = ZTRAITS_ASTEROIDBELT)
+
+	else if(config.minetype == "rockplanet")
+		LoadGroup(FailedZs, "Mission", "map_files/Mining", "Rockplanet.dmm", default_traits = ZTRAITS_ROCKPLANET)
+
+		//Syndicate Marine Corps
 	else if(config.minetype == "phobos")
 		LoadGroup(FailedZs, "Mission", "map_files/Mining", "mission_phobos.dmm", default_traits = ZTRAITS_MISSION)
 
@@ -412,8 +427,13 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			mapvotes.Remove(map)
 			continue
 
+
 		if(pmv)
 			mapvotes[map] = mapvotes[map]*VM.voteweight
+
+		else if(VM.map_file == config.map_file)
+		// Don't force them to play the same map when MAPROTATION actually rolls to change the map
+			mapvotes.Remove(map)
 
 	var/pickedmap = pickweight(mapvotes)
 	if (!pickedmap)
@@ -468,6 +488,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	banned += generateMapList("[global.config.directory]/iceruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/jungleruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/rockruinblacklist.txt")
+	banned += generateMapList("[global.config.directory]/asteroidruinblacklist.txt")
 
 	for(var/item in sortList(subtypesof(/datum/map_template/ruin), /proc/cmp_ruincost_priority))
 		var/datum/map_template/ruin/ruin_type = item
@@ -499,6 +520,8 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		else if(istype(R, /datum/map_template/ruin/rockplanet))
 			rock_ruins_templates[R.name] = R
 
+		else if(istype(R, /datum/map_template/ruin/asteroid))
+			asteroid_ruins_templates[R.name] = R
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("[global.config.directory]/unbuyableshuttles.txt")

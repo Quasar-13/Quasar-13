@@ -89,7 +89,9 @@
 /area/mine/junglegeneration
 	name = "planet generation area"
 	map_generator = /datum/map_generator/jungle_generator
+	outdoors = TRUE
 
 /area/mine/junglebase
 	name = "jungle base area"
+	outdoors = TRUE
 

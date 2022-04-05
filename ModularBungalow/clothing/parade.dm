@@ -97,11 +97,17 @@
 	desc = "The coat of the station's commander. Lovely, personable and everpresent."
 	icon_state = "cdr_jacket"
 
-// Casio Armor
-/obj/item/clothing/suit/armor/captain/casio
-	name = "NT Captain's carapace"
+// Naval Armor
+/obj/item/clothing/suit/armor/captain/naval
+	name = "Naval Captain's carapace"
 	desc = "The classic captain's carapace, in naval green."
 	icon_state = "casio"
+
+// Provost Carapace
+/obj/item/clothing/suit/armor/captain/provost
+	name = "Provost's carapace"
+	desc = "The stylish Provost's carapace, in ceremonial red."
+	icon_state = "provost_carapace"
 
 //CO's Jacket
 /obj/item/clothing/suit/armor/captain/co
@@ -164,3 +170,7 @@
 	desc = "The Grand Admiral's robes. The Admiral of Admirals, your boss's boss four times over."
 	icon_state = "gadm"
 
+/obj/item/clothing/suit/armor/captain/flag/fadm/xan/offduty
+	name = "The Fleet Admiral Caelumbyrn Crux's parade jacket"
+	desc = "FO-4. Fleet Admiral Caelumbyrn Crux's robe. Fear them."
+	icon_state = "xoffduty"

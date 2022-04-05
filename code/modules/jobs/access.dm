@@ -383,7 +383,7 @@
 /proc/get_all_jobs()
 	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
 				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
-				"Deputy","Void Technician", "Chemist", "Secretary", //Bungalowstation edit
+				"Deputy","Void Technician", "Chemical Researcher", "Secretary", //Bungalowstation edit
 
 				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Paramedic", "Pharmacist", "Geneticist", "Virologist", "Psychologist",
 				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Prisoner")
@@ -402,7 +402,10 @@
 				"Communication Officer", "Nanotrasen Security Operative", "Miner",
 
 				//Naval Stations
-				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield")
+				"NT Squad Leader","NT Marine", "NT Military Police", "Blueshield",
+
+				//One off jobs
+				"Brig Physician")
 
 
 
@@ -422,7 +425,7 @@
 	//bungalow alt job titles
 	var/list/blacklist = list("Commodore", "Marshal", "Commanding Officer", "Station Commander")
 	for(var/datum/job/J in SSjob.occupations)
-		if((jobName in J.alt_titles) || (jobName == J.senior_title))
+		if((jobName in J.alt_titles) || (jobName in J.senior_title) || (jobName in J.ultra_senior_title))
 			if(jobName in blacklist)//Blacklists names above
 				return jobName
 

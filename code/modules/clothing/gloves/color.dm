@@ -104,6 +104,11 @@
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/fingerless
 
+/obj/item/clothing/gloves/color/black/grey
+	desc = "Wait, is it dark grey or just a warm black? These gloves are fire-resistant."
+	name = "darkgrey gloves"
+	icon_state = "darkgrey"
+
 /obj/item/clothing/gloves/color/orange
 	name = "orange gloves"
 	desc = "A pair of gloves, they don't look special in any way."
@@ -179,6 +184,11 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	strip_delay = 60
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 70, ACID = 50)
+
+/obj/item/clothing/gloves/color/maid
+	name = "maid arm covers"
+	desc = "Cylindrical looking tubes that go over your arm, weird."
+	icon_state = "maid_arms"
 
 /obj/item/clothing/gloves/color/latex
 	name = "latex gloves"

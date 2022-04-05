@@ -4,8 +4,8 @@
 	health = 3600
 	maxHealth = 3600
 	armour_penetration = 20 // Low AP
-	melee_damage_lower = 60 // HIGH damage
-	melee_damage_upper = 60 // SO yeah, it's a killer of weak people
+	melee_damage_lower = 55 // HIGH damage
+	melee_damage_upper = 55 // So yeah, it's a killer of weak people
 	icon_state = "necromancer"
 	icon_living = "necromancer"
 	icon = 'ModularTegustation/Teguicons/megafauna.dmi'
@@ -20,8 +20,8 @@
 	speak_emote = list("says")
 	speed = 3
 	move_to_delay = 3
-	vision_range = 20
-	aggro_vision_range = 40 // Nowhere to run
+	vision_range = 10
+	aggro_vision_range = 60 // Nowhere to run
 	ranged = TRUE
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 0.5, CLONE = 0.5, STAMINA = 0, OXY = 0.5)
 	loot = list(/obj/item/clothing/suit/wizrobe/necromancer,
@@ -82,14 +82,14 @@
 	var/massacre_cooldown
 	var/massacre_cooldown_time = 9 SECONDS
 	var/dash_cooldown
-	var/dash_cooldown_time = 5 SECONDS
+	var/dash_cooldown_time = 6 SECONDS
 	var/storm_cooldown
 	var/storm_cooldown_time = 10 SECONDS
 	var/storm_amount = 200 // How many times the lightning strikes.
 
 /obj/item/necromancer_sword/mob // OP pls nerf
 	armour_penetration = 25
-	force = 70
+	force = 65
 	block_chance = 0
 	wound_bonus = -100
 	bare_wound_bonus = -100
@@ -164,6 +164,11 @@
 	adjustHealthEffects()
 	return ..()
 
+/mob/living/simple_animal/hostile/megafauna/necromancer/bullet_act(obj/projectile/P)
+	if(flying)
+		return BULLET_ACT_FORCE_PIERCE
+	return ..()
+
 /mob/living/simple_animal/hostile/megafauna/necromancer/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, visible_message_flags = NONE)
 	if(flying)
 		return
@@ -229,12 +234,12 @@
 		lightning_strike(target_loc)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/adjustHealthEffects()
-	if(health <= maxHealth/1.8)
+	if(health <= maxHealth*0.6)
 		if(current_stage < 3)
 			if(current_stage < 2) // In case of extraordinarily high damage (admemes?)
 				stage_two()
 			stage_three()
-	else if(health <= maxHealth/1.2)
+	else if(health <= maxHealth*0.8)
 		if(current_stage < 2)
 			stage_two()
 
@@ -279,7 +284,7 @@
 		if(prob(40))
 			target_turfs += T
 			new /obj/effect/temp_visual/cult/turf/floor(T)
-			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 5)
+			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 7)
 			SLEEP_CHECK_DEATH(strike_delay)
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_bolt(turf/open/T)
@@ -424,7 +429,7 @@
 		if(prob(50))
 			target_turfs += T
 			new /obj/effect/temp_visual/cult/turf/floor(T)
-			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 5)
+			addtimer(CALLBACK(src, .proc/lightning_bolt, T), 7)
 
 /* Stage three stuff */
 
@@ -470,19 +475,21 @@
 		last_turf = new_turf
 	last_turf = get_turf(src)
 	for(var/turf/end_turf in target_turfs)
-		blink(last_turf, end_turf, 50)
+		blink(last_turf, end_turf, 50, TRUE)
 		if(target_turfs[5] != end_turf)
 			SLEEP_CHECK_DEATH(2)
 		last_turf = end_turf
 	src.forceMove(beginning_turf)
 	can_move = TRUE
 
-/mob/living/simple_animal/hostile/megafauna/necromancer/proc/blink(turf/start_t, turf/end_t, duration)
+/mob/living/simple_animal/hostile/megafauna/necromancer/proc/blink(turf/start_t, turf/end_t, duration, damaging = TRUE)
 	var/obj/spot1 = new /obj/effect/temp_visual/dir_setting/cult/phase(start_t, src.dir)
 	src.forceMove(end_t)
 	playsound(src, 'sound/magic/blink.ogg', 100, 1)
 	var/obj/spot2 = new /obj/effect/temp_visual/dir_setting/cult/phase(end_t, src.dir)
 	spot1.Beam(spot2, "blood_beam", time=duration)
+	if(!damaging)
+		return
 	for(var/turf/B in getline(start_t, end_t))
 		for(var/mob/living/victim in B)
 			if(!("necromancer" in victim.faction) && victim != src)
@@ -495,10 +502,12 @@
 	say("Sif D'ie!")
 	var/turf/start_turf = get_turf(src)
 	var/turf/end_turf = get_turf(target)
-	blink(start_turf, end_turf, 30)
+	blink(start_turf, end_turf, 30, FALSE)
 	can_attack = FALSE // To avoid shenanigans with instant death
-	SLEEP_CHECK_DEATH(5)
+	SLEEP_CHECK_DEATH(6)
 	can_attack = TRUE
+	if(!client && prob(30))
+		massacre()
 
 /mob/living/simple_animal/hostile/megafauna/necromancer/proc/lightning_storm(target)
 	if(storm_cooldown > world.time)
@@ -512,5 +521,5 @@
 	for(var/x in 1 to storm_amount)
 		var/turf/open/TT = pick(target_turfs)
 		new /obj/effect/temp_visual/cult/turf/floor(TT)
-		addtimer(CALLBACK(src, .proc/lightning_bolt, TT), 7)
+		addtimer(CALLBACK(src, .proc/lightning_bolt, TT), 9)
 		SLEEP_CHECK_DEATH(strike_delay)
