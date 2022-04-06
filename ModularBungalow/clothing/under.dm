@@ -145,7 +145,7 @@
 	inhand_icon_state = "suit"
 	can_adjust = FALSE
 
-//Chief Atmos (Nicole wanted this so I guess I'm doing it
+//Chief Atmos (Nicole wanted this so I guess I'm doing it)
 /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
 	name = "Chief Atmos Technician's Jumpsuit"
 	desc = "An outfit for an Atmos-Inclined Head of Engineering."
@@ -231,7 +231,7 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/civilian/head_of_personnel/formal
-	name = "Head Of Personnel's formal jacket"
+	name = "Head Of Personnel's formal jumpsuit"
 	desc = "A formal coat worn by the head of personnel."
 	icon_state = "hop"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
@@ -319,7 +319,7 @@
 //Brig Doc clothing
 /obj/item/clothing/under/brigdoc
 	name = "brig doctor's jumpsuit"
-	desc = "Clothing for the best bounty hunter"
+	desc = "Clothing for the security doctor"
 	icon_state = "utilmed"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
