@@ -73,5 +73,5 @@
 /datum/outfit/job/captain/freelancer
 	name = "Captain (Freelancer)"
 	uniform = /obj/item/clothing/under/rank/command/captain/freelancer
-	suit = /obj/item/clothing/suit/armor/captain/freelancer
+	suit = /obj/item/clothing/suit/armor/vest/capcarapace/freelancer
 	head = /obj/item/clothing/head/caphat/freelancer
