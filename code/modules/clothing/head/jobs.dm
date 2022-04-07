@@ -53,7 +53,7 @@
 //Freelancer
 /obj/item/clothing/head/caphat/freelancer
 	name = "captain's peaked cap"
-	icon_state = "captain_hat_freelancer"
+	icon_state = "captain_freelancer"
 
 //Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
