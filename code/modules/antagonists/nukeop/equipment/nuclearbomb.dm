@@ -616,20 +616,13 @@ This is here to make the tiles around the station mininuke change when it's arme
 		SSmapping.remove_nuke_threat(src)
 
 //==========DAT FUKKEN DISK===============
-/obj/item/disk
-	icon = 'icons/obj/module.dmi'
-	w_class = WEIGHT_CLASS_TINY
-	inhand_icon_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	icon_state = "datadisk0"
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound =  'sound/items/handling/disk_pickup.ogg'
-
 /obj/item/disk/nuclear
 	name = "nuclear authentication disk"
 	desc = "Better keep this safe."
-	icon_state = "nucleardisk"
+	random_color = FALSE
+	icon_state = "nuke_disk_map"
+	color = "#4ED57C"
+	illustration = "nuke_new"
 	max_integrity = 250
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 30, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -736,3 +729,4 @@ This is here to make the tiles around the station mininuke change when it's arme
 /obj/item/disk/nuclear/fake/obvious
 	name = "cheap plastic imitation of the nuclear authentication disk"
 	desc = "How anyone could mistake this for the real thing is beyond you."
+	illustration = "nuke_retro

@@ -69,3 +69,8 @@
 	suit_store = /obj/item/tank/internals/oxygen
 	backpack_contents = list(/obj/item/melee/baton/loaded=1)
 
+/datum/outfit/job/hos/freelancer
+	name = "Head of Security (Freelancer)"
+
+	uniform = /obj/item/clothing/under/rank/security/head_of_security/freelancer
+	head = /obj/item/clothing/head/hos

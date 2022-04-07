@@ -46,7 +46,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/heads/captain/alt
 	gloves = /obj/item/clothing/gloves/color/captain
-	uniform =  /obj/item/clothing/under/rank/captain
+	uniform =  /obj/item/clothing/under/rank/command/captain
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/caphat
@@ -69,3 +69,9 @@
 	mask = /obj/item/clothing/mask/gas/atmos/captain
 	suit = /obj/item/clothing/suit/space/hardsuit/swat/captain
 	suit_store = /obj/item/tank/internals/oxygen
+
+/datum/outfit/job/captain/freelancer
+	name = "Captain (Freelancer)"
+	uniform = /obj/item/clothing/under/rank/command/captain/freelancer
+	suit = /obj/item/clothing/suit/armor/captain/freelancer
+	head = /obj/item/clothing/head/caphat/freelancer

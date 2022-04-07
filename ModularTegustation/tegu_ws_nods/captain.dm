@@ -8,12 +8,12 @@
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
 
-/obj/item/clothing/under/rank/captain/ws
+/obj/item/clothing/under/rank/command/captain/ws
 	desc = "It's a white jumpsuit with some gold markings denoting the rank of \"Captain\"."
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
 
-/obj/item/clothing/under/rank/captain/skirt/ws
+/obj/item/clothing/under/rank/command/captain/skirt/ws
 	desc = "It's a white jumpskirt with some gold markings denoting the rank of \"Captain\"."
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
@@ -22,10 +22,10 @@
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/ws
+/obj/item/clothing/under/rank/command/head_of_personnel/ws
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/skirt/ws
+/obj/item/clothing/under/rank/command/head_of_personnel/skirt/ws
 	icon = 'ModularTegustation/Teguicons/teguclothing.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/teguclothing_worn.dmi'

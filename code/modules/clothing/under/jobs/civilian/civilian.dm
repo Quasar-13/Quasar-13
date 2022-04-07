@@ -56,37 +56,6 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	fitted = FEMALE_UNIFORM_TOP
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel
-	desc = "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\"."
-	name = "head of personnel's jumpsuit"
-	icon_state = "hop"
-	inhand_icon_state = "b_suit"
-
-/obj/item/clothing/under/rank/civilian/head_of_personnel/skirt
-	name = "head of personnel's jumpskirt"
-	desc = "It's a jumpskirt worn by someone who works in the position of \"Head of Personnel\"."
-	icon_state = "hop_skirt"
-	inhand_icon_state = "b_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	dying_key = DYE_REGISTRY_JUMPSKIRT
-	fitted = FEMALE_UNIFORM_TOP
-
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit
-	name = "head of personnel's suit"
-	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
-	icon_state = "teal_suit"
-	inhand_icon_state = "g_suit"
-	can_adjust = FALSE
-
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt
-	name = "teal suitskirt"
-	desc = "A teal suitskirt and yellow necktie. An authoritative yet tacky ensemble."
-	icon_state = "teal_suit_skirt"
-	inhand_icon_state = "g_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	dying_key = DYE_REGISTRY_JUMPSKIRT
-	fitted = FEMALE_UNIFORM_TOP
-
 /obj/item/clothing/under/rank/civilian/hydroponics
 	desc = "It's a jumpsuit designed to protect against minor plant-related hazards."
 	name = "botanist's jumpsuit"

@@ -72,7 +72,7 @@
 /mob/living/simple_animal/hostile/retaliate/tegu/update_overlays()
 	. = ..()
 	if(current_hat)
-		if(istype(current_hat, /obj/item/clothing/head/caphat/galaxy))
+		if(istype(current_hat, /obj/item/clothing/head/caphat/freelancer))
 			. += "captain_galaxy_overlay"
 		else
 			. += "captain_overlay"

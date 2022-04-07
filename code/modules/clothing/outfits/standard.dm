@@ -284,7 +284,7 @@
 	name = "Rear Admiral"
 	uniform = /obj/item/clothing/under/bni/officer
 	suit = /obj/item/clothing/suit/armor/captain/flag
-	gloves = /obj/item/clothing/gloves/color/captain/galaxy
+	gloves = /obj/item/clothing/gloves/color/captain
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	belt = /obj/item/gun/ballistic/revolver/hakita
 	head = null

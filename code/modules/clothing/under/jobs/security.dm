@@ -23,11 +23,19 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
-/obj/item/clothing/under/rank/security/officer/grey
+/obj/item/clothing/under/rank/security/officer/freelancer
 	name = "grey security jumpsuit"
-	desc = "A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."
+	desc = "A tactical security jumpsuit for officers."
 	icon_state = "security"
 	inhand_icon_state = "gy_suit"
+
+/obj/item/clothing/under/rank/security/officer/freelancer/skirt
+	name = "grey security jumpskirt"
+	desc = "A \"tactical\" security jumpsuit with the legs replaced by a skirt."
+	icon_state = "security_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	dying_key = DYE_REGISTRY_JUMPSKIRT
 
 /obj/item/clothing/under/rank/security/officer/skirt
 	name = "security jumpskirt"
@@ -61,8 +69,8 @@
 	custom_price = PAYCHECK_HARD
 
 /obj/item/clothing/under/rank/security/warden
-	name = "security suit"
-	desc = "A formal security suit for officers complete with Nanotrasen belt buckle."
+	name = "warden's security suit"
+	desc = "A formal security suit for wardens complete with Nanotrasen belt buckle."
 	icon_state = "rwarden"
 	inhand_icon_state = "r_suit"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 30, WOUND = 10)
@@ -70,11 +78,19 @@
 	sensor_mode = 3
 	random_sensor = FALSE
 
-/obj/item/clothing/under/rank/security/warden/grey
-	name = "grey security suit"
-	desc = "A formal relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."
+/obj/item/clothing/under/rank/security/warden/freelancer
+	name = "warden's security suit"
+	desc = "A formal security suit for wardens."
 	icon_state = "warden"
 	inhand_icon_state = "gy_suit"
+
+/obj/item/clothing/under/rank/security/warden/freelancer/skirt
+	name = "warden's suitskirt"
+	desc = "A formal security suitskirt for wardens."
+	icon_state = "warden_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	dying_key = DYE_REGISTRY_JUMPSKIRT
 
 /obj/item/clothing/under/rank/security/warden/skirt
 	name = "warden's suitskirt"
@@ -156,11 +172,18 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	fitted = FEMALE_UNIFORM_TOP
 
-/obj/item/clothing/under/rank/security/head_of_security/grey
+/obj/item/clothing/under/rank/security/head_of_security/freelancer
 	name = "head of security's grey jumpsuit"
-	desc = "There are old men, and there are bold men, but there are very few old, bold men."
 	icon_state = "hos"
 	inhand_icon_state = "gy_suit"
+
+/obj/item/clothing/under/rank/security/head_of_security/freelancer/skirt
+	name = "head of security's jumpskirt"
+	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Head of Security."
+	icon_state = "hos_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	dying_key = DYE_REGISTRY_JUMPSKIRT
 
 /obj/item/clothing/under/rank/security/head_of_security/alt
 	name = "head of security's turtleneck"

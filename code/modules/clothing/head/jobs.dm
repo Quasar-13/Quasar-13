@@ -50,6 +50,11 @@
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/captain
 
+//Freelancer
+/obj/item/clothing/head/caphat/freelancer
+	name = "captain's peaked cap"
+	icon_state = "captain_hat_freelancer"
+
 //Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
 	name = "captain's parade cap"
@@ -66,6 +71,9 @@
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 	dog_fashion = /datum/dog_fashion/head/hop
+
+/obj/item/clothing/head/hopcap/freelancer
+	icon_state = "hopcap_freelancer"
 
 //Chaplain
 /obj/item/clothing/head/nun_hood
@@ -181,6 +189,13 @@
 	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 30, ACID = 60, WOUND = 6)
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/warden
+
+/obj/item/clothing/head/warden/red
+	name = "warden's red hat"
+	desc = "A warden's red hat. Looking at it gives you the feeling of wanting to keep people in cells for as long as possible."
+	icon_state = "wardenhat"
+	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, RAD = 0, FIRE = 30, ACID = 60, WOUND = 6)
+	strip_delay = 60
 
 /obj/item/clothing/head/warden/drill
 	name = "warden's campaign hat"

@@ -43,7 +43,7 @@
 	name = "Head of Personnel (Goon)"
 	jobtype = /datum/job/goonhop
 
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
+	uniform = /obj/item/clothing/under/rank/command/head_of_personnel/suit
 	head = null
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/hop)

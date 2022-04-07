@@ -18,17 +18,21 @@
 
 /obj/item/clothing/suit/armor/vest
 	name = "armor vest"
-	desc = "A slim Type I armored vest that provides decent protection against most types of damage, the most common vest in the galaxy."
+	desc = "A slim Type I armored vest that provides decent protection against most types of damage, often used by Nanotrasen."
 	icon_state = "armoralt"
 	inhand_icon_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 
+/obj/item/clothing/suit/armor/vest/common
+	desc = "A common generic armor vest. While the designs and producers vary, this neverless the most used armor in the sector."
+	icon_state = "armor_common"
+
 /obj/item/clothing/suit/armor/vest/alt
 	desc = "A C2-A armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	inhand_icon_state = "armor"
-	
+
 /obj/item/clothing/suit/armor/vest/solgov
 	desc = "A standard Solgov Mk3 combat rig for the Solgov Army and Marines."
 	icon_state = "sgvarmor"
@@ -88,6 +92,11 @@
 /obj/item/clothing/suit/armor/vest/warden/alt
 	name = "warden's armored jacket"
 	desc = "A red jacket with silver rank pips and body armor strapped on top."
+	icon_state = "rwarden_jacket"
+
+/obj/item/clothing/suit/armor/vest/warden/alt/freelancer
+	name = "warden's armored jacket"
+	desc = "A white jacket with silver rank pips and body armor strapped on top."
 	icon_state = "warden_jacket"
 
 /obj/item/clothing/suit/armor/vest/leather
@@ -124,6 +133,10 @@
 	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/suit/armor/vest/capcarapace/freelancer
+	desc = "It's a blindingly white armor used by rich captains."
+	icon_state = "capcarapace_freelancer"
 
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	name = "syndicate captain's vest"

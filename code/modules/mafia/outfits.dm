@@ -52,7 +52,7 @@
 /datum/outfit/mafia/hop
 	name = "Mafia Head of Personnel"
 
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
+	uniform = /obj/item/clothing/under/rank/command/head_of_personnel
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/hopcap

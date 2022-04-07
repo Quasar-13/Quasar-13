@@ -62,8 +62,8 @@
 					/obj/item/clothing/glasses/sunglasses/gar/supergar = 2,
 					/obj/item/clothing/under/suit/helltaker = 3,
 					/obj/item/clothing/under/bni = 1,
-					/obj/item/clothing/under/rank/captain/female = 1,
-					/obj/item/clothing/under/rank/captain/dress = 1)
+					/obj/item/clothing/under/rank/command/captain/female = 1,
+					/obj/item/clothing/under/rank/command/captain/dress = 1)
 	premium = list(/obj/item/coin/antagtoken = 2,
 					/obj/item/clothing/glasses/sunglasses = 3)
 

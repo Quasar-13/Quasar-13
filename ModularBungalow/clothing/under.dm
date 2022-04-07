@@ -127,7 +127,7 @@
 	resistance_flags = NONE
 
 //Femcap (Don't tell anyone I added this)
-/obj/item/clothing/under/rank/captain/female
+/obj/item/clothing/under/rank/command/captain/female
 	name = "Female Captain's Pyjamas"
 	desc = "An outfit for bedtime."
 	icon_state = "cap_f"
@@ -136,7 +136,7 @@
 	inhand_icon_state = "suit"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/captain/dress
+/obj/item/clothing/under/rank/command/captain/dress
 	name = "Captain's dress"
 	desc = "An outfit for female captains."
 	icon_state = "capdress"
@@ -224,13 +224,13 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 
 //HOP stuff.
-/obj/item/clothing/under/rank/civilian/head_of_personnel/goon
+/obj/item/clothing/under/rank/command/head_of_personnel/goon
 	icon_state = "hop_goon"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/formal
+/obj/item/clothing/under/rank/command/head_of_personnel/formal
 	name = "Head Of Personnel's formal jumpsuit"
 	desc = "A formal coat worn by the head of personnel."
 	icon_state = "hop"
