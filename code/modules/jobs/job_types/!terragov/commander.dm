@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/solgov
 
-	access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS)
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS)
+	access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS, ACCESS_ATMOSPHERICS)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS, ACCESS_ATMOSPHERICS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
@@ -23,5 +23,6 @@
 /datum/outfit/job/solgov
 	name = "Solgov Survivor"
 	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
 	belt = null
 
