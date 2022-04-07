@@ -49,7 +49,8 @@
 /obj/item/gun/ballistic/automatic/pistol/sec
 	name = "NT-MRS 'Venus'"
 	desc = "Older design being modernized and reintroduced. Used by Nanotrasen Security Forces on high-risk stations."
-	icon_state = "secpistol"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "venus"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
 
