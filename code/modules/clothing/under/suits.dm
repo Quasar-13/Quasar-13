@@ -77,10 +77,10 @@
 /obj/item/clothing/under/suit/green
 	name = "green suit"
 	desc = "A green suit and yellow necktie. Baller."
-	icon = 'icons/obj/clothing/under/captain.dmi'
+	icon = 'icons/obj/clothing/under/command.dmi'
 	icon_state = "green_suit"
 	inhand_icon_state = "dg_suit"
-	worn_icon = 'icons/mob/clothing/under/captain.dmi'
+	worn_icon = 'icons/mob/clothing/under/command.dmi'
 
 /obj/item/clothing/under/suit/red
 	name = "red suit"
