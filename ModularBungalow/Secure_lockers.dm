@@ -14,7 +14,7 @@
 	new /obj/item/clothing/neck/cloak/cap(src)
 	new /obj/item/clothing/under/rank/command/captain/freelancer(src)
 	new /obj/item/clothing/under/rank/command/captain/freelancer/skirt(src)
-	new /obj/item/clothing/suit/armor/captain/freelancer(src)
+	new /obj/item/clothing/suit/armor/vest/capcarapace/freelancer(src)
 	new /obj/item/clothing/head/caphat/freelancer(src)
 	new /obj/item/clothing/under/rank/command/captain/parade(src)
 	new /obj/item/clothing/suit/armor/vest/capcarapace/alt(src)

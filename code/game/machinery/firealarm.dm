@@ -81,7 +81,6 @@
 	if(machine_stat & NOPOWER)
 		return
 
-	. += "fire_overlay"
 
 	if(is_station_level(z))
 		. += "fire_[GLOB.security_level]"
