@@ -74,7 +74,7 @@
 	name = "KA Mod Disk"
 	desc = "A design disc containing the design for a unique kinetic accelerator modkit. It's compatible with a research console."
 	illustration = "accel"
-	color = "#6F6F6F
+	color = "#6F6F6F"
 	var/modkit_design = /datum/design/unique_modkit
 
 /obj/item/disk/design_disk/modkit_disc/Initialize()
