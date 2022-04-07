@@ -14,7 +14,7 @@
 	exp_type_department = EXP_TYPE_COMMAND
 	maptype = "galaxy"
 
-	outfit = /datum/outfit/job/captain/galaxy
+	outfit = /datum/outfit/job/captain/freelancer
 
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()

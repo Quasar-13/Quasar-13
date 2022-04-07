@@ -194,7 +194,6 @@
 					/obj/item/clothing/under/rank/rnd/scientist/skirt = 3,
 					/obj/item/clothing/suit/toggle/labcoat/science = 3,
 					/obj/item/clothing/suit/neocoat/sci = 3,
-					/obj/item/clothing/suit/neocoatsci = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/radio/headset/headset_sci = 3,
 					/obj/item/clothing/mask/gas = 3)
@@ -464,8 +463,6 @@
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/virologist = 2,
 					/obj/item/clothing/suit/neocoat/viro = 2,
-					/obj/item/clothing/suit/neocoatviro = 2,
-					/obj/item/clothing/mask/surgical = 2,
 					/obj/item/storage/backpack/virology = 2,
 					/obj/item/storage/backpack/satchel/vir = 2,
 					/obj/item/storage/backpack/duffelbag/virology = 2)

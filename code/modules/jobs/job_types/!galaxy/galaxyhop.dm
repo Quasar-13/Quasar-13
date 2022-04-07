@@ -15,7 +15,7 @@
 	exp_type_department = EXP_TYPE_SERVICE
 	maptype = "galaxy"
 
-	outfit = /datum/outfit/job/hop/galaxy
+	outfit = /datum/outfit/job/hop/freelancer
 
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS,
 						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS,
