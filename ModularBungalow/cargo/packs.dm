@@ -49,10 +49,10 @@
 	desc = "Contains 4 boxes of rubbershot shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(
-		/obj/item/storage/box/rubbershot,
-		/obj/item/storage/box/rubbershot,
-		/obj/item/storage/box/rubbershot,
-		/obj/item/storage/box/rubbershot,
+		/obj/item/ammo_box/shotgun/rubber,
+		/obj/item/ammo_box/shotgun/rubber,
+		/obj/item/ammo_box/shotgun/rubber,
+		/obj/item/ammo_box/shotgun/rubber,
 	)
 	crate_name = "rubbershots box crate"
 
@@ -61,10 +61,10 @@
 	desc = "Contains 4 boxes of beanbag shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 2.5
 	contains = list(
-		/obj/item/storage/box/beanbag,
-		/obj/item/storage/box/beanbag,
-		/obj/item/storage/box/beanbag,
-		/obj/item/storage/box/beanbag,
+		/obj/item/ammo_box/shotgun/beanbag,
+		/obj/item/ammo_box/shotgun/beanbag,
+		/obj/item/ammo_box/shotgun/beanbag,
+		/obj/item/ammo_box/shotgun/beanbag,
 	)
 	crate_name = "beanbags box crate"
 
@@ -73,10 +73,10 @@
 	desc = "Contains 4 boxes of buckshots shells. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 5
 	contains = list(
-		/obj/item/storage/box/lethalshot,
-		/obj/item/storage/box/lethalshot,
-		/obj/item/storage/box/lethalshot,
-		/obj/item/storage/box/lethalshot,
+		/obj/item/ammo_box/shotgun/buckshot,
+		/obj/item/ammo_box/shotgun/buckshot,
+		/obj/item/ammo_box/shotgun/buckshot,
+		/obj/item/ammo_box/shotgun/buckshot,
 	)
 	crate_name = "buckshots box crate"
 

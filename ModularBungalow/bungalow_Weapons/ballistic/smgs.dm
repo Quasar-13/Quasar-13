@@ -4,6 +4,7 @@
 	icon_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	bolt_type = BOLT_TYPE_OPEN
+	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -11,7 +12,7 @@
 
 /obj/item/gun/ballistic/automatic/uzi/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.26 SECONDS)
 
 /obj/item/gun/ballistic/automatic/vector
 	name = "\improper NT-VEK Vector Submachinegun"

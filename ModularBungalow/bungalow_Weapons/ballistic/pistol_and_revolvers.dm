@@ -45,6 +45,22 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
+//Sec Pistols
+/obj/item/gun/ballistic/automatic/pistol/sec
+	name = "NT-MRS 'Venus'"
+	desc = "Older design being modernized and reintroduced. Used by Nanotrasen Security Forces on high-risk stations."
+	icon_state = "secpistol"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
+
+/obj/item/gun/ballistic/automatic/pistol/commander
+	name = "NT-RBY 'Commander'"
+	desc = "A refined pistol used by lower ranking commissioned officers and high-ranking security staff."
+	icon_state = "commander"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
 //PL-14
 /obj/item/gun/ballistic/automatic/pistol/PL14
 	name = "PL-14"
@@ -82,8 +98,8 @@
 
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
-	name = "Captain's Sequoia Pistol"
-	desc = "A pistol for solgov captains. Engraved on the bottom is 'Thank you for your 20 years of service.'"
+	name = "Commander's Sequoia Pistol"
+	desc = "A pistol for solgov commander. Engraved on the bottom is 'Thank you for your 20 years of service.'"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 

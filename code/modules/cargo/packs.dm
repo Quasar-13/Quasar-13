@@ -270,9 +270,9 @@
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
+					/obj/item/ammo_box/shotgun/rubber,
+					/obj/item/ammo_box/shotgun/rubber,
+					/obj/item/ammo_box/shotgun/rubber,
 					/obj/item/ammo_box/c38/trac,
 					/obj/item/ammo_box/c38/hotshot,
 					/obj/item/ammo_box/c38/iceblox)
