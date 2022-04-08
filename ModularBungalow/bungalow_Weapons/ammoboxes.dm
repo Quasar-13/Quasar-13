@@ -27,12 +27,22 @@
 	else
 		icon_state = "9x19p-8"
 
+//Lever action
+/obj/item/ammo_box/shotgun
+	name = "admin shell box "
+	desc = "If you see this, call a coder!"
+	icon_state = "slug"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 20
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
 	desc = "If you see this, call a coder!"
 	icon_state = "slug"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/shotgunshell.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/shotgun
 	w_class = WEIGHT_CLASS_NORMAL
 	max_ammo = 12
