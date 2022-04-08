@@ -37,10 +37,10 @@
 	desc = "Contains 4 boxes of Tacical Breach Shotgun slugs. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(
-		/obj/item/storage/box/breachingshells,
-		/obj/item/storage/box/breachingshells,
-		/obj/item/storage/box/breachingshells,
-		/obj/item/storage/box/breachingshells,
+		/obj/item/ammo_box/shotgun/breaching,
+		/obj/item/ammo_box/shotgun/breaching,
+		/obj/item/ammo_box/shotgun/breaching,
+		/obj/item/ammo_box/shotgun/breaching,
 	)
 	crate_name = "Breacherslugs crate"
 

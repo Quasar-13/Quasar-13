@@ -34,6 +34,7 @@
 	icon_state = "slug"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/shotgunshell.dmi'
 	ammo_type = /obj/item/ammo_casing/shotgun
+	w_class = WEIGHT_CLASS_NORMAL
 	max_ammo = 12
 
 /obj/item/ammo_box/shotgun/slug
@@ -88,4 +89,4 @@
 	name = "breaching slug box"
 	desc = "A box full of 12 breaching slugs."
 	icon_state = "breacher_box"
-	ammo_type = /obj/item/ammo_casing/shotgun/breachingshells
+	ammo_type = /obj/item/ammo_casing/shotgun/breacher
