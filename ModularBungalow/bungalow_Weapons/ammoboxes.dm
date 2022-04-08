@@ -83,3 +83,9 @@
 	desc = "A box full of 12 pulse slugs."
 	icon_state = "pulse"
 	ammo_type = /obj/item/ammo_casing/shotgun/pulseslug
+
+/obj/item/ammo_box/shotgun/breaching
+	name = "breaching slug box"
+	desc = "A box full of 12 breaching slugs."
+	icon_state = "breacher_box"
+	ammo_type = /obj/item/ammo_casing/shotgun/breachingshells
