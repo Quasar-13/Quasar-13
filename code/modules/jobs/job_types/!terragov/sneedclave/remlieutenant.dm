@@ -22,7 +22,7 @@
 
 	id = /obj/item/card/id/gold
 	uniform = /obj/item/clothing/under/bni/senior
-	suit = /obj/item/clothing/suit/hooded/wintercoat
+	ears = /obj/item/radio/headset/headset_ntrem
 	belt = null
 
 
