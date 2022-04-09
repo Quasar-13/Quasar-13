@@ -23,6 +23,15 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
+/obj/item/clothing/under/rank/security/officer/skirt
+	name = "security jumpskirt"
+	desc = "A \"tactical\" security jumpsuit with the legs replaced by a skirt."
+	icon_state = "rsecurity_skirt"
+	inhand_icon_state = "r_suit"
+	body_parts_covered = CHEST|GROIN|ARMS
+	dying_key = DYE_REGISTRY_JUMPSKIRT
+	fitted = FEMALE_UNIFORM_TOP
+
 /obj/item/clothing/under/rank/security/officer/freelancer
 	name = "grey security jumpsuit"
 	desc = "A tactical security jumpsuit for officers."
@@ -36,15 +45,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-
-/obj/item/clothing/under/rank/security/officer/skirt
-	name = "security jumpskirt"
-	desc = "A \"tactical\" security jumpsuit with the legs replaced by a skirt."
-	icon_state = "secskirt"
-	inhand_icon_state = "r_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	dying_key = DYE_REGISTRY_JUMPSKIRT
-	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/rank/security/officer/blueshirt
 	name = "blue shirt and tie"
@@ -78,6 +78,15 @@
 	sensor_mode = 3
 	random_sensor = FALSE
 
+/obj/item/clothing/under/rank/security/warden/skirt
+	name = "warden's suitskirt"
+	desc = "A formal security suitskirt for officers complete with Nanotrasen belt buckle."
+	icon_state = "rwarden_skirt"
+	inhand_icon_state = "r_suit"
+	body_parts_covered = CHEST|GROIN|ARMS
+	dying_key = DYE_REGISTRY_JUMPSKIRT
+	fitted = FEMALE_UNIFORM_TOP
+
 /obj/item/clothing/under/rank/security/warden/freelancer
 	name = "warden's security suit"
 	desc = "A formal security suit for wardens."
@@ -91,15 +100,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-
-/obj/item/clothing/under/rank/security/warden/skirt
-	name = "warden's suitskirt"
-	desc = "A formal security suitskirt for officers complete with Nanotrasen belt buckle."
-	icon_state = "rwarden_skirt"
-	inhand_icon_state = "r_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	dying_key = DYE_REGISTRY_JUMPSKIRT
-	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/rank/security/warden/formal
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
