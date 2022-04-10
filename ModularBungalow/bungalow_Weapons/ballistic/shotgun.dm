@@ -43,3 +43,4 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
 	max_ammo = 7
 	caliber = "breacher"
+

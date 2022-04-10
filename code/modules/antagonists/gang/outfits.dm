@@ -44,7 +44,7 @@
 	/obj/item/storage/box/teargas = 1,
 	/obj/item/storage/box/flashbangs = 1,
 	/obj/item/shield/riot/tele = 1,
-	/obj/item/storage/box/lethalshot = 2,
+	/obj/item/ammo_box/shotgun/buckshot = 2,
 	/obj/item/storage/box/survival/security)
 
 /datum/outfit/families_police/beatcop/swat
@@ -58,7 +58,7 @@
 	/obj/item/storage/box/teargas = 1,
 	/obj/item/storage/box/flashbangs = 1,
 	/obj/item/shield/riot/tele = 1,
-	/obj/item/storage/box/lethalshot = 2,
+	/obj/item/ammo_box/shotgun/buckshot = 2,
 	/obj/item/storage/box/survival/security)
 
 /datum/outfit/families_police/beatcop/fbi
