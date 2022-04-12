@@ -260,7 +260,7 @@
 	..()
 	new /obj/item/storage/box/firingpins(src)
 	for(var/i in 1 to 3)
-		new /obj/item/storage/box/rubbershot(src)
+		new /obj/item/ammo_box/shotgun/rubber(src)
 	for(var/i in 1 to 3)
 		new /obj/item/gun/ballistic/shotgun/riot(src)
 
@@ -286,7 +286,7 @@
 /obj/structure/closet/secure_closet/armory4/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
-		new /obj/item/storage/box/lethalshot(src)
+		new /obj/item/ammo_box/shotgun/buckshot(src)
 
 
 /obj/structure/closet/secure_closet/tac

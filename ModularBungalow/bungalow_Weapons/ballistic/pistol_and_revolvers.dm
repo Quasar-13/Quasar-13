@@ -45,6 +45,23 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
+//Sec Pistols
+/obj/item/gun/ballistic/automatic/pistol/sec
+	name = "NT-MRS 'Venus'"
+	desc = "Older design being modernized and reintroduced. Used by Nanotrasen Security Forces on high-risk stations."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "venus"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
+
+/obj/item/gun/ballistic/automatic/pistol/commander
+	name = "NT-RBY 'Commander'"
+	desc = "A refined pistol used by lower ranking commissioned officers and high-ranking security staff."
+	icon_state = "commander"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
 //PL-14
 /obj/item/gun/ballistic/automatic/pistol/PL14
 	name = "PL-14"
@@ -82,8 +99,8 @@
 
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
-	name = "Captain's Sequoia Pistol"
-	desc = "A pistol for solgov captains. Engraved on the bottom is 'Thank you for your 20 years of service.'"
+	name = "Commander's Sequoia Pistol"
+	desc = "A pistol for solgov commander. Engraved on the bottom is 'Thank you for your 20 years of service.'"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
@@ -100,16 +117,3 @@
 	desc = "The classic high-powered revolver to rival the Mateba. This one is loaded in .357 with a custom 7 bullet cylinder."
 	icon_state = "sw500"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
-	fire_sound = 'sound/weapons/gun/revolver/shot_alt.ogg'
-	load_sound = 'sound/weapons/gun/revolver/load_bullet.ogg'
-	eject_sound = 'sound/weapons/gun/revolver/empty.ogg'
-	vary_fire_sound = FALSE
-	fire_sound_volume = 90
-	dry_fire_sound = 'sound/weapons/gun/revolver/dry_fire.ogg'
-	casing_ejector = FALSE
-	internal_magazine = TRUE
-	bolt_type = BOLT_TYPE_NO_BOLT
-	tac_reloads = FALSE
-	spin_delay = 10
-	recent_spin = 0
