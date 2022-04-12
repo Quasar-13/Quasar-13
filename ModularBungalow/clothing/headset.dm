@@ -28,3 +28,8 @@
 	desc = "A headset used by the NT remnants."
 	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/headset_cent
+
+/obj/item/radio/headset/heads/headset_comms
+	name = "\improper Communications Officer headset"
+	desc = "A headset used by the communications officer."
+	keyslot = new /obj/item/encryptionkey/headset_comms
