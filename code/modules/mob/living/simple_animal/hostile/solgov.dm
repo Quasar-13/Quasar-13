@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/solgov
 	name = "Solgov Standard"
-	desc = "Protecting your future, unless you don't speak sol common"
+	desc = "Protecting your future, unless you don't speak sol common. Unarmed"
 	icon = 'icons/mob/simple_human.dmi'
 	icon_state = "solgovgeneric"
 	icon_living = "solgovgeneric"
@@ -36,12 +36,9 @@
 	return FALSE
 	footstep_type = FOOTSTEP_MOB_SHOE
 
-/mob/living/simple_animal/hostile/solgov/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
-	. = ..()
-	if(. > 0 && stat == CONSCIOUS)
-		Retaliate()
-//this is so that they will attack and whatnot :P
 /mob/living/simple_animal/hostile/solgov/ranged
+	name = "Solgov Privateer"
+	desc = "Protecting your future, unless you don't speak sol common, Armed with a pistol"
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
 	ranged = 1
@@ -54,15 +51,16 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
+	name = "Solgov Privateer"
+	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
-	ranged = 1
-	rapid = 3
+	rapid = 2
 	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
-	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
