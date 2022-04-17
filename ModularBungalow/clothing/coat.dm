@@ -113,7 +113,7 @@
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Originally used by the Kepler Security Force, now they find themselves in the hands of brave men and women alike.There's a small kepler ranger's patch on it's side"
-	icon_state = "fox_rangersnowhos"
+	icon_state = "foxranger_snowhos"
 	armor = list(MELEE = 55, BULLET = 45, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 50, RAD = 50, FIRE = 100, ACID = 100, WOUND = 20)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
