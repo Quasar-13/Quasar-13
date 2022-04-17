@@ -262,7 +262,18 @@
 	burst_size = 3
 	fire_delay = 1
 
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	mag_type = /obj/item/ammo_box/magazine/m556
+	burst_size = 1
 
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw

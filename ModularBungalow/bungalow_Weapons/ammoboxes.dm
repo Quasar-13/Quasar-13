@@ -37,6 +37,30 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	max_ammo = 20
 
+/obj/item/ammo_box/speedloader
+	name = "admin shell box "
+	desc = "If you see this, call a coder!"
+	icon_state = "slug"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 12
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/speedloader/c38
+	name = ".38 speedloader"
+	desc = "A speedloader full of .38 catridges ready to be used!"
+	icon_state = "slc38"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a38
+
+/obj/item/ammo_box/speedloader/a357
+	name = ".357 speedloader"
+	desc = "A speedloader full of .357 catridges ready to be used!"
+	icon_state = "slc357"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
