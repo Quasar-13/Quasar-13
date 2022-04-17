@@ -41,7 +41,7 @@
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
 
-/item/clothing/suit/armor/ranger/snow
+/obj/item/clothing/suit/armor/ranger/snow
 	name = "Ranger's Duster"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'

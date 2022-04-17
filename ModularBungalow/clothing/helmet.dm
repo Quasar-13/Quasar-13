@@ -18,9 +18,23 @@
 	icon_state = "vet"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 60, WOUND = 10)
 
+//Ranger helmet
+/obj/item/clothing/head/helmet/ranger/snow
+	name = "ranger helmet"
+	desc = "Double plated."
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	icon_state = "snowvet"
+	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 60, WOUND = 10)
+
 /obj/item/clothing/head/helmet/ranger/hos
 	name = "head of security's ranger helmet"
 
+/obj/item/clothing/head/helmet/ranger/hos/snow
+	name = "expedition leader's ranger helmet"
+	desc = "Double plated."
+	icon_state = "snowvet"
 //Provost Hat
 /obj/item/clothing/head/caphat/provost
 	name = "provost hat."
