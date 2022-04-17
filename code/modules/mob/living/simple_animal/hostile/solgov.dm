@@ -149,9 +149,8 @@
 	retreat_distance = 15
 	minimum_distance = 5
 	casingtype = /obj/item/ammo_casing/a357/match
-	rapid_fire_delay = 15
+	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-
