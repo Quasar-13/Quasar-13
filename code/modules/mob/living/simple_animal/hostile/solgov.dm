@@ -1,7 +1,7 @@
 //don't spawn this one
 /mob/living/simple_animal/hostile/solgov
 	name = "Solgov Standard"
-	desc = "Protecting your future, unless you don't speak english"
+	desc = "Protecting your future, unless you don't speak sol common"
 	icon = 'icons/mob/simple_human.dmi'
 	icon_state = "solgovgeneric"
 	icon_living = "solgovgeneric"
@@ -47,7 +47,21 @@
 	/obj/item/gun/ballistic/automatic/pistol/m1911,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
-//HEAVY UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
+/mob/living/simple_animal/hostile/solgov/ranged/smg
+	icon_state = "solgovrangedsmg"
+	icon_living = "solgovrangedsmg"
+	ranged = 1
+	rapid = 3
+	rapid_fire_delay = 5
+	retreat_distance = 4
+	minimum_distance = 3
+	casingtype = /obj/item/ammo_casing/c45
+	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
+//SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
 	name = "Solgov Elite"
 	desc = "What the hell is that thing"
@@ -86,6 +100,7 @@
 	retreat_distance = 4
 	minimum_distance = 2
 	rapid = 5
+	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 
@@ -102,9 +117,9 @@
 	speed = 0.8
 	maxHealth = 175
 	health = 175
-	retreat_distance = 3
 	minimum_distance = 2
 	rapid = 3
+	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
@@ -127,7 +142,9 @@
 	melee_damage_upper = 25
 	retreat_distance = 15
 	minimum_distance = 5
-	casingtype = /obj/item/ammo_casing/p50
+	casingtype = /obj/item/ammo_casing/a357/match
+	rapid_fire_delay = 15
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/shotgun/lever_action/scope
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
