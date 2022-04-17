@@ -78,12 +78,13 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 55
 	melee_damage_upper = 5
+	minimum_distance = 2
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-	projectile_deflect_chance = 65
+	projectile_deflect_chance = 70
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
@@ -133,7 +134,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
 	..()
 	summon_backup(15)
-	say("Target!")
+	say("There I see them!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
 	name = "Solgov Sniper"
@@ -146,7 +147,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	retreat_distance = 15
-	minimum_distance = 5
+	minimum_distance = 2
 	casingtype = /obj/item/ammo_casing/a357/match
 	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
