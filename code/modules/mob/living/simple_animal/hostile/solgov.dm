@@ -62,6 +62,7 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
+//HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
 	name = "Solgov Elite"
 	desc = "What the hell is that thing"
