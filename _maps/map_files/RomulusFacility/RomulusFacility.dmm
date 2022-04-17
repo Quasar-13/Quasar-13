@@ -750,6 +750,7 @@
 /obj/structure/grille,
 /obj/structure/cable,
 /obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "aTR" = (
@@ -915,6 +916,7 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
 /obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "bbL" = (
@@ -928,6 +930,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/stormtrooper,
 /turf/open/floor/plasteel/cafeteria,
 /area/awaymission/bmpship/midship)
 "bca" = (
@@ -1191,10 +1194,23 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/sekret)
+"bra" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
+"brh" = (
+/obj/machinery/chem_dispenser/fullupgrade,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "brk" = (
 /mob/living/simple_animal/hostile/evilborg/bigguy{
 	desc = "A military robot unit, It belong to the Sol Government. This one looks really tough..";
-	faction = list("Russian");
+	faction = list("russian");
 	name = "Solgov Military robot"
 	},
 /turf/open/floor/plating/snowed/icemoon,
@@ -1488,11 +1504,23 @@
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/r_wall,
 /area/security/brig)
+"bPQ" = (
+/obj/machinery/chem_heater,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "bPW" = (
 /obj/effect/mob_spawn/human/corpse/nanotrasensoldier,
 /obj/item/gun/ballistic/automatic/proto/unrestricted,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
+"bQb" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "bQx" = (
 /obj/structure/table,
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler{
@@ -1730,6 +1758,10 @@
 	temperature = 180
 	},
 /area/ruin/powered)
+"cfm" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "cfA" = (
 /obj/structure/table,
 /obj/item/stock_parts/micro_laser/quadultra,
@@ -1810,7 +1842,12 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "cjW" = (
-/obj/structure/mecha_wreckage/gygax/dark,
+/obj/vehicle/sealed/mecha/combat/gygax/dark{
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 30, "energy" = 35, "bomb" = 20, "bio" = 0, "rad" = 20, "fire" = 100, "acid" = 100);
+	desc = "A lightweight exosuit, painted in a dark scheme. This one has aged quite noticably, It's weaker than the Mk1 but do not take this as a worse version, It's just as deadly.";
+	max_equip = 6;
+	name = "\improper Mk 0 Dark Gygax"
+	},
 /obj/effect/turf_decal/stripes/full,
 /turf/open/floor/mech_bay_recharge_floor,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
@@ -2693,6 +2730,12 @@
 "dld" = (
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"dlt" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "dlO" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/xenoblood/xgibs/core,
@@ -2719,10 +2762,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
-"dpk" = (
-/mob/living/simple_animal/hostile/retaliate/nanotrasenpeace/ranged,
-/turf/open/floor/plating/snowed/icemoon,
-/area/icemoon/surface/outdoors)
 "dpK" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/closed/wall/r_wall,
@@ -3083,6 +3122,14 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/wood,
 /area/hallway/primary/central)
+"dKV" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/syndicate/ranged/smg/space/stormtrooper,
+/turf/open/floor/plasteel,
+/area/awaymission/bmpship/midship)
 "dLe" = (
 /obj/structure/closet/crate/medical,
 /obj/item/storage/belt/medical,
@@ -3180,6 +3227,12 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"dSf" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "dSn" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -3525,6 +3578,16 @@
 /obj/item/ammo_box/magazine/m12g/dragon,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
+"eqq" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/highsecurity,
+/obj/structure/barricade/wooden,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "eqU" = (
 /obj/structure/fence/corner{
 	dir = 8
@@ -3659,6 +3722,8 @@
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/fakelattice,
+/obj/item/clothing/under/misc/durathread/kepler,
+/obj/item/clothing/head/welding,
 /turf/open/floor/plating/rust,
 /area/engine/storage)
 "eAu" = (
@@ -3968,7 +4033,9 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "eSb" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	dir = 8
+	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "eSe" = (
@@ -4101,6 +4168,9 @@
 "fan" = (
 /obj/structure/table/wood,
 /obj/item/circuitboard/machine/chem_dispenser/drinks/beer,
+/obj/item/storage/box/ingredients/exotic,
+/obj/item/storage/box/ingredients/random,
+/obj/item/storage/box/ingredients/random,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/kitchen)
 "fav" = (
@@ -4441,6 +4511,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
+"fxt" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/smg/space,
+/turf/open/floor/plating/icemoon,
+/area/awaymission/bmpship/midship)
+"fyx" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "fyJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
@@ -4610,6 +4688,13 @@
 "fGH" = (
 /mob/living/simple_animal/hostile/alien/drone,
 /turf/open/floor/grass/snow,
+/area/icemoon/surface/outdoors)
+"fHM" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear{
+	faction = list("russian");
+	name = "solgov K9 unit"
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "fHP" = (
 /obj/structure/closet/crate/hydroponics,
@@ -4812,6 +4897,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"fSm" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/stormtrooper,
+/turf/open/floor/plasteel,
+/area/awaymission/bmpship/aft)
 "fSD" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/under/rank/rnd/roboticist,
@@ -4850,6 +4939,12 @@
 	},
 /turf/open/floor/pod,
 /area/ntremnant)
+"fUY" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "fVh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -5176,6 +5271,19 @@
 /obj/structure/flora/grass/brown,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
+"gqP" = (
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	aggro_vision_range = 15;
+	name = "\Improper Anti Tank Sniper";
+	projectiletype = /obj/projectile/bullet/p50/penetrator;
+	vision_range = 15
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "gsn" = (
 /obj/machinery/porta_turret/centcom_shuttle{
 	active_power_usage = 0;
@@ -5187,7 +5295,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/hallway/primary/central)
 "gtd" = (
-/mob/living/simple_animal/hostile/nanotrasen/ranged,
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "gtR" = (
@@ -5401,6 +5509,12 @@
 "gFb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/grass/snow,
+/area/icemoon/surface/outdoors)
+"gFt" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	health = 1
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "gFH" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -5675,6 +5789,15 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/engine/storage)
+"gSF" = (
+/obj/structure/cable,
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
+"gSW" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "gTw" = (
 /obj/structure/rack,
 /obj/item/ammo_box/magazine/m45,
@@ -5719,6 +5842,12 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
+"gZh" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "gZn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5886,6 +6015,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
+"hkS" = (
+/mob/living/simple_animal/hostile/solgov/ranged/rifle,
+/turf/open/floor/plasteel/icemoon,
+/area/icemoon/surface/outdoors)
 "hkT" = (
 /obj/structure/cable,
 /obj/structure/barricade/sandbags,
@@ -6044,6 +6177,10 @@
 /obj/machinery/recharger,
 /turf/open/floor/carpet,
 /area/awaymission/bmpship/fore)
+"hqG" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "hqN" = (
 /obj/effect/decal/cleanable/wrapping,
 /obj/effect/decal/cleanable/plasma,
@@ -7270,7 +7407,9 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "iRW" = (
-/mob/living/simple_animal/hostile/solgov/ranged/smg,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "iSR" = (
@@ -7424,6 +7563,12 @@
 /obj/structure/mecha_wreckage/ripley,
 /turf/open/floor/plating/icemoon,
 /area/awaymission/bmpship/midship)
+"jbg" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "jbk" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/blood/old,
@@ -7877,6 +8022,10 @@
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"jFz" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/carpet/royalblue,
+/area/ruin/space/has_grav/powered)
 "jFW" = (
 /obj/structure/table/survival_pod,
 /turf/open/floor/pod,
@@ -8867,6 +9016,10 @@
 /obj/machinery/door/airlock/survival_pod,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
+"lbM" = (
+/obj/item/storage/box/emptysandbags,
+/turf/open/floor/plasteel/icemoon,
+/area/icemoon/surface/outdoors)
 "lbR" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
@@ -9201,6 +9354,7 @@
 "lvJ" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "lvL" = (
@@ -9511,6 +9665,11 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
+"lNC" = (
+/obj/machinery/light/warm/directional/east,
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "lOm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/circuitboard/computer/atmos_alert,
@@ -9606,6 +9765,7 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "lSJ" = (
@@ -10094,6 +10254,11 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating/icemoon,
 /area/icemoon/surface/outdoors)
+"mCN" = (
+/obj/structure/cable,
+/mob/living/simple_animal/hostile/syndicate/mecha_pilot,
+/turf/open/floor/plating,
+/area/awaymission/bmpship/aft)
 "mDk" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/donkpockets,
@@ -10192,7 +10357,9 @@
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
 "mKS" = (
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate/hydroponics,
+/obj/effect/spawner/lootdrop/seed_vault,
+/obj/effect/spawner/lootdrop/seed_vault,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "mLa" = (
@@ -10244,9 +10411,9 @@
 /area/hallway/primary/central)
 "mNa" = (
 /mob/living/simple_animal/hostile/syndicate/civilian{
-	desc = "They appear to have ripped off their Solgov patch from their shoulder.";
-	health = 50;
-	name = "Fleeing Guard"
+	desc = "They appear to have been shot dead by someone.";
+	health = 25;
+	name = "Syndicate Operative"
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -10407,6 +10574,14 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/engineering)
+"naJ" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/syndicate/ranged/smg/space,
+/turf/open/floor/plasteel,
+/area/awaymission/bmpship/midship)
 "naK" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/plasteel/dark,
@@ -11157,6 +11332,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"oeW" = (
+/mob/living/simple_animal/hostile/alien/sentinel,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "ofX" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -11788,17 +11967,15 @@
 	},
 /area/awaymission/bmpship/fore)
 "oPO" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/space{
-	desc = "Here for your safety..";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/pistol/m1911);
-	name = "Airport Security"
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	dir = 8
 	},
-/turf/open/floor/plating/snowed/icemoon,
-/area/icemoon/surface/outdoors)
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "oPQ" = (
 /obj/effect/turf_decal/stripes/full,
 /turf/open/floor/mineral/plastitanium{
@@ -11875,6 +12052,7 @@
 "oTP" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "oVN" = (
@@ -12109,7 +12287,7 @@
 "pkD" = (
 /mob/living/simple_animal/hostile/evilborg/bigguy{
 	desc = "A military robot unit, It belong to the Sol Government. This one looks really tough..";
-	faction = list("Russian");
+	faction = list("russian");
 	name = "Solgov Military robot"
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -12139,13 +12317,23 @@
 	id = "Evac GPS Shutter";
 	name = "Shutter"
 	},
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "pmR" = (
 /mob/living/simple_animal/hostile/hivebot/mechanic,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"pmU" = (
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	aggro_vision_range = 15;
+	dir = 4;
+	name = "\Improper Anti Tank Sniper";
+	projectiletype = /obj/projectile/bullet/p50/penetrator;
+	vision_range = 15
+	},
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "pnd" = (
 /obj/machinery/door/airlock/command/glass{
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 010, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100);
@@ -12228,6 +12416,16 @@
 "pri" = (
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ruin/space/has_grav/powered)
+"pro" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/structure/cable,
+/obj/structure/barricade/wooden,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "prv" = (
 /obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder,
@@ -12271,7 +12469,12 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "pvb" = (
-/mob/living/simple_animal/hostile/solgov/ranged/rifle,
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	aggro_vision_range = 15;
+	name = "\Improper Anti Tank Sniper";
+	projectiletype = /obj/projectile/bullet/p50/penetrator;
+	vision_range = 15
+	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "pvV" = (
@@ -12771,6 +12974,13 @@
 /obj/structure/mecha_wreckage/reticence,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
+"pXw" = (
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	name = "Airport Kepler Marksman";
+	projectiletype = /obj/projectile/bullet/a357/match
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "pZc" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plasteel,
@@ -12822,6 +13032,9 @@
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "qdZ" = (
+/obj/vehicle/sealed/mecha/combat/durand{
+	max_equip = 6
+	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/ruin/space/has_grav/powered)
 "qea" = (
@@ -13679,6 +13892,12 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
+"rcT" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "rdb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/solgov,
@@ -13804,8 +14023,18 @@
 /area/crew_quarters/heads/hop)
 "rml" = (
 /obj/structure/closet/crate/hydroponics,
+/obj/effect/spawner/lootdrop/space/rareseed,
+/obj/effect/spawner/lootdrop/space/rareseed,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
+"rmK" = (
+/mob/living/simple_animal/hostile/syndicate/civilian/scientist{
+	desc = "They don't exactly seem peaceful.";
+	faction = list("russian");
+	name = "Scientist"
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "rna" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -13889,6 +14118,14 @@
 /obj/item/storage/guncase,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"rqm" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "rqB" = (
 /obj/structure/sign/poster/official/safety_internals,
 /turf/closed/wall/rust,
@@ -14055,6 +14292,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "rFp" = (
 /obj/machinery/door/airlock/highsecurity,
+/obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "rFu" = (
@@ -14312,7 +14550,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/powered)
 "rXC" = (
-/mob/living/simple_animal/hostile/evilborg/bigguy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "rXF" = (
@@ -14963,6 +15201,16 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
+"sJK" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "sKl" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -15909,6 +16157,7 @@
 	name = "old sink";
 	pixel_y = -5
 	},
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker,
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "tYW" = (
@@ -16090,6 +16339,10 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
+"ufe" = (
+/obj/vehicle/sealed/mecha/combat/gygax,
+/turf/open/floor/mech_bay_recharge_floor,
+/area/ruin/space/has_grav/powered)
 "ufw" = (
 /obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder,
@@ -16252,6 +16505,10 @@
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
+"uoW" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "uqI" = (
 /obj/structure/water_source/puddle,
 /turf/open/floor/plating/dirt/jungle,
@@ -16355,6 +16612,10 @@
 	},
 /turf/open/floor/plasteel/icemoon,
 /area/icemoon/surface/outdoors)
+"uyJ" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/plasteel/checker,
+/area/ruin/space/has_grav/hellfactory)
 "uyU" = (
 /obj/structure/headpike,
 /obj/item/bodypart/head{
@@ -16511,6 +16772,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/freezer,
 /area/commons/cryopods)
+"uGT" = (
+/mob/living/simple_animal/hostile/syndicate/civilian{
+	desc = "They appear to have been shot dead by someone.";
+	health = 25;
+	name = "Syndicate Operative"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "uGY" = (
 /obj/machinery/computer/monitor,
 /turf/open/floor/mineral/plastitanium{
@@ -17036,9 +17306,13 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "vip" = (
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault,
-/turf/open/floor/plating/snowed/icemoon,
-/area/icemoon/surface/outdoors)
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "viB" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
@@ -17351,6 +17625,10 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
+"vFh" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/turf/open/floor/plasteel/white/telecomms,
+/area/ruin/space/has_grav/powered)
 "vFt" = (
 /obj/structure/bed,
 /obj/item/bedsheet/syndie{
@@ -17957,6 +18235,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/mob/living/simple_animal/hostile/syndicate/ranged/smg/space,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
 "wpl" = (
@@ -18292,6 +18571,15 @@
 /obj/item/ammo_box/shotgun/buckshot,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"wCT" = (
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	aggro_vision_range = 15;
+	name = "\Improper Anti Tank Sniper";
+	projectiletype = /obj/projectile/bullet/p50/penetrator;
+	vision_range = 15
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "wDM" = (
 /obj/structure/tank_dispenser,
 /turf/open/floor/mineral/plastitanium,
@@ -18402,6 +18690,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
+"wJl" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "wKj" = (
 /turf/closed/wall/r_wall,
 /area/janitor)
@@ -18558,6 +18850,14 @@
 /obj/item/autosurgeon/organ/syndicate/reviver,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"wUi" = (
+/obj/machinery/chem_master,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "wUm" = (
 /mob/living/simple_animal/hostile/asteroid/wolf{
 	lose_patience_timeout = 1
@@ -18659,6 +18959,14 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
+"xaZ" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "xbr" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -19049,13 +19357,26 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
+"xzy" = (
+/obj/structure/cable,
+/mob/living/simple_animal/hostile/syndicate/civilian/scientist{
+	desc = "They don't exactly seem peaceful.";
+	faction = list("russian");
+	name = "Scientist"
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "xzC" = (
 /obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault{
-	desc = "A kepler officer wielding an automatic rifle. He's trembling with fear.";
-	name = "Coward Officer"
-	},
 /obj/item/grenade/c4,
+/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/item/clothing/under/rank/security/officer/kepler/ranger,
+/obj/item/clothing/head/beret/durathread/kepler/ranger,
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "xzQ" = (
@@ -19226,7 +19547,7 @@
 "xIw" = (
 /mob/living/simple_animal/hostile/evilborg/bigguy{
 	desc = "A military robot unit, It belong to the Sol Government. This one looks really tough..";
-	faction = list("Russian");
+	faction = list("russian");
 	name = "Solgov Military robot"
 	},
 /turf/open/floor/plasteel/icemoon,
@@ -28205,7 +28526,7 @@ kCI
 nxL
 nxL
 nxL
-nxL
+naJ
 nxL
 nxL
 wpg
@@ -29931,7 +30252,7 @@ rzl
 xQO
 tNP
 xQO
-nxL
+dKV
 dfZ
 xQO
 mMj
@@ -30495,7 +30816,7 @@ kCI
 fEP
 tGh
 tGh
-tGh
+crm
 tGh
 eDH
 nxL
@@ -30781,7 +31102,7 @@ uTz
 kCI
 vRJ
 tGh
-tGh
+crm
 tGh
 tGh
 eDH
@@ -30802,7 +31123,7 @@ nxL
 adr
 dgx
 tGh
-tGh
+fxt
 dgx
 tGh
 hZw
@@ -33099,7 +33420,7 @@ sZo
 sZo
 sZo
 iwR
-sZo
+fSm
 xKd
 swu
 cJI
@@ -36528,7 +36849,7 @@ uTz
 vqj
 tcY
 sWZ
-pRD
+mCN
 oOn
 xWU
 oOn
@@ -54787,8 +55108,8 @@ orP
 orP
 mQp
 pFn
-pFn
-mNa
+pVJ
+uGT
 vYC
 utw
 utw
@@ -55362,7 +55683,7 @@ mQn
 led
 pFn
 pFn
-oPO
+pFn
 uTz
 uTz
 uTz
@@ -56768,9 +57089,9 @@ uTz
 uTz
 orP
 mQp
-qYx
-orP
-orP
+bra
+rxv
+rxv
 orP
 orP
 orP
@@ -57055,9 +57376,9 @@ uTz
 uTz
 orP
 mQp
-qYx
-orP
-orP
+bra
+pXw
+rxv
 orP
 orP
 orP
@@ -57342,9 +57663,9 @@ uTz
 uTz
 orP
 mQp
-qYx
-orP
-orP
+bra
+rxv
+rxv
 orP
 orP
 orP
@@ -59092,7 +59413,7 @@ iYH
 rHT
 mQp
 pFn
-oPO
+pFn
 pFn
 uTz
 uTz
@@ -59378,8 +59699,8 @@ pFn
 mwK
 orP
 mQp
-pFn
-mNa
+pVJ
+uGT
 pFn
 jpo
 ueR
@@ -60788,7 +61109,7 @@ orP
 mQp
 aSo
 aMf
-dtP
+lNC
 aJz
 qeF
 gaS
@@ -60939,8 +61260,8 @@ uTz
 uTz
 iHR
 mKS
-mKS
-mKS
+bjo
+bIO
 dLe
 hMC
 hhx
@@ -62514,7 +62835,7 @@ orP
 orP
 orP
 orP
-orP
+gSW
 orP
 orP
 orP
@@ -63099,7 +63420,7 @@ orP
 orP
 orP
 orP
-orP
+wJl
 orP
 orP
 orP
@@ -63375,10 +63696,10 @@ orP
 orP
 orP
 orP
+fHM
 orP
 orP
-orP
-orP
+wJl
 orP
 orP
 orP
@@ -63671,7 +63992,7 @@ orP
 orP
 orP
 orP
-orP
+fHM
 orP
 orP
 orP
@@ -66552,7 +66873,7 @@ uTz
 uTz
 pFn
 sjW
-pFn
+oQL
 pFn
 uTz
 uTz
@@ -68399,7 +68720,7 @@ uTz
 uTz
 orP
 orP
-orP
+mQp
 orP
 orP
 orP
@@ -68686,7 +69007,7 @@ uTz
 uTz
 orP
 orP
-orP
+vzl
 oNp
 orP
 uTz
@@ -68971,9 +69292,9 @@ uTz
 uTz
 uTz
 uTz
+gFt
 orP
-orP
-orP
+mQp
 orP
 orP
 uTz
@@ -69258,7 +69579,7 @@ uTz
 uTz
 uTz
 orP
-orP
+vcU
 uTz
 uTz
 uTz
@@ -70804,7 +71125,7 @@ uTz
 pFn
 pFn
 pFn
-oPO
+pFn
 rAA
 ozU
 orP
@@ -76301,7 +76622,7 @@ uTz
 vav
 lyn
 sQj
-huK
+uyJ
 huK
 ocH
 rMc
@@ -80729,27 +81050,27 @@ aMC
 aMC
 aMC
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -81016,27 +81337,27 @@ cwG
 cwG
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -81303,27 +81624,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -81590,27 +81911,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -81877,27 +82198,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -82147,7 +82468,7 @@ xWF
 xWF
 sEn
 xWF
-xTB
+kXj
 pUh
 xTB
 jPN
@@ -82161,30 +82482,30 @@ xWF
 xWF
 xWF
 xWF
-xWF
+jqe
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -82451,27 +82772,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -82738,27 +83059,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -83012,7 +83333,7 @@ xTB
 pUh
 xTB
 jPN
-mgZ
+pmU
 iRW
 cwG
 mgZ
@@ -83025,27 +83346,27 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -83312,27 +83633,27 @@ xDI
 xDI
 nHL
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -83606,20 +83927,20 @@ aMC
 aMC
 aMC
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -83861,7 +84182,7 @@ mgZ
 mgZ
 mgZ
 rIn
-mgZ
+hqG
 rbH
 mgZ
 mgZ
@@ -83893,20 +84214,20 @@ cwG
 cwG
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -84180,20 +84501,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -84447,8 +84768,8 @@ xWF
 xWF
 xWF
 cwG
-hNn
-hNn
+mgZ
+mgZ
 cwG
 cwG
 cwG
@@ -84467,20 +84788,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -84721,8 +85042,8 @@ qUs
 hLv
 hgO
 cwG
-xWF
-xWF
+rqm
+rqm
 xWF
 xWF
 xWF
@@ -84754,20 +85075,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -85008,8 +85329,8 @@ xWF
 xWF
 hgO
 cwG
-xWF
-xWF
+gqP
+rqm
 xWF
 xWF
 xWF
@@ -85041,20 +85362,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -85291,12 +85612,12 @@ ddV
 cwG
 xDI
 xWF
-xWF
+eMg
 xWF
 hgO
 cwG
-xWF
-xWF
+rqm
+rqm
 xWF
 xWF
 xWF
@@ -85328,20 +85649,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -85615,20 +85936,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -85886,10 +86207,10 @@ mgZ
 mgZ
 cwG
 xDI
+sJK
 xWF
 xWF
-xWF
-xWF
+sJK
 xWF
 cwG
 xWF
@@ -85902,20 +86223,20 @@ xWF
 xWF
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -86152,7 +86473,7 @@ ddV
 cwG
 xWF
 xWF
-xWF
+aCX
 xWF
 hgO
 cwG
@@ -86173,10 +86494,10 @@ mgZ
 mgZ
 cwG
 xDI
+bPQ
 xWF
-xWF
-xWF
-xWF
+aCX
+bPQ
 xWF
 cwG
 xWF
@@ -86190,19 +86511,19 @@ xWF
 cwG
 aMC
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -86459,12 +86780,12 @@ cwG
 mgZ
 mgZ
 cwG
-xDI
+xzy
+wUi
 xWF
 xWF
-xWF
-xWF
-xWF
+wUi
+eMg
 cwG
 xWF
 xDI
@@ -86725,7 +87046,7 @@ wki
 ddV
 cwG
 xWF
-xWF
+eMg
 xWF
 xWF
 hgO
@@ -86747,18 +87068,18 @@ mgZ
 mgZ
 cwG
 xDI
+brh
 xWF
 xWF
-xWF
-xWF
+brh
 xWF
 cwG
 xWF
 xDI
+vip
 xWF
 xWF
-xWF
-xWF
+vip
 xWF
 xWF
 cwG
@@ -87011,9 +87332,9 @@ aMC
 wki
 ddV
 cwG
+oPO
 xWF
-xWF
-xWF
+vip
 xWF
 hgO
 cwG
@@ -87036,7 +87357,7 @@ cwG
 nHL
 cwG
 wLU
-eTd
+oGX
 oJN
 cwG
 cwG
@@ -87320,11 +87641,11 @@ cwG
 mgZ
 mgZ
 fpk
-kIG
+gSF
+rbH
 mgZ
-mgZ
-mgZ
-mgZ
+fyx
+rbH
 mgZ
 mgZ
 mgZ
@@ -87332,10 +87653,10 @@ kIG
 mgZ
 mgZ
 fpk
+fyx
 mgZ
-mgZ
-mgZ
-mgZ
+vFh
+rbH
 fGv
 bPI
 mgZ
@@ -87405,8 +87726,8 @@ unj
 unj
 fGH
 qEV
-vip
-dpk
+jVG
+gtd
 qta
 fEk
 jHc
@@ -87592,7 +87913,7 @@ hAz
 cwG
 cwG
 cwG
-eTd
+oGX
 cwG
 cwG
 cwG
@@ -87607,11 +87928,11 @@ cwG
 mgZ
 mgZ
 fpk
-kIG
+gSF
+rbH
 mgZ
-mgZ
-mgZ
-mgZ
+fyx
+rbH
 mgZ
 mgZ
 mgZ
@@ -87621,8 +87942,8 @@ mgZ
 fpk
 mgZ
 mgZ
-mgZ
-mgZ
+bQb
+rbH
 aMC
 mgZ
 mgZ
@@ -87634,9 +87955,9 @@ mgZ
 aMC
 sIt
 sIt
+xIw
 sIt
-sIt
-sIt
+hkS
 gIs
 wki
 uTz
@@ -87692,7 +88013,7 @@ unj
 fGH
 unj
 qEV
-pFn
+oeW
 rXC
 qta
 fEk
@@ -87875,7 +88196,7 @@ cwG
 meG
 meG
 meG
-meG
+cfm
 meG
 rFp
 meG
@@ -87897,7 +88218,7 @@ cwG
 xkG
 nHL
 nHL
-tWI
+eqq
 nHL
 nHL
 nHL
@@ -87922,8 +88243,8 @@ ddV
 ubh
 sIt
 sIt
-sIt
-sIt
+lbM
+lbM
 gIs
 wki
 uTz
@@ -87979,7 +88300,7 @@ unj
 unj
 unj
 qEV
-dpk
+gtd
 gtd
 qta
 fEk
@@ -88162,11 +88483,11 @@ cwG
 meG
 meG
 meG
-meG
+cfm
 meG
 cwG
-meG
-meG
+uoW
+uoW
 cwG
 meG
 meG
@@ -88183,9 +88504,9 @@ mgZ
 cwG
 xWF
 xWF
+rqm
 xWF
-xWF
-xWF
+rqm
 xWF
 xWF
 xWF
@@ -88452,8 +88773,8 @@ meG
 meG
 meG
 hAz
-meG
-meG
+dSf
+dSf
 cwG
 meG
 meG
@@ -88470,9 +88791,9 @@ mgZ
 cwG
 xWF
 xWF
-xWF
-xWF
-xWF
+rqm
+rqm
+rqm
 xWF
 xWF
 xWF
@@ -88748,7 +89069,7 @@ meG
 meG
 bbp
 meG
-meG
+rmK
 meG
 meG
 cwG
@@ -88757,35 +89078,35 @@ mgZ
 cgS
 xWF
 xWF
+xaZ
 xWF
 xWF
 xWF
 xWF
-xWF
-xWF
+vip
 qCh
 tpy
 tpy
 tpy
-tpy
+jFz
 tpy
 tpy
 cwG
 aMC
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -88841,7 +89162,7 @@ unj
 unj
 qEV
 pFn
-vip
+jVG
 qta
 iXK
 hPP
@@ -89029,7 +89350,7 @@ cwG
 meG
 meG
 cwG
-meG
+dlt
 meG
 meG
 meG
@@ -89043,10 +89364,10 @@ mgZ
 mgZ
 eTd
 xWF
+vip
 xWF
 xWF
-xWF
-xWF
+jqe
 xWF
 xWF
 xWF
@@ -89059,20 +89380,20 @@ tpy
 aqQ
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -89127,8 +89448,8 @@ fGH
 unj
 unj
 qEV
-dpk
-pFn
+gtd
+oeW
 qta
 cHo
 tSk
@@ -89316,8 +89637,8 @@ cwG
 meG
 meG
 cwG
-meG
-meG
+uoW
+uoW
 meG
 meG
 bbp
@@ -89346,20 +89667,20 @@ tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -89604,14 +89925,14 @@ meG
 meG
 cwG
 meG
-meG
+uoW
 meG
 meG
 lCO
 meG
 meG
 meG
-meG
+rmK
 cwG
 mgZ
 mgZ
@@ -89620,7 +89941,7 @@ xWF
 xWF
 xWF
 xWF
-xWF
+vip
 xWF
 xWF
 xWF
@@ -89633,20 +89954,20 @@ tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -89697,7 +90018,7 @@ uTz
 uTz
 unj
 unj
-unj
+ipU
 unj
 unj
 qEV
@@ -89889,10 +90210,10 @@ nHL
 nHL
 lCO
 lCO
-dxs
+pro
 meG
-meG
-meG
+uoW
+rcT
 meG
 lCO
 meG
@@ -89920,20 +90241,20 @@ tpy
 aqQ
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -90173,7 +90494,7 @@ meG
 meG
 meG
 meG
-meG
+uoW
 meG
 meG
 xkG
@@ -90202,25 +90523,25 @@ qCh
 tpy
 tpy
 tpy
-tpy
+jFz
 tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -90275,7 +90596,7 @@ unj
 hKS
 unj
 qEV
-dpk
+gtd
 pFn
 qta
 uVq
@@ -90460,12 +90781,12 @@ meG
 meG
 meG
 iQA
+uoW
 meG
-meG
-iQA
+gZh
 cwG
 meG
-meG
+cfm
 meG
 meG
 aTD
@@ -90494,20 +90815,20 @@ tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -90563,7 +90884,7 @@ unj
 unj
 qEV
 pFn
-pFn
+oeW
 qta
 uVq
 uVq
@@ -90748,8 +91069,8 @@ cwG
 cwG
 cwG
 cwG
-meG
-meG
+uoW
+uoW
 cwG
 meG
 meG
@@ -90757,15 +91078,15 @@ meG
 meG
 aTD
 meG
-meG
+dSf
 meG
 meG
 cwG
 eSb
-pvb
+jbg
 eTd
 xWF
-xWF
+jqe
 xWF
 xWF
 xWF
@@ -90781,20 +91102,20 @@ tpy
 aqQ
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -90850,7 +91171,7 @@ unj
 unj
 qEV
 gtd
-vip
+jVG
 qta
 uAX
 ddp
@@ -91035,8 +91356,8 @@ ePY
 uLt
 meG
 rFp
-meG
-meG
+fUY
+fUY
 cwG
 meG
 meG
@@ -91068,20 +91389,20 @@ tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -91136,7 +91457,7 @@ unj
 unj
 unj
 qEV
-dpk
+gtd
 rXC
 qta
 lLe
@@ -91343,32 +91664,32 @@ xWF
 xWF
 xWF
 xWF
-xWF
+vip
 xWF
 xWF
 tWI
 tpy
 tpy
 tpy
-tpy
+jFz
 tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -91423,7 +91744,7 @@ unj
 ipU
 unj
 qEV
-pFn
+wCT
 pFn
 qta
 qDj
@@ -91642,20 +91963,20 @@ tpy
 tpy
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -91901,16 +92222,16 @@ meG
 cwG
 meG
 meG
-meG
+dSf
 meG
 nHL
 qdZ
 xWF
-qdZ
+ufe
 xWF
 cwG
-xWF
-xWF
+eTd
+eTd
 cwG
 xWF
 xWF
@@ -91929,20 +92250,20 @@ mSj
 mSj
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -92216,20 +92537,20 @@ cwG
 cwG
 cwG
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -92284,8 +92605,8 @@ unj
 fGH
 unj
 qEV
-dpk
-pFn
+jVG
+oeW
 qta
 oKz
 mjd
@@ -92503,20 +92824,20 @@ aMC
 aMC
 aMC
 aMC
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
-uTz
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
+orP
 wki
 uTz
 uTz
@@ -92571,8 +92892,8 @@ unj
 unj
 unj
 qEV
-gtd
-vip
+jVG
+jVG
 aow
 mwk
 mwk

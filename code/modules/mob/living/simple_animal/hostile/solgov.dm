@@ -108,7 +108,10 @@
 	rapid = 5
 	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/c46x30mm
-	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
+	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/automatic/ar/hk21,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
@@ -125,10 +128,11 @@
 	health = 175
 	minimum_distance = 2
 	rapid = 3
-	rapid_fire_delay = 6
+	rapid_fire_delay = 10
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/shotgun/riot/shortie
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
@@ -148,9 +152,15 @@
 	melee_damage_upper = 25
 	retreat_distance = 15
 	minimum_distance = 2
-	casingtype = /obj/item/ammo_casing/a357/match
+	casingtype = /obj/item/ammo_casing/p50
 	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
+	aggro_vision_range = 15
+	vision_range = 15
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+/mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
+	..()
+	summon_backup(25)
+	say("Target Sighted")

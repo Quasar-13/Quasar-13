@@ -270,6 +270,8 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m556
 	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
