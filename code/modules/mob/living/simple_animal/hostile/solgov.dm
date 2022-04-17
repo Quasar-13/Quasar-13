@@ -1,4 +1,3 @@
-//don't spawn this one
 /mob/living/simple_animal/hostile/solgov
 	name = "Solgov Standard"
 	desc = "Protecting your future, unless you don't speak sol common"
@@ -28,6 +27,7 @@
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = 1
+
 //them being russian is a place holder for now.
 /mob/living/simple_animal/hostile/solgov/can_inject(mob/user, error_msg)
 	if(error_msg)
