@@ -28,8 +28,12 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 //them being russian is a place holder for now.
-
+/mob/living/simple_animal/hostile/solgov/can_inject(mob/user, error_msg)
+	if(error_msg)
+		to_chat(user, "<span class='alert'>[p_their(TRUE)] armor is too tough!</span>")
+	return FALSE
 	footstep_type = FOOTSTEP_MOB_SHOE
+
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
@@ -42,4 +46,7 @@
 	casingtype = /obj/item/ammo_casing/n762
 
 /mob/living/simple_animal/hostile/solgov/ranged/shotgun
-/mob/living/simple_animal/hostile/solgov/ranged/assaulter
+//a slight warning, this guy does a lot of fucking damage
+/mob/living/simple_animal/hostile/solgov/ranged/rifle
+	icon_state = "solgovrangedrifle"
+	icon_living = "solgovrangedrifle"
