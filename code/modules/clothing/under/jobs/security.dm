@@ -22,6 +22,12 @@
 	strip_delay = 50
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/security/officer/kepler
+	name = "kepler technician jumpsuit"
+	desc = "A tactical security jumpsuit for officers complete with Solgov belt buckle."
+	icon_state = "keplerunder"
 
 /obj/item/clothing/under/rank/security/officer/grey
 	name = "grey security jumpsuit"
