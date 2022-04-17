@@ -1534,6 +1534,10 @@
 /obj/vehicle/sealed/mecha/working/ripley/mining,
 /turf/open/floor/mech_bay_recharge_floor,
 /area/engine/storage)
+"bTd" = (
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/hellfactory)
 "bTT" = (
 /obj/structure/window/reinforced/fulltile,
 /obj/structure/cable,
@@ -2023,13 +2027,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "cxM" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space{
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/shotgun/lethal);
-	name = "Airport Security"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /obj/item/ammo_casing/shotgun/buckshot,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -4926,15 +4924,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
 "gaS" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/space{
-	desc = "Here for your safety..";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/pistol/m1911);
-	name = "Airport Security"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "gco" = (
@@ -6153,7 +6143,7 @@
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
 "hAz" = (
-/mob/living/simple_animal/hostile/evilborg/engi,
+/mob/living/simple_animal/hostile/solgov/ranged/rifle,
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "hBf" = (
@@ -7275,14 +7265,9 @@
 	},
 /area/ruin/space/has_grav/hellfactory)
 "iQA" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/smg{
-	desc = "Enforcing the qurantine, Armed with SMG";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/proto/unrestricted);
-	name = "Facility Guard"
+/obj/machinery/button/door/directional/west{
+	id = "SovietRadiationCMO";
+	name = "shutter"
 	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
@@ -7699,7 +7684,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "jqe" = (
-/mob/living/simple_animal/hostile/russian/ranged/officer,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -8689,7 +8674,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/skeleton,
+/obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/checker,
 /area/ruin/space/has_grav/hellfactory)
 "kNf" = (
@@ -9906,6 +9891,10 @@
 /obj/item/shard,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
+"mpb" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/hellfactory)
 "mpF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/closed/wall/r_wall,
@@ -9921,13 +9910,10 @@
 /turf/open/indestructible,
 /area/ruin/powered)
 "mqU" = (
-/mob/living/simple_animal/hostile/evilborg/engi,
-/obj/structure/cable,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/obj/effect/decal/cleanable/blood,
+/obj/item/gun/ballistic/automatic/pistol/no_mag,
+/obj/item/ammo_casing/c9x19mm,
+/turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "mrb" = (
 /obj/structure/table/reinforced,
@@ -12136,15 +12122,7 @@
 	id = "Evac GPS Shutter";
 	name = "Shutter"
 	},
-/mob/living/simple_animal/hostile/syndicate/ranged/smg{
-	desc = "Enforcing the qurantine, Armed with SMG";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/proto/unrestricted);
-	name = "Facility Guard"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "pmR" = (
@@ -12276,14 +12254,14 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "pvb" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper{
-	desc = "Protecting your future from unwanted terrorist";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	name = "National Guard"
+/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/grille,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
+/area/ruin/space/has_grav/powered)
 "pvV" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
@@ -12754,15 +12732,7 @@
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
 "pVJ" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/smg{
-	desc = "Enforcing the qurantine, Armed with SMG";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/proto/unrestricted);
-	name = "Facility Guard"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "pVK" = (
@@ -12830,15 +12800,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "qdC" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/smg{
-	desc = "Enforcing the qurantine, Armed with SMG";
-	faction = list("russian");
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/automatic/proto/unrestricted);
-	name = "Facility Guard"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "qdW" = (
@@ -14000,6 +13962,10 @@
 /area/ruin/powered)
 "rzh" = (
 /obj/structure/dresser,
+/obj/item/paper/contractor_guide{
+	info = "Those idiot colonists are breaking into the base, They do not realize what they're dealing with.. I will go out in my own term";
+	name = "Last Note"
+	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "rzl" = (
@@ -14676,7 +14642,9 @@
 "sux" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
-/obj/machinery/door/poddoor/shutters/radiation,
+/obj/machinery/door/poddoor/shutters/radiation{
+	id = "SovietRadiationCMO"
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -15468,13 +15436,7 @@
 /area/ruin/space/has_grav/powered)
 "tuT" = (
 /obj/item/ammo_casing/shotgun/buckshot,
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space{
-	icon_dead = "russianmelee_dead";
-	icon_living = "solgovranged";
-	icon_state = "solgovranged";
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,/obj/item/gun/ballistic/shotgun/lethal);
-	name = "Airport Security"
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "tuW" = (
@@ -17047,6 +17009,10 @@
 /obj/effect/turf_decal/stripes/white/full,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"vjh" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "vjH" = (
 /obj/structure/sign/poster/contraband/bountyhunters,
 /turf/closed/wall/r_wall,
@@ -17066,6 +17032,10 @@
 /obj/structure/rack,
 /turf/open/floor/plating/rust,
 /area/engine/storage)
+"vlj" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "vlF" = (
 /obj/structure/holosign/barrier/medical,
 /turf/open/floor/plasteel/stairs,
@@ -53614,7 +53584,7 @@ qYx
 dpT
 jfB
 pFn
-oPO
+pVJ
 pFn
 mQp
 orP
@@ -54475,7 +54445,7 @@ orP
 orP
 jfB
 pFn
-oPO
+pVJ
 pFn
 mQp
 orP
@@ -56197,7 +56167,7 @@ orP
 orP
 jfB
 pFn
-oPO
+pVJ
 pFn
 mQp
 orP
@@ -57640,7 +57610,7 @@ pFn
 pFn
 pFn
 pFn
-oPO
+vlj
 cry
 pFn
 gZP
@@ -58206,7 +58176,7 @@ orP
 orP
 jfB
 hfU
-gaS
+vjh
 vDh
 jqF
 orP
@@ -60782,7 +60752,7 @@ qeF
 gaS
 qZV
 fmL
-pvb
+fmL
 fmL
 qZV
 vlF
@@ -61074,7 +61044,7 @@ qdC
 qZV
 vlF
 fmL
-gaS
+qdC
 vma
 hre
 iOb
@@ -61355,7 +61325,7 @@ dGp
 rGy
 fmL
 fmL
-pvb
+fmL
 fmL
 fmL
 qZV
@@ -76575,10 +76545,10 @@ uTz
 uTz
 jRD
 cGe
-rMc
+bTd
 isk
 huK
-rMc
+mpb
 sQj
 huK
 huK
@@ -79527,12 +79497,12 @@ yjK
 yjK
 yjK
 yjK
-yjK
-yjK
-yjK
-yjK
-yjK
-yjK
+aMC
+aMC
+aMC
+aMC
+aMC
+aMC
 aMC
 wki
 uTz
@@ -79814,7 +79784,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -80101,7 +80071,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+awx
 yjK
 yjK
 yjK
@@ -80388,7 +80358,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+awx
 yjK
 yjK
 yjK
@@ -80675,7 +80645,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -80962,7 +80932,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 deK
@@ -81249,7 +81219,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -81282,7 +81252,7 @@ mgZ
 mgZ
 cwG
 mgZ
-mgZ
+iQA
 eTd
 xWF
 xWF
@@ -81536,7 +81506,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -81823,7 +81793,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -81856,7 +81826,7 @@ mgZ
 mgZ
 cwG
 ixJ
-mgZ
+mqU
 sux
 xWF
 jqe
@@ -82110,7 +82080,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -82397,7 +82367,7 @@ yjK
 yjK
 yjK
 yjK
-yjK
+aMC
 yjK
 yjK
 yjK
@@ -83001,7 +82971,7 @@ pUh
 xTB
 jPN
 haX
-mgZ
+hAz
 cwG
 mgZ
 tXZ
@@ -83583,7 +83553,7 @@ cwG
 cwG
 cwG
 cwG
-sux
+pvb
 fpk
 nHL
 aMC
@@ -83866,9 +83836,9 @@ mgZ
 hNn
 mgZ
 mgZ
-iQA
 mgZ
-iQA
+mgZ
+mgZ
 mgZ
 mgZ
 mgZ
@@ -87330,7 +87300,7 @@ mgZ
 mgZ
 mgZ
 mgZ
-hAz
+mgZ
 mgZ
 uBx
 qTg
@@ -87611,16 +87581,16 @@ mgZ
 mgZ
 mgZ
 mgZ
-fGv
-bPI
+aMC
 mgZ
 mgZ
 mgZ
 mgZ
 mgZ
 mgZ
-uBx
-qTg
+mgZ
+aMC
+sIt
 sIt
 sIt
 sIt
@@ -87901,9 +87871,9 @@ nHL
 ddV
 pqU
 xDI
-mqU
+xDI
 lCz
-mqU
+xDI
 xDI
 hpn
 ddV
@@ -88194,7 +88164,7 @@ xWF
 xWF
 dkv
 aMC
-ubh
+sIt
 xIw
 sIt
 sIt

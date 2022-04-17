@@ -27,6 +27,7 @@
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = 1
+	var/projectile_deflect_chance = 0
 
 //them being russian is a place holder for now.
 /mob/living/simple_animal/hostile/solgov/can_inject(mob/user, error_msg)
@@ -138,7 +139,7 @@
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
 	name = "Solgov Sniper"
-	desc = "A karate master also an excellent marksman, you're not supposed to be this close to look at him"
+	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
 	maxHealth = 95

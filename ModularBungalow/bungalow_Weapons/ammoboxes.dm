@@ -52,7 +52,7 @@
 	desc = "A speedloader full of .38 catridges ready to be used!"
 	icon_state = "slc38"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	ammo_type = /obj/item/ammo_casing/a38
+	ammo_type = /obj/item/ammo_casing/c38
 
 /obj/item/ammo_box/speedloader/a357
 	name = ".357 speedloader"
