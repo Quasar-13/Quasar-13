@@ -35,6 +35,11 @@
 	return FALSE
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/solgov/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
+	. = ..()
+	if(. > 0 && stat == CONSCIOUS)
+		Retaliate()
+//this is so that they will attack and whatnot :P
 /mob/living/simple_animal/hostile/solgov/ranged
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
@@ -149,3 +154,4 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
