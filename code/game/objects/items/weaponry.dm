@@ -1087,8 +1087,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 			living_target.visible_message(span_danger("[living_target] explodes in a shower of gore!"), blind_message = span_hear("You hear organic matter ripping and tearing!"))
 			living_target.gib()
 			log_combat(user, living_target, "gibbed", src)
-	else if(target.uses_integrity)
-		target.take_damage(force*damage_mod*3, BRUTE, MELEE, FALSE, null, 50)
+	else if(isobj(target))
+		var/obj/obj_target = target
+		obj_target.take_damage(force*damage_mod*3, BRUTE, MELEE, FALSE, null, 50)
 	else if(iswallturf(target) && prob(force*damage_mod*0.5))
 		var/turf/closed/wall/wall_target = target
 		wall_target.dismantle_wall()
