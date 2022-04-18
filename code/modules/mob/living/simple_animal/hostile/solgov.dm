@@ -147,7 +147,7 @@
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
-	/obj/item/gun/ballistic/shotgun/riot/shortie
+	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
