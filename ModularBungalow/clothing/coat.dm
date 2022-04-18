@@ -96,6 +96,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A standard type-1 vest with ceremonial epaulettes and a medal for your service."
 	icon_state = "hosvest"
+	inhand_icon_state = "armoralt"
 
 /obj/item/clothing/suit/armor/vest/gold
 	name = "golden vest"
@@ -103,6 +104,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A limited edition P1-MP bling vest, plastered in REAL gold leaf! You might not wanna wear this into combat..."
 	icon_state = "goldarmor"
+	inhand_icon_state = "armoralt"
 
 /obj/item/clothing/suit/qm
 	name = "quartermaster's coat"
