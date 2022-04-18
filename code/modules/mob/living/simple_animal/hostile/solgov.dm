@@ -167,7 +167,7 @@
 	melee_damage_upper = 25
 	retreat_distance = 15
 	minimum_distance = 4
-	casingtype = /obj/item/ammo_casing/p50
+	casingtype = /obj/item/ammo_casing/p50/penetrator
 	rapid_fire_delay = 25
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 15
