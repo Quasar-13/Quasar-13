@@ -168,7 +168,7 @@
 	retreat_distance = 15
 	minimum_distance = 4
 	casingtype = /obj/item/ammo_casing/p50
-	rapid_fire_delay = 20
+	rapid_fire_delay = 25
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 15
 	vision_range = 15
