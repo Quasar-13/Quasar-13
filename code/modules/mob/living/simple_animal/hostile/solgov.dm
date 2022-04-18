@@ -51,7 +51,7 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
-	name = "Solgov Privateer"
+	name = "Solgov NCO Privateer"
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
@@ -59,6 +59,21 @@
 	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
+	casingtype = /obj/item/ammo_casing/c45
+	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
+/mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
+	name = "Solgov Scientist"
+	desc = "Armed with SMG, Ready to enforce to quarantine"
+	icon_state = "solgovhazmat"
+	icon_living = "solgovhazmat"
+	rapid = 3
+	rapid_fire_delay = 6
+	retreat_distance = 4
+	minimum_distance = 4
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
@@ -78,7 +93,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 55
 	melee_damage_upper = 5
-	minimum_distance = 2
+	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
@@ -104,7 +119,7 @@
 	maxHealth = 155
 	health = 155
 	retreat_distance = 4
-	minimum_distance = 2
+	minimum_distance = 3
 	rapid = 5
 	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/c46x30mm
@@ -151,7 +166,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	retreat_distance = 15
-	minimum_distance = 2
+	minimum_distance = 4
 	casingtype = /obj/item/ammo_casing/p50
 	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
