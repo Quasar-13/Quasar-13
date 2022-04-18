@@ -1205,6 +1205,8 @@
 /obj/effect/turf_decal/stripes/red/full,
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/wooden/snowed,
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/table/reinforced,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "brh" = (
@@ -2082,7 +2084,10 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "cxM" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	dir = 8;
+	lose_patience_timeout = 50
+	},
 /obj/item/ammo_casing/shotgun/buckshot,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -2784,6 +2789,9 @@
 "dpT" = (
 /obj/structure/marker_beacon/burgundy,
 /obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "dqr" = (
@@ -5061,7 +5069,9 @@
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
 "gaS" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "gco" = (
@@ -5433,6 +5443,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
+"gyn" = (
+/mob/living/simple_animal/hostile/solgov/ranged{
+	lose_patience_timeout = 50
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "gAL" = (
 /obj/machinery/vending/engivend,
 /turf/open/floor/mineral/plastitanium,
@@ -5831,7 +5847,9 @@
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "gSW" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "gTw" = (
@@ -8239,7 +8257,9 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "jVG" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "jWn" = (
@@ -8828,6 +8848,11 @@
 "kHX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/grass,
+/area/icemoon/surface/outdoors)
+"kIk" = (
+/obj/structure/barricade/sandbags,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "kIG" = (
 /obj/structure/cable,
@@ -9891,7 +9916,9 @@
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "lXz" = (
-/mob/living/simple_animal/hostile/solgov/ranged,
+/mob/living/simple_animal/hostile/solgov/ranged/smg{
+	dir = 8
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "lYW" = (
@@ -12045,6 +12072,7 @@
 "oQQ" = (
 /obj/structure/marker_beacon,
 /obj/structure/holosign/barrier,
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "oRm" = (
@@ -12208,6 +12236,12 @@
 "pcE" = (
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
+"pcI" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg{
+	lose_patience_timeout = 50
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "pcJ" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/structure/sign/syndicate,
@@ -12354,7 +12388,9 @@
 	id = "Evac GPS Shutter";
 	name = "Shutter"
 	},
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "pmR" = (
@@ -13074,7 +13110,9 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "qdC" = (
-/mob/living/simple_animal/hostile/solgov/ranged/smg,
+/mob/living/simple_animal/hostile/solgov/ranged/smg{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "qdW" = (
@@ -13870,6 +13908,7 @@
 /area/crew_quarters/kitchen)
 "qYx" = (
 /obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "qZC" = (
@@ -15794,7 +15833,8 @@
 "tuT" = (
 /obj/item/ammo_casing/shotgun/buckshot,
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
-	dir = 8
+	dir = 8;
+	lose_patience_timeout = 50
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -16661,6 +16701,13 @@
 /obj/item/clothing/head/nursehat,
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
+"utZ" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "uur" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -17720,7 +17767,9 @@
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
 "vFh" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
 "vFt" = (
@@ -18161,6 +18210,11 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"wik" = (
+/obj/structure/holosign/barrier,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "wip" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/black,
@@ -18787,7 +18841,9 @@
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
 "wJl" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "wKj" = (
@@ -19056,7 +19112,9 @@
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
 "xaZ" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -19443,6 +19501,7 @@
 "xww" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/wooden/snowed,
+/obj/structure/table/reinforced,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "xyw" = (
@@ -54034,21 +54093,21 @@ uTz
 orP
 mQp
 xyw
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
-qYx
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
+utZ
 dpT
 jfB
 pFn
-pVJ
+gyn
 pFn
 mQp
 orP
@@ -54909,7 +54968,7 @@ orP
 orP
 esW
 pFn
-pVJ
+pcI
 pFn
 mQp
 orP
@@ -56050,9 +56109,9 @@ orP
 orP
 orP
 orP
-orP
-orP
-orP
+rxv
+rxv
+rxv
 orP
 orP
 esW
@@ -56337,14 +56396,14 @@ orP
 orP
 orP
 orP
-orP
-orP
-orP
+rxv
+gSW
+rxv
 orP
 orP
 esW
 pFn
-pVJ
+gyn
 pFn
 mQp
 orP
@@ -56624,14 +56683,14 @@ orP
 orP
 orP
 orP
-orP
-orP
-orP
+rxv
+rxv
+rxv
 orP
 orP
 esW
 pFn
-pVJ
+pcI
 pFn
 mQp
 orP
@@ -57494,7 +57553,7 @@ svk
 pFn
 pFn
 pFn
-tNk
+wik
 pFn
 pFn
 pFn
@@ -57778,7 +57837,7 @@ orP
 orP
 orP
 nqo
-pFn
+gyn
 pFn
 pFn
 oQQ
@@ -58068,13 +58127,13 @@ svk
 pFn
 pFn
 pFn
-tNk
+wik
 pFn
 pFn
 pFn
 pFn
 pFn
-gtd
+pcI
 qEV
 pFn
 gZP
@@ -58648,7 +58707,7 @@ orP
 mQp
 pFn
 pFn
-pFn
+gyn
 fGg
 orP
 mQp
@@ -59489,9 +59548,9 @@ mQp
 qYx
 orP
 orP
-orP
-orP
-orP
+rxv
+rxv
+rxv
 orP
 orP
 orP
@@ -59776,9 +59835,9 @@ mQp
 qYx
 orP
 orP
-orP
-orP
-orP
+rxv
+gSW
+kIk
 orP
 orP
 orP
@@ -60063,9 +60122,9 @@ mQp
 qYx
 orP
 orP
-orP
-orP
-orP
+rxv
+kIk
+kIk
 orP
 orP
 orP
