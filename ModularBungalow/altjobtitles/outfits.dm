@@ -114,13 +114,13 @@
 	ears = /obj/item/radio/headset
 
 //secoff
-/datum/outfit/job/officer/reservemilitarypolice
+/datum/outfit/job/security/reservemilitarypolice
 	name = "Security Officer (Reserve MP)"
 	head = /obj/item/clothing/head/beret/sec/navyofficer/black
 	uniform = /obj/item/clothing/under/rank/centcom/ert
 	suit = /obj/item/clothing/suit/armor/vest
 	
-/datum/outfit/job/officer/sergeantofficer
+/datum/outfit/job/security/sergeantofficer
 	name = "Security Officer (Sergeant Officer)"
 	head = /obj/item/clothing/head/beret/sec/navyofficer
 	uniform = /obj/item/clothing/under/rank/security/officer/formal
