@@ -1495,8 +1495,10 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "bNT" = (
-/obj/effect/spawner/lootdrop/whiteship_cere_ripley,
 /obj/effect/turf_decal/stripes/full,
+/obj/vehicle/sealed/mecha/combat/durand{
+	max_equip = 6
+	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ruin/powered)
 "bOk" = (
@@ -2158,6 +2160,8 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cCg" = (
 /obj/structure/table,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "cDh" = (
@@ -2365,10 +2369,13 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "cQf" = (
-/mob/living/simple_animal/hostile/hivebot/rapid,
-/obj/structure/alien/weeds/node,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
+/obj/structure/alien/weeds,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plating/snowed,
+/area/icemoon/surface)
 "cQE" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
 	dir = 4
@@ -5414,9 +5421,10 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/powered)
 "gyj" = (
-/mob/living/simple_animal/hostile/hivebot/range,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
+/obj/structure/alien/weeds,
+/obj/structure/cable,
+/turf/open/floor/plating/snowed,
+/area/icemoon/surface)
 "gAL" = (
 /obj/machinery/vending/engivend,
 /turf/open/floor/mineral/plastitanium,
@@ -5990,7 +5998,8 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "hhH" = (
-/mob/living/simple_animal/hostile/hivebot/mechanic,
+/obj/structure/barricade/sandbags,
+/obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -6719,9 +6728,12 @@
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
 "icp" = (
-/mob/living/simple_animal/hostile/hivebot/strong,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
+/obj/structure/alien/weeds,
+/obj/structure/alien/weeds/node,
+/obj/effect/decal/cleanable/xenoblood/xgibs/larva/body,
+/mob/living/simple_animal/hostile/alien/sentinel,
+/turf/open/floor/plating/snowed,
+/area/icemoon/surface)
 "icx" = (
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
@@ -6809,6 +6821,7 @@
 "ifZ" = (
 /obj/machinery/power/smes,
 /obj/structure/alien/weeds,
+/obj/structure/cable,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "igw" = (
@@ -9671,9 +9684,22 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "lNC" = (
-/obj/machinery/light/warm/directional/east,
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker,
-/turf/open/floor/mineral/plastitanium,
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	aggro_vision_range = 15;
+	name = "\Improper Anti Tank Sniper";
+	projectiletype = /obj/projectile/bullet/p50/penetrator;
+	vision_range = 15
+	},
+/obj/item/gun/ballistic/automatic/sniper_rifle{
+	mag_display_ammo = 1;
+	name = "type 45 sniper rifle";
+	spawnwithmagazine = 0
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
 /area/ruin/powered)
 "lOm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11274,7 +11300,9 @@
 /area/awaymission/bmpship/aft)
 "nZO" = (
 /obj/effect/turf_decal/stripes/full,
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen,
+/mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen{
+	faction = list("russian")
+	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ruin/powered)
 "obl" = (
@@ -12329,8 +12357,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "pmR" = (
-/mob/living/simple_animal/hostile/hivebot/mechanic,
-/turf/open/floor/mineral/plastitanium,
+/obj/effect/turf_decal/stripes/full,
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker,
+/turf/open/floor/engine/hull/reinforced,
 /area/ruin/powered)
 "pmU" = (
 /mob/living/simple_animal/hostile/solgov/ranged/rifle{
@@ -12986,7 +13015,8 @@
 /mob/living/simple_animal/hostile/solgov/ranged/rifle{
 	lose_patience_timeout = 5;
 	name = "Airport Kepler Marksman";
-	projectiletype = /obj/projectile/bullet/a357/match
+	projectiletype = /obj/projectile/bullet/a357/match;
+	ranged_cooldown_time = 15
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -14523,8 +14553,13 @@
 /area/ruin/space/has_grav/powered)
 "rUj" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/mm712x82,
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/ammo_box/magazine/m556{
+	pixel_x = -4
+	},
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "rUk" = (
@@ -15082,7 +15117,7 @@
 "sBp" = (
 /obj/structure/alien/weeds,
 /obj/item/paper/fluff/holodeck/disclaimer{
-	info = "Day 91, I think more rangers are coming to save me at last. but I can't hold out much longer, Hey to anyone who read this, Do me a favour and punch the guy hiding out in the other room will ya? PS, if you want to. take my stuff and Val's stuff too. I won't be needing it now that I'm dead";
+	info = "Day 91, I think more rangers are coming to save me at last. but I can't hold out much longer, Hey to anyone who read this, Do me a favour and punch the guy hiding out in the other room will ya? PS, if you want to. take my stuff and Val's stuff too. I won't be needing it now that I'm dead, Or will be soon";
 	name = "REZNYA"
 	},
 /turf/open/floor/plating/snowed,
@@ -15749,14 +15784,6 @@
 /obj/item/pickaxe/emergency,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
-"tvg" = (
-/mob/living/simple_animal/hostile/hivebot/strong,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "tvE" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
@@ -16251,10 +16278,6 @@
 /obj/structure/sign/departments/medbay/alt,
 /turf/closed/wall/r_wall/syndicate,
 /area/ruin/space/has_grav/powered)
-"ubY" = (
-/mob/living/simple_animal/hostile/hivebot/rapid,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
 "ucJ" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/engine/air,
@@ -16755,14 +16778,6 @@
 /obj/item/circuitboard/machine/protolathe,
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
-"uDQ" = (
-/mob/living/simple_animal/hostile/hivebot/range,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "uEh" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
@@ -17393,14 +17408,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"vnj" = (
-/obj/structure/hivebot_beacon,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "vnm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18029,6 +18036,7 @@
 /obj/structure/alien/weeds,
 /obj/item/circuitboard/machine/rtg/advanced,
 /obj/structure/frame/machine,
+/obj/structure/cable,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "wdH" = (
@@ -44255,7 +44263,7 @@ kNV
 kNV
 kNV
 kmv
-tvg
+kNV
 kNV
 fmL
 fmL
@@ -44540,19 +44548,19 @@ glK
 glK
 kNV
 kNV
-hhH
 kNV
 kNV
 kNV
-fmL
-icp
-fmL
+kNV
 fmL
 fmL
 fmL
 fmL
 fmL
-ubY
+fmL
+fmL
+fmL
+fmL
 glK
 mxD
 fmL
@@ -44829,12 +44837,12 @@ kNV
 kNV
 kNV
 kNV
-hhH
-uDQ
+kNV
+kNV
 fmL
 fmL
-gyj
-ubY
+fmL
+fmL
 fmL
 fmL
 tOd
@@ -45112,14 +45120,14 @@ kai
 tnA
 glK
 glK
-kNV
+hhH
 hhH
 kNV
 kNV
 kNV
 kNV
 fmL
-icp
+fmL
 tOd
 fmL
 fmL
@@ -45399,12 +45407,12 @@ tnA
 tnA
 glK
 glK
-kNV
-kNV
+lNC
 hhH
 kNV
-vnj
-hhH
+kNV
+kNV
+kNV
 fmL
 fmL
 fmL
@@ -45686,18 +45694,18 @@ tnA
 tnA
 glK
 glK
+hhH
+hhH
 kNV
 kNV
 kNV
 kNV
-kNV
-kNV
-cQf
+tOd
 fmL
 fmL
 fmL
 fmL
-gyj
+fmL
 fmL
 fmL
 bgM
@@ -45981,7 +45989,7 @@ fmL
 fmL
 fmL
 fmL
-pmR
+fmL
 fmL
 fmL
 fmL
@@ -46264,7 +46272,7 @@ fmL
 fmL
 tOd
 fmL
-icp
+fmL
 fmL
 fmL
 fmL
@@ -46554,7 +46562,7 @@ fmL
 fmL
 fmL
 fmL
-ubY
+fmL
 fmL
 fmL
 fmL
@@ -48558,7 +48566,7 @@ glK
 glK
 bNT
 oAL
-oAL
+pmR
 qCn
 jfn
 fmL
@@ -49133,7 +49141,7 @@ glK
 wVU
 iOW
 lZx
-oAL
+pmR
 jfn
 doC
 fmL
@@ -53107,7 +53115,7 @@ orP
 orP
 orP
 orP
-orP
+wJl
 orP
 orP
 orP
@@ -53385,8 +53393,8 @@ uTz
 uTz
 uTz
 uTz
-uTz
-uTz
+orP
+orP
 orP
 orP
 orP
@@ -53669,7 +53677,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 eqU
 bhq
 bhq
@@ -53956,7 +53964,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 xyw
 qYx
@@ -54243,7 +54251,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -54530,7 +54538,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -54817,7 +54825,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -55104,7 +55112,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -55391,7 +55399,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -55678,7 +55686,7 @@ uTz
 uTz
 uTz
 uTz
-uTz
+orP
 mQp
 qYx
 orP
@@ -61135,7 +61143,7 @@ orP
 mQp
 aSo
 aMf
-lNC
+dtP
 aJz
 qeF
 gaS
@@ -88333,7 +88341,7 @@ fEk
 uVq
 sBp
 uTF
-cDj
+icp
 uVq
 uAX
 oGt
@@ -90340,7 +90348,7 @@ lWx
 qta
 vNz
 ifZ
-uVq
+cQf
 uAX
 uVq
 uVq
@@ -90627,7 +90635,7 @@ pFn
 qta
 uVq
 wdD
-uVq
+gyj
 bMY
 uVq
 uVq
