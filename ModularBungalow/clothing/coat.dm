@@ -89,6 +89,22 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
+	
+/obj/item/clothing/suit/armor/hos/vest
+	name = "head of security's vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A standard type-1 vest with ceremonial epaulettes and a medal for your service."
+	icon_state = "hosvest"
+	inhand_icon_state = "armoralt"
+
+/obj/item/clothing/suit/armor/vest/gold
+	name = "golden vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A limited edition P1-MP bling vest, plastered in REAL gold leaf! You might not wanna wear this into combat..."
+	icon_state = "goldarmor"
+	inhand_icon_state = "armoralt"
 
 /obj/item/clothing/suit/qm
 	name = "quartermaster's coat"
