@@ -55,6 +55,8 @@
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
+	maxHealth = 115
+	health = 115
 	rapid = 2
 	rapid_fire_delay = 5
 	retreat_distance = 4
@@ -70,10 +72,12 @@
 	desc = "Armed with SMG, Ready to enforce to quarantine"
 	icon_state = "solgovhazmat"
 	icon_living = "solgovhazmat"
+	maxHealth = 135
+	health = 135
 	rapid = 3
 	rapid_fire_delay = 6
 	retreat_distance = 4
-	minimum_distance = 4
+	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
