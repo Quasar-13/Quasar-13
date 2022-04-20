@@ -25,6 +25,7 @@
 	armour_penetration = 30
 	melee_damage_lower = 24
 	melee_damage_upper = 28
+	faction = list(ROLE_DEATHSQUAD)
 	mouse_opacity = MOUSE_OPACITY_ICON
 	possible_a_intents = list(INTENT_DISARM, INTENT_HARM)
 	ranged = TRUE
@@ -82,11 +83,13 @@
 	chosen_message = "<span class='colossus'>You will now avoid performing special attacks.</span>"
 	chosen_attack_num = 10000
 
-/obj/effect/target_field
+/obj/effect/temp_visual/target_field
 	name = "target field"
 	desc = "You have a bad feeling about this..."
 	icon = 'ModularTegustation/Teguicons/tegu_effects.dmi'
 	icon_state = "target_field"
+	duration = 30 SECONDS // In case claw dies in the process
+	randomdir = FALSE
 
 /obj/item/implant/radio/claw
 	name = "prototype radio implant"
@@ -118,9 +121,9 @@
 		return
 
 	Goto(target, move_to_delay, minimum_distance)
-	if(get_dist(src, target) >= 3 && dash_cooldown <= world.time && !charging)
+	if((get_dist(src, target) <= 5) && dash_cooldown <= world.time && !charging)
 		swift_dash(target, dash_num_short, 5)
-	if(get_dist(src, target) > 5 && ultimatum_cooldown <= world.time && !charging)
+	if(ultimatum_cooldown <= world.time && !charging)
 		ultimatum()
 
 /mob/living/simple_animal/hostile/megafauna/claw/Move()
@@ -134,11 +137,11 @@
 	ultimatum_cooldown = world.time + ultimatum_cooldown_time
 	var/list/mob/living/carbon/human/death_candidates = list()
 	for(var/mob/living/carbon/human/maybe_victim in GLOB.player_list)
-		if((maybe_victim.stat != DEAD) && maybe_victim.z == z)
+		if((maybe_victim.stat != DEAD) && !(ROLE_DEATHSQUAD in maybe_victim.faction) && maybe_victim.z == z)
 			death_candidates += maybe_victim
 	var/mob/living/carbon/human/H = null
 	if(!death_candidates.len) // If there is 0 candidates - stop the spell.
-		to_chat(src, "<span class='notice'>There is no more human survivors on the station. Mission accomplished.</span>")
+		to_chat(src, "<span class='notice'>There is no human survivors on the station!</span>")
 		return
 	for(var/i in 1 to 5)
 		if(!death_candidates.len) // No more candidates left? Let's stop picking through the list.
@@ -148,7 +151,7 @@
 		death_candidates.Remove(H)
 
 /mob/living/simple_animal/hostile/megafauna/claw/proc/eviscerate(mob/living/carbon/human/target)
-	var/obj/effect/target_field/uhoh = new /obj/effect/target_field(target.loc)
+	var/obj/effect/temp_visual/target_field/uhoh = new /obj/effect/temp_visual/target_field(target.loc)
 	uhoh.orbit(target, 0)
 	playsound(target, 'ModularTegustation/Tegusounds/claw/eviscerate1.ogg', 100, 1)
 	playsound(src, 'ModularTegustation/Tegusounds/claw/eviscerate1.ogg', 1, 1)
@@ -171,6 +174,8 @@
 	playsound(target, 'ModularTegustation/Tegusounds/claw/eviscerate2.ogg', 100, 1)
 	for(var/turf/b in range(1, src.loc)) // Attacks everyone around.
 		for(var/mob/living/H in b)
+			if(ROLE_DEATHSQUAD in H.faction)
+				continue
 			H.Knockdown(15)
 			H.attack_animal(src)
 			new /obj/effect/temp_visual/cleave(H.loc)
