@@ -143,40 +143,6 @@
 	pin = /obj/item/firing_pin
 
 
-/obj/item/gun/ballistic/shotgun/bulldog/automatic
-	name = "\improper Bulldog Shotgun"
-	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines."
-	icon_state = "bulldog"
-	inhand_icon_state = "bulldog"
-	worn_icon_state = "cshotgun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
-	inhand_x_dimension = 32
-	inhand_y_dimension = 32
-	weapon_weight = WEAPON_MEDIUM
-	mag_type = /obj/item/ammo_box/magazine/m12g
-	can_suppress = FALSE
-	burst_size = 1
-	fire_delay = 0
-	pin = /obj/item/firing_pin/implant/pindicate
-	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
-	actions_types = list()
-	mag_display = TRUE
-	empty_indicator = TRUE
-	empty_alarm = TRUE
-	special_mags = TRUE
-	mag_display_ammo = TRUE
-	semi_auto = TRUE
-	internal_magazine = FALSE
-	tac_reloads = TRUE
-
-/obj/item/gun/ballistic/shotgun/bulldog/automatic/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)
-
-/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted
-	pin = /obj/item/firing_pin
-
 /////////////////////////////
 // DOUBLE BARRELED SHOTGUN //
 /////////////////////////////
