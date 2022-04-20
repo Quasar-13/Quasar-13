@@ -19,6 +19,7 @@
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
+	footstep_type = FOOTSTEP_MOB_SHOE
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -34,7 +35,6 @@
 	if(error_msg)
 		to_chat(user, "<span class='alert'>[p_their(TRUE)] armor is too tough!</span>")
 	return FALSE
-	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/solgov/ranged
 	name = "Solgov Privateer"
