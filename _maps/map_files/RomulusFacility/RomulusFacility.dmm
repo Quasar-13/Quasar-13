@@ -688,11 +688,8 @@
 /turf/open/floor/plasteel,
 /area/storage/mining)
 "cG" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Chemistry lab";
-	req_access_txt = "5"
-	},
-/turf/open/floor/holofloor/white,
+/obj/machinery/door/airlock/hatch,
+/turf/open/floor/plating,
 /area/medical/medbay)
 "cH" = (
 /obj/structure/rack,
@@ -939,6 +936,13 @@
 	},
 /turf/closed/wall/mineral/titanium/survival/pod,
 /area/ruin/space/has_grav/powered)
+"dJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/science)
 "dK" = (
 /obj/machinery/door/airlock/vault{
 	name = "Beacon"
@@ -1128,17 +1132,9 @@
 /turf/open/floor/plating/snowed,
 /area/ruin/powered)
 "ey" = (
-/obj/item/storage/box/monkeycubes{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/item/storage/box/monkeycubes{
-	pixel_x = -5
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/table/reinforced,
+/obj/item/storage/box/syringes,
+/obj/item/healthanalyzer/viro,
 /turf/open/floor/plasteel,
 /area/science)
 "ez" = (
@@ -1347,26 +1343,8 @@
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
 "fr" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/closet{
-	name = "Auxilliary Wardrobe"
-	},
-/obj/item/clothing/suit/toggle/labcoat/virologist,
-/obj/item/clothing/under/rank/medical/virologist,
-/obj/item/clothing/under/rank/rnd/geneticist,
-/obj/item/clothing/suit/toggle/labcoat/genetics,
-/obj/item/clothing/suit/toggle/labcoat/pharmacist,
-/obj/item/clothing/under/rank/medical/pharmacist,
-/obj/item/clothing/suit/hooded/wintercoat/medical/gen,
-/obj/item/clothing/suit/hooded/wintercoat/science,
-/obj/item/clothing/suit/hooded/wintercoat/science,
-/obj/item/clothing/suit/hooded/wintercoat/medical/chem,
-/obj/item/clothing/suit/hooded/wintercoat/science/head,
-/obj/item/clothing/suit/hooded/techpriest/armor,
-/obj/item/clothing/suit/hooded/techpriest/armor,
-/obj/item/clothing/suit/hooded/techpriest/armor,
+/obj/item/circuitboard/computer/pandemic,
+/obj/structure/frame/computer,
 /turf/open/floor/plasteel,
 /area/science)
 "fv" = (
@@ -1375,8 +1353,15 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/bmpship/aft)
 "fw" = (
-/obj/structure/closet/crate/hydroponics,
-/obj/structure/cable,
+/obj/item/storage/box/bodybags{
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/obj/machinery/light,
+/obj/structure/table,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/science)
 "fx" = (
@@ -1474,10 +1459,13 @@
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "fM" = (
-/obj/structure/frame/computer{
-	dir = 1
+/obj/structure/table/reinforced,
+/obj/item/storage/box/beakers{
+	pixel_x = 2;
+	pixel_y = 2
 	},
-/obj/item/circuitboard/computer/scan_consolenew,
+/obj/item/storage/box/beakers,
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/science)
 "fP" = (
@@ -2161,9 +2149,7 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "iI" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/dropper,
+/obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/plasteel,
 /area/science)
 "iJ" = (
@@ -2323,10 +2309,16 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "jp" = (
-/obj/structure/cable,
-/obj/machinery/door/airlock/research/glass{
-	name = "Chemistry Lab";
-	req_one_access_txt = "7"
+/obj/item/storage/box/monkeycubes{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/storage/box/monkeycubes{
+	pixel_x = -5
+	},
+/obj/structure/table,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/science)
@@ -2379,12 +2371,10 @@
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "jv" = (
-/obj/structure/frame/machine,
-/obj/item/circuitboard/machine/dnascanner,
-/obj/structure/window/reinforced{
-	dir = 4;
-	layer = 2.9
+/obj/structure/frame/machine{
+	anchored = 1
 	},
+/obj/item/circuitboard/machine/chem_dispenser,
 /turf/open/floor/plasteel,
 /area/science)
 "jw" = (
@@ -2750,10 +2740,10 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "kX" = (
-/obj/structure/frame/machine{
-	anchored = 1
+/obj/structure/frame/computer{
+	dir = 1
 	},
-/obj/item/circuitboard/machine/chem_heater,
+/obj/item/circuitboard/computer/scan_consolenew,
 /turf/open/floor/plasteel,
 /area/science)
 "kY" = (
@@ -3715,6 +3705,7 @@
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "oK" = (
+/obj/machinery/smartfridge/organ,
 /turf/closed/wall,
 /area/medical/medbay)
 "oL" = (
@@ -4443,7 +4434,6 @@
 /obj/structure/closet/crate/medical,
 /obj/item/storage/firstaid/emergency,
 /obj/item/storage/firstaid/emergency,
-/obj/effect/spawner/lootdrop/medical/firstaid,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
 "rT" = (
@@ -5181,12 +5171,13 @@
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
 "uU" = (
-/obj/structure/frame/machine{
-	anchored = 1
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
 	},
-/obj/item/circuitboard/machine/chem_master,
-/turf/open/floor/plasteel,
-/area/science)
+/obj/machinery/porta_turret/centcom_shuttle,
+/obj/machinery/porta_turret/aux_base,
+/turf/closed/wall/r_wall,
+/area/icemoon/underground/unexplored/rivers)
 "uV" = (
 /obj/structure/rack,
 /obj/item/mecha_parts/part/gygax_armor,
@@ -5352,7 +5343,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "vD" = (
-/obj/machinery/hydroponics,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/xray,
 /turf/open/floor/plasteel,
 /area/science)
 "vE" = (
@@ -5553,8 +5545,7 @@
 /turf/open/floor/plasteel,
 /area/storage/mining)
 "wA" = (
-/obj/item/circuitboard/computer/pandemic,
-/obj/structure/frame/computer,
+/obj/machinery/hydroponics,
 /turf/open/floor/plasteel,
 /area/science)
 "wB" = (
@@ -5608,11 +5599,11 @@
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
 "wJ" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/science)
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/machinery/porta_turret/centcom_shuttle,
+/obj/machinery/porta_turret/aux_base,
+/turf/closed/wall/r_wall,
+/area/icemoon/underground/unexplored/rivers)
 "wK" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/snowed/icemoon,
@@ -5626,8 +5617,8 @@
 /area/hallway/primary/central)
 "wN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/science)
@@ -5790,7 +5781,6 @@
 "xm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm/directional/west,
-/obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/plasteel,
 /area/science)
 "xn" = (
@@ -5832,15 +5822,9 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/bmpship/aft)
 "xy" = (
-/obj/item/storage/box/bodybags{
-	pixel_x = -1;
-	pixel_y = 6
-	},
-/obj/machinery/light,
-/obj/structure/table,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
 /turf/open/floor/plasteel,
 /area/science)
 "xz" = (
@@ -6144,6 +6128,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
+	},
+/obj/structure/closet/secure_closet/medical2{
+	req_access = "0"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay)
@@ -6635,12 +6622,17 @@
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
 "AR" = (
+/obj/structure/table,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/medical/firstaid,
+/obj/effect/spawner/lootdrop/medical/firstaid,
+/obj/effect/spawner/lootdrop/medical/firstaid,
+/obj/effect/spawner/lootdrop/medical/firstaid,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay)
 "AU" = (
@@ -6890,6 +6882,10 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
+"BM" = (
+/obj/machinery/chem_master,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay)
 "BN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
@@ -7388,12 +7384,11 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "DN" = (
-/obj/structure/cable,
-/obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid_rare,
-/turf/open/floor/plasteel/white,
-/area/medical/medbay)
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/science)
 "DP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -7653,13 +7648,24 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "Fa" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/beakers{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/storage/box/beakers,
 /obj/machinery/light,
+/obj/structure/closet{
+	name = "Auxilliary Wardrobe"
+	},
+/obj/item/clothing/suit/toggle/labcoat/virologist,
+/obj/item/clothing/under/rank/medical/virologist,
+/obj/item/clothing/under/rank/rnd/geneticist,
+/obj/item/clothing/suit/toggle/labcoat/genetics,
+/obj/item/clothing/suit/toggle/labcoat/pharmacist,
+/obj/item/clothing/under/rank/medical/pharmacist,
+/obj/item/clothing/suit/hooded/wintercoat/medical/gen,
+/obj/item/clothing/suit/hooded/wintercoat/science,
+/obj/item/clothing/suit/hooded/wintercoat/science,
+/obj/item/clothing/suit/hooded/wintercoat/medical/chem,
+/obj/item/clothing/suit/hooded/wintercoat/science/head,
+/obj/item/clothing/suit/hooded/techpriest/armor,
+/obj/item/clothing/suit/hooded/techpriest/armor,
+/obj/item/clothing/suit/hooded/techpriest/armor,
 /turf/open/floor/plasteel,
 /area/science)
 "Fb" = (
@@ -7841,17 +7847,12 @@
 /turf/open/floor/plating/asteroid/snow,
 /area/icemoon/surface/outdoors)
 "FO" = (
-/obj/item/healthanalyzer/paramed,
-/obj/item/healthanalyzer/paramed,
-/obj/item/healthanalyzer/paramed,
-/obj/item/healthanalyzer/paramed,
-/obj/item/healthanalyzer/chem,
-/obj/item/healthanalyzer/chem,
-/obj/item/healthanalyzer/wound,
-/obj/item/defibrillator,
-/obj/structure/closet/crate/medical,
-/turf/open/floor/plasteel/white,
-/area/medical/medbay)
+/obj/structure/frame/machine{
+	anchored = 1
+	},
+/obj/item/circuitboard/machine/chem_master,
+/turf/open/floor/plasteel,
+/area/science)
 "FP" = (
 /obj/structure/rack,
 /obj/item/storage/backpack/duffelbag/syndie/ammo/smg{
@@ -7871,10 +7872,12 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/bmpship/midship)
 "FT" = (
-/obj/structure/frame/machine{
-	anchored = 1
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/dnascanner,
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
 	},
-/obj/item/circuitboard/machine/chem_dispenser,
 /turf/open/floor/plasteel,
 /area/science)
 "FU" = (
@@ -8571,10 +8574,15 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "IK" = (
+/obj/structure/window/reinforced/fulltile/ice{
+	name = "frozen window"
+	},
 /obj/effect/turf_decal/weather/snow/corner,
-/obj/machinery/porta_turret/centcom_shuttle,
-/turf/closed/wall/r_wall,
-/area/science)
+/obj/machinery/door/poddoor/shutters{
+	id = "Medbay Window"
+	},
+/turf/open/floor/plating,
+/area/icemoon/underground/unexplored/rivers)
 "IL" = (
 /obj/machinery/vending/hydronutrients,
 /obj/effect/turf_decal/tile/yellow{
@@ -9918,10 +9926,12 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "Ov" = (
-/obj/effect/turf_decal/weather/snow/corner,
-/obj/machinery/porta_turret/centcom_shuttle,
-/turf/closed/wall/r_wall,
-/area/medical/medbay)
+/obj/structure/frame/machine{
+	anchored = 1
+	},
+/obj/item/circuitboard/machine/chem_heater,
+/turf/open/floor/plasteel,
+/area/science)
 "Ox" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -10241,6 +10251,12 @@
 /obj/machinery/deepfryer,
 /turf/open/floor/engine/air,
 /area/ruin/powered)
+"PI" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/science)
 "PJ" = (
 /obj/structure/cable,
 /obj/structure/bed/maint,
@@ -10673,9 +10689,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "Rn" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/syringes,
-/obj/item/healthanalyzer/viro,
+/obj/structure/closet/crate/hydroponics,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/science)
 "Ro" = (
@@ -10840,6 +10855,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/crew_quarters/heads/captain)
+"RS" = (
+/obj/machinery/button/door/directional/west{
+	id = "Medbay Window"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay)
 "RT" = (
 /obj/effect/spawner/structure/window,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -11354,6 +11375,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating,
 /area/awaymission/bmpship/midship)
+"Un" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay)
 "Uo" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/snowed/icemoon,
@@ -11537,6 +11562,18 @@
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot,
 /turf/open/floor/carpet,
 /area/awaymission/bmpship/fore)
+"UV" = (
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/paramed,
+/obj/item/healthanalyzer/chem,
+/obj/item/healthanalyzer/chem,
+/obj/item/healthanalyzer/wound,
+/obj/item/defibrillator,
+/obj/structure/closet/crate/medical,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay)
 "UW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -12357,14 +12394,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "Yg" = (
-/obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
-	},
-/obj/effect/turf_decal/weather/snow/corner,
-/obj/machinery/door/poddoor/shutters{
-	id = "Medbay Window"
-	},
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_heater,
+/turf/open/floor/plasteel/white,
 /area/medical/medbay)
 "Yh" = (
 /obj/machinery/suit_storage_unit/ert/medical,
@@ -43358,7 +43390,7 @@ XS
 VG
 cP
 zY
-iM
+DN
 fM
 qG
 qT
@@ -43644,8 +43676,8 @@ KE
 hY
 Be
 OV
-zY
-cP
+FO
+Ov
 jv
 qG
 qT
@@ -44216,7 +44248,7 @@ OR
 gP
 sx
 kV
-vD
+dJ
 OV
 cP
 iM
@@ -44790,11 +44822,11 @@ BK
 Vr
 Lj
 WY
-fw
+zY
 qB
-cP
-cP
-cP
+PI
+jp
+fw
 qG
 qT
 qT
@@ -45077,12 +45109,12 @@ Lj
 Yj
 MK
 WY
-WY
-jp
-WY
-WY
-WY
-IK
+wA
+OV
+zY
+iM
+kX
+qG
 qT
 qT
 qT
@@ -45364,10 +45396,10 @@ Mr
 Vr
 MK
 WY
-cP
+wA
 OV
-kX
-uU
+zY
+cP
 FT
 qG
 qT
@@ -45654,7 +45686,7 @@ WY
 wA
 OV
 cP
-wJ
+zY
 Fa
 qG
 qT
@@ -46230,9 +46262,9 @@ ic
 cG
 PG
 ic
-Ov
-dO
-dO
+ic
+uU
+Uy
 qT
 qT
 qT
@@ -46517,10 +46549,10 @@ OK
 AR
 Ld
 Ro
-Yg
-dO
-dO
-dO
+RS
+IK
+Uy
+Uy
 qT
 qT
 qT
@@ -46803,11 +46835,11 @@ yd
 eP
 Ld
 Jo
-DN
-Yg
-dO
-dO
-dO
+Jo
+Un
+IK
+Uy
+Uy
 qT
 qT
 qT
@@ -47091,11 +47123,11 @@ Ld
 yM
 wV
 rg
-Yg
-dO
-dO
-dO
-dO
+BM
+IK
+Uy
+Uy
+Uy
 qT
 qT
 qT
@@ -47379,10 +47411,10 @@ Hn
 aL
 cw
 Yg
-dO
-dO
-dO
-dO
+IK
+Uy
+Uy
+Uy
 qT
 qT
 qT
@@ -47664,14 +47696,14 @@ lR
 Ef
 Us
 aL
-FO
-Yg
-dO
-dO
-dO
-dO
-dO
-dO
+eP
+UV
+IK
+Uy
+Uy
+Uy
+Uy
+Uy
 qT
 qT
 qT
@@ -47952,15 +47984,15 @@ gu
 RT
 Kw
 oK
-Ov
-dO
-dO
-dO
-dO
-dO
-dO
-dO
-dO
+ic
+wJ
+Uy
+Uy
+Uy
+Uy
+Uy
+Uy
+Uy
 qT
 qT
 qT
@@ -48246,8 +48278,8 @@ Kr
 Kr
 Kr
 Kr
-dO
-dO
+Uy
+Uy
 qT
 qT
 qT
