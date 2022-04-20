@@ -25,7 +25,7 @@
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/civilian/bartender
 	suit = /obj/item/clothing/suit/armor/vest
-	backpack_contents = list(/obj/item/storage/box/beanbag=1)
+	backpack_contents = list(/obj/item/ammo_box/shotgun/beanbag=1)
 	shoes = /obj/item/clothing/shoes/laceup
 
 /datum/outfit/job/bartender/post_equip(mob/living/carbon/human/H, visualsOnly)

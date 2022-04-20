@@ -22,6 +22,8 @@
 
 	id = /obj/item/card/id/black
 	uniform = /obj/item/clothing/under/syndicate/coldres
+	ears = /obj/item/radio/headset
+	l_hand = /obj/item/encryptionkey/outpost
 	belt = null
 
 

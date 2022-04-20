@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/solgov
 
-	access = list(ACCESS_ENGINE)
-	minimal_access = list(ACCESS_ENGINE)
+	access = list(ACCESS_ENGINE, ACCESS_ATMOSPHERICS)
+	minimal_access = list(ACCESS_ENGINE, ACCESS_ATMOSPHERICS)
 	paycheck = PAYCHECK_HARD
 	paycheck_department = ACCOUNT_ENG
 
