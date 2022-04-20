@@ -1,6 +1,7 @@
 /mob/living/simple_animal/hostile/skeleton/necromancer
 	desc = "The creation of a powerful necromancer."
 	faction = list("necromancer")
+	mob_size = MOB_SIZE_LARGE // So crusher works on them
 
 /mob/living/simple_animal/hostile/skeleton/necromancer/strong
 	desc = "The creation of a powerful necromancer. This one looks a bit tougher."
@@ -37,14 +38,14 @@
 		visible_message("<span class='warning'>[src] raises its hand in the air as red light appears under [target]!</span>")
 		ranged_cooldown = world.time + ranged_cooldown_time
 		var/list/fire_zone = list()
-		for(var/i = 1 to 2)
+		for(var/i = 0 to 2)
 			playsound(T, 'sound/machines/clockcult/stargazer_activate.ogg', 50, 1)
 			fire_zone = spiral_range_turfs(i, T) - spiral_range_turfs(i-1, T)
 			for(var/turf/open/TC in fire_zone)
 				new /obj/effect/temp_visual/cult/turf/floor(TC)
-			SLEEP_CHECK_DEATH(2)
-		SLEEP_CHECK_DEATH(4)
-		for(var/i = 1 to 2)
+			SLEEP_CHECK_DEATH(1.5)
+		SLEEP_CHECK_DEATH(2.5)
+		for(var/i = 0 to 2)
 			fire_zone = spiral_range_turfs(i, T) - spiral_range_turfs(i-1, T)
 			playsound(T, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE)
 			for(var/turf/open/TC in fire_zone)
@@ -54,4 +55,4 @@
 						continue
 					L.adjustFireLoss(15)
 					to_chat(L, "<span class='userdanger'>You're hit by a death field!</span>")
-			SLEEP_CHECK_DEATH(2)
+			SLEEP_CHECK_DEATH(1.5)

@@ -90,9 +90,12 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	var/primed = FALSE
 	var/bolt_cooldown
+	/// Cooldown for the lightning bolt action
 	var/bolt_cooldown_time = 10 SECONDS
+	/// Maximum amount of objects/mobs that can be affected by the lightning bolt
 	var/max_affected = 3
-	var/bolt_power = 50000 // Damage in a weird way. Human damage is divided by thousand
+	/// Damage in a weird way. Human damage is divided by 2 thousands
+	var/bolt_power = 50000
 
 /obj/item/necromancer_sword/attack_self(mob/user)
 	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -123,7 +126,7 @@
 	user.visible_message("<span class='warning'>[user] points [user.p_their()] blade towards [T] as a lightning bolt appears!</span>", "<span class='notice'>You release blade's energy at [T]!</span>", "<span class='warning'>You hear an electric discharge!</span>")
 	playsound(user, 'sound/magic/lightningshock.ogg', 40, 1)
 	new /obj/effect/temp_visual/cult/turf/floor(T)
-	addtimer(CALLBACK(src, .proc/send_bolt, T), 5)
+	addtimer(CALLBACK(src, .proc/send_bolt, T, user), 5)
 
 /obj/item/necromancer_sword/proc/send_bolt(turf/T, mob/living/user)
 	var/turf/lightning_source = get_step(get_step(T, NORTH), NORTH)
@@ -147,7 +150,7 @@
 		T.visible_message("<span class='warning'>A skeleton rises from a pile of remains!</span>")
 		var/mob/living/simple_animal/skele = new /mob/living/simple_animal/hostile/skeleton/necromancer(T)
 		// Skeleton will not attack its creator
-		var/list/skele_factions = user.faction.Copy()
+		var/list/skele_factions = user?.faction.Copy()
 		for(var/F in skele_factions)
 			if(F == "neutral")
 				skele_factions -= F

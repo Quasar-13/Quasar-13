@@ -58,7 +58,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/hopcoat
-	name = "head of personnel's uniform"
+	name = "head of personnel's official coat"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A formal but simple coat worn by the Head of Personnel."
@@ -89,6 +89,22 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
+	
+/obj/item/clothing/suit/armor/hos/vest
+	name = "head of security's vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A standard type-1 vest with ceremonial epaulettes and a medal for your service."
+	icon_state = "hosvest"
+	inhand_icon_state = "armoralt"
+
+/obj/item/clothing/suit/armor/vest/gold
+	name = "golden vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A limited edition P1-MP bling vest, plastered in REAL gold leaf! You might not wanna wear this into combat..."
+	icon_state = "goldarmor"
+	inhand_icon_state = "armoralt"
 
 /obj/item/clothing/suit/qm
 	name = "quartermaster's coat"
@@ -99,7 +115,7 @@
 	inhand_icon_state = "armor"
 	dog_fashion = null
 
-/obj/item/clothing/suit/CoCoat
+/obj/item/clothing/suit/armor/captain/CoCoat
 	name = "CoC coat"
 	desc = "The Chief Custodian's overcoat. Comfy, fancy, and with pockets for days."
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'

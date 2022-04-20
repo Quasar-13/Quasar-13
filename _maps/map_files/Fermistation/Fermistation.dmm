@@ -97,6 +97,7 @@
 /area/crew_quarters/bar)
 "abD" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
 "abE" = (
@@ -1155,9 +1156,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
-"ayQ" = (
-/turf/closed/wall/r_wall,
-/area/tcommsat/server)
 "aza" = (
 /obj/machinery/plate_press,
 /obj/effect/decal/cleanable/dirt,
@@ -2811,12 +2809,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
-"bfM" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/tcommsat/server)
 "bfR" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -3285,9 +3277,6 @@
 	},
 /turf/open/floor/plating,
 /area/chapel/office)
-"boU" = (
-/turf/closed/wall/r_wall,
-/area/tcommsat/server)
 "bpa" = (
 /obj/structure/lattice,
 /obj/item/stack/cable_coil,
@@ -3403,9 +3392,9 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bru" = (
-/obj/item/storage/box/lethalshot,
-/obj/item/storage/box/lethalshot,
-/obj/item/storage/box/lethalshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner/north,
 /obj/item/storage/belt/bandolier,
@@ -4014,16 +4003,6 @@
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
-"bCU" = (
-/obj/structure/grille,
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/yellow/visible{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/engine/atmos)
 "bDc" = (
 /obj/structure/rack,
 /obj/item/clothing/head/papersack/smiley,
@@ -6143,9 +6122,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plasteel/showroomfloor,
 /area/hallway/secondary/service)
-"cro" = (
-/turf/closed/wall,
-/area/maintenance/disposal)
 "cry" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -12072,8 +12048,12 @@
 /area/crew_quarters/theatre)
 "eDj" = (
 /obj/structure/table/wood/fancy/green,
-/obj/item/reagent_containers/food/drinks/dry_ramen,
+/obj/item/reagent_containers/food/drinks/dry_ramen{
+	pixel_x = 13;
+	pixel_y = 13
+	},
 /obj/structure/cable,
+/obj/item/food/cakeslice/lime,
 /turf/open/floor/carpet/green,
 /area/bridge)
 "eDk" = (
@@ -12726,9 +12706,6 @@
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plasteel/white,
 /area/security/prison/rec)
-"ePv" = (
-/turf/closed/wall/r_wall,
-/area/quartermaster/miningoffice)
 "ePz" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -16727,6 +16704,7 @@
 /area/security/prison/rec)
 "glQ" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
 "gmj" = (
@@ -18572,12 +18550,12 @@
 "gTw" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/north,
-/obj/item/storage/box/rubbershot{
+/obj/item/ammo_box/shotgun/rubber{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot{
+/obj/item/ammo_box/shotgun/rubber,
+/obj/item/ammo_box/shotgun/rubber{
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -23411,9 +23389,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
-"iEL" = (
-/turf/closed/wall,
-/area/maintenance/starboard/aft)
 "iEV" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -27025,7 +27000,12 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "jSc" = (
-/obj/structure/closet/crate/trashcart/filled,
+/obj/structure/closet/crate/trashcart/laundry,
+/obj/item/clothing/accessory/maidapron/fools,
+/obj/item/clothing/gloves/color/maid,
+/obj/item/clothing/head/maidheadband,
+/obj/item/clothing/neck/maid,
+/obj/item/clothing/under/rank/civilian/janitor/maid/fools,
 /turf/open/floor/plating,
 /area/maintenance/central)
 "jSd" = (
@@ -37551,9 +37531,7 @@
 "nyp" = (
 /obj/structure/table,
 /obj/machinery/door/window,
-/obj/item/shard{
-	icon_state = "medium"
-	},
+/obj/item/reagent_containers/glass/bottle/sugar,
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "nyC" = (
@@ -42781,7 +42759,12 @@
 /obj/structure/window/reinforced/spawner/north{
 	dir = 2
 	},
-/obj/item/reagent_containers/glass/bottle/sugar,
+/obj/item/paper_bin{
+	layer = 2.9
+	},
+/obj/item/pen{
+	pixel_y = 1
+	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "psq" = (
@@ -46588,6 +46571,13 @@
 	dir = 8
 	},
 /area/crew_quarters/dorms)
+"qyg" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fore)
 "qym" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -54952,9 +54942,6 @@
 /area/medical/chemistry)
 "tkO" = (
 /obj/structure/grille,
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
@@ -57700,9 +57687,6 @@
 "ugy" = (
 /turf/closed/wall/r_wall,
 /area/quartermaster/miningoffice)
-"ugG" = (
-/turf/closed/wall/r_wall,
-/area/security/execution/education)
 "uhc" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
@@ -58831,9 +58815,6 @@
 /area/security/courtroom)
 "uzr" = (
 /obj/structure/grille,
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
 	},
@@ -58869,9 +58850,6 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/closed/wall,
 /area/engine/atmos)
-"uBp" = (
-/turf/closed/wall/r_wall,
-/area/space/nearstation)
 "uBu" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/plasteel/white,
@@ -66227,6 +66205,7 @@
 /area/library)
 "wSq" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
 "wSu" = (
@@ -66617,8 +66596,8 @@
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/structure/window/reinforced/spawner,
-/obj/item/storage/box/breachingshells,
-/obj/item/storage/box/breachingshells,
+/obj/item/ammo_box/shotgun/breaching,
+/obj/item/ammo_box/shotgun/breaching,
 /obj/item/gun/ballistic/shotgun/automatic/breaching,
 /obj/item/gun/ballistic/shotgun/automatic/breaching,
 /turf/open/floor/plasteel/checker,
@@ -85233,7 +85212,7 @@ qjB
 rPG
 uzr
 jxr
-bCU
+tkO
 rPG
 uzr
 jxr
@@ -88299,7 +88278,7 @@ xjt
 xjt
 wzh
 yic
-cro
+wzh
 fMK
 nFm
 nFm
@@ -90345,7 +90324,7 @@ fMK
 fMK
 fMK
 fMK
-ugG
+wQb
 sBE
 sBE
 sBE
@@ -92174,7 +92153,7 @@ ugy
 pXo
 jQj
 pXo
-ePv
+ugy
 fMK
 rMX
 fKc
@@ -114477,7 +114456,7 @@ fMK
 aBr
 wlR
 wlR
-bWl
+qyg
 cSa
 nyp
 elt
@@ -116112,7 +116091,7 @@ pWw
 oBX
 pWw
 nFm
-iEL
+vKN
 nFm
 pWw
 pWw
@@ -117101,7 +117080,7 @@ mil
 fxm
 oQZ
 vqi
-bfM
+wtA
 wQq
 wQq
 wQq
@@ -117358,7 +117337,7 @@ gXk
 fxm
 fgL
 fah
-bfM
+wtA
 wQq
 sIM
 dfa
@@ -117615,7 +117594,7 @@ jXM
 wan
 voO
 vkN
-bfM
+wtA
 wQq
 vbL
 liw
@@ -117872,7 +117851,7 @@ fxm
 wan
 tPj
 mgL
-bfM
+wtA
 wQq
 vbL
 vbL
@@ -118129,7 +118108,7 @@ cQC
 rux
 cQC
 rHK
-bfM
+wtA
 wQq
 mVH
 vbL
@@ -118386,7 +118365,7 @@ oQZ
 pgP
 rKZ
 xiI
-bfM
+wtA
 wQq
 nyb
 vbL
@@ -118643,7 +118622,7 @@ mUE
 uHf
 qFV
 dMC
-bfM
+wtA
 wQq
 uIi
 mTy
@@ -118900,7 +118879,7 @@ bXZ
 vZp
 lIi
 eKL
-bfM
+wtA
 wQq
 vbL
 vbL
@@ -118926,8 +118905,8 @@ pWw
 qXg
 pWw
 pWw
-uBp
-uBp
+xCA
+xCA
 pWw
 pWw
 pWw
@@ -119157,7 +119136,7 @@ aTa
 tYS
 sKs
 lLz
-bfM
+wtA
 wQq
 vbL
 vbL
@@ -119414,7 +119393,7 @@ ljc
 kYA
 uND
 sTY
-bfM
+wtA
 wQq
 wRe
 liw
@@ -119671,7 +119650,7 @@ bSx
 nEe
 bSx
 bSx
-bfM
+wtA
 wQq
 wQq
 pSm
@@ -119925,10 +119904,10 @@ tMT
 tMT
 tMT
 tMT
-ayQ
 tMT
-ayQ
-bfM
+tMT
+tMT
+wtA
 kDy
 wQq
 wQq
@@ -120178,13 +120157,13 @@ dBW
 fMK
 fMK
 tMT
-ayQ
 tMT
-boU
 tMT
-ayQ
 tMT
-ayQ
+tMT
+tMT
+tMT
+tMT
 wtA
 wQq
 wQq
@@ -120954,7 +120933,7 @@ xCA
 nFm
 pWw
 nFm
-uBp
+xCA
 xCA
 pWw
 xCA

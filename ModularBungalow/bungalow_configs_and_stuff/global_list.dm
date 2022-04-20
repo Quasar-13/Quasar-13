@@ -5,7 +5,8 @@ GLOBAL_LIST_INIT(mining_traits, list(
 	"icemoon" = ZTRAITS_ICEMOON,
 	"tidalmoon" = ZTRAITS_TIDALMOON,
 	"jungle" = ZTRAITS_JUNGLE,
-	"rockplanet" = ZTRAITS_ROCKPLANET))
+	"rockplanet" = ZTRAITS_ROCKPLANET,
+	"asteroidbelt" = ZTRAITS_ASTEROIDBELT))
 
 //TEGU
 GLOBAL_LIST_INIT(tegu_job_assignment, list("Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "Syndicate Overlord", "Syndicate Mastermind", "Syndicate Admiral", "Syndicate Official", "Syndicate", "Syndicate Commander", "Syndicate Ship Captain", "TerraGov Official"))

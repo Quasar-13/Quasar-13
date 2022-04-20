@@ -25,8 +25,8 @@
 	new /obj/item/card/id/departmental_budget/eng(src)
 	new /obj/item/storage/box/skillchips/engineering(src)
 	new /obj/item/gun/ballistic/shotgun/riot/shortie(src)
-	new /obj/item/storage/box/beanbag(src)
-	new /obj/item/storage/box/beanbag(src)
+	new /obj/item/ammo_box/shotgun/beanbag(src)
+	new /obj/item/ammo_box/shotgun/beanbag(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"
