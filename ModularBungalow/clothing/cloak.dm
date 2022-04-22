@@ -11,6 +11,13 @@
 	icon = 'ModularBungalow/clothing/icons/cloak.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/cloakw.dmi'
 	icon_state = "ranger_cloak"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/neck/cloak/ranger/snow
+	name = "kepler ranger cloak"
+	desc = "The old aged cloak of a snow ranger. Smells of potatoes."
+	icon_state = "ranger_snowcloak"
+
 
 /obj/item/clothing/neck/cloak/samurai
 	name = "samurai cloak"

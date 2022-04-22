@@ -72,6 +72,19 @@
 //*****************************************************
 //*****************************************************
 
+/obj/item/clothing/suit/security/officer/tan
+	name = "security officer's tan jacket"
+	desc = "This tan jacket is for those special occasions when a security officer wants the NT certified DRIP."
+	icon_state = "officertanjacket"
+	
+/obj/item/clothing/suit/security/officer/hos/tan
+	name = "head of security's tan jacket"
+	icon_state = "hostanjacket"
+	
+/obj/item/clothing/suit/security/officer/warden/tan
+	name = "warden's tan jacket"
+	icon_state = "wardentanjacket"
+	
 /obj/item/clothing/suit/armor/captain
 	name = "debug captain's armor"
 	icon = 'ModularBungalow/clothing/icons/parade.dmi'

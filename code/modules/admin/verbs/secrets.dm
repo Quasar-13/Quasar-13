@@ -585,12 +585,6 @@
 				else
 					H.equip_to_slot_or_del(newuniform, ITEM_SLOT_ICLOTHING)
 
-				// Some stuff gets yeeted.
-				qdel(H.wear_suit)
-				qdel(H.head)
-				qdel(H.wear_mask)
-				qdel(H.shoes)
-
 				if(isplasmaman(H)) // So you don't get killed
 					var/obj/item/clothing/mask/newhead = new /obj/item/clothing/head/helmet/space/plasmaman/robotics/anarchy
 					newuniform = new /obj/item/clothing/under/plasmaman/robotics/anarchy

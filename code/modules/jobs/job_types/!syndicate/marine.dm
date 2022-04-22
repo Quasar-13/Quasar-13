@@ -31,9 +31,10 @@
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	mask = /obj/item/clothing/mask/gas/syndicate
+	head = /obj/item/clothing/head/helmet/swat
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
-	suit = /obj/item/clothing/suit/armor/vest/syndicate
+	suit = /obj/item/clothing/suit/armor/vest/syndicate/marine
 
 	belt = null
 
