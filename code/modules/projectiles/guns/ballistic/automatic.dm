@@ -268,7 +268,6 @@
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/m556
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
@@ -276,6 +275,71 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+
+/obj/item/gun/ballistic/automatic/ar/xm29
+	name = "\improper SG-XM29 'Annihilator'"
+	desc = "It's a grenade launcer with a rifle attached to it.. used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "xm29"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+
+/obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/ar/xm29/afterattack(atom/target, mob/living/user, flag, params)
+	if(select == 2)
+		underbarrel.afterattack(target, user, flag, params)
+	else
+		return ..()
+
+/obj/item/gun/ballistic/automatic/ar/xm29/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/ammo_casing))
+		if(istype(A, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self(user)
+			underbarrel.attackby(A, user, params)
+	else
+		..()
+
+/obj/item/gun/ballistic/automatic/ar/xm29/update_overlays()
+	. = ..()
+	switch(select)
+		if(0)
+			. += "[initial(icon_state)]_semi"
+		if(1)
+			. += "[initial(icon_state)]_burst"
+		if(2)
+			. += "[initial(icon_state)]_gren"
+
+/obj/item/gun/ballistic/automatic/ar/xm29/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 2
+			to_chat(user, "<span class='notice'>You switch to grenades.</span>")
+		if(2)
+			select = 0
+			burst_size = 1
+			fire_delay = 0
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw

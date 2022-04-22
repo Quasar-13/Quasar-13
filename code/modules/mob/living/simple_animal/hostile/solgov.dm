@@ -1,3 +1,22 @@
+/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse
+	name = "Syndicate Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovgenericcorpse
+
+/datum/outfit/solgovgenericcorpse
+	name = "Kepler Mercenary Corpse"
+	uniform = /obj/item/clothing/under/syndicate
+	suit = /obj/item/clothing/suit/armor/vest
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	ears = /obj/item/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/swat
+	back = /obj/item/storage/backpack
+	id = /obj/item/card/id/syndicate
+
 /mob/living/simple_animal/hostile/solgov
 	name = "Solgov Standard"
 	desc = "Protecting your future, unless you don't speak sol common. Unarmed"
@@ -37,7 +56,7 @@
 	return FALSE
 
 /mob/living/simple_animal/hostile/solgov/ranged
-	name = "Solgov Privateer"
+	name = "Mercenary Privateer"
 	desc = "Protecting your future, unless you don't speak sol common, Armed with a pistol"
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
@@ -51,7 +70,7 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
-	name = "Solgov NCO Privateer"
+	name = "Mercenary NCO"
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
@@ -115,7 +134,7 @@
 	set_light(2)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
-	name = "Solgov Heavy"
+	name = "Mercenary Elite"
 	desc = "Protecting your future, Now stop resisting"
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
@@ -135,10 +154,10 @@
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
 	summon_backup(15)
-	say("Over here!")
+	say("Time to earn your pay!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
-	name = "Solgov Heavy Shotgunner"
+	name = "Mercenary Heavy Shotgunner"
 	desc = "An absolute unit, he's also running right at you"
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
@@ -160,7 +179,7 @@
 	say("There I see them!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
-	name = "Solgov Sniper"
+	name = "Mercenary Rifleman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
@@ -181,5 +200,28 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
 	..()
-	summon_backup(25)
+	summon_backup(45)
 	say("Target Sighted")
+
+/mob/living/simple_animal/hostile/solgov/ranged/assault
+	name = "Mercenary Assault"
+	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
+	icon_state = "solgovassault"
+	icon_living = "solgovassault"
+	maxHealth = 145
+	health = 145
+	rapid = 3
+	rapid_fire_delay = 4
+	retreat_distance = 2
+	minimum_distance = 1
+	casingtype = /obj/item/ammo_casing/a556
+	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	/obj/item/gun/ballistic/automatic/ar/xm29,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
+/mob/living/simple_animal/hostile/solgov/ranged/assault/Aggro()
+	..()
+	summon_backup(35)
+	say("POZHAR NA VOLE")
+//POZHAR NA VOLE

@@ -31,3 +31,10 @@
 	caliber = CALIBER_40MM
 	icon_state = "40mmHE"
 	projectile_type = /obj/projectile/bullet/a40mm
+
+/obj/item/ammo_casing/a20mm
+	name = "20mm HE shell"
+	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher."
+	caliber = CALIBER_20MM
+	icon_state = "40mmHE"
+	projectile_type = /obj/projectile/bullet/a20mm

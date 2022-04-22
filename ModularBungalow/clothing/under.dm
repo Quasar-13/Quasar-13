@@ -23,14 +23,24 @@
 	icon_state = "justice"
 
 //Solgov Suit. Formalwear for Solgov Officers
-/obj/item/clothing/under/solgov/suit
-	name = "solgov formal suit"
-	desc = "A muted blue suit with a black overcoat"
-	icon_state = "solgov_suit"
+/obj/item/clothing/under/solgov
+	name = "solgov uniform"
+	desc = "A standard white suit for sol gov officers"
+	icon_state = "solgov"
 	worn_icon = 'ModularBungalow/clothing/worn/underw.dmi'
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	inhand_icon_state = "syndicate_suit"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/solgov/suit
+	name = "solgov formal suit"
+	desc = "A muted blue suit with a black overcoat"
+	icon_state = "solgov_suit"
+
+/obj/item/clothing/under/solgov/snow
+	name = "utility snow uniform"
+	desc = "A snow camouflage uniform, what more could you want to know"
+	icon_state = "solgovmerc"
 
 //Samurai outfit. I think it looks really cool, maybe it will?
 /obj/item/clothing/under/syndicate/samurai

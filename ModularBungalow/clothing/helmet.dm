@@ -55,3 +55,27 @@
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
 	icon_state = "viceadmiral_hat"
 
+/obj/item/clothing/head/helmet/kepler
+	name = "kepler group mercenary helmet."
+	desc = "A helmet for some sort of mercenaries."
+	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
+	icon = 'ModularBungalow/clothing/icons/head.dmi'
+	icon_state = "kepler"
+
+/obj/item/clothing/head/helmet/kepler/nco
+	icon_state = "keplernco"
+
+/obj/item/clothing/head/helmet/kepler/assault
+	icon_state = "keplerassault"
+
+/obj/item/clothing/head/helmet/kepler/pilot
+	icon_state = "keplerpilot"
+
+/obj/item/clothing/head/helmet/kepler/cloaker
+	icon_state = "keplercloaker"
+
+/obj/item/clothing/head/helmet/kepler/heavy
+	icon_state = "keplerlmg"
+
+/obj/item/clothing/head/helmet/kepler/heavy/shotgunner
+	icon_state = "keplershotgunner"
