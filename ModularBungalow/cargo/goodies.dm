@@ -20,7 +20,7 @@
 	name = "Bluespace structure beacon"
 	desc = "A beacon that orders a bluespace structure capsule, holding a schematic for a functional building. Contains shelters and small houses."
 	cost = PAYCHECK_MEDIUM * 6
-	contains = list(/obj/item/choice_beacon/bungalow/structures)
+	contains = list(/obj/item/choice_beacon/structure)
 
 /datum/supply_pack/goody/carpet_brown
 	name = "50 brown carpets"
