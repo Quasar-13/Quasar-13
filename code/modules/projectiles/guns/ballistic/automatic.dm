@@ -146,6 +146,15 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler
+	name = "\improper Type P45 Uzi"
+	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
 	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."
@@ -253,7 +262,20 @@
 	burst_size = 3
 	fire_delay = 1
 
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	mag_type = /obj/item/ammo_box/magazine/m556
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw

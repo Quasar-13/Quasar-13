@@ -158,7 +158,6 @@
 
 
 
-
 /obj/item/healthanalyzer/viro
 	name = "Pandemic analyzer"
 	icon = 'ModularBungalow/zbungalowicons/medical/scanners.dmi'
