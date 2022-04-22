@@ -128,7 +128,7 @@
 	name = "Prototype Energy Axe Kit"
 	desc = "Contains a prototype energy axe with a pulse pistol sidearm."
 
-/obj/item/storage/backpack/duffelbag/deathsquad/rocket/PopulateContents()
+/obj/item/storage/backpack/duffelbag/deathsquad/axe/PopulateContents()
 	new /obj/item/melee/transforming/energy/axe/weak(src)
 	new /obj/item/gun/energy/pulse/pistol(src)
 

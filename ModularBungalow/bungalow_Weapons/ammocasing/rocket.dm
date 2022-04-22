@@ -8,7 +8,7 @@
 	name ="anti-personnel missile"
 	desc = "Boom, but kills people."
 	icon_state = "missile"
-	damage = 150
+	damage = 100
 	ricochets_max = 0 //it's a MISSILE
 	embedding = null
 	shrapnel_type = null
@@ -16,9 +16,9 @@
 /obj/projectile/bullet/a84mm_hp/on_hit(atom/target, blocked=0)
 	..()
 	if(!isliving(target)) //if the target isn't alive, so is a wall or something
-		explosion(target, 0, 0, 5, 6, flame_range = 3)
+		explosion(target, 0, 0, 0, 6, flame_range = 3)
 	else
-		explosion(target, 0, 0, 5, 6, flame_range = 3)
+		explosion(target, 0, 0, 0, 6, flame_range = 3)
 	return BULLET_ACT_HIT
 
 /obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast
