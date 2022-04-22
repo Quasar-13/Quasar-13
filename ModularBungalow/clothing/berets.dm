@@ -39,6 +39,16 @@
 	icon_state = "beretdurathread"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 25, BOMB = 10, BIO = 0, RAD = 0, FIRE = 30, ACID = 5, WOUND = 4)
 
+/obj/item/clothing/head/beret/durathread/kepler
+	name = "kepler beret"
+	desc = "A beret made from durathread, its resilient fibres provide some protection to the wearer."
+	icon_state = "beretkepler"
+	armor = list(MELEE = 35, BULLET = 25, LASER = 35, ENERGY = 25, BOMB = 10, BIO = 35, RAD = 50, FIRE = 30, ACID = 50, WOUND = 20)
+
+/obj/item/clothing/head/beret/durathread/kepler/ranger
+	name = "kepler ranger beret"
+	desc = "A beret made from durathread, worn by kepler rangers who preferred style over protection."
+	icon_state = "beretkeplerranger"
 //civilian departmental berets
 
 /obj/item/clothing/head/beret/grey
