@@ -40,23 +40,9 @@
 	backpack_contents = list(
 		/obj/item/storage/box/survival/engineer = 1,
 		/obj/item/ammo_box/a357 = 1,
-		/obj/item/choice_beacon/bungalow/combat/deathsquad = 1,
+		/obj/item/choice_beacon/deathsquad = 1,
 		/obj/item/flashlight = 1,
 		/obj/item/tank/internals/emergency_oxygen/double = 1,
 	)
 
-/datum/outfit/centcom/death_commando/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(visualsOnly)
-		return
-
-	var/obj/item/radio/R = H.ears
-	R.set_frequency(FREQ_CENTCOM)
-	R.freqlock = TRUE
-	var/obj/item/card/id/W = H.wear_id
-	W.access = get_all_accesses()//They get full station access.
-	W.access += get_centcom_access("Death Commando")//Let's add their alloted CentCom access.
-	W.assignment = "Death Commando"
-	W.registered_name = H.real_name
-	W.update_label()
-	..()
 
