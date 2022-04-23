@@ -5,6 +5,55 @@
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovgenericcorpse
 
+/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsemarksman
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpselmg
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpselmg
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpseshotgunner
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsecloaker
+
+/obj/effect/mob_spawn/human/corpse/solgocorpsevassault
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpseassault
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpsenco
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsenco
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpsepilot
+	name = "Kepler Mercenary Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsenpilot
+
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
@@ -170,7 +219,7 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	footstep_type = FOOTSTEP_MOB_SHOE
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -196,7 +245,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
 	/obj/item/gun/ballistic/automatic/pistol/m1911,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -213,7 +262,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsenco,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -230,7 +279,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/gibspawner/human,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -241,7 +290,7 @@
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
-	speed = 2
+	speed = 2.5
 	maxHealth = 85
 	health = 85
 	harm_intent_damage = 5
@@ -250,10 +299,10 @@
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-	projectile_deflect_chance = 70
+	projectile_deflect_chance = 76
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
@@ -269,7 +318,7 @@
 	desc = "Protecting your future, Now stop resisting"
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
-	speed = 0.8
+	speed = 0.4
 	maxHealth = 155
 	health = 155
 	retreat_distance = 4
@@ -278,7 +327,7 @@
 	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpselmg,
 	/obj/item/gun/ballistic/automatic/ar/hk21,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -292,15 +341,15 @@
 	desc = "An absolute unit, he's also running right at you"
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
-	speed = 0.8
-	maxHealth = 175
-	health = 175
+	speed = 0.4
+	maxHealth = 200
+	health = 200
 	minimum_distance = 2
 	rapid = 3
 	rapid_fire_delay = 10
-	casingtype = /obj/item/ammo_casing/c46x30mm
+	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -339,20 +388,32 @@
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
+	speed = 2
 	maxHealth = 145
 	health = 145
 	rapid = 3
 	rapid_fire_delay = 4
-	retreat_distance = 2
+	retreat_distance = 1
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseassault,
 	/obj/item/gun/ballistic/automatic/ar/xm29,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault/Aggro()
 	..()
 	summon_backup(35)
-	say("POZHAR NA VOLE")
+	say("Idi syuda!")
 //you are fucked if you see him
+
+/mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
+	name = "Mercenary Pilot"
+	desc = "Unarmed but fast."
+	icon_state = "solgovpilot"
+	icon_living = "solgovpilot"
+	speed = 2
+	maxHealth = 150
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsepilot,
+	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
