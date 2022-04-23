@@ -61,9 +61,9 @@
 
 //Surplus Rifle .45 ACP
 /obj/item/gun/ballistic/automatic/surplus/m45
-desc = "A mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
-icon_state = "surplus2"
-mag_type = /obj/item/ammo_box/magazine/m45/rifle
+	desc = "A mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
+	icon_state = "surplus2"
+	mag_type = /obj/item/ammo_box/magazine/m45/rifle
 
 /obj/item/gun/ballistic/automatic/laser/burst
 	name = "L-807 Neo Laser Burst Rifle "
