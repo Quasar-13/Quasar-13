@@ -25,7 +25,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -37,7 +37,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/cloaker
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -49,7 +49,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/heavy
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -61,7 +61,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/heavy/shotgunner
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -73,7 +73,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/assault
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -85,7 +85,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/pilot
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -97,7 +97,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/nco
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -109,7 +109,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/assault
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
@@ -133,7 +133,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler/nco
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 

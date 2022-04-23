@@ -56,7 +56,7 @@
 	icon_state = "viceadmiral_hat"
 
 /obj/item/clothing/head/helmet/kepler
-	name = "kepler group mercenary helmet."
+	name = "kepler mercenary helmet."
 	desc = "A helmet for some sort of mercenaries."
 	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
 	icon = 'ModularBungalow/clothing/icons/head.dmi'
