@@ -288,12 +288,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
 	. = ..()
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
-	update_icon()
-
-/obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
-	. = ..()
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/ar/xm29/afterattack(atom/target, mob/living/user, flag, params)

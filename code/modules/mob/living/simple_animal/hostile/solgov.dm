@@ -7,139 +7,138 @@
 
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/swat
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsemarksman
 	name = "Kepler Marksman Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/kepler
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsecloaker
 	name = "Kepler Elite Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/cloaker
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpselmg
 	name = "Kepler Heavy Gunner Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/heavy
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpseshotgunner
 	name = "Kepler Heavy Shotgunner Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/heavy/shotgunner
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpseassault
 	name = "Kepler Elite Mercenary Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/assault
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsepilot
 	name = "Kepler Pilot Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/pilot
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovmerc
 	name = "Kepler Mercenary"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/nco
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovmercassault
 	name = "Kepler Mercenary Assault"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/assault
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsehazmat
 	name = "Kepler Hazmat Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/swat
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel/med
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/sovietcorpsehazmat
 	name = "Soviet Hazmat Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/sovietkepler
 	head = /obj/item/clothing/head/helmet/swat
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel/med
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsenco
 	name = "Kepler Mercenary NCO Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/solgov/snow
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
@@ -219,7 +218,7 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
-	name = "Solgov Scientist"
+	name = "Mercenary Hazmat"
 	desc = "Armed with SMG, Ready to enforce to quarantine"
 	icon_state = "solgovhazmat"
 	icon_living = "solgovhazmat"
@@ -238,7 +237,7 @@
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 //HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
-	name = "Solgov Elite"
+	name = "Mercenary Elite"
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
@@ -327,7 +326,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 15
 	vision_range = 15
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecorpsemarksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
@@ -356,4 +355,4 @@
 	..()
 	summon_backup(35)
 	say("POZHAR NA VOLE")
-//POZHAR NA VOLE
+//you are fucked if you see him
