@@ -60,8 +60,7 @@
 	dump_contents()
 	QDEL_NULL(electronics)
 	return ..()
-	return ..()
-	
+
 /obj/structure/closet/update_appearance(updates=ALL)
 	. = ..()
 	if(opened || broken || !secure)
