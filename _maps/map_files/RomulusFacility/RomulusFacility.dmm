@@ -79,7 +79,10 @@
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
-/obj/item/gun/ballistic/rocketlauncher/unrestricted,
+/obj/item/gun/ballistic/rocketlauncher/nobackblast{
+	name = "\improper PML-11";
+	pin = null
+	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "adZ" = (
@@ -106,6 +109,10 @@
 "aeR" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/dorms/barracks)
+"afi" = (
+/obj/structure/sign/kepler,
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "agk" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/mineral/plastitanium,
@@ -282,6 +289,13 @@
 "avQ" = (
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
+"awV" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/structure/sign/kepler/alt,
+/turf/closed/indestructible/reinforced,
+/area/ruin/powered)
 "axI" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -1192,6 +1206,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"buf" = (
+/obj/machinery/computer/mech_bay_power_console,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
 "buC" = (
 /obj/structure/holobox,
 /turf/open/floor/plating,
@@ -1258,6 +1276,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/storage)
+"bzT" = (
+/obj/machinery/mech_bay_recharge_port,
+/turf/open/floor/engine/hull/reinforced,
+/area/ruin/space/has_grav/powered)
 "bzV" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
@@ -1666,13 +1688,6 @@
 "bYQ" = (
 /obj/effect/turf_decal/mining/survival,
 /turf/closed/wall/mineral/titanium/survival/pod,
-/area/ruin/space/has_grav/powered)
-"bYV" = (
-/obj/structure/sign/kepler,
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/powered)
 "bZg" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -2141,11 +2156,16 @@
 /turf/closed/wall,
 /area/storage/mining)
 "cFi" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper,
-/obj/structure/bed/maint,
-/obj/structure/bed/maint,
-/turf/open/floor/wood,
-/area/icemoon/surface/outdoors)
+/mob/living/simple_animal/hostile/syndicate/mecha_pilot{
+	desc = "From space to land, Protecting your future.";
+	faction = list("russian");
+	health = 145;
+	icon_living = "solgovpilot";
+	icon_state = "solgovpilot";
+	name = "Mercenary Pilot"
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ruin/space/has_grav/powered)
 "cFn" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/m90/unrestricted,
@@ -2670,10 +2690,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
-"dmj" = (
-/obj/effect/turf_decal/weather/snow/corner,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/powered)
 "dmp" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -2684,11 +2700,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
-"dmG" = (
-/obj/structure/sign/kepler/alt,
-/obj/effect/turf_decal/weather/snow/corner,
-/turf/closed/wall/r_wall,
-/area/ruin/powered)
+"dmF" = (
+/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/gun/ballistic/automatic/uzi,
+/turf/open/floor/plasteel/white,
+/area/ruin/space/has_grav/powered)
 "dmP" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -2796,6 +2813,14 @@
 /obj/item/ammo_box/c38,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"dsM" = (
+/obj/structure/sign/kepler/alt,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/structure/sign/kepler/alt,
+/turf/closed/wall/r_wall,
+/area/ruin/powered)
 "dsP" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/plasteel,
@@ -2967,6 +2992,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"dEx" = (
+/mob/living/simple_animal/hostile/solgov/ranged/assault,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "dED" = (
 /obj/structure/sign/nanotrasen/naval,
 /turf/closed/indestructible/reinforced,
@@ -3253,7 +3286,7 @@
 	},
 /area/awaymission/bmpship/fore)
 "dPX" = (
-/obj/structure/sign/solgov,
+/obj/structure/sign/kepler,
 /turf/closed/indestructible/wood,
 /area/icemoon/surface/outdoors)
 "dQw" = (
@@ -4885,9 +4918,9 @@
 	desc = "From space to land, Protecting your future.";
 	faction = list("russian");
 	health = 145;
-	icon_living = "solgovgeneric";
-	icon_state = "solgovgeneric";
-	name = "Solgov Mecha Pilot"
+	icon_living = "solgovpilot";
+	icon_state = "solgovpilot";
+	name = "Mercenary Pilot"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
@@ -4923,14 +4956,6 @@
 	temperature = 180
 	},
 /area/security/brig)
-"fRj" = (
-/obj/structure/sign/kepler/alt,
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/obj/structure/sign/kepler/alt,
-/turf/closed/wall/r_wall,
-/area/ruin/powered)
 "fSX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
@@ -5011,6 +5036,12 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
+"fXP" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "fYm" = (
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
@@ -5585,6 +5616,9 @@
 "gDG" = (
 /turf/open/lava/plasma/ice_moon,
 /area/icemoon/surface/outdoors)
+"gDX" = (
+/turf/closed/wall/r_wall,
+/area/icemoon/surface/outdoors)
 "gEg" = (
 /obj/structure/flora/grass/brown,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -6031,12 +6065,6 @@
 /obj/effect/spawner/lootdrop/armory_contraband,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
-"hbe" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
-	},
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/powered)
 "hbo" = (
 /obj/machinery/door/airlock/titanium,
 /obj/structure/barricade/wooden/crude/snow,
@@ -6197,6 +6225,10 @@
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"hkg" = (
+/obj/structure/sign/kepler/alt,
+/turf/closed/indestructible/wood,
+/area/icemoon/surface/outdoors)
 "hkq" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -7610,6 +7642,11 @@
 /obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/plasteel/airless/cafeteria,
 /area/crew_quarters/kitchen)
+"iSs" = (
+/obj/structure/closet/crate/grave,
+/obj/item/gun/ballistic/revolver/nagant,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "iSN" = (
 /obj/structure/chair/comfy{
 	dir = 8
@@ -8053,10 +8090,6 @@
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
-"jsU" = (
-/obj/machinery/mech_bay_recharge_port,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
 "jtd" = (
 /obj/machinery/manned_turret,
 /obj/structure/cable,
@@ -8245,10 +8278,6 @@
 	},
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
-"jIs" = (
-/obj/structure/rack,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
 "jIE" = (
 /obj/machinery/light{
 	dir = 8
@@ -8284,10 +8313,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/storage/mining)
-"jJX" = (
-/obj/structure/sign/kepler,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/powered)
 "jKs" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
@@ -8436,6 +8461,10 @@
 /obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"jWA" = (
+/mob/living/simple_animal/hostile/solgov/ranged/assault,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "jXm" = (
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
@@ -8642,6 +8671,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/storage/mining)
+"kew" = (
+/obj/structure/fans/tiny,
+/obj/structure/holosign/barrier,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
 "keB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
@@ -8950,9 +8984,15 @@
 "kAO" = (
 /turf/open/floor/plating/icemoon,
 /area/icemoon/surface/outdoors)
+"kBf" = (
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/ripleyupgrade,
+/obj/item/mecha_parts/chassis/ripley,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
 "kBX" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/solgov,
+/obj/structure/sign/kepler,
 /turf/closed/wall/mineral/wood,
 /area/icemoon/surface/outdoors)
 "kCf" = (
@@ -9278,6 +9318,13 @@
 "kSC" = (
 /obj/machinery/porta_turret/syndicate/energy/heavy,
 /turf/closed/wall/mineral/plastitanium,
+/area/ruin/powered)
+"kSG" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/obj/structure/sign/kepler/alt,
+/turf/closed/wall/r_wall,
 /area/ruin/powered)
 "kTc" = (
 /obj/structure/window/plasma/reinforced/spawner,
@@ -9919,7 +9966,7 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ruin/powered)
 "lEu" = (
-/obj/structure/sign/solgov,
+/obj/structure/sign/kepler/alt,
 /turf/closed/wall/mineral/wood,
 /area/icemoon/surface/outdoors)
 "lEF" = (
@@ -10020,6 +10067,13 @@
 	},
 /turf/open/floor/plating/snowed/smoothed,
 /area/icemoon/surface/outdoors)
+"lLz" = (
+/obj/structure/sign/kepler,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "lLE" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/table/reinforced,
@@ -10049,10 +10103,6 @@
 /obj/effect/turf_decal/stripes/white/full,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
-"lNy" = (
-/obj/structure/mecha_wreckage/gygax,
-/turf/open/floor/mech_bay_recharge_floor,
-/area/ruin/space/has_grav/powered)
 "lNJ" = (
 /obj/structure/mecha_wreckage/clarke,
 /turf/open/floor/plating/snowed/icemoon,
@@ -10452,6 +10502,11 @@
 /obj/item/grown/bananapeel,
 /turf/open/floor/plating/dirt/jungle,
 /area/icemoon/surface/outdoors)
+"mpZ" = (
+/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+/obj/item/gun/ballistic/automatic/uzi,
+/turf/open/floor/plasteel/white,
+/area/ruin/space/has_grav/powered)
 "mqF" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -10805,6 +10860,12 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
+"mKn" = (
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 1
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ruin/space/has_grav/powered)
 "mKG" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/structure/cable,
@@ -11345,7 +11406,14 @@
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
 "ngi" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper,
+/mob/living/simple_animal/hostile/solgov/ranged/rifle{
+	desc = "Enforcing the Quarantine even unto his death";
+	lose_patience_timeout = 5;
+	name = "Kepler Marksman";
+	projectiletype = /obj/projectile/bullet/a357/match;
+	ranged_cooldown_time = 15;
+	ranged_ignores_vision = 1
+	},
 /turf/open/floor/plating/dirt/jungle,
 /area/icemoon/surface/outdoors)
 "ngG" = (
@@ -11830,6 +11898,13 @@
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/plasteel,
 /area/science)
+"nLF" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/structure/sign/kepler/alt,
+/turf/closed/wall/r_wall,
+/area/ruin/powered)
 "nLI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/mineral/random/snow/high_chance,
@@ -12138,6 +12213,9 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
+"oen" = (
+/turf/open/floor/mech_bay_recharge_floor,
+/area/ruin/space/has_grav/powered)
 "oeW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
@@ -12885,7 +12963,7 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
 "oRq" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper,
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/grass/snow,
 /area/icemoon/surface/outdoors)
@@ -13175,6 +13253,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"peH" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "peN" = (
 /obj/structure/chair/sofa/corp{
 	dir = 8
@@ -14197,6 +14279,10 @@
 	},
 /turf/closed/wall/rust,
 /area/icemoon/surface/outdoors)
+"qbz" = (
+/obj/machinery/mech_bay_recharge_port,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
 "qcf" = (
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/awaymission/bmpship/fore)
@@ -15274,6 +15360,12 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
+"rsl" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "rtd" = (
 /obj/machinery/mineral/processing_unit{
 	dir = 1
@@ -15550,13 +15642,6 @@
 "rIT" = (
 /obj/structure/spacevine,
 /turf/open/floor/engine/air,
-/area/ruin/powered)
-"rJS" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 10
-	},
-/obj/structure/sign/kepler/alt,
-/turf/closed/wall/r_wall,
 /area/ruin/powered)
 "rKa" = (
 /obj/machinery/light/small,
@@ -16086,6 +16171,10 @@
 /obj/item/trash/can/food/beans,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hellfactoryoffice)
+"snZ" = (
+/obj/structure/mecha_wreckage/gygax,
+/turf/open/floor/mech_bay_recharge_floor,
+/area/ruin/space/has_grav/powered)
 "soo" = (
 /obj/structure/window/reinforced/fulltile/ice{
 	name = "frozen window"
@@ -16290,6 +16379,10 @@
 	},
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
+"szh" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/engine/hull/reinforced,
+/area/ruin/space/has_grav/powered)
 "szk" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/mineral/plastitanium{
@@ -17973,6 +18066,17 @@
 	temperature = 180
 	},
 /area/security/brig)
+"usj" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
+	},
+/obj/structure/sign/kepler/alt,
+/turf/closed/wall/r_wall,
+/area/ruin/powered)
+"usR" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/plating/dirt/jungle,
+/area/icemoon/surface/outdoors)
 "uts" = (
 /mob/living/simple_animal/hostile/lizard/space,
 /turf/open/floor/grass/snow,
@@ -18131,10 +18235,6 @@
 	},
 /turf/open/floor/plating/snowed,
 /area/ruin/powered)
-"uEI" = (
-/obj/machinery/computer/mech_bay_power_console,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
 "uEK" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -19039,6 +19139,11 @@
 	},
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
+"vGi" = (
+/obj/structure/sign/kepler/alt,
+/obj/effect/turf_decal/weather/snow/corner,
+/turf/closed/wall/r_wall,
+/area/ruin/powered)
 "vGn" = (
 /obj/structure/table/reinforced,
 /obj/structure/frame/machine,
@@ -19218,11 +19323,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
-"vMc" = (
-/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
-/obj/item/gun/ballistic/automatic/uzi,
-/turf/open/floor/plasteel/white,
-/area/ruin/space/has_grav/powered)
 "vMR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -20090,6 +20190,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"wKZ" = (
+/obj/machinery/computer/mech_bay_power_console,
+/turf/open/floor/engine/hull/reinforced,
+/area/ruin/space/has_grav/powered)
 "wLx" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 8;
@@ -20458,11 +20562,6 @@
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/awaymission/bmpship/midship)
-"xmx" = (
-/obj/structure/fans/tiny,
-/obj/structure/holosign/barrier,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
 "xmK" = (
 /obj/item/minigunpack{
 	anchored = 1;
@@ -20592,13 +20691,6 @@
 /mob/living/simple_animal/hostile/solgov/ranged/smg,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
-"xte" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/obj/structure/sign/kepler/alt,
-/turf/closed/wall/r_wall,
-/area/ruin/powered)
 "xtg" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -20751,13 +20843,6 @@
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/secpost)
-"xAX" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/obj/structure/sign/kepler/alt,
-/turf/closed/indestructible/reinforced,
-/area/ruin/powered)
 "xBS" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -21185,12 +21270,6 @@
 	},
 /turf/closed/wall,
 /area/icemoon/surface/outdoors)
-"xWs" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/powered)
 "xWF" = (
 /obj/structure/fence,
 /turf/open/floor/plating/snowed/icemoon,
@@ -21278,12 +21357,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/plasteel,
 /area/science)
-"ybB" = (
-/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/gun/ballistic/automatic/uzi,
-/turf/open/floor/plasteel/white,
-/area/ruin/space/has_grav/powered)
 "ybR" = (
 /obj/structure/flora/rock/icy,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -21373,9 +21446,7 @@
 /area/ruin/powered)
 "yhY" = (
 /obj/effect/decal/cleanable/food/plant_smudge,
-/mob/living/simple_animal/hostile/skeleton/plasmaminer/jackhammer{
-	faction = list("russian")
-	},
+/mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat,
 /turf/open/floor/grass/snow,
 /area/icemoon/surface/outdoors)
 "yis" = (
@@ -21387,13 +21458,6 @@
 /obj/item/multitool,
 /turf/open/floor/pod,
 /area/ntremnant)
-"yiB" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 9
-	},
-/obj/structure/sign/kepler/alt,
-/turf/closed/wall/r_wall,
-/area/ruin/powered)
 "yiC" = (
 /obj/structure/fence/corner{
 	dir = 1
@@ -48015,7 +48079,7 @@ mzZ
 vzW
 vzW
 vzW
-eJH
+vOg
 iov
 tKG
 iov
@@ -48309,7 +48373,7 @@ mOP
 jkC
 eJH
 eJH
-jVi
+avQ
 iov
 eJH
 vzW
@@ -48884,7 +48948,7 @@ iov
 iov
 eJH
 iov
-jVi
+avQ
 mKM
 vzW
 vzW
@@ -49140,12 +49204,12 @@ eoI
 eoI
 mzZ
 mzZ
-dPX
+hkg
 spb
 eFO
 iTi
-dPX
-dOY
+hkg
+usR
 evw
 kjU
 xEB
@@ -49458,7 +49522,7 @@ iov
 iov
 vTW
 iov
-jVi
+avQ
 eJH
 eJH
 eJH
@@ -49715,10 +49779,10 @@ eoI
 mzZ
 mzZ
 ooL
-ngi
-mFh
 dOY
-ngi
+mFh
+usR
+dOY
 yfo
 pzL
 oWK
@@ -49744,9 +49808,9 @@ iov
 mKM
 iov
 eJH
-jVi
+avQ
 iov
-jVi
+avQ
 iov
 iov
 vzW
@@ -50578,7 +50642,7 @@ liN
 rTs
 oCe
 bLj
-cFi
+vhs
 iZe
 leB
 cZj
@@ -51451,7 +51515,7 @@ jin
 mzZ
 rLh
 eoI
-koH
+eoI
 vzW
 vzW
 vzW
@@ -51738,7 +51802,7 @@ ygu
 mzZ
 eoI
 eoI
-koH
+eoI
 vzW
 vzW
 vzW
@@ -55269,8 +55333,8 @@ fzH
 avQ
 tbF
 uFP
-hbe
-hbe
+rsl
+rsl
 vrP
 eoI
 eoI
@@ -55555,10 +55619,10 @@ avQ
 avQ
 avQ
 tbF
-xWs
-jsU
-cYM
-dmj
+fXP
+qbz
+dsP
+peH
 eoI
 eoI
 eoI
@@ -55842,10 +55906,10 @@ avQ
 avQ
 avQ
 tbF
-xWs
-lNy
+fXP
+snZ
 cYM
-dmj
+peH
 eoI
 eoI
 eoI
@@ -56129,10 +56193,10 @@ avQ
 vNs
 avQ
 tbF
-xWs
-uEI
+fXP
+buf
 cYM
-dmj
+peH
 eoI
 eoI
 eoI
@@ -56416,10 +56480,10 @@ avQ
 avQ
 avQ
 tbF
-xWs
-jIs
+fXP
+kBf
 cYM
-dmj
+peH
 eoI
 eoI
 eoI
@@ -56703,10 +56767,10 @@ avQ
 avQ
 avQ
 tbF
-bYV
-xmx
-xmx
-jJX
+lLz
+kew
+kew
+afi
 nhM
 nhM
 nhM
@@ -56997,7 +57061,7 @@ dYb
 wsr
 nvD
 cXf
-ybB
+dmF
 khI
 avQ
 avQ
@@ -57569,7 +57633,7 @@ eoI
 eoI
 dYb
 fld
-vMc
+mpZ
 nvD
 nvD
 khI
@@ -59572,7 +59636,7 @@ kNT
 lJb
 sQX
 dci
-rJS
+usj
 fPr
 fPr
 yiC
@@ -61851,7 +61915,7 @@ eoI
 eoI
 eoI
 eoI
-yiB
+kSG
 gPt
 gPt
 gPt
@@ -61871,7 +61935,7 @@ bCq
 fmR
 fmR
 fmR
-dmG
+vGi
 aAf
 aAf
 aAf
@@ -62712,7 +62776,7 @@ eoI
 eoI
 eoI
 eoI
-xte
+nLF
 fmR
 aja
 fXy
@@ -62999,7 +63063,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+iSs
 uPw
 aja
 tsK
@@ -63575,7 +63639,7 @@ vzW
 vzW
 eoI
 tbF
-xAX
+awV
 xqA
 xqA
 iyz
@@ -63593,7 +63657,7 @@ iyz
 iyz
 iyz
 iyz
-fRj
+dsM
 aAf
 aAf
 aAf
@@ -69751,7 +69815,7 @@ vzW
 vzW
 vzW
 vzW
-vzW
+gDX
 vzW
 vzW
 eoI
@@ -70899,7 +70963,7 @@ vzW
 eoI
 yks
 vzW
-vzW
+gDX
 vzW
 vzW
 vzW
@@ -82327,7 +82391,7 @@ jIZ
 jIZ
 jIZ
 hfo
-jIZ
+szh
 jIZ
 jIZ
 jIZ
@@ -83175,7 +83239,7 @@ jIZ
 jIZ
 jIZ
 jIZ
-jIZ
+cFi
 jIZ
 jIZ
 jIZ
@@ -83188,7 +83252,7 @@ jIZ
 jIZ
 jIZ
 hfo
-jIZ
+szh
 jIZ
 jIZ
 jIZ
@@ -83756,7 +83820,7 @@ jIZ
 jIZ
 jIZ
 jIZ
-jIZ
+cFi
 jIZ
 jIZ
 jIZ
@@ -84625,9 +84689,9 @@ jIZ
 hfo
 jIZ
 jIZ
+bzT
 jIZ
-jIZ
-jIZ
+bzT
 hfo
 exf
 tAu
@@ -84897,7 +84961,7 @@ jIZ
 jIZ
 jIZ
 jIZ
-jIZ
+cFi
 jIZ
 jIZ
 jIZ
@@ -84912,9 +84976,9 @@ jIZ
 hfo
 jIZ
 jIZ
+oen
 jIZ
-jIZ
-jIZ
+oen
 hfo
 exf
 tAu
@@ -85199,9 +85263,9 @@ jIZ
 hfo
 jIZ
 jIZ
+wKZ
 jIZ
-jIZ
-jIZ
+mKn
 hfo
 exf
 tAu
@@ -87798,7 +87862,7 @@ fMH
 kfy
 kfy
 kfy
-kfy
+dEx
 kfy
 kfy
 kfy
@@ -89515,7 +89579,7 @@ sRg
 sRg
 sRg
 ksl
-sRg
+cYy
 fMe
 sRg
 sRg
@@ -89801,8 +89865,8 @@ fMH
 sRg
 sRg
 sRg
-ksl
 sRg
+jWA
 fMH
 cYy
 cYy
@@ -91529,7 +91593,7 @@ nYy
 pNj
 pNj
 psG
-sRg
+jWA
 cYy
 sHD
 sRg
