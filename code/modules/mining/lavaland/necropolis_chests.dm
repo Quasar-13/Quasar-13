@@ -68,7 +68,7 @@
 			new /obj/item/bedsheet/cult(src)
 		if(21)
 			new /obj/item/clothing/neck/necklace/memento_mori(src)
-		if(21)
+		if(22)
 			new /obj/item/clothing/suit/hooded/techpriest/armor/initiate
 			new /obj/item/clothing/head/hooded/techpriest/armor/initiate
 			new /obj/item/mechandrites
