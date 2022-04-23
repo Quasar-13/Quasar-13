@@ -125,6 +125,18 @@
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/syndicate
 
+/datum/outfit/sovietcorpsehazmat
+	name = "Soviet Hazmat Corpse"
+	uniform = /obj/item/clothing/under/syndicate
+	suit = /obj/item/clothing/suit/armor/vest
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/swat
+	back = /obj/item/storage/backpack
+	id = /obj/item/card/id/syndicate
+
 /datum/outfit/solgovcorpsenco
 	name = "Kepler Mercenary NCO Corpse"
 	uniform = /obj/item/clothing/under/syndicate
