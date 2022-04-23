@@ -60,7 +60,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
 //Surplus Rifle .45 ACP
-/obj/item/gun/ballistic/automatic/surplus
+/obj/item/gun/ballistic/automatic/surplus/45
 desc = "An mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
 icon_state = "surplus2"
 mag_type = /obj/item/ammo_box/magazine/m45/rifle
