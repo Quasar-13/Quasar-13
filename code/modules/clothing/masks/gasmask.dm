@@ -11,6 +11,19 @@
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | PEPPERPROOF
 	resistance_flags = NONE
 
+/obj/item/clothing/mask/gas/sovietkepler
+	name = "soviet gas mask"
+	desc = "A face-covering mask that can be connected to an air supply. There is a strange marking on the back"
+	icon_state = "sovietkepler"
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	w_class = WEIGHT_CLASS_NORMAL
+	inhand_icon_state = "gas_alt"
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | PEPPERPROOF
+	resistance_flags = NONE
+
 /obj/item/clothing/mask/gas/atmos
 	name = "atmospheric gas mask"
 	desc = "Improved gas mask utilized by atmospheric technicians. Still not very good at blocking gas flow, but it's flameproof!"
