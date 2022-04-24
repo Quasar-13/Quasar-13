@@ -67,24 +67,11 @@
 	icon_state = "laserburst"
 	burst_size = 3
 
-/obj/item/gun/ballistic/automatic/ar/hk21
-	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
-	icon_state = "hk21"
-	inhand_icon_state = "hk21"
-	slot_flags = 0
-	burst_size = 1
-	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
-	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
-
-/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 
 
 
-//Solgov shit
+//Kepler guns
 /obj/item/gun/ballistic/automatic/m90/xm29
 	name = "SG-XM29 'Annihilator'"
 	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
@@ -105,3 +92,18 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+
+
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
