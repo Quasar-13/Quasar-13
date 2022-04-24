@@ -62,6 +62,7 @@
 //Surplus Rifle .45 ACP
 /obj/item/gun/ballistic/automatic/surplus/acp45
 	desc = "A mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
+	fire_delay = 15
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "surplus2"
 	mag_type = /obj/item/ammo_box/magazine/surplusrifle/acp45
