@@ -375,7 +375,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 15
 	vision_range = 15
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecorpsemarksman,
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
