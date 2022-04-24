@@ -405,7 +405,7 @@
 	worn_icon_state = null
 	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
-	fire_delay = 20
+	fire_delay = 10
 	burst_size = 1
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = ITEM_SLOT_BACK
