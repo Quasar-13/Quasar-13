@@ -403,7 +403,7 @@
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
+	mag_type = /obj/item/ammo_box/magazine/surplusrifle/m10mm
 	fire_delay = 10
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
