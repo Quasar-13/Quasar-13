@@ -66,3 +66,44 @@
 	desc = "The Miracle of the L-804, in it's full burst fire glory."
 	icon_state = "laserburst"
 	burst_size = 3
+
+
+
+
+
+//Kepler guns
+/obj/item/gun/ballistic/automatic/m90/xm29
+	name = "SG-XM29 'Annihilator'"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "xm29"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+
+/obj/item/gun/ballistic/automatic/gyropistol/xm25
+	name = "SG-P25 'Crow'"
+	desc = "A prototype grenade launcher designed to fire magazine fed grenades."
+	icon_state = "xm25"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
