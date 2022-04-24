@@ -93,6 +93,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/automatic/gyropistol/xm25/Initialize()
+	. = ..()
+	fire_delay = 12
+
 
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"

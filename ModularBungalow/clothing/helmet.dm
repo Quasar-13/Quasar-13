@@ -58,8 +58,8 @@
 /obj/item/clothing/head/helmet/kepler
 	name = "kepler mercenary helmet."
 	desc = "A helmet for some sort of mercenaries."
-	worn_icon = 'ModularBungalow/clothing/worn/headw.dmi'
-	icon = 'ModularBungalow/clothing/icons/head.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "kepler"
 
 /obj/item/clothing/head/helmet/kepler/nco
