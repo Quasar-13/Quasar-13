@@ -398,7 +398,7 @@
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseassault,
-	/obj/item/gun/ballistic/automatic/ar/xm29,
+	/obj/item/gun/ballistic/automatic/m90/xm29,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault/Aggro()
