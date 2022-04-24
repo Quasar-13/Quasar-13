@@ -292,11 +292,6 @@ var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
 	update_icon()
 
-/obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
-	. = ..()
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
-	update_icon()
-
 /obj/item/gun/ballistic/automatic/ar/xm29/afterattack(atom/target, mob/living/user, flag, params)
 	if(select == 2)
 		underbarrel.afterattack(target, user, flag, params)
