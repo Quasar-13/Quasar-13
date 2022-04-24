@@ -146,15 +146,6 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler
-	name = "\improper Type P45 Uzi"
-	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
-
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
 	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."

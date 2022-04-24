@@ -28,3 +28,12 @@
 /obj/item/gun/ballistic/automatic/vector/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS)
+
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler
+	name = "\improper Type P45 Uzi"
+	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.20 SECONDS)
