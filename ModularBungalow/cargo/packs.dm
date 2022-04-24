@@ -4,15 +4,15 @@
 	desc = "Contains two beacons that contains capsules able to build premade structures."
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(
-		/obj/item/choice_beacon/bungalow/structures/workplaces,
-		/obj/item/choice_beacon/bungalow/structures/workplaces,)
+		/obj/item/choice_beacon/structure,
+		/obj/item/choice_beacon/structure,)
 	crate_name = "Structure capsules"
 
 /datum/supply_pack/emergency/beacon_workplaces
 	name = "Instant Workshop Capsules"
 	desc = "Contains one beacon that contains a capsule able to build premade and functional workplaces."
 	cost = CARGO_CRATE_VALUE * 16
-	contains = list(/obj/item/choice_beacon/bungalow/structures/workplaces)
+	contains = list(/obj/item/choice_beacon/workplace)
 	crate_name = "Structure capsules"
 
 /////SECURITY/////

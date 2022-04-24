@@ -492,8 +492,3 @@
 	casing_ejector = FALSE
 
 
-/obj/item/gun/ballistic/automatic/laser/burst
-	name = "L-807 Neo Laser Burst Rifle "
-	desc = "The Miracle of the L-804, in it's full burst fire glory."
-	icon_state = "laserburst"
-	burst_size = 3
