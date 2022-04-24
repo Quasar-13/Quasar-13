@@ -33,7 +33,7 @@
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsecloaker
 
-/obj/effect/mob_spawn/human/corpse/solgocorpsevassault
+/obj/effect/mob_spawn/human/corpse/solgovcorpseassault
 	name = "Kepler Mercenary Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
@@ -52,7 +52,7 @@
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
-	outfit = /datum/outfit/solgovcorpsenpilot
+	outfit = /datum/outfit/solgovcorpsepilot
 
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"

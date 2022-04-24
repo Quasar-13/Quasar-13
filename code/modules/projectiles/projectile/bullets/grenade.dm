@@ -13,7 +13,7 @@
 	explosion(target, -1, 0, 2, 1, 0, flame_range = 3)
 	return BULLET_ACT_HIT
 
-/obj/projectile/bullet/a20mm
+/obj/projectile/bullet/a20
 	name ="20mm grenade"
 	desc = "USE A WEEL GUN"
 	icon_state= "bolter"
