@@ -42,17 +42,6 @@
 	actions_types = list()
 	casing_ejector = FALSE
 
-/obj/item/gun/ballistic/automatic/xm25
-	name = "\improper SG-P25 'Crow'"
-	desc = "A prototype grenade launcher designed to fire magazine fed grenades."
-	icon_state = "xm25"
-	fire_sound = 'sound/weapons/gun/general/grenade_launch.ogg'
-	mag_type = /obj/item/ammo_box/magazine/m20g
-	burst_size = 1
-	fire_delay = 0
-	actions_types = list()
-	casing_ejector = FALSE
-
 /obj/item/gun/ballistic/rocketlauncher
 	name = "\improper PML-9"
 	desc = "A reusable rocket propelled grenade launcher. The words \"NT this way\" and an arrow have been written near the barrel. \
