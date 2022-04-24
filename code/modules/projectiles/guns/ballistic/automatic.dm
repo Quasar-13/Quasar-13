@@ -285,7 +285,7 @@
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
-var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 
 /obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
 	. = ..()
