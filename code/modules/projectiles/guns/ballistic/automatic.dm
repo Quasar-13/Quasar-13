@@ -285,10 +285,16 @@
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 
 /obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
 	. = ..()
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/ar/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/ar/xm29/afterattack(atom/target, mob/living/user, flag, params)
