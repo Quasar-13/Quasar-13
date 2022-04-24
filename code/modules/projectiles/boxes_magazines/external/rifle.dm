@@ -1,4 +1,4 @@
-/obj/item/ammo_box/magazine/surplusrifle/m10mm
+/obj/item/ammo_box/magazine/surplusrifle
 	name = "rifle magazine (10mm)"
 	desc = "A well-worn magazine fitted for the surplus rifle."
 	icon_state = "75-8"
