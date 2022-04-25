@@ -118,11 +118,9 @@
 	icon_state = "sw500"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 
-//
+//Colt Detective Special Ivory
 /obj/item/gun/ballistic/revolver/akira
 	name = "Kira's Special"
-	desc = "A special pistol made for the kitsune, chambered in .38"
+	desc = "A special pistol made for the kitsune, chambered in .357. Something tell you the owner of this gun is long gone"
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	initial_caliber = CALIBER_38
