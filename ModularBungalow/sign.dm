@@ -19,3 +19,19 @@
 	is_editable = FALSE
 	icon = 'ModularBungalow/zbungalowicons/decal.dmi'
 
+/obj/structure/sign/ranger
+	icon_state = "ranger"
+	name = "Ranger Outpost sign"
+	desc = "A sign denoting a ranger outpost."
+	is_editable = FALSE
+	icon = 'ModularBungalow/zbungalowicons/decal.dmi'
+
+/obj/structure/sign/kepler
+	icon_state = "kepler"
+	name = "Kepler Group sign"
+	desc = "A sign denoting a kepler group outpost."
+	is_editable = FALSE
+	icon = 'ModularBungalow/zbungalowicons/decal.dmi'
+
+/obj/structure/sign/kepler/alt
+	icon_state = "kepleralt"
