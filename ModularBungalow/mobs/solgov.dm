@@ -382,8 +382,8 @@
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
 	name = "Mercenary Marksman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
-	icon_state = "solgovrangedrifle"
-	icon_living = "solgovrangedrifle"
+	icon_state = "solgovrangedmarksman"
+	icon_living = "solgovrangedmarksman"
 	maxHealth = 95
 	health = 95
 	harm_intent_damage = 25
