@@ -62,7 +62,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
+	head = /obj/item/clothing/head/helmet/kepler
 	back = /obj/item/storage/backpack/satchel
 	id = /obj/item/card/id/syndicate
 
@@ -254,9 +254,9 @@
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
-	maxHealth = 115
-	health = 115
-	rapid = 2
+	maxHealth = 135
+	health = 135
+	rapid = 3
 	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
@@ -273,8 +273,8 @@
 	icon_living = "solgovhazmat"
 	maxHealth = 135
 	health = 135
-	rapid = 3
-	rapid_fire_delay = 6
+	rapid = 2
+	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
@@ -293,8 +293,8 @@
 	speed = 2.5
 	maxHealth = 85
 	health = 85
-	harm_intent_damage = 5
-	melee_damage_lower = 55
+	harm_intent_damage = 10
+	melee_damage_lower = 60
 	melee_damage_upper = 5
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/c46x30mm
@@ -319,12 +319,12 @@
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
 	speed = 0.4
-	maxHealth = 155
-	health = 155
+	maxHealth = 185
+	health = 185
 	retreat_distance = 4
 	minimum_distance = 3
 	rapid = 5
-	rapid_fire_delay = 6
+	rapid_fire_delay = 2
 	casingtype = /obj/item/ammo_casing/c46x30mm
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpselmg,
@@ -342,11 +342,11 @@
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
 	speed = 0.4
-	maxHealth = 200
-	health = 200
-	minimum_distance = 2
+	maxHealth = 250
+	health = 250
+	minimum_distance = 1
 	rapid = 3
-	rapid_fire_delay = 10
+	rapid_fire_delay = 5
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner,
@@ -369,9 +369,9 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	retreat_distance = 15
-	minimum_distance = 4
+	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/p50/penetrator
-	rapid_fire_delay = 25
+	rapid_fire_delay = 18
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 15
 	vision_range = 15
@@ -389,10 +389,10 @@
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
 	speed = 2
-	maxHealth = 145
-	health = 145
+	maxHealth = 200
+	health = 200
 	rapid = 3
-	rapid_fire_delay = 4
+	rapid_fire_delay = 2
 	retreat_distance = 1
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/a556
@@ -417,3 +417,4 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsepilot,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	faction = list("russian")

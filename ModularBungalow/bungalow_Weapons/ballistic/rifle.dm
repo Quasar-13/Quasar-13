@@ -110,4 +110,4 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
