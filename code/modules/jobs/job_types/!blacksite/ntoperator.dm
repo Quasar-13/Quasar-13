@@ -28,6 +28,6 @@
 	head = /obj/item/clothing/head/beret/black
 	belt = null
 	backpack_contents = list(
-		/obj/item/choice_beacon/bungalow/mech/operator_mechs = 1,
+		/obj/item/choice_beacon/operator = 1,
 	)
 

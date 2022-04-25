@@ -36,60 +36,7 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
 
-//MAGS
-/obj/item/ammo_box/magazine/ak47
-	name = "AK-47 Magazine (7.62x39mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "ak_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
-	caliber = "7.62x39mm"
-	max_ammo = 30
-
-/obj/item/ammo_box/magazine/ak47/expanded
-	name = "AK-47 Expanded Magazine (7.62x39mm)"
-	icon_state = "ak_mag_large_item"
-	max_ammo = 50
-
-/obj/item/ammo_box/magazine/aks74u
-	name = "AKS-74U Magazine (5.45x39mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "ak_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a545_39
-	caliber = "5.45x39mm"
-	max_ammo = 30
-
-/obj/item/ammo_box/magazine/aks74u/expanded
-	name = "AKS-74U Expanded Magazine (5.45x39mm)"
-	icon_state = "ak_mag_large_item"
-	max_ammo = 50
-
-//CASINGS
-/obj/item/ammo_casing/ballistic/a762_39
-	name = "7.62x39mm bullet casing"
-	desc = "A 7.62x39mm bullet casing."
-	caliber = "7.62x39mm"
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a762_39
-
-/obj/item/ammo_casing/ballistic/a545_39
-	name = "5.45x39mm bullet casing"
-	desc = "A 5.45x39mm bullet casing."
-	caliber = "5.45x39mm"
-	randomspread = TRUE
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a545_39
-
-//BULLETS
-// AK-47 bullet
-/obj/projectile/bullet/a762_39
-	name = "7.62x39mm bullet"
-	damage = 27
-
-// AK-74 bullet
-/obj/projectile/bullet/a545_39
-	name = "5.45x39mm bullet"
-	damage = 34
-
+//T-12
 /obj/item/gun/ballistic/automatic/t12
 	name = "T-12"
 	desc = "A standard assault rifle used by TerraGov military."
@@ -112,23 +59,55 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
-//MAGS
-/obj/item/ammo_box/magazine/t12
-	name = "T12 Magazine (10x24mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "t12_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a10_24
-	caliber = "10x24mm"
-	max_ammo = 50
 
-/obj/item/ammo_casing/ballistic/a10_24
-	name = "10x24mm bullet casing"
-	desc = "A 10x24mm bullet casing."
-	caliber = "10x24mm"
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a10_24
 
-/obj/projectile/bullet/a10_24
-	name = "10x24mm bullet"
-	damage = 26
-	armour_penetration = 25
+/obj/item/gun/ballistic/automatic/laser/burst
+	name = "L-807 Neo Laser Burst Rifle "
+	desc = "The Miracle of the L-804, in it's full burst fire glory."
+	icon_state = "laserburst"
+	burst_size = 3
+
+
+
+
+
+//Kepler guns
+/obj/item/gun/ballistic/automatic/m90/xm29
+	name = "SG-XM29 'Annihilator'"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "xm29"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+
+/obj/item/gun/ballistic/automatic/gyropistol/xm25
+	name = "SG-P25 'Crow'"
+	desc = "A prototype grenade launcher designed to fire magazine fed grenades."
+	icon_state = "xm25"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/automatic/gyropistol/xm25/Initialize()
+	. = ..()
+	fire_delay = 12
+
+
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)

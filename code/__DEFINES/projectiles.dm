@@ -57,3 +57,5 @@
 #define CALIBER_TENTACLE	"tentacle"
 /// The caliber used by the Tac Breaching Shotties
 #define CALIBER_BREACHER	"breacher"
+/// The caliber used by XM grenade launcher
+#define CALIBER_20MM		"20mm"

@@ -12,16 +12,21 @@
 			mech_item_list[initial(A.name)] = A
 	return mech_item_list
 
-/obj/item/choice_beacon/spec/spawn_option(obj/choice,mob/living/M)
-	new choice(get_turf(M))
-	to_chat(M, "<span class='hear'>Stand by for titanfall.</span>")
 
 
-
-/obj/item/choice_beacon/bungalow/mech/operator_mechs
-	name = "mecha pilot beacon"
+/obj/item/choice_beacon/operator
+	name = "mech operator beacon"
 	desc = "A beacon to be used to call down a mecha."
-	typesof_options = /obj/vehicle/sealed/mecha/combat/marauder/operator_mech
+
+/obj/item/choice_beacon/operator/generate_display_names()
+	var/static/list/operator_item_list
+	if(!operator_item_list)
+		operator_item_list = list()
+		var/list/templist = typesof(/obj/vehicle/sealed/mecha/combat/marauder/operator_mech) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			operator_item_list[initial(A.name)] = A
+	return operator_item_list
 
 
 /obj/vehicle/sealed/mecha/combat/pilot
