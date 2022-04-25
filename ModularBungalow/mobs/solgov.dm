@@ -260,7 +260,7 @@
 	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
-	casingtype = /obj/item/ammo_casing/c45
+	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsenco,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
@@ -277,7 +277,7 @@
 	rapid_fire_delay = 5
 	retreat_distance = 4
 	minimum_distance = 3
-	casingtype = /obj/item/ammo_casing/c45
+	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/gibspawner/human,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
@@ -297,7 +297,7 @@
 	melee_damage_lower = 60
 	melee_damage_upper = 5
 	minimum_distance = 1
-	casingtype = /obj/item/ammo_casing/c46x30mm
+	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
@@ -325,10 +325,10 @@
 	minimum_distance = 3
 	rapid = 5
 	rapid_fire_delay = 2
-	casingtype = /obj/item/ammo_casing/c46x30mm
+	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpselmg,
-	/obj/item/gun/ballistic/automatic/ar/hk21,
+	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
@@ -359,7 +359,7 @@
 	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
-	name = "Mercenary Rifleman"
+	name = "Mercenary Sniper"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
@@ -376,8 +376,30 @@
 	aggro_vision_range = 22
 	vision_range = 22
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
+	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
+/mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
+	name = "Mercenary Marksman"
+	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
+	icon_state = "solgovrangedrifle"
+	icon_living = "solgovrangedrifle"
+	maxHealth = 95
+	health = 95
+	harm_intent_damage = 25
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+	retreat_distance = 4
+	minimum_distance = 1
+	casingtype = /obj/item/ammo_casing/a357
+	rapid_fire_delay = 15
+	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
+	aggro_vision_range = 14
+	vision_range = 14
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
 	..()
 	summon_backup(45)
@@ -391,8 +413,8 @@
 	speed = 2
 	maxHealth = 200
 	health = 200
-	rapid = 3
-	rapid_fire_delay = 2
+	rapid = 5
+	rapid_fire_delay = 1
 	retreat_distance = 1
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/a556
@@ -418,3 +440,12 @@
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("russian")
+
+/obj/item/gun/ballistic/automatic/ar/hk21/nomag
+	spawnwithmagazine = 0
+
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov
+	name = "Type 45 Sniper Rifle"
+	desc = "Typically used by Ranger marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	mag_display_ammo = 1
+	spawnwithmagazine = 0

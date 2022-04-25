@@ -36,7 +36,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
 	w_class = WEIGHT_CLASS_NORMAL
-	max_ammo = 10
+	max_ammo = 12
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/speedloader/c38
@@ -116,3 +116,10 @@
 	desc = "A box full of 12 breaching slugs."
 	icon_state = "breacher_box"
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
+
+//Ammoboxe for the armylathe hehe - Akira
+/obj/item/ammo_box/rifle
+	name = "admin ammo box"
+	desc = "Someone fucked this up."
+	icon_state = "breacher_box"
+	ammo_type = /obj/item/ammo_casing/a556

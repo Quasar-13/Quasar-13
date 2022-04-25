@@ -63,6 +63,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_lefthand.dmi'
 	righthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_righthand.dmi'
+	can_be_sawn_off = FALSE
 
 /obj/item/ammo_box/magazine/internal/shot/four
 	name = "four-barrel shotgun internal magazine"
