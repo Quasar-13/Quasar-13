@@ -290,24 +290,27 @@
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
-	speed = 2.5
-	maxHealth = 85
-	health = 85
+	speed = 3.5
+	maxHealth = 125
+	health = 125
 	harm_intent_damage = 10
-	melee_damage_lower = 60
-	melee_damage_upper = 5
-	minimum_distance = 1
-	casingtype = /obj/item/ammo_casing/c9mm
-	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
+	melee_damage_lower = 65
+	melee_damage_upper = 15
+	minimum_distance = 0
+	retreat_distance = 13 //otherwise he just kills you instantly
+	rapid = 3
+	rapid_fire_delay = 6
+	casingtype = /obj/item/ammo_casing/shotgun/beanbag
+	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker,
-	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-	projectile_deflect_chance = 76
+	projectile_deflect_chance = 76 //dodge!
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
 	summon_backup(15)
-	say("Vernites' syuda")
+	say("Vernites syuda")
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Initialize()
 	. = ..()
@@ -319,10 +322,10 @@
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
 	speed = 0.4
-	maxHealth = 185
-	health = 185
-	retreat_distance = 4
-	minimum_distance = 3
+	maxHealth = 205
+	health = 205
+	retreat_distance = 3
+	minimum_distance = 2
 	rapid = 5
 	rapid_fire_delay = 2
 	casingtype = /obj/item/ammo_casing/a556
@@ -348,7 +351,7 @@
 	rapid = 3
 	rapid_fire_delay = 5
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
-	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
+	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
@@ -363,12 +366,12 @@
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
-	maxHealth = 95
-	health = 95
+	maxHealth = 15
+	health = 115
 	harm_intent_damage = 25
-	melee_damage_lower = 25
-	melee_damage_upper = 25
-	retreat_distance = 15
+	melee_damage_lower = 45
+	melee_damage_upper = 45
+	retreat_distance = 8
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/p50/penetrator
 	rapid_fire_delay = 20
@@ -384,13 +387,13 @@
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedmarksman"
 	icon_living = "solgovrangedmarksman"
-	maxHealth = 95
-	health = 95
+	maxHealth = 105
+	health = 105
 	harm_intent_damage = 25
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	retreat_distance = 4
-	minimum_distance = 1
+	minimum_distance = 2
 	casingtype = /obj/item/ammo_casing/a357
 	rapid_fire_delay = 15
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
@@ -410,11 +413,11 @@
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
-	speed = 2
+	speed = 2.75
 	maxHealth = 200
 	health = 200
-	rapid = 5
-	rapid_fire_delay = 1
+	rapid = 3
+	rapid_fire_delay = 2
 	retreat_distance = 1
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/a556
