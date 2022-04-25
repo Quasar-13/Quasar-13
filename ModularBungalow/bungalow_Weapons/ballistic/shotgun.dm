@@ -54,3 +54,17 @@
 /obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted
 	pin = /obj/item/firing_pin
 
+/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap
+	name = "PS-45 'Stop Gap'"
+	desc = "A small four-barrel shotgun.Normally used by medics or some other heavy assault unit, typically fire .357 and .44 this one is modified to fire shotgun shells"
+	icon_state = "stopgap"
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/four
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	lefthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_lefthand.dmi'
+	righthand_file = 'ModularBungalow/zbungalowicons/weapons/shotguns_righthand.dmi'
+
+/obj/item/ammo_box/magazine/internal/shot/four
+	name = "four-barrel shotgun internal magazine"
+	max_ammo = 4
+

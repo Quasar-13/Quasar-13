@@ -117,3 +117,12 @@
 	desc = "The classic high-powered revolver to rival the Mateba. This one is loaded in .357 with a custom 7 bullet cylinder."
 	icon_state = "sw500"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
+
+//
+/obj/item/gun/ballistic/revolver/akira
+	name = "Kira's Special"
+	desc = "A special pistol made for the kitsune, chambered in .38"
+	icon_state = "akira"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	initial_caliber = CALIBER_38
