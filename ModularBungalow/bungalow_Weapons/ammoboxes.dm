@@ -46,12 +46,24 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/c38
 
+/obj/item/ammo_box/speedloader/c38/dumdum
+	name = ".38 dum dum speedloader"
+	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
+	ammo_type = /obj/item/ammo_casing/c38/dumdum
+
 /obj/item/ammo_box/speedloader/a357
 	name = ".357 speedloader"
 	desc = "A speedloader full of .357 catridges ready to be used!"
 	icon_state = "slc357"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
+
+/obj/item/ammo_box/speedloader/a357/match
+	name = ".357 match speedloader"
+	desc = "A speedloader full of .357 match catridges ready to be used!"
+	icon_state = "slc357"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357/match
 
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
@@ -119,7 +131,29 @@
 
 //Ammoboxe for the armylathe hehe - Akira
 /obj/item/ammo_box/rifle
-	name = "admin ammo box"
-	desc = "Someone fucked this up."
-	icon_state = "breacher_box"
+	name = ".556 ammo box"
+	desc = "A box full of .556 Cartridges ready to be used, hold 60 casing"
+	icon_state = "riflebox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 60
+
+//do not make this one printable, mapping purpose and lootdrop.
+/obj/item/ammo_box/rifle/big
+	name = "large .556 ammo box"
+	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing, this one is bulky"
+	icon_state = "superriflebox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 180
+
+/obj/item/ammo_box/ab357
+	name = ".357 ammo box"
+	desc = "A box full of .357 Cartridges ready to be used, hold 24 casing"
+	icon_state = "357box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24

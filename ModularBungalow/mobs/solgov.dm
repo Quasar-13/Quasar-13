@@ -403,6 +403,16 @@
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
+/mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman/light
+	casingtype = /obj/item/ammo_casing/c38/iceblox
+	rapid_fire_delay = 10
+	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
+	aggro_vision_range = 9
+	vision_range = 9
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
+	/obj/item/gun/ballistic/shotgun/lever_action/med/scope,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
 	..()
 	summon_backup(45)
@@ -447,8 +457,3 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/nomag
 	spawnwithmagazine = 0
 
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov
-	name = "Type 45 Sniper Rifle"
-	desc = "Typically used by Ranger marksman, combat technician or in this case, found in the hand of mercenary snipers."
-	mag_display_ammo = 1
-	spawnwithmagazine = 0
