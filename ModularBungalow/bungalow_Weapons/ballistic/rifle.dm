@@ -116,3 +116,9 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov
+	name = "Type 45 Sniper Rifle"
+	desc = "Typically used by Ranger marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	icon_state = "rifle45"
+	mag_display_ammo = 1
+	spawnwithmagazine = 0
