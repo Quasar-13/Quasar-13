@@ -307,7 +307,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
 	summon_backup(15)
-	say("I'm gonna turn you inside out!")
+	say("Vernites' syuda")
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Initialize()
 	. = ..()
@@ -334,7 +334,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
 	summon_backup(15)
-	say("Time to earn your pay!")
+	say("Tam oni!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
 	name = "Mercenary Heavy Shotgunner"
@@ -356,7 +356,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
 	..()
 	summon_backup(15)
-	say("There I see them!")
+	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
 	name = "Mercenary Rifleman"
@@ -371,17 +371,17 @@
 	retreat_distance = 15
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/p50/penetrator
-	rapid_fire_delay = 18
+	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
-	aggro_vision_range = 15
-	vision_range = 15
+	aggro_vision_range = 22
+	vision_range = 22
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/Aggro()
 	..()
 	summon_backup(45)
-	say("Target Sighted")
+	say("Tsel obnaruzhena!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault
 	name = "Mercenary Assault"
