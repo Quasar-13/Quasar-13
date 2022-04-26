@@ -442,6 +442,25 @@
 	say("Idi syuda!")
 //you are fucked if you see him
 
+/mob/living/simple_animal/hostile/solgov/infected
+	name = "Infected"
+	desc = "Oh god oh fuck."
+	icon_state = "solgov_infested"
+	icon_living = "solgov_infested"
+	speed = 1.75
+	maxHealth = 200
+	health = 200
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
+/mob/living/simple_animal/hostile/solgov/infected/heavy
+	icon_state = "solgov_infestedh"
+	icon_living = "solgov_infestedh"
+	speed = 0.8
+	maxHealth = 250
+	health = 250
+
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
 	name = "Mercenary Pilot"
 	desc = "Unarmed but fast."
