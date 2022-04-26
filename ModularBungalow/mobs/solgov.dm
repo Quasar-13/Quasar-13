@@ -277,6 +277,7 @@
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/gibspawner/human,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/item/reagent_containers/hypospray/medipen/stimpack/traitor,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("russian", "hostile")
 //HAZMAT DOES NOT GET TARGETTED BY INFECTED MOB. INTENTENDED.
@@ -288,8 +289,8 @@
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
 	speed = 3.5
-	maxHealth = 125
-	health = 125
+	maxHealth = 155
+	health = 155
 	harm_intent_damage = 10
 	melee_damage_lower = 65
 	melee_damage_upper = 15
@@ -301,8 +302,9 @@
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/cloaker,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
+	/obj/item/reagent_containers/hypospray/medipen/salacid,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-	projectile_deflect_chance = 76 //dodge!
+	projectile_deflect_chance = 15 //dodge!
 	faction = list("russian", "hostile", "mining")
 //to make them not accidentally run into wolves and whatnot, will become important
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
@@ -313,20 +315,25 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Initialize()
 	. = ..()
 	set_light(2)
+//NOT RANGED
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian
+	name = "Ark Guardian"
+	desc = "Summoned to protect the ark from any intruders"
+	icon_state = "solgovcloakerg"
+	icon_living = "solgovcloakerg"
+	speed = 2.5
+	maxHealth = 195
+	health = 195
+	ranged = 0
+	loot = list(/obj/effect/particle_effect/smoke/freezing,
+	/obj/item/reagent_containers/hypospray/medipen/gatorade
+	/obj/effect/spawner/lootdrop/medical/firstaid)
+	projectile_deflect_chance = 5 //dodge! but not as much
+	faction = list("russian", "mining")
 
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/lesser
-	name = "Mercenary Elite"
-	desc = "What the hell is that thing"
-	icon_state = "solgovcloaker"
-	icon_living = "solgovcloaker"
-	speed = 3.5
-	maxHealth = 55
-	health = 55
-	minimum_distance = 0
-	retreat_distance = 2 //so they dont run offscreen
-	rapid = 2
-	rapid_fire_delay = 6
-
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
+	. = ..()
+	set_light(3)
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
 	name = "Mercenary Elite"
 	desc = "Protecting your future, Now stop resisting"
@@ -343,7 +350,8 @@
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/lmg,
 	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/item/reagent_containers/hypospray/medipen/ekit,
+	/obj/effect/spawner/lootdrop/medical/firstaid)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
@@ -365,7 +373,7 @@
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
 	..()
@@ -391,7 +399,8 @@
 	vision_range = 22
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/item/reagent_containers/hypospray/medipen/salcid,
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
 	faction = list("russian", "hostile", "mining")
 //so they would ignore the bears and not get attacked by em
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
@@ -446,6 +455,7 @@
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/assault,
 	/obj/item/gun/ballistic/automatic/m90/xm29,
+	/obj/item/reagent_containers/hypospray/medipen/ekit,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault/Aggro()
@@ -501,4 +511,35 @@
 //it will ignore other wild life aswell
 /obj/item/gun/ballistic/automatic/ar/hk21/nomag
 	spawnwithmagazine = 0
+//THIS MEDIPEN IS A BOSS FIGHT DROP
+/obj/item/reagent_containers/hypospray/medipen/gatorade
+	name = "electrolyte autoinjector"
+	desc = "extracted from someone spine, what the hell are you doing .DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
+	icon_state = "atropen"
+	inhand_icon_state = "atropen"
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/libital = 10, /datum/reagent/medicine/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10)
 
+/obj/item/storage/firstaid/tactical/solgov
+	name = "combat medical kit"
+	desc = "I hope you've got insurance."
+	icon_state = "bezerk"
+	damagetype_healed = "all"
+
+/obj/item/storage/firstaid/tactical/solgovComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/firstaid/tactical/solgov/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/reagent_containers/hypospray/medipen/(src)
+	new /obj/item/reagent_containers/hypospray/medipen/(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
