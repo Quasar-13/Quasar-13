@@ -326,7 +326,7 @@
 	health = 195
 	ranged = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
-	/obj/item/reagent_containers/hypospray/medipen/gatorade
+	/obj/item/reagent_containers/hypospray/medipen/gatorade,
 	/obj/effect/spawner/lootdrop/medical/firstaid)
 	projectile_deflect_chance = 5 //dodge! but not as much
 	faction = list("russian", "mining")
@@ -513,7 +513,7 @@
 	spawnwithmagazine = 0
 //THIS MEDIPEN IS A BOSS FIGHT DROP
 /obj/item/reagent_containers/hypospray/medipen/gatorade
-	name = "electrolyte autoinjector"
+	name = "restorative nanite injector"
 	desc = "extracted from someone spine, what the hell are you doing .DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
 	icon_state = "atropen"
 	inhand_icon_state = "atropen"
