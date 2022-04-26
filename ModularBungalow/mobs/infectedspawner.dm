@@ -38,7 +38,3 @@
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman = 50,
 		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/armsy = 50,
 	)
-
-//FOR THE ACTUAL SPAWNER MAIN EFFECT
-//mob/living/simple_animal/hostile/solgov/infected/heavy
-//obj/effect/gibspawner/human
