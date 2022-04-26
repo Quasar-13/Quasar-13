@@ -683,10 +683,6 @@
 /obj/structure/barricade/wooden/snowed,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
-"aPj" = (
-/obj/item/clothing/head/beret/durathread/kepler/ranger,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "aPk" = (
 /obj/structure/rack,
 /obj/item/circuitboard/machine/circuit_imprinter,
@@ -2464,7 +2460,11 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "cRy" = (
-/mob/living/simple_animal/hostile/solgov/infected,
+/mob/living/simple_animal/hostile/solgov/infected{
+	aggro_vision_range = 1;
+	anchored = 1;
+	vision_range = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -4122,6 +4122,8 @@
 /mob/living/simple_animal/hostile/solgov{
 	aggro_vision_range = 1;
 	anchored = 1;
+	icon_living = "solgovscientist";
+	icon_state = "solgovscientist";
 	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
@@ -7002,6 +7004,10 @@
 	},
 /turf/open/floor/plasteel/stairs,
 /area/ruin/space/has_grav/powered)
+"hKF" = (
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "hLn" = (
 /obj/structure/sign/nanotrasen,
 /turf/closed/indestructible/reinforced,
@@ -7044,6 +7050,10 @@
 /obj/effect/turf_decal/stripes/red/full,
 /obj/machinery/drone_dispenser/hivebot,
 /turf/open/floor/engine/air,
+/area/ruin/powered)
+"hNq" = (
+/obj/item/gun/ballistic/automatic/ar/hk21,
+/turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "hNv" = (
 /obj/machinery/smartfridge/survival_pod/preloaded,
@@ -7342,10 +7352,6 @@
 	planetary_atmos = 1;
 	temperature = 180
 	},
-/area/ruin/powered)
-"icS" = (
-/obj/item/clothing/under/misc/durathread/kepler,
-/turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "ido" = (
 /obj/structure/cable,
@@ -8068,10 +8074,6 @@
 	icon_state = "platingdmg1"
 	},
 /area/medical/abandoned)
-"iYD" = (
-/obj/item/gun/ballistic/automatic/gyropistol/xm25,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "iZe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
@@ -9243,10 +9245,6 @@
 /obj/item/stack/tile/plasteel,
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
-"krZ" = (
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "ksf" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/plasteel,
@@ -9704,10 +9702,6 @@
 	},
 /turf/closed/wall/r_wall/rust,
 /area/hallway/primary/central)
-"kQx" = (
-/obj/item/gun/ballistic/automatic/m90/xm29,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "kQW" = (
 /obj/machinery/sleeper/survival_pod,
 /obj/machinery/light/directional/west,
@@ -10076,7 +10070,11 @@
 /turf/closed/mineral/snowmountain/icemoon,
 /area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
 "ljX" = (
-/mob/living/simple_animal/hostile/solgov/infected/heavy,
+/mob/living/simple_animal/hostile/solgov/infected/heavy{
+	aggro_vision_range = 1;
+	anchored = 1;
+	vision_range = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -10636,10 +10634,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"lRo" = (
-/obj/item/gun/ballistic/automatic/ar/hk21,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "lSo" = (
 /obj/effect/decal/cleanable/plasma,
 /obj/effect/decal/cleanable/dirt,
@@ -10701,6 +10695,10 @@
 	},
 /turf/open/floor/plastic,
 /area/ruin/space/has_grav/hellfactory)
+"lWk" = (
+/obj/item/clothing/head/beret/durathread/kepler/ranger,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "lWn" = (
 /mob/living/simple_animal/hostile/solgov/ranged/heavy{
 	health = 1
@@ -11422,6 +11420,10 @@
 /obj/effect/spawner/lootdrop/armory_contraband,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
+"mNA" = (
+/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "mNO" = (
 /mob/living/simple_animal/hostile/solgov/ranged/smg{
 	dir = 8
@@ -12529,6 +12531,10 @@
 "nPe" = (
 /turf/closed/indestructible/reinforced,
 /area/space)
+"nPA" = (
+/obj/item/gun/ballistic/automatic/gyropistol/xm25,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "nPN" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -13999,10 +14005,6 @@
 	temperature = 180
 	},
 /area/ruin/space/has_grav/powered)
-"pkB" = (
-/obj/item/clothing/head/beret/durathread/kepler,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "pld" = (
 /obj/effect/turf_decal/stripes/full,
 /turf/open/floor/engine/hull/reinforced,
@@ -16787,10 +16789,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/kitchen)
-"sju" = (
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "sjG" = (
 /obj/structure/closet/crate/miningcar,
 /turf/open/floor/plating/dirt/jungle,
@@ -18168,10 +18166,6 @@
 /obj/item/ammo_box/magazine/t12,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
-"tEY" = (
-/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "tFK" = (
 /obj/effect/spawner/trap,
 /turf/open/floor/plasteel/cult,
@@ -18261,6 +18255,10 @@
 /mob/living/simple_animal/hostile/syndicate/melee/space,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
+"tKN" = (
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "tKV" = (
 /obj/machinery/power/floodlight{
 	anchored = 1
@@ -19390,6 +19388,10 @@
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/dorms/barracks)
+"uYK" = (
+/obj/item/clothing/head/beret/durathread/kepler,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "uZa" = (
 /obj/machinery/door/airlock/survival_pod/glass,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer2,
@@ -20156,6 +20158,10 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"vMk" = (
+/obj/item/gun/ballistic/automatic/m90/xm29,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "vMR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -20625,6 +20631,10 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/engineering)
+"wld" = (
+/obj/item/clothing/under/misc/durathread/kepler,
+/turf/closed/indestructible/rock/snow,
+/area/ruin/powered)
 "wlr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -35320,7 +35330,7 @@ vzW
 exf
 "}
 (46,1,1) = {"
-icS
+wld
 wjb
 hAu
 fXy
@@ -35607,7 +35617,7 @@ vzW
 exf
 "}
 (47,1,1) = {"
-pkB
+uYK
 aIM
 lHs
 fXy
@@ -35894,7 +35904,7 @@ vzW
 exf
 "}
 (48,1,1) = {"
-aPj
+lWk
 oBJ
 lrx
 fXy
@@ -36181,7 +36191,7 @@ vzW
 exf
 "}
 (49,1,1) = {"
-sju
+hKF
 kDo
 jLy
 fXy
@@ -36468,7 +36478,7 @@ vzW
 exf
 "}
 (50,1,1) = {"
-tEY
+mNA
 tfL
 ejh
 fXy
@@ -36755,7 +36765,7 @@ vzW
 exf
 "}
 (51,1,1) = {"
-lRo
+hNq
 neN
 cRy
 fXy
@@ -37042,7 +37052,7 @@ vzW
 exf
 "}
 (52,1,1) = {"
-krZ
+tKN
 tPy
 ljX
 fXy
@@ -37329,7 +37339,7 @@ vzW
 exf
 "}
 (53,1,1) = {"
-iYD
+nPA
 emL
 ouZ
 fXy
@@ -37616,7 +37626,7 @@ vzW
 exf
 "}
 (54,1,1) = {"
-kQx
+vMk
 exa
 uyb
 fXy
