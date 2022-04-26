@@ -243,7 +243,7 @@
 	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov,
 	/obj/item/gun/ballistic/automatic/pistol/m1911,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
 	name = "Mercenary NCO"
@@ -260,7 +260,7 @@
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
 	name = "Mercenary Hazmat"
@@ -303,7 +303,8 @@
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	projectile_deflect_chance = 76 //dodge!
-
+	faction = list("russian", "hostile", "mining")
+//to make them not accidentally run into wolves and whatnot, will become important
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
 	summon_backup(15)
@@ -312,6 +313,19 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Initialize()
 	. = ..()
 	set_light(2)
+
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/lesser
+	name = "Mercenary Elite"
+	desc = "What the hell is that thing"
+	icon_state = "solgovcloaker"
+	icon_living = "solgovcloaker"
+	speed = 3.5
+	maxHealth = 55
+	health = 55
+	minimum_distance = 0
+	retreat_distance = 2 //so they dont run offscreen
+	rapid = 2
+	rapid_fire_delay = 6
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
 	name = "Mercenary Elite"
@@ -378,7 +392,8 @@
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-
+	faction = list("russian", "hostile", "mining")
+//so they would ignore the bears and not get attacked by em
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
 	name = "Mercenary Marksman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
@@ -455,7 +470,7 @@
 /mob/living/simple_animal/hostile/solgov/infected/heavy
 	icon_state = "solgov_infestedh"
 	icon_living = "solgov_infestedh"
-	speed = 0.8
+	speed = 1
 	maxHealth = 250
 	health = 250
 
@@ -472,6 +487,18 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("russian")
 
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov
+	name = "Solgov K9 Unit"
+	desc = "Big bear, Will punch your face off."
+	icon_state = "solgovpolarbear"
+	icon_living = "solgovpolarbear"
+	speed = 2.5
+	maxHealth = 350
+	loot = list(/obj/item/reagent_containers/hypospray/medipen/oxandrolone,
+	/obj/item/reagent_containers/hypospray/medipen/salacid,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	faction = list("russian", "mining")
+//it will ignore other wild life aswell
 /obj/item/gun/ballistic/automatic/ar/hk21/nomag
 	spawnwithmagazine = 0
 
