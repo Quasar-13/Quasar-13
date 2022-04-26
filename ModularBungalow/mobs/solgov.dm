@@ -66,6 +66,7 @@
 /datum/outfit/solgovcorpsemarksman
 	name = "Kepler Marksman Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
+	suit = /obj/item/clothing/suit/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
@@ -75,6 +76,7 @@
 /datum/outfit/solgovcorpsecloaker
 	name = "Kepler Elite Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
+	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
