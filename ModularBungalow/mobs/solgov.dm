@@ -399,7 +399,7 @@
 	vision_range = 22
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
-	/obj/item/reagent_containers/hypospray/medipen/salcid,
+	/obj/item/reagent_containers/hypospray/medipen/salacid,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 	faction = list("russian", "hostile", "mining")
 //so they would ignore the bears and not get attacked by em
@@ -517,15 +517,15 @@
 	desc = "extracted from someone spine, what the hell are you doing .DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
 	icon_state = "atropen"
 	inhand_icon_state = "atropen"
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/libital = 10, /datum/reagent/medicine/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10)
-
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10)
+//RAIDEN WHAT ARE YOU DOING
 /obj/item/reagent_containers/hypospray/combat/gatorade
 	name = "experimental combat nanites injector"
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost."
 	inhand_icon_state = "nanite_hypo"
 	icon_state = "nanite_hypo"
-	volume = 2250
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 150, /datum/reagent/medicine/libital = 150, /datum/reagent/medicine/aiuri = 150, /datum/reagent/medicine/coagulant = 150, /datum/reagent/iron = 150, /datum/reagent/medicine/salglu_solution = 150, /datum/reagent/medicine/salbutamol = 150, /datum/reagent/medicine/sal_acid = 150 ,/datum/reagent/medicine/omnizine = 150 ,/datum/reagent/medicine/leporazine = 150, /datum/reagent/medicine/stimulants = 150, /datum/reagent/consumable/coffee = 150, datum/reagent/medicine/adminordrazine/quantum_heal = 150, /datum/reagent/medicine/synaptizine = 150)
+	volume = 3300
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 150,/datum/reagent/medicine/c2/libital = 150, /datum/reagent/medicine/ephedrine = 150 , /datum/reagent/medicine/c2/aiuri = 150, /datum/reagent/medicine/coagulant = 150, /datum/reagent/iron = 150, /datum/reagent/medicine/salglu_solution = 150, /datum/reagent/medicine/salbutamol = 150, /datum/reagent/medicine/sal_acid = 150 ,/datum/reagent/medicine/omnizine = 150 ,/datum/reagent/medicine/leporazine = 150, /datum/reagent/medicine/stimulants = 150, /datum/reagent/consumable/coffee = 150, /datum/reagent/medicine/adminordrazine/quantum_heal = 150, /datum/reagent/medicine/synaptizine = 150, /datum/reagent/medicine/regen_jelly = 150, /datum/reagent/medicine/spaceacillin = 150, /datum/reagent/medicine/omnizine/protozine = 150, /datum/reagent/medicine/neurine = 150, /datum/reagent/medicine/mannitol = 150, /datum/reagent/medicine/syndicate_nanites = 150, /datum/reagent/medicine/coagulant/banana_peel = 150)
 
 /obj/item/storage/firstaid/tactical/solgov
 	name = "combat medical kit"
