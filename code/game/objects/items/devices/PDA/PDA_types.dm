@@ -231,7 +231,7 @@
 	icon_state = "pda-genetics"
 
 /obj/item/pda/chemist
-	name = "chemist PDA"
+	name = "chemical researcher PDA"
 	default_cartridge = /obj/item/cartridge/chemistry
 	icon_state = "pda-chemre"
 
@@ -252,3 +252,9 @@
 	name = "military police PDA"
 	default_cartridge = /obj/item/cartridge/security
 	icon_state = "pda-mp"
+
+/obj/item/pda/brigdoc
+	name = "brig physician PDA"
+	default_cartridge = /obj/item/cartridge/security
+	icon_state = "pda-brigdoc"
+

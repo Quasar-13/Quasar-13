@@ -123,6 +123,10 @@
 	icon_state = "hop_cypherkey"
 	channels = list(RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_COMMAND = 1)
 
+/obj/item/encryptionkey/headset_comms
+	name = "communication officer radio encryption key"
+	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_MEDICAL = 1, RADIO_CHANNEL_SUPPLY = 1)
+
 /obj/item/encryptionkey/headset_cargo
 	name = "supply radio encryption key"
 	icon_state = "cargo_cypherkey"
@@ -149,3 +153,10 @@
 
 /obj/item/encryptionkey/secbot
 	channels = list(RADIO_CHANNEL_AI_PRIVATE = 1, RADIO_CHANNEL_SECURITY = 1)
+
+/obj/item/encryptionkey/cent_agent
+	name = "agent encryption key"
+	icon_state = "cent_cypherkey"
+	channels = list(RADIO_CHANNEL_CENTCOM = 1, RADIO_CHANNEL_SYNDICATE = 1)
+	independent = TRUE
+	syndie = TRUE

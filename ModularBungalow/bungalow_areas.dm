@@ -99,7 +99,7 @@
 	icon_state ="mime"
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
-//Marine areas for Casio
+//Marine areas for Naval stations
 /area/marines
 	name = "NT Marine Brig"
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
@@ -153,3 +153,9 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "secretary"
 	sound_environment = SOUND_AREA_WOODFLOOR
+
+//NT remnant base
+/area/ntremnant
+	name = "Nanotrasen Remnant Base"
+	icon_state = "blue"
+

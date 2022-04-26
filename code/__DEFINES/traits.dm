@@ -333,6 +333,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NEEDS_TWO_HANDS	"needstwohands" //The items needs two hands to be carried
 #define TRAIT_FISH_SAFE_STORAGE "fish_case" //Fish in this won't die
 #define TRAIT_FISH_CASE_COMPATIBILE "fish_case_compatibile" //Stuff that can go inside fish cases
+#define TRAIT_WIELDED "wielded" ///Properly wielded two handed item
 
 //quirk traits
 #define TRAIT_ALCOHOL_TOLERANCE	"alcohol_tolerance"
@@ -374,6 +375,14 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define CAT_QUIRK_NOTES 1
 #define CAT_QUIRK_MINOR_DISABILITY 2
 #define CAT_QUIRK_MAJOR_DISABILITY 3
+
+/* Traits for ventcrawling.
+ * Both give access to ventcrawling, but *_NUDE requires the user to be
+ * wearing no clothes and holding no items. If both present, *_ALWAYS
+ * takes precedence.
+ */
+#define TRAIT_VENTCRAWLER_ALWAYS "ventcrawler_always"
+#define TRAIT_VENTCRAWLER_NUDE "ventcrawler_nude"
 
 // common trait sources
 #define TRAIT_GENERIC "generic"

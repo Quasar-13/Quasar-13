@@ -148,3 +148,19 @@
 	anonymize = TRUE
 	frequency = 1481
 	broadcasting = TRUE
+
+/obj/item/radio/intercom/directional/north
+	dir = SOUTH
+	pixel_y = 32
+
+/obj/item/radio/intercom/directional/south
+	dir = NORTH
+	pixel_y = -32
+
+/obj/item/radio/intercom/directional/east
+	dir = WEST
+	pixel_x = 32
+
+/obj/item/radio/intercom/directional/west
+	dir = EAST
+	pixel_x = -32

@@ -8,18 +8,14 @@
 	selection_color = "#03fca5"
 	maptype = "solgov"
 
-	outfit = /datum/outfit/job/administrator
+	outfit = /datum/outfit/job/solgov
 
-	access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_RESEARCH, ACCESS_HEADS)
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_RESEARCH, ACCESS_HEADS)
+	access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_RND, ACCESS_HEADS, ACCESS_ATMOSPHERICS)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_RND, ACCESS_HEADS, ACCESS_ATMOSPHERICS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_COMMAND
 
-/datum/outfit/job/administrator
-	name = "Solgov Survivor (Administrator)"
-	id = /obj/item/card/id/solgov
-	jobtype = /datum/job/administrator
-	belt = null
+
 

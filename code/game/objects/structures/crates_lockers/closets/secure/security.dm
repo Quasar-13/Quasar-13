@@ -66,6 +66,7 @@
 	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
 	new /obj/item/clothing/suit/armor/vest/leather(src)
 	new /obj/item/clothing/suit/armor/hos(src)
+	new /obj/item/clothing/suit/armor/hos/vest(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
@@ -260,7 +261,7 @@
 	..()
 	new /obj/item/storage/box/firingpins(src)
 	for(var/i in 1 to 3)
-		new /obj/item/storage/box/rubbershot(src)
+		new /obj/item/ammo_box/shotgun/rubber(src)
 	for(var/i in 1 to 3)
 		new /obj/item/gun/ballistic/shotgun/riot(src)
 
@@ -286,7 +287,7 @@
 /obj/structure/closet/secure_closet/armory4/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
-		new /obj/item/storage/box/lethalshot(src)
+		new /obj/item/ammo_box/shotgun/buckshot(src)
 
 
 /obj/structure/closet/secure_closet/tac

@@ -72,6 +72,14 @@
 	description = "A once grand library, now lost to the confines of the Ice Moon."
 	suffix = "icemoon_underground_library.dmm"
 
+/datum/map_template/ruin/icemoon/underground/miner
+	name = "Demonic Miner's Lair"
+	id = "minerlair"
+	description = "Captured by shadowey figures and imbued with unholy magic and madness, forever they remain in that place. Lost in mind and soul"
+	suffix = "icemoon_underground_miner_cave.dmm"
+	cost = 0
+	always_place = TRUE
+
 /datum/map_template/ruin/icemoon/underground/wrath
 	name = "Ruin of Wrath"
 	id = "wrath"
@@ -107,6 +115,16 @@
 	id = "wendigocave"
 	description = "Into the jaws of the beast."
 	suffix = "icemoon_underground_wendigo_cave.dmm"
+	cost = 0
+	always_place = TRUE
+
+/datum/map_template/ruin/icemoon/underground/clockwork
+	name = "Underground Clock Lair"
+	id = "iceclock"
+	description = "An old Clockwork defendered, protecting his goods."
+	suffix = "icemoon_underground_clockwork.dmm"
+	cost = 0
+	always_place = TRUE
 
 /datum/map_template/ruin/icemoon/underground/free_golem
 	name = "Free Golem Ship"

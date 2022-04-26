@@ -43,3 +43,14 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
 	max_ammo = 7
 	caliber = "breacher"
+
+/obj/item/gun/ballistic/shotgun/bulldog/automatic
+	name = "Automatic Bulldog Shotgun"
+
+/obj/item/gun/ballistic/shotgun/bulldog/automatic/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
+/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted
+	pin = /obj/item/firing_pin
+

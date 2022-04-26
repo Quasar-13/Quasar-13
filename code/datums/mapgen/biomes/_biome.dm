@@ -33,8 +33,7 @@
 	turf_type = /turf/open/floor/grass
 	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/tree/jungle, /obj/structure/flora/rock/jungle, /obj/structure/flora/junglebush, /obj/structure/flora/junglebush/b, /obj/structure/flora/junglebush/c, /obj/structure/flora/junglebush/large, /obj/structure/flora/rock/pile/largejungle)
 	flora_density = 15
-	fauna_types = list(/mob/living/simple_animal/hostile/jungle/mook = 50,
-		/mob/living/simple_animal/hostile/gorilla = 5)
+	fauna_types = list(/mob/living/simple_animal/hostile/jungle/mook = 50)
 	fauna_density = 0.3
 
 /datum/biome/jungle
@@ -42,7 +41,6 @@
 	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/tree/jungle, /obj/structure/flora/rock/jungle, /obj/structure/flora/junglebush, /obj/structure/flora/junglebush/b, /obj/structure/flora/junglebush/c, /obj/structure/flora/junglebush/large, /obj/structure/flora/rock/pile/largejungle)
 	flora_density = 40
 	fauna_types = list(/mob/living/simple_animal/hostile/jungle/mook = 10,
-		/mob/living/simple_animal/hostile/gorilla = 5,
 		/mob/living/simple_animal/hostile/poison/giant_spider = 10,
 		/mob/living/simple_animal/hostile/poison/giant_spider/tarantula = 5,
 		/mob/living/simple_animal/hostile/poison/giant_spider/nurse = 15,
@@ -52,13 +50,11 @@
 /datum/biome/jungle/deep
 	flora_density = 65
 	fauna_types = list(/mob/living/simple_animal/hostile/jungle/mook = 3,
-		/mob/living/simple_animal/hostile/gorilla = 10,
 		/mob/living/simple_animal/hostile/poison/giant_spider = 30,
 		/mob/living/simple_animal/hostile/poison/giant_spider/tarantula = 10,
 		/mob/living/simple_animal/hostile/poison/giant_spider/nurse = 15,
 		/mob/living/simple_animal/hostile/poison/giant_spider/viper = 5,
-		/mob/living/simple_animal/hostile/jungle/mega_arachnid = 3,
-		/mob/living/simple_animal/hostile/jungle/seedling = 1)
+		/mob/living/simple_animal/hostile/jungle/mega_arachnid = 3)
 	fauna_density = 0.7
 
 /datum/biome/wasteland

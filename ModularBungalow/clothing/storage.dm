@@ -79,6 +79,9 @@
 		new /obj/item/reagent_containers/syringe(src)
 
 /*
+**************************************************
+			DEATHSQUAD LOADOUTS
+**************************************************
 	PULSE RIFLE KIT BLACKSITE
 */
 /obj/item/storage/backpack/duffelbag/deathsquad
@@ -100,6 +103,39 @@
 	new /obj/item/gun/energy/pulse/pistol(src)
 
 /*
+	ROCKET LAUNCHER KIT BLACKSITE
+*/
+/obj/item/storage/backpack/duffelbag/deathsquad/rocket
+	name = "Rocket Launcher Kit"
+	desc = "Contains the new and improved Deathsquad rocket launcher with a pulse pistol sidearm."
+
+/obj/item/storage/backpack/duffelbag/deathsquad/rocket/PopulateContents()
+	new /obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/ammo_casing/caseless/rocket/hps(src)
+	new /obj/item/gun/energy/pulse/pistol(src)
+
+/*
+	MELEE KIT BLACKSITE
+*/
+/obj/item/storage/backpack/duffelbag/deathsquad/axe
+	name = "Prototype Energy Axe Kit"
+	desc = "Contains a prototype energy axe with a pulse pistol sidearm."
+
+/obj/item/storage/backpack/duffelbag/deathsquad/axe/PopulateContents()
+	new /obj/item/melee/transforming/energy/axe/weak(src)
+	new /obj/item/gun/energy/pulse/pistol(src)
+
+/*
+**************************************************
+				ERT LOADOUTS
+**************************************************
 	RIFLE AND ION KIT BLACKSITE ERT
 */
 /obj/item/storage/backpack/duffelbag/ert
@@ -145,6 +181,25 @@
 	new /obj/item/gun/energy/e_gun/mini(src)
 
 /*
+	LASER BURST RIFLE KIT BLACKSITE ERT
+*/
+/obj/item/storage/backpack/duffelbag/ert/laserburst
+	name = "Burst Laser Rifle Kit"
+	desc = "Contains one 807 Neo laser burst rifle and sidearm."
+
+/obj/item/storage/backpack/duffelbag/ert/laserburst/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/laser/burst(src)
+	new /obj/item/ammo_box/magazine/recharge(src)
+	new /obj/item/ammo_box/magazine/recharge(src)
+	new /obj/item/ammo_box/magazine/recharge(src)
+	new /obj/item/gun/energy/e_gun/mini(src)
+
+
+/*
+**************************************************
+				MARINE LOADOUTS
+**************************************************
+
 	DEFAULT MARINE KIT BLACKSITE MARINE
 */
 /obj/item/storage/backpack/duffelbag/marine
@@ -198,7 +253,6 @@
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
-	new /obj/item/choice_beacon/bungalow/turret(src)
 	new /obj/item/gun/ballistic/automatic/pistol(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 
@@ -216,14 +270,14 @@
 	new /obj/item/shield/energy(src)
 	new /obj/item/melee/transforming/energy/sword/saber(src)
 	new /obj/item/clothing/under/plasmaman/robotics/marine(src)
-	new /obj/item/storage/box/shotgun/lasershot(src)
-	new /obj/item/storage/box/shotgun/lasershot(src)
-	new /obj/item/storage/box/shotgun/lasershot(src)
-	new /obj/item/storage/box/shotgun/lasershot(src)
-	new /obj/item/storage/box/shotgun/lasershot(src)
-	new /obj/item/storage/box/shotgun/meteor(src)
-	new /obj/item/storage/box/shotgun/meteor(src)
-	new /obj/item/storage/box/shotgun/frag(src)
+	new /obj/item/ammo_box/shotgun/lasershot(src)
+	new /obj/item/ammo_box/shotgun/lasershot(src)
+	new /obj/item/ammo_box/shotgun/lasershot(src)
+	new /obj/item/ammo_box/shotgun/lasershot(src)
+	new /obj/item/ammo_box/shotgun/lasershot(src)
+	new /obj/item/ammo_box/shotgun/meteor(src)
+	new /obj/item/ammo_box/shotgun/meteor(src)
+	new /obj/item/ammo_box/shotgun/frag(src)
 	new /obj/item/storage/belt/bandolier/marine(src)
 	new /obj/item/gun/ballistic/shotgun/doublebarrel/side(src)
 
@@ -250,17 +304,18 @@
 */
 /obj/item/storage/backpack/duffelbag/marine/mosin
 	name = "Marine Ranger Kit"
-	desc = "This kit is perfect for scouting out areas for enemies.."
+	desc = "This kit is perfect for scouting out areas for enemies."
 
 /obj/item/storage/backpack/duffelbag/marine/mosin/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/ntmarine/sniper(src)
 	new /obj/item/clothing/neck/cloak/ranger(src)
 	new /obj/item/binoculars(src)
-	new /obj/item/gun/ballistic/automatic/sniper_rifle(src)
-	new /obj/item/ammo_box/magazine/sniper_rounds(src)
-	new /obj/item/ammo_box/magazine/sniper_rounds(src)
-	new /obj/item/ammo_box/magazine/sniper_rounds(src)
-	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/gun/ballistic/shotgun/lever_action(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 /*
   	SAMURAI KIT BLACKSITE MARINE

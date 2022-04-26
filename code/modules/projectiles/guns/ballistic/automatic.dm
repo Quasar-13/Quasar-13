@@ -47,7 +47,7 @@
 		A.UpdateButtonIcon()
 
 /obj/item/gun/ballistic/automatic/proto
-	name = "\improper Nanotrasen Saber SMG"
+	name = "NT-SBR 'Saber'"
 	desc = "A prototype full auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon_state = "saber"
 	burst_size = 1
@@ -67,7 +67,7 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r
-	name = "\improper C-20r SMG"
+	name = "/improper C-20r SMG"
 	desc = "A bullpup three-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	inhand_icon_state = "c20r"
@@ -136,11 +136,24 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "miniuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+
+/obj/item/gun/ballistic/automatic/mini_uzi/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler
+	name = "\improper Type P45 Uzi"
+	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -236,7 +249,7 @@
 
 /obj/item/gun/ballistic/automatic/tommygun/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar
 	name = "\improper NT-ARG 'Boarder'"
@@ -248,15 +261,6 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
-
-/obj/item/gun/ballistic/automatic/ar/semi
-	name = "\improper NT-ARS 'Sweeper'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces. This one is modified to be semi-automatic"
-	w_class = WEIGHT_CLASS_BULKY
-	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
-	slowdown = 0.7
-	burst_size = 1
-	fire_delay = 3
 
 
 // L6 SAW //
@@ -415,8 +419,3 @@
 	casing_ejector = FALSE
 
 
-/obj/item/gun/ballistic/automatic/laser/burst
-	name = "L-807 Neo Laser Burst Rifle "
-	desc = "The Miracle of the L-804, in it's full burst fire glory."
-	icon_state = "laserburst"
-	burst_size = 3

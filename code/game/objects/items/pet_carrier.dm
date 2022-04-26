@@ -6,6 +6,7 @@
 	name = "pet carrier"
 	desc = "A big white-and-blue pet carrier. Good for carrying <s>meat to the chef</s> cute animals around."
 	icon = 'icons/obj/pet_carrier.dmi'
+	base_icon_state = "pet_carrier"
 	icon_state = "pet_carrier_open"
 	inhand_icon_state = "pet_carrier"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -146,12 +147,12 @@
 	if(open)
 		icon_state = initial(icon_state)
 	else
-		icon_state = "pet_carrier_[!occupants.len ? "closed" : "occupied"]"
+		icon_state = "[base_icon_state]_[!occupants.len ? "closed" : "occupied"]"
 
 /obj/item/pet_carrier/update_overlays()
 	. = ..()
 	if(!open)
-		. += "[locked ? "" : "un"]locked"
+		. += "[base_icon_state]_[locked ? "" : "un"]locked"
 
 /obj/item/pet_carrier/MouseDrop(atom/over_atom)
 	. = ..()
@@ -194,6 +195,13 @@
 	occupants -= occupant
 	occupant_weight -= occupant.mob_size
 	occupant.setDir(SOUTH)
+
+/obj/item/pet_carrier/biopod
+	name = "biopod"
+	desc = "Alien device used for undescribable purpose. Or carrying pets."
+	base_icon_state = "biopod"
+	icon_state = "biopod_open"
+	inhand_icon_state = "biopod"
 
 // Chinese torture
 /obj/item/pet_carrier/cage

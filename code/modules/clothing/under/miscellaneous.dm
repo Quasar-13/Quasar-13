@@ -139,6 +139,13 @@
 	can_adjust = FALSE
 	armor = list(MELEE = 10, LASER = 10, FIRE = 40, ACID = 10, BOMB = 5)
 
+/obj/item/clothing/under/misc/durathread/kepler
+	name = "kepler trekker jumpsuit"
+	desc = "A jumpsuit made from durathread, commonly used by the kepler trekkers who venture out into the wild, worn for extra protection."
+	icon_state = "keplerunder"
+	inhand_icon_state = "durathread"
+	can_adjust = FALSE
+
 /obj/item/clothing/under/misc/bouncer
 	name = "bouncer uniform"
 	desc = "A uniform made from a little bit more resistant fibers, makes you seem like a cool guy."
@@ -155,3 +162,12 @@
 	icon_state = "captain_parade"
 	inhand_icon_state = "by_suit"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/misc/minecraft
+	name = "minecraft steve clothes"
+	desc = "The classic minecraft style."
+	icon_state = "minecraft"
+	inhand_icon_state = "minecraft"
+	can_adjust = FALSE
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 0, WOUND = 10)
+	resistance_flags = NONE

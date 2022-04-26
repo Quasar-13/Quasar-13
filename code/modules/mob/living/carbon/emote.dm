@@ -140,3 +140,9 @@
 		qdel(noogie)
 		to_chat(user, "<span class='warning'>You're incapable of noogie'ing in your current state.</span>")
 
+/datum/emote/living/carbon/slowclap
+	key = "slowclap"
+	key_third_person = "slowly claps"
+	message = "slowly claps in disappointment."
+	sound = 'sound/machines/slowclap.ogg'
+	cooldown = 6 SECONDS

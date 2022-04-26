@@ -8,7 +8,7 @@
 	selection_color = "#b7edda"
 	maptype = "solgov"
 
-	outfit = /datum/outfit/job/solgovsecurity
+	outfit = /datum/outfit/job/solgov
 
 	access = list(ACCESS_SECURITY)
 	minimal_access = list(ACCESS_SECURITY)
@@ -16,9 +16,3 @@
 
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 
-
-/datum/outfit/job/solgovsecurity
-	name = "Solgov Survivor (Security)"
-	id = /obj/item/card/id/solgov
-	jobtype = /datum/job/security
-	belt = null

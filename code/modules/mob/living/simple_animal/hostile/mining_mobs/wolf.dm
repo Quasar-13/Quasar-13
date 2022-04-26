@@ -6,6 +6,7 @@
 	icon_living = "whitewolf"
 	icon_dead = "whitewolf_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	mouse_opacity = MOUSE_OPACITY_ICON
 	friendly_verb_continuous = "howls at"
 	friendly_verb_simple = "howl at"
@@ -25,9 +26,6 @@
 	attack_sound = 'sound/weapons/bite.ogg'
 	vision_range = 7
 	aggro_vision_range = 7
-	move_force = MOVE_FORCE_WEAK
-	move_resist = MOVE_FORCE_WEAK
-	pull_force = MOVE_FORCE_WEAK
 	butcher_results = list(/obj/item/food/meat/slab = 2, /obj/item/stack/sheet/sinew/wolf = 2, /obj/item/stack/sheet/bone = 2)
 	loot = list()
 	crusher_loot = /obj/item/crusher_trophy/wolf_ear

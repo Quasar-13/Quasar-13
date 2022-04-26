@@ -379,3 +379,18 @@
 	if (!party_overlay)
 		party_overlay = iconstate2appearance('icons/turf/areas.dmi', "party")
 	A.add_overlay(party_overlay)
+
+/obj/machinery/firealarm/directional/north
+	pixel_y = 26
+
+/obj/machinery/firealarm/directional/south
+	dir = NORTH
+	pixel_y = -26
+
+/obj/machinery/firealarm/directional/east
+	dir = WEST
+	pixel_x = 26
+
+/obj/machinery/firealarm/directional/west
+	dir = EAST
+	pixel_x = -26

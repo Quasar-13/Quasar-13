@@ -6,7 +6,7 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/mark2 = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -19,7 +19,7 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/drifle = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -33,7 +33,7 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/beam = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -47,7 +47,7 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/dmr = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -60,7 +60,7 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/shotgun = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -73,12 +73,27 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/smg = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
 
 //Other guns that I'm adding to this
+
+/datum/crafting_recipe/fifthgen
+	name = "Fifth Generation Laser Gun"
+	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	result = /obj/item/gun/energy/laser/fifth
+	reqs = list(/obj/item/weaponcrafting/longbarrel = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/weaponcrafting/override = 1,
+				/obj/item/weaponcrafting/plastic_stock = 1,
+				/obj/item/weaponcrafting/laser_receiver = 1,
+				/obj/item/weaponcrafting/gunkit/fifth = 1)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_GUNSMITHING
+
 /datum/crafting_recipe/advancedegun_scratch
 	name = "Advanced Energy Gun"
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
@@ -89,7 +104,7 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/nuclear = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -118,7 +133,7 @@
 				/obj/item/assembly/signaler/anomaly/flux = 1,
 				/obj/item/assembly/signaler/anomaly/grav = 1,
 				/obj/item/weaponcrafting/gunkit/beam_rifle = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -132,7 +147,7 @@
 				/obj/item/weaponcrafting/override = 1,
 				/obj/item/weaponcrafting/gunkit/ebow = 1,
 				/datum/reagent/uranium/radium = 15)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -146,7 +161,7 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/xray = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING
 
@@ -160,6 +175,6 @@
 				/obj/item/weaponcrafting/plastic_stock = 1,
 				/obj/item/weaponcrafting/laser_receiver = 1,
 				/obj/item/weaponcrafting/gunkit/hellgun = 1)
-	time = 600
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_GUNSMITHING

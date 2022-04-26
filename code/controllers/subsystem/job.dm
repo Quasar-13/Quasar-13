@@ -66,12 +66,14 @@ SUBSYSTEM_DEF(job)
 
 		if(job.maptype != SSmaptype.maptype)
 			if(job.maptype != "none")
-				continue
+				if(job.loadalways == FALSE)
+					continue
 
 	//Add back the moment you fix the other bugs
-//		if(SSmaptype.maptype == "syndicate")
-//			if(job.maptype == "none")
-//				continue
+		if(SSmaptype.maptype == "solgov")
+			if(job.maptype == "none")
+				if(job.loadalways == FALSE)
+					continue
 
 
 

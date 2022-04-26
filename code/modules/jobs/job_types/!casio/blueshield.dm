@@ -8,7 +8,7 @@
 	selection_color = "#bbbbee"
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "casio"
+	maptype = "naval"
 	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield
@@ -26,7 +26,7 @@
 	paycheck_department = ACCOUNT_SEC
 
 	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
-	display_order = JOB_DISPLAY_ORDER_SECRETARY
+	display_order = JOB_DISPLAY_ORDER_HIGH_COMMAND
 
 
 /datum/outfit/job/blueshield
@@ -41,7 +41,7 @@
 	uniform = /obj/item/clothing/under/misc/blueshield
 	suit = /obj/item/clothing/suit/armor/blueshield
 	head = /obj/item/clothing/head/beret/command
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/laceup
 	suit_store = /obj/item/gun/ballistic/automatic/laser/burst
 	backpack_contents = list(/obj/item/ammo_box/magazine/recharge, /obj/item/ammo_box/magazine/recharge)
 

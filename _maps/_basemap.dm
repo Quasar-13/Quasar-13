@@ -30,9 +30,11 @@
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 		#include "map_files\CasioStation\Casiostation.dmm"
 		#include "map_files\ChimeraStation\ChimeraStation.dmm"
+		#include "map_files\TaliStation\TaliStation.dmm"
 
 		//Admin only maps
 		#include "map_files\RemusFacility\RemusFacility.dmm"
+		#include "map_files\RomulusFacility\RomulusFacility.dmm"
 		#include "map_files\AndromedaStation\Andromeda.dmm"
 		#include "map_files\NTBlacksite\NTBlacksite.dmm"
 

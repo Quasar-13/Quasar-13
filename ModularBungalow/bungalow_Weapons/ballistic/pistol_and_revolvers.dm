@@ -7,7 +7,7 @@
 	desc = "A pistol used by special forces across the galaxy."
 	icon_state = "mk23"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/glock
+	mag_type = /obj/item/ammo_box/magazine/m10mm
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/sig
@@ -45,6 +45,45 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
+//Sec Pistols
+/obj/item/gun/ballistic/automatic/pistol/sec
+	name = "NT-MRS 'Venus'"
+	desc = "Older design being modernized and reintroduced. Used by Nanotrasen Security Forces on high-risk stations."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "venus"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
+
+/obj/item/gun/ballistic/automatic/pistol/commander
+	name = "NT-RBY 'Commander'"
+	desc = "A refined pistol used by lower ranking commissioned officers and high-ranking security staff."
+	icon_state = "commander"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
+//PL-14
+/obj/item/gun/ballistic/automatic/pistol/PL14
+	name = "PL-14"
+	desc = "A Russian semi-automatic pistol chambered in 9x19 Parabellum."
+	icon_state = "pl14"
+	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+
+
+//Special lore variant
+/obj/item/gun/ballistic/automatic/pistol/PL14_nicole
+	name = "bloody PL-14"
+	desc = "A Russian semi-automatic pistol chambered in 9x19 Parabellum. The name 'Nicole' is scribed in gold leaf into the side, and there is centuries old, caked on blood coating the handle. You get a feeling the owner is long dead."
+	icon_state = "pl14_nicole"
+	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////
@@ -60,8 +99,8 @@
 
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
-	name = "Captain's Sequoia Pistol"
-	desc = "A pistol for solgov captains. Engraved on the bottom is 'Thank you for your 20 years of service.'"
+	name = "Commander's Sequoia Pistol"
+	desc = "A pistol for solgov commander. Engraved on the bottom is 'Thank you for your 20 years of service.'"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
@@ -71,3 +110,10 @@
 	desc = "A special pistol used by centcom admirals. Looks sleek, kicks ass."
 	icon_state = "hakita"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+
+//S&W 500 Revolver
+/obj/item/gun/ballistic/revolver/sw500
+	name = "S&W 500 Revolver"
+	desc = "The classic high-powered revolver to rival the Mateba. This one is loaded in .357 with a custom 7 bullet cylinder."
+	icon_state = "sw500"
+	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'

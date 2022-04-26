@@ -12,7 +12,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "casio"
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/captain/nt
 
@@ -44,9 +44,10 @@
 	ears = /obj/item/radio/headset/heads/headset_cent/commander
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/centcom/officer/captain
-	suit = /obj/item/clothing/suit/armor/captain/casio
+	suit = /obj/item/clothing/suit/armor/captain/naval
 	head = /obj/item/clothing/head/beret/centcom
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
+	backpack = /obj/item/storage/backpack/centcom
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/captain)
 
