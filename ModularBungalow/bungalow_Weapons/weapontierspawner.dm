@@ -8,17 +8,41 @@
 
 //this one will also spawn some stuff but specific.
 /obj/effect/spawner/lootdrop/tierweapon/ranged
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier5
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
-/obj/effect/spawner/lootdrop/tierweapon/ranged/rare
+/obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare/guaranteen
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/cigbutt/roach = 20,
+				/obj/item/cigbutt/cigarbutt = 15)
