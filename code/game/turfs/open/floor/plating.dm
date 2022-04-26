@@ -70,7 +70,7 @@
 					R.use(1)
 					to_chat(user, "<span class='notice'>You reinforce the floor.</span>")
 				return
- 	if(istype(C, /obj/item/stack/tile))
+	if(istype(C, /obj/item/stack/tile))
 		if(!broken && !burnt)
 			for(var/obj/O in src)
 				for(var/M in O.buckled_mobs)
