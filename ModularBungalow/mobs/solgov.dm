@@ -276,7 +276,8 @@
 	loot = list(/obj/effect/gibspawner/human,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-
+	faction = list("russian", "hostile")
+//HAZMAT DOES NOT GET TARGETTED BY INFECTED MOB. INTENTENDED.
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 //HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
@@ -447,6 +448,7 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	faction = list("hostile")
 
 /mob/living/simple_animal/hostile/solgov/infected/heavy
 	icon_state = "solgov_infestedh"
@@ -455,6 +457,7 @@
 	maxHealth = 250
 	health = 250
 
+//the mech pilot and hazmat are exception to this and will not spawn an infected variant.
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
 	name = "Mercenary Pilot"
 	desc = "Unarmed but fast."
