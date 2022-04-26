@@ -519,13 +519,21 @@
 	inhand_icon_state = "atropen"
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/libital = 10, /datum/reagent/medicine/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10)
 
+/obj/item/reagent_containers/hypospray/combat/gatorade
+	name = "experimental combat anitesstimulant injector"
+	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost."
+	inhand_icon_state = "nanite_hypo"
+	icon_state = "nanite_hypo"
+	volume = 10000
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 150, /datum/reagent/medicine/libital = 150, /datum/reagent/medicine/aiuri = 150, /datum/reagent/medicine/coagulant = 150, /datum/reagent/iron = 150, /datum/reagent/medicine/salglu_solution = 150, /datum/reagent/medicine/salbutamol = 150, /datum/reagent/medicine/sal_acid = 150 ,/datum/reagent/medicine/omnizine = 150 ,/datum/reagent/medicine/leporazine = 150, /datum/reagent/medicine/stimulants = 150, /datum/reagent/consumable/coffee = 150, datum/reagent/medicine/adminordrazine/quantum_heal = 150, /datum/reagent/medicine/synaptizine = 150)
+
 /obj/item/storage/firstaid/tactical/solgov
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."
 	icon_state = "bezerk"
 	damagetype_healed = "all"
 
-/obj/item/storage/firstaid/tactical/solgovComponentInitialize()
+/obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
