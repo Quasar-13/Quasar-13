@@ -1,7 +1,7 @@
 import { useBackend } from '../backend';
 import { Button, Input, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
-import { AccessList } from './common/AccessList';
+import { AccessConfig } from './common/AccessConfig';
 
 export const AirlockElectronics = (props, context) => {
   const { act, data } = useBackend(context);
@@ -9,7 +9,7 @@ export const AirlockElectronics = (props, context) => {
     oneAccess,
     unres_direction,
     passedName,
-    passedCycleId, 
+    passedCycleId,
   } = data;
   const regions = data.regions || [];
   const accesses = data.accesses || [];
@@ -78,7 +78,7 @@ export const AirlockElectronics = (props, context) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <AccessList
+        <AccessConfig
           accesses={regions}
           selectedList={accesses}
           accessMod={ref => act('set', {

@@ -13,16 +13,16 @@ export const captureExternalLinks = () => {
     /** @type {HTMLElement} */
     let target = e.target;
     // Recurse down the tree to find a valid link
-    while (target && target !== document.body) {
+    while (true) {
+      // Reached the end, bail.
+      if (!target || target === document.body) {
+        return;
+      }
       const tagName = String(target.tagName).toLowerCase();
       if (tagName === 'a') {
         break;
       }
       target = target.parentElement;
-    }
-    // Not a link, do nothing.
-    if (!target) {
-      return;
     }
     const hrefAttr = target.getAttribute('href') || '';
     // Leave BYOND links alone
@@ -39,9 +39,7 @@ export const captureExternalLinks = () => {
       url = 'https://' + url;
     }
     // Open the link
-    Byond.topic({
-      tgui: 1,
-      window_id: window.__windowId__,
+    Byond.sendMessage({
       type: 'openLink',
       url,
     });
