@@ -57,30 +57,24 @@
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
-	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
-	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler
 	back = /obj/item/storage/backpack/satchel
-	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsemarksman
 	name = "Kepler Marksman Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
-	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	back = /obj/item/storage/backpack/satchel
-	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsecloaker
 	name = "Kepler Elite Corpse"
 	uniform = /obj/item/clothing/under/solgov/snow
-	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
@@ -245,7 +239,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov,
 	/obj/item/gun/ballistic/automatic/pistol/m1911,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -262,7 +256,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsenco,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -302,7 +296,7 @@
 	rapid_fire_delay = 6
 	casingtype = /obj/item/ammo_casing/shotgun/beanbag
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/cloaker,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	projectile_deflect_chance = 76 //dodge!
@@ -330,7 +324,7 @@
 	rapid_fire_delay = 2
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpselmg,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/lmg,
 	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -352,7 +346,7 @@
 	rapid_fire_delay = 5
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -378,7 +372,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 22
 	vision_range = 22
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -399,7 +393,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 14
 	vision_range = 14
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -409,7 +403,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 9
 	vision_range = 9
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/med/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
@@ -432,7 +426,7 @@
 	minimum_distance = 1
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
-	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseassault,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/assault,
 	/obj/item/gun/ballistic/automatic/m90/xm29,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 
