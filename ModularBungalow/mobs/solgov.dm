@@ -309,6 +309,8 @@
 	charger = TRUE
 	charge_distance = 2
 	wound_bonus = -80
+	aggro_vision_range = 15
+	vision_range = 15
 
 //to make them not accidentally run into wolves and whatnot, will become important also made sure they dont annihilate the players
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
@@ -322,7 +324,7 @@
 //NOT RANGED
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian
 	name = "Ark Guardian"
-	desc = "Summoned to protect certain highly important location from any  would be intruders, that mean you actually"
+	desc = "Summoned to protect certain highly important location from any would be intruders and attack them with their powerfist, that mean you actually"
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 2.5
@@ -330,8 +332,7 @@
 	health = 195
 	ranged = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
-	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal,
-	/obj/item/melee/powerfist)
+	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal)
 	projectile_deflect_chance = 5 //dodge! but not as much
 	robust_searching = TRUE
 	harm_intent_damage = 35
@@ -341,10 +342,14 @@
 	attack_verb_simple = list("whack", "fist", "power-punch")
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = SHARP_EDGED
-	deathmessage = "Disappear into smoke, leaving something behind..."
-	var/teleport_distance = 2
-	charge_distance = 4
-
+	deathmessage = "Disappear into smoke, leaving a strange crystal behind..."
+	var/teleport_distance = 10
+	var/teleport_cooldown = 800
+	charge_distance = 6
+	aggro_vision_range = 15
+	vision_range = 15
+//despite using the cloaker pathfile these guys are meant to melee attack only
+//
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
 	..()
 	summon_backup(15)
@@ -353,7 +358,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
 	. = ..()
 	set_light(4)
-
+//So that you can see them and will not get fucked up by them in the dark.
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
 	name = "Mercenary Elite"
 	desc = "Protecting your future, Now stop resisting"
