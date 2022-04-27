@@ -5,7 +5,7 @@
 	icon = 'icons/effects/mapping_helpers.dmi'
 	icon_state = "mobspawner"
 	loot = list(
-		/mob/living/simple_animal/hostile/eldritch/armsy = 50,
+		/mob/living/simple_animal/hostile/eldritch/stalker = 50,
 		/mob/living/simple_animal/hostile/eldritch/raw_prophet = 50,
 	)
 //what this do is that upon death, it roll a dice for what to spawn. read above for how it should be like
@@ -37,19 +37,19 @@
 /obj/effect/spawner/lootdrop/infection_spawner/marksman
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/armsy = 20,
+		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/stalker = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/cloaker
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker = 80,
-		/mob/living/simple_animal/hostile/eldritch/armsy = 10,
+		/mob/living/simple_animal/hostile/eldritch/ash_spirit = 10,
 		/mob/living/simple_animal/hostile/eldritch/raw_prophet = 10,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/assault
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpseassault = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/armsy = 10,
+		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/ash_spirit = 10,
 		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/raw_prophet = 10,
 	)

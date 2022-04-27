@@ -318,7 +318,7 @@
 //NOT RANGED
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian
 	name = "Ark Guardian"
-	desc = "Summoned to protect the ark from any intruders"
+	desc = "Summoned to protect certain highly important location from any  would be intruders, that mean you actually"
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 2.5
@@ -326,14 +326,40 @@
 	health = 195
 	ranged = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
-	/obj/item/reagent_containers/hypospray/medipen/gatorade,
-	/obj/effect/spawner/lootdrop/medical/firstaid)
+	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal,
+	/obj/item/melee/powerfist)
 	projectile_deflect_chance = 5 //dodge! but not as much
-	faction = list("russian", "mining")
+	robust_searching = 1
+	harm_intent_damage = 35
+	melee_damage_lower = 35
+	melee_damage_upper = 55
+	attack_verb_continuous = list("whacks", "fists", "power-punches")
+	attack_verb_simple = list("whack", "fist", "power-punch")
+	pass_flags = PASSTABLE | PASSMOB
+	sharpness = SHARP_EDGED
+	deathmessage = "Disappear into smoke, leaving something behind..."
+	var/teleport_distance = 3
+	var/list/hit_things = list()
+	var/throwtarget = get_edge_target_turf(src, move_dir)
+	for(var/mob/living/L in T.contents - hit_things - src)
+		if(faction_check_mob(L))
+			return
+		hit_things += L
+		visible_message("<span class='boldwarning'>[src] tramples and kicks [L]!</span>")
+		to_chat(L, "<span class='userdanger'>[src] tramples you and kicks you away!</span>")
+		L.safe_throw_at(throwtarget, 10, 1, src)
+		L.Paralyze(2)
+		L.adjustBruteLoss(melee_damage_upper)
+
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
+	..()
+	summon_backup(15)
+	say("VY NE MOZHETE UBEGAT OT MENYA!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
 	. = ..()
-	set_light(3)
+	set_light(4)
+
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
 	name = "Mercenary Elite"
 	desc = "Protecting your future, Now stop resisting"
@@ -402,7 +428,7 @@
 	/obj/item/reagent_containers/hypospray/medipen/salacid,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 	faction = list("russian", "hostile", "mining")
-//so they would ignore the bears and not get attacked by em
+//so they would ignore the bears and not get attacked by em, and make them ignore infected.
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
 	name = "Mercenary Marksman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
@@ -457,6 +483,7 @@
 	/obj/item/gun/ballistic/automatic/m90/xm29,
 	/obj/item/reagent_containers/hypospray/medipen/ekit,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	faction = list("hostile", "mining", "russian")
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault/Aggro()
 	..()
@@ -515,18 +542,25 @@
 /obj/item/reagent_containers/hypospray/medipen/gatorade
 	name = "restorative nanite injector"
 	desc = "extracted from someone spine, what the hell are you doing. ONLY ONE USE EVERY 3 MINUTES, DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
-	icon_state = "atropen"
+	icon_state = "gatorade"
 	inhand_icon_state = "atropen"
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10)
 //RAIDEN WHAT ARE YOU DOING
+	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal
+	name = "strange crystal container"
+	desc = "it glows with strange power, Do you really want to inject this into yourself?"
+	icon_state = "gatoradecrystal"
+	inhand_icon_state = null
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10)
+
 /obj/item/reagent_containers/hypospray/combat/gatorade
 	name = "experimental combat nanites injector"
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost. INJECT ONLY ONE EVERY 3 MINUTES OR THE PERSON WILL DIE"
 	inhand_icon_state = "nanite_hypo"
 	icon_state = "nanite_hypo"
-	volume = 3600
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 150,/datum/reagent/medicine/c2/libital = 150, /datum/reagent/medicine/ephedrine = 150 , /datum/reagent/medicine/c2/aiuri = 150, /datum/reagent/medicine/coagulant = 150, /datum/reagent/iron = 150, /datum/reagent/medicine/salglu_solution = 150, /datum/reagent/medicine/salbutamol = 150, /datum/reagent/medicine/sal_acid = 150 ,/datum/reagent/medicine/omnizine = 150 ,/datum/reagent/medicine/leporazine = 150, /datum/reagent/medicine/stimulants = 150, /datum/reagent/consumable/coffee = 150, /datum/reagent/medicine/adminordrazine/quantum_heal = 150, /datum/reagent/medicine/synaptizine = 150, /datum/reagent/medicine/regen_jelly = 150, /datum/reagent/medicine/spaceacillin = 150, /datum/reagent/medicine/omnizine/protozine = 150, /datum/reagent/medicine/neurine = 150, /datum/reagent/medicine/mannitol = 150, /datum/reagent/medicine/syndicate_nanites = 150, /datum/reagent/medicine/coagulant/banana_peel = 150, /datum/reagent/consumable/honey = 150, /datum/reagent/medicine/muscle_stimulant = 150, /datum/reagent/medicine/inacusiate = 150)
-
+	volume = 40000
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 200, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 200, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 200, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 200, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 200, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 200, /datum/reagent/consumable/cream = 200, /datum/reagent/consumable/nutriment/protein = 200)
+//divided by a lot of fucking numbers idfk
 /obj/item/storage/firstaid/tactical/solgov
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."
