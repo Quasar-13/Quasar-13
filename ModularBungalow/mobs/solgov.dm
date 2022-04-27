@@ -329,7 +329,7 @@
 	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal,
 	/obj/item/melee/powerfist)
 	projectile_deflect_chance = 5 //dodge! but not as much
-	robust_searching = 1
+	robust_searching = TRUE
 	harm_intent_damage = 35
 	melee_damage_lower = 35
 	melee_damage_upper = 55
@@ -339,17 +339,8 @@
 	sharpness = SHARP_EDGED
 	deathmessage = "Disappear into smoke, leaving something behind..."
 	var/teleport_distance = 3
-	var/list/hit_things = list()
-	var/throwtarget = get_edge_target_turf(src, move_dir)
-	for(var/mob/living/L in T.contents - hit_things - src)
-		if(faction_check_mob(L))
-			return
-		hit_things += L
-		visible_message("<span class='boldwarning'>[src] tramples and kicks [L]!</span>")
-		to_chat(L, "<span class='userdanger'>[src] tramples you and kicks you away!</span>")
-		L.safe_throw_at(throwtarget, 10, 1, src)
-		L.Paralyze(2)
-		L.adjustBruteLoss(melee_damage_upper)
+	charger = TRUE
+	charge_distance = 4
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
 	..()
