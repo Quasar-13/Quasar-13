@@ -72,6 +72,7 @@
 
 
 //Kepler guns
+//Sprite by kirie and akira!
 /obj/item/gun/ballistic/automatic/m90/xm29
 	name = "SG-XM29 'Annihilator'"
 	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Typically seen used by kepler group mercenaries and in hand of some heavy rangers"
@@ -115,7 +116,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"
