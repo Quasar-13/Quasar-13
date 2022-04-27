@@ -82,19 +82,21 @@
 				/obj/item/gun/ballistic/revolver/mateba, /obj/item/ammo_box/a357/match, /obj/item/ammo_box/a357/match = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/scope, /obj/item/ammo_box/speedloader/a357/match, /obj/item/ammo_box/speedloader/a357/match = 25,
 				/obj/item/gun/grenadelauncher = 15,
+				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
 				/obj/item/gun/ballistic/automatic/ar/hk21, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat, /obj/item/ammo_box/shotgun/slug, /obj/item/ammo_box/shotgun/slug = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
-	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/m556,  /obj/item/ammo_box/m556 = 25,
+	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/magazine/m556,  /obj/item/ammo_box/magazine/		m556 = 25,
 				/obj/item/gun/ballistic/automatic/ak47,  /obj/item/ammo_box/magazine/ak47/expanded,  /obj/item/ammo_box/magazine/ak47/expanded = 10,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25,  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 1,
 				/obj/item/gun/ballistic/automatic/mini_uzi/kepler, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 25,
-				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hp = 10,
+				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hollow = 10,
 				/obj/item/gun/ballistic/automatic/m90/auto/unrestricted, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
 				/obj/item/gun/energy/laser/hellgun, /obj/item/reagent_containers/hypospray/medipen/gatorade = 20,
+				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
 				/obj/item/gun/energy/lasercannon, /obj/item/reagent_containers/hypospray/medipen/gatorade = 10)
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP
