@@ -46,7 +46,7 @@
 	name = "expedition leader's ranger helmet"
 	desc = "Double plated."
 	icon_state = "snowvethos"
-	armor = list(MELEE = 45, BULLET = 35, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 45, RAD = 60, FIRE = 100, ACID = 60, WOUND = 10)
+	armor = list(MELEE = 45, BULLET = 35, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 45, RAD = 60, FIRE = 100, ACID = 60, WOUND = 25)
 
 //Provost Hat
 /obj/item/clothing/head/caphat/provost
