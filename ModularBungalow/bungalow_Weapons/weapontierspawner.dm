@@ -25,7 +25,7 @@
 				/obj/item/ammo_box/magazine/m50 = 1)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2
-	loot = list(/obj/item/cigbutt = 65,
+	loot = list(/obj/item/ammo_box/magazine/m9mm_aps = 65,
 				/obj/item/cigbutt/roach = 20,
 				/obj/item/cigbutt/cigarbutt = 15)
 
