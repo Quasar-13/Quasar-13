@@ -552,7 +552,7 @@
 	icon_state = "gatoradecrystal"
 	inhand_icon_state = null
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10)
-
+//HOLY SHIT I LOVE CRYSTAL GATORADE
 /obj/item/reagent_containers/hypospray/combat/gatorade
 	name = "experimental combat nanites injector"
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost. INJECT ONLY ONE EVERY 3 MINUTES OR THE PERSON WILL DIE"
