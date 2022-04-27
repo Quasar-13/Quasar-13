@@ -94,7 +94,7 @@
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 1,
 				/obj/item/gun/ballistic/automatic/mini_uzi/kepler, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 25,
 				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hollow = 10,
-				/obj/item/gun/ballistic/automatic/m90/automatic/unrestricted, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
+				/obj/item/gun/ballistic/automatic/m90/unrestricted/auto, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
 				/obj/item/gun/energy/laser/hellgun, /obj/item/reagent_containers/hypospray/medipen/gatorade = 20,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
