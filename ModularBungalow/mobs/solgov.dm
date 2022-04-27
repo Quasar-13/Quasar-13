@@ -306,6 +306,9 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	projectile_deflect_chance = 15 //dodge!
 	faction = list("russian", "hostile", "mining")
+	charger = TRUE
+	charge_distance = 2
+
 //to make them not accidentally run into wolves and whatnot, will become important
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
@@ -338,8 +341,7 @@
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = SHARP_EDGED
 	deathmessage = "Disappear into smoke, leaving something behind..."
-	var/teleport_distance = 3
-	charger = TRUE
+	var/teleport_distance = 2
 	charge_distance = 4
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
