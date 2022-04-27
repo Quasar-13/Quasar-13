@@ -122,12 +122,20 @@
 	name = "Type 45 Sniper Rifle"
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
 	icon_state = "rifle45"
+	inhand_icon_state = "rifle45"
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
 	name = "Type 40 Sniper Rifle"
 	desc = "Typically used by Ranger marksman of the past."
 	icon_state = "rifle40"
+	inhand_icon_state = "rifle40"
 	mag_display_ammo = 1
 	spawnwithmagazine = 1
+
+//Used for both of these!
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	max_ammo = 12
+	caliber = CALIBER_50
