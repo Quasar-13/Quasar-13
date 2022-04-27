@@ -83,7 +83,7 @@
 				/obj/item/gun/ballistic/shotgun/lever_action/scope, /obj/item/ammo_box/speedloader/a357/match, /obj/item/ammo_box/speedloader/a357/match = 25,
 				/obj/item/gun/grenadelauncher = 15,
 				/obj/item/gun/ballistic/automatic/ar/hk21, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
-				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
+				/obj/item/gun/ballistic/shotgun/automatic/combat, /obj/item/ammo_box/shotgun/slug, /obj/item/ammo_box/shotgun/slug = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/m556,  /obj/item/ammo_box/m556 = 25,
