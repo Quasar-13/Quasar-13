@@ -90,6 +90,7 @@
 				/obj/item/gun/ballistic/automatic/ak47,  /obj/item/ammo_box/magazine/ak47/expanded,  /obj/item/ammo_box/magazine/ak47/expanded = 10,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
+				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 1,
 				/obj/item/gun/ballistic/automatic/mini_uzi/kepler, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 25,
 				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hp = 10,
 				/obj/item/gun/ballistic/automatic/m90/auto/unrestricted, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/m556 = 10,
