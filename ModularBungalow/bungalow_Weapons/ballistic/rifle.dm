@@ -139,3 +139,8 @@
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
 	max_ammo = 12
 	caliber = CALIBER_50
+
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator
+	name = "sniper rounds (penetrator)"
+	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
+	ammo_type = /obj/item/ammo_casing/p50/penetrator
