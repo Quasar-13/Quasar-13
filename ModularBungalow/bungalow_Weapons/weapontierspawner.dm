@@ -73,7 +73,7 @@
 				/obj/item/gun/ballistic/shotgun/lever_action, /obj/item/ammo_box/speedloader/a357, /obj/item/ammo_box/speedloader/a357 = 10,
 				/obj/item/gun/ballistic/shotgun/bulldog/unrestricted, /obj/item/ammo_box/magazine/m12g/slug, /obj/item/ammo_box/magazine/m12g/slug = 1,
 				/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap, /obj/item/ammo_box/shotgun/buckshot = 15,
-				/obj/item/gun/ballistic/shotgun/automatic/wt550, /obj/item/ammo_box/magazine/wt550m9/wtap, /obj/item/ammo_box/magazine/wt550m9/wtap = 15,
+				/obj/item/gun/ballistic/automatic/wt550, /obj/item/ammo_box/magazine/wt550m9/wtap, /obj/item/ammo_box/magazine/wt550m9/wtap = 15,
 				/obj/item/gun/ballistic/automatic/uzi, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
