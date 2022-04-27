@@ -34,6 +34,7 @@
 	desc = "A lightweight, fully automatic submachinegun, for when you really need someone dead. Uses 9mm rounds."
 	icon_state = "miniuzikepler"
 	w_class = WEIGHT_CLASS_NORMAL
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
 	. = ..()
