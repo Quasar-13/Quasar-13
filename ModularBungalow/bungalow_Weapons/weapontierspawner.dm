@@ -87,7 +87,7 @@
 				/obj/item/gun/ballistic/shotgun/automatic/combat, /obj/item/ammo_box/shotgun/slug, /obj/item/ammo_box/shotgun/slug = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
-	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/magazine/m556,  /obj/item/ammo_box/magazine/		m556 = 25,
+	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/magazine/m556,  /obj/item/ammo_box/magazine/m556 = 25,
 				/obj/item/gun/ballistic/automatic/ak47,  /obj/item/ammo_box/magazine/ak47/expanded,  /obj/item/ammo_box/magazine/ak47/expanded = 10,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25,  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
