@@ -308,8 +308,9 @@
 	faction = list("russian", "hostile", "mining")
 	charger = TRUE
 	charge_distance = 2
+	wound_bonus = -80
 
-//to make them not accidentally run into wolves and whatnot, will become important
+//to make them not accidentally run into wolves and whatnot, will become important also made sure they dont annihilate the players
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/Aggro()
 	..()
 	summon_backup(15)
@@ -358,7 +359,7 @@
 	desc = "Protecting your future, Now stop resisting"
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
-	speed = 0.4
+	speed = -0.4
 	maxHealth = 205
 	health = 205
 	retreat_distance = 3
@@ -382,7 +383,7 @@
 	desc = "An absolute unit, he's also running right at you"
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
-	speed = 0.4
+	speed = -0.1
 	maxHealth = 250
 	health = 250
 	minimum_distance = 1
