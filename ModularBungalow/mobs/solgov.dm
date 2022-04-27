@@ -343,13 +343,13 @@
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = SHARP_EDGED
 	deathmessage = "Disappear into smoke, leaving a strange crystal behind..."
-	var/teleport_distance = 10
+	var/teleport_distance = 15
 	var/teleport_cooldown = 800
 	charge_distance = 6
 	aggro_vision_range = 15
 	vision_range = 15
 //despite using the cloaker pathfile these guys are meant to melee attack only
-//
+//being able to teleport so that if you try to escape them by running away, they will get to you no matter what
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
 	..()
 	summon_backup(15)
