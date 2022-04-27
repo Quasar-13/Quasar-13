@@ -31,7 +31,7 @@
 
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler
 	name = "\improper Type P45 Uzi"
-	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds.
+	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
 	icon_state = "miniuzikepler"
 	w_class = WEIGHT_CLASS_NORMAL
 
