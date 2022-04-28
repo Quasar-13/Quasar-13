@@ -71,7 +71,7 @@ Difficulty: Medium
 	gps_name = "Infinity Signal"
 	del_on_death = 1
 	loot = list(/obj/structure/closet/crate/necropolis/sif)
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/sif/crusher)
+	crusher_loot = list(/obj/structure/closet/crate/necropolis/sif)
 
 	deathmessage = "falls into the abyss."
 	deathsound = 'ModularBungalow/mobs/megafauna/rockplanet/sif/sound/death_howl.ogg'

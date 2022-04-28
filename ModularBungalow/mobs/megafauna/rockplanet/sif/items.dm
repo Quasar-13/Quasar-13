@@ -153,7 +153,8 @@
 	new /obj/item/clothing/neck/necklace/necklace_of_the_forsaken(src)
 	new /obj/item/crusher_trophy/dark_energy(src)
 
-//zweihander - it's just a one handed crusher(for Sif level)
+//zweihander - it's just a one handed crusher
+//I'll fix this later - Kirie
 /obj/item/melee/zweihander
 	icon = 'ModularBungalow/zbungalowicons/weapons/melee.dmi'
 	icon_state = "zweihander"
