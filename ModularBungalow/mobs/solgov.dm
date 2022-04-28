@@ -324,7 +324,7 @@
 //NOT RANGED
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian
 	name = "Ark Guardian"
-	desc = "Summoned to protect certain highly important location from any would be intruders and attack them with their powerfist, that mean you actually"
+	desc = "Summoned to protect a certain highly important location with their powerful fists from any intruders. That would have to include you."
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 2.5
@@ -342,7 +342,7 @@
 	attack_verb_simple = list("whack", "fist", "power-punch")
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = SHARP_EDGED
-	deathmessage = "Disappear into smoke, leaving a strange crystal behind..."
+	deathmessage = "Disappears into smoke, leaving a strange crystal behind..."
 	var/teleport_distance = 15
 	var/teleport_cooldown = 800
 	charge_distance = 6
