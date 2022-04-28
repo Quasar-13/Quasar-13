@@ -1,2 +1,3 @@
-@call tools\build\build
-@pause
+@echo off
+call tools\build\build
+pause
