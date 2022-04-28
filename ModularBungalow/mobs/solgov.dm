@@ -361,7 +361,7 @@
 	harm_intent_damage = 55
 	melee_damage_lower = 65
 	melee_damage_upper = 65
-	var/teleport_distance = 15
+	teleport_distance = 15
 	charge_distance = 6
 	aggro_vision_range = 22
 	vision_range = 22
