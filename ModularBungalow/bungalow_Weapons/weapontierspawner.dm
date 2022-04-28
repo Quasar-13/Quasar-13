@@ -119,6 +119,7 @@
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 15,
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
 				/obj/item/gun/energy/lasercannon, /obj/item/reagent_containers/hypospray/medipen/gatorade = 5)
+//gaming
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier5
 	loot = list(/obj/item/gun/medbeam, /obj/item/reagent_containers/hypospray/combat/gatorade = 65,
