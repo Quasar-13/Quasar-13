@@ -70,6 +70,21 @@
 
 
 
+//OORAH SIR YES SIR!
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo
+	name = "MA5C Individual Combat Weapons System"
+	desc = "An air-cooled, gas-operated, magazine fed weapon designed for automatic fire."
+	icon_state = "halo"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin/explorer
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.13 SECONDS)
+
 
 //Kepler guns
 /obj/item/gun/ballistic/automatic/m90/xm29
