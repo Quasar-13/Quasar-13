@@ -288,7 +288,7 @@
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
-	speed = 3.5
+	speed = 1.5
 	maxHealth = 155
 	health = 155
 	harm_intent_damage = 10
@@ -345,6 +345,7 @@
 	deathmessage = "Disappears into smoke, leaving a strange crystal behind..."
 	var/teleport_distance = 15
 	var/teleport_cooldown = 800
+	ranged_ignores_vision = 1
 	charge_distance = 6
 	aggro_vision_range = 15
 	vision_range = 15
@@ -422,6 +423,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 22
 	vision_range = 22
+	ranged_ignores_vision = 1
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
 	/obj/item/reagent_containers/hypospray/medipen/salacid,
@@ -445,6 +447,7 @@
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
 	aggro_vision_range = 14
 	vision_range = 14
+	ranged_ignores_vision = 0
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/marksman,
 	/obj/item/gun/ballistic/shotgun/lever_action/scope,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
