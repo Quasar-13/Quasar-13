@@ -328,8 +328,8 @@
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 2.5
-	maxHealth = 195
-	health = 195
+	maxHealth = 155
+	health = 155
 	ranged = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
 	/obj/effect/spawner/lootdrop/tierweapon/ark_guardian,
@@ -344,12 +344,31 @@
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = SHARP_EDGED
 	deathmessage = "Disappears into smoke, leaving something behnd..."
-	var/teleport_distance = 15
+	var/teleport_distance = 4
 	var/teleport_cooldown = 800
 	ranged_ignores_vision = 1
-	charge_distance = 6
+	charge_distance = 3
 	aggro_vision_range = 15
 	vision_range = 15
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/ranger
+	name = "Ranger Ark Guardian"
+	desc = "Spirit of the past rangers, Summoned to protect a certain highly important location with their powerful fists from any intruders. That would have to include you."
+	icon_state = "solgovcloakerg_alt"
+	icon_living = "solgovcloakerg_alt"
+	speed = 3.5
+	maxHealth = 250
+	health = 250
+	harm_intent_damage = 55
+	melee_damage_lower = 65
+	melee_damage_upper = 65
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite/Aggro()
+	..()
+	summon_backup(15)
+	say("VY NE MOZHETE UBEGAT OT MENYA!")
+	var/teleport_distance = 15
+	charge_distance = 6
+	aggro_vision_range = 22
+	vision_range = 22
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
