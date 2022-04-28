@@ -24,7 +24,7 @@
 				/obj/item/ammo_box/magazine/m9mm/ap = 5,
 				/obj/item/ammo_box/magazine/m9mm/hp = 5,
 				/obj/item/ammo_box/c38 = 5,
-				/obj/item/ammo_box/magazine/sig
+				/obj/item/ammo_box/magazine/sig = 10,
 				/obj/item/ammo_box/speedloader/c38 = 6,
 				/obj/item/ammo_box/magazine/m50 = 1)
 
@@ -35,7 +35,7 @@
 				/obj/item/ammo_box/magazine/m9mm_aps/ap = 5,
 				/obj/item/ammo_box/magazine/m9mm_aps/hp = 5,
 				/obj/item/ammo_box/magazine/m9mm_aps/fire = 5,
-				/obj/item/ammo_box/magazine/smgm45 = 20
+				/obj/item/ammo_box/magazine/smgm45 = 20,
 				/obj/item/ammo_box/magazine/smgm45/ap = 5,
 				/obj/item/ammo_box/magazine/smgm9mm = 15,
 				/obj/item/ammo_box/magazine/glock = 10,
@@ -48,14 +48,15 @@
 				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle = 5,
 				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator = 1,
 				/obj/item/ammo_box/magazine/m12g = 20,
+				/obj/item/ammo_casing/caseless/rocket/weak = 10,
 				/obj/item/ammo_box/magazine/m12g/meteor = 10,
 				/obj/item/ammo_box/magazine/m12g/dragon = 5,
 				/obj/item/ammo_box/speedloader/a357 = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4
-	loot = list(/obj/item/cigbutt = 65,
-				/obj/item/cigbutt/roach = 20,
-				/obj/item/cigbutt/cigarbutt = 15)
+	loot = list( /obj/item/ammo_casing/caseless/rocket/hedp = 15,
+				/obj/item/ammo_casing/caseless/rocket = 15,
+				/obj/item/ammo_box/shotgun/meteor = 15)
 //what do you even want on this!?
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5
 	loot = list(/obj/item/cigbutt = 65,

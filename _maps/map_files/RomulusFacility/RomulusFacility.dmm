@@ -3888,6 +3888,9 @@
 	name = "Armed Hazmat";
 	vision_range = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -4875,6 +4878,9 @@
 	aggro_vision_range = 1;
 	anchored = 1;
 	vision_range = 1
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
@@ -8244,14 +8250,6 @@
 /obj/item/ammo_casing/shotgun/buckshot,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
-"jjI" = (
-/obj/structure/rack,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/powered)
 "jjJ" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
@@ -9147,6 +9145,14 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/engineering)
+"kjx" = (
+/obj/machinery/mech_bay_recharge_port,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "kjB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/food_packaging,
@@ -9498,6 +9504,9 @@
 	anchored = 1;
 	vision_range = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -9507,14 +9516,6 @@
 "kDY" = (
 /obj/vehicle/sealed/mecha/combat/gygax,
 /turf/open/floor/mech_bay_recharge_floor,
-/area/ruin/space/has_grav/powered)
-"kEh" = (
-/obj/machinery/computer/mech_bay_power_console,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
 /area/ruin/space/has_grav/powered)
 "kEV" = (
 /obj/machinery/autolathe/hacked,
@@ -10207,6 +10208,14 @@
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat,
 /turf/open/floor/plasteel,
 /area/medical/abandoned)
+"lpD" = (
+/obj/machinery/computer/mech_bay_power_console,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "lpG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -10528,6 +10537,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
+"lIg" = (
+/obj/structure/barricade/wooden/snowed,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
 "lIh" = (
 /obj/machinery/light{
 	dir = 8
@@ -10608,6 +10621,13 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
+"lMg" = (
+/obj/vehicle/sealed/mecha/working/ripley/mk2{
+	internals_req_access = list(1);
+	max_equip = 8
+	},
+/turf/open/floor/mech_bay_recharge_floor,
+/area/ruin/space/has_grav/powered)
 "lMl" = (
 /obj/structure/chair/office,
 /mob/living/simple_animal/hostile/syndicate/civilian/scientist{
@@ -11135,13 +11155,6 @@
 	planetary_atmos = 1;
 	temperature = 180
 	},
-/area/ruin/space/has_grav/powered)
-"mtA" = (
-/obj/vehicle/sealed/mecha/working/ripley/mk2{
-	internals_req_access = list(1);
-	max_equip = 8
-	},
-/turf/open/floor/mech_bay_recharge_floor,
 /area/ruin/space/has_grav/powered)
 "mtC" = (
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman/light,
@@ -13000,12 +13013,12 @@
 /turf/open/floor/plating/icemoon,
 /area/awaymission/bmpship/midship)
 "onx" = (
-/obj/structure/cable,
-/obj/structure/grille/indestructable,
-/obj/structure/cable,
-/obj/structure/window/plasma/reinforced/plastitanium,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
+/obj/machinery/door/airlock/wood{
+	name = "Colony Battleground"
+	},
+/obj/structure/fans/tiny,
+/turf/open/indestructible,
+/area/ruin/powered)
 "ony" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating,
@@ -13047,12 +13060,13 @@
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/secpost)
 "oop" = (
-/obj/structure/grille/indestructable,
-/obj/structure/cable,
-/obj/structure/window/plasma/reinforced/plastitanium,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/powered)
+/obj/item/paper/fluff/stations/centcom/broken_evac{
+	anchored = 1;
+	info = "https://bungalowstation.fandom.com/wiki/Project_Kepler";
+	name = "Quick Guide"
+	},
+/turf/closed/indestructible/reinforced,
+/area/ruin/powered)
 "ooG" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -13494,9 +13508,12 @@
 /turf/open/floor/grass/snow,
 /area/icemoon/surface)
 "oLA" = (
-/obj/structure/sign/poster/contraband/kss13,
-/turf/closed/indestructible/reinforced,
-/area/ruin/powered)
+/obj/structure/cable,
+/obj/structure/grille/indestructable,
+/obj/structure/cable,
+/obj/structure/window/plasma/reinforced/plastitanium,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered)
 "oLH" = (
 /obj/machinery/vending/engineering,
 /turf/closed/wall/r_wall,
@@ -13710,11 +13727,11 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "oUA" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/sign/ranger,
-/turf/closed/wall/r_wall,
+/obj/structure/grille/indestructable,
+/obj/structure/cable,
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "oUZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13774,12 +13791,12 @@
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "oWd" = (
-/obj/machinery/announcement_system{
-	arrival = "%PERSON as %RANK has entered the site.";
-	name = "\improper Automated Vital Sign Report"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
 	},
-/turf/open/floor/circuit/green/telecomms,
-/area/ruin/powered)
+/obj/structure/sign/ranger,
+/turf/closed/wall/r_wall,
+/area/ruin/space/has_grav/powered)
 "oWK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/dirt/jungle,
@@ -14648,9 +14665,12 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "pLP" = (
-/obj/machinery/status_display,
-/turf/closed/indestructible/reinforced,
-/area/ruin/space/has_grav/powered)
+/obj/machinery/announcement_system{
+	arrival = "%PERSON as %RANK has entered the site.";
+	name = "\improper Automated Vital Sign Report"
+	},
+/turf/open/floor/circuit/green/telecomms,
+/area/ruin/powered)
 "pMh" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/mineral/plastitanium,
@@ -15187,6 +15207,10 @@
 /obj/structure/sign/warning/gasmask,
 /turf/closed/indestructible/reinforced,
 /area/ruin/powered)
+"qlN" = (
+/obj/structure/barricade/wooden/snowed,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
 "qlU" = (
 /obj/machinery/power/smes,
 /obj/structure/cable,
@@ -15358,10 +15382,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"qvm" = (
-/obj/structure/barricade/wooden/snowed,
-/turf/open/floor/plating/snowed/icemoon,
-/area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
 "qwu" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -15550,10 +15570,6 @@
 /obj/structure/curtain,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
-"qKY" = (
-/obj/structure/barricade/wooden/snowed,
-/turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
 "qLR" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -16016,12 +16032,8 @@
 /turf/open/floor/plating/icemoon,
 /area/awaymission/bmpship/midship)
 "rpw" = (
-/obj/vehicle/sealed/mecha/medical/odysseus{
-	max_equip = 4;
-	max_integrity = 240;
-	name = "\improper Odysseus Mk 1"
-	},
-/turf/open/floor/mech_bay_recharge_floor,
+/obj/machinery/status_display,
+/turf/closed/indestructible/reinforced,
 /area/ruin/space/has_grav/powered)
 "rpx" = (
 /obj/structure/cable,
@@ -16265,20 +16277,20 @@
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
 "rDt" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/vehicle/sealed/mecha/medical/odysseus{
+	max_equip = 4;
+	max_integrity = 240;
+	name = "\improper Odysseus Mk 1"
+	},
+/turf/open/floor/mech_bay_recharge_floor,
 /area/ruin/space/has_grav/powered)
 "rEb" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
 /area/ruin/powered)
 "rEp" = (
-/obj/effect/turf_decal/stripes/red/line,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "rEv" = (
 /obj/machinery/vending/assist,
@@ -16773,6 +16785,14 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"sfW" = (
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "sgA" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -17275,12 +17295,7 @@
 /turf/open/indestructible,
 /area/ruin/powered)
 "sHb" = (
-/obj/structure/rack,
-/obj/item/gun/ballistic/shotgun/lever_action{
-	name = "\improper K&H Bullfrog";
-	pixel_y = 5
-	},
-/obj/item/gun/ballistic/shotgun/lever_action/scope,
+/obj/effect/turf_decal/stripes/red/line,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -17327,8 +17342,17 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "sHJ" = (
-/obj/structure/sign/solgov,
-/turf/closed/wall/mineral/titanium,
+/obj/structure/rack,
+/obj/item/gun/ballistic/shotgun/lever_action{
+	name = "\improper K&H Bullfrog";
+	pixel_y = 5
+	},
+/obj/item/gun/ballistic/shotgun/lever_action/scope,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
 /area/ruin/space/has_grav/powered)
 "sHL" = (
 /obj/machinery/button/door/directional/south{
@@ -17470,7 +17494,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "sQN" = (
-/obj/structure/shuttle/engine/heater,
+/obj/structure/sign/solgov,
 /turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/powered)
 "sQX" = (
@@ -17744,7 +17768,8 @@
 /turf/closed/mineral/snowmountain,
 /area/icemoon/surface/outdoors)
 "tcX" = (
-/turf/closed/indestructible/fakedoor,
+/obj/structure/shuttle/engine/heater,
+/turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/powered)
 "tdb" = (
 /obj/machinery/door/keycard/stockroom,
@@ -17755,20 +17780,7 @@
 /turf/open/floor/plasteel/checker,
 /area/ruin/space/has_grav/hellfactory)
 "tea" = (
-/obj/structure/rack,
-/obj/item/gun/ballistic/shotgun/lever_action/med{
-	pixel_y = 3
-	},
-/obj/item/gun/ballistic/shotgun/lever_action/med,
-/obj/machinery/light/directional/west,
-/obj/item/gun/ballistic/shotgun/lever_action/med{
-	pixel_y = 6
-	},
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/closed/indestructible/fakedoor,
 /area/ruin/space/has_grav/powered)
 "teq" = (
 /obj/effect/turf_decal/stripes/full,
@@ -17809,8 +17821,15 @@
 	},
 /area/ruin/powered)
 "tgj" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/structure/rack,
+/obj/item/gun/ballistic/shotgun/lever_action/med{
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/shotgun/lever_action/med,
+/obj/machinery/light/directional/west,
+/obj/item/gun/ballistic/shotgun/lever_action/med{
+	pixel_y = 6
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -18101,15 +18120,13 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "tAd" = (
-/obj/structure/rack,
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam,
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam,
-/obj/item/mecha_parts/mecha_equipment/medical/sleeper,
-/obj/item/mecha_parts/mecha_equipment/medical/syringe_gun,
-/obj/item/mecha_parts/concealed_weapon_bay,
-/obj/item/mecha_parts/concealed_weapon_bay,
-/obj/item/mecha_parts/concealed_weapon_bay,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
 /area/ruin/space/has_grav/powered)
 "tAp" = (
 /obj/machinery/conveyor/auto{
@@ -18135,7 +18152,14 @@
 /turf/open/floor/plating/dirt/jungle,
 /area/icemoon/surface/outdoors)
 "tAL" = (
-/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/on/layer4,
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam,
+/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam,
+/obj/item/mecha_parts/mecha_equipment/medical/sleeper,
+/obj/item/mecha_parts/mecha_equipment/medical/syringe_gun,
+/obj/item/mecha_parts/concealed_weapon_bay,
+/obj/item/mecha_parts/concealed_weapon_bay,
+/obj/item/mecha_parts/concealed_weapon_bay,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "tBq" = (
@@ -18403,12 +18427,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "tOZ" = (
-/obj/structure/rack,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/on/layer4,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "tPm" = (
@@ -18839,7 +18858,13 @@
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/sekret)
 "upX" = (
-/turf/open/floor/plating/airless,
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
+/turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "uqt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18965,6 +18990,14 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/closed/indestructible/reinforced,
 /area/engine/storage)
+"uuW" = (
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/powered)
 "uuY" = (
 /obj/item/kitchen/knife,
 /obj/effect/turf_decal/tile/bar,
@@ -19851,16 +19884,7 @@
 /turf/open/floor/grass/snow,
 /area/ruin/powered)
 "vuQ" = (
-/obj/structure/rack,
-/obj/item/gun/ballistic/shotgun/lever_action/med/scope{
-	pixel_y = 4
-	},
-/obj/item/gun/ballistic/shotgun/lever_action/med/scope,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/powered)
 "vuY" = (
 /obj/structure/chair/wood{
@@ -20192,20 +20216,11 @@
 /turf/open/floor/pod/dark,
 /area/ntremnant)
 "vLw" = (
-/obj/structure/cable,
 /obj/structure/rack,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/item/gun/ballistic/shotgun/automatic/breaching{
-	pixel_x = 3;
-	pixel_y = 8
+/obj/item/gun/ballistic/shotgun/lever_action/med/scope{
+	pixel_y = 4
 	},
-/obj/item/gun/ballistic/shotgun/automatic/breaching{
-	pixel_x = 3;
-	pixel_y = -8
-	},
-/obj/item/gun/ballistic/shotgun/automatic/breaching{
-	pixel_x = 3
-	},
+/obj/item/gun/ballistic/shotgun/lever_action/med/scope,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -20265,10 +20280,25 @@
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "vOY" = (
+/obj/structure/cable,
 /obj/structure/rack,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/item/gun/ballistic/shotgun/automatic/breaching{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/item/gun/ballistic/shotgun/automatic/breaching{
+	pixel_x = 3;
+	pixel_y = -8
+	},
+/obj/item/gun/ballistic/shotgun/automatic/breaching{
+	pixel_x = 3
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
 /area/ruin/space/has_grav/powered)
 "vPn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20617,8 +20647,10 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "whN" = (
-/obj/structure/shuttle/engine/large,
-/turf/open/space/basic,
+/obj/structure/rack,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "whS" = (
 /obj/structure/punji_sticks/spikes,
@@ -20874,19 +20906,8 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "wzq" = (
-/obj/machinery/power/apc/auto_name/west,
-/obj/structure/cable,
-/obj/structure/rack,
-/obj/item/storage/box/stockparts/deluxe,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
-/obj/item/mecha_parts/mecha_equipment/rcd,
-/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp,
-/obj/item/mecha_parts/mecha_equipment/drill,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/obj/structure/shuttle/engine/large,
+/turf/open/space/basic,
 /area/ruin/space/has_grav/powered)
 "wzO" = (
 /obj/machinery/space_heater,
@@ -21164,14 +21185,6 @@
 /obj/machinery/door/airlock/titanium,
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
-"wRh" = (
-/obj/structure/rack,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/powered)
 "wRD" = (
 /obj/structure/window/plasma/reinforced/spawner,
 /turf/open/lava/plasma,
@@ -21515,23 +21528,14 @@
 	},
 /area/ruin/powered)
 "xmV" = (
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable,
 /obj/structure/rack,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/on/layer4,
-/obj/item/ammo_box/shotgun/breaching,
-/obj/item/ammo_box/shotgun/breaching,
-/obj/item/ammo_box/shotgun/breaching,
-/obj/structure/cable,
+/obj/item/storage/box/stockparts/deluxe,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma,
+/obj/item/mecha_parts/mecha_equipment/rcd,
+/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp,
+/obj/item/mecha_parts/mecha_equipment/drill,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -21733,9 +21737,23 @@
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "xwa" = (
+/obj/structure/cable,
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/ar/hk21,
-/obj/item/gun/ballistic/automatic/ar/hk21,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/slug,
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/on/layer4,
+/obj/item/ammo_box/shotgun/breaching,
+/obj/item/ammo_box/shotgun/breaching,
+/obj/item/ammo_box/shotgun/breaching,
+/obj/structure/cable,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -21900,16 +21918,8 @@
 /area/crew_quarters/heads/captain)
 "xFD" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
+/obj/item/gun/ballistic/automatic/ar/hk21,
+/obj/item/gun/ballistic/automatic/ar/hk21,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -22399,7 +22409,17 @@
 /turf/open/floor/plasteel,
 /area/medical/abandoned)
 "ybR" = (
-/obj/machinery/mech_bay_recharge_port,
+/obj/structure/rack,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -23738,9 +23758,9 @@ cYM
 cYM
 kWR
 xLl
-tea
-vuQ
-wzq
+tgj
+vLw
+xmV
 hfo
 bHh
 bHh
@@ -24019,7 +24039,7 @@ rUx
 mnP
 piC
 piC
-onx
+oLA
 vsf
 cYM
 cYM
@@ -24306,15 +24326,15 @@ gCN
 ojx
 nCg
 nCg
-oop
+oUA
 qNX
 nCg
 nCg
 xly
 xNv
-tgj
-vLw
-xmV
+tAd
+vOY
+xwa
 hfo
 bHh
 bHh
@@ -24598,7 +24618,7 @@ dsP
 cYM
 cYM
 kWR
-sHb
+sHJ
 kfy
 kfy
 kfy
@@ -24888,7 +24908,7 @@ kWR
 mJG
 kfy
 kfy
-xwa
+xFD
 hfo
 bHh
 bHh
@@ -25175,7 +25195,7 @@ kWR
 oYl
 kfy
 kfy
-xFD
+ybR
 hfo
 bHh
 bHh
@@ -25462,7 +25482,7 @@ kWR
 jHA
 kfy
 kfy
-ybR
+kjx
 hfo
 bHh
 bHh
@@ -25749,7 +25769,7 @@ kWR
 oiL
 kfy
 kfy
-mtA
+lMg
 hfo
 bHh
 bHh
@@ -26036,7 +26056,7 @@ gIM
 kfy
 kfy
 kfy
-kEh
+lpD
 hfo
 bHh
 bHh
@@ -26315,7 +26335,7 @@ uQK
 mAB
 mAB
 mAB
-oUA
+oWd
 iBi
 iBi
 hfo
@@ -26608,9 +26628,9 @@ cYM
 mAB
 aVi
 gDp
-tAd
+tAL
 aVi
-jjI
+sfW
 hfo
 bHh
 bHh
@@ -27754,7 +27774,7 @@ pFS
 cYM
 cYM
 mAB
-rpw
+rDt
 sRg
 sRg
 xmc
@@ -28040,7 +28060,7 @@ cYM
 pFS
 cYM
 cYM
-pLP
+rpw
 xFR
 sRg
 sRg
@@ -28328,9 +28348,9 @@ pLB
 nCg
 nCg
 vQa
-rDt
-rDt
-tAL
+rEp
+rEp
+tOZ
 sRg
 sRg
 hfo
@@ -28617,9 +28637,9 @@ iuS
 wai
 sRg
 xkY
-tOZ
-vOY
-wRh
+upX
+whN
+uuW
 hfo
 bHh
 bHh
@@ -29190,9 +29210,9 @@ ncO
 ncO
 gLs
 gLs
-sHJ
-upX
-whN
+sQN
+vuQ
+wzq
 fZA
 bHh
 bHh
@@ -29477,8 +29497,8 @@ bNp
 bNp
 kfy
 kZR
-sQN
-upX
+tcX
+vuQ
 fZA
 fZA
 bHh
@@ -29763,8 +29783,8 @@ kfy
 rSG
 kfy
 kfy
-rEp
-tcX
+sHb
+tea
 fZA
 fZA
 fZA
@@ -30050,8 +30070,8 @@ kfy
 vyy
 kfy
 kfy
-rEp
-tcX
+sHb
+tea
 bHh
 bHh
 bHh
@@ -30338,9 +30358,9 @@ vyy
 vyy
 vyy
 vyy
-sQN
-upX
-whN
+tcX
+vuQ
+wzq
 bHh
 bHh
 bHh
@@ -30625,8 +30645,8 @@ gLs
 gLs
 gLs
 gLs
-sHJ
-upX
+sQN
+vuQ
 fZA
 bHh
 bHh
@@ -33491,7 +33511,7 @@ hAA
 bBv
 fXy
 gwm
-oWd
+pLP
 hmt
 gwm
 aja
@@ -34630,7 +34650,7 @@ hOW
 fXy
 hAA
 hAA
-hAA
+aja
 aja
 fXy
 fXy
@@ -34918,7 +34938,7 @@ fXy
 bpm
 bpm
 aja
-aja
+xmK
 hkt
 frX
 hAA
@@ -35211,7 +35231,7 @@ frX
 hAA
 sGM
 hAA
-hwR
+onx
 bpm
 vwh
 bpm
@@ -35492,7 +35512,7 @@ fXy
 bpm
 bpm
 aja
-aja
+xmK
 hkt
 frX
 hAA
@@ -35778,14 +35798,14 @@ lHs
 fXy
 bpm
 bpm
-bpm
+aja
 aja
 fXy
 fXy
 hwR
 fXy
 fXy
-aja
+oop
 bpm
 bpm
 bpm
@@ -38649,7 +38669,7 @@ lIP
 lIP
 bpm
 bpm
-oLA
+nRQ
 rMl
 hLn
 uZf
@@ -62420,10 +62440,10 @@ tbF
 avQ
 avQ
 vzW
-qvm
-qKY
-qKY
-qKY
+lIg
+qlN
+qlN
+qlN
 vzW
 vzW
 vzW
