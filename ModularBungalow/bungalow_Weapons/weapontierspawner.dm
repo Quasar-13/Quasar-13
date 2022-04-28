@@ -56,7 +56,7 @@
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4
 	loot = list( /obj/item/ammo_casing/caseless/rocket/hedp = 15,
 				/obj/item/ammo_casing/caseless/rocket = 15,
-				/obj/item/ammo_box/shotgun/meteor = 15)
+				/obj/item/ammo_box/shotgun/slug = 15)
 //what do you even want on this!?
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5
 	loot = list(/obj/item/cigbutt = 65,
@@ -140,6 +140,6 @@
 				/obj/item/cigbutt/cigarbutt = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ark_guardian
-	loot = list(/obj/item/cigbutt = 65,
+	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ammoboxes = 65,
 				/obj/item/melee/powerfist = 5,
 				/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal = 20,)
