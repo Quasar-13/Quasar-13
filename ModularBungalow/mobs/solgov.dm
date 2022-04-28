@@ -555,8 +555,6 @@
 /obj/item/reagent_containers/hypospray/combat/gatorade
 	name = "experimental combat nanites injector"
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost. INJECT ONLY ONE EVERY 3 MINUTES OR THE PERSON WILL DIE"
-	inhand_icon_state = "nanite_hypo"
-	icon_state = "nanite_hypo"
 	volume = 40000
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 200, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 200, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 200, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 200, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 200, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 200, /datum/reagent/consumable/cream = 200, /datum/reagent/consumable/nutriment/protein = 200)
 //divided by a lot of fucking numbers idfk
