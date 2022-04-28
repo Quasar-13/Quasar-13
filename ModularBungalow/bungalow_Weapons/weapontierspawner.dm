@@ -117,7 +117,6 @@
 				/obj/item/gun/ballistic/automatic/m90/unrestricted/auto, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
 				/obj/item/gun/energy/laser/hellgun, /obj/item/reagent_containers/hypospray/medipen/gatorade = 20,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 15,
-				/obj/item/gun/energy/pulse/carbine = 1,
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
 				/obj/item/gun/energy/lasercannon, /obj/item/reagent_containers/hypospray/medipen/gatorade = 10)
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP
