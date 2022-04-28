@@ -83,6 +83,21 @@
 	always_place = TRUE
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/claw
+	name = "Claw"
+	id = "claw"
+	description = "a ruined cubicle office. And someone who found what they were looking for"
+	suffix = "rockplanet_claw.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
-
+/datum/map_template/ruin/rockplanet/sif
+	name = "Great Wolf Sif"
+	id = "sif"
+	description = "The abyssal wolf sif"
+	suffix = "rockplanet_sif.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
