@@ -29,6 +29,7 @@
 	pixel_x = -2
 	wander = FALSE
 	movement_type = GROUND
+	gps_name = "Mutated Signal"
 	var/charging = 0
 	blood_volume = BLOOD_VOLUME_NORMAL
 	deathmessage = "<span class='colossus'>chokes on her own blood, gurgling out 'You're coming with me, mutie' as she activates her self destruct!</span>"
