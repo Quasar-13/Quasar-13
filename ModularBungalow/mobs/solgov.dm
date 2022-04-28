@@ -332,7 +332,8 @@
 	health = 195
 	ranged = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
-	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal)
+	/obj/effect/spawner/lootdrop/tierweapon/ark_guardian,
+	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal) //ensure you can always recover your health after encountering one.
 	projectile_deflect_chance = 5 //dodge! but not as much
 	robust_searching = TRUE
 	harm_intent_damage = 35
