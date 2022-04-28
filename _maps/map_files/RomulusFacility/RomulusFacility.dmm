@@ -537,6 +537,9 @@
 /area/medical/abandoned)
 "aIM" = (
 /obj/item/reagent_containers/hypospray/combat/gatorade,
+/obj/item/reagent_containers/hypospray/medipen/gatorade{
+	pixel_y = 12
+	},
 /turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "aIW" = (
@@ -2420,10 +2423,12 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "cRy" = (
-/mob/living/simple_animal/hostile/solgov/infected{
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite{
 	aggro_vision_range = 1;
 	anchored = 1;
-	faction = list("russian");
+	desc = "What the hell is that thing";
+	name = "Unknown";
+	teleport_distance = 1;
 	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
@@ -3811,10 +3816,12 @@
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ejh" = (
-/obj/item/clothing/suit/armor/hos/ranger/snow,
-/obj/item/clothing/head/helmet/ranger/hos/snow{
-	desc = "A marking on it's front indicate leadership. Follow the one wearing this...";
-	pixel_y = 10
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian{
+	aggro_vision_range = 1;
+	anchored = 1;
+	desc = "He is staring right at you";
+	name = "Unknown";
+	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
@@ -6727,9 +6734,11 @@
 /turf/open/floor/mineral/plastitanium,
 /area/medical/surgery)
 "hAu" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker{
 	aggro_vision_range = 1;
 	anchored = 1;
+	name = "Unknown";
+	throw_range = 1;
 	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
@@ -8752,9 +8761,11 @@
 /turf/open/floor/plating,
 /area/awaymission/bmpship/aft)
 "jLy" = (
-/obj/item/clothing/suit/armor/ranger/vet/snow,
-/obj/item/clothing/head/helmet/ranger/akira{
-	pixel_y = 10
+/mob/living/simple_animal/hostile/solgov/infected/heavy{
+	aggro_vision_range = 1;
+	anchored = 1;
+	faction = list("russian");
+	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
@@ -10129,19 +10140,6 @@
 "ljE" = (
 /turf/closed/mineral/snowmountain/icemoon,
 /area/icemoon/surface/outdoors/unexplored/rivers/no_monsters)
-"ljX" = (
-/mob/living/simple_animal/hostile/solgov/infected/heavy{
-	aggro_vision_range = 1;
-	anchored = 1;
-	faction = list("russian");
-	vision_range = 1
-	},
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "llb" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/snowed,
@@ -10254,7 +10252,12 @@
 /turf/open/floor/plasteel/icemoon,
 /area/icemoon/surface/outdoors)
 "lrx" = (
-/obj/item/clothing/neck/cloak/ranger/snow,
+/mob/living/simple_animal/hostile/solgov/infected{
+	aggro_vision_range = 1;
+	anchored = 1;
+	faction = list("russian");
+	vision_range = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -10512,11 +10515,11 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "lHs" = (
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+/mob/living/simple_animal/hostile/solgov/ranged/assault{
 	aggro_vision_range = 1;
 	anchored = 1;
-	desc = "An absolute unit, you should probably start running if you see him";
 	name = "Unknown";
+	throw_range = 1;
 	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
@@ -11468,11 +11471,11 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ruin/space/has_grav/powered)
 "mKo" = (
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian{
+/mob/living/simple_animal/hostile/viscerator{
 	aggro_vision_range = 1;
 	anchored = 1;
-	desc = "He is staring right at you";
-	name = "Unknown";
+	faction = list("russian");
+	name = "mercenary manhunter";
 	vision_range = 1
 	},
 /turf/open/floor/mineral/plastitanium{
@@ -11539,10 +11542,6 @@
 /obj/effect/spawner/lootdrop/armory_contraband,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
-"mNA" = (
-/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-/turf/closed/indestructible/rock/snow,
-/area/ruin/powered)
 "mNO" = (
 /mob/living/simple_animal/hostile/solgov/ranged/smg{
 	dir = 8
@@ -13203,20 +13202,6 @@
 /obj/structure/flora/tree/pine,
 /turf/open/floor/grass/snow,
 /area/icemoon/surface/outdoors)
-"ouZ" = (
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker{
-	aggro_vision_range = 1;
-	anchored = 1;
-	name = "Unknown";
-	throw_range = 1;
-	vision_range = 1
-	},
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "ovb" = (
 /obj/machinery/door/airlock/external,
 /obj/machinery/door/keycard/entry,
@@ -15274,7 +15259,13 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/powered)
 "qoS" = (
-/obj/item/clothing/under/rank/security/officer/kepler/ranger,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun{
+	aggro_vision_range = 1;
+	anchored = 1;
+	desc = "An absolute unit, you should probably start running if you see him";
+	name = "Unknown";
+	vision_range = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -17993,7 +17984,11 @@
 /turf/open/floor/engine,
 /area/awaymission/bmpship/fore)
 "trt" = (
-/obj/item/clothing/under/rank/security/officer/kepler,
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	aggro_vision_range = 1;
+	anchored = 1;
+	vision_range = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -18333,7 +18328,12 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "tKN" = (
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler{
+	pixel_y = -7
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap{
+	pixel_y = 4
+	},
 /turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "tKV" = (
@@ -19036,20 +19036,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/storage/mining)
-"uyb" = (
-/mob/living/simple_animal/hostile/solgov/ranged/assault{
-	aggro_vision_range = 1;
-	anchored = 1;
-	name = "Unknown";
-	throw_range = 1;
-	vision_range = 1
-	},
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ruin/powered)
 "uyy" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -20004,7 +19990,10 @@
 /turf/open/floor/carpet,
 /area/awaymission/bmpship/fore)
 "vFq" = (
-/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal,
+/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal{
+	pixel_x = 15
+	},
+/obj/item/clothing/neck/cloak/ranger/snow,
 /turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "vFM" = (
@@ -20705,7 +20694,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/post/engineering)
 "wld" = (
-/obj/item/clothing/under/misc/durathread/kepler,
+/obj/item/clothing/under/rank/security/officer/kepler,
 /turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "wlr" = (
@@ -36652,7 +36641,7 @@ vzW
 exf
 "}
 (50,1,1) = {"
-mNA
+lIP
 tfL
 ejh
 fXy
@@ -37228,7 +37217,7 @@ exf
 (52,1,1) = {"
 tKN
 tPy
-ljX
+mAv
 fXy
 bpm
 bpm
@@ -37515,7 +37504,7 @@ exf
 (53,1,1) = {"
 nPA
 emL
-ouZ
+mAv
 fXy
 bpm
 bpm
@@ -37802,7 +37791,7 @@ exf
 (54,1,1) = {"
 vMk
 exa
-uyb
+mAv
 fXy
 bpm
 iDi

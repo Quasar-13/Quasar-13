@@ -350,7 +350,7 @@
 	charge_distance = 3
 	aggro_vision_range = 15
 	vision_range = 15
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/ranger
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite
 	name = "Ranger Ark Guardian"
 	desc = "Spirit of the past rangers, Summoned to protect a certain highly important location with their powerful fists from any intruders. That would have to include you."
 	icon_state = "solgovcloakerg_alt"
@@ -361,14 +361,14 @@
 	harm_intent_damage = 55
 	melee_damage_lower = 65
 	melee_damage_upper = 65
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite/Aggro()
-	..()
-	summon_backup(15)
-	say("Dlya tebya net iskupleniya, Tvoya istoriya zakanchivayetsya zdes.")
 	var/teleport_distance = 15
 	charge_distance = 6
 	aggro_vision_range = 22
 	vision_range = 22
+/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite/Aggro()
+	..()
+	summon_backup(15)
+	say("Dlya tebya net iskupleniya, Tvoya istoriya zakanchivayetsya zdes.")
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
