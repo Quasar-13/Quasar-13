@@ -120,7 +120,7 @@
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
 				/obj/item/gun/energy/lasercannon, /obj/item/reagent_containers/hypospray/medipen/gatorade = 5)
 //gaming
-//WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP
+//WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP AND SHOULD BE USED IN DROP ONLY
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier5
 	loot = list(/obj/item/gun/medbeam, /obj/item/reagent_containers/hypospray/combat/gatorade = 65,
 				/obj/item/energy_katana, /obj/item/book/granter/spell/summonitem, /obj/item/autosurgeon/organ/syndicate/xray_eyes = 20,
@@ -128,13 +128,18 @@
 				/obj/item/book/granter/spell/summonitem, /obj/item/gun/energy/pulse = 15,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25,  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10)
-
+//This has a rare chance to spawn something
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 10,
 				/obj/item/slimecross/stabilized/purple = 85,
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier5 = 5)
-
+//this guarantee a certain drop, use it for any rare drop!
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare/guaranteen
 	loot = list(/obj/item/cigbutt = 65,
 				/obj/item/cigbutt/roach = 20,
 				/obj/item/cigbutt/cigarbutt = 15)
+
+/obj/effect/spawner/lootdrop/tierweapon/ark_guardian
+	loot = list(/obj/item/cigbutt = 65,
+				/obj/item/melee/powerfist = 5,
+				/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal = 20,)
