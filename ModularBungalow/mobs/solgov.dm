@@ -364,7 +364,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite/Aggro()
 	..()
 	summon_backup(15)
-	say("VY NE MOZHETE UBEGAT OT MENYA!")
+	say("Dlya tebya net iskupleniya, Tvoya istoriya zakanchivayetsya zdes.")
 	var/teleport_distance = 15
 	charge_distance = 6
 	aggro_vision_range = 22
@@ -374,7 +374,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
 	..()
 	summon_backup(15)
-	say("VY NE MOZHETE UBEGAT OT MENYA!")
+	say("UBIRAYSYA OTSYUDA STALKER!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
 	. = ..()
