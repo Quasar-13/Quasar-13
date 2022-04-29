@@ -36,7 +36,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
 	w_class = WEIGHT_CLASS_NORMAL
-	max_ammo = 10
+	max_ammo = 12
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/speedloader/c38
@@ -46,12 +46,24 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/c38
 
+/obj/item/ammo_box/speedloader/c38/dumdum
+	name = ".38 dum dum speedloader"
+	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
+	ammo_type = /obj/item/ammo_casing/c38/dumdum
+
 /obj/item/ammo_box/speedloader/a357
 	name = ".357 speedloader"
 	desc = "A speedloader full of .357 catridges ready to be used!"
 	icon_state = "slc357"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
+
+/obj/item/ammo_box/speedloader/a357/match
+	name = ".357 match speedloader"
+	desc = "A speedloader full of .357 match catridges ready to be used!"
+	icon_state = "slc357"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357/match
 
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
@@ -116,3 +128,140 @@
 	desc = "A box full of 12 breaching slugs."
 	icon_state = "breacher_box"
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
+
+//Ammoboxe for the armylathe hehe - Akira
+/obj/item/ammo_box/rifle
+	name = ".556 ammo box"
+	desc = "A box full of .556 Cartridges ready to be used, hold 60 casing"
+	icon_state = "riflebox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 60
+
+/obj/item/ammo_box/rifle/a762
+	name = ".762 NATO ammo box"
+	desc = "A box full of .762 NATO Cartridges ready to be used, hold 60 casing"
+	icon_state = "762riflebox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 60
+
+/obj/item/ammo_box/rifle/a762
+	name = ".762 NATO ammo box"
+	desc = "A box full of .762 NATO Cartridges ready to be used, hold 180 casing"
+	icon_state = "762rifleboxheavy"
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 180
+
+//do not make this one printable, mapping purpose and lootdrop.
+/obj/item/ammo_box/rifle/big
+	name = "large .556 ammo box"
+	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing, this one is bulky, what do you need it for exactly?"
+	icon_state = "superriflebox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 180
+
+/obj/item/ammo_box/ab357
+	name = ".357 ammo packet"
+	desc = "A packet full of .357 Cartridges ready to be used, hold 12 casing"
+	icon_state = "357packet"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+	w_class = WEIGHT_CLASS_SMALL
+	max_ammo = 12
+/obj/item/ammo_box/ab357/big
+	name = ".357 ammo box"
+	desc = "A box full of .357 Cartridges ready to be used, hold 24 casing"
+	icon_state = "357box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a357
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+//THE 10MM VARIANTS SHOULD BE KEPLER EXCLUSIVE.
+/obj/item/ammo_box/c10mm_ap
+	name = "10mm ammo AP box"
+	desc = "A box full of armor piercing 10mm Cartridges ready to be used, hold 24 casing"
+	icon_state = "10apbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c10mm/ap
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+
+/obj/item/ammo_box/c10mm_hp
+	name = "10mm ammo HP box"
+	desc = "A box full of hollow point 10mm Cartridges ready to be used, hold 24 casing"
+	icon_state = "10hpbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c10mm/hp
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+
+/obj/item/ammo_box/ab38
+	name = ".38 ammo packet"
+	desc = "A disposable packet full of .38 Cartridges ready to be used, hold 12 casing"
+	icon_state = "c38pack"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c38
+	w_class = WEIGHT_CLASS_SMALL
+	max_ammo = 12
+
+/obj/item/ammo_box/ab38/big
+	name = ".38 ammo box"
+	desc = "A box full of .38 Cartridges ready to be used, hold 24 casing"
+	icon_state = "c38box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c38
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+
+/obj/item/ammo_box/ab38/big/very
+	name = "heavy duty .38 ammo box"
+	desc = "A box full of .38 Cartridges ready to be used, hold 48. casing what do you need this for?"
+	icon_state = "c38heavybox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c38
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 48
+
+/obj/item/ammo_box/ab50bmg
+	name = ".50 BMG box"
+	desc = "A box full of .50 BMG Cartridges ready to be used, hold 12 casing"
+	icon_state = "50bmgsmall"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/p50
+	w_class = WEIGHT_CLASS_SMALL
+	max_ammo = 12
+/obj/item/ammo_box/ab50bmg/big
+	name = ".50 BMG heavy box"
+	desc = "An immensely bulky box full of .50 Cartridges ready to be used, hold 48 casing. for hunting armoured bears in alaska"
+	icon_state = "50bmgheavy"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 48
+/obj/item/ammo_box/ab50bmg/penetrator
+	name = ".50 penetrator ammo box"
+	desc = "A box full of .50 BMG Penetrator Cartridges ready to be used, hold 12 casing, for clearing structures "
+	icon_state = "50bmgatsmall"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/p50/penetrator
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 12
+/obj/item/ammo_box/ab50bmg/penetrator/big
+	name = ".50 bulky penetrator ammo box"
+	desc = "A box full of .50 BMG penetrator Cartridges ready to be used, hold 48 casing, You might want to reconsider your life choice if you face off against this."
+	icon_state = "50bmgatbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 48
+/obj/item/ammo_box/ab50bmg/soporific
+	name = ".50 sleepimg ammo box"
+	desc = "A box full of sleeper agent in .50 BMG, hold 12 casing"
+	icon_state = "sleeper50bmg"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/p50/soporific
+	w_class = WEIGHT_CLASS_SMALL
+	max_ammo = 12
