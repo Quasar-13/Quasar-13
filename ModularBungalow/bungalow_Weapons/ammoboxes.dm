@@ -251,17 +251,17 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	max_ammo = 12
 /obj/item/ammo_box/ab50bmg/penetrator/big
-	name = ".50 ammo box"
+	name = ".50 bulky penetrator ammo box"
 	desc = "A box full of .50 BMG penetrator Cartridges ready to be used, hold 48 casing, You might want to reconsider your life choice if you face off against this."
 	icon_state = "50bmgatbox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	max_ammo = 48
 /obj/item/ammo_box/ab50bmg/soporific
-	name = ".38 ammo box"
+	name = ".50 sleepimg ammo box"
 	desc = "A box full of sleeper agent in .50 BMG, hold 12 casing"
 	icon_state = "sleeper50bmg"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	ammo_type = /obj/item/ammo_casing/p50/sporific
+	ammo_type = /obj/item/ammo_casing/p50/soporific
 	w_class = WEIGHT_CLASS_SMALL
 	max_ammo = 12
