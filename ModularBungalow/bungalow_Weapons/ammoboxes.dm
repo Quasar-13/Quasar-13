@@ -157,3 +157,30 @@
 	ammo_type = /obj/item/ammo_casing/a357
 	w_class = WEIGHT_CLASS_NORMAL
 	max_ammo = 24
+
+/obj/item/ammo_box/c10mm_ap
+	name = "10mm ammo AP box"
+	desc = "A box full of armor piercing 10mm Cartridges ready to be used, hold 24 casing"
+	icon_state = "10apbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c10mm/ap
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+
+/obj/item/ammo_box/c10mm_hp
+	name = "10mm ammo HP box"
+	desc = "A box full of hollow point 10mm Cartridges ready to be used, hold 24 casing"
+	icon_state = "10hpbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c10mm/hp
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24
+
+/obj/item/ammo_box/ab38
+	name = ".38 ammo box"
+	desc = "A box full of .38 Cartridges ready to be used, hold 24 casing"
+	icon_state = "c38box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/c38
+	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 24

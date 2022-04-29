@@ -49,18 +49,25 @@
 				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator = 1,
 				/obj/item/ammo_box/magazine/m12g = 20,
 				/obj/item/ammo_casing/caseless/rocket/weak = 10,
-				/obj/item/ammo_box/magazine/m12g/meteor = 10,
+				/obj/item/ammo_box/magazine/m12g/meteor = 10
+				/obj/item/ammo_box/magazine/ak47 = 15,
 				/obj/item/ammo_box/magazine/m12g/dragon = 5,
+				/obj/item/ammo_box/magazine/t12 = 15,
 				/obj/item/ammo_box/speedloader/a357 = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4
 	loot = list( /obj/item/ammo_casing/caseless/rocket/hedp = 15,
 				/obj/item/ammo_casing/caseless/rocket = 15,
-				/obj/item/ammo_box/shotgun/slug = 15)
+				/obj/item/ammo_box/magazine/m12g/meteor =15,
+				/obj/item/ammo_box/shotgun/lasershot = 5,
+				/obj/item/ammo_box/magazine/t12 = 15,
+				/obj/item/ammo_box/magazine/m12g/slug = 15)
 //what do you even want on this!?
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5
-	loot = list(/obj/item/cigbutt = 65,
-				/obj/item/cigbutt/roach = 20,
+	loot = list(/obj/item/ammo_box/shotgun/pulse = 15,
+				/obj/item/ammo_box/shotgun/frag =15,
+				/obj/item/ammo_box/shotgun/lasershot = 5,
+				/obj/item/ammo_box/shotgun/meteor = 15,
 				/obj/item/cigbutt/cigarbutt = 15)
 
 //this one will also spawn some stuff but specific.
