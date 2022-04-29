@@ -547,7 +547,7 @@
 	faction = list("russian")
 
 /mob/living/simple_animal/hostile/asteroid/polarbear/solgov
-	name = "Solgov K9 Unit"
+	name = "Kepler K9 Unit"
 	desc = "Big bear, Will punch your face off."
 	icon_state = "solgovpolarbear"
 	icon_living = "solgovpolarbear"
@@ -557,6 +557,19 @@
 	/obj/item/reagent_containers/hypospray/medipen/salacid,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("russian", "mining")
+/mob/living/simple_animal/hostile/viscerator/solgov
+	name = "mercenary manhunter"
+	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. this one belong to the kepler group"
+	icon_state = "viscerator_solgov"
+	icon_living = "viscerator_solgov"
+	health = 55
+	maxHealth = 55
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+	faction = list("russian", "mining")
+	limb_destroyer = 0
+	loot = list(/obj/item/stock_parts/cell/high)
+
 //it will ignore other wild life aswell
 /obj/item/gun/ballistic/automatic/ar/hk21/nomag
 	spawnwithmagazine = 0
