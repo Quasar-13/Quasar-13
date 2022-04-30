@@ -78,40 +78,40 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 2)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/aps, /obj/item/ammo_box/magazine/m9mm_aps, /obj/item/ammo_box/magazine/m9mm_aps = 10,
-				/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/ammo_box/magazine/m45, /obj/item/ammo_box/magazine/m45 = 29,
-				/obj/item/gun/ballistic/automatic/pistol/mk23, /obj/item/ammo_box/magazine/m45, /obj/item/ammo_box/magazine/m45 = 10,
-				/obj/item/gun/ballistic/automatic/pistol/deagle, /obj/item/ammo_box/magazine/m50, /obj/item/ammo_box/magazine/m50 = 1,
-				/obj/item/gun/ballistic/automatic/pistol, /obj/item/ammo_box/magazine/m9mm, /obj/item/ammo_box/magazine/m9mm = 5,
-				/obj/item/gun/ballistic/automatic/pistol/glock, /obj/item/ammo_box/magazine/glock, /obj/item/ammo_box/magazine/glock = 5,
-				/obj/item/gun/ballistic/automatic/pistol/PL14, /obj/item/ammo_box/magazine/m9mm, /obj/item/ammo_box/magazine/m9mm = 5,
-				/obj/item/gun/ballistic/rifle/boltaction, /obj/item/ammo_box/a762, /obj/item/ammo_box/a762 = 10,
-				/obj/item/gun/ballistic/automatic/surplus, /obj/item/ammo_box/magazine/m10mm/rifle, /obj/item/ammo_box/magazine/m10mm/rifle = 10,
-				/obj/item/gun/ballistic/shotgun/lever_action/med, /obj/item/ammo_box/speedloader/c38, /obj/item/ammo_box/c38 = 15,
-				/obj/item/gun/ballistic/revolver/detective, /obj/item/ammo_box/c38, /obj/item/ammo_box/c38 = 15,
-				/obj/item/gun/ballistic/automatic/pistol/sig, /obj/item/ammo_box/magazine/sig, /obj/item/ammo_box/magazine/sig = 15)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/aps = 10,
+				/obj/item/gun/ballistic/automatic/pistol/m1911 = 29,
+				/obj/item/gun/ballistic/automatic/pistol/mk23 = 10,
+				/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+				/obj/item/gun/ballistic/automatic/pistol = 5,
+				/obj/item/gun/ballistic/automatic/pistol/glock = 5,
+				/obj/item/gun/ballistic/automatic/pistol/PL14 = 5,
+				/obj/item/gun/ballistic/rifle/boltaction = 10,
+				/obj/item/gun/ballistic/automatic/surplus = 10,
+				/obj/item/gun/ballistic/shotgun/lever_action/med = 15,
+				/obj/item/gun/ballistic/revolver/detective = 15,
+				/obj/item/gun/ballistic/automatic/pistol/sig)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2
-	loot = list(/obj/item/gun/ballistic/automatic/tommygun,  /obj/item/ammo_box/magazine/tommygunm45,  /obj/item/ammo_box/magazine/tommygunm45 = 15,
-				/obj/item/gun/ballistic/automatic/c20r/unrestricted, /obj/item/ammo_box/magazine/smgm45, /obj/item/ammo_box/magazine/smgm45 = 20,
-				/obj/item/gun/ballistic/automatic/proto/unrestricted, /obj/item/ammo_box/magazine/smgm9mm, /obj/item/ammo_box/magazine/smgm9mm = 10,
-				/obj/item/gun/ballistic/shotgun/automatic/combat, /obj/item/ammo_box/shotgun/buckshot, /obj/item/ammo_box/shotgun/slug = 1,
-				/obj/item/gun/ballistic/shotgun/lever_action, /obj/item/ammo_box/speedloader/a357, /obj/item/ammo_box/speedloader/a357 = 10,
-				/obj/item/gun/ballistic/shotgun/bulldog/unrestricted, /obj/item/ammo_box/magazine/m12g/slug, /obj/item/ammo_box/magazine/m12g/slug = 1,
-				/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap, /obj/item/ammo_box/shotgun/buckshot = 15,
-				/obj/item/gun/ballistic/automatic/wt550, /obj/item/ammo_box/magazine/wt550m9/wtap, /obj/item/ammo_box/magazine/wt550m9/wtap = 5,
-				/obj/item/gun/ballistic/automatic/uzi, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 15)
+	loot = list(/obj/item/gun/ballistic/automatic/tommygun = 15,
+				/obj/item/gun/ballistic/automatic/c20r/unrestricted = 20,
+				/obj/item/gun/ballistic/automatic/proto/unrestricted = 10,
+				/obj/item/gun/ballistic/shotgun/automatic/combat = 1,
+				/obj/item/gun/ballistic/shotgun/lever_action = 10,
+				/obj/item/gun/ballistic/shotgun/bulldog/unrestricted = 1,
+				/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap = 15,
+				/obj/item/gun/ballistic/automatic/wt550 = 5,
+				/obj/item/gun/ballistic/automatic/uzi = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
-	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 15,
-				/obj/item/gun/ballistic/revolver/sequoia, /obj/item/ammo_box/a357/match, /obj/item/ammo_box/a357/match = 10,
-				/obj/item/gun/ballistic/revolver/sw500, /obj/item/ammo_box/a357/match, /obj/item/ammo_box/a357/match = 10,
-				/obj/item/gun/ballistic/revolver/mateba, /obj/item/ammo_box/a357/match, /obj/item/ammo_box/a357/match = 10,
-				/obj/item/gun/ballistic/shotgun/lever_action/scope, /obj/item/ammo_box/speedloader/a357/match, /obj/item/ammo_box/speedloader/a357/match = 25,
-				/obj/item/gun/grenadelauncher, /obj/item/grenade/frag, /obj/item/grenade/frag, /obj/item/grenade/frag, /obj/item/grenade/frag, /obj/item/grenade/frag, /obj/item/grenade/frag = 15,
-				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger, /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle, /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle = 10,
-				/obj/item/gun/ballistic/automatic/ar/hk21, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 15,
-				/obj/item/gun/ballistic/shotgun/automatic/combat, /obj/item/ammo_box/shotgun/slug, /obj/item/ammo_box/shotgun/slug = 10)
+	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 15,
+				/obj/item/gun/ballistic/revolver/sequoia = 10,
+				/obj/item/gun/ballistic/revolver/sw500 = 10,
+				/obj/item/gun/ballistic/revolver/mateba = 10,
+				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
+				/obj/item/gun/grenadelauncherm= 15,
+				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
+				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
+				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/magazine/m556,  /obj/item/ammo_box/magazine/m556 = 25,
@@ -121,20 +121,24 @@
 				/obj/item/gun/ballistic/automatic/mini_uzi/kepler, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 25,
 				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hollow = 10,
 				/obj/item/gun/ballistic/automatic/m90/unrestricted/auto, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
-				/obj/item/gun/energy/laser/hellgun, /obj/item/reagent_containers/hypospray/medipen/gatorade = 5,
-				/obj/item/gun/energy/pulse/pistol,  /obj/item/reagent_containers/hypospray/medipen/gatorade = 1,
+				/obj/item/gun/energy/laser/hellgun = 5,
+				/obj/item/reagent_containers/hypospray/medipen/gatorade,
+				/obj/item/gun/energy/pulse/pistol = 1,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 15,
-				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted, /obj/item/ammo_box/magazine/m12g/meteor, /obj/item/ammo_box/magazine/m12g/slug = 20,
-				/obj/item/gun/energy/lasercannon, /obj/item/reagent_containers/hypospray/medipen/gatorade = 5)
+				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted = 20,
+				/obj/item/gun/energy/lasercannon = 5)
 //gaming
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP AND SHOULD BE USED IN DROP ONLY
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier5
-	loot = list(/obj/item/gun/medbeam, /obj/item/reagent_containers/hypospray/combat/gatorade = 65,
-				/obj/item/energy_katana, /obj/item/book/granter/spell/summonitem, /obj/item/autosurgeon/organ/syndicate/xray_eyes = 20,
-				/obj/item/gun/energy/pulse, /obj/item/reagent_containers/hypospray/medipen/gatorade = 15,
-				/obj/item/book/granter/spell/summonitem, /obj/item/gun/energy/pulse = 15,
-				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
-				/obj/item/gun/ballistic/automatic/gyropistol/xm25,  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10)
+	loot = list(/obj/item/slimecross/stabilized/purple,
+				/obj/item/energy_katana,
+				/obj/item/reagent_containers/hypospray/combat/gatorade,
+				/obj/item/autosurgeon/organ/syndicate/xray_eyes = 5,
+				/obj/item/gun/energy/pulse = 15,
+				/obj/item/book/granter/spell/summonitem,
+				/obj/item/gun/energy/pulse, = 5
+				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast = 10,
+				/obj/item/gun/ballistic/automatic/gyropistol/xm25 = 20)
 //This has a rare chance to spawn something
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 10,
