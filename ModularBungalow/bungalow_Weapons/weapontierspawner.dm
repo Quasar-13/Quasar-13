@@ -108,7 +108,7 @@
 				/obj/item/gun/ballistic/revolver/sw500 = 10,
 				/obj/item/gun/ballistic/revolver/mateba = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
-				/obj/item/gun/grenadelauncherm= 15,
+				/obj/item/gun/grenadelauncher = 15,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
 				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
