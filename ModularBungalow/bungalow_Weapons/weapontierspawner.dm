@@ -136,7 +136,7 @@
 				/obj/item/autosurgeon/organ/syndicate/xray_eyes = 5,
 				/obj/item/gun/energy/pulse = 15,
 				/obj/item/book/granter/spell/summonitem,
-				/obj/item/gun/energy/pulse, = 5
+				/obj/item/gun/energy/pulse = 5,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast = 10,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25 = 20)
 //This has a rare chance to spawn something
