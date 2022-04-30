@@ -331,6 +331,10 @@
 	maxHealth = 155
 	health = 155
 	ranged = 0
+	minimum_distance = 0
+	retreat_distance = 0 //otherwise he just kills you instantly
+	rapid = 0
+	rapid_fire_delay = 0
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
 	/obj/effect/spawner/lootdrop/tierweapon/ark_guardian,
 	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal) //ensure you can always recover your health after encountering one.
@@ -437,7 +441,7 @@
 	melee_damage_lower = 45
 	melee_damage_upper = 45
 	retreat_distance = 8
-	minimum_distance = 1
+	minimum_distance = 6
 	casingtype = /obj/item/ammo_casing/p50/penetrator
 	rapid_fire_delay = 20
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
@@ -461,7 +465,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	retreat_distance = 4
-	minimum_distance = 2
+	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/a357
 	rapid_fire_delay = 15
 	projectilesound =  'sound/weapons/gun/sniper/shot.ogg'
