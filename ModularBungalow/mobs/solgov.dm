@@ -296,9 +296,9 @@
 	melee_damage_upper = 15
 	minimum_distance = 0
 	retreat_distance = 13 //otherwise he just kills you instantly
-	rapid = 3
+	rapid = 1
 	rapid_fire_delay = 6
-	casingtype = /obj/item/ammo_casing/shotgun/beanbag
+	casingtype = /obj/item/ammo_casing/shotgun/executioner
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/cloaker,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
@@ -392,7 +392,7 @@
 	health = 205
 	retreat_distance = 3
 	minimum_distance = 2
-	rapid = 5
+	rapid = 3
 	rapid_fire_delay = 2
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
@@ -494,13 +494,13 @@
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
-	speed = 2.75
+	speed = 3.5
 	maxHealth = 200
 	health = 200
 	rapid = 3
 	rapid_fire_delay = 2
-	retreat_distance = 1
-	minimum_distance = 1
+	retreat_distance = 3
+	minimum_distance = 2
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/assault,
