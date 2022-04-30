@@ -29,6 +29,15 @@
 	icon_state = "snowvet"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 25, RAD = 10, FIRE = 100, ACID = 60, WOUND = 10)
 
+/obj/item/clothing/head/helmet/ranger/akira
+	name = "kitsune's ranger helmet"
+	desc = "Durable helmet intended for long range expedition in the snow, Originally used by a kitsune, now nowhere to be seen."
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	icon_state = "snowvetakira"
+	armor = list(MELEE = 35, BULLET = 35, LASER = 15, ENERGY = 35, BOMB = 25, BIO = 35, RAD = 100, FIRE = 100, ACID = 80, WOUND = 60)
+
 /obj/item/clothing/head/helmet/ranger/hos
 	name = "head of security's ranger helmet"
 	resistance_flags = FIRE_PROOF
@@ -37,7 +46,7 @@
 	name = "expedition leader's ranger helmet"
 	desc = "Double plated."
 	icon_state = "snowvethos"
-	armor = list(MELEE = 45, BULLET = 35, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 45, RAD = 60, FIRE = 100, ACID = 60, WOUND = 10)
+	armor = list(MELEE = 45, BULLET = 35, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 45, RAD = 60, FIRE = 100, ACID = 60, WOUND = 25)
 
 //Provost Hat
 /obj/item/clothing/head/caphat/provost
