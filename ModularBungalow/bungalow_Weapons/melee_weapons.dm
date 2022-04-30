@@ -598,4 +598,5 @@
 	attack_verb_simple = list("stab", "pierces", "slash")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
-
+//work in progress - Akira
+/obj/item/melee/riotstaff

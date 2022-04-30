@@ -12,7 +12,7 @@
 /obj/item/ammo_box/magazine/internal/shot/lever
 	name = "lever action internal magazine"
 	ammo_type = /obj/item/ammo_casing/a357
-	max_ammo = 10
+	max_ammo = 12
 	caliber = CALIBER_357
 
 /obj/item/gun/ballistic/shotgun/lever_action/scope
@@ -34,7 +34,7 @@
 /obj/item/ammo_box/magazine/internal/shot/lever/med
 	name = "lever action internal magazine"
 	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 10
+	max_ammo = 12
 	caliber = CALIBER_38
 
 

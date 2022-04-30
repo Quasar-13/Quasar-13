@@ -87,9 +87,10 @@
 
 
 //Kepler guns
+//Sprite by kirie and akira!
 /obj/item/gun/ballistic/automatic/m90/xm29
 	name = "SG-XM29 'Annihilator'"
-	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Typically seen used by kepler group mercenaries and in hand of some heavy rangers"
 	icon_state = "xm29"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -98,7 +99,9 @@
 	pin = /obj/item/firing_pin
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-
+	zoomable = TRUE
+	zoom_amt = 7
+	zoom_out_amt = 4
 
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
 	name = "SG-P25 'Crow'"
@@ -107,10 +110,13 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 7
+	zoom_out_amt = 4
 
 /obj/item/gun/ballistic/automatic/gyropistol/xm25/Initialize()
 	. = ..()
-	fire_delay = 12
+	fire_delay = 14
 
 
 /obj/item/gun/ballistic/automatic/ar/hk21
@@ -125,4 +131,31 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov
+	name = "Type 45 Sniper Rifle"
+	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	icon_state = "rifle45"
+	inhand_icon_state = "rifle45"
+	mag_display_ammo = 1
+	spawnwithmagazine = 0
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
+	name = "Type 40 Sniper Rifle"
+	desc = "Typically used by Ranger marksman of the past."
+	icon_state = "rifle40"
+	inhand_icon_state = "rifle40"
+	mag_display_ammo = 1
+	spawnwithmagazine = 1
+
+//Used for both of these!
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	max_ammo = 12
+	caliber = CALIBER_50
+
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator
+	name = "sniper rounds (penetrator)"
+	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
+	ammo_type = /obj/item/ammo_casing/p50/penetrator
