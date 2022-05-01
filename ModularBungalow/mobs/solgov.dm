@@ -71,6 +71,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/ranger/keplersnow
 	back = /obj/item/storage/backpack/satchel
 
 /datum/outfit/solgovcorpsecloaker
@@ -529,6 +530,20 @@
 	faction = list("hostile")
 
 /mob/living/simple_animal/hostile/solgov/infected/heavy
+	icon_state = "solgov_infestedh"
+	icon_living = "solgov_infestedh"
+	speed = 1
+	maxHealth = 250
+	health = 250
+
+/mob/living/simple_animal/hostile/solgov/infected/marksman
+	icon_state = "solgov_infestedh"
+	icon_living = "solgov_infestedh"
+	speed = 1
+	maxHealth = 250
+	health = 250
+
+/mob/living/simple_animal/hostile/solgov/infected/corrupted
 	icon_state = "solgov_infestedh"
 	icon_living = "solgov_infestedh"
 	speed = 1
