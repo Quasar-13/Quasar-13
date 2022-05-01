@@ -279,7 +279,7 @@
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/item/reagent_containers/hypospray/medipen/stimpack/traitor,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
-	faction = list("russian", "hostile")
+	faction = list("russian", "hostile", "mining")
 //HAZMAT DOES NOT GET TARGETTED BY INFECTED MOB. INTENTENDED.
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 //HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
@@ -497,7 +497,7 @@
 	speed = 3.5
 	maxHealth = 200
 	health = 200
-	rapid = 3
+	rapid = 5
 	rapid_fire_delay = 2
 	retreat_distance = 3
 	minimum_distance = 2
