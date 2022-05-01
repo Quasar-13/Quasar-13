@@ -89,3 +89,4 @@
 	icon_state = "9x19p-8"
 	ammo_type = /obj/item/ammo_casing/c380
 	max_ammo = 7
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
