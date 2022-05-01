@@ -96,6 +96,7 @@
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/heavy
 	back = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/military
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpseshotgunner
@@ -108,6 +109,7 @@
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/heavy/shotgunner
 	back = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/military
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpseassault
@@ -120,6 +122,7 @@
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/kepler/assault
 	back = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/military
 	id = /obj/item/card/id/syndicate
 
 /datum/outfit/solgovcorpsepilot
@@ -533,15 +536,24 @@
 	icon_state = "solgov_infestedh"
 	icon_living = "solgov_infestedh"
 	speed = 1
-	maxHealth = 250
-	health = 250
+	maxHealth = 350
+	health = 350
 
-/mob/living/simple_animal/hostile/solgov/infected/marksman
-	icon_state = "solgov_infestedh"
-	icon_living = "solgov_infestedh"
-	speed = 1
+/mob/living/simple_animal/hostile/solgov/infected/assault
+	icon_state = "solgov_infesteda"
+	icon_living = "solgov_infesteda"
+	speed = 1.75
 	maxHealth = 250
 	health = 250
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovcorpseassault,
+	/obj/effect/spawner/lootdrop/medical/firstaid,
+	/obj/effect/spawner/lootdrop/medical/firstaid)
+/mob/living/simple_animal/hostile/solgov/infected/marksman
+	icon_state = "solgov_infestedm"
+	icon_living = "solgov_infestedm"
+	speed = 2.5
+	maxHealth = 150
+	health = 150
 
 /mob/living/simple_animal/hostile/solgov/infected/corrupted
 	icon_state = "solgov_infestedh"
