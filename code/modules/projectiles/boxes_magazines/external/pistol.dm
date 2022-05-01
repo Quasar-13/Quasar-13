@@ -86,7 +86,6 @@
 
 /obj/item/ammo_box/magazine/m380
 	name = "PPK magazine (.380 ACP)"
-	icon_state = "9x19p"
+	icon_state = "9x19p-8"
 	ammo_type = /obj/item/ammo_casing/c380
 	max_ammo = 7
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
