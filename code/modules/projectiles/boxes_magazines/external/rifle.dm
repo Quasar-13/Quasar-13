@@ -1,8 +1,13 @@
-/obj/item/ammo_box/magazine/m10mm/rifle
+/obj/item/ammo_box/magazine/surplusrifle
 	name = "rifle magazine (10mm)"
 	desc = "A well-worn magazine fitted for the surplus rifle."
 	icon_state = "75-8"
 	ammo_type = /obj/item/ammo_casing/c10mm
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/surplusrifle/acp45
+	name = "rifle magazine (.45 ACP)"
+	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/m10mm/rifle/update_icon()
