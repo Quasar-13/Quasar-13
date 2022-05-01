@@ -332,8 +332,8 @@
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 4
-	maxHealth = 155
-	health = 155
+	maxHealth = 185
+	health = 195
 	ranged = 0
 	minimum_distance = 0
 	retreat_distance = 0 //otherwise he just kills you instantly

@@ -37,13 +37,13 @@
 /obj/effect/spawner/lootdrop/infection_spawner/marksman
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman = 80,
-		/mob/living/simple_animal/hostile/eldritch/stalker = 20,
+		/mob/living/simple_animal/hostile/solgov/infected/marksman = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/cloaker
 	loot = list(
-		/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker = 80,
-		/mob/living/simple_animal/hostile/eldritch/raw_prophet = 10,
+		/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker = 95,
+		/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian = 5,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/assault
