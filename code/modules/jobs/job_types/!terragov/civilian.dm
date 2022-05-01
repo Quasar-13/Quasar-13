@@ -1,11 +1,11 @@
-/datum/job/civilian
-	title = "Civilian"
-	department_head = list("Commander")
+/datum/job/nomad
+	title = "Nomad"
+	department_head = list()
 	faction = "Station"
 	total_positions = 50
 	spawn_positions = 50
-	supervisors = "the commander"
-	selection_color = "#d1ded9"
+	supervisors = "the voices in your head"
+	selection_color = "#dddddd"
 	maptype = "solgov"
 
 	outfit = /datum/outfit/job/solgov
@@ -15,5 +15,5 @@
 	paycheck = PAYCHECK_EASY
 
 
-	display_order = JOB_DISPLAY_ORDER_ASSISTANT
+	display_order = JOB_DISPLAY_ORDER_NOMAD
 

@@ -1,10 +1,10 @@
 /datum/job/remprivate
 	title = "NT Remnant Cadet"
-	department_head = list("NT Remnant Lieutenant")
+	department_head = list("NT Remnant Commander")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "NT Remnant Lieutenant"
+	supervisors = "NT Remnant Commander"
 	selection_color = "#134975"
 	maptype = "solgov"
 
