@@ -58,4 +58,5 @@
 /obj/item/ammo_casing/c380
 	name = ".380 ACP bullet casing"
 	desc = "An old .380 ACP bullet casing."
+	caliber = CALIBER_380
 	projectile_type = /obj/projectile/bullet/c380
