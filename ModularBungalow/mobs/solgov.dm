@@ -296,9 +296,9 @@
 	melee_damage_upper = 15
 	minimum_distance = 0
 	retreat_distance = 13 //otherwise he just kills you instantly
-	rapid = 3
+	rapid = 1
 	rapid_fire_delay = 6
-	casingtype = /obj/item/ammo_casing/shotgun/beanbag
+	casingtype = /obj/item/ammo_casing/shotgun/executioner
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/cloaker,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
@@ -327,7 +327,7 @@
 	desc = "Summoned to protect a certain highly important location with their powerful fists from any intruders. That would have to include you."
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
-	speed = 2.5
+	speed = 4
 	maxHealth = 155
 	health = 155
 	ranged = 0
@@ -335,6 +335,8 @@
 	retreat_distance = 0 //otherwise he just kills you instantly
 	rapid = 0
 	rapid_fire_delay = 0
+	casingtype = null
+	projectilesound = null
 	loot = list(/obj/effect/particle_effect/smoke/freezing,
 	/obj/effect/spawner/lootdrop/tierweapon/ark_guardian,
 	/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal) //ensure you can always recover your health after encountering one.
@@ -349,7 +351,7 @@
 	sharpness = SHARP_EDGED
 	deathmessage = "Disappears into smoke, leaving something behnd..."
 	var/teleport_distance = 4
-	var/teleport_cooldown = 800
+	var/teleport_cooldown = 400
 	ranged_ignores_vision = 1
 	charge_distance = 3
 	aggro_vision_range = 15
@@ -359,20 +361,16 @@
 	desc = "Spirit of the past rangers, Summoned to protect a certain highly important location with their powerful fists from any intruders. That would have to include you."
 	icon_state = "solgovcloakerg_alt"
 	icon_living = "solgovcloakerg_alt"
-	speed = 3.5
+	speed = 5
 	maxHealth = 250
 	health = 250
 	harm_intent_damage = 55
 	melee_damage_lower = 65
 	melee_damage_upper = 65
 	teleport_distance = 15
-	charge_distance = 6
+	charge_distance = 7
 	aggro_vision_range = 22
 	vision_range = 22
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/elite/Aggro()
-	..()
-	summon_backup(15)
-	say("Dlya tebya net iskupleniya, Tvoya istoriya zakanchivayetsya zdes.")
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
@@ -394,7 +392,7 @@
 	health = 205
 	retreat_distance = 3
 	minimum_distance = 2
-	rapid = 5
+	rapid = 3
 	rapid_fire_delay = 2
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
@@ -496,13 +494,13 @@
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
-	speed = 2.75
+	speed = 3.5
 	maxHealth = 200
 	health = 200
 	rapid = 3
 	rapid_fire_delay = 2
-	retreat_distance = 1
-	minimum_distance = 1
+	retreat_distance = 3
+	minimum_distance = 2
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/assault,
@@ -583,7 +581,7 @@
 	desc = "extracted from someone spine, what the hell are you doing. Induce temporary pacifism effect on the user. ONLY ONE USE EVERY 3 MINUTES, DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
 	icon_state = "gatorade"
 	inhand_icon_state = "atropen"
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/earthsblood = 3, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine= 5, /datum/reagent/medicine/omnizine/godblood = 3)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/earthsblood = 3, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine= 5, /datum/reagent/medicine/omnizine/godblood = 3, /datum/reagent/medicine/metafactor = 3)
 	amount_per_transfer_from_this = 500
 //RAIDEN WHAT ARE YOU DOING
 /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal
@@ -591,15 +589,15 @@
 	desc = "it glows with strange power, Do you really want to inject this into yourself?"
 	icon_state = "nanogatorade"
 	inhand_icon_state = null
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine = 5, /datum/reagent/medicine/omnizine/godblood = 3)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine = 5, /datum/reagent/medicine/omnizine/godblood = 3, /datum/reagent/medicine/metafactor = 3)
 //Will not make you a pacifist
 //GATORADE CRYSTAL I LOVE IT HOLY SHIT AAA
 /obj/item/reagent_containers/hypospray/combat/gatorade
 	name = "experimental combat nanites injector"
 	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost. injection will induce temporary pacifism on the target but quickly heal all damage."
-	volume = 154000
+	volume = 8100
 	icon_state = "nano_alt"
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 200, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 200, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 200, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 200, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 200, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 200, /datum/reagent/consumable/cream = 200, /datum/reagent/consumable/nutriment/protein = 200, /datum/reagent/medicine/c2/hercuri = 200, /datum/reagent/drug/nicotine = 100, /datum/reagent/medicine/potass_iodide = 200, /datum/reagent/medicine/oculine = 200, /datum/reagent/medicine/earthsblood = 100, /datum/reagent/medicine/changelingadrenaline = 100, /datum/reagent/medicine/changelinghaste = 100, /datum/reagent/medicine/granibitaluri = 200, /datum/reagent/medicine/coagulant/seraka_extract = 100, /datum/reagent/medicine/diphenhydramine = 100, /datum/reagent/medicine/omnizine/godblood = 200)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 400, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 200, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 400, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 200, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 200, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 200, /datum/reagent/consumable/cream = 200, /datum/reagent/consumable/nutriment/protein = 200, /datum/reagent/medicine/c2/hercuri = 100, /datum/reagent/drug/nicotine = 100, /datum/reagent/medicine/potass_iodide = 200, /datum/reagent/medicine/oculine = 200, /datum/reagent/medicine/earthsblood = 100, /datum/reagent/medicine/changelingadrenaline = 100, /datum/reagent/medicine/changelinghaste = 100, /datum/reagent/medicine/granibitaluri = 200, /datum/reagent/medicine/coagulant/seraka_extract = 100, /datum/reagent/medicine/diphenhydramine = 100, /datum/reagent/medicine/omnizine/godblood = 200, /datum/reagent/medicine/metafactor = 100)
 	amount_per_transfer_from_this = 400
 //divided by a lot of fucking numbers idfk but it heals you instantly and if you inject more than one at a time you just die, dont put with atropine either.
 /obj/item/storage/firstaid/tactical/solgov

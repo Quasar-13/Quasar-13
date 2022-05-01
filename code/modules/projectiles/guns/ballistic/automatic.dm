@@ -67,7 +67,7 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r
-	name = "/improper C-20r SMG"
+	name = "\improper C-20r SMG"
 	desc = "A bullpup three-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	inhand_icon_state = "c20r"
