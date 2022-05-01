@@ -220,7 +220,7 @@
 	a_intent = INTENT_HARM
 	footstep_type = FOOTSTEP_MOB_SHOE
 	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
-	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+	/obj/effect/spawner/lootdrop/medical/firstaid)
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	faction = list("russian")
@@ -246,7 +246,7 @@
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/pistol/shot_alt.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov,
-	/obj/item/gun/ballistic/automatic/pistol/m1911,
+	/obj/effect/spawner/lootdrop/tierweapon/ranged,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg

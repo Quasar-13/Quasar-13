@@ -455,7 +455,7 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "aGd" = (
-/obj/machinery/suit_storage_unit/ert/security,
+/obj/machinery/suit_storage_unit/ert/cadet,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
 "aGj" = (
@@ -1901,7 +1901,16 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "cfE" = (
-/turf/closed/indestructible/rock/snow/ice,
+/obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntmp";
+	name = "Heavy Weapons Locker";
+	req_access = "103"
+	},
+/obj/item/minigunpack,
+/obj/item/gun/ballistic/automatic/pistol/mk23,
+/obj/item/storage/belt/rapier,
+/obj/item/gun/energy/laser/captain/ntgold/smg,
+/turf/open/floor/pod/dark,
 /area/ntremnant)
 "cfK" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible,
@@ -2366,7 +2375,6 @@
 /turf/open/floor/plasteel,
 /area/storage/mining)
 "cLN" = (
-/obj/structure/table/wood/fancy/royalblue,
 /obj/item/megaphone/command,
 /obj/item/encryptionkey/headset_cent,
 /obj/machinery/light{
@@ -2385,6 +2393,11 @@
 /obj/item/sharpener,
 /obj/item/reagent_containers/hypospray/medipen/survival/luxury,
 /obj/item/reagent_containers/hypospray/medipen/survival/luxury,
+/obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntmp";
+	name = "Heavy Weapons Locker";
+	req_access = "109"
+	},
 /turf/open/floor/pod,
 /area/ntremnant)
 "cMS" = (
@@ -4909,12 +4922,11 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "ftt" = (
-/obj/structure/lattice,
-/obj/item/shard{
-	icon_state = "medium"
+/obj/machinery/cryopod{
+	dir = 1
 	},
-/turf/open/floor/plating/asteroid/snow,
-/area/icemoon/surface/outdoors)
+/turf/open/floor/pod/dark,
+/area/ntremnant)
 "ftP" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/north,
@@ -5093,7 +5105,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "fGL" = (
 /obj/structure/sign/warning/vacuum,
@@ -5746,15 +5758,9 @@
 "gus" = (
 /obj/structure/table,
 /obj/machinery/light,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/meteor,
+/obj/item/ammo_box/shotgun/meteor,
+/obj/item/ammo_box/shotgun/meteor,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "guL" = (
@@ -5889,16 +5895,6 @@
 /obj/item/ammo_box/magazine/m556{
 	pixel_x = -4;
 	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = -4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = 4
 	},
 /obj/item/ammo_box/magazine/m556,
 /obj/item/ammo_box/magazine/m9mm/hp,
@@ -6967,11 +6963,7 @@
 /obj/item/stack/marker_beacon/ten,
 /obj/item/grenade/barrier,
 /obj/item/flashlight/seclite,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "hFu" = (
 /obj/machinery/vending/engineering,
@@ -9608,11 +9600,7 @@
 /obj/item/stack/marker_beacon/ten,
 /obj/item/grenade/barrier,
 /obj/item/flashlight/seclite,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "kCP" = (
 /obj/structure/cable,
@@ -10289,6 +10277,10 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/snowed,
 /area/ruin/powered)
+"lli" = (
+/obj/machinery/suit_storage_unit/ert/security,
+/turf/open/floor/pod,
+/area/ntremnant)
 "lmc" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
@@ -10378,10 +10370,11 @@
 /turf/open/floor/plating,
 /area/engine/storage)
 "lqw" = (
-/obj/machinery/cryopod{
-	dir = 1
+/obj/machinery/door/airlock/survival_pod/glass{
+	name = "Corporal's Office";
+	req_one_access_txt = "109"
 	},
-/turf/closed/wall/mineral/titanium/survival/nodiagonal,
+/turf/open/floor/pod/dark,
 /area/ntremnant)
 "lqR" = (
 /obj/structure/window/reinforced,
@@ -10902,7 +10895,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/obj/item/gun/ballistic/automatic/pistol/mk23,
 /turf/open/floor/pod,
 /area/ntremnant)
 "lTO" = (
@@ -10965,31 +10957,6 @@
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "lYR" = (
@@ -12748,10 +12715,6 @@
 /obj/item/clothing/suit/armor/hopcoat{
 	name = "administrator's coat"
 	},
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/gun/ballistic/shotgun/riot/shortie,
-/obj/item/ammo_box/shotgun/beanbag,
 /obj/item/melee/classic_baton,
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
@@ -16941,7 +16904,7 @@
 /turf/open/floor/plasteel/icemoon,
 /area/icemoon/surface/outdoors)
 "sdk" = (
-/obj/machinery/suit_storage_unit/ert/security,
+/obj/machinery/suit_storage_unit/ert/cadet,
 /turf/open/floor/pod,
 /area/ntremnant)
 "sdp" = (
@@ -18473,24 +18436,6 @@
 "tDI" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4
-	},
-/obj/item/encryptionkey/headset_service,
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
@@ -19126,16 +19071,18 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "upm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ai_monitored/security/armory)
+/obj/structure/closet/crate,
+/obj/item/encryptionkey/headset_cent,
+/obj/item/clothing/shoes/winterboots/ice_boots,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/bni,
+/obj/item/clothing/gloves/color/black,
+/obj/item/pda/secretary,
+/obj/item/storage/belt/military/assault,
+/obj/item/reagent_containers/hypospray/medipen/survival,
+/obj/item/clothing/accessory/medal/rank/nt/bnisnr,
+/turf/open/floor/pod,
+/area/ntremnant)
 "upv" = (
 /obj/structure/tank_dispenser,
 /turf/open/floor/mineral/plastitanium,
@@ -19287,7 +19234,6 @@
 /obj/item/gun/ballistic/automatic/ar,
 /obj/item/gun/ballistic/automatic/ar,
 /obj/item/gun/ballistic/automatic/ar,
-/obj/item/minigunpack,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
@@ -20395,24 +20341,6 @@
 "vGD" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4
-	},
-/obj/item/encryptionkey/headset_service,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
 "vGK" = (
@@ -21764,11 +21692,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "xil" = (
 /obj/structure/barricade/sandbags,
@@ -23567,11 +23491,11 @@ bHh
 bHh
 bHh
 exf
-exf
-exf
-exf
-exf
-exf
+kXQ
+kXQ
+kXQ
+kXQ
+kXQ
 exf
 vzW
 vzW
@@ -23854,12 +23778,12 @@ bHh
 bHh
 bHh
 exf
+kXQ
+cfE
+swF
+upm
+kXQ
 exf
-exf
-exf
-exf
-exf
-vzW
 vzW
 vzW
 vzW
@@ -24141,12 +24065,12 @@ bHh
 bHh
 bHh
 exf
+kXQ
+rmq
+swF
+lli
+kXQ
 exf
-exf
-exf
-exf
-poO
-poO
 vzW
 vzW
 vzW
@@ -24428,11 +24352,11 @@ bHh
 bHh
 bHh
 exf
-exf
-exf
-exf
-exf
-exf
+kXQ
+tOc
+lqw
+tOc
+kXQ
 exf
 poO
 poO
@@ -24714,10 +24638,10 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
-kXQ
-lqw
+ftt
+swF
 kXQ
 kXQ
 kXQ
@@ -25001,7 +24925,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 sjf
 swF
@@ -25288,7 +25212,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 mHj
 rXe
@@ -25575,7 +25499,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 dVL
 hkq
@@ -25862,7 +25786,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 nrg
 rSC
@@ -26149,7 +26073,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 bpc
 bGq
@@ -26436,7 +26360,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 tOc
 uZG
@@ -26723,7 +26647,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 bPH
 bGq
@@ -27010,7 +26934,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kxP
 lTJ
@@ -27027,7 +26951,7 @@ vzW
 vzW
 vzW
 vzW
-ftt
+dok
 vzW
 vzW
 vzW
@@ -27297,7 +27221,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 lbd
 wLx
@@ -27584,7 +27508,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 aGH
 cfK
@@ -27871,7 +27795,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 pRw
 pRw
@@ -28158,7 +28082,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kXQ
 kXQ
@@ -28445,7 +28369,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 nLY
 qPu
@@ -28732,7 +28656,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 qKq
 swF
@@ -29019,7 +28943,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kXQ
 kXQ
@@ -29308,8 +29232,8 @@ bHh
 bHh
 exf
 exf
-cfE
-cfE
+exf
+exf
 kXQ
 kXQ
 kXQ
@@ -64677,8 +64601,8 @@ fym
 tfa
 tCA
 vPn
-upm
-upm
+vPn
+vPn
 xid
 fGo
 cMS

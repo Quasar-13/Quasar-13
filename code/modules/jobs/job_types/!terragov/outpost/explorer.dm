@@ -10,8 +10,8 @@
 
 	outfit = /datum/outfit/job/outpostagent
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	paycheck = PAYCHECK_MEDIUM
 
 	display_order = JOB_DISPLAY_ORDER_OUTPOSTEXP
