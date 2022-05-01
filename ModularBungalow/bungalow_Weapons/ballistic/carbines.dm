@@ -15,6 +15,8 @@
 /obj/item/gun/ballistic/automatic/ar/semi
 	name = "\improper NT-ARS 'Sweeper'"
 	desc = "A robust assault rifle used by Nanotrasen fighting forces. This one is modified to be semi-automatic"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "argsweeper"
 	w_class = WEIGHT_CLASS_BULKY
 	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
 	slowdown = 0.7
