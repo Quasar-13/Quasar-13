@@ -90,4 +90,4 @@
 	ammo_type = /obj/item/ammo_casing/c380
 	caliber = CALIBER_380
 	max_ammo = 7
-	AMMO_BOX_EMPTY
+	multiple_sprites = AMMO_BOX_EMPTY
