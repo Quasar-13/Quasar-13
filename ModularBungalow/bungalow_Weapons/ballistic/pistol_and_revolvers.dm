@@ -84,6 +84,29 @@
 	icon_state = "pl14_nicole"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 
+//Colt Detective Special Ivory. a gun used by the kitsune
+/obj/item/gun/ballistic/revolver/akira
+	name = "Kira's Special"
+	desc = "A special pistol made for the kitsune, chambered in .357. used by the previous site administrator before he passed it along"
+	icon_state = "akira"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+
+//Yet another gun our kitsune would've used
+/obj/item/gun/ballistic/automatic/pistol/avtomag
+	name = ".357 Avtomag"
+	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE."
+	icon_state = "avtomag"
+	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
+	mag_type = /obj/item/ammo_box/magazine/avtomag
+/obj/item/ammo_box/magazine/avtomag
+	name = ".357 Avtomag Magazine"
+	desc = "a 10 rounds .357 AMP magazine for the Avtomag."
+	ammo_type = /obj/item/ammo_casing/a357
+	caliber = CALIBER_357
+	max_ammo = 10
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	icon_state = "avtomag-10"
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////

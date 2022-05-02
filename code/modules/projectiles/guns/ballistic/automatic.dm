@@ -67,7 +67,7 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r
-	name = "/improper C-20r SMG"
+	name = "\improper C-20r SMG"
 	desc = "A bullpup three-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	inhand_icon_state = "c20r"
@@ -143,15 +143,6 @@
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 
 /obj/item/gun/ballistic/automatic/mini_uzi/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
-
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler
-	name = "\improper Type P45 Uzi"
-	desc = "A lightweight, burst-fire submachine gun, for shooting wildlife. Uses 9mm rounds."
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
@@ -262,20 +253,7 @@
 	burst_size = 3
 	fire_delay = 1
 
-/obj/item/gun/ballistic/automatic/ar/hk21
-	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
-	icon_state = "hk21"
-	inhand_icon_state = "hk21"
-	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/m556
-	burst_size = 1
-	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
-	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 
-/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw
@@ -399,17 +377,14 @@
 
 /obj/item/gun/ballistic/automatic/surplus
 	name = "Surplus Rifle"
-	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon. Uses 10mm ammo and its bulky frame hinders one-handed firing."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	weapon_weight = WEAPON_HEAVY
-	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
-	fire_delay = 30
+	mag_type = /obj/item/ammo_box/magazine/surplusrifle
+	fire_delay = 10
 	burst_size = 1
-	can_unsuppress = TRUE
-	can_suppress = TRUE
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	mag_display = TRUE
