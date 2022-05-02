@@ -6,7 +6,7 @@
 	spawn_positions = 50
 	supervisors = "the voices in your head"
 	selection_color = "#dddddd"
-	maptype = "solgov"
+	maptype = "kepler-ice"
 
 	outfit = /datum/outfit/job/solgov
 
@@ -15,5 +15,5 @@
 	paycheck = PAYCHECK_EASY
 
 
-	display_order = JOB_DISPLAY_ORDER_NOMAD
+	display_order = JOB_DISPLAY_ORDER_NOFACTION1
 

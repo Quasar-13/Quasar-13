@@ -57,4 +57,4 @@
 
 /datum/weather/coldsnow/weather_act(mob/living/carbon/L)
 	L.adjust_bodytemperature(-rand(15,20))
-	L.set_blindness(100)
+	L.set_blindness(3)

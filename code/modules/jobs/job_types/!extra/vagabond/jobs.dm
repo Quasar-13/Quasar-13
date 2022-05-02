@@ -1,3 +1,26 @@
+//Only two jobs, no need to path these.
+
+//The space hobo, to beat up sec officers
+/datum/job/space_hobo
+	title = "Vagabond"
+	department_head = list("the voices in your head") // I HATE NT I HATE NT I HATE NT I HATE NT I HATE NT I HATE NT I HATE NT I HATE NT I HATE NT
+	faction = "Station"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the voices in your head" // I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS
+	selection_color = "#666666"
+	maptype = "vagabond"
+
+	outfit = /datum/outfit/job/space_hobo
+	display_order = JOB_DISPLAY_ORDER_NOFACTION1
+
+	access = list(ACCESS_MAINT_TUNNELS)
+	minimal_access = list(ACCESS_MAINT_TUNNELS)
+	bounty_types = CIV_JOB_RANDOM
+
+
+
+//Brig Doctor, to balance out the shithead beating up sec officers
 /datum/job/brigdoc
 	title = "Brig Physician"
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
@@ -30,25 +53,4 @@
 	L = ..() | check_config_for_sec_maint()
 	return L
 
-/datum/outfit/job/brigdoc
-	name = "Brig Physician"
-	jobtype = /datum/job/brigdoc
-
-	belt = /obj/item/pda/brigdoc
-	ears = /obj/item/radio/headset/headset_sec/alt/med
-	uniform = /obj/item/clothing/under/brigdoc
-	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/neocoat/brigdoc
-	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/beret/sec/brigphys
-	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
-	r_pocket = /obj/item/assembly/flash/handheld
-	backpack_contents = list(/obj/item/melee/baton/loaded=1)
-
-	backpack = /obj/item/storage/backpack/security
-	satchel = /obj/item/storage/backpack/satchel/sec
-	duffelbag = /obj/item/storage/backpack/duffelbag/sec
-	box = /obj/item/storage/box/survival/security
-
-	implants = list(/obj/item/implant/mindshield)
 

@@ -140,6 +140,9 @@
 	if("maptype" in json)
 		SSmaptype.maptype = json["maptype"]
 
+	if("clearjobs" in json)
+		SSmaptype.clearjobs = json["clearjobs"]
+
 	if("faction" in json)
 		SSmaptype.faction = json["faction"]
 
