@@ -101,6 +101,11 @@
 	glass = TRUE
 	normal_integrity = 400
 
+/obj/machinery/door/airlock/command/red/glass
+	opacity = FALSE
+	glass = TRUE
+	normal_integrity = 400
+
 /obj/machinery/door/airlock/engineering/glass
 	opacity = FALSE
 	glass = TRUE

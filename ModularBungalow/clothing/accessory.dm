@@ -1,54 +1,92 @@
-//Syndicate rank ribbons
 /obj/item/clothing/accessory/medal/rank
 	name = "rank ribbon"
 	desc = "A ribbon denoting the rank of an individual. If you see this medal, contact the coders"
 	icon = 'ModularBungalow/clothing/icons/accessory.dmi'
 	icon_state = "null"
 
-/obj/item/clothing/accessory/medal/rank/pilot
+//Syndicate ruin rank ribbons
+/obj/item/clothing/accessory/medal/rank/syndicate
+	name = "rank ribbon"
+	desc = "A ribbon denoting the rank of an individual. If you see this medal, contact the coders"
+	icon_state = "null"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/ens
+	name = "ENS rank ribbon"
+	desc = "A ribbon denoting the rank of ensign. This ribbon is given out to junior cybersun officers."
+	icon_state = "csn_ens"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/ltj
+	name = "LTJ rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant junior grade. This ribbon is given out to junior cybersun officers."
+	icon_state = "csn_ltj"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/lt
+	name = "LT rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to cybersun officers."
+	icon_state = "csn_lt"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/lcdr
+	name = "LCDR rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant commander. This ribbon is given out to cybersun officers."
+	icon_state = "csn_lcdr"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/cdr
+	name = "CDR rank ribbon"
+	desc = "A ribbon denoting the rank of commander. This ribbon is given out to senior cybersun officers."
+	icon_state = "csn_cdr"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/grade/cpt
+	name = "CPT rank ribbon"
+	desc = "A ribbon denoting the rank of captain. This ribbon is given out to senior cybersun officers."
+	icon_state = "csn_cpt"
+
+//Syndiestation
+/obj/item/clothing/accessory/medal/rank/syndicate/pilot
 	name = "pilot's ENS rank ribbon"
 	desc = "A ribbon denoting the rank of ensign. This ribbon is given out to the pilot officers in the syndicate corps."
 	icon_state = "pilot"
 
-/obj/item/clothing/accessory/medal/rank/staff
+/obj/item/clothing/accessory/medal/rank/syndicate/staff
 	name = "staff officer's LTJ rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant junior grade. This ribbon is given out to the staff officers in the syndicate corps."
 	icon_state = "staff"
 
-/obj/item/clothing/accessory/medal/rank/wing
+/obj/item/clothing/accessory/medal/rank/syndicate/wing
 	name = "wing commander's LT rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to the wing commanders in the syndicate corps."
 	icon_state = "wing_commander"
 
-/obj/item/clothing/accessory/medal/rank/req
+/obj/item/clothing/accessory/medal/rank/syndicate/req
 	name = "requisition chief's ENS rank ribbon"
 	desc = "A ribbon denoting the rank of ensign. This ribbon is given out to the requisitions chief in the syndicate corps."
 	icon_state = "req"
 
-/obj/item/clothing/accessory/medal/rank/logistics
+/obj/item/clothing/accessory/medal/rank/syndicate/logistics
 	name = "logistics officer's LT rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to the logistics officer in the syndicate corps."
 	icon_state = "logistics_officer"
 
-/obj/item/clothing/accessory/medal/rank/medical
+/obj/item/clothing/accessory/medal/rank/syndicate/medical
 	name = "medical officer's LCDR rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant commander. This ribbon is given out to the medical officer in the syndicate corps."
 	icon_state = "medical_officer"
 
-/obj/item/clothing/accessory/medal/rank/warden
+/obj/item/clothing/accessory/medal/rank/syndicate/warden
 	name = "military warden's LCDR rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant commander. This ribbon is given out to the military warden in the syndicate corps."
 	icon_state = "warden"
 
-/obj/item/clothing/accessory/medal/rank/first
+/obj/item/clothing/accessory/medal/rank/syndicate/first
 	name = "first officer's CDR rank ribbon"
 	desc = "A ribbon denoting the rank of commander. This ribbon is given out to the first officer in the syndicate corps."
-	icon_state = "first_officer"
+	icon_state = "csn_cdr"
 
-/obj/item/clothing/accessory/medal/rank/captain
+/obj/item/clothing/accessory/medal/rank/syndicate/captain
 	name = "commandant's CPT rank ribbon"
 	desc = "A ribbon denoting the rank of captain. This ribbon is given out to the commandant in the syndicate corps."
-	icon_state = "commandant"
+	icon_state = "csn_cpt"
 
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////

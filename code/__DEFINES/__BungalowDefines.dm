@@ -23,12 +23,19 @@
 //Access for Syndiestation
 // Syndicate General Officer access
 #define ACCESS_SYNDICATE_OFFICER 152
-//Syndicate Police access
-#define ACCESS_SYNDICATE_POLICE 153
 //Syndicate Command access
 #define ACCESS_SYNDICATE_COMMAND 154
 //Syndicate Commandant
 #define ACCESS_SYNDICATE_COMMANDANT 155
+
+
+//Syndicate Departmental Acess
+#define ACCESS_SYNDICATE_POLICE 153
+#define ACCESS_SYNDICATE_MEDICAL 156
+#define ACCESS_SYNDICATE_RESEARCH 157
+#define ACCESS_SYNDICATE_LOGISTICS 158
+#define ACCESS_SYNDICATE_AUXILIARY 159
+
 
 /// Bungalow Cloning defines
 #define CLONER_FRESH_CLONE "fresh"
