@@ -17,31 +17,24 @@
 /obj/effect/mob_spawn/human/hermit/miningstation/Initialize(mapload)
 	. = ..()
 	var/arrpee = rand(1,4)
-	var/miningcaptain = FALSE	//We want ONE captain. no more and no less.
 
-	if(miningcaptain==FALSE)
-		flavour_text += "you are the captain aboard the mining station. Run operations, and stay away from the station."
-		outfit.uniform = /obj/item/clothing/under/misc/assistantformal
-		outfit.l_hand = /obj/item/stack/spacecash/c10000
-		outfit.ears = /obj/item/radio/headset/heads/qm
-		miningcaptain = TRUE
-
-	if(miningcaptain==TRUE)
-		switch(arrpee)
-			if(1)
-				flavour_text += "you are a miner crew aboard the mining ship. Assist the mining operations, and stay away from the station."
-				outfit.uniform = /obj/item/clothing/under/rank/cargo/miner
-			if(2)
-				flavour_text += "you are an engineer crew member aboard the mining ship. Assist the miners, set up the engine, go exploring and stay away from the station."
-				outfit.uniform = /obj/item/clothing/under/rank/engineering/mech
-			if(3)
-				flavour_text += "you are a medical crew member aboard the mining ship. Assist the miners, set up the engine, go exploring and stay away from the station."
-				outfit.uniform = /obj/item/clothing/under/rank/medical/doctor
-				outfit.suit = /obj/item/clothing/suit/toggle/labcoat
-				outfit.back = /obj/item/storage/backpack/medic
-			if(4)
-				flavour_text += "you are a junior bridge officer aboard the mining ship. Assist the mining operations, and stay away from the station."
-		outfit.uniform = /obj/item/clothing/under/misc/assistantformal
+	switch(arrpee)
+		if(1)
+			flavour_text += "you are a miner crew aboard the mining ship. Assist the mining operations, and stay away from the station."
+			outfit.uniform = /obj/item/clothing/under/rank/cargo/miner
+		if(2)
+			flavour_text += "you are an engineer crew member aboard the mining ship. Assist the miners, set up the engine, go exploring and stay away from the station."
+			outfit.uniform = /obj/item/clothing/under/rank/engineering/mech
+		if(3)
+			flavour_text += "you are a medical crew member aboard the mining ship. Assist the miners, set up the engine, go exploring and stay away from the station."
+			outfit.uniform = /obj/item/clothing/under/rank/medical/doctor
+			outfit.suit = /obj/item/clothing/suit/toggle/labcoat
+			outfit.back = /obj/item/storage/backpack/medic
+		if(4)
+			flavour_text += "you are a bridge officer aboard the mining ship. Assist the mining operations, and stay away from the station."
+			outfit.uniform = /obj/item/clothing/under/misc/assistantformal
+			outfit.l_hand = /obj/item/stack/spacecash/c10000
+			outfit.ears = /obj/item/radio/headset/heads/qm
 
 /obj/effect/mob_spawn/human/hermit/miningstation/Destroy()
 	new/obj/structure/fluff/empty_cryostasis_sleeper(get_turf(src))
