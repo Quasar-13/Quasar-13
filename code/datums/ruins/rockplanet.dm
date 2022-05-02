@@ -101,3 +101,11 @@
 	always_place = TRUE
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/arlem
+	name = "Captain Arlem"
+	id = "arlem"
+	description = "The old captain arlem"
+	suffix = "rockplanet_arlem.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
