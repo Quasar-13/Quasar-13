@@ -53,6 +53,7 @@ require only minor tweaks.
 #define ZTRAIT_VOIDSTORMSPACE "Weather_Spacevoidstorm"
 #define ZTRAIT_SPACEWIND "Weather_Heavywind"
 #define ZTRAIT_DIAMONDSTORM "Weather_Diamondstorm"
+#define ZTRAIT_COLDSNOW "Weather_Coldsnow"
 
 // number - bombcap is multiplied by this before being applied to bombs
 #define ZTRAIT_BOMBCAP_MULTIPLIER "Bombcap Multiplier"
