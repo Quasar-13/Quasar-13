@@ -1,19 +1,38 @@
-/datum/job/captain/goon
+//This one has to be copypastad because captain doesn't like any subtypes based off it changing the outfit for some fucking reason
+/datum/job/captain_green
 	title = "Captain"
+	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
+	department_head = list("CentCom")
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "Nanotrasen officials and Space law"
 	selection_color = "#006928"
+	req_admin_notify = 1
+	minimal_player_age = 14
+	exp_requirements = 180
+	exp_type = EXP_TYPE_CREW
+	exp_type_department = EXP_TYPE_COMMAND
 	maptype = "goonlite"
-	mapexclude = list()
 
 	outfit = /datum/outfit/job/captain/nt
 
-//Uses NT Captain outfit, this is a good idea I swear
-/datum/job/captain/goon
-	title = "Captain"
-	selection_color = "#006928"
-	maptype = "goonlite"
-	mapexclude = list()
+	access = list() 			//See get_access()
+	minimal_access = list() 	//See get_access()
+	paycheck = PAYCHECK_COMMAND
+	paycheck_department = ACCOUNT_SEC
 
-	outfit = /datum/outfit/job/hop/goon
+	liver_traits = list(TRAIT_ROYAL_METABOLISM)
+
+	display_order = JOB_DISPLAY_ORDER_CAPTAIN
+
+/datum/job/captain_green/get_access()
+	return get_all_accesses()
+
+
+/datum/job/captain_green/announce(mob/living/carbon/human/H)
+	..()
+	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "[H.real_name] is now in command of the station!")) // Tegu Edit: Alt Titles end
 
 
 
@@ -25,8 +44,6 @@
 	mapexclude = list()
 
 	outfit = /datum/outfit/job/hop/goon
-
-
 
 
 //Hos is back and a pain still.
@@ -47,6 +64,7 @@
 					ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_AUX_BASE, ACCESS_WEAPONS,
 					ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING, ACCESS_EVA,
 					ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
+
 
 
 //They get command access and I don't really want to make a new file

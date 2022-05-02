@@ -1,12 +1,13 @@
 //Cargo Technician is now engineering
 /datum/job/cargo_tech/goon
+	title = "Cargo Technician"
 	department_head = list("Chief Engineer")
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	mapexclude = list()
 	maptype = "goonlite"
+	mapexclude = list()
 
-	outfit = /datum/outfit/job/cargo_tech/goon
+	outfit = /datum/outfit/job/miner/goon
 
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_QM, ACCESS_ATMOSPHERICS, ACCESS_MINING,
 						ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
