@@ -22,7 +22,8 @@
 	if(miningcaptain==FALSE)
 		flavour_text += "you are the captain aboard the mining station. Run operations, and stay away from the station."
 		outfit.uniform = /obj/item/clothing/under/misc/assistantformal
-		outfit.l_hand = /obj/item/stack/spacecashc10000
+		outfit.l_hand = /obj/item/stack/spacecash/c10000
+		outfit.ears = /obj/item/radio/headset/heads/qm
 		miningcaptain = TRUE
 
 	if(miningcaptain==TRUE)
