@@ -13,7 +13,7 @@
 	normal_integrity = 450
 
 /obj/machinery/door/airlock/command/red
-	icon = 'icons/obj/doors/airlocks/station/commandwhite.dmi'
+	icon = 'icons/obj/doors/airlocks/station/commandred.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	normal_integrity = 450
 
