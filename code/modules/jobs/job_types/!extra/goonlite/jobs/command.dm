@@ -1,19 +1,37 @@
 /datum/job/captain/goon
+	title = "Captain"
 	selection_color = "#006928"
 	maptype = "goonlite"
 	mapexclude = list()
-	outfit = /datum/outfit/job/captain/nt	//Uses NT Captain outfit, this is a good idea I swear
 
+	outfit = /datum/outfit/job/captain/nt
+
+//Uses NT Captain outfit, this is a good idea I swear
+/datum/job/captain/goon
+	title = "Captain"
+	selection_color = "#006928"
+	maptype = "goonlite"
+	mapexclude = list()
+
+	outfit = /datum/outfit/job/hop/goon
+
+
+
+//gween hop
 /datum/job/hop/goon
+	title = "Head Of Personnel"
 	selection_color = "#10cc74"
 	maptype = "goonlite"
 	mapexclude = list()
-	outfit = /datum/outfit/job/hop/goon		//gween hop
+
+	outfit = /datum/outfit/job/hop/goon
+
 
 
 
 //Hos is back and a pain still.
 /datum/job/hos/goon
+	title = "Head Of Security"
 	maptype = "goonlite"
 	mapexclude = list()
 	trusted_only = TRUE		//This job is whitelisted.That's how it is on goon

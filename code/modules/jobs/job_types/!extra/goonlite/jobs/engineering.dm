@@ -1,6 +1,8 @@
 //Cargo Technician is now engineering
 /datum/job/cargo_tech/goon
 	department_head = list("Chief Engineer")
+	supervisors = "the chief engineer"
+	selection_color = "#fff5cc"
 	mapexclude = list()
 	maptype = "goonlite"
 
