@@ -30,3 +30,4 @@
 	mag_type = /obj/item/ammo_box/magazine/m45
 	fire_delay = 2
 	burst_size = 2
+	pin = /obj/item/firing_pin
