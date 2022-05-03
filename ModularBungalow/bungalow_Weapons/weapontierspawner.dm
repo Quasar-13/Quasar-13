@@ -68,7 +68,7 @@
 				/obj/item/ammo_box/shotgun/frag =15,
 				/obj/item/ammo_box/shotgun/lasershot = 5,
 				/obj/item/ammo_box/shotgun/meteor = 15,
-				/obj/item/cigbutt/cigarbutt = 15)
+				/obj/item/ammo_casing/caseless/rocket/hedp = 15)
 
 //this one will also spawn some stuff but specific.
 /obj/effect/spawner/lootdrop/tierweapon/ranged
@@ -89,6 +89,7 @@
 				/obj/item/gun/ballistic/automatic/surplus = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/med = 15,
 				/obj/item/gun/ballistic/revolver/detective = 15,
+				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
 				/obj/item/gun/ballistic/automatic/pistol/sig)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2
@@ -100,6 +101,7 @@
 				/obj/item/gun/ballistic/shotgun/bulldog/unrestricted = 1,
 				/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap = 15,
 				/obj/item/gun/ballistic/automatic/wt550 = 5,
+				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
 				/obj/item/gun/ballistic/automatic/uzi = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
@@ -111,6 +113,7 @@
 				/obj/item/gun/grenadelauncher = 15,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
 				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
+				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier3,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
@@ -126,6 +129,7 @@
 				/obj/item/gun/energy/pulse/pistol = 1,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 15,
 				/obj/item/gun/ballistic/shotgun/bulldog/automatic/unrestricted = 20,
+				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4,
 				/obj/item/gun/energy/lasercannon = 5)
 //gaming
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP AND SHOULD BE USED IN DROP ONLY
@@ -138,6 +142,7 @@
 				/obj/item/book/granter/spell/summonitem,
 				/obj/item/gun/energy/pulse = 5,
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast = 10,
+				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25 = 20)
 //This has a rare chance to spawn something
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
@@ -146,9 +151,10 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier5 = 5)
 //this guarantee a certain drop, use it for any rare drop!
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare/guaranteen
-	loot = list(/obj/item/cigbutt = 65,
-				/obj/item/cigbutt/roach = 20,
-				/obj/item/cigbutt/cigarbutt = 15)
+	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn,
+				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier5 = 50,
+				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
+				/obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn = 50)
 
 /obj/effect/spawner/lootdrop/tierweapon/ark_guardian
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ammoboxes = 65,
