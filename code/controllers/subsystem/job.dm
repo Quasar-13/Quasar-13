@@ -48,6 +48,9 @@ SUBSYSTEM_DEF(job)
 /datum/controller/subsystem/job/proc/SetupOccupations(faction = "Station")
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
+
+
+
 	if(!all_jobs.len)
 		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no job datums found</span>")
 		return FALSE
@@ -64,18 +67,27 @@ SUBSYSTEM_DEF(job)
 			testing("Removed [job.type] due to map config")
 			continue
 
+
+		//Checks if the maptype is the same as the map
 		if(job.maptype != SSmaptype.maptype)
-			if(job.maptype != "none")
-				if(job.loadalways == FALSE)
+			if(job.maptype != "none")		//Is the job standard on all maps?
+				if(job.loadalways == FALSE)	//We don't really need this, but still important
 					continue
 
-	//Add back the moment you fix the other bugs
-		if(SSmaptype.maptype == "solgov")
-			if(job.maptype == "none")
-				if(job.loadalways == FALSE)
+		//Checks mapexclude.
+		if(job.mapexclude == SSmaptype.maptype)
+			if(job.loadalways == FALSE)	//Will the game break if we remove it?
+				continue
+
+			if(job.loadalways == TRUE)	//If it does break, set the jobslots to Zero.
+				job.total_positions = 0
+				job.spawn_positions = 0
+
+		//Checks the clearmap, I will configure this to
+		if(SSmaptype.maptype in SSmaptype.clearmaps)
+			if(job.maptype != SSmaptype.maptype)
+				if(job.loadalways == FALSE)	//THIS one we need
 					continue
-
-
 
 		occupations += job
 		name_occupations[job.title] = job

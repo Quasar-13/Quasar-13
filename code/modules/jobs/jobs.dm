@@ -143,7 +143,7 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 
 //Romulus
 	"NT Remnant Commander",
-	"NT Remnant Sergeant",
+	"NT Remnant Corporal",
 	"NT Remnant Cadet",
 	"NT Remnant Auxiliary"))
 

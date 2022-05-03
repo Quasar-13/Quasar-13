@@ -1,0 +1,74 @@
+/datum/job/ntsquadleader/casio
+	title = "NT Squad Leader"
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	head_announce = list(RADIO_CHANNEL_CENTCOM)
+	supervisors = "the captain"
+	selection_color = "#073052"
+	exp_type = EXP_TYPE_NTMARINE
+	maptype = "naval"
+
+	outfit = /datum/outfit/job/ntsquadleader
+
+	mind_traits = list(TRAIT_DONUT_LOVER)
+	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM, TRAIT_ROYAL_METABOLISM)
+
+	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
+					ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_AUX_BASE,
+					ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING, ACCESS_EVA, ACCESS_TELEPORTER,
+					ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY,
+					ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_AUX_BASE,
+					ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING, ACCESS_EVA,
+					ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
+	paycheck = PAYCHECK_COMMAND
+	paycheck_department = ACCOUNT_SEC
+
+	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY
+	bounty_types = CIV_JOB_SEC
+
+
+/datum/job/ntmarine/casio
+	title = "NT Marine"
+	faction = "Station"
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "the NT Squad Leader"
+	selection_color = "#134975"
+	exp_type = EXP_TYPE_NTMARINE
+	maptype = "naval"
+
+	outfit = /datum/outfit/job/ntmarine
+
+	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_MECH_SECURITY, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY, ACCESS_MINERAL_STOREROOM) // See /datum/job/officer/get_access()
+	paycheck = PAYCHECK_MEDIUM
+	paycheck_department = ACCOUNT_SEC
+	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
+
+
+/datum/job/ntpolice
+	title = "NT Military Police"
+	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
+	department_head = list("NT Squad Leader")
+	faction = "Station"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the NT Squad Leader"
+	selection_color = "#134975"
+	exp_type = EXP_TYPE_NTMARINE
+	maptype = "naval"
+
+	outfit = /datum/outfit/job/ntpolice
+
+	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_COURT, ACCESS_MECH_SECURITY, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MECH_SECURITY, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) // See /datum/job/warden/get_access()
+	paycheck = PAYCHECK_HARD
+	paycheck_department = ACCOUNT_SEC
+
+	mind_traits = list(TRAIT_DONUT_LOVER)
+	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+
+	display_order = JOB_DISPLAY_ORDER_WARDEN
+	bounty_types = CIV_JOB_SEC
