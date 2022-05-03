@@ -25,6 +25,14 @@
 	icon_state = "ppk"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
+	
+/obj/item/gun/ballistic/automatic/pistol/actualppk
+	name = "K&H PPK"
+	desc = "A modern version of the classic spy gun by Kain and Heinrich. Favored by cheap action movie spies."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "ppk"
+	mag_type = /obj/item/ammo_box/magazine/m380
+	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/glock
 	name = "Glock 17"
