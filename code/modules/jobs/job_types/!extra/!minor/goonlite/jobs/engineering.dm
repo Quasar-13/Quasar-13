@@ -1,18 +1,24 @@
-//Cargo Technician is now engineering
-/datum/job/cargo_tech/goon
+//Cargo Technician is now engineering.
+//This fuckign job just WON'T subtype under cargo_tech/goon. Fucking hell if you can do this please do
+
+/datum/job/cargo_goon
 	title = "Cargo Technician"
+	faction = "Station"
 	department_head = list("Chief Engineer")
 	supervisors = "the chief engineer"
+	total_positions = 3
+	spawn_positions = 2
 	selection_color = "#fff5cc"
 	maptype = "goonlite"
 	mapexclude = list()
 
-	outfit = /datum/outfit/job/miner/goon
+	outfit = /datum/outfit/job/cargo_goon
 
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_QM, ACCESS_ATMOSPHERICS, ACCESS_MINING,
 						ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM, ACCESS_MECH_MINING)
 	paycheck_department = ACCOUNT_ENG
+	paycheck = PAYCHECK_EASY
 
 	display_order = JOB_DISPLAY_ORDER_ATMOSPHERIC_TECHNICIAN
 

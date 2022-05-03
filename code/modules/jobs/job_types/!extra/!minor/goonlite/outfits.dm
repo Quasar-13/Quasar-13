@@ -32,14 +32,14 @@
 
 
 //Engineering
-/datum/outfit/job/cargo_tech/goon
-	name = "Cargo Technician (Goonlite)"
-	jobtype = /datum/job/cargo_tech/goon
+/datum/outfit/job/cargo_goon
+	name = "Cargo Technician (Goon)"
+	jobtype = /datum/job/cargo_goon
 	ears = /obj/item/radio/headset/headset_eng
 
 
 /datum/outfit/job/miner/goon
-	name = "Miner (Goonstation)"
+	name = "Miner (Goon)"
 	jobtype = /datum/job/mining/goon
 
 	ears = /obj/item/radio/headset/headset_eng
@@ -51,7 +51,7 @@
 
 
 /datum/outfit/job/goonmechanic
-	name = "Mechanic (Goonstation)"
+	name = "Mechanic (Goon)"
 	jobtype = /datum/job/goonmechanic
 
 	belt = /obj/item/storage/belt/utility/full/engi
