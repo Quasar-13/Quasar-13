@@ -22,3 +22,14 @@
 	slowdown = 0.7
 	burst_size = 1
 	fire_delay = 3
+	
+/obj/item/gun/ballistic/automatic/c20r/hellcarbine
+	name = "\improper C-191r Carbine"
+	desc = "A disgusting amalgamation of parts. It appears to be a C20-r with the ammo counter replaced with a rail and modified to feed 1911 magazines. Hopefully whoever designed this is burning in hell."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "c191r"
+	inhand_icon_state = "c20r"
+	mag_type = /obj/item/ammo_box/magazine/m45
+	fire_delay = 2
+	burst_size = 2
+	pin = /obj/item/firing_pin

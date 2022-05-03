@@ -1,5 +1,5 @@
-/datum/job/remaux
-	title = "NT Remnant Auxiliary"
+/datum/job/remcpl
+	title = "NT Remnant Corporal"
 	department_head = list("NT Remnant Commander")
 	faction = "Station"
 	total_positions = 1
@@ -10,18 +10,17 @@
 
 	outfit = /datum/outfit/job/remprivate
 
-	access = list(ACCESS_CENT_GENERAL)
-	minimal_access = list(ACCESS_CENT_GENERAL)
+	access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS)
+	minimal_access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS)
 	paycheck = PAYCHECK_MEDIUM
 
 	display_order = JOB_DISPLAY_ORDER_SNEEDCLAVEAUX
 
-/obj/effect/landmark/start/remaux
-	name = "NT Remnant Auxiliary"
+/obj/effect/landmark/start/remcpl
+	name = "NT Remnant Corporal"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/ntremnant/Initialize()
 	. = ..()
 	var/turf/T = get_turf(src)
-	new /obj/effect/landmark/start/remaux(T)
-
+	new /obj/effect/landmark/start/remcpl(T)

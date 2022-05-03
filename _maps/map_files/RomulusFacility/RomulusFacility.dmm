@@ -21,6 +21,9 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/snowdin/sekret)
+"aaC" = (
+/turf/open/floor/plasteel/stairs,
+/area/ruin/space/has_grav/hellfactory)
 "aaM" = (
 /obj/structure/cable,
 /obj/structure/barricade/sandbags,
@@ -104,6 +107,10 @@
 /area/ruin/space/has_grav/powered)
 "agk" = (
 /obj/effect/decal/cleanable/blood,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
+"agp" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "agH" = (
@@ -215,7 +222,6 @@
 "aqS" = (
 /obj/structure/closet/crate/hydroponics,
 /obj/effect/spawner/lootdrop/space/rareseed,
-/obj/effect/spawner/lootdrop/space/rareseed,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "arK" = (
@@ -299,12 +305,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
@@ -329,6 +338,14 @@
 /obj/item/flashlight/flare/culttorch,
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/powered)
+"azy" = (
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/powered)
 "azA" = (
 /obj/machinery/computer/message_monitor,
 /turf/open/floor/mineral/plastitanium{
@@ -438,7 +455,7 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "aGd" = (
-/obj/machinery/suit_storage_unit/ert/security,
+/obj/machinery/suit_storage_unit/ert/cadet,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
 "aGj" = (
@@ -468,7 +485,6 @@
 /obj/structure/table/reinforced,
 /obj/item/trash/candle,
 /obj/structure/cable,
-/obj/item/storage/firstaid/advanced,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hellfactoryoffice)
 "aHb" = (
@@ -971,6 +987,11 @@
 	},
 /turf/open/floor/grass/snow,
 /area/icemoon/surface/outdoors)
+"biF" = (
+/obj/structure/flora/grass/brown,
+/obj/effect/mine/stun,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "biV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/visible{
 	dir = 9
@@ -982,10 +1003,6 @@
 /turf/open/floor/pod/dark,
 /area/ntremnant)
 "bjl" = (
-/obj/structure/cable,
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 5
 	},
@@ -1369,7 +1386,6 @@
 /obj/item/ammo_box/magazine/glock,
 /obj/item/ammo_box/magazine/glock,
 /obj/item/gun/ballistic/automatic/pistol/glock,
-/obj/item/sharpener,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bCp" = (
@@ -1383,6 +1399,10 @@
 /obj/structure/sign/poster/random,
 /turf/closed/wall/r_wall,
 /area/ruin/powered)
+"bCR" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "bDo" = (
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/poddoor,
@@ -1723,12 +1743,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -1792,7 +1815,7 @@
 /area/icemoon/surface/outdoors)
 "cbd" = (
 /obj/structure/table,
-/obj/item/stock_parts/matter_bin/quantumbin,
+/obj/item/stock_parts/matter_bin/super,
 /turf/open/floor/plating/snowed/smoothed,
 /area/icemoon/surface/outdoors)
 "cbf" = (
@@ -1815,6 +1838,7 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cbv" = (
@@ -1877,7 +1901,16 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "cfE" = (
-/turf/closed/indestructible/rock/snow/ice,
+/obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntmp";
+	name = "Heavy Weapons Locker";
+	req_access = "103"
+	},
+/obj/item/minigunpack,
+/obj/item/gun/ballistic/automatic/pistol/mk23,
+/obj/item/storage/belt/rapier,
+/obj/item/gun/energy/laser/captain/ntgold/smg,
+/turf/open/floor/pod/dark,
 /area/ntremnant)
 "cfK" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible,
@@ -2200,6 +2233,11 @@
 	},
 /turf/open/floor/plating,
 /area/awaymission/bmpship/fore)
+"cBn" = (
+/obj/effect/mine/shrapnel/human_only,
+/obj/effect/turf_decal/stripes/red/full,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "cBu" = (
 /obj/structure/flora/grass/green,
 /obj/machinery/light{
@@ -2337,7 +2375,6 @@
 /turf/open/floor/plasteel,
 /area/storage/mining)
 "cLN" = (
-/obj/structure/table/wood/fancy/royalblue,
 /obj/item/megaphone/command,
 /obj/item/encryptionkey/headset_cent,
 /obj/machinery/light{
@@ -2356,6 +2393,11 @@
 /obj/item/sharpener,
 /obj/item/reagent_containers/hypospray/medipen/survival/luxury,
 /obj/item/reagent_containers/hypospray/medipen/survival/luxury,
+/obj/structure/closet/secure_closet/centcom{
+	icon_state = "ntmp";
+	name = "Heavy Weapons Locker";
+	req_access = "109"
+	},
 /turf/open/floor/pod,
 /area/ntremnant)
 "cMS" = (
@@ -3052,15 +3094,12 @@
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
-/obj/item/ammo_box/magazine/m45,
 /obj/item/storage/firstaid/advanced,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
-/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
-/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
@@ -3213,11 +3252,9 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-"dGn" = (
-/turf/open/genturf,
-/area/ruin/space/has_grav/powered)
 "dGp" = (
 /turf/open/floor/plating/airless,
 /area/awaymission/bmpship/fore)
@@ -3379,6 +3416,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
 /obj/machinery/autolathe/hacked,
 /obj/item/stack/sheet/metal/twenty,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "dNM" = (
@@ -3424,12 +3462,15 @@
 /area/awaymission/bmpship/midship)
 "dPu" = (
 /obj/structure/fence/corner,
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -3547,6 +3588,13 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating/icemoon,
 /area/awaymission/bmpship/midship)
+"dXd" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/machinery/porta_turret/syndicate/energy/raven,
+/turf/closed/wall/r_wall/rust,
+/area/icemoon/surface/outdoors)
 "dXh" = (
 /obj/structure/rack,
 /obj/item/mecha_parts/concealed_weapon_bay,
@@ -3878,12 +3926,15 @@
 /area/ruin/powered)
 "elz" = (
 /obj/effect/turf_decal/weather/snow/corner,
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -4004,7 +4055,6 @@
 "esy" = (
 /obj/structure/table/reinforced,
 /obj/item/construction/rcd,
-/obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hellfactoryoffice)
@@ -4204,8 +4254,6 @@
 /area/ruin/powered)
 "eBz" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
-/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
@@ -4758,10 +4806,13 @@
 /obj/machinery/computer/telecomms/server,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/powered)
+"flk" = (
+/obj/structure/barricade/sandbags,
+/obj/effect/turf_decal/stripes/red/full,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "flr" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol,
-/obj/item/gun/ballistic/automatic/pistol,
 /obj/item/gun/ballistic/automatic/pistol,
 /obj/item/gun/ballistic/automatic/pistol,
 /turf/open/floor/pod/light,
@@ -4862,26 +4913,20 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "fse" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
 /obj/effect/turf_decal/stripes/red/full,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "ftp" = (
 /obj/machinery/mechpad,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/powered)
 "ftt" = (
-/obj/structure/lattice,
-/obj/item/shard{
-	icon_state = "medium"
+/obj/machinery/cryopod{
+	dir = 1
 	},
-/turf/open/floor/plating/asteroid/snow,
-/area/icemoon/surface/outdoors)
+/turf/open/floor/pod/dark,
+/area/ntremnant)
 "ftP" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/north,
@@ -4890,12 +4935,6 @@
 "ftW" = (
 /obj/structure/rack,
 /obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/suit/space/syndicate,
-/obj/item/clothing/suit/space/syndicate,
-/obj/item/clothing/suit/space/syndicate,
 /obj/item/clothing/suit/space/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/icemoon/surface/outdoors)
@@ -5066,7 +5105,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "fGL" = (
 /obj/structure/sign/warning/vacuum,
@@ -5443,7 +5482,6 @@
 "gei" = (
 /obj/structure/closet/crate/hydroponics,
 /obj/effect/spawner/lootdrop/seed_vault,
-/obj/effect/spawner/lootdrop/seed_vault,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "geA" = (
@@ -5720,15 +5758,9 @@
 "gus" = (
 /obj/structure/table,
 /obj/machinery/light,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
-/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/meteor,
+/obj/item/ammo_box/shotgun/meteor,
+/obj/item/ammo_box/shotgun/meteor,
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "guL" = (
@@ -5863,16 +5895,6 @@
 /obj/item/ammo_box/magazine/m556{
 	pixel_x = -4;
 	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = -4
-	},
-/obj/item/ammo_box/magazine/m556{
-	pixel_x = 4
 	},
 /obj/item/ammo_box/magazine/m556,
 /obj/item/ammo_box/magazine/m9mm/hp,
@@ -6119,12 +6141,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall/rust,
 /area/crew_quarters/heads/hop)
@@ -6375,8 +6400,7 @@
 /area/medical/surgery)
 "haI" = (
 /obj/effect/turf_decal/weather/snow/corner,
-/obj/machinery/porta_turret/centcom_shuttle,
-/obj/machinery/porta_turret/aux_base,
+/obj/machinery/porta_turret/syndicate/energy/raven,
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
 /area/ntremnant)
 "haW" = (
@@ -6479,6 +6503,7 @@
 	dir = 6
 	},
 /obj/structure/cable,
+/obj/machinery/porta_turret/syndicate/energy/raven,
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
 "hfo" = (
@@ -6938,11 +6963,7 @@
 /obj/item/stack/marker_beacon/ten,
 /obj/item/grenade/barrier,
 /obj/item/flashlight/seclite,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "hFu" = (
 /obj/machinery/vending/engineering,
@@ -7367,12 +7388,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/obj/machinery/porta_turret/aux_base{
-	active_power_usage = 0;
-	light_range = 4;
-	reqpower = 0;
-	scan_range = 10;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/engine/storage)
@@ -7414,12 +7438,15 @@
 /area/ruin/powered)
 "ido" = (
 /obj/structure/cable,
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall/rust,
 /area/medical/medbay)
@@ -7678,6 +7705,11 @@
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
+"irS" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/structure/punji_sticks/spikes,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "isg" = (
 /obj/machinery/light{
 	dir = 1
@@ -7958,6 +7990,14 @@
 /obj/effect/spawner/lootdrop/armory_contraband/cybersun,
 /turf/open/floor/plating/snowed/smoothed,
 /area/icemoon/surface/outdoors)
+"iLf" = (
+/mob/living/simple_animal/hostile/solgov/ranged{
+	lose_patience_timeout = 50
+	},
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/red/full,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "iLU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
@@ -8135,6 +8175,9 @@
 	faction = list("russian");
 	name = "Solgov Technician"
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "iYc" = (
@@ -8247,7 +8290,6 @@
 "jeS" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
 /obj/item/defibrillator/loaded,
 /turf/open/floor/plasteel,
 /area/medical/abandoned)
@@ -8312,13 +8354,7 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
-	},
+/obj/machinery/porta_turret/syndicate/energy/raven,
 /turf/closed/wall/r_wall,
 /area/crew_quarters/kitchen)
 "jjN" = (
@@ -8359,12 +8395,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -8661,7 +8700,6 @@
 /area/ruin/space/has_grav/powered)
 "jDb" = (
 /obj/structure/flora/grass/both,
-/obj/structure/punji_sticks/spikes,
 /obj/effect/mine/explosive,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -8734,13 +8772,12 @@
 /area/awaymission/bmpship/aft)
 "jHA" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -8893,12 +8930,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -9051,17 +9091,9 @@
 /area/ruin/powered)
 "jZW" = (
 /obj/structure/closet/crate/medical,
-/obj/item/storage/belt/medical/surgeryfilled,
-/obj/item/storage/belt/medical/paramedic,
-/obj/item/storage/belt/medical/paramedic,
 /obj/effect/spawner/lootdrop/medical/firstaid,
 /obj/effect/spawner/lootdrop/medical/firstaid,
 /obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical,
-/obj/effect/spawner/lootdrop/medical,
 /obj/effect/spawner/lootdrop/medical,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
@@ -9128,18 +9160,15 @@
 /area/icemoon/surface/outdoors)
 "kco" = (
 /obj/effect/spawner/lootdrop/space/fancytool,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
 /obj/structure/closet/crate/large,
 /obj/item/clothing/under/syndicate/coldres,
 /obj/item/clothing/under/syndicate/coldres,
 /obj/item/clothing/under/syndicate/coldres,
 /obj/item/clothing/under/syndicate/coldres,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/magazine/m10mm,
+/obj/item/ammo_box/magazine/m10mm,
 /turf/open/floor/mineral/plastitanium/red,
 /area/icemoon/surface/outdoors)
 "kde" = (
@@ -9296,6 +9325,12 @@
 "kmy" = (
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"kmT" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "koi" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags,
@@ -9526,6 +9561,12 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/engine/storage)
+"kCu" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/obj/structure/fans/tiny,
+/obj/structure/punji_sticks/spikes,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "kCD" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -9559,11 +9600,7 @@
 /obj/item/stack/marker_beacon/ten,
 /obj/item/grenade/barrier,
 /obj/item/flashlight/seclite,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "kCP" = (
 /obj/structure/cable,
@@ -9668,12 +9705,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/obj/machinery/porta_turret/aux_base{
-	active_power_usage = 0;
-	light_range = 4;
-	reqpower = 0;
-	scan_range = 10;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
@@ -9696,9 +9736,16 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "kKz" = (
-/obj/machinery/power/floodlight,
-/turf/open/floor/plating/snowed/icemoon,
-/area/icemoon/surface/outdoors)
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov{
+	pixel_x = 4
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/space/has_grav/powered)
 "kKB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9806,12 +9853,15 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "kOX" = (
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall/rust,
 /area/hallway/primary/central)
@@ -9883,9 +9933,16 @@
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"kUA" = (
+/obj/structure/barricade/sandbags,
+/obj/structure/barricade/sandbags,
+/obj/effect/turf_decal/stripes/red/full,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "kUC" = (
 /obj/machinery/door/airlock/vault{
-	name = "Explorer's Office"
+	name = "Explorer's Office";
+	req_access_txt = "151"
 	},
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium{
@@ -10002,10 +10059,12 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "kZv" = (
-/obj/structure/flora/grass/both,
-/obj/structure/punji_sticks,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/obj/effect/turf_decal/stripes/red/full,
+/obj/structure/barricade/sandbags,
+/obj/structure/barricade/wooden/snowed,
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/table/reinforced,
+/turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "kZA" = (
 /obj/structure/rack,
@@ -10218,6 +10277,10 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/snowed,
 /area/ruin/powered)
+"lli" = (
+/obj/machinery/suit_storage_unit/ert/security,
+/turf/open/floor/pod,
+/area/ntremnant)
 "lmc" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
@@ -10267,12 +10330,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -10304,10 +10370,11 @@
 /turf/open/floor/plating,
 /area/engine/storage)
 "lqw" = (
-/obj/machinery/cryopod{
-	dir = 1
+/obj/machinery/door/airlock/survival_pod/glass{
+	name = "Corporal's Office";
+	req_one_access_txt = "109"
 	},
-/turf/closed/wall/mineral/titanium/survival/nodiagonal,
+/turf/open/floor/pod/dark,
 /area/ntremnant)
 "lqR" = (
 /obj/structure/window/reinforced,
@@ -10373,6 +10440,10 @@
 /obj/machinery/chem_heater,
 /turf/open/floor/carpet/executive,
 /area/ruin/space/has_grav/powered)
+"luK" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "luS" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
 /area/ruin/space/has_grav/powered)
@@ -10459,12 +10530,15 @@
 	},
 /obj/structure/cable,
 /obj/structure/cable,
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -10506,6 +10580,17 @@
 "lBr" = (
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
+"lBw" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "lBR" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/closed/wall/r_wall/rust,
@@ -10810,7 +10895,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/obj/item/gun/ballistic/automatic/pistol/mk23,
 /turf/open/floor/pod,
 /area/ntremnant)
 "lTO" = (
@@ -10873,31 +10957,6 @@
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
-/obj/item/clothing/suit/hooded/wintercoat/security{
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 45);
-	desc = "A heavy jacket made from 'synthetic' animal furs. has kevlar padding and will soften ballistic projectile";
-	name = "red winter coat"
-	},
 /turf/open/floor/pod/light,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "lYR" = (
@@ -11153,6 +11212,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
+"moW" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "mpB" = (
 /obj/item/grown/bananapeel,
 /turf/open/floor/plating/dirt/jungle,
@@ -11176,12 +11242,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
@@ -11421,6 +11490,11 @@
 /obj/item/ammo_box/a357,
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
+"mDr" = (
+/obj/structure/barricade/sandbags,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "mDu" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/monkeycubes,
@@ -11469,12 +11543,15 @@
 /turf/open/floor/plastic,
 /area/ruin/space/has_grav/hellfactory)
 "mGi" = (
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/ruin/powered)
@@ -11496,6 +11573,15 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hellfactoryoffice)
+"mJl" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "mJx" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -11505,6 +11591,16 @@
 	temperature = 180
 	},
 /area/security/brig)
+"mJA" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear{
+	faction = list("russian");
+	icon_living = "solgovpolarbear";
+	icon_state = "solgovpolarbear";
+	name = "solgov K9 unit"
+	},
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "mJG" = (
 /obj/structure/rack,
 /obj/item/ammo_box/magazine/m9mm_aps,
@@ -11580,7 +11676,6 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "mLB" = (
 /obj/structure/flora/grass/both,
-/obj/structure/punji_sticks,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -11615,6 +11710,14 @@
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/spawner/lootdrop/space/cashmoney,
 /obj/effect/spawner/lootdrop/armory_contraband,
+/obj/effect/spawner/lootdrop/armory_contraband/cybersun,
+/obj/effect/spawner/lootdrop/armory_contraband/donutstation,
+/obj/effect/spawner/lootdrop/armory_contraband/metastation,
+/obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "mNO" = (
@@ -12307,6 +12410,10 @@
 /obj/item/ammo_box/shotgun/buckshot,
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
+"nse" = (
+/obj/structure/punji_sticks/spikes,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "ntn" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
@@ -12451,16 +12558,7 @@
 /obj/structure/closet/crate/medical,
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
-/obj/item/storage/belt/medical,
 /obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical/firstaid,
-/obj/effect/spawner/lootdrop/medical,
-/obj/effect/spawner/lootdrop/medical,
-/obj/effect/spawner/lootdrop/medical,
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "nzw" = (
@@ -12575,12 +12673,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -12614,10 +12715,6 @@
 /obj/item/clothing/suit/armor/hopcoat{
 	name = "administrator's coat"
 	},
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/gun/ballistic/shotgun/riot/shortie,
-/obj/item/ammo_box/shotgun/beanbag,
 /obj/item/melee/classic_baton,
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
@@ -12923,6 +13020,7 @@
 /area/icemoon/surface)
 "ocr" = (
 /obj/machinery/door/airlock/vault{
+	name = "Outpost Leader's Office";
 	req_access_txt = "151"
 	},
 /obj/structure/cable,
@@ -12988,7 +13086,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "ofH" = (
 /obj/structure/cable,
@@ -14226,25 +14324,11 @@
 "pnv" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
-/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
-/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
-/obj/item/ammo_box/magazine/m45,
-/obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/gun/energy/laser/captain/ntgold/pistol,
-/obj/item/gun/energy/laser/captain/ntgold/pistol,
-/obj/item/gun/energy/laser/captain/ntgold/pistol,
-/obj/item/storage/belt/holster/detective{
-	desc = "A holster able to carry handguns and some ammo. Careful with this.";
-	name = "belt holster"
-	},
-/obj/item/storage/belt/holster/detective{
-	desc = "A holster able to carry handguns and some ammo. Careful with this.";
-	name = "belt holster"
-	},
 /obj/item/storage/belt/holster/detective{
 	desc = "A holster able to carry handguns and some ammo. Careful with this.";
 	name = "belt holster"
@@ -14411,8 +14495,6 @@
 "pxY" = (
 /obj/structure/rack,
 /obj/item/gun/energy/ionrifle,
-/obj/item/gun/energy/ionrifle,
-/obj/item/gun/energy/ionrifle,
 /obj/effect/spawner/lootdrop/tierweapon,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
@@ -14504,12 +14586,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/obj/machinery/porta_turret/aux_base{
-	active_power_usage = 0;
-	light_range = 4;
-	reqpower = 0;
-	scan_range = 10;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
@@ -14593,12 +14678,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -14684,12 +14772,15 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -14715,8 +14806,8 @@
 /area/icemoon/surface/outdoors)
 "pJg" = (
 /obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,
-/obj/item/gun/ballistic/rifle/boltaction,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/gun/ballistic/shotgun/lever_action/med,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/powered)
 "pJw" = (
@@ -14762,8 +14853,6 @@
 "pMq" = (
 /obj/machinery/light/warm/directional/south,
 /obj/structure/rack,
-/obj/item/gun/energy/ionrifle/carbine,
-/obj/item/gun/energy/ionrifle/carbine,
 /obj/item/gun/energy/ionrifle/carbine,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
@@ -14929,12 +15018,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -15142,6 +15234,13 @@
 /obj/effect/decal/fakelattice,
 /turf/open/floor/plating/rust,
 /area/engine/storage)
+"qec" = (
+/obj/machinery/manned_turret{
+	anchored = 1;
+	dir = 8
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "qed" = (
 /obj/machinery/light{
 	dir = 8
@@ -15306,7 +15405,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "qmQ" = (
 /turf/closed/mineral/snowmountain,
@@ -15571,7 +15670,6 @@
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
-/obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "qFB" = (
@@ -15682,12 +15780,15 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/powered)
 "qNd" = (
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -15742,6 +15843,13 @@
 /obj/item/mecha_parts/mecha_equipment/drill/diamonddrill,
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/aft)
+"qQZ" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/obj/machinery/status_display/evac,
+/turf/closed/wall/r_wall,
+/area/ruin/powered)
 "qRf" = (
 /obj/structure/frame/computer{
 	anchored = 1;
@@ -16039,7 +16147,7 @@
 /obj/structure/marker_beacon/burgundy,
 /obj/effect/turf_decal/stripes/red/full,
 /obj/effect/turf_decal/stripes/red/full,
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
 "rjZ" = (
 /obj/structure/cable,
@@ -16340,6 +16448,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
+"rBA" = (
+/obj/structure/alien/weeds/node,
+/mob/living/simple_animal/hostile/solgov/ranged,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "rBO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
@@ -16634,9 +16747,10 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "rUi" = (
-/obj/item/gun/ballistic/automatic/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
+/obj/item/gun/ballistic/automatic/aks74u,
+/obj/item/ammo_box/magazine/aks74u/expanded,
+/obj/item/ammo_box/magazine/aks74u/expanded,
+/obj/item/ammo_box/magazine/aks74u/expanded,
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
 	planetary_atmos = 1;
@@ -16735,6 +16849,7 @@
 	dir = 10
 	},
 /obj/item/stack/sheet/metal/five,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "sbb" = (
@@ -16789,7 +16904,7 @@
 /turf/open/floor/plasteel/icemoon,
 /area/icemoon/surface/outdoors)
 "sdk" = (
-/obj/machinery/suit_storage_unit/ert/security,
+/obj/machinery/suit_storage_unit/ert/cadet,
 /turf/open/floor/pod,
 /area/ntremnant)
 "sdp" = (
@@ -16827,12 +16942,15 @@
 /turf/open/floor/pod,
 /area/ruin/space/has_grav/powered)
 "seo" = (
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/hop)
@@ -17055,12 +17173,15 @@
 /obj/structure/fence/end{
 	dir = 4
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -17188,6 +17309,10 @@
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
+"swD" = (
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "swF" = (
 /turf/open/floor/pod/dark,
 /area/ntremnant)
@@ -17289,6 +17414,12 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"sBI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "sCl" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -17383,7 +17514,11 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/icemoon/surface)
 "sGj" = (
-/obj/machinery/vending/boozeomat/syndicate_access,
+/obj/machinery/vending/boozeomat/syndicate_access{
+	default_price = 1;
+	extra_price = 1;
+	fair_market_price = 1
+	},
 /turf/open/floor/mineral/plastitanium{
 	name = "syndicate floor"
 	},
@@ -17411,12 +17546,15 @@
 /obj/structure/fence/corner{
 	dir = 5
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -17806,12 +17944,15 @@
 	dir = 6
 	},
 /obj/structure/cable,
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -17965,6 +18106,13 @@
 	name = "syndicate floor"
 	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"thI" = (
+/obj/structure/barricade/sandbags,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "tib" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/rocketlauncher/unrestricted,
@@ -18288,24 +18436,6 @@
 "tDI" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4
-	},
-/obj/item/encryptionkey/headset_service,
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
@@ -18582,12 +18712,15 @@
 /obj/structure/fence/corner{
 	dir = 9
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -18763,6 +18896,7 @@
 "ucI" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags,
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "ucK" = (
@@ -18882,12 +19016,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
 	},
-/obj/machinery/porta_turret/aux_base{
-	active_power_usage = 0;
-	light_range = 4;
-	reqpower = 0;
-	scan_range = 10;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/indestructible/reinforced,
 /area/engine/storage)
@@ -18909,6 +19046,7 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
 	},
+/obj/machinery/porta_turret/syndicate/energy/raven,
 /turf/closed/wall/mineral/plastitanium/explosive,
 /area/icemoon/surface/outdoors)
 "uot" = (
@@ -18933,16 +19071,18 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "upm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
-/area/ai_monitored/security/armory)
+/obj/structure/closet/crate,
+/obj/item/encryptionkey/headset_cent,
+/obj/item/clothing/shoes/winterboots/ice_boots,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/bni,
+/obj/item/clothing/gloves/color/black,
+/obj/item/pda/secretary,
+/obj/item/storage/belt/military/assault,
+/obj/item/reagent_containers/hypospray/medipen/survival,
+/obj/item/clothing/accessory/medal/rank/nt/bnisnr,
+/turf/open/floor/pod,
+/area/ntremnant)
 "upv" = (
 /obj/structure/tank_dispenser,
 /turf/open/floor/mineral/plastitanium,
@@ -19094,7 +19234,6 @@
 /obj/item/gun/ballistic/automatic/ar,
 /obj/item/gun/ballistic/automatic/ar,
 /obj/item/gun/ballistic/automatic/ar,
-/obj/item/minigunpack,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
 /obj/item/gun/ballistic/automatic/pistol/mk23,
@@ -19253,9 +19392,9 @@
 "uFa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/grave,
-/obj/effect/spawner/lootdrop/medical/firstaid_rare,
 /obj/effect/spawner/lootdrop/armory_contraband/metastation,
 /obj/structure/window/plasma/spawner/west,
+/obj/effect/spawner/lootdrop/medical/firstaid,
 /turf/open/floor/plating/dirt/jungle,
 /area/icemoon/surface/outdoors)
 "uFk" = (
@@ -19328,6 +19467,14 @@
 /obj/structure/sign/departments/chemistry,
 /turf/closed/wall/r_wall/syndicate,
 /area/ruin/space/has_grav/powered)
+"uIX" = (
+/mob/living/simple_animal/hostile/solgov/ranged/smg,
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/powered)
 "uJc" = (
 /obj/machinery/light{
 	dir = 8
@@ -19380,6 +19527,13 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/white,
 /area/awaymission/bmpship/aft)
+"uMO" = (
+/obj/effect/turf_decal/stripes/red/full,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "uNt" = (
 /obj/machinery/plumbing/synthesizer{
 	desc = "Produces a single chemical at a given volume. This one seems to have been hotwired to produce... blood?";
@@ -19388,6 +19542,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
+"uNH" = (
+/obj/structure/closet/secure_closet/medical3,
+/obj/effect/spawner/lootdrop/medical/firstaid,
+/turf/open/floor/plasteel,
+/area/medical/abandoned)
 "uNL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -19886,8 +20045,8 @@
 	dir = 8
 	},
 /obj/item/ammo_box/magazine/ak47/expanded,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
-/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle,
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
 "voK" = (
@@ -20076,11 +20235,9 @@
 /area/icemoon/surface/outdoors)
 "vyX" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/ballistic/automatic/aks74u,
-/obj/item/ammo_box/magazine/aks74u/expanded,
-/obj/item/ammo_box/magazine/aks74u/expanded,
-/obj/item/ammo_box/magazine/aks74u/expanded,
-/obj/item/ammo_box/magazine/aks74u/expanded,
+/obj/item/gun/ballistic/shotgun/lever_action/med/scope,
+/obj/item/ammo_box/speedloader/c38,
+/obj/item/ammo_box/speedloader/c38,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hellfactoryoffice)
 "vzW" = (
@@ -20155,12 +20312,15 @@
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
 "vGg" = (
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
@@ -20181,24 +20341,6 @@
 "vGD" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/encryptionkey/headset_service{
-	pixel_x = -4
-	},
-/obj/item/encryptionkey/headset_service,
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopods)
 "vGK" = (
@@ -20291,9 +20433,6 @@
 	width = 20
 	},
 /obj/effect/turf_decal/stripes/red/full,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "vIO" = (
@@ -20512,6 +20651,7 @@
 /obj/item/megaphone,
 /obj/item/kinetic_crusher,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "vUG" = (
@@ -20803,6 +20943,7 @@
 /mob/living/simple_animal/hostile/solgov/ranged{
 	lose_patience_timeout = 50
 	},
+/obj/effect/turf_decal/stripes/red/full,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "wjb" = (
@@ -20854,7 +20995,7 @@
 /area/icemoon/surface)
 "wmx" = (
 /obj/structure/flora/grass/brown,
-/obj/structure/punji_sticks/spikes,
+/obj/effect/mine/explosive,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "wmO" = (
@@ -21020,6 +21161,11 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"wxB" = (
+/obj/structure/table/reinforced,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "wya" = (
 /obj/structure/sign/poster/random,
 /turf/closed/wall,
@@ -21547,11 +21693,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/plastitanium{
-	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	planetary_atmos = 1;
-	temperature = 180
-	},
+/turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "xil" = (
 /obj/structure/barricade/sandbags,
@@ -21563,6 +21705,14 @@
 	},
 /turf/closed/wall/mineral/titanium/survival/nodiagonal,
 /area/ruin/powered)
+"xji" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
 "xjn" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -21683,6 +21833,13 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/medical/abandoned)
+"xpw" = (
+/mob/living/simple_animal/hostile/solgov/ranged/heavy{
+	lose_patience_timeout = 50
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "xpE" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -21777,12 +21934,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/hop)
@@ -21837,7 +21997,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/c20r/unrestricted,
+/obj/item/gun/ballistic/automatic/surplus,
 /turf/open/floor/mineral/plastitanium/red,
 /area/icemoon/surface/outdoors)
 "xut" = (
@@ -22028,12 +22188,15 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/obj/machinery/porta_turret/centcom_shuttle{
-	active_power_usage = 0;
-	light_range = 4;
-	max_integrity = 600;
-	reqpower = 0;
-	shot_delay = 5
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/dorms/barracks)
@@ -22309,7 +22472,6 @@
 	pixel_y = 4
 	},
 /obj/item/organ/cyberimp/arm/gun/laser,
-/obj/item/mantis/blade/syndicate,
 /obj/item/organ/cyberimp/arm/toolset,
 /obj/item/organ/cyberimp/arm/toolset,
 /obj/item/organ/cyberimp/arm/toolset,
@@ -23330,11 +23492,11 @@ bHh
 bHh
 bHh
 exf
-exf
-exf
-exf
-exf
-exf
+kXQ
+kXQ
+kXQ
+kXQ
+kXQ
 exf
 vzW
 vzW
@@ -23617,12 +23779,12 @@ bHh
 bHh
 bHh
 exf
+kXQ
+cfE
+swF
+upm
+kXQ
 exf
-exf
-exf
-exf
-exf
-vzW
 vzW
 vzW
 vzW
@@ -23904,12 +24066,12 @@ bHh
 bHh
 bHh
 exf
+kXQ
+rmq
+swF
+lli
+kXQ
 exf
-exf
-exf
-exf
-poO
-poO
 vzW
 vzW
 vzW
@@ -24191,11 +24353,11 @@ bHh
 bHh
 bHh
 exf
-exf
-exf
-exf
-exf
-exf
+kXQ
+tOc
+lqw
+tOc
+kXQ
 exf
 poO
 poO
@@ -24477,10 +24639,10 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
-kXQ
-lqw
+ftt
+swF
 kXQ
 kXQ
 kXQ
@@ -24764,7 +24926,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 sjf
 swF
@@ -25051,7 +25213,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 mHj
 rXe
@@ -25338,7 +25500,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 dVL
 hkq
@@ -25625,7 +25787,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 nrg
 rSC
@@ -25899,7 +26061,7 @@ cYM
 cYM
 cYM
 kWR
-oiL
+kKz
 kfy
 kfy
 lMg
@@ -25912,7 +26074,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 bpc
 bGq
@@ -26199,7 +26361,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 tOc
 uZG
@@ -26486,7 +26648,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 bPH
 bGq
@@ -26773,7 +26935,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kxP
 lTJ
@@ -26790,7 +26952,7 @@ vzW
 vzW
 vzW
 vzW
-ftt
+dok
 vzW
 vzW
 vzW
@@ -27060,7 +27222,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 lbd
 wLx
@@ -27347,7 +27509,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 aGH
 cfK
@@ -27634,7 +27796,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 pRw
 pRw
@@ -27921,7 +28083,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kXQ
 kXQ
@@ -28208,7 +28370,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 nLY
 qPu
@@ -28495,7 +28657,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 qKq
 swF
@@ -28782,7 +28944,7 @@ bHh
 bHh
 bHh
 bHh
-cfE
+exf
 kXQ
 kXQ
 kXQ
@@ -29071,8 +29233,8 @@ bHh
 bHh
 exf
 exf
-cfE
-cfE
+exf
+exf
 kXQ
 kXQ
 kXQ
@@ -46816,7 +46978,7 @@ fOz
 mAv
 mAv
 noV
-noV
+agp
 noV
 noV
 noV
@@ -47388,7 +47550,7 @@ mAv
 mAv
 mAv
 mAv
-mAv
+uIX
 noV
 noV
 noV
@@ -47674,11 +47836,11 @@ aGt
 aGt
 mAv
 mAv
-mAv
+azy
 mAv
 noV
 noV
-eSd
+rBA
 noV
 noV
 noV
@@ -48536,10 +48698,10 @@ noV
 noV
 noV
 noV
+agp
 noV
 noV
-noV
-noV
+luK
 noV
 noV
 noV
@@ -48828,7 +48990,7 @@ noV
 noV
 noV
 noV
-noV
+agp
 noV
 eSd
 noV
@@ -49111,7 +49273,7 @@ noV
 noV
 noV
 noV
-noV
+agp
 noV
 noV
 noV
@@ -52373,7 +52535,7 @@ avQ
 tbF
 vzW
 vzW
-vgu
+vzW
 vzW
 vzW
 vzW
@@ -53524,7 +53686,7 @@ vzW
 vzW
 vzW
 vzW
-vgu
+vzW
 vzW
 vzW
 vzW
@@ -56511,23 +56673,23 @@ vzW
 eoI
 tbF
 rjV
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
-dIX
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
+uMO
 qmK
 vdM
 avQ
@@ -56797,7 +56959,7 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
@@ -57084,7 +57246,7 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
@@ -57371,7 +57533,7 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
@@ -57382,7 +57544,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nse
 eoI
 eoI
 eoI
@@ -57658,21 +57820,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+swD
+sBI
+sBI
+sBI
+sBI
+sBI
+sBI
+sBI
+sBI
+sBI
+swD
 eoI
 eoI
 eoI
@@ -57945,24 +58107,24 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+hla
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
 wiH
+kmT
 eoI
 eoI
-eoI
-eoI
+nse
 eoI
 hxO
 avQ
@@ -58232,21 +58394,21 @@ vzW
 vzW
 cGo
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-rgo
-eoI
-eoI
-eoI
-rgo
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+cBn
+vgd
+vgd
+vgd
+cBn
+vgd
+vgd
+kmT
 eoI
 eoI
 eoI
@@ -58519,21 +58681,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
+bCR
 wiH
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-shE
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+thI
 shE
 shE
 eoI
@@ -58806,21 +58968,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-shE
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+irS
+vgd
+vgd
+thI
 rAO
 shE
 eoI
@@ -59093,21 +59255,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 rgo
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-shE
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+thI
 shE
 hIj
 eoI
@@ -59380,21 +59542,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
 eoI
 eoI
@@ -59667,21 +59829,21 @@ vzW
 vzW
 eoI
 tbF
-obO
+kZv
 uex
 uex
 eoI
-eoI
-eoI
-eoI
-rgo
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+cBn
+vgd
+vgd
+vgd
+vgd
+vgd
+irS
+kmT
 eoI
 eoI
 eoI
@@ -59954,23 +60116,23 @@ vzW
 vzW
 eoI
 tbF
-obO
+kZv
 rro
 uex
 eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
 wiH
+vgd
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+nse
 eoI
 eoI
 qwu
@@ -60241,21 +60403,21 @@ vzW
 vzW
 eoI
 tbF
-obO
+kZv
 uex
 uex
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
 eoI
 eoI
@@ -60528,21 +60690,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
 eoI
 eoI
@@ -60721,7 +60883,7 @@ hJt
 cbf
 saV
 dNu
-eGz
+xji
 bPR
 eoI
 eoI
@@ -60815,21 +60977,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
 eoI
 eoI
@@ -61102,24 +61264,24 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+cBn
+vgd
+vgd
+vgd
+vgd
+kmT
 eoI
 eoI
-eoI
-eoI
-eoI
-rgo
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+nse
 eoI
 hxO
 cVA
@@ -61389,20 +61551,20 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+hla
+hla
+hla
 iXH
 eoI
 eoI
@@ -61676,21 +61838,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-wiH
-eoI
-eoI
+bCR
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+hla
+iLf
+hla
+kmT
 eoI
 eoI
 eoI
@@ -61963,22 +62125,22 @@ vzW
 vzW
 rAO
 tbF
-uXg
+fse
 eoI
 eoI
 shE
-shE
-shE
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+mDr
+flk
+vgd
+vgd
+vgd
+vgd
+vgd
+hla
+hla
+hla
+kmT
+nse
 eoI
 eoI
 eoI
@@ -62250,21 +62412,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 shE
-rAO
-ucI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+xpw
+kUA
+vgd
+vgd
+vgd
+irS
+vgd
+hla
+hla
+hla
+kmT
 eoI
 eoI
 eoI
@@ -62537,21 +62699,21 @@ vzW
 vzW
 eoI
 tbF
-uXg
+fse
 eoI
 eoI
 shE
 ucI
-ucI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
-eoI
+kUA
+vgd
+vgd
+vgd
+vgd
+vgd
+hla
+hla
+hla
+kmT
 eoI
 eoI
 eoI
@@ -62825,23 +62987,23 @@ vzW
 eoI
 tbF
 rjV
-crL
-crL
-crL
-crL
-crL
-crL
-fse
-crL
-crL
-crL
-crL
-crL
+moW
+moW
+moW
+mJl
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
+vgd
 vII
-crL
-crL
-crL
-crL
+lBw
+moW
+moW
+moW
 ofo
 vdM
 cVA
@@ -63112,11 +63274,11 @@ vzW
 eoI
 tbF
 gDX
-fPr
-fPr
-fPr
-fPr
 uUS
+fPr
+fPr
+fPr
+fPr
 kSG
 gPt
 gPt
@@ -63124,7 +63286,7 @@ gPt
 gPt
 gPt
 fbz
-hTg
+kCu
 dFB
 sEw
 gPt
@@ -63132,7 +63294,7 @@ gPt
 gPt
 pQy
 keJ
-hTg
+kCu
 bCq
 fmR
 fmR
@@ -63421,7 +63583,7 @@ noV
 noV
 sXX
 noV
-xYi
+mJA
 kxh
 noV
 wxv
@@ -63844,8 +64006,8 @@ vzW
 vzW
 fmR
 gei
-mOD
-nHs
+jtG
+jtG
 nzu
 jZW
 teS
@@ -64011,7 +64173,7 @@ vzW
 vzW
 aXF
 vzW
-kZv
+suY
 eoI
 vzW
 vzW
@@ -64296,7 +64458,7 @@ vzW
 vzW
 vzW
 vzW
-kZv
+suY
 eoI
 eoI
 eoI
@@ -64440,8 +64602,8 @@ fym
 tfa
 tCA
 vPn
-upm
-upm
+vPn
+vPn
 xid
 fGo
 cMS
@@ -64846,7 +65008,7 @@ xqA
 xqA
 iyz
 iyz
-iyz
+qQZ
 iyz
 iyz
 iyz
@@ -65444,7 +65606,7 @@ vzW
 vzW
 vzW
 vzW
-mff
+ozs
 avQ
 avQ
 vzW
@@ -66301,7 +66463,7 @@ vzW
 vzW
 mzZ
 avQ
-ozs
+jDb
 avQ
 jMw
 avQ
@@ -66878,7 +67040,7 @@ vzW
 vzW
 vzW
 vzW
-mff
+ozs
 eoI
 vzW
 vzW
@@ -68883,7 +69045,7 @@ vzW
 avQ
 avQ
 avQ
-wmx
+biF
 vzW
 vzW
 vzW
@@ -71748,7 +71910,7 @@ vzW
 vzW
 vzW
 vzW
-gEg
+biF
 vzW
 vzW
 vzW
@@ -78932,7 +79094,7 @@ hmX
 sPz
 wHG
 wHG
-cAn
+aaC
 wqp
 cAn
 ilY
@@ -79074,10 +79236,10 @@ quQ
 eib
 cKe
 jeS
-jeS
-jeS
-jeS
-jeS
+uNH
+uNH
+uNH
+uNH
 lGo
 vzW
 vzW
@@ -79506,7 +79668,7 @@ hmX
 nYJ
 tOx
 hFc
-cAn
+aaC
 aHS
 cAn
 cAn
@@ -80736,7 +80898,7 @@ vzW
 vzW
 vzW
 vzW
-dGn
+vzW
 vzW
 vzW
 vzW
@@ -86413,9 +86575,9 @@ sHL
 kmy
 waH
 avQ
-avQ
-avQ
-avQ
+wxB
+qec
+wxB
 opo
 ayg
 ayg
@@ -88134,8 +88296,8 @@ tpQ
 tHq
 tHq
 pqI
-avQ
-kKz
+vwq
+eVd
 avQ
 avQ
 opo
@@ -89857,7 +90019,7 @@ srK
 srK
 tHq
 vlo
-vlo
+dXd
 vlo
 vlo
 cTT

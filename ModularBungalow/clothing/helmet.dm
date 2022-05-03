@@ -29,6 +29,14 @@
 	icon_state = "snowvet"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 25, RAD = 10, FIRE = 100, ACID = 60, WOUND = 10)
 
+/obj/item/clothing/head/helmet/ranger/keplersnow
+	name = "kepler mercenary ranger helmet"
+	desc = "Durable helmet survivalist, Originally used by the kepler security force but occasionally finding its way elsewhere"
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	icon_state = "kerplermarksman"
+	armor = list(MELEE = 15, BULLET = 25, LASER = 45, ENERGY = 65, BOMB = 15, BIO = 100, RAD = 60, FIRE = 100, ACID = 10, WOUND = 5)
+
 /obj/item/clothing/head/helmet/ranger/akira
 	name = "kitsune's ranger helmet"
 	desc = "Durable helmet intended for long range expedition in the snow, Originally used by a kitsune, now nowhere to be seen."
@@ -70,12 +78,14 @@
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "kepler"
+	armor = list(MELEE = 10, BULLET = 35, LASER = 25, ENERGY = 15, BOMB = 15, BIO = 100, RAD = 70, FIRE = 100, ACID = 60, WOUND = 25)
 
 /obj/item/clothing/head/helmet/kepler/nco
 	icon_state = "keplernco"
 
 /obj/item/clothing/head/helmet/kepler/assault
 	icon_state = "keplerassault"
+	armor = list(MELEE = 40, BULLET = 45, LASER = 45, ENERGY = 45, BOMB = 45, BIO = 100, RAD = 70, FIRE = 100, ACID = 60, WOUND = 25)
 
 /obj/item/clothing/head/helmet/kepler/pilot
 	icon_state = "keplerpilot"
@@ -84,7 +94,9 @@
 	icon_state = "keplercloaker"
 
 /obj/item/clothing/head/helmet/kepler/heavy
-	icon_state = "keplerlmg"
+	icon_state = "keplerassault"
+	armor = list(MELEE = 35, BULLET = 35, LASER = 35, ENERGY = 45, BOMB = 65, BIO = 100, RAD = 100, FIRE = 100, ACID = 60, WOUND = 25)
 
 /obj/item/clothing/head/helmet/kepler/heavy/shotgunner
 	icon_state = "keplershotgunner"
+	armor = list(MELEE = 45, BULLET = 45, LASER = 35, ENERGY = 45, BOMB = 65, BIO = 100, RAD = 100, FIRE = 100, ACID = 60, WOUND = 25)

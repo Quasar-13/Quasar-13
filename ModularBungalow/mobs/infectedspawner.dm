@@ -13,43 +13,41 @@
 /obj/effect/spawner/lootdrop/infection_spawner/solgov
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/solgov/infected = 20,
+		/mob/living/simple_animal/hostile/solgov/infected = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/solgov/nco
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsenco = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/solgov/infected = 20,
+		/mob/living/simple_animal/hostile/solgov/infected = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/solgov/lmg
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpselmg = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/solgov/infected/heavy = 20,
+		/mob/living/simple_animal/hostile/solgov/infected/heavy = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/solgov/infected/heavy = 20,
+		/mob/living/simple_animal/hostile/solgov/infected/heavy = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/marksman
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/stalker = 20,
+		/mob/living/simple_animal/hostile/solgov/infected/marksman = 20,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/cloaker
 	loot = list(
-		/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker = 80,
-		/mob/living/simple_animal/hostile/eldritch/ash_spirit = 10,
-		/mob/living/simple_animal/hostile/eldritch/raw_prophet = 10,
+		/obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker = 95,
+		/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian = 5,
 	)
 
 /obj/effect/spawner/lootdrop/infection_spawner/assault
 	loot = list(
 		/obj/effect/mob_spawn/human/corpse/solgovcorpseassault = 80,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/ash_spirit = 10,
-		/obj/effect/gibspawner/human, /mob/living/simple_animal/hostile/eldritch/raw_prophet = 10,
+		/mob/living/simple_animal/hostile/solgov/infected/assault = 20,
 	)

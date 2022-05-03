@@ -1,5 +1,5 @@
 /datum/job/remlieutenant
-	title = "NT Remnant Lieutenant"
+	title = "NT Remnant Commander"
 	department_head = list("No one")
 	faction = "Station"
 	total_positions = 1

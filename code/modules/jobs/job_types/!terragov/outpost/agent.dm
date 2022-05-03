@@ -18,12 +18,10 @@
 
 /datum/outfit/job/outpostagent
 	name = "Syndicate Outpost Agent"
-	jobtype = /datum/job/outpostleader
 
 	id = /obj/item/card/id/black
 	uniform = /obj/item/clothing/under/syndicate/coldres
-	ears = /obj/item/radio/headset
-	l_hand = /obj/item/encryptionkey/outpost
+	ears = /obj/item/radio/headset/headset_sci
 	belt = null
 
 
