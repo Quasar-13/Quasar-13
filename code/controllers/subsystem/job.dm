@@ -67,9 +67,6 @@ SUBSYSTEM_DEF(job)
 			testing("Removed [job.type] due to map config")
 			continue
 
-		//This lists all the maptypes that are nonstandard, and will delete all jobs.
-		var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite", "blacksite")
-
 
 		//Checks if the maptype is the same as the map
 		if(job.maptype != SSmaptype.maptype)
@@ -87,7 +84,7 @@ SUBSYSTEM_DEF(job)
 				job.spawn_positions = 0
 
 		//Checks the clearmap, I will configure this to
-		if(SSmaptype.maptype in clearmaps)
+		if(SSmaptype.maptype in SSmaptype.clearmaps)
 			if(job.maptype != SSmaptype.maptype)
 				if(job.loadalways == FALSE)	//THIS one we need
 					continue
