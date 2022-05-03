@@ -92,6 +92,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
 //Yet another gun our kitsune would've used
+//Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = ".357 Avtomag"
 	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE. Warning, has a tendency to jam."
