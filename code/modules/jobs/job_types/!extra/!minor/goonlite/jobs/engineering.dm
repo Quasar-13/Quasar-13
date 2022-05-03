@@ -9,7 +9,7 @@
 	total_positions = 3
 	spawn_positions = 2
 	selection_color = "#fff5cc"
-	maptype = "goonlite"
+	maptype = list("goonlite")
 
 	outfit = /datum/outfit/job/cargo_tech/goon
 
@@ -29,7 +29,7 @@
 	department_head = list("Chief Engineer")
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	maptype = "goonlite"
+	maptype = list("goonlite")
 	mapexclude = list()
 
 	outfit = /datum/outfit/job/miner/goon
@@ -50,7 +50,7 @@
 	spawn_positions = 2
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
-	maptype = "goonlite"
+	maptype = list("goonlite")
 
 	outfit = /datum/outfit/job/goonmechanic
 

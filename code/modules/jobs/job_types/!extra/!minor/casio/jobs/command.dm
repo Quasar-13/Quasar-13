@@ -8,7 +8,7 @@
 	selection_color = "#bbbbee"
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = "naval"
+	maptype = list("naval")
 	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/blueshield
@@ -30,5 +30,5 @@
 
 //Captain code is in the goonlite folder
 /datum/job/captain_green/naval
-	maptype = "naval"
+	maptype = list("naval")
 	outfit = /datum/outfit/job/captain/nt

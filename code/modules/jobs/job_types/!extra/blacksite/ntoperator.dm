@@ -6,7 +6,7 @@
 	supervisors = "the NT Squad Leader and the NT Commander"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = "blacksite"
+	maptype = list("blacksite")
 
 	outfit = /datum/outfit/job/ntoperator
 

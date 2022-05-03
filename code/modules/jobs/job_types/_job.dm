@@ -72,7 +72,7 @@
 	var/allow_bureaucratic_error = TRUE
 
 	/// Job's station type. Will affect what kinds of station the job spawns on. Spawns on all types if set to none.
-	var/maptype = "none"
+	var/maptype = list("none")
 	///Used to exclude jobs
 	var/list/mapexclude = list("none")
 

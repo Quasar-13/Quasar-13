@@ -36,14 +36,14 @@
 
 
 
-/*NT job spawn (unused)
+//NT job spawn (unused)
 /obj/effect/landmark/start/ntremnant
 	name = "NT Remnant Start"
 
 /obj/effect/landmark/start/ntremnant/Initialize()
 	. = ..()
-	var/turf/T = get_turf(src)
-*/
+//	var/turf/T = get_turf(src)
+
 
 
 

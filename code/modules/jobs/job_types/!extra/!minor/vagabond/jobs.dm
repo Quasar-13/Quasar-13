@@ -9,7 +9,7 @@
 	spawn_positions = 2
 	supervisors = "the voices in your head" // I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS I HATE JILL NESS
 	selection_color = "#666666"
-	maptype = "vagabond"
+	maptype = list("vagabond")
 
 	outfit = /datum/outfit/job/space_hobo
 	display_order = JOB_DISPLAY_ORDER_NOFACTION1
@@ -33,7 +33,7 @@
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
-	maptype = "vagabond"
+	maptype = list("vagabond")
 
 	outfit = /datum/outfit/job/brigdoc
 

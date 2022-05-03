@@ -9,7 +9,7 @@
 	spawn_positions = 2
 	supervisors = "the outpost leader"
 	selection_color = "#ff3322"
-	maptype = "kepler-ice"
+	maptype = list("kepler-ice")
 
 	outfit = /datum/outfit/job/outpostagent
 

@@ -6,7 +6,7 @@
 	spawn_positions = 50
 	supervisors = "the voices in your head"
 	selection_color = "#dddddd"
-	maptype = "kepler-ice"
+	maptype = list("kepler-ice")
 
 	outfit = /datum/outfit/job/solgov
 
