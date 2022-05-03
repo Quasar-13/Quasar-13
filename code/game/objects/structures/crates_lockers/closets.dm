@@ -39,6 +39,9 @@
 	var/icon_welded = "welded"
 	/// Whether a skittish person can dive inside this closet. Disable if opening the closet causes "bad things" to happen or that it leads to a logical inconsistency.
 	var/divable = TRUE
+	///electronics for access
+	var/obj/item/electronics/airlock/electronics
+	var/can_install_electronics = TRUE
 
 
 /obj/structure/closet/Initialize(mapload)
@@ -46,6 +49,7 @@
 		addtimer(CALLBACK(src, .proc/take_contents), 0)
 	. = ..()
 	update_icon()
+	update_appearance()
 	PopulateContents()
 
 //USE THIS TO FILL IT, NOT INITIALIZE OR NEW
@@ -54,7 +58,15 @@
 
 /obj/structure/closet/Destroy()
 	dump_contents()
+	QDEL_NULL(electronics)
 	return ..()
+
+/obj/structure/closet/update_appearance(updates=ALL)
+	. = ..()
+	if(opened || broken || !secure)
+		luminosity = 0
+		return
+	luminosity = 1
 
 /obj/structure/closet/update_icon()
 	. = ..()
@@ -242,6 +254,10 @@
 /obj/structure/closet/deconstruct(disassembled = TRUE)
 	if(ispath(material_drop) && material_drop_amount && !(flags_1 & NODECONSTRUCT_1))
 		new material_drop(loc, material_drop_amount)
+	if (electronics)
+		var/obj/item/electronics/airlock/electronics_ref = electronics
+		electronics = null
+		electronics_ref.forceMove(drop_location())
 	qdel(src)
 
 /obj/structure/closet/obj_break(damage_flag)
@@ -303,6 +319,50 @@
 		user.visible_message("<span class='notice'>[user] [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='notice'>You [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='hear'>You hear a ratchet.</span>")
+	else if (can_install_electronics && istype(W, /obj/item/electronics/airlock)\
+			&& !secure && !electronics && !locked && (welded || !can_weld_shut) && !broken)
+		user.visible_message(span_notice("[user] installs the electronics into the [src]."),\
+			span_notice("You start to install electronics into the [src]..."))
+		if (!do_after(user, 4 SECONDS, target = src))
+			return FALSE
+		if (electronics || secure)
+			return FALSE
+		if (!user.transferItemToLoc(W, src))
+			return FALSE
+		W.moveToNullspace()
+		to_chat(user, span_notice("You install the electronics."))
+		electronics = W
+		if (electronics.one_access)
+			req_one_access = electronics.accesses
+		else
+			req_access = electronics.accesses
+		secure = TRUE
+		update_appearance()
+	else if (can_install_electronics && W.tool_behaviour == TOOL_SCREWDRIVER\
+			&& (secure || electronics) && !locked && (welded || !can_weld_shut))
+		user.visible_message(span_notice("[user] begins to remove the electronics from the [src]."),\
+			span_notice("You begin to remove the electronics from the [src]..."))
+		var/had_electronics = !!electronics
+		var/was_secure = secure
+		if (!do_after(user, 4 SECONDS, target = src))
+			return FALSE
+		if ((had_electronics && !electronics) || (was_secure && !secure))
+			return FALSE
+		var/obj/item/electronics/airlock/electronics_ref
+		if (!electronics)
+			electronics_ref = new /obj/item/electronics/airlock(loc)
+			gen_access()
+			if (req_one_access.len)
+				electronics_ref.one_access = 1
+				electronics_ref.accesses = req_one_access
+			else
+				electronics_ref.accesses = req_access
+		else
+			electronics_ref = electronics
+			electronics = null
+			electronics_ref.forceMove(drop_location())
+		secure = FALSE
+		update_appearance()
 	else if(user.a_intent != INTENT_HARM)
 		var/item_is_id = W.GetID()
 		if(!item_is_id)
