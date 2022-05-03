@@ -100,17 +100,14 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 	can_jam = 1
-	jamming_chance = 20
-	jamming_increment = 20
-	unjam_chance = 50
 /obj/item/gun/ballistic/automatic/pistol/avtomag/attack_self(mob/user)
 	if(can_jam)
 		if(jammed)
 			if(prob(unjam_chance))
 				jammed = FALSE
-				unjam_chance = 10
+				unjam_chance = 50
 			else
-				unjam_chance += 10
+				unjam_chance += 20
 				to_chat(user, "<span class='warning'>[src] is jammed!</span>")
 				playsound(user,'sound/weapons/jammed.ogg', 75, TRUE)
 				return FALSE
