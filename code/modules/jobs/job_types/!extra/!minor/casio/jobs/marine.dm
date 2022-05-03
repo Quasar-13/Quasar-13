@@ -7,7 +7,7 @@
 	supervisors = "the captain"
 	selection_color = "#073052"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = list("naval")
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntsquadleader
 
@@ -37,7 +37,7 @@
 	supervisors = "the NT Squad Leader"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = list("naval")
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntmarine
 
@@ -58,7 +58,7 @@
 	supervisors = "the NT Squad Leader"
 	selection_color = "#134975"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = list("naval")
+	maptype = "naval"
 
 	outfit = /datum/outfit/job/ntpolice
 

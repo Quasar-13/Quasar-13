@@ -67,17 +67,12 @@ SUBSYSTEM_DEF(job)
 			testing("Removed [job.type] due to map config")
 			continue
 
+		//This lists all the maptypes that are nonstandard, and will delete all jobs.
+		var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite", "blacksite")
 
 
-		//So Byond doesn't have a version of !in so what I'm doing is I'm checking for if the maptype shows up in the job.maptype and using this flag as !in
-		//The maptype = none shouldn't really affect anything, honestly.
-		var/notin = TRUE
-		if(SSmaptype.maptype in job.maptype)
-			notin = FALSE
-
-
-		//Checks if the job maptype is the same as the map
-		if(notin == TRUE)
+		//Checks if the maptype is the same as the map
+		if(job.maptype != SSmaptype.maptype)
 			if(job.maptype != "none")		//Is the job standard on all maps?
 				if(job.loadalways == FALSE)	//We don't really need this, but still important
 					continue
@@ -91,8 +86,8 @@ SUBSYSTEM_DEF(job)
 				job.total_positions = 0
 				job.spawn_positions = 0
 
-		//Checks the clearmap, I will configure this to work with jobs as well
-		if(SSmaptype.clearjobs == 1 || SSmaptype.maptype in SSmaptype.clearmaps)
+		//Checks the clearmap, I will configure this to
+		if(SSmaptype.maptype in clearmaps)
 			if(job.maptype != SSmaptype.maptype)
 				if(job.loadalways == FALSE)	//THIS one we need
 					continue

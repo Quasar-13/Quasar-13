@@ -13,7 +13,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_COMMAND
-	maptype = list("goonlite")
+	maptype = "goonlite"
 
 	outfit = /datum/outfit/job/captain/nt
 
@@ -40,7 +40,7 @@
 /datum/job/hop/goon
 	title = "Head Of Personnel"
 	selection_color = "#10cc74"
-	maptype = list("goonlite")
+	maptype = "goonlite"
 	mapexclude = list()
 
 	outfit = /datum/outfit/job/hop/goon
@@ -49,7 +49,7 @@
 //Hos is back and a pain still.
 /datum/job/hos/goon
 	title = "Head Of Security"
-	maptype = list("goonlite")
+	maptype = "goonlite"
 	mapexclude = list()
 	trusted_only = TRUE		//This job is whitelisted.That's how it is on goon
 
@@ -80,7 +80,7 @@
 	selection_color = "#ffdddd"
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_SECURITY
-	maptype = list("goonlite")
+	maptype = "goonlite"
 	trusted_only = TRUE
 
 	outfit = /datum/outfit/job/elitesec
@@ -120,7 +120,7 @@
 	exp_requirements = 180
 	exp_type = EXP_TYPE_SERVICE
 	exp_type_department = EXP_TYPE_SERVICE
-	maptype = list("goonlite")
+	maptype = "goonlite"
 
 	outfit = /datum/outfit/job/commsofficer
 

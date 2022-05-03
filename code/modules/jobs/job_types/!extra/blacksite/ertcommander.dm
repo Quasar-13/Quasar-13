@@ -6,7 +6,7 @@
 	supervisors = "space law and the NT Commander"
 	selection_color = "#10cc74"
 	exp_type = EXP_TYPE_NTMARINE
-	maptype = list("blacksite")
+	maptype = "blacksite"
 
 	outfit = /datum/outfit/job/ertcommander
 

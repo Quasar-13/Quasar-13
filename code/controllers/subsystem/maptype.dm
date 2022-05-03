@@ -7,6 +7,3 @@ SUBSYSTEM_DEF(maptype)
 	var/clearjobs = FALSE	//this is checking if we are clearing jobs or not
 	var/faction = "nanotrasen"//shit like the starfury
 
-	//Lists all the maps that clear all jobs
-	var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite")
-

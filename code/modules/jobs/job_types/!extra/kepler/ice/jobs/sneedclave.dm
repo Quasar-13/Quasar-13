@@ -6,7 +6,7 @@
 	spawn_positions = 1
 	supervisors = "NT Remnant Commander"
 	selection_color = "#134975"
-	maptype = list("kepler-ice")
+	maptype = "kepler-ice"
 
 	outfit = /datum/outfit/job/remnant
 

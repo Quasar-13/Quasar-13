@@ -4,7 +4,7 @@
 //Bunker Crew, the Misc/Assistant job
 /datum/job/solgov
 	title = "Bunker Crew"
-	maptype = list("kepler-ice")
+	maptype = "kepler-ice"
 	faction = "Station"
 	department_head = list("Commander")
 	supervisors = "the commander"

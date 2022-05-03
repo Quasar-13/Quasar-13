@@ -8,7 +8,7 @@
 	selection_color = "#663366"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
-	maptype = list("syndicate")
+	maptype = "syndicate"
 
 	outfit = /datum/outfit/job/wing_commander
 
