@@ -107,7 +107,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
-	
+
 /obj/item/clothing/suit/armor/hos/vest
 	name = "head of security's vest"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
@@ -135,11 +135,11 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/qm
-	name = "quartermaster's coat"
-	desc = "A button-up jacket used by the quartermaster."
+	name = "quartermaster's ranger duster"
+	desc = "An old ranger jacket used by the last quartermaster of this station. What happened to them is currently unknown."
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
-	icon_state = "qmjacket"
+	icon_state = "duster_recon"
 	inhand_icon_state = "armor"
 	dog_fashion = null
 
