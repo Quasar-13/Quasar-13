@@ -6,6 +6,26 @@
 	inhand_icon_state = "black_suit"
 
 
+/obj/item/clothing/under/smc/warden
+	desc = "A blue uniform for the military warden"
+	name = "warden's uniform"
+	icon_state = "warden"
+
+/obj/item/clothing/under/smc/police
+	desc = "A blue uniform for the military police"
+	name = "warden's uniform"
+	icon_state = "police"
+
+/obj/item/clothing/under/smc/recruit
+	desc = "A uniform for new cybersun navy recruits"
+	name = "recruit uniform"
+	icon_state = "recruit"
+
+/obj/item/clothing/under/smc/req
+	desc = "A uniform for the requisitions chief"
+	name = "requisitions chief uniform"
+	icon_state = "req"
+
 /obj/item/clothing/under/smc/deckhand
 	desc = "A red overcoat with black pants"
 	name = "deckhand's uniform"
@@ -47,7 +67,7 @@
 	desc = "A slightly bulky Type 2-S armored rig that provides decent protection against most types of damage, created and used by Cybersun Marines."
 	icon_state = "syndicatemarine"
 	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 40, BOMB = 30, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
-	
+
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
