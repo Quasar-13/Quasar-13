@@ -87,18 +87,21 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Kira's Special"
-	desc = "A special pistol made for the kitsune, chambered in .357. used by the previous site administrator before he passed it along"
+	desc = "A special pistol made for the kitsune, chambered in .357. used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
 //Yet another gun our kitsune would've used
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = ".357 Avtomag"
-	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE."
+	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE. Warning, has a tendency to jam."
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
+/obj/item/gun/ballistic/automatic/pistol/avtomag/nojam
+	name = "factory new .357 Avtomag"
+	desc = "A special pistol made to fire .357 AMP. occasionally found in the hand of certain highs ranking kepler officer, this one is well maintained."
 ////////////////////
 //////REVOLVERS////
 ///////////////////

@@ -111,9 +111,10 @@
 				/obj/item/gun/ballistic/revolver/mateba = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
 				/obj/item/gun/grenadelauncher = 15,
-				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 10,
+				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 5,
 				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier3,
+				/obj/item/gun/ballistic/automatic/pistol/avtomag = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
@@ -144,6 +145,7 @@
 				/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast = 10,
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5,
 				/obj/item/gun/ballistic/automatic/gyropistol/xm25 = 20)
+
 //This has a rare chance to spawn something
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 10,
