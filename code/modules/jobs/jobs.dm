@@ -142,7 +142,8 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 	"NT Marine",
 
 //Romulus
-	"NT Remnant Lieutenant",
+	"NT Remnant Commander",
+	"NT Remnant Corporal",
 	"NT Remnant Cadet",
 	"NT Remnant Auxiliary"))
 
@@ -156,7 +157,7 @@ GLOBAL_LIST_INIT(solgov_positions, list(
 	"Bunker Crew",
 	"Soldier",
 	"Security",
-	"Civillian"))
+	"Nomad"))
 
 
 GLOBAL_LIST_INIT(position_categories, list(

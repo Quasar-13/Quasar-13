@@ -1,8 +1,13 @@
-//NAval captain's hardsuit
+//Naval captain's hardsuit
 /obj/machinery/suit_storage_unit/captain/naval
 	suit_type = /obj/item/clothing/suit/space/hardsuit/swat/captain/naval
 	mask_type = /obj/item/clothing/mask/gas/atmos
 	storage_type = /obj/item/tank/jetpack/oxygen/captain
+
+//ERT Cadet
+/obj/machinery/suit_storage_unit/ert/cadet
+	name = "cadet"
+	suit_type = /obj/item/clothing/suit/space/hardsuit/ert/bni
 
 //Pubby Hardsuits
 /obj/machinery/suit_storage_unit/engine/pubby

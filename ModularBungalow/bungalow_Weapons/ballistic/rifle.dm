@@ -95,8 +95,8 @@
 //Kepler guns
 //Sprite by kirie and akira!
 /obj/item/gun/ballistic/automatic/m90/xm29
-	name = "SG-XM29 'Annihilator'"
-	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Typically seen used by kepler group mercenaries and in hand of some heavy rangers"
+	name = "SG-XM29 'Determinator'"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
 	icon_state = "xm29"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -106,18 +106,19 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	zoomable = TRUE
-	zoom_amt = 7
+	zoom_amt = 8
 	zoom_out_amt = 4
-
+	fire_delay = 0.14
+//being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
 	name = "SG-P25 'Crow'"
-	desc = "A prototype grenade launcher designed to fire magazine fed grenades."
+	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
 	icon_state = "xm25"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	zoomable = TRUE
-	zoom_amt = 7
+	zoom_amt = 8
 	zoom_out_amt = 4
 
 /obj/item/gun/ballistic/automatic/gyropistol/xm25/Initialize()

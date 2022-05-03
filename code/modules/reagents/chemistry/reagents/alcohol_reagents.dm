@@ -2429,3 +2429,61 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(islizard(M))
 		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "triumph", /datum/mood_event/memories_of_home, name)
 	..()
+//TODO: Give some special things to this drink
+//I invite any coder to add some special reactions
+//or some shit like that, i dunno.
+
+/datum/reagent/consumable/ethanol/total_overreaction
+	name = "Total Overreaction"
+	description = "ARE YOU CALLING ME A LIAR SIR?!?!?"
+	boozepwr = 65
+	color = "#D34848"
+	taste_description = "your head growing red and cloudy with rage"
+	glass_icon_state = "total_overreaction"
+	glass_name = "Total Overreaction"
+	glass_desc = "ARE YOU CALLING ME A LIAR SIR?!?!?"
+
+/datum/reagent/consumable/ethanol/obscure_reference
+	name = "Obscure Reference"
+	description = "Originally made when some deserted people in a wasteland made a beer facility."
+	boozepwr = 25
+	color = "#000000"
+	taste_description = "ghetto but amazing beer"
+	quality = DRINK_NICE
+	glass_icon_state = "obsc_ref"
+	glass_name = "Obscure Reference"
+	glass_desc = "This drink has a label on the side: Strategic Nuclear Moose"
+
+/datum/reagent/consumable/ethanol/recurring_gag
+	name = "Recurring Gag"
+	description = "Who in their right mind would make this?"
+	boozepwr = 91
+	color = "#BFE600"
+	taste_description = "god's mistake"
+
+/datum/reagent/consumable/ethanol/recurring_gag/on_mob_life(mob/living/carbon/M)
+	if(prob(33))
+		M.vomit()
+
+/datum/reagent/consumable/ethanol/dub
+	name = "Dub"
+	description = "Originally created by a bored wizard who wanted to fuck with language spells."
+	boozepwr = 30
+	color = "#E5D824"
+	taste_description = "the wild, wild west"
+	glass_icon_state = "dub"
+	glass_name = "Dub"
+	glass_desc = "Fwfwfwfwfw..."
+
+/datum/reagent/consumable/ethanol/dub/on_mob_add(mob/living/carbon/M)
+	if (M.has_language(/datum/language/moffic))
+		M.spoke_moffic = TRUE //Why is this here? Check my comment on atoms_movable.dm line 74
+	else
+		M.grant_language(/datum/language/moffic)
+
+/datum/reagent/consumable/ethanol/dub/on_mob_delete(mob/living/carbon/M)
+	if (M.spoke_moffic)
+		M.spoke_moffic = FALSE //While playtesting, if you were a moth and now are not a moth, you still "spoke moffic" once. No longer.
+	else
+		M.remove_language(/datum/language/moffic)
+
