@@ -111,6 +111,10 @@
 	jamming_increment = 0
 	unjam_chance = 100
 
+/obj/item/gun/ballistic/automatic/pistol/avtomag/nojam/kira
+	name = "That Avtomag"
+	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive."
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////
