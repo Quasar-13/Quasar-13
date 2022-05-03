@@ -98,10 +98,19 @@
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
+	can_jam = 1
+	jamming_chance = 20
+	jamming_increment = 20
+	unjam_chance = 50
 
 /obj/item/gun/ballistic/automatic/pistol/avtomag/nojam
 	name = "factory new .357 Avtomag"
 	desc = "A special pistol made to fire .357 AMP. occasionally found in the hand of certain highs ranking kepler officer, this one is well maintained."
+	can_jam = 0
+	jamming_chance = 0
+	jamming_increment = 0
+	unjam_chance = 100
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////
