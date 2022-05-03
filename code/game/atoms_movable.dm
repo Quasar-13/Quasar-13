@@ -71,6 +71,8 @@
 
 	/// Whether this atom should have its dir automatically changed when it moves. Setting this to FALSE allows for things such as directional windows to retain dir on moving without snowflake code all of the place.
 	var/set_dir_on_move = TRUE
+	///Any and all maintainers please prevent me from making any more pull requests. I have no idea how to make the game remember you spoke moffic outside of this stupid fucking variable that i shall set to TRUE if you do in fact speak moffic.
+	var/spoke_moffic = FALSE
 
 
 /atom/movable/Initialize(mapload)
