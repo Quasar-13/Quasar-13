@@ -10,9 +10,8 @@
 	spawn_positions = 2
 	selection_color = "#fff5cc"
 	maptype = "goonlite"
-	mapexclude = list()
 
-	outfit = /datum/outfit/job/cargo_goon
+	outfit = /datum/outfit/job/cargo/goon
 
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_QM, ACCESS_ATMOSPHERICS, ACCESS_MINING,
 						ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
