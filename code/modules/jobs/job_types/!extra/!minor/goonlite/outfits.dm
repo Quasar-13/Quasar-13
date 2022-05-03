@@ -32,7 +32,7 @@
 
 
 //Engineering
-/datum/outfit/job/cargo/goon
+/datum/outfit/job/cargo_tech/goon
 	name = "Cargo Technician (Goon)"
 	jobtype = /datum/job/cargo_goon
 	ears = /obj/item/radio/headset/headset_eng

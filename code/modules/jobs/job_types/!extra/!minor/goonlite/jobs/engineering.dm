@@ -11,7 +11,7 @@
 	selection_color = "#fff5cc"
 	maptype = "goonlite"
 
-	outfit = /datum/outfit/job/cargo/goon
+	outfit = /datum/outfit/job/cargo_tech/goon
 
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_QM, ACCESS_ATMOSPHERICS, ACCESS_MINING,
 						ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
