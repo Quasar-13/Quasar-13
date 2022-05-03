@@ -8,7 +8,7 @@
 	selection_color = "#dddddd"
 	maptype = "kepler-ice"
 
-	outfit = /datum/outfit/job/solgov
+	outfit = /datum/outfit/job/ice_hobo
 
 	access = list()
 	minimal_access = list()

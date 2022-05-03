@@ -32,3 +32,14 @@
 	uniform = /obj/item/clothing/under/bni/senior
 	ears = /obj/item/radio/headset/headset_ntrem
 	belt = null
+
+//Misc
+//Vagabond
+/datum/outfit/job/ice_hobo
+	name = "Nomad"
+	jobtype = /datum/job/nomad
+
+	ears = null
+	id = null
+	uniform = /obj/item/clothing/under/vagrant
+	gloves = /obj/item/clothing/gloves/fingerless
