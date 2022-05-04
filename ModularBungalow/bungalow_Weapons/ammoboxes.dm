@@ -282,7 +282,7 @@
 	max_ammo = 12
 /obj/item/ammo_box/ab20mm
 	name = ".20mm HE grenade box"
-	desc = "A box full of small 20mm grenades
+	desc = "A box full of small 20mm grenades"
 	icon_state = "20mmbox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a20mm
