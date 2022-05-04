@@ -682,3 +682,7 @@
 	name = "commander's holster"
 	desc = "A holster able to carry handguns and some ammo."
 	max_items = 4
+
+/obj/item/clothing/gloves/color/captain/admiral/solgov
+	name = "commander's gloves"
+	desc = "the finely tailored gloves of the past site commanders, wonder what happened to them..."
