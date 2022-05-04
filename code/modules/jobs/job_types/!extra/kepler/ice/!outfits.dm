@@ -9,11 +9,23 @@
 
 //Solgov outfits
 /datum/outfit/job/solgov
-	name = "Solgov Survivor"
+	name = "Solgov Colonist"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = null
-
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
+/datum/outfit/job/solgov/sec
+	name = "Solgov Kepler Security"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = /obj/item/melee/classic_baton
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_sec_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
+/datum/outfit/job/solgov/soldier
+	name = "Solgov Kepler Soldier"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = /obj/item/melee/classic_baton
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
 //NT outfits
 //Private
 /datum/outfit/job/remnant
