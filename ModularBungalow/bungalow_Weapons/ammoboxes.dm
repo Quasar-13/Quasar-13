@@ -47,12 +47,6 @@
 	ammo_type = /obj/item/ammo_casing/c38
 
 /obj/item/ammo_box/speedloader/c38/update_icon()
-	..()
-	if (ammo_count() >= 12)
-		icon_state = "slc38-12"
-	else
-		icon_state = "slc38-[ammo_count()]"
-
 
 /obj/item/ammo_box/speedloader/c38/dumdum
 	name = ".38 dum dum speedloader"
@@ -67,11 +61,6 @@
 	ammo_type = /obj/item/ammo_casing/a357
 
 /obj/item/ammo_box/speedloader/a357/update_icon()
-	..()
-	if (ammo_count() >= 12)
-		icon_state = "slc357-12"
-	else
-		icon_state = "slc357-[ammo_count()]"
 
 /obj/item/ammo_box/speedloader/a357/match
 	name = ".357 match speedloader"
