@@ -108,3 +108,34 @@
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
 	icon_state = "kepler_vouchera"
 	w_class = WEIGHT_CLASS_TINY
+
+/obj/machinery/computer/cryopod/elevator_exit
+	name = "Elevator Door"
+	desc = "for getting to the lower or upper part of the way-station when you are done with your mission"
+	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
+	icon_state = "ready"
+	on_store_name = "Station Report"
+
+/obj/machinery/cryopod/elevator_exit/open_machine()
+	..()
+	icon_state = "ready"
+	density = TRUE
+	name = initial(name)
+
+/obj/machinery/cryopod/elevator_exit/close_machine(atom/movable/target)
+	if(!control_computer)
+		find_control_computer(TRUE)
+	if((isnull(target) || isliving(target)) && state_open && !panel_open)
+		..(target)
+		var/mob/living/mob_occupant = occupant
+		if(mob_occupant && mob_occupant.stat != DEAD)
+			to_chat(occupant, "<span class='notice'><b>You feel the elevator starts to take you down to the lower colony. Hopefully you didn't forget anything.</b></span>")
+
+		COOLDOWN_START(src, despawn_world_time, time_till_despawn)
+	icon_state = "bolted"
+
+/obj/machinery/cryopod/elevator_exit/container_resist_act(mob/living/user)
+	visible_message("<span class='notice'>[occupant] emerges from [src]!</span>",
+		"<span class='notice'>You walks out of [src]!</span>")
+	open_machine()
+
