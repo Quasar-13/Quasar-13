@@ -95,60 +95,16 @@
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = ".357 Avtomag"
-	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE. Warning, has a tendency to jam."
+	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE."
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
-	can_jam = 1
-/obj/item/gun/ballistic/automatic/pistol/avtomag/attack_self(mob/user)
-	if(can_jam)
-		if(jammed)
-			if(prob(unjam_chance))
-				jammed = FALSE
-				unjam_chance = 50
-			else
-				unjam_chance += 20
-				to_chat(user, "<span class='warning'>[src] is jammed!</span>")
-				playsound(user,'sound/weapons/jammed.ogg', 75, TRUE)
-				return FALSE
-	..()
 
-/obj/item/gun/ballistic/automatic/pistol/avtomag/process_fire(mob/user)
-	if(can_jam)
-		if(chambered.BB)
-			if(prob(jamming_chance))
-				jammed = TRUE
-			jamming_chance  += jamming_increment
-			jamming_chance = clamp (jamming_chance, 0, 100)
-	return ..()
 
-/obj/item/gun/ballistic/automatic/pistol/avtomag/attackby(obj/item/item, mob/user, params)
-	. = ..()
-	if(can_jam)
-		if(istype(item, /obj/item/gun_maintenance_supplies))
-			if(do_after(user, 10 SECONDS, target = src))
-				user.visible_message("<span class='notice'>[user] finishes maintenance of [src].</span>")
-					jamming_chance = 10
-					qdel(item)
-
-/obj/item/gun/ballistic/automatic/pistol/avtomag/blow_up(mob/user)
-	. = FALSE
-	if(chambered?.BB)
-		process_fire(user, user, FALSE)
-		. = TRUE
-
-/obj/item/gun/ballistic/automatic/pistol/avtomag/nojam
-	name = "factory new .357 Avtomag"
-	desc = "A special pistol made to fire .357 AMP. occasionally found in the hand of certain highs ranking kepler officer, this one is well maintained."
-	can_jam = 0
-	jamming_chance = 0
-	jamming_increment = 0
-	unjam_chance = 100
-
-/obj/item/gun/ballistic/automatic/pistol/avtomag/nojam/kira
+/obj/item/gun/ballistic/automatic/pistol/avtomag/kira
 	name = "That Avtomag"
 	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive."
-
+	icon_state = "avtomag_kira"
 ////////////////////
 //////REVOLVERS////
 ///////////////////
