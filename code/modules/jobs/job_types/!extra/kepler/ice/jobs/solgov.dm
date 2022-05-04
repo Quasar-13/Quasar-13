@@ -106,7 +106,7 @@
 
 	paycheck = PAYCHECK_HARD
 	display_order = JOB_DISPLAY_ORDER_WARDEN
-
+	outfit = /datum/outfit/job/solgov/soldier
 
 //Security
 /datum/job/solgov/security
@@ -119,6 +119,6 @@
 
 	paycheck = PAYCHECK_MEDIUM
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
-
+	outfit = /datum/outfit/job/solgov/sec
 
 
