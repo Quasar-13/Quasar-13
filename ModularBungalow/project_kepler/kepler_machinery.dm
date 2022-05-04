@@ -1,7 +1,7 @@
 //SOLGOV EQUIPMENT VOUCHER!
 /obj/machinery/kepler_equipment_voucher
-	name = "generic equipment vendor"
-	desc = "An equipment vendor for miners, points collected at an ore redemption machine can be spent here."
+	name = "kepler equipment vendor"
+	desc = "An equipment vendor for kepler technician, accept vouchers."
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
 	icon_state = "keplervending"
 	density = TRUE
@@ -24,7 +24,7 @@
 		return
 	return ..()
 //This took me 2 hours pls help
-/obj/machinery/kepler_equipment_vendor/proc/RedeemVoucher(obj/item/kepler_voucher/voucher, mob/redeemer)
+/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucher(obj/item/kepler_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
 
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Voucher Redemption") as null|anything in sortList(items)
@@ -57,7 +57,7 @@
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
 
-/obj/machinery/kepler_equipment_vendor/proc/RedeemVoucher(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
+/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucher(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
 
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Voucher Redemption") as null|anything in sortList(items)
@@ -91,7 +91,7 @@
 	qdel(voucher)
 
 
-/obj/machinery/kepler_equipment_vendor/ex_act(severity, target)
+/obj/machinery/kepler_equipment_voucher/ex_act(severity, target)
 	do_sparks(5, TRUE, src)
 	if(prob(50 / severity) && severity < 3)
 		qdel(src)
