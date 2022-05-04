@@ -109,7 +109,7 @@
 	icon_state = "kepler_vouchera"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/machinery/computer/cryopod/elevator_exit
+/obj/machinery/cryopod/elevator_exit
 	name = "Elevator Door"
 	desc = "for getting to the lower or upper part of the way-station when you are done with your mission"
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
