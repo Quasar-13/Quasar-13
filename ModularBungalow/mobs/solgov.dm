@@ -904,7 +904,7 @@
 	new /obj/item/storage/belt/bandolier(src)
 
 /obj/item/storage/box/security_sar
-/obj/item/storage/box_security_sar/PopoulateContents()
+/obj/item/storage/box_security_sar/PopulateContents()
 	if(empty)
 		return
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
