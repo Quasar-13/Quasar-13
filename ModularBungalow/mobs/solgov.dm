@@ -921,7 +921,7 @@
 	new /obj/item/roller(src)
 
 /obj/item/storage/box/commander_classic
-/obj/item/storage/box/commander_classic/PopoulateContents()
+/obj/item/storage/box/commander_classic/PopulateContents()
 	if(empty)
 		return
 	new /obj/item/gun/ballistic/automatic/t12(src)
@@ -942,7 +942,7 @@
 	new /obj/item/roller(src)
 
 /obj/item/storage/box/commander_ranger
-/obj/item/storage/box/commander_ranger/PopoulateContents()
+/obj/item/storage/box/commander_ranger/PopulateContents()
 	if(empty)
 		return
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
@@ -963,7 +963,7 @@
 	new /obj/item/roller(src)
 
 /obj/item/storage/box/commander_assault
-/obj/item/storage/box/commander_assault/PopoulateContents()
+/obj/item/storage/box/commander_assault/PopulateContents()
 	if(empty)
 		return
 	new /obj/item/gun/ballistic/automatic/m90/xm29(src)
