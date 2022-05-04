@@ -25,7 +25,7 @@
 
 //Captain Equivalent
 /datum/job/solgov/commander
-	title = "Commander"
+	title = "Site Commander"
 	department_head = list("Solgov Command")
 	total_positions = 1
 	spawn_positions = 1
@@ -42,7 +42,7 @@
 
 //HOP Equivalent
 /datum/job/solgov/administrator
-	title = "Administrator"
+	title = "Site Administrator"
 	total_positions = 1
 	spawn_positions = 1
 	selection_color = "#03fca5"
