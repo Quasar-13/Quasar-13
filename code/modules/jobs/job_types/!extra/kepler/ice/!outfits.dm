@@ -31,7 +31,7 @@
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
 
 //NT outfits
 //Private

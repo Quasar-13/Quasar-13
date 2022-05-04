@@ -119,3 +119,10 @@
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
 	icon_state = "kepler_vouchera"
 	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/kepler_commander_voucher
+	name = "kepler commander voucher"
+	desc = "A token to redeem a piece of equipment. Use it on a kepler equipment vendor.this one redeem commander equipment"
+	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
+	icon_state = "kepler_voucherc"
+	w_class = WEIGHT_CLASS_TINY
