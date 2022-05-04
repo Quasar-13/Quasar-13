@@ -96,12 +96,10 @@
 		if("Classic Commander Kit")
 			new /obj/item/storage/box/commander_classic(drop_location)
 		if("Command Assault Kit")
-			new /obj/item/extinguisher/mini(drop_location)
-			new /obj/item/resonator(drop_location)
+			new /obj/item/storage/box/commander_assault(drop_location)
 		if("Veteran Snow Ranger Kit")
-			new /mob/living/simple_animal/hostile/mining_drone(drop_location)
-			new /obj/item/weldingtool/hugetank(drop_location)
-			new /obj/item/clothing/head/welding(drop_location)
+			new /obj/item/storage/box/commander_ranger(drop_location)
+
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
 
