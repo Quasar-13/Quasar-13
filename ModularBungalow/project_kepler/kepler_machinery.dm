@@ -23,6 +23,7 @@
 	if(default_deconstruction_crowbar(I))
 		return
 	return ..()
+//holy fucking sex!! redeem my voucher please!
 //This took me 2 hours pls help
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherKepler(obj/item/kepler_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
