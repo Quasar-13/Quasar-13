@@ -45,11 +45,14 @@
 	description = "An abandoned hangar containing exosuits."
 	suffix = "jungle_hangar.dmm"
 
+/*	Infinite Skeleton spawn, jesus christ
+
 /datum/map_template/ruin/jungle/skeleton
 	name = "Skeleton Pile"
 	id = "skeletonjungle"
 	description = "You will get boned."
 	suffix = "jungle_skeleton.dmm"
+*/
 
 /datum/map_template/ruin/jungle/spider
 	name = "Jungle Spiders"
