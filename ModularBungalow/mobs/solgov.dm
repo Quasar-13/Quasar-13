@@ -707,3 +707,22 @@
 /obj/item/clothing/gloves/color/captain/admiral/solgov
 	name = "commander's gloves"
 	desc = "the finely tailored gloves of the past site commanders, wonder what happened to them..."
+
+/obj/item/storage/backpack/duffelbag/solgov_conscription
+	name = "Military Conscription Box"
+	desc = "Everything you need in a neat little bg, can be used for stoage aswell."
+
+/obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/clothing/under/syndicate/camo/snow(src)
+	new /obj/item/clothing/suit/armor/vest/solgov(src)
+	new /obj/item/clothing/head/helmet/solgov(src)
+	new /obj/item/gun/ballistic/automatic/mini_uzi/kepler(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/storage/belt/military/assault(src)
