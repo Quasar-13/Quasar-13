@@ -632,11 +632,9 @@
 /turf/open/floor/plating/icemoon,
 /area/icemoon/surface/outdoors)
 "aNp" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/obj/item/kinetic_crusher,
-/turf/closed/wall/mineral/wood/nonmetal,
+/obj/structure/bed/dogbed/runtime,
+/mob/living/simple_animal/pet/cat/runtime,
+/turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "aNB" = (
 /obj/structure/sign/warning/explosives/alt,
@@ -1615,9 +1613,20 @@
 /turf/open/floor/engine/air,
 /area/ruin/powered)
 "bPB" = (
-/obj/structure/bed,
-/obj/item/bedsheet/grey,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
+	},
+/turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
 "bPH" = (
 /obj/machinery/griddle,
@@ -8979,18 +8988,9 @@
 /area/ruin/space/has_grav/hellfactoryoffice)
 "jPm" = (
 /obj/effect/turf_decal/weather/snow/corner{
-	dir = 9
+	dir = 1
 	},
-/obj/machinery/porta_turret/syndicate/energy/raven{
-	active_power_usage = 1;
-	base_icon_state = "syndie";
-	icon_state = "syndie_off";
-	lethal_projectile = /obj/projectile/bullet/p50;
-	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
-	max_integrity = 800;
-	reqpower = 1;
-	shot_delay = 6
-	},
+/obj/item/kinetic_crusher,
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
 "jQx" = (
@@ -12944,9 +12944,20 @@
 /turf/open/floor/plating/dirt,
 /area/icemoon/surface/outdoors)
 "obe" = (
-/obj/structure/bed/dogbed/runtime,
-/mob/living/simple_animal/pet/cat/runtime,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
+	},
+/turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
 "obs" = (
 /obj/machinery/computer/mech_bay_power_console,
@@ -13618,7 +13629,7 @@
 /obj/effect/mob_spawn/human/corpse/charredskeleton,
 /obj/item/clothing/under/rank/security/officer/kepler/ranger,
 /obj/item/clothing/head/beret/durathread/kepler/ranger,
-/obj/item/gun/ballistic/automatic/pistol/avtomag/nojam/kira,
+/obj/item/gun/ballistic/automatic/pistol/avtomag/kira,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "oIn" = (
@@ -14633,20 +14644,9 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "pEa" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/obj/machinery/porta_turret/syndicate/energy/raven{
-	active_power_usage = 1;
-	base_icon_state = "syndie";
-	icon_state = "syndie_off";
-	lethal_projectile = /obj/projectile/bullet/p50;
-	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
-	max_integrity = 800;
-	reqpower = 1;
-	shot_delay = 6
-	},
-/turf/closed/wall/mineral/wood/nonmetal,
+/obj/structure/bed,
+/obj/item/bedsheet/grey,
+/turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "pEi" = (
 /obj/structure/chair/stool{
@@ -15193,7 +15193,13 @@
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
 "qdO" = (
-/obj/machinery/portable_atmospherics/scrubber,
+/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/slug,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
+/obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
+/obj/item/storage/belt/military/assault,
+/obj/structure/closet/toolcloset,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "qeb" = (
@@ -15759,6 +15765,10 @@
 /obj/structure/curtain,
 /turf/open/floor/pod/dark,
 /area/ntremnant)
+"qLA" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/powered)
 "qLR" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -20659,10 +20669,6 @@
 /obj/item/clothing/suit/hooded/wintercoat/engineering/tcomms,
 /obj/item/flashlight/seclite,
 /obj/item/megaphone,
-/obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
-/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
-/obj/item/ammo_box/shotgun/buckshot,
-/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "vUG" = (
@@ -50833,8 +50839,8 @@ qMs
 qMs
 qMs
 qMs
-qMs
-jPm
+bPB
+lfP
 lfP
 lfP
 lfP
@@ -51120,9 +51126,9 @@ qMs
 qMs
 qMs
 qMs
-qMs
 wAO
 paY
+lBr
 lBr
 vVt
 qsK
@@ -51407,9 +51413,9 @@ qMs
 qMs
 qMs
 qMs
-qMs
 wAO
-bPB
+pEa
+lBr
 lBr
 cQL
 lBr
@@ -51694,9 +51700,9 @@ qMs
 qMs
 qMs
 qMs
-qMs
+jPm
 aNp
-obe
+lBr
 lBr
 lBr
 lBr
@@ -51981,9 +51987,9 @@ qMs
 qMs
 qMs
 qMs
-qMs
 wAO
 vUo
+lBr
 lBr
 sDG
 iPn
@@ -52268,8 +52274,8 @@ qMs
 qMs
 qMs
 qMs
-qMs
 wAO
+qLA
 qdO
 lBr
 oZY
@@ -52555,8 +52561,8 @@ qMs
 qMs
 qMs
 qMs
-qMs
-pEa
+obe
+wPY
 wPY
 wPY
 wPY
