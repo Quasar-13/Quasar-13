@@ -16,7 +16,7 @@
 
 /obj/machinery/kepler_equipment_voucher/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/kepler_voucher))
-		RedeemVoucher(I, user)
+		RedeemVoucherKepler(I, user)
 		return
 	if(default_deconstruction_screwdriver(user, "keplervending-open", "keplervending", I))
 		return
@@ -24,7 +24,7 @@
 		return
 	return ..()
 //This took me 2 hours pls help
-/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucher(obj/item/kepler_voucher/voucher, mob/redeemer)
+/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherKepler(obj/item/kepler_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
 
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Voucher Redemption") as null|anything in sortList(items)
@@ -57,7 +57,17 @@
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
 
-/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucher(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
+/obj/machinery/kepler_equipment_voucher/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/kepler_sec_voucher))
+		RedeemVoucherSecKepler(I, user)
+		return
+	if(default_deconstruction_screwdriver(user, "keplervending-open", "keplervending", I))
+		return
+	if(default_deconstruction_crowbar(I))
+		return
+	return ..()
+
+/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherSecKepler(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
 
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Security Voucher Redemption") as null|anything in sortList(items)
