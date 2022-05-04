@@ -905,6 +905,8 @@
 
 /obj/item/storage/box/security_sar
 /obj/item/storage/box_security_sar/PopoulateContents()
+	if(empty)
+		return
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
@@ -917,3 +919,65 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/roller(src)
+
+/obj/item/storage/box/commander_classic
+/obj/item/storage/box/commander_classic/PopoulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/automatic/t12(src)
+	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
+	new /obj/item/ammo_box/magazine/t12(src)
+	new /obj/item/ammo_box/magazine/t12(src)
+	new /obj/item/ammo_box/magazine/t12(src)
+	new /obj/item/ammo_box/magazine/t12(src)
+	new /obj/item/ammo_box/magazine/t12(src)
+	new /obj/item/storage/belt/holster/shoulder/commander(src)
+	new /obj/item/gun/ballistic/revolver/kira(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/storage/belt/military(src)
+	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/firstaid/advanced(src)
+	new /obj/item/roller(src)
+
+/obj/item/storage/box/commander_ranger
+/obj/item/storage/box/commander_ranger/PopoulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ballistic/revolver/sequoia(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/firstaid/advanced(src)
+	new /obj/item/storage/belt/holster/shoulder/commander(src)
+	new /obj/item/roller(src)
+
+/obj/item/storage/box/commander_assault
+/obj/item/storage/box/commander_assault/PopoulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/automatic/m90/xm29(src)
+	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/gun/ballistic/revolver/sw500(src)
+	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/storage/belt/utility/full/engi(src)
+	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/firstaid/advanced(src)
+	new /obj/item/storage/belt/holster/shoulder/commander(src)
+	new /obj/item/roller(src)
+

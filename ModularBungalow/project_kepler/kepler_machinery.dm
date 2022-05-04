@@ -94,7 +94,7 @@
 	var/drop_location = drop_location()
 	switch(selection)
 		if("Classic Commander Kit")
-			new /obj/item/storage/belt/mining/vendor(drop_location)
+			new /obj/item/storage/box/commander_classic(drop_location)
 		if("Command Assault Kit")
 			new /obj/item/extinguisher/mini(drop_location)
 			new /obj/item/resonator(drop_location)
