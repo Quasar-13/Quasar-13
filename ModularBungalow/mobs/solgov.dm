@@ -709,8 +709,8 @@
 	desc = "the finely tailored gloves of the past site commanders, wonder what happened to them..."
 
 /obj/item/storage/backpack/duffelbag/solgov_conscription
-	name = "Military Conscription Box"
-	desc = "Everything you need in a neat little bg, can be used for stoage aswell."
+	name = "Military Conscription Kit"
+	desc = "Everything you need in a neat little bag, can be used for stoage aswell."
 
 /obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
 	if(empty)
@@ -726,3 +726,23 @@
 	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/soldier
+	name = "Military Conscription Box Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/soldier/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/clothing/under/syndicate/camo/snow(src)
+	new /obj/item/clothing/suit/armor/vest/solgov(src)
+	new /obj/item/clothing/head/helmet/solgov(src)
+	new /obj/item/gun/ballistic/automatic/ar/hk21(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/soldier/marksman
