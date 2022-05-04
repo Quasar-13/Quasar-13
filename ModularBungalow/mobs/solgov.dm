@@ -775,7 +775,7 @@
 /obj/item/storage/box/soldier_wildlifehunter
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
-/PopulateContents()
+/obj/item/storage/box/soldier_wildlifehunter/PopulateContents()
 	if(empty)
 		return
 	new /obj/item/kinetic_crusher(src)
@@ -893,7 +893,7 @@
 /obj/item/storage/box/security_prvivateer/PopulateContents()
 	if(empty)
 		return
-	new /obj/item/gun/ballistic/automatic/shotgun/combat(src)
+	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
