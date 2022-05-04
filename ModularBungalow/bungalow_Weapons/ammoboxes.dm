@@ -73,7 +73,6 @@
 	else
 		icon_state = "slc357-[ammo_count()]"
 
-
 /obj/item/ammo_box/speedloader/a357/match
 	name = ".357 match speedloader"
 	desc = "A speedloader full of .357 match catridges ready to be used!"
