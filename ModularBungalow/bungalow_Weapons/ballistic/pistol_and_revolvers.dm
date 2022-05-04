@@ -101,10 +101,11 @@
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
 
-/obj/item/gun/ballistic/automatic/pistol/avtomag/kira
+/obj/item/gun/ballistic/automatic/pistol/avtomag/akira
 	name = "That Avtomag"
 	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive."
 	icon_state = "avtomag_kira"
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////

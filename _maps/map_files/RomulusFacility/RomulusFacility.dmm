@@ -59,9 +59,6 @@
 /area/crew_quarters/dorms/barracks)
 "adG" = (
 /obj/structure/table,
-/obj/item/ammo_casing/caseless/rocket/weak,
-/obj/item/ammo_casing/caseless/rocket/weak,
-/obj/item/ammo_casing/caseless/rocket/weak,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
@@ -73,10 +70,6 @@
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
-/obj/item/gun/ballistic/rocketlauncher/nobackblast{
-	name = "\improper PML-11";
-	pin = null
-	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "adZ" = (
@@ -159,6 +152,7 @@
 "akE" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/cable,
+/obj/structure/table/reinforced,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "akL" = (
@@ -1984,6 +1978,9 @@
 "chU" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap{
+	pixel_y = 25
 	},
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
@@ -4137,12 +4134,21 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/fakelattice,
 /obj/item/storage/toolbox/mechanical,
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov,
 /turf/open/floor/plating/rust,
 /area/engine/storage)
 "etW" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/snowed/icemoon,
+/obj/structure/fence,
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "euI" = (
 /obj/structure/chair/office{
@@ -4381,11 +4387,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "eEL" = (
-/obj/machinery/button{
-	id = "KeplerCO"
+/obj/machinery/button/door/directional/east{
+	id = "SyndicateForgottenMechGarage1"
 	},
-/turf/closed/wall/r_wall,
-/area/crew_quarters/heads/captain)
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "eEO" = (
 /obj/structure/window/reinforced/fulltile/ice{
 	name = "frozen window"
@@ -7143,13 +7151,7 @@
 /turf/open/floor/plasteel/stairs,
 /area/ruin/space/has_grav/powered)
 "hKF" = (
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov{
-	pixel_x = 4
-	},
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger{
-	pixel_x = -5;
-	pixel_y = 2
-	},
+/obj/item/gun/ballistic/automatic/pistol/avtomag/akira,
 /turf/closed/indestructible/rock/snow,
 /area/ruin/powered)
 "hLn" = (
@@ -8322,6 +8324,16 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
 	},
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 6
+	},
 /turf/closed/wall/r_wall,
 /area/security/brig)
 "jdG" = (
@@ -8973,10 +8985,13 @@
 /turf/closed/wall/rust,
 /area/icemoon/surface)
 "jOt" = (
-/obj/machinery/button/door/directional{
-	id = "SyndicateForgottenMechGarage1"
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -10
 	},
-/turf/closed/indestructible/syndicate,
+/turf/open/floor/mineral/plastitanium{
+	name = "syndicate floor"
+	},
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "jOA" = (
 /obj/effect/decal/cleanable/glass,
@@ -10179,6 +10194,12 @@
 "leG" = (
 /turf/open/floor/wood,
 /area/awaymission/bmpship/fore)
+"leL" = (
+/mob/living/simple_animal/hostile/solgov/ranged{
+	lose_patience_timeout = 50
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/powered)
 "leU" = (
 /obj/machinery/telecomms/allinone/indestructable,
 /turf/open/floor/circuit/green,
@@ -11050,6 +11071,10 @@
 "mdK" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/blue,
+/obj/machinery/button/door{
+	id = "KeplerCO";
+	pixel_x = -24
+	},
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "mdW" = (
@@ -12664,6 +12689,8 @@
 	name = "administrator's coat"
 	},
 /obj/item/melee/classic_baton,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
 "nKo" = (
@@ -12926,12 +12953,6 @@
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/awaymission/snowdin/post/minipost)
-"oaZ" = (
-/obj/machinery/button{
-	id = "KeplerHOP"
-	},
-/turf/closed/wall/r_wall,
-/area/crew_quarters/heads/hop)
 "obc" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
@@ -13011,7 +13032,7 @@
 	dir = 1
 	},
 /turf/closed/wall/r_wall,
-/area/ai_monitored/security/armory)
+/area/crew_quarters/heads/captain)
 "odF" = (
 /obj/structure/sign/poster/contraband/revolver,
 /turf/closed/wall,
@@ -13629,7 +13650,7 @@
 /obj/effect/mob_spawn/human/corpse/charredskeleton,
 /obj/item/clothing/under/rank/security/officer/kepler/ranger,
 /obj/item/clothing/head/beret/durathread/kepler/ranger,
-/obj/item/gun/ballistic/automatic/pistol/avtomag/kira,
+/obj/item/gun/ballistic/automatic/pistol/avtomag/akira,
 /turf/open/floor/plating/snowed,
 /area/icemoon/surface)
 "oIn" = (
@@ -15193,13 +15214,14 @@
 /turf/open/floor/plasteel/white,
 /area/commons/cryopods)
 "qdO" = (
-/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
 /obj/item/ammo_box/shotgun/buckshot,
 /obj/item/ammo_box/shotgun/slug,
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
 /obj/item/storage/belt/military/assault,
 /obj/structure/closet/toolcloset,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "qeb" = (
@@ -18781,6 +18803,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 5
 	},
+/obj/machinery/button{
+	id = "KeplerHOP";
+	pixel_x = 24
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "tUk" = (
@@ -19512,9 +19538,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/engine/engineering)
-"uJJ" = (
-/turf/open/genturf,
-/area/icemoon/surface/outdoors)
 "uJR" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker/quantum,
@@ -20232,6 +20255,8 @@
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
 /obj/item/storage/belt/security/webbing,
+/obj/item/flashlight/seclite,
+/obj/item/melee/classic_baton,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "vwh" = (
@@ -38311,7 +38336,7 @@ avQ
 avQ
 avQ
 avQ
-uJJ
+vzW
 vzW
 vzW
 vzW
@@ -62614,7 +62639,7 @@ mGi
 fmR
 fmR
 fmR
-fmR
+mGi
 fmR
 fmR
 fmR
@@ -63196,7 +63221,7 @@ fmR
 avQ
 avQ
 avQ
-etW
+lLE
 avQ
 avQ
 avQ
@@ -63616,7 +63641,7 @@ rXR
 vLD
 noV
 kxh
-ehN
+leL
 vLD
 aXo
 kxh
@@ -63770,7 +63795,7 @@ fmR
 tbF
 avQ
 avQ
-etW
+lLE
 avQ
 avQ
 avQ
@@ -64057,11 +64082,11 @@ fmR
 tbF
 avQ
 avQ
-shE
-shE
-shE
-shE
-shE
+rCO
+rCO
+rCO
+rCO
+rCO
 qrC
 xSg
 oqW
@@ -64190,7 +64215,7 @@ vLD
 vLD
 sXX
 noV
-ehN
+leL
 vLD
 aXo
 noV
@@ -65502,7 +65527,7 @@ eoI
 enj
 mdK
 ign
-eEL
+ogj
 oqm
 bqO
 mhi
@@ -65771,7 +65796,7 @@ mGi
 fmR
 fmR
 fmR
-fmR
+mGi
 fmR
 fmR
 fmR
@@ -66375,7 +66400,7 @@ xUX
 ibp
 qaZ
 cwo
-oaZ
+pbs
 chU
 bhV
 gtB
@@ -66640,7 +66665,7 @@ vzW
 dPu
 xWF
 qcX
-fPr
+etW
 fPr
 fPr
 fPr
@@ -92056,8 +92081,8 @@ cFQ
 cFQ
 cFQ
 dfF
-dfF
 jOt
+tMW
 fWc
 qUx
 oak
@@ -93203,7 +93228,7 @@ fMU
 pZa
 pZa
 mDu
-ncm
+eEL
 xXP
 qfW
 sjV

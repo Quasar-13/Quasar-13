@@ -93,7 +93,16 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
-	fire_delay = 0.14
+	fire_delay = 0.10
+/obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
+	update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/xm29
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/xm29
+	pin = /obj/item/firing_pin
+
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
 	name = "SG-P25 'Crow'"
