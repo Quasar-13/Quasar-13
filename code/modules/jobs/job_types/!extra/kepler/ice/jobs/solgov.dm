@@ -31,6 +31,7 @@
 	spawn_positions = 1
 	supervisors = "space law"
 	selection_color = "#89c7b1"
+	outfit = /datum/outfit/job/solgov/commander
 
 	access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS, ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CAPTAIN,  ACCESS_SECURITY, ACCESS_RND, ACCESS_ARMORY, ACCESS_HEADS, ACCESS_ATMOSPHERICS)

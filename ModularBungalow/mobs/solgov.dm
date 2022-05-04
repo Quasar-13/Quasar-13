@@ -651,3 +651,34 @@
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
 	new /obj/item/clothing/glasses/hud/health/syndicate(src)
+
+/obj/item/storage/belt/holster/shoulder
+	name = "shoulder's holster"
+	desc = "A holster able to carry handguns and some ammo."
+
+/obj/item/storage/belt/holster/shoulder/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
+		/obj/item/ammo_box/magazine/m9mm_aps,
+		/obj/item/ammo_box/magazine/m45,
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/ammo_box/c38, // Revolver speedloaders.
+		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/a762,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/belt/holster/shoulder/commander
+	name = "commander's holster"
+	desc = "A holster able to carry handguns and some ammo."
+	max_items = 4
