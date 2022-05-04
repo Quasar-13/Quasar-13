@@ -643,11 +643,9 @@
 		return
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
-	new /obj/item/reagent_containers/hypospray/medipen/(src)
-	new /obj/item/reagent_containers/hypospray/medipen/(src)
-	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/healthanalyzer/advanced(src)
 	new /obj/item/reagent_containers/pill/patch/libital(src)
 	new /obj/item/reagent_containers/pill/patch/libital(src)
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
-	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+	new /obj/item/clothing/glasses/hud/health/syndicate(src)
