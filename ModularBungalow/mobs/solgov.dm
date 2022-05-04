@@ -720,11 +720,11 @@
 	new /obj/item/clothing/head/helmet/solgov(src)
 	new /obj/item/gun/ballistic/automatic/mini_uzi/kepler(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/storage/belt/military/assault(src)
 
 /obj/item/storage/box/soldier
@@ -766,11 +766,11 @@
 		return
 	new /obj/item/gun/ballistic/automatic/uzi(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
-	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
+	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/storage/belt/military/assault(src)
 /obj/item/storage/box/soldier_wildlifehunter
 	name = "Military Conscription Box Kit"
@@ -828,10 +828,10 @@
 /obj/item/storage/box/grenadier_grenades/PopulateContents()
 	if(empty)
 		return
-	new /obj/item/grenade/gas_crystal/healium(src)
-	new /obj/item/grenade/gas_crystal/healium(src)
-	new /obj/item/grenade/gas_crystal/healium(src)
-	new /obj/item/grenade/gas_crystal/healium(src)
+	new /obj/item/grenade/gas_crystal/healium_crystal(src)
+	new /obj/item/grenade/gas_crystal/healium_crystal(src)
+	new /obj/item/grenade/gas_crystal/healium_crystal(src)
+	new /obj/item/grenade/gas_crystal/healium_crystal(src)
 	new /obj/item/grenade/chem_grenade/metalfoam
 	new /obj/item/grenade/chem_grenade/metalfoam(src)
 	new /obj/item/grenade/chem_grenade/metalfoam(src)
