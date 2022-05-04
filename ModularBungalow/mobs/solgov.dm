@@ -740,9 +740,121 @@
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/soldier_marksman
+/obj/item/storage/box/soldier_marksman/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/soldier_standard
+	name = "Military Conscription Box Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/soldier_standard/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/automatic/uzi(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
+	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/ammo_box/magazine/uzim9mmm(src)
 	new /obj/item/storage/belt/military/assault(src)
+/obj/item/storage/box/soldier_wildlifehunter
+	name = "Military Conscription Box Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/kinetic_crusher(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/claymore(src)
+	new /obj/item/sharpener(src)
+	new /obj/item/gun/ballistic/revolver/rhino(src)
+	new /obj/item/ammo_box/speedloader/c38/dumdum(src)
+	new /obj/item/ammo_box/speedloader/c38/dumdum(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+/obj/item/storage/box/soldier_grenadier
+	name = "Military Conscription Box Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/soldier_grenadier/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/grenadelauncher(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/gun/ballistic/revolver/detective(src)
+	new /obj/item/ammo_box/speedloader/c38/dumdum(src)
+	new /obj/item/ammo_box/speedloader/c38/dumdum(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+	new /obj/item/storage/box/grenadier_grenades/suppression(src)
+	new /obj/item/storage/box/grenadier_grenades/lethal(src)
+	new /obj/item/storage/box/grenadier_grenades(src)
+	new /obj/item/storage/belt/grenade/full(src)
+/obj/item/storage/box/soldier_sar
+	name = "Military Conscription Box Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/soldier_sar/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
 
-/obj/item/storage/box/soldier/marksman
+/obj/item/storage/box/grenadier_grenades
+
+/obj/item/storage/box/grenadier_grenades/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/grenadier_grenades/lethal
+
+/obj/item/storage/box/grenadier_grenades/lethal/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
+
+/obj/item/storage/box/grenadier_grenades/suppression
+
+/obj/item/storage/box/grenadier_grenades/suppression/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/storage/belt/military/assault(src)
