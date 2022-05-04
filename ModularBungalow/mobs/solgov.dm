@@ -979,5 +979,5 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/box/grenadier_grenades/lethal(src)
 
