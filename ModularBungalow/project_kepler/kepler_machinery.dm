@@ -15,7 +15,7 @@
 
 
 /obj/machinery/kepler_equipment_voucher/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/solgov_voucher))
+	if(istype(I, /obj/item/kepler_voucher))
 		RedeemVoucher(I, user)
 		return
 	if(default_deconstruction_screwdriver(user, "keplervending-open", "keplervending", I))
