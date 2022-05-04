@@ -13,7 +13,7 @@
 
 /obj/item/clothing/under/smc/police
 	desc = "A blue uniform for the military police"
-	name = "warden's uniform"
+	name = "military police's uniform"
 	icon_state = "police"
 
 /obj/item/clothing/under/smc/recruit
