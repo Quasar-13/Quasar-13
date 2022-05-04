@@ -46,8 +46,6 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/c38
 
-/obj/item/ammo_box/speedloader/c38/update_icon()
-
 /obj/item/ammo_box/speedloader/c38/dumdum
 	name = ".38 dum dum speedloader"
 	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
@@ -59,8 +57,6 @@
 	icon_state = "slc357"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
-
-/obj/item/ammo_box/speedloader/a357/update_icon()
 
 /obj/item/ammo_box/speedloader/a357/match
 	name = ".357 match speedloader"
