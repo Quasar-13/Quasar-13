@@ -15,7 +15,7 @@
 
 
 /obj/machinery/kepler_equipment_voucher/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/solgov_soldier_voucher))
+	if(istype(I, /obj/item/solgov_voucher))
 		RedeemVoucher(I, user)
 		return
 	if(default_deconstruction_screwdriver(user, "keplervending-open", "keplervending", I))
@@ -60,7 +60,7 @@
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucher(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
 	var/items = list("Survival Capsule and Explorer's Webbing", "Resonator Kit", "Minebot Kit", "Extraction and Rescue Kit", "Crusher Kit", "Mining Conscription Kit", "Space Exploration Kit")
 
-	var/selection = input(redeemer, "Pick your equipment", "Equipment Voucher Redemption") as null|anything in sortList(items)
+	var/selection = input(redeemer, "Pick your equipment", "Equipment Security Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return
 	var/drop_location = drop_location()
