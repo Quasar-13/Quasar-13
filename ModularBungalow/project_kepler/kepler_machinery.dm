@@ -86,23 +86,22 @@
 		return
 	return ..()
 
-/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherCommanderKepler(kepler_commander_voucher/voucher, mob/redeemer)
-	var/items = list("Classic Commander Kit", "Command Assault Kit", "Veteran Snow Ranger Kit")
+/obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherCommanderKepler(obj/item/kepler_commander_voucher/voucher, mob/redeemer)
+	var/items = list("Classic Kit", "Ranger Kit", "Assault")
+
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Command Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return
 	var/drop_location = drop_location()
 	switch(selection)
-		if("Classic Commander Kit")
-			new /obj/item/storage/box/commander_classic(drop_location)
-		if("Command Assault Kit")
-			new /obj/item/storage/box/commander_assault(drop_location)
-		if("Veteran Snow Ranger Kit")
-			new /obj/item/storage/box/commander_ranger(drop_location)
-
+		if("Classic Kit")
+			new /obj/item/storage/box/security_sar(drop_location)
+		if("Ranger Kit")
+			new /obj/item/storage/box/security_privateer(drop_location)
+		if("Assault Kit")
+			new /obj/item/storage/box/security_marksman(drop_location)
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
-
 
 /obj/machinery/kepler_equipment_voucher/ex_act(severity, target)
 	do_sparks(5, TRUE, src)
