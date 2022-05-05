@@ -947,7 +947,7 @@
 		return
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
