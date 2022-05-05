@@ -711,7 +711,7 @@
 /obj/item/storage/backpack/duffelbag/solgov_conscription
 	name = "Military Conscription Kit"
 	desc = "Everything you need in a neat little bag, can be used for stoage aswell."
-
+//EVERYTHING BELOW ARE KITS!
 /obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
 	if(empty)
 		return
@@ -726,6 +726,11 @@
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+
 
 /obj/item/storage/box/soldier
 	name = "Military Conscription Box Kit"
@@ -744,6 +749,10 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
 
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
@@ -757,6 +766,11 @@
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+
 
 /obj/item/storage/box/soldier_standard
 	name = "Military Conscription Box Kit"
@@ -772,6 +786,11 @@
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+
 /obj/item/storage/box/soldier_wildlifehunter
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
@@ -821,6 +840,10 @@
 	new /obj/item/storage/belt/utility/full/engi(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
 	new /obj/item/roller(src)
 
 /obj/item/storage/box/grenadier_grenades
@@ -888,6 +911,11 @@
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+
 
 /obj/item/storage/box/security_privateer
 /obj/item/storage/box/security_prvivateer/PopulateContents()
@@ -902,6 +930,10 @@
 	new /obj/item/ammo_box/shotgun/buckshot(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/storage/belt/bandolier(src)
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
 
 /obj/item/storage/box/security_sar
 /obj/item/storage/box_security_sar/PopulateContents()
@@ -918,6 +950,10 @@
 	new /obj/item/storage/belt/utility/full/engi(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
 	new /obj/item/roller(src)
 
 /obj/item/storage/box/commander_classic
