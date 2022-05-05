@@ -60,7 +60,7 @@
 		/mob/living/simple_animal/hostile/hivebot/range = 20,
 		/mob/living/simple_animal/hostile/hivebot/rapid = 10,
 		/mob/living/simple_animal/hostile/hivebot/mechanic = 20,
-		mob/living/simple_animal/hostile/asteroid/goliath = 3,
+		/mob/living/simple_animal/hostile/asteroid/goliath = 3,
 		/mob/living/simple_animal/hostile/asteroid/hivelord = 3)
 	flora_spawn_list = list(
 		/obj/structure/flora/rock/jungle = 2,
