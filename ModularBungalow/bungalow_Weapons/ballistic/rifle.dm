@@ -115,8 +115,14 @@
 	update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/xm29
-	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/xm29
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
 	pin = /obj/item/firing_pin
+
+/obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	name = "grenade launcher internal magazine"
+	ammo_type = /obj/item/ammo_casing/a40mm
+	caliber = CALIBER_40MM
+	max_ammo = 5
 
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
