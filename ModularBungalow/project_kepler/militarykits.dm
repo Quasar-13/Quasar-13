@@ -1,11 +1,9 @@
 
 /obj/item/storage/backpack/duffelbag/solgov_conscription
 	name = "Military Conscription Kit"
-	desc = "Everything you need in a neat little bag, can be used for stoage aswell."
+	desc = "Everything you need in a neat little bag, can be used for storage as well."
 //EVERYTHING BELOW ARE KITS!
 /obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/clothing/under/syndicate/camo/snow(src)
 	new /obj/item/clothing/suit/armor/vest/solgov(src)
 	new /obj/item/clothing/head/helmet/solgov(src)
@@ -26,9 +24,8 @@
 /obj/item/storage/box/soldier
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
+
 /obj/item/storage/box/soldier/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/clothing/under/syndicate/camo/snow(src)
 	new /obj/item/clothing/suit/armor/vest/solgov(src)
 	new /obj/item/clothing/head/helmet/solgov(src)
@@ -47,8 +44,6 @@
 
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/speedloader/a357/match(src)
@@ -67,8 +62,6 @@
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_standard/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/automatic/uzi(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
@@ -86,8 +79,6 @@
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_wildlifehunter/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/kinetic_crusher(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/claymore(src)
@@ -101,9 +92,8 @@
 /obj/item/storage/box/soldier_grenadier
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
+
 /obj/item/storage/box/soldier_grenadier/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/grenadelauncher(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/head/bio_hood/security(src)
@@ -121,9 +111,8 @@
 /obj/item/storage/box/soldier_sar
 	name = "Military Conscription Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
+
 /obj/item/storage/box/soldier_sar/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
@@ -144,8 +133,6 @@
 /obj/item/storage/box/grenadier_grenades
 
 /obj/item/storage/box/grenadier_grenades/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
@@ -158,8 +145,6 @@
 /obj/item/storage/box/grenadier_grenades/lethal
 
 /obj/item/storage/box/grenadier_grenades/lethal/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/grenade/frag(src)
 	new /obj/item/grenade/frag(src)
 	new /obj/item/grenade/frag(src)
@@ -176,8 +161,6 @@
 /obj/item/storage/box/grenadier_grenades/suppression
 
 /obj/item/storage/box/grenadier_grenades/suppression/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/grenade/spawnergrenade/spesscarp(src)
 	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
 	new /obj/item/grenade/spawnergrenade/spesscarp(src)
@@ -195,9 +178,8 @@
 	new /obj/item/grenade/empgrenade(src)
 
 /obj/item/storage/box/security_marksman
+
 /obj/item/storage/box/security_marksman/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/speedloader/a357/match(src)
@@ -214,8 +196,6 @@
 
 /obj/item/storage/box/security_privateer
 /obj/item/storage/box/security_prvivateer/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
@@ -232,8 +212,6 @@
 
 /obj/item/storage/box/security_sar
 /obj/item/storage/box_security_sar/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
@@ -253,8 +231,6 @@
 
 /obj/item/storage/box/commander_classic
 /obj/item/storage/box/commander_classic/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/automatic/t12(src)
 	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
 	new /obj/item/ammo_box/magazine/t12(src)
@@ -263,7 +239,7 @@
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/gun/ballistic/revolver/kira(src)
+	new /obj/item/gun/ballistic/revolver(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
@@ -274,8 +250,6 @@
 
 /obj/item/storage/box/commander_ranger
 /obj/item/storage/box/commander_ranger/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
 	new /obj/item/ammo_box/speedloader/a357/match(src)
@@ -283,7 +257,7 @@
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ballistic/revolver/sequoia(src)
+	new /obj/item/gun/ballistic/revolver/sequoia(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
@@ -295,8 +269,6 @@
 
 /obj/item/storage/box/commander_assault
 /obj/item/storage/box/commander_assault/PopulateContents()
-	if(empty)
-		return
 	new /obj/item/gun/ballistic/automatic/m90/xm29(src)
 	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
 	new /obj/item/ammo_box/magazine/m556(src)

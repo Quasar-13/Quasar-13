@@ -15,6 +15,7 @@
 	desc = "An advanced piece of weaponry forged by unknown forces."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/energy.dmi'
 	icon_state = "aer12"
+	ammo_type = list(/obj/item/ammo_casing/energy/sniper/weak)
 	pin = /obj/item/firing_pin/explorer
 	zoomable = FALSE
 
