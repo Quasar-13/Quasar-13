@@ -87,7 +87,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Akira's Special"
-	desc = "An orante special revolver made by the kitsune kepler factory, made chambered in .556, especially strange that they were also only awarded to very few people that proven exceptional to the expedition efforts by the kitsune personally, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. faint smells of cinnamon and sake and an engraving of a nine tailed fox."
+	desc = "An ornate special revolver made by the kitsune kepler factory, made chambered in .556, especially strange that they were also only awarded to very few people that proven exceptional to the expedition efforts by the kitsune personally, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
