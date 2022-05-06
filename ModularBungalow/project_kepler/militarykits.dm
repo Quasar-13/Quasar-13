@@ -1,6 +1,6 @@
 
 /obj/item/storage/backpack/duffelbag/solgov_conscription
-	name = "Military Conscription Kit"
+	name = "Military Conscription Bag"
 	desc = "Everything you need in a neat little bag, can be used for storage as well."
 //EVERYTHING BELOW ARE KITS!
 /obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
@@ -22,7 +22,7 @@
 
 
 /obj/item/storage/box/soldier
-	name = "Military Conscription Box Kit"
+	name = "Assault Military Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier/PopulateContents()
@@ -41,7 +41,9 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-
+/obj/item/storage/box/soldier_marksman
+	name = "Marksman Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
@@ -59,7 +61,7 @@
 
 
 /obj/item/storage/box/soldier_standard
-	name = "Military Conscription Box Kit"
+	name = "Standard Military Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_standard/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/uzi(src)
@@ -76,7 +78,7 @@
 	new /obj/item/storage/belt/holster/shoulder(src)
 
 /obj/item/storage/box/soldier_wildlifehunter
-	name = "Military Conscription Box Kit"
+	name = "Wildlife Hunter Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_wildlifehunter/PopulateContents()
 	new /obj/item/kinetic_crusher(src)
@@ -90,7 +92,7 @@
 
 
 /obj/item/storage/box/soldier_grenadier
-	name = "Military Conscription Box Kit"
+	name = "Grenadier Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_grenadier/PopulateContents()
@@ -109,7 +111,7 @@
 
 
 /obj/item/storage/box/soldier_sar
-	name = "Military Conscription Box Kit"
+	name = "Search and Rescue Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_sar/PopulateContents()
@@ -174,7 +176,10 @@
 	new /obj/item/grenade/empgrenade(src)
 
 /obj/item/storage/box/security_marksman
+	name = "Security Marksman Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
 
+/obj/item/storage/box/security_marksman
 /obj/item/storage/box/security_marksman/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
@@ -189,7 +194,9 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
 
-
+/obj/item/storage/box/security_privateer
+	name = "Standard Military Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/security_privateer
 /obj/item/storage/box/security_privateer/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
