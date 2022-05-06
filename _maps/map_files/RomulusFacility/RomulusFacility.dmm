@@ -2392,6 +2392,19 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"cHt" = (
+/obj/effect/landmark/portal_exit{
+	icon = 'icons/obj/device.dmi';
+	icon_state = "beacon";
+	id = "NomadicExit";
+	name = "orbital beacon"
+	},
+/turf/open/floor/mineral/plastitanium{
+	initial_gas_mix = "o2=22;n2=82;TEMP=180";
+	planetary_atmos = 1;
+	temperature = 180
+	},
+/area/ruin/powered)
 "cHV" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -19522,6 +19535,13 @@
 	temperature = 180
 	},
 /area/ruin/powered)
+"uwX" = (
+/obj/effect/portal/permanent/one_way{
+	id = "NomadicExit";
+	name = "one-way nanotrasen portal"
+	},
+/turf/open/floor/glass,
+/area/ruin/powered)
 "uxJ" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/mining/glass,
@@ -21268,6 +21288,19 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
+"wmQ" = (
+/obj/machinery/door/airlock/command/glass{
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 010, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100);
+	hackProof = 1;
+	max_integrity = 6000;
+	name = "Nomadic"
+	},
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 010, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100);
+	id = "NomadicExit"
+	},
+/turf/open/floor/glass,
+/area/ruin/powered)
 "wmR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -21679,6 +21712,12 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
+"wOQ" = (
+/obj/machinery/button/door/directional/east{
+	id = "NomadicExit"
+	},
+/turf/closed/indestructible/reinforced,
+/area/ruin/powered)
 "wOX" = (
 /obj/structure/cable,
 /turf/closed/indestructible/syndicate,
@@ -39225,8 +39264,8 @@ bHh
 bHh
 lIP
 lIP
-bpm
-bpm
+aja
+wmQ
 nRQ
 rMl
 hLn
@@ -39512,8 +39551,8 @@ bHh
 bHh
 bHh
 lIP
-lIP
-bpm
+aja
+uwX
 aja
 guS
 nYx
@@ -39799,8 +39838,8 @@ bHh
 bHh
 bHh
 bHh
-lIP
-lIP
+aja
+wOQ
 aja
 aja
 aja
@@ -63208,7 +63247,7 @@ tcV
 wvI
 mAv
 mAv
-mAv
+cHt
 mAv
 wvI
 wvI
@@ -91179,13 +91218,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -91466,13 +91505,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -91753,13 +91792,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -92040,13 +92079,13 @@ bzT
 bzT
 bzT
 bzT
-bzT
-cFi
-bzT
+hfo
 bzT
 bzT
 bzT
 bzT
+bzT
+hfo
 bzT
 bzT
 bzT
@@ -92333,7 +92372,7 @@ bzT
 bzT
 bzT
 bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -92614,13 +92653,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
+hfo
+hfo
+hfo
 bzT
-bzT
-bzT
-bzT
-bzT
-bzT
-bzT
+hfo
+hfo
 bzT
 cFi
 bzT
@@ -92901,13 +92940,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -93188,13 +93227,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -93468,20 +93507,20 @@ bzT
 bzT
 bzT
 bzT
+cFi
 bzT
 bzT
 bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -93762,13 +93801,13 @@ bzT
 bzT
 bzT
 bzT
-bzT
+hfo
 cFi
 bzT
 bzT
 bzT
 bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -94049,13 +94088,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -94336,13 +94375,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -94623,13 +94662,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -94910,13 +94949,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -95197,13 +95236,13 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
+hfo
 bzT
 bzT
 bzT
@@ -95484,18 +95523,18 @@ bzT
 bzT
 bzT
 bzT
+hfo
 bzT
 bzT
 bzT
 bzT
 bzT
-bzT
-bzT
-bzT
-bzT
-bzT
-bzT
-bzT
+hfo
+hfo
+hfo
+hfo
+hfo
+hfo
 bzT
 hfo
 bzT
@@ -95771,7 +95810,7 @@ bzT
 bzT
 bzT
 bzT
-bzT
+hfo
 bzT
 bzT
 bzT
