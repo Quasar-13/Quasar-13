@@ -1,5 +1,4 @@
 
-//it will ignore other wild life aswell
 /obj/item/gun/ballistic/automatic/ar/hk21/nomag
 	spawnwithmagazine = 0
 //THIS MEDIPEN IS A BOSS FIGHT DROP

@@ -195,7 +195,7 @@
 
 
 /obj/item/storage/box/security_privateer
-/obj/item/storage/box/security_prvivateer/PopulateContents()
+/obj/item/storage/box/security_privateer/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/shotgun/slug(src)

@@ -61,7 +61,6 @@
 
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherSecKepler(obj/item/kepler_sec_voucher/voucher, mob/redeemer)
 	var/items = list("Search and Rescue Kit", "Privateer Kit", "Privateer Marksman Kit")
-
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Security Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return
@@ -88,7 +87,6 @@
 
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherCommanderKepler(obj/item/kepler_commander_voucher/voucher, mob/redeemer)
 	var/items = list("Classic Kit", "Ranger Kit", "Assault")
-
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Command Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return
