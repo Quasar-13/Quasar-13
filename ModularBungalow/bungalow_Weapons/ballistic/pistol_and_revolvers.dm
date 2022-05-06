@@ -87,7 +87,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Kira's Special"
-	desc = "A special pistol made for the kitsune, chambered in .357. used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
+	desc = "A special pistol made by the kitsune, chambered in .357, they were originally awarded to very few people that proven exceptional to the kitsune, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
