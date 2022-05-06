@@ -86,8 +86,8 @@
 
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
-	name = "Kira's Special"
-	desc = "A special pistol made by the kitsune, chambered in .357, they were originally awarded to very few people that proven exceptional to the kitsune, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
+	name = "Akira's Special"
+	desc = "An orante special revolver made by the kitsune kepler factory, chambered in .357, they were originally awarded to very few people that proven exceptional to the expedition efforts, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
@@ -100,11 +100,11 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
-
 /obj/item/gun/ballistic/automatic/pistol/avtomag/akira
-	name = "That Avtomag"
-	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive."
+	name = "\improper Model 35 Avtomag"
+	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive, limited production by the kepler factory, faint smells of cinnamon and sake and an engraving of a nine tailed fox"
 	icon_state = "avtomag_kira"
+	mag_type = /obj/item/ammo_box/magazine/avtomag/akira
 
 ////////////////////
 //////REVOLVERS////
