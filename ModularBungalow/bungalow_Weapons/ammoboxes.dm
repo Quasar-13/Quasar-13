@@ -298,4 +298,3 @@
 	caliber = CALIBER_20MM
 	icon_state = "20mmHE"
 	projectile_type = /obj/projectile/bullet/a20mm
-
