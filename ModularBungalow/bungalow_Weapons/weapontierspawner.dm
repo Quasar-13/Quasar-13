@@ -135,6 +135,7 @@
 //gaming
 //WARNING FOR ANYONE READING THIS, BELOW ARE THINGS THAT SHOULD NOT BE PLACED IN MAP AND SHOULD BE USED IN DROP ONLY
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier5
+	lootcount = 3
 	loot = list(/obj/item/slimecross/stabilized/purple,
 				/obj/item/energy_katana,
 				/obj/item/reagent_containers/hypospray/combat/gatorade,
@@ -148,6 +149,7 @@
 
 //This has a rare chance to spawn something
 /obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn
+	lootcount = 2
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 10,
 				/obj/item/slimecross/stabilized/purple = 85,
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier5 = 5)
