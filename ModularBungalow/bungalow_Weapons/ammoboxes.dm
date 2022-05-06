@@ -65,6 +65,14 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357/match
 
+/obj/item/ammo_box/speedloader/a556
+	name = ".556 speedloader"
+	desc = "A speedloader full of .556 catridges ready to be used!"
+	icon_state = "sla556"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 6
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "

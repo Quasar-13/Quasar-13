@@ -87,9 +87,16 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Akira's Special"
-	desc = "An orante special revolver made by the kitsune kepler factory, chambered in .357, they were originally awarded to very few people that proven exceptional to the expedition efforts, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, faint smells of cinnamon and sake and an engraving of a nine tailed fox."
+	desc = "An orante special revolver made by the kitsune kepler factory, made chambered in .556, especially strange that they were also only awarded to very few people that proven exceptional to the expedition efforts by the kitsune personally, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
+	initial_caliber = CALIBER_A556
+
+/obj/item/ammo_box/magazine/internal/cylinder/rev556
+	ammo_type = /obj/item/ammo_casing/a556
+	caliber = CALIBER_A556
+	max_ammo = 6
 
 //Yet another gun our kitsune would've used
 //Albeit less succesfully
@@ -105,6 +112,8 @@
 	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive, limited production by the kepler factory, faint smells of cinnamon and sake and an engraving of a nine tailed fox"
 	icon_state = "avtomag_kira"
 	mag_type = /obj/item/ammo_box/magazine/avtomag/akira
+
+/obj/item/ammo_box/magazine/avtomag/akira
 
 ////////////////////
 //////REVOLVERS////
