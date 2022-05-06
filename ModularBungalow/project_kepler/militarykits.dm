@@ -242,7 +242,7 @@
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/gun/ballistic/revolver(src)
+	new /obj/item/gun/ballistic/revolver/akira(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
