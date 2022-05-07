@@ -73,6 +73,28 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	max_ammo = 6
 
+/obj/item/ammo_box/speedloader/a556/sk
+	name = ".556 SK speedloader"
+	desc = "A speedloader full of .556 Super-Kitsune catridges ready to be used!"
+	icon_state = "sla556sk"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556/sk
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/sk/big
+	max_ammo = 12
+	icon_state = "slc38"
+/obj/item/ammo_box/speedloader/a556/pl
+	name = ".556 PL speedloader"
+	desc = "A speedloader full of .556 Police Load catridges ready to be used!"
+	icon_state = "sla556pl"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a556/pl
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/pl/big
+	max_ammo = 12
+	icon_state = "sla357"
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
