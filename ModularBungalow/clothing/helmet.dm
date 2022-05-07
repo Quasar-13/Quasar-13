@@ -34,7 +34,7 @@
 	desc = "Durable helmet survivalist, Originally used by the kepler security force but occasionally finding its way elsewhere"
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
-	icon_state = "kerplermarksman"
+	icon_state = "keplermarksman"
 	armor = list(MELEE = 15, BULLET = 25, LASER = 45, ENERGY = 65, BOMB = 15, BIO = 100, RAD = 60, FIRE = 100, ACID = 10, WOUND = 5)
 
 /obj/item/clothing/head/helmet/ranger/akira
