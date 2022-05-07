@@ -251,6 +251,20 @@
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/roller(src)
 
+/obj/item/storage/box/kitsune_ammo
+/obj/item/storage/box/kitsune_ammo/PopulateContents()
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+
 /obj/item/storage/box/commander_ranger
 /obj/item/storage/box/commander_ranger/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)

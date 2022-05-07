@@ -93,7 +93,7 @@
 	projectile_type = /obj/projectile/bullet/a556/highp
 /obj/projectile/bullet/a556/highp
 	name = "5.56mm bullet"
-	damage = 75
-	armour_penetration = 55
+	damage = 55
+	armour_penetration = 10
 	wound_bonus = 20
 
