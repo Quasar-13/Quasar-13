@@ -244,7 +244,7 @@
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
 	new /obj/item/gun/ballistic/revolver/akira(src)
 	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/pl(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
