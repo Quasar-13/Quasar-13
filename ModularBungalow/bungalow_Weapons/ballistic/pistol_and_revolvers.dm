@@ -93,6 +93,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
 	projectile_damage_multiplier = 2
+	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	ammo_type = /obj/item/ammo_casing/a556
