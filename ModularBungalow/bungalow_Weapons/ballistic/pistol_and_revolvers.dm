@@ -151,3 +151,10 @@
 
 //Single Action Revolver Here
 
+//LONG 45-70
+/obj/item/gun/ballistic/shotgun/longcolt
+	name = "Longest Colt"
+	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears."
+	icon_state = "longcolt"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+
