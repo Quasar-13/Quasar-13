@@ -332,3 +332,4 @@
 	caliber = CALIBER_20MM
 	icon_state = "20mmHE"
 	projectile_type = /obj/projectile/bullet/a20mm
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'

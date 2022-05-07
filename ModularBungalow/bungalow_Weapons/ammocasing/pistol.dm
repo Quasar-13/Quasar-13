@@ -7,6 +7,7 @@
 	max_ammo = 10
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	icon_state = "avtomag-10"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 
 /obj/item/ammo_box/magazine/avtomag/update_icon()
 	..()
@@ -18,5 +19,6 @@
 /obj/item/ammo_box/magazine/avtomag/akira
 	name = ".556 Avtomag Magazine"
 	desc = "a 10 rounds .556 magazine for the Special Avtomag."
-	ammo_type = /obj/item/ammo_casing/a556
+	ammo_type = /obj/item/ammo_casing/a556/highp
 	caliber = CALIBER_A556
+	icon_state = "avtomagakira-10"
