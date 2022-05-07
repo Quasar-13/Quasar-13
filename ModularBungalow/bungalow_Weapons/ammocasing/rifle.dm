@@ -72,3 +72,28 @@
 /obj/projectile/bullet/a545_39
 	name = "5.45x39mm bullet"
 	damage = 34
+
+/obj/item/ammo_casing/a556/pl
+	projectile_type = /obj/projectile/bullet/a556/pl
+/obj/projectile/bullet/a556/pl
+	name = "5.56mm bullet"
+	damage = 45
+	armour_penetration = -20
+	wound_bonus = -20
+
+/obj/item/ammo_casing/a556/sk
+	projectile_type = /obj/projectile/bullet/a556/sk
+/obj/projectile/bullet/a556/sk
+	name = "5.56mm bullet"
+	damage = 35
+	armour_penetration = 50
+	wound_bonus = -20
+
+/obj/item/ammo_casing/a556/highp
+	projectile_type = /obj/projectile/bullet/a556/highp
+/obj/projectile/bullet/a556/highp
+	name = "5.56mm bullet"
+	damage = 75
+	armour_penetration = 55
+	wound_bonus = 20
+
