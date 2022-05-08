@@ -47,6 +47,7 @@
 	name = "goldfish"
 	desc = "Despite common belief, goldfish do not have three-second memories. They can actually remember things that happened up to three months ago."
 	icon_state = "goldfish"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	sprite_width = 8
 	sprite_height = 8
 
@@ -54,6 +55,7 @@
 	name = "angelfish"
 	desc = "Young Angelfish often live in groups, while adults prefer solitary life. They become territorial and aggressive toward other fish when they reach adulthood."
 	icon_state = "angelfish"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	dedicated_in_aquarium_icon_state = "bigfish"
 	sprite_height = 7
 	source_height = 7
@@ -62,6 +64,7 @@
 	name = "guppy"
 	desc = "Guppy is also known as rainbow fish because of the brightly colored body and fins."
 	icon_state = "guppy"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	dedicated_in_aquarium_icon_state = "fish_greyscale"
 	aquarium_vc_color = "#91AE64"
 	sprite_width = 8
@@ -71,6 +74,7 @@
 	name = "plasma tetra"
 	desc = "Due to their small size, tetras are prey to many predators in their watery world, including eels, crustaceans, and invertebrates."
 	icon_state = "plastetra"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	dedicated_in_aquarium_icon_state = "fish_greyscale"
 	aquarium_vc_color = "#D30EB0"
 
@@ -78,6 +82,7 @@
 	name = "cory catfish"
 	desc = "A catfish has about 100,000 taste buds, and their bodies are covered with them to help detect chemicals present in the water and also to respond to touch."
 	icon_state = "catfish"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	dedicated_in_aquarium_icon_state = "fish_greyscale"
 	aquarium_vc_color = "#907420"
 
@@ -85,6 +90,7 @@
 	name = "space carp"
 	desc = "This space predator fish is known to cause yearly damage to space stations during their migrations."
 	icon_state = "carp"
+	required_fluid_type = AQUARIUM_FLUID_FRESHWATER
 	sprite_width = 8
 	sprite_height = 8
 	availible_in_random_cases = FALSE
