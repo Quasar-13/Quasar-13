@@ -59,3 +59,5 @@
 #define CALIBER_BREACHER	"breacher"
 /// The caliber used by XM grenade launcher
 #define CALIBER_20MM		"20mm"
+/// The caliber used by .45-70
+#define CALIBER_A4570		".4570"

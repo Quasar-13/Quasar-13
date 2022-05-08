@@ -22,3 +22,15 @@
 	ammo_type = /obj/item/ammo_casing/a556/highp
 	caliber = CALIBER_A556
 	icon_state = "avtomagakira-10"
+
+/obj/item/ammo_casing/a4570
+	name = "45-70 Govt bullet"
+	desc = "High Power .45-70 Govt Round, intended for taking down bears and whatnot"
+	projectile_type = /obj/projectile/bullet/a4570
+/obj/projectile/bullet/a4570
+	name = "45-70 Govt bullet"
+	damage = 55
+	armour_penetration = 35
+	wound_bonus = 10
+	stamina = 5
+

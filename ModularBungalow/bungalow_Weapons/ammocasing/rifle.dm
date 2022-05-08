@@ -77,9 +77,9 @@
 	projectile_type = /obj/projectile/bullet/a556/pl
 /obj/projectile/bullet/a556/pl
 	name = "5.56mm bullet"
-	damage = 20
-	stamina = 50
-	armour_penetration = 15
+	damage = 25
+	stamina = 59
+	armour_penetration = -20
 	wound_bonus = -20
 
 /obj/item/ammo_casing/a556/sk
@@ -87,7 +87,7 @@
 /obj/projectile/bullet/a556/sk
 	name = "5.56mm bullet"
 	damage = 35
-	armour_penetration = 50
+	armour_penetration = 5
 	wound_bonus = -20
 	stamina = 20
 
@@ -96,6 +96,6 @@
 /obj/projectile/bullet/a556/highp
 	name = "5.56mm bullet"
 	damage = 55
-	armour_penetration = 10
+	armour_penetration = 35
 	wound_bonus = 10
-	stamina = 25
+	stamina = 30
