@@ -158,7 +158,7 @@
 
 //LONG 45-70
 /obj/item/gun/ballistic/shotgun/longcolt
-	name = "Longest Colt"
+	name = "Long Colt"
 	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears. Single Action."
 	icon_state = "longcolt"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -169,3 +169,4 @@
 	ammo_type = /obj/item/ammo_casing/a4570
 	caliber = CALIBER_A4570
 	max_ammo = 7
+	inhand_icon_state = "revolver"
