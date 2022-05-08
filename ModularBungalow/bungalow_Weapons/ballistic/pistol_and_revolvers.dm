@@ -162,4 +162,10 @@
 	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears."
 	icon_state = "longcolt"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	initial_caliber = CALIBER_A4570
 
+/obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	ammo_type = /obj/item/ammo_casing/a4570
+	caliber = CALIBER_A4570
+	max_ammo = 7
