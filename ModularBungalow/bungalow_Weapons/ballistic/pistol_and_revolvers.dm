@@ -132,9 +132,10 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	initial_caliber = CALIBER_SHOTGUN
-
+	pb_knockback = 3
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	initial_caliber = CALIBER_SHOTGUN
+	max_ammo = 6
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino
 	name = "Chiappa Rhino"
@@ -177,6 +178,7 @@
 	initial_caliber = CALIBER_A4570
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "revolver"
+	pb_knockback = 5
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
 	caliber = CALIBER_A4570
