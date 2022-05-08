@@ -102,7 +102,7 @@
 
 /obj/item/gun/ballistic/revolver/akira/Initialize()
 	. = ..()
-	fire_delay = 8
+	fire_delay = 10
 //Yet another gun our kitsune would've used
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
@@ -124,6 +124,17 @@
 //////REVOLVERS////
 ///////////////////
 
+//Taurus Judge
+/obj/item/gun/ballistic/revolver/judge
+	name = "P14 'Judge'"
+	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom. it hold six shotgun shells, should be more than enough to kill anything that move."
+	icon_state = "judge"
+	icon = 'ModularTegustation/Teguicons/kirie_stuff/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
+	initial_caliber = CALIBER_SHOTGUN
+
+/obj/item/ammo_box/magazine/internal/cylinder/revjudge
+	initial_caliber = CALIBER_SHOTGUN
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino
 	name = "Chiappa Rhino"
@@ -157,16 +168,17 @@
 //Single Action Revolver Here
 
 //LONG 45-70
-/obj/item/gun/ballistic/shotgun/longcolt
-	name = "Long Colt"
-	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears. Single Action."
-	icon_state = "longcolt"
+/obj/item/gun/ballistic/shotgun/tracker
+	name = "Kepler .45-70 Tracker"
+	desc = "horrifyingly powerful single action revolver made specifically for the anti-riot ranger squad, fire extremely high powered .45-70 normally meant for fighting bears."
+	icon_state = "tracker"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	initial_caliber = CALIBER_A4570
-
+	w_class = WEIGHT_CLASS_NORMAL
+	inhand_icon_state = "revolver"
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
 	caliber = CALIBER_A4570
 	max_ammo = 7
-	inhand_icon_state = "revolver"
+

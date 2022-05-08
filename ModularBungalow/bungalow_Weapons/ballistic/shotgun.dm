@@ -56,7 +56,7 @@
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/stopgap
 	name = "PS-45 'Stop Gap'"
-	desc = "A small four-barrel shotgun.Normally used by medics or some other heavy assault unit, typically fire .357 and .44 this one is modified to fire shotgun shells"
+	desc = "A small four-barrel shotgun.Normally used by medics or some other heavy assault unit rivaling the taurus judge in versatility, typically fire .357 and .44 this one is modified to fire shotgun shells"
 	icon_state = "stopgap"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/four

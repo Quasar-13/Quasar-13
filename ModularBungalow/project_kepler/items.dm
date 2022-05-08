@@ -74,6 +74,8 @@
 		/obj/item/ammo_box/magazine/toy/pistol,
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/longcolt,
 		/obj/item/gun/energy/dueling
 		))
 
@@ -96,6 +98,8 @@
 		/obj/item/ammo_box/c38, // Revolver speedloaders.
 		/obj/item/ammo_box/a357,
 		/obj/item/ammo_box/a762,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/longcolt,
 		/obj/item/gun/ballistic/automatic/toy/pistol,
 		/obj/item/ammo_box/magazine/toy/pistol,
 		/obj/item/gun/energy/e_gun/mini,
