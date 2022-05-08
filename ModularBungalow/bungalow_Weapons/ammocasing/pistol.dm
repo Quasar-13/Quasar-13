@@ -27,6 +27,7 @@
 	name = "45-70 Govt bullet"
 	desc = "High Power .45-70 Govt Round, intended for taking down bears and whatnot"
 	projectile_type = /obj/projectile/bullet/a4570
+	caliber = CALIBER_A4570
 /obj/projectile/bullet/a4570
 	name = "45-70 Govt bullet"
 	damage = 55
