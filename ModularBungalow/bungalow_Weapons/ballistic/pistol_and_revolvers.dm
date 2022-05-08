@@ -159,7 +159,7 @@
 //LONG 45-70
 /obj/item/gun/ballistic/shotgun/longcolt
 	name = "Longest Colt"
-	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears."
+	desc = "The longest of all colt, fire extremely high powered .45-70 normally meant for fighting bears. Single Action."
 	icon_state = "longcolt"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
