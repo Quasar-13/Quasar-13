@@ -43,33 +43,28 @@
 	name = ".38 speedloader"
 	desc = "A speedloader full of .38 catridges ready to be used!"
 	icon_state = "slc38"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/c38
 
 /obj/item/ammo_box/speedloader/c38/dumdum
 	name = ".38 dum dum speedloader"
-	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
 	ammo_type = /obj/item/ammo_casing/c38/dumdum
 
 /obj/item/ammo_box/speedloader/a357
 	name = ".357 speedloader"
 	desc = "A speedloader full of .357 catridges ready to be used!"
 	icon_state = "slc357"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
 
 /obj/item/ammo_box/speedloader/a357/match
 	name = ".357 match speedloader"
 	desc = "A speedloader full of .357 match catridges ready to be used!"
 	icon_state = "slc357"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357/match
 
 /obj/item/ammo_box/speedloader/a556
 	name = ".556 speedloader"
 	desc = "A speedloader full of .556 catridges ready to be used!"
 	icon_state = "sla556"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
 	max_ammo = 6
 
@@ -77,7 +72,6 @@
 	name = ".556 SK speedloader"
 	desc = "A speedloader full of .556 Super-Kitsune catridges ready to be used!"
 	icon_state = "sla556sk"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556/sk
 	max_ammo = 6
 
@@ -88,7 +82,6 @@
 	name = ".556 PL speedloader"
 	desc = "A speedloader full of .556 Police Load catridges ready to be used!"
 	icon_state = "sla556pl"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556/pl
 	max_ammo = 6
 
@@ -100,13 +93,19 @@
 	name = ".556 High P speedloader"
 	desc = "A speedloader full of .556 Heavy catridges ready to be used!"
 	icon_state = "sla556highp"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556/highp
 	max_ammo = 6
 
 /obj/item/ammo_box/speedloader/a556/highp/big
 	max_ammo = 12
 	icon_state = "slt556highp-12"
+
+/obj/item/ammo_box/speedloader/a4570
+	name = ".45-70 Govt speedloader"
+	desc = "A speedloader full of .45-70 Govt catridges ready to be used!"
+	max_ammo = 7
+	icon_state = "4570-7"
+	ammo_type = /obj/item/ammo_casing/a4570
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
