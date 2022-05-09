@@ -71,7 +71,7 @@
 				/obj/item/ammo_box/shotgun/meteor = 15,
 				/obj/item/ammo_casing/caseless/rocket/hedp = 15)
 
-//this one will also spawn some stuff but specific.
+//I told kirie we should have this
 /obj/effect/spawner/lootdrop/tierweapon/ranged
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ranged/tier1 = 66,
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier2 = 25,
