@@ -56,6 +56,7 @@
 				/obj/item/ammo_box/speedloader/a357 = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4
+	lootcount = 2
 	loot = list( /obj/item/ammo_casing/caseless/rocket/hedp = 15,
 				/obj/item/ammo_casing/caseless/rocket = 15,
 				/obj/item/ammo_box/magazine/m12g/meteor =15,
@@ -78,6 +79,7 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier4 = 2)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier1
+	lootcount = 2
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/aps = 10,
 				/obj/item/gun/ballistic/automatic/pistol/m1911 = 29,
 				/obj/item/gun/ballistic/automatic/pistol/mk23 = 10,
@@ -93,6 +95,7 @@
 				/obj/item/gun/ballistic/automatic/pistol/sig)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2
+	lootcount = 2
 	loot = list(/obj/item/gun/ballistic/automatic/tommygun = 15,
 				/obj/item/gun/ballistic/automatic/c20r/unrestricted = 20,
 				/obj/item/gun/ballistic/automatic/proto/unrestricted = 10,
@@ -105,6 +108,7 @@
 				/obj/item/gun/ballistic/automatic/uzi = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
+	lootcount = 2
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 15,
 				/obj/item/gun/ballistic/revolver/sequoia = 10,
 				/obj/item/gun/ballistic/revolver/sw500 = 10,
@@ -118,13 +122,14 @@
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier4
-	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29,  /obj/item/ammo_box/magazine/m556,  /obj/item/ammo_box/magazine/m556 = 25,
-				/obj/item/gun/ballistic/automatic/ak47,  /obj/item/ammo_box/magazine/ak47/expanded,  /obj/item/ammo_box/magazine/ak47/expanded = 10,
-				/obj/item/gun/ballistic/automatic/gyropistol/xm25,  /obj/item/ammo_box/magazine/m75,  /obj/item/ammo_box/magazine/m75 = 10,
-				/obj/item/gun/ballistic/rocketlauncher/unrestricted, /obj/item/ammo_casing/caseless/rocket/hedp, /obj/item/ammo_casing/caseless/rocket/hedp = 10,
-				/obj/item/gun/ballistic/automatic/mini_uzi/kepler, /obj/item/ammo_box/magazine/uzim9mm, /obj/item/ammo_box/magazine/uzim9mm = 25,
-				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted, /obj/item/ammo_box/magazine/mm712x82/ap, /obj/item/ammo_box/magazine/mm712x82/hollow = 10,
-				/obj/item/gun/ballistic/automatic/m90/unrestricted/auto, /obj/item/ammo_box/magazine/m556, /obj/item/ammo_box/magazine/m556 = 10,
+	lootcount = 3
+	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 20,
+				/obj/item/gun/ballistic/automatic/ak47 = 10,
+				/obj/item/gun/ballistic/automatic/gyropistol/xm25 = 10,
+				/obj/item/gun/ballistic/rocketlauncher/unrestricted = 10,
+				/obj/item/gun/ballistic/automatic/mini_uzi/kepler = 25,
+				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted = 10,
+				/obj/item/gun/ballistic/automatic/m90/unrestricted/auto = 10,
 				/obj/item/gun/energy/laser/hellgun = 5,
 				/obj/item/reagent_containers/hypospray/medipen/gatorade,
 				/obj/item/gun/energy/pulse/pistol = 1,
