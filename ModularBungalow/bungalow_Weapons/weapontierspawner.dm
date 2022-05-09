@@ -104,6 +104,7 @@
 				/obj/item/gun/ballistic/shotgun/bulldog/unrestricted = 1,
 				/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap = 15,
 				/obj/item/gun/ballistic/automatic/wt550 = 5,
+				/obj/item/gun/ballistic/revolver/judge = 20,
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
 				/obj/item/gun/ballistic/automatic/uzi = 15)
 
@@ -112,6 +113,7 @@
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 15,
 				/obj/item/gun/ballistic/revolver/sequoia = 10,
 				/obj/item/gun/ballistic/revolver/sw500 = 10,
+				/obj/item/gun/ballistic/shotgun/tracker = 15,
 				/obj/item/gun/ballistic/revolver/mateba = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
 				/obj/item/gun/grenadelauncher = 15,
