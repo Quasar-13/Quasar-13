@@ -128,7 +128,7 @@
 	name = "P14 'Judge'"
 	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom. it hold six shotgun shells, should be more than enough to kill anything that move."
 	icon_state = "judge"
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	initial_caliber = CALIBER_SHOTGUN
 	pb_knockback = 3
