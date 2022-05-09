@@ -41,6 +41,18 @@
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/suit/armor/ranger/hop
+	name = "Ranger's Trenchcoat"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A duster used by the rangers."
+	icon_state = "rangeradmin"
+	inhand_icon_state = "armor"
+	body_parts_covered = CHEST|GROIN
+	armor = list(MELEE = 40, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+	dog_fashion = null
+	resistance_flags = FIRE_PROOF
+
 /obj/item/clothing/suit/armor/ranger/snow
 	name = "Ranger's Duster"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
@@ -107,7 +119,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
-	
+
 /obj/item/clothing/suit/armor/hos/vest
 	name = "head of security's vest"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
