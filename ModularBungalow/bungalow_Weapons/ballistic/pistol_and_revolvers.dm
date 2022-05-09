@@ -76,7 +76,6 @@
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
 
-
 //Special lore variant
 /obj/item/gun/ballistic/automatic/pistol/PL14_nicole
 	name = "bloody PL-14"
