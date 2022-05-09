@@ -133,7 +133,7 @@
 	initial_caliber = CALIBER_SHOTGUN
 	pb_knockback = 3
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
-	initial_caliber = CALIBER_SHOTGUN
+	caliber = CALIBER_SHOTGUN
 	max_ammo = 6
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino
