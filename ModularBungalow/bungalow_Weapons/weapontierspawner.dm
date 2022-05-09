@@ -14,6 +14,7 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4 = 2)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1
+	lootcount = 2
 	loot = list(/obj/item/ammo_box/magazine/m9mm_aps = 15,
 				/obj/item/ammo_box/magazine/m9mm_aps/ap = 5,
 				/obj/item/ammo_box/magazine/m10mm/rifle = 9,
@@ -29,6 +30,7 @@
 				/obj/item/ammo_box/magazine/m50 = 1)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2
+	lootcount = 2
 	loot = list(/obj/item/ammo_box/magazine/m9mm_aps = 15,
 				/obj/item/ammo_box/magazine/smgm45 = 10,
 				/obj/item/ammo_box/magazine/tommygunm45 = 10,
@@ -42,6 +44,7 @@
 				/obj/item/ammo_box/magazine/wt550m9 = 10)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier3
+	lootcount = 2
 	loot = list(/obj/item/ammo_box/magazine/m556 = 20,
 				/obj/item/ammo_box/a357/match = 20,
 				/obj/item/ammo_box/speedloader/a357/match = 15,
@@ -56,12 +59,18 @@
 				/obj/item/ammo_box/speedloader/a357 = 15)
 
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier4
-	lootcount = 2
+	lootcount = 3
 	loot = list( /obj/item/ammo_casing/caseless/rocket/hedp = 15,
 				/obj/item/ammo_casing/caseless/rocket = 15,
-				/obj/item/ammo_box/magazine/m12g/meteor =15,
-				/obj/item/ammo_box/shotgun/lasershot = 5,
+				/obj/item/ammo_box/magazine/m12g/meteor = 5,
+				/obj/item/ammo_box/magazine/m12g/bioterror = 5,
+				/obj/item/ammo_box/shotgun/lasershot = 20,
 				/obj/item/ammo_box/magazine/t12 = 15,
+				/obj/item/ammo_box/magazine/mm712x82 = 15,
+				/obj/item/ammo_box/magazine/mm712x82/hollow = 10,
+				/obj/item/ammo_box/magazine/mm712x82/incen = 5,
+				/obj/item/ammo_box/magazine/mm712x82/match = 4,
+				/obj/item/ammo_box/magazine/mm712x82/ap = 20,
 				/obj/item/ammo_box/magazine/m12g/slug = 15)
 //what do you even want on this!?
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier5
