@@ -155,10 +155,17 @@
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
 
 /obj/item/storage/box/grenadier_grenades/suppression
 
 /obj/item/storage/box/grenadier_grenades/suppression/PopulateContents()
+	new /obj/item/grenade/spawnergrenade/spesscarp(src)
+	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
+	new /obj/item/grenade/spawnergrenade/spesscarp(src)
+	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
 	new /obj/item/grenade/spawnergrenade/spesscarp(src)
 	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
 	new /obj/item/grenade/spawnergrenade/spesscarp(src)
