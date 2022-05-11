@@ -80,14 +80,14 @@
 		))
 
 /obj/item/storage/belt/holster/shoulder/commander
-	name = "commander's holster"
-	desc = "A holster able to carry handguns and some ammo."
+	name = "heavy duty holster"
+	desc = "A holster able to carry handguns and some ammo. this one is heavy duty"
 
 /obj/item/storage/belt/holster/shoulder/commander/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 4
-	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
@@ -111,3 +111,86 @@
 	name = "commander's gloves"
 	desc = "the finely tailored gloves of the past site commanders, wonder what happened to them..."
 
+/obj/item/storage/box/survival/site_command
+	name = "command survival box"
+	desc = "fit whatever you need it to."
+/obj/item/storage/box/survival/site_command/PopulateContents()
+	var/mask_type = /obj/item/clothing/mask/gas/sechailer
+	var/internal_type = /obj/item/tank/internals/emergency_oxygen/engi
+	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen/stimpack
+	var/light_type = /obj/item/flashlight/seclite
+	new /obj/item/crowbar/red(src)
+	new /obj/item/weldingtool/mini(src)
+	new /obj/item/clothing/glasses/welding(src)
+	new /obj/item/reagent_containers/hypospray/medipen/survival
+	new /obj/item/radio/off/security(src)
+
+
+/obj/item/storage/pouch
+	name = "general purpose pouch"
+	desc = "fit whatever you need it to. hold normal sized objects"
+	slot_flags = ITEM_SLOT_POCKETS
+	w_class = WEIGHT_CLASS_HUGE
+	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
+	icon_state = "pouch"
+	worn_icon = null
+
+/obj/item/storage/pouch/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/pouch/ammo
+	name = "ammo pouch"
+	desc = "hold ammo boxes so you don't have to."
+	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
+	icon_state = "ammo_pouch"
+
+/obj/item/storage/pouch/ammo/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.set_holdable(list(
+		/obj/item/ammo_box
+		))
+
+/obj/item/storage/pouch/command
+	name = "command pouch"
+	desc = "Oversized pouch meant for commanders. can hold tools, batons, cuffs and grenades sidearm and magazines."
+	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
+	icon_state = "command_pouch"
+
+/obj/item/storage/pouch/command/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutter,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/dueling
+		))

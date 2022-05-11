@@ -36,7 +36,7 @@
 	desc = "A duster used by the rangers."
 	icon_state = "duster_recon"
 	inhand_icon_state = "armor"
-	body_parts_covered = CHEST|GROIN
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|NECK
 	armor = list(MELEE = 40, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
@@ -48,19 +48,17 @@
 	desc = "A duster used by the rangers."
 	icon_state = "rangeradmin"
 	inhand_icon_state = "armor"
-	body_parts_covered = CHEST|GROIN
 	armor = list(MELEE = 40, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/ranger/snow
-	name = "Ranger's Duster"
+	name = "Snow Ranger's Duster"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A duster used by the kepler rangers."
 	icon_state = "duster_snow"
 	inhand_icon_state = "armor"
-	body_parts_covered = CHEST|GROIN
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 25, BOMB = 25, BIO = 20, RAD = 10, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
@@ -70,6 +68,7 @@
 	desc = "A duster used by the Veteran Ranger."
 	icon_state = "foxranger"
 	armor = list(MELEE = 50, BULLET = 50, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|NECK
 
 /obj/item/clothing/suit/armor/ranger/vet/snow
 	name = "Veteran Kepler Ranger's Duster"

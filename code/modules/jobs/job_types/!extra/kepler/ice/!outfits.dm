@@ -14,6 +14,7 @@
 	ears = /obj/item/radio/headset/headset_srv
 	belt = null
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
+	box = /obj/item/storage/box/survival/mining
 /datum/outfit/job/solgov/sec
 	name = "Solgov Kepler Private Security"
 	id = /obj/item/card/id/solgov
@@ -22,6 +23,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_sec_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	glasses = /obj/item/clothing/glasses/sunglasses
+	box = /obj/item/storage/box/survival/security/improved
 /datum/outfit/job/solgov/soldier
 	name = "Solgov Kepler Expedition Soldier"
 	id = /obj/item/card/id/solgov
@@ -31,6 +33,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	glasses = /obj/item/clothing/glasses/sunglasses
+	box = /obj/item/storage/box/survival/security/radio
 /datum/outfit/job/solgov/commander
 	name = "Solgov Kepler Site Commander"
 	id = /obj/item/card/id/solgov
@@ -41,6 +44,7 @@
 	gloves = /obj/item/clothing/gloves/color/captain/admiral/solgov
 	head = /obj/item/clothing/head/ushanka
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
+	box = /obj/item/storage/box/survival/site_command
 /datum/outfit/job/solgov/administrator
 	name = "Solgov Kepler Administrator"
 	id = /obj/item/card/id/solgov
@@ -51,6 +55,7 @@
 	gloves = /obj/item/clothing/gloves/color/latex/engineering
 	head = /obj/item/clothing/head/ushanka
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/weldingtool/hugetank=1, /obj/item/storage/firstaid/tactical/solgov=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
+	box = /obj/item/storage/box/survival/site_command
 
 //PRE EQUIPPED
 /datum/outfit/job/solgov/sec_equipped
@@ -68,6 +73,7 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1,/obj/item/melee/classic_baton=1, /obj/item/kepler_sec_voucher=1, /obj/item/weldingtool/hugetank=1, /obj/item/flashlight/seclite=1, /obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556=5)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/welding
+	box = /obj/item/storage/box/survival/security/radio
 /datum/outfit/job/solgov/soldier_equipped
 	name = "Solgov Kepler Assault Soldier (Equipped)"
 	id = /obj/item/card/id/solgov
@@ -83,6 +89,7 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1,/obj/item/melee/classic_baton=1, /obj/item/kepler_voucher=1, /obj/item/weldingtool/hugetank=1, /obj/item/flashlight/seclite=1, /obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556=5)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/welding
+	box = /obj/item/storage/box/survival/security/radio
 //NT outfits
 //Private
 /datum/outfit/job/remnant
