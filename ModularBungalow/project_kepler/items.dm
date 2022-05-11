@@ -142,8 +142,8 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/pouch/ammo
-	name = "ammo pouch"
-	desc = "hold ammo boxes so you don't have to."
+	name = "magazine pouch"
+	desc = "hold magazines so you don't have to."
 	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
 	icon_state = "ammo_pouch"
 
@@ -153,8 +153,33 @@
 	STR.max_items = 3
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine
+		))
+
+/obj/item/storage/pouch/ammo/large
+	name = "ammo pouch"
+	desc = "hold ammoboxes so you don't have to."
+	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
+	icon_state = "ammo_pouch"
+
+/obj/item/storage/pouch/ammo/large/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 2
+	STR.set_holdable(list(
 		/obj/item/ammo_box
 		))
+
+
+/obj/item/storage/pouch/pistol
+
+/obj/item/storage/pouch/pistol_ammo
+
+/obj/item/storage/pouch/pistol_ammo_large
+
+/obj/item/storage/pouch/pistol_holster
+
+/obj/i
 
 /obj/item/storage/pouch/command
 	name = "command pouch"
