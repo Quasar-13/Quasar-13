@@ -30,7 +30,7 @@
 	name = "K&H PPK"
 	desc = "A modern version of the classic spy gun by Kain and Heinrich. Favored by cheap action movie spies."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	icon_state = "ppk"
+	icon_state = "ppk380"
 	mag_type = /obj/item/ammo_box/magazine/m380
 	can_suppress = TRUE
 
