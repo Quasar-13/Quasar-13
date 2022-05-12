@@ -355,7 +355,7 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 
 /obj/item/multitool/abductor/marsoc
 	name = "Security Access Tuner"
-	desc = "allows you to get into place and link silo up, where to?"
+	desc = "allows you to get into place and link silo up, built-in AI allow it to determine the purpose of each wires"
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
 	icon_state = "kepler_multitool"
 

@@ -144,6 +144,7 @@
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
 	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
 	slot_flags = 0
@@ -154,6 +155,12 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	name = "\improper SG-GPM21S 'Peacemaker'"
+	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Finish the job."
+	icon_state = "hk21c"
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"

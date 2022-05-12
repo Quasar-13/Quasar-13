@@ -92,6 +92,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
 	projectile_damage_multiplier = 2
+	recoil = 4
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -124,7 +125,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/m45a1
 	name = "P23 .45"
-	desc = "A pistol used by kepler rangers."
+	desc = "A pistol used by special kepler operation."
 	icon_state = "m45a1"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/m45
@@ -141,6 +142,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	initial_caliber = CALIBER_SHOTGUN
+	recoil = 3
 	pb_knockback = 3
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	caliber = CALIBER_SHOTGUN
@@ -187,6 +189,7 @@
 	initial_caliber = CALIBER_A4570
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "revolver"
+	recoil = 1
 	pb_knockback = 5
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
