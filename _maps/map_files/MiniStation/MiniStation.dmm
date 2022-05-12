@@ -669,6 +669,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "cA" = (
@@ -2865,6 +2866,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
+"jZ" = (
+/obj/machinery/rnd/production/circuit_imprinter,
+/turf/open/floor/plasteel/dark,
+/area/syndiestation/logistics)
 "ka" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -4123,7 +4128,7 @@
 /area/syndiestation/triage)
 "oy" = (
 /obj/machinery/door/airlock/command/red{
-	name = "Logistic officer's Quarters";
+	name = "Science officer's Quarters";
 	req_access_txt = "154;157"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -6592,6 +6597,17 @@
 /obj/machinery/computer/libraryconsole,
 /turf/open/floor/carpet/donk,
 /area/chapel)
+"wS" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 4;
+	height = 15;
+	id = "emergency_home";
+	name = "PubbyStation emergency evac bay";
+	width = 20
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
 "wT" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/machinery/door/airlock/engineering{
@@ -6879,7 +6895,9 @@
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "xW" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/secure_closet/freezer/fridge{
+	req_access = list(159)
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "xY" = (
@@ -7001,12 +7019,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "yt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "yu" = (
@@ -7016,6 +7036,7 @@
 	name = "_North APC";
 	pixel_y = 24
 	},
+/obj/structure/cable,
 /turf/open/floor/plating{
 	dir = 1
 	},
@@ -7035,6 +7056,7 @@
 "yz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "yC" = (
@@ -9294,6 +9316,11 @@
 	},
 /turf/open/space,
 /area/space)
+"GW" = (
+/obj/effect/turf_decal/tile/red,
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/hallway/primary/central)
 "GY" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/red,
@@ -10421,6 +10448,10 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/dark,
 /area/syndiestation/logistics)
+"RR" = (
+/obj/machinery/rnd/server,
+/turf/open/floor/circuit,
+/area/engine/gravity_generator)
 "RZ" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/dark,
@@ -10595,6 +10626,7 @@
 "TQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/keycard_auth/directional/north,
+/obj/item/card/emag,
 /turf/open/floor/mineral/titanium/white,
 /area/syndiestation/bunks)
 "TX" = (
@@ -35787,7 +35819,7 @@ bh
 bh
 bh
 bh
-bh
+wS
 bh
 bh
 bh
@@ -42507,7 +42539,7 @@ YI
 Bx
 Bx
 CJ
-Br
+RR
 CQ
 Br
 DS
@@ -43516,7 +43548,7 @@ Qb
 ve
 bG
 yp
-hp
+GW
 hp
 hp
 hp
@@ -44040,7 +44072,7 @@ Bx
 Is
 CJ
 AU
-Bx
+jZ
 cs
 Bk
 nK
@@ -44800,7 +44832,7 @@ uf
 xy
 wI
 yl
-jc
+FF
 CJ
 HX
 HX

@@ -35,7 +35,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head =/obj/item/clothing/head/hardhat/white
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/PL14
-	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/first
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/logistics
 
 
 //Spawn Point
