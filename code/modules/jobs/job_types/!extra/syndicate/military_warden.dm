@@ -5,7 +5,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
-	selection_color = "#335599"
+	selection_color = "#6a96d4"
 	maptype = "syndicate"
 
 	outfit = /datum/outfit/job/military_warden

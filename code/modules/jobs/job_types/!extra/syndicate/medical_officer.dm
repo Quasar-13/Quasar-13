@@ -5,7 +5,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
-	selection_color = "#335522"
+	selection_color = "#296e00"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_TRIAGE
 	maptype = "syndicate"

@@ -5,6 +5,10 @@
 	icon = 'ModularBungalow/clothing/icons/under.dmi'
 	inhand_icon_state = "black_suit"
 
+/obj/item/clothing/under/smc/scholar
+	desc = "A blue uniform for the military warden"
+	name = "scolar's suit"
+	icon_state = "warden"
 
 /obj/item/clothing/under/smc/warden
 	desc = "A blue uniform for the military warden"
@@ -14,7 +18,7 @@
 /obj/item/clothing/under/smc/warden/alt
 	desc = "A black uniform for the military warden"
 	name = "warden's parade uniform"
-	icon_state = "warden_dark"
+	icon_state = "warden_black"
 
 /obj/item/clothing/under/smc/police
 	desc = "A blue uniform for the military police"
@@ -123,7 +127,7 @@
 
 
 /obj/item/clothing/suit/armor/wing
-	name = "wing commander's jacket"
+	name = "field commander's jacket"
 	desc = "A heavily armored purple jacket."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
@@ -147,7 +151,7 @@
 	desc = "A heavily armored labcoat."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "researcher"
+	icon_state = "research"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 5, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
@@ -163,7 +167,7 @@
 
 
 /obj/item/clothing/suit/armor/staff
-	name = "staff officer's jacket"
+	name = "field officer's jacket"
 	desc = "A lightly armored purple jacket."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
@@ -201,7 +205,7 @@
 	dog_fashion = null
 
 /obj/item/clothing/head/beret/so
-	name = "staff officer's beret"
+	name = "field officer's beret"
 	desc = "A purple beret for those in charge of the marines."
 	icon_state = "beret_rd"
 

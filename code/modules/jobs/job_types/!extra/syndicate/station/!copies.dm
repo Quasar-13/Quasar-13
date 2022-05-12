@@ -1,5 +1,6 @@
 /datum/job/ai/syndicate
 	maptype = "syndicate-station"
+	selection_color = "#ededed"
 
 /datum/job/commandant/station
 	maptype = "syndicate-station"
@@ -27,4 +28,7 @@
 	maptype = "syndicate-station"
 
 /datum/job/medical_officer/station
+	maptype = "syndicate-station"
+
+/datum/job/deckhand/station
 	maptype = "syndicate-station"

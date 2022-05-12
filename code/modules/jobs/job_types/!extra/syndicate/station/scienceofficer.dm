@@ -5,7 +5,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
-	selection_color = "#d9d7d7"
+	selection_color = "#e0e0e0"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_BIORESEARCH
 	maptype = "syndicate-station"
@@ -16,11 +16,12 @@
 	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_COMMAND, ACCESS_HEADS, ACCESS_SYNDICATE_RESEARCH)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SCI
-	display_order = JOB_DISPLAY_ORDER_BARTENDER
+	display_order = JOB_DISPLAY_ORDER_COOK
 
 /datum/outfit/job/science_officer
 	name = "Science Officer"
 	jobtype = /datum/job/science_officer
+	belt = null
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader
@@ -29,11 +30,11 @@
 	gloves = /obj/item/clothing/gloves/color/latex
 	suit = /obj/item/clothing/suit/armor/research
 	head = /obj/item/clothing/head/beret/chem/syndie
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/sig
+	suit_store = /obj/item/gun/ballistic/automatic/pistol
 
 
 
 //Spawn Point
 /obj/effect/landmark/start/science_officer
 	name = "Science Officer"
-	icon_state = "medical_officer"
+	icon_state = "science_officer"

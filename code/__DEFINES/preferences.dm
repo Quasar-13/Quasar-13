@@ -88,7 +88,7 @@
 #define EXP_TYPE_TRIAGE			"Triage"
 #define EXP_TYPE_BIORESEARCH	"Bioresearch"
 #define EXP_TYPE_POLICE			"Military Police"
-#define EXP_TYPE_TRIAGE			"Auxiliary"
+#define EXP_TYPE_AUXILIARY		"Auxiliary"
 
 //Blacksite
 #define EXP_TYPE_NTMARINE		"NT Marines"

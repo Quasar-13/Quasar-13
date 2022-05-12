@@ -1,11 +1,11 @@
 /datum/job/wing_commander
-	title = "Wing Commander"
+	title = "Field Commander"
 	department_head = list("First Officer")
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the wing commander"
-	selection_color = "#663366"
+	supervisors = "the first officer"
+	selection_color = "#6e376e"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
 	maptype = "syndicate"
@@ -21,7 +21,7 @@
 	bounty_types = CIV_JOB_ENG
 
 /datum/outfit/job/wing_commander
-	name = "Wing Commander"
+	name = "Field Commander"
 	jobtype = /datum/job/wing_commander
 
 	id = /obj/item/card/id/black
@@ -35,5 +35,5 @@
 
 //Spawn Point
 /obj/effect/landmark/start/wing_commander
-	name = "Wing Commander"
+	name = "Field Commander"
 	icon_state = "wing_commander"

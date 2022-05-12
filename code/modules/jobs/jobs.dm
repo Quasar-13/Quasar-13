@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(command_positions,list(
 	"Science Officer",
 	"Logistics Officer",
 	"Military Warden",
-	"Wing Commander"))
+	"Field Commander"))
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
@@ -96,7 +96,7 @@ GLOBAL_LIST_INIT(syncommand_positions, list(
 	"Science Officer",
 	"Military Warden",
 	"Logistics Officer",
-	"Wing Commander"
+	"Field Commander"
 	))
 
 GLOBAL_LIST_INIT(triage_positions, list(
@@ -108,13 +108,13 @@ GLOBAL_LIST_INIT(bioresearch_positions, list(
 	"Science Officer",
 	"Xenobiologist",
 	"Xenobotanist",
-	"Bioresearcher",
+	"Biotech Engineer",
 	"AI"))
 
 GLOBAL_LIST_INIT(operations_positions, list(
-	"Wing Commander",
+	"Field Commander",
 	"Pilot Officer",
-	"Staff Officer",
+	"Field Officer",
 	"Marine",
 	"Survivor",
 
@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(police_positions, list(
 GLOBAL_LIST_INIT(auxiliary_positions, list(
 	"Scholar",
 	"Mess Sergeant",
-	"Honkmother Representative",
+	"Honkmother Chosen",
 	"Recruit"))
 
 //NT Blacksite

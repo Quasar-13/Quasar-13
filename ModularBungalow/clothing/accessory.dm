@@ -49,13 +49,13 @@
 	icon_state = "pilot"
 
 /obj/item/clothing/accessory/medal/rank/syndicate/staff
-	name = "staff officer's LTJ rank ribbon"
-	desc = "A ribbon denoting the rank of lieutenant junior grade. This ribbon is given out to the staff officers in the syndicate corps."
+	name = "field officer's LTJ rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant junior grade. This ribbon is given out to the field officers in the syndicate corps."
 	icon_state = "staff"
 
 /obj/item/clothing/accessory/medal/rank/syndicate/wing
-	name = "wing commander's LT rank ribbon"
-	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to the wing commanders in the syndicate corps."
+	name = "field commander's LT rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to the field commanders in the syndicate corps."
 	icon_state = "wing_commander"
 
 /obj/item/clothing/accessory/medal/rank/syndicate/req

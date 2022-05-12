@@ -1,10 +1,10 @@
 /datum/job/pilot_officer
 	title = "Pilot Officer"
-	department_head = list("Wing Commander")
+	department_head = list("Field Commander")
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the wing commander"
+	supervisors = "the field commander"
 	selection_color = "#884488"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_CREW
