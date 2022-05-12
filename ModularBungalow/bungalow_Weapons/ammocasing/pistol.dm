@@ -7,3 +7,11 @@
 	max_ammo = 10
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	icon_state = "avtomag-10"
+
+/obj/item/ammo_box/magazine/avtomag/update_icon()
+	..()
+	if (ammo_count() >= 10)
+		icon_state = "avtomag-10"
+	else
+		icon_state = "avtomag-[ammo_count()]"
+

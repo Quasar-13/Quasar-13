@@ -9,10 +9,35 @@
 
 //Solgov outfits
 /datum/outfit/job/solgov
-	name = "Solgov Survivor"
+	name = "Solgov Colonist"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = null
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
+/datum/outfit/job/solgov/sec
+	name = "Solgov Kepler Security"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = /obj/item/melee/classic_baton
+	uniform = /obj/item/clothing/under/syndicate/camo
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_sec_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
+/datum/outfit/job/solgov/soldier
+	name = "Solgov Kepler Soldier"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = /obj/item/melee/classic_baton
+	uniform = /obj/item/clothing/under/syndicate/camo
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
+/datum/outfit/job/solgov/commander
+	name = "Solgov Kepler Commander"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = /obj/item/melee/classic_baton
+	uniform = /obj/item/clothing/under/misc/durathread/kepler
+	suit = /obj/item/clothing/suit/armor/captain/solgov
+	gloves = /obj/item/clothing/gloves/color/captain/admiral/solgov
+	head = /obj/item/clothing/head/ushanka
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 
 //NT outfits
 //Private
