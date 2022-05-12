@@ -52,3 +52,11 @@
 	desc = "A .50AE bullet casing."
 	caliber = CALIBER_50
 	projectile_type = /obj/projectile/bullet/a50ae
+
+// .380 ACP (PPK)
+
+/obj/item/ammo_casing/c380
+	name = ".380 ACP bullet casing"
+	desc = "An old .380 ACP bullet casing."
+	caliber = CALIBER_380
+	projectile_type = /obj/projectile/bullet/c380

@@ -17,6 +17,12 @@
 	description = "an unholy staff and someone to protect it."
 	suffix = "asteroid_apostlestaff.dmm"
 
+/datum/map_template/ruin/asteroid/bible
+	name = "Dark Bible"
+	id = "bible"
+	description = "the dark bible and something to protect it."
+	suffix = "asteroid_darkbible.dmm"
+
 /datum/map_template/ruin/asteroid/assistant
 	name = "Dead Assistant"
 	id = "assistant"
@@ -34,12 +40,6 @@
 	id = "cult"
 	description = "a cult base holdout."
 	suffix = "asteroid_cult.dmm"
-
-/datum/map_template/ruin/asteroid/bible
-	name = "Dark Bible"
-	id = "bible"
-	description = "the dark bible and something to protect it."
-	suffix = "asteroid_darkbible.dmm"
 
 /datum/map_template/ruin/asteroid/roach
 	name = "Glockroach Mafia"
