@@ -241,48 +241,19 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	desc = "large enough to hold rockets so you don't have to."
 	icon_state = "rocket_pouch"
 
+/obj/item/storage/pouch/rocket/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 2
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_casing/caseless/rocket
+		))
+
 /obj/item/storage/pouch/command
 	name = "command pouch"
 	desc = "Oversized pouch meant for commanders. can hold tools, batons, cuffs and grenades sidearm and magazines."
 	icon_state = "command_pouch"
-
-/obj/item/storage/pouch/marsoc_tools
-	name = "Special Operation tools pouch"
-	desc = "hold tools and magazine for finishing the job."
-	icon_state = "soctools"
-
-/obj/item/storage/pouch/marsoc_ifak
-	name = "Special Operation IFAK"
-	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
-	icon_state = "socmed"
-
-/obj/item/storage/pouch/ifak
-	name = "Individual Firstaid Kit"
-	desc = "Save yourself first then save others."
-	icon_state = "ifak"
-
-/obj/item/storage/backpack/marsoc
-	name = "Special Operation Rucksack"
-	desc = "For operating within area that would be highly dangerous."
-	icon = 'ModularBungalow/clothing/icons/storage.dmi'
-	icon_state = "rucksack"
-	worn_icon = 'ModularBungalow/clothing/icons/worn/backw'
-
-/obj/item/storage/backpack/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_w_class = WEIGHT_CLASS_NORMAL
-	STR.max_combined_w_class = 35
-
-/obj/item/storage/backpack/marsoc/solgov
-	name = "Solgov Rucksack"
-	desc = "For operating within area that would be highly dangerous."
-	icon_state = "rucksack_green"
-
-/obj/item/storage/backpack/marsoc/desert
-	name = "Dust Raider Rucksack"
-	desc = "a robust backpack primarily used by the Kepler-4 'Dust Raider' for long range expedition."
-	icon_state = "rucksack_tan"
 
 /obj/item/storage/pouch/command/ComponentInitialize()
 	. = ..()
@@ -316,5 +287,106 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 		/obj/item/megaphone,
 		/obj/item/clothing/glasses/welding,
 		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
 		/obj/item/gun/energy/dueling
 		))
+
+/obj/item/storage/pouch/marsoc_tools
+	name = "SOC tools pouch"
+	desc = "hold tools and magazine for finishing the job, to kill for your government make you a hero, do you feel like a hero yet?"
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutters,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable_coil,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/pouch/marsoc_tools/PopulateContents()
+
+/obj/item/storage/pouch/marsoc_ifak
+	name = "SOC IFAK"
+	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
+	icon_state = "socmed"
+
+/obj/item/storage/pouch/marsoc_ifak/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 12
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		))
+
+
+/obj/item/storage/pouch/ifak
+	name = "Individual Firstaid Kit"
+	desc = "Save yourself first then save others."
+	icon_state = "ifak"
+
+/obj/item/storage/pouch/ifak/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+
+		))
+
+/obj/item/storage/backpack/marsoc
+	name = "SOC Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon = 'ModularBungalow/clothing/icons/storage.dmi'
+	icon_state = "rucksack"
+	worn_icon = 'ModularBungalow/clothing/icons/worn/backw'
+
+/obj/item/storage/backpack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 35
+
+/obj/item/storage/backpack/marsoc/solgov
+	name = "Solgov Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon_state = "rucksack_green"
+
+/obj/item/storage/backpack/marsoc/desert
+	name = "Dust Raider Rucksack"
+	desc = "a robust backpack primarily used by the Kepler-4 'Dust Raider' for long range expedition."
+	icon_state = "rucksack_tan"

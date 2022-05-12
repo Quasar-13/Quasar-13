@@ -118,6 +118,16 @@
 	mag_type = /obj/item/ammo_box/magazine/avtomag/akira
 
 /obj/item/ammo_box/magazine/avtomag/akira
+	ammo_type = /obj/item/ammo_casing/a556
+	caliber = CALIBER_A556
+	max_ammo = 12
+
+/obj/item/gun/ballistic/automatic/pistol/m45a1
+	name = "P23 .45"
+	desc = "A pistol used by kepler rangers."
+	icon_state = "m45a1"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/m45
 
 ////////////////////
 //////REVOLVERS////
