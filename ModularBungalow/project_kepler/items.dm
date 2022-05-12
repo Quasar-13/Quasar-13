@@ -35,11 +35,13 @@
 /obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 12
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/firstaid/tactical/solgov/PopulateContents()
 	if(empty)
 		return
+	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/healthanalyzer/advanced(src)
@@ -299,7 +301,7 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 /obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 7
+	STR.max_items = 12
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
@@ -329,10 +331,30 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 		/obj/item/clothing/glasses/welding,
 		/obj/item/gun/energy/laser/captain/ntgold/pistol,
 		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/grenade,
 		/obj/item/gun/energy/dueling
 		))
 
 /obj/item/storage/pouch/marsoc_tools/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/m45a1(src)
+	new /obj/item/suppressor(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/multitool/abductor/marsoc(src)
+
+/obj/item/multitool/abductor/marsoc
+	name = "Security Access Tuner"
+	desc = "allows you to get into place and link silo up, where to?"
+	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
+	icon_state = "kepler_multitool"
 
 /obj/item/storage/pouch/marsoc_ifak
 	name = "SOC IFAK"
@@ -345,13 +367,33 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	STR.max_items = 12
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
-		/obj/item/gun/ballistic/automatic/pistol,
-		/obj/item/ammo_box/magazine,
-		/obj/item/gun/ballistic/revolver,
-		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/storage/firstaid,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/mesh,
+		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/poultice,
+		/obj/item/stack/medical/suture,
+		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/aloe,
+		/obj/item/healthanalyzer,
+		/obj/item/pinpointer,
+		/obj/item/roller,
+		/obj/item/storage/pill_bottle,
 		))
 
+/obj/item/storage/pouch/marsoc_ifak/PopulateContents()
+	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/pill_bottle/synaptizine(src)
+	new /obj/item/storage/pill_bottle/stimulant(src)
+	new /obj/item/storage/pill_bottle/epinephrine(src)
+	new /obj/item/reagent_containers/medipen/survival/luxury(src)
+	new /obj/item/roller(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/combat/nanites(src)
+	new /obj/item/pinpointer/crew(src)
 
 /obj/item/storage/pouch/ifak
 	name = "Individual Firstaid Kit"
