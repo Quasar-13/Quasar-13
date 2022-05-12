@@ -32,3 +32,6 @@
 
 /datum/job/deckhand/station
 	maptype = "syndicate-station"
+
+/datum/job/triage_officer/station
+	maptype = "syndicate-station"
