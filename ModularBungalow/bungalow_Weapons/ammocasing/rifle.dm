@@ -80,30 +80,31 @@
 	icon_state = "556big-50"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	max_ammo = 50
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_casing/a556/pl
 	projectile_type = /obj/projectile/bullet/a556/pl
 /obj/projectile/bullet/a556/pl
 	name = "5.56mm bullet"
-	damage = 25
+	damage = 20
 	stamina = 59
-	armour_penetration = -20
+	armour_penetration = -30
 	wound_bonus = -20
 
 /obj/item/ammo_casing/a556/sk
 	projectile_type = /obj/projectile/bullet/a556/sk
 /obj/projectile/bullet/a556/sk
 	name = "5.56mm bullet"
-	damage = 35
-	armour_penetration = 5
-	wound_bonus = -20
+	damage = 22
+	armour_penetration = 17
+	wound_bonus = 5
 	stamina = 20
 
 /obj/item/ammo_casing/a556/highp
 	projectile_type = /obj/projectile/bullet/a556/highp
 /obj/projectile/bullet/a556/highp
 	name = "5.56mm bullet"
-	damage = 55
-	armour_penetration = 35
-	wound_bonus = 10
+	damage = 45
+	armour_penetration = 40
+	wound_bonus = 20
 	stamina = 30
