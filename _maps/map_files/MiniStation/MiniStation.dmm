@@ -439,6 +439,13 @@
 /turf/open/floor/mineral/titanium/white,
 /area/syndiestation/research)
 "bT" = (
+/obj/machinery/button/door{
+	id = "armory";
+	name = "Armory Shutters";
+	pixel_x = 26;
+	pixel_y = -26;
+	req_access_txt = "3"
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/caution/stand_clear/red,
 /turf/open/floor/plasteel/dark,
@@ -520,7 +527,11 @@
 /turf/open/floor/plating,
 /area/bridge)
 "cg" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "ch" = (
@@ -531,7 +542,12 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "ci" = (
-/turf/open/floor/plasteel/dark,
+/obj/machinery/door/poddoor/shutters{
+	id = "armory";
+	name = "Armoury Shutter"
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
 /area/bridge)
 "cj" = (
 /obj/machinery/door/firedoor/border_only{
@@ -965,7 +981,7 @@
 "dy" = (
 /obj/machinery/status_display{
 	density = 0;
-	pixel_y = 2;
+	pixel_y = 2
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/fore)
@@ -2139,7 +2155,6 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
 "hC" = (
-/obj/machinery/light,
 /mob/living/carbon/human/species/monkey,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2762,6 +2777,11 @@
 	},
 /turf/open/floor/wood,
 /area/chapel)
+"jK" = (
+/obj/structure/bed/pod,
+/obj/item/restraints/handcuffs,
+/turf/open/floor/plasteel/white,
+/area/syndiestation/research)
 "jL" = (
 /obj/item/bedsheet,
 /obj/structure/bed,
@@ -4352,7 +4372,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/airlock/maintenance{
 	name = "Custodial Maintenance";
-	req_access_txt = "26"
+	req_access_txt = "150"
 	},
 /turf/open/floor/plating,
 /area/janitor)
@@ -7838,6 +7858,11 @@
 /area/syndiestation/logistics)
 "By" = (
 /obj/structure/table/reinforced,
+/obj/item/storage/box/monkeycubes/syndicate{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/storage/box/monkeycubes/syndicate,
 /obj/item/gun/syringe/dna,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
@@ -8466,9 +8491,14 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "Ei" = (
-/obj/machinery/smartfridge/chemistry/virology/preloaded,
-/turf/open/floor/plasteel/white,
-/area/syndiestation/research)
+/obj/machinery/door/poddoor/shutters{
+	id = "armory";
+	name = "Armoury Shutter"
+	},
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel,
+/area/bridge)
 "Ej" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/emergency,
@@ -8543,10 +8573,11 @@
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Ex" = (
-/obj/machinery/camera/autoname,
-/obj/machinery/computer/pandemic,
-/turf/open/floor/plasteel/white,
-/area/syndiestation/research)
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/circuit/red,
+/area/security/brig)
 "Ey" = (
 /turf/open/floor/pod,
 /area/syndiestation/requisitions)
@@ -8658,8 +8689,10 @@
 /area/maintenance/central)
 "Fb" = (
 /obj/structure/rack,
-/obj/item/storage/bag/trash,
-/obj/item/soap/syndie,
+/obj/item/clothing/under/smc/deckhand,
+/obj/item/clothing/under/smc/deckhand,
+/obj/item/clothing/under/smc/deckhand,
+/obj/item/clothing/under/smc/deckhand,
 /turf/open/floor/plasteel/dark,
 /area/janitor)
 "Fc" = (
@@ -8944,15 +8977,8 @@
 /turf/open/space,
 /area/space/nearstation)
 "FX" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/table/glass,
-/obj/item/storage/box/handcuffs,
-/obj/item/reagent_containers/syringe/bioterror,
-/obj/item/reagent_containers/syringe/antiviral{
-	pixel_y = 3
-	},
+/obj/machinery/camera/autoname,
+/obj/machinery/computer/pandemic,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Ga" = (
@@ -9237,10 +9263,9 @@
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
 "GL" = (
-/obj/item/storage/box/syndie_kit/virology,
-/obj/structure/table/glass,
-/turf/open/floor/plasteel/white,
-/area/syndiestation/research)
+/obj/machinery/light,
+/turf/open/floor/mineral/bananium,
+/area/hallway/primary/central)
 "GN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -9266,10 +9291,11 @@
 /turf/open/floor/carpet/red,
 /area/bridge)
 "Hb" = (
-/obj/structure/bed/pod,
-/obj/item/restraints/handcuffs,
-/turf/open/floor/plasteel/white,
-/area/syndiestation/research)
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/light,
+/turf/open/floor/plasteel/dark,
+/area/hallway/primary/central)
 "Hc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -9346,18 +9372,20 @@
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Hv" = (
-/mob/living/carbon/human/species/monkey,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/machinery/smartfridge/chemistry/virology/preloaded,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Hw" = (
-/mob/living/carbon/human/species/monkey,
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Monkey pen"
+/obj/machinery/light{
+	dir = 1
 	},
+/obj/structure/table/glass,
+/obj/item/storage/box/handcuffs,
+/obj/item/reagent_containers/syringe/bioterror,
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_y = 3
+	},
+/obj/structure/reagent_dispensers/virusfood/directional/north,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Hy" = (
@@ -9412,6 +9440,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/computer/pandemic,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/triage)
 "HK" = (
@@ -9655,9 +9684,12 @@
 /turf/open/floor/plasteel/dark,
 /area/syndiestation/logistics)
 "Io" = (
-/obj/machinery/drone_dispenser/syndrone,
-/turf/open/floor/plasteel/dark,
-/area/syndiestation/logistics)
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/syndiestation/research)
 "Ip" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -10005,6 +10037,14 @@
 /obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/dark,
 /area/syndiestation/logistics)
+"Ke" = (
+/mob/living/carbon/human/species/monkey,
+/obj/machinery/door/window/westleft{
+	dir = 1;
+	name = "Monkey pen"
+	},
+/turf/open/floor/plasteel/white,
+/area/syndiestation/research)
 "Kg" = (
 /turf/open/floor/pod/dark,
 /area/syndiestation/hangar)
@@ -10213,6 +10253,14 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
+"Oo" = (
+/obj/machinery/light,
+/mob/living/carbon/human/species/monkey,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/syndiestation/research)
 "Op" = (
 /obj/machinery/power/apc/auto_name/north,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -10537,6 +10585,7 @@
 /obj/structure/table/abductor,
 /obj/item/shield/energy/bananium,
 /obj/item/melee/transforming/energy/sword/bananium,
+/obj/machinery/light,
 /turf/open/floor/mineral/bananium,
 /area/hallway/primary/central)
 "TN" = (
@@ -10779,16 +10828,8 @@
 /turf/open/floor/wood,
 /area/chapel)
 "XL" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 1;
-	on = 1
-	},
-/obj/structure/table/reinforced,
-/obj/item/storage/box/monkeycubes/syndicate{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/storage/box/monkeycubes/syndicate,
+/obj/item/storage/box/syndie_kit/virology,
+/obj/structure/table/glass,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "XV" = (
@@ -39880,7 +39921,7 @@ Bx
 Bx
 Bx
 Bx
-Io
+Bx
 CJ
 aa
 FR
@@ -42396,7 +42437,7 @@ ay
 pj
 tk
 sk
-sk
+cg
 ah
 ah
 cf
@@ -44187,19 +44228,19 @@ bK
 es
 Re
 zh
-cg
+Qr
 wV
 av
 bn
 cR
-cg
+Qr
 uh
 oh
 An
-cg
-bT
 Qr
-cg
+bT
+Ei
+Qr
 Cl
 dE
 KO
@@ -47549,13 +47590,13 @@ am
 ck
 ck
 Dn
-Dm
+Ex
 Dn
 gJ
 dE
 Hi
 xv
-bG
+Hb
 VR
 VR
 VR
@@ -48065,7 +48106,7 @@ sz
 ho
 ho
 ho
-ho
+GL
 aV
 re
 xO
@@ -50642,7 +50683,7 @@ jR
 AE
 VR
 gT
-sN
+Io
 sN
 xK
 VR
@@ -50899,7 +50940,7 @@ pb
 dO
 gv
 gv
-XL
+hs
 st
 VR
 VR
@@ -51155,10 +51196,10 @@ jF
 np
 bP
 VR
-Ex
+VR
 sN
 sN
-Hv
+qk
 VR
 sC
 sC
@@ -51412,10 +51453,10 @@ lN
 td
 lp
 VR
-Ei
-sN
-sN
-Hw
+VR
+VR
+st
+VR
 VR
 sC
 sC
@@ -51670,8 +51711,8 @@ sN
 AF
 VR
 FX
-GL
-Hb
+sN
+sN
 hC
 VR
 sC
@@ -51926,10 +51967,10 @@ jE
 qk
 lp
 VR
-VR
-VR
-VR
-VR
+Hv
+sN
+sN
+Ke
 VR
 sC
 HB
@@ -52182,12 +52223,12 @@ oE
 ka
 in
 lp
-bh
-bh
-bh
-bh
-bh
-bh
+VR
+Hw
+XL
+jK
+Oo
+VR
 sC
 oC
 ug
@@ -52439,12 +52480,12 @@ jY
 jY
 fg
 hs
-bh
-bh
-bh
-bh
-bh
-bh
+VR
+VR
+VR
+VR
+VR
+VR
 sC
 HC
 ug

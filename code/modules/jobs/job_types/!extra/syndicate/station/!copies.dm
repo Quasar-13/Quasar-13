@@ -15,22 +15,22 @@
 /datum/job/mechanic/station
 	maptype = "syndicate-station"
 
-/datum/job/military_police/station
+/datum/job/deckhand/station
+	maptype = "syndicate-station"
+
+/datum/job/requisitions_chief/station
 	maptype = "syndicate-station"
 
 /datum/job/military_warden/station
 	maptype = "syndicate-station"
 
-/datum/job/requisitions_chief/station
+/datum/job/military_police/station
 	maptype = "syndicate-station"
 
 /datum/job/triage_technician/station
 	maptype = "syndicate-station"
 
 /datum/job/medical_officer/station
-	maptype = "syndicate-station"
-
-/datum/job/deckhand/station
 	maptype = "syndicate-station"
 
 /datum/job/triage_officer/station
