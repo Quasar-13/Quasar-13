@@ -293,6 +293,9 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 		/obj/item/gun/energy/dueling
 		))
 
+/obj/item/storage/pouch/command/PopulateContents()
+	new /obj/item/binoculars(src)
+
 /obj/item/storage/pouch/marsoc_tools
 	name = "SOC tools pouch"
 	desc = "hold tools and magazine for finishing the job, to kill for your government make you a hero, do you feel like a hero yet?"
@@ -390,6 +393,8 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	new /obj/item/storage/pill_bottle/epinephrine(src)
 	new /obj/item/reagent_containers/medipen/survival/luxury(src)
 	new /obj/item/roller(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/combat/nanites(src)
