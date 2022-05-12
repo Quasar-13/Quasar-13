@@ -43,7 +43,7 @@
 	belt = /obj/item/pda/heads/rd
 	ears = /obj/item/radio/headset/heads/rd
 	uniform = /obj/item/clothing/under/rank/rnd/research_director
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/laceup
 	suit = /obj/item/clothing/suit/neocoat/rd
 	l_hand = /obj/item/clipboard
 	l_pocket = /obj/item/laser_pointer

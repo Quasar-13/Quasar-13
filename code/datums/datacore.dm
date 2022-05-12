@@ -205,7 +205,7 @@
 		)
 
 
-	if(SSmaptype.maptype == "solgov")
+	if(SSmaptype.maptype == "kepler-ice")
 		manifest_out = list(
 			"Solgov",
 			"NT Marines",
@@ -273,7 +273,7 @@
 		departments = list(
 			"NT Marines" = GLOB.ntmarines_positions)
 
-	if(SSmaptype.maptype == "solgov")
+	if(SSmaptype.maptype == "kepler-ice")
 		departments = list(
 			"Solgov Personnel" = GLOB.solgov_positions,
 			"NT Remnants" = GLOB.ntmarines_positions,

@@ -20,7 +20,7 @@
 	name = "Bluespace structure beacon"
 	desc = "A beacon that orders a bluespace structure capsule, holding a schematic for a functional building. Contains shelters and small houses."
 	cost = PAYCHECK_MEDIUM * 6
-	contains = list(/obj/item/choice_beacon/bungalow/structures)
+	contains = list(/obj/item/choice_beacon/structure)
 
 /datum/supply_pack/goody/carpet_brown
 	name = "50 brown carpets"
@@ -91,21 +91,21 @@
 
 /datum/supply_pack/goody/box_rubbershot
 	name = "Box of rubbershot shells"
-	desc = "A box containing 7 rubbershot shells to reload any kind of shotgun."
+	desc = "A box containing 12 rubbershot shells to reload any kind of shotgun."
 	cost = PAYCHECK_HARD * 4
 	access_view = ACCESS_ARMORY
-	contains = list(/obj/item/storage/box/rubbershot)
+	contains = list(/obj/item/ammo_box/shotgun/rubber)
 
 /datum/supply_pack/goody/box_beanbags
 	name = "Box of beanbag shells"
-	desc = "A box containing 6 beanbag shells to reload any kind of shotgun."
+	desc = "A box containing 12 beanbag shells to reload any kind of shotgun."
 	cost = PAYCHECK_HARD * 4
 	access_view = ACCESS_ARMORY
-	contains = list(/obj/item/storage/box/beanbag)
+	contains = list(/obj/item/ammo_box/shotgun/beanbag)
 
 /datum/supply_pack/goody/box_buckshots
 	name = "Box of buckshot shells"
-	desc = "A box containing 7 buckshot shells to reload any kind of shotgun."
+	desc = "A box containing 12 buckshot shells to reload any kind of shotgun."
 	cost = PAYCHECK_HARD * 8
 	access_view = ACCESS_ARMORY
-	contains = list(/obj/item/storage/box/lethalshot)
+	contains = list(/obj/item/ammo_box/shotgun/buckshot)

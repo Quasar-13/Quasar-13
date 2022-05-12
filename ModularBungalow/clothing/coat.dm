@@ -41,11 +41,29 @@
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/suit/armor/ranger/snow
+	name = "Ranger's Duster"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A duster used by the kepler rangers."
+	icon_state = "duster_snow"
+	inhand_icon_state = "armor"
+	body_parts_covered = CHEST|GROIN
+	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 25, BOMB = 25, BIO = 20, RAD = 10, FIRE = 100, ACID = 90, WOUND = 10)
+	dog_fashion = null
+	resistance_flags = FIRE_PROOF
+
 /obj/item/clothing/suit/armor/ranger/vet
 	name = "Veteran Ranger's Duster"
 	desc = "A duster used by the Veteran Ranger."
 	icon_state = "foxranger"
 	armor = list(MELEE = 50, BULLET = 50, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+
+/obj/item/clothing/suit/armor/ranger/vet/snow
+	name = "Veteran Kepler Ranger's Duster"
+	desc = "A duster used by the kepler rangers, this one is significantly more durable and more crude looking, yet well armored.."
+	icon_state = "foxranger_snow"
+	armor = list(MELEE = 55, BULLET = 50, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 35, RAD = 40, FIRE = 100, ACID = 90, WOUND = 10)
 
 /obj/item/clothing/suit/armor/nso
 	name = "Nanotrasen Security Operative's Coat"
@@ -58,7 +76,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/hopcoat
-	name = "head of personnel's uniform"
+	name = "head of personnel's official coat"
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "A formal but simple coat worn by the Head of Personnel."
@@ -89,6 +107,32 @@
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	desc = "Made from all the miners you ruthlessly slaughtered."
 	icon_state = "hosranger"
+	
+/obj/item/clothing/suit/armor/hos/vest
+	name = "head of security's vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A standard type-1 vest with ceremonial epaulettes and a medal for your service."
+	icon_state = "hosvest"
+	inhand_icon_state = "armoralt"
+
+/obj/item/clothing/suit/armor/vest/gold
+	name = "golden vest"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "A limited edition P1-MP bling vest, plastered in REAL gold leaf! You might not wanna wear this into combat..."
+	icon_state = "goldarmor"
+	inhand_icon_state = "armoralt"
+
+/obj/item/clothing/suit/armor/hos/ranger/snow
+	name = "\improper expedition leader's ranger duster"
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	desc = "Originally used by the Kepler Security Force, now they find themselves in the hands of brave men and women alike.There's a small kepler ranger's patch on it's side"
+	icon_state = "foxranger_snowhos"
+	armor = list(MELEE = 55, BULLET = 45, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 50, RAD = 50, FIRE = 100, ACID = 100, WOUND = 20)
+	dog_fashion = null
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/qm
 	name = "quartermaster's coat"

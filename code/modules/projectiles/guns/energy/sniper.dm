@@ -14,7 +14,7 @@
 	weapon_weight = WEAPON_HEAVY
 	can_flashlight = FALSE
 	charge_sections = 1
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	zoomable = TRUE
 	zoom_amt = 10

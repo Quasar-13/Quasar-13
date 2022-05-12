@@ -21,3 +21,5 @@
 	caliber = CALIBER_75
 	icon_state = "s-casing-live"
 	projectile_type = /obj/projectile/bullet/gyro
+
+/obj/item/ammo_casing/caseless/a20

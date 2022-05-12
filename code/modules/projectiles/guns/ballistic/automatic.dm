@@ -47,7 +47,7 @@
 		A.UpdateButtonIcon()
 
 /obj/item/gun/ballistic/automatic/proto
-	name = "\improper Nanotrasen Saber SMG"
+	name = "NT-SBR 'Saber'"
 	desc = "A prototype full auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon_state = "saber"
 	burst_size = 1
@@ -136,11 +136,15 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "miniuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+
+/obj/item/gun/ballistic/automatic/mini_uzi/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -236,7 +240,7 @@
 
 /obj/item/gun/ballistic/automatic/tommygun/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar
 	name = "\improper NT-ARG 'Boarder'"
@@ -248,15 +252,6 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
-
-/obj/item/gun/ballistic/automatic/ar/semi
-	name = "\improper NT-ARS 'Sweeper'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces. This one is modified to be semi-automatic"
-	w_class = WEIGHT_CLASS_BULKY
-	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
-	slowdown = 0.7
-	burst_size = 1
-	fire_delay = 3
 
 
 // L6 SAW //
@@ -382,17 +377,14 @@
 
 /obj/item/gun/ballistic/automatic/surplus
 	name = "Surplus Rifle"
-	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon. Uses 10mm ammo and its bulky frame hinders one-handed firing."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	weapon_weight = WEAPON_HEAVY
-	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
-	fire_delay = 30
+	mag_type = /obj/item/ammo_box/magazine/surplusrifle
+	fire_delay = 10
 	burst_size = 1
-	can_unsuppress = TRUE
-	can_suppress = TRUE
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	mag_display = TRUE
@@ -415,8 +407,3 @@
 	casing_ejector = FALSE
 
 
-/obj/item/gun/ballistic/automatic/laser/burst
-	name = "L-807 Neo Laser Burst Rifle "
-	desc = "The Miracle of the L-804, in it's full burst fire glory."
-	icon_state = "laserburst"
-	burst_size = 3
