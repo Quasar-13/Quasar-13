@@ -6,8 +6,8 @@
 	inhand_icon_state = "black_suit"
 
 /obj/item/clothing/under/smc/scholar
-	desc = "A blue uniform for the military warden"
-	name = "scolar's suit"
+	desc = "A black suit for the scholar"
+	name = "scholar's suit"
 	icon_state = "warden"
 
 /obj/item/clothing/under/smc/warden
