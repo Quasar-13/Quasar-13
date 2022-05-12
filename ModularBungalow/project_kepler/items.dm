@@ -143,7 +143,7 @@
 
 /obj/item/storage/pouch/ammo
 	name = "magazine pouch"
-	desc = "hold magazines so you don't have to."
+	desc = "can hold magazines so you don't have to."
 	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
 	icon_state = "ammo_pouch"
 
@@ -158,9 +158,9 @@
 
 /obj/item/storage/pouch/ammo/large
 	name = "ammo pouch"
-	desc = "hold ammoboxes so you don't have to."
+	desc = "large enough to hold ammoboxes so you don't have to."
 	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
-	icon_state = "ammo_pouch"
+	icon_state = "large_pouch"
 
 /obj/item/storage/pouch/ammo/large/ComponentInitialize()
 	. = ..()
@@ -179,7 +179,7 @@
 
 /obj/item/storage/pouch/pistol_holster
 
-/obj/i
+/obj/item/storage/pouch/rocket
 
 /obj/item/storage/pouch/command
 	name = "command pouch"
