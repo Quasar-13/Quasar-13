@@ -411,8 +411,20 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	STR.max_items = 5
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
-		/obj/item/gun/ballistic/automatic/pistol,
-
+		/obj/item/storage/firstaid,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/mesh,
+		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/poultice,
+		/obj/item/stack/medical/suture,
+		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/aloe,
+		/obj/item/healthanalyzer,
+		/obj/item/pinpointer,
+		/obj/item/roller,
+		/obj/item/storage/pill_bottle,
 		))
 
 /obj/item/storage/backpack/marsoc

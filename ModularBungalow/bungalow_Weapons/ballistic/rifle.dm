@@ -162,6 +162,10 @@
 	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Finish the job."
 	icon_state = "hk21c"
 
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
+
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."

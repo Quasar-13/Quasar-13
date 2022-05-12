@@ -73,6 +73,14 @@
 	name = "5.45x39mm bullet"
 	damage = 34
 
+//CUSTOM KEPLER STUFF BELOW
+
+/obj/item/ammo_box/magazine/m556/big
+	name = "5.56 expanded magazine"
+	icon_state = "556big-50"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	max_ammo = 50
+
 /obj/item/ammo_casing/a556/pl
 	projectile_type = /obj/projectile/bullet/a556/pl
 /obj/projectile/bullet/a556/pl
