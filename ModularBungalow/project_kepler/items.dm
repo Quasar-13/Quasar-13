@@ -170,7 +170,7 @@
 		/obj/item/ammo_box
 		))
 
-
+//RWZANIKKI
 /obj/item/storage/pouch/pistol
 
 /obj/item/storage/pouch/pistol_ammo
