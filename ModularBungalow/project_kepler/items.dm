@@ -75,7 +75,6 @@
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
 		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-		/obj/item/gun/ballistic/shotgun/tracker,
 		/obj/item/gun/energy/dueling
 		))
 
@@ -104,6 +103,8 @@
 		/obj/item/ammo_box/magazine/toy/pistol,
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
 		/obj/item/gun/energy/dueling
 		))
 
@@ -144,7 +145,6 @@
 /obj/item/storage/pouch/ammo
 	name = "magazine pouch"
 	desc = "can hold magazines so you don't have to."
-	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
 	icon_state = "ammo_pouch"
 
 /obj/item/storage/pouch/ammo/ComponentInitialize()
@@ -159,33 +159,130 @@
 /obj/item/storage/pouch/ammo/large
 	name = "ammo pouch"
 	desc = "large enough to hold ammoboxes so you don't have to."
-	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
 	icon_state = "large_pouch"
 
 /obj/item/storage/pouch/ammo/large/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 2
+	STR.max_items = 4
 	STR.set_holdable(list(
 		/obj/item/ammo_box
 		))
 
 //RWZANIKKI
 /obj/item/storage/pouch/pistol
+	name = "sidearm pouch"
+	desc = "hold a pistol, neat no?."
+	icon_state = "pistol"
+
+/obj/item/storage/pouch/pistol/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/gun/energy/dueling
+		))
 
 /obj/item/storage/pouch/pistol_ammo
+	name = "pistol ammo pouch"
+	desc = "hold multiple pistol magazines so you don't have to."
+	icon_state = "pistol_mag"
+
+obj/item/storage/pouch/pistol_ammo/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
+		/obj/item/ammo_box/magazine/m9mm_aps,
+		/obj/item/ammo_box/magazine/m45,
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/ammo_box/c38, // Revolver speedloaders.
+		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/gun/energy/dueling
+		))
 
 /obj/item/storage/pouch/pistol_ammo_large
+	name = "large pistol ammo pouch"
+	desc = "hold many pistol magazines so you can shoot more"
+	icon_state = "pistol_mag_pouch"
 
-/obj/item/storage/pouch/pistol_holster
+obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
+		/obj/item/ammo_box/magazine/m9mm_aps,
+		/obj/item/ammo_box/magazine/m45,
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/ammo_box/c38, // Revolver speedloaders.
+		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/a762,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		))
 
 /obj/item/storage/pouch/rocket
+	name = "rocket pouch"
+	desc = "large enough to hold rockets so you don't have to."
+	icon_state = "rocket_pouch"
 
 /obj/item/storage/pouch/command
 	name = "command pouch"
 	desc = "Oversized pouch meant for commanders. can hold tools, batons, cuffs and grenades sidearm and magazines."
-	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
 	icon_state = "command_pouch"
+
+/obj/item/storage/pouch/marsoc_tools
+	name = "Special Operation tools pouch"
+	desc = "hold tools and magazine for finishing the job."
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/marsoc_ifak
+	name = "Special Operation IFAK"
+	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
+	icon_state = "socmed"
+
+/obj/item/storage/pouch/ifak
+	name = "Individual Firstaid Kit"
+	desc = "Save yourself first then save others."
+	icon_state = "ifak"
+
+/obj/item/storage/backpack/marsoc
+	name = "Special Operation Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon = 'ModularBungalow/clothing/icons/storage.dmi'
+	icon_state = "rucksack"
+	worn_icon = 'ModularBungalow/clothing/icons/worn/backw'
+
+/obj/item/storage/backpack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 35
+
+/obj/item/storage/backpack/marsoc/solgov
+	name = "Solgov Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon_state = "rucksack_green"
+
+/obj/item/storage/backpack/marsoc/desert
+	name = "Dust Raider Rucksack"
+	desc = "a robust backpack primarily used by the Kepler-4 'Dust Raider' for long range expedition."
+	icon_state = "rucksack_tan"
 
 /obj/item/storage/pouch/command/ComponentInitialize()
 	. = ..()
@@ -202,6 +299,8 @@
 		/obj/item/ammo_box/magazine/toy/pistol,
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
 		/obj/item/radio,
 		/obj/item/weldingtool,
 		/obj/item/crowbar,
