@@ -31,6 +31,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/wing
 	belt = /obj/item/gun/ballistic/automatic/pistol/PL14
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/wing
 
 
 //Spawn Point

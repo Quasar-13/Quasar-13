@@ -4,7 +4,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "absolutely everyone"
-	selection_color = "#595959"
+	selection_color = "#cccccc"
 	exp_type = EXP_TYPE_BIORESEARCH
 	maptype = "syndicate-station"
 

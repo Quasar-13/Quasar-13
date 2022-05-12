@@ -31,6 +31,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/pilot
 	belt = /obj/item/gun/ballistic/automatic/pistol/ppk
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/pilot
 
 
 

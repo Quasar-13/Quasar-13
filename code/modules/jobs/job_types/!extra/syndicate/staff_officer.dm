@@ -32,6 +32,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	suit = /obj/item/clothing/suit/armor/staff
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/staff
 
 	belt = null
 

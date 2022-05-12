@@ -2,6 +2,7 @@
 	name = "rank ribbon"
 	desc = "A ribbon denoting the rank of an individual. If you see this medal, contact the coders"
 	icon = 'ModularBungalow/clothing/icons/accessory.dmi'
+	worn_icon = 'ModularBungalow/clothing/worn/accessoryw.dmi'
 	icon_state = "null"
 
 //Syndicate ruin rank ribbons
@@ -48,10 +49,20 @@
 	desc = "A ribbon denoting the rank of ensign. This ribbon is given out to the pilot officers in the syndicate corps."
 	icon_state = "pilot"
 
+/obj/item/clothing/accessory/medal/rank/syndicate/xeno
+	name = "xenobiologist's ENS rank ribbon"
+	desc = "A ribbon denoting the rank of ensign. This ribbon is given out to xenobiologists in the syndicate corps."
+	icon_state = "xenobio"
+
 /obj/item/clothing/accessory/medal/rank/syndicate/staff
 	name = "field officer's LTJ rank ribbon"
 	desc = "A ribbon denoting the rank of lieutenant junior grade. This ribbon is given out to the field officers in the syndicate corps."
 	icon_state = "staff"
+
+/obj/item/clothing/accessory/medal/rank/syndicate/sci
+	name = "science officer's LT rank ribbon"
+	desc = "A ribbon denoting the rank of lieutenant. This ribbon is given out to science officers in the syndicate corps."
+	icon_state = "biocomp"
 
 /obj/item/clothing/accessory/medal/rank/syndicate/wing
 	name = "field commander's LT rank ribbon"

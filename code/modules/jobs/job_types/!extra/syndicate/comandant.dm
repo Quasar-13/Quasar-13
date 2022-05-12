@@ -42,6 +42,7 @@
 	neck = /obj/item/clothing/neck/cloak/trenchcloak
 	glasses = /obj/item/clothing/glasses/hud/eyepatch/admiral
 	uniform = /obj/item/clothing/under/syndicate
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/captain
 
 
 //Spawn Point

@@ -34,6 +34,7 @@
 	suit = /obj/item/clothing/suit/armor/medical_officer
 	head = /obj/item/clothing/head/beret/mo
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/sig
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/medical
 
 
 

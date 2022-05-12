@@ -36,6 +36,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/syndicate
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/first
 
 //Spawn Point
 /obj/effect/landmark/start/first_officer

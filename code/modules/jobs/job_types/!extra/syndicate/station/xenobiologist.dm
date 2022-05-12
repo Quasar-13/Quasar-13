@@ -28,3 +28,4 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex
 	head = /obj/item/clothing/head/beret/chem/syndie
+//	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/xeno

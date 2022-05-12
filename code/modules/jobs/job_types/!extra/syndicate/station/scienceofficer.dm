@@ -31,6 +31,7 @@
 	suit = /obj/item/clothing/suit/armor/research
 	head = /obj/item/clothing/head/beret/chem/syndie
 	suit_store = /obj/item/gun/ballistic/automatic/pistol
+//	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/sci
 
 
 

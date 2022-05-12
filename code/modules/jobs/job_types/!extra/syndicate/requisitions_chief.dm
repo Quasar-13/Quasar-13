@@ -35,3 +35,4 @@
 	suit = /obj/item/clothing/suit/armor/reqchief
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/ppk
 	head = /obj/item/clothing/head/beret/req
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/req

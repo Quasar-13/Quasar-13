@@ -21,13 +21,12 @@
 /datum/outfit/job/scholar
 	name = "Scholar"
 	jobtype = /datum/job/scholar
-	belt = null
 
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	uniform = /obj/item/clothing/under/smc/scholar
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit_store = /obj/item/gun/ballistic/automatic/pistol
+	belt = /obj/item/gun/ballistic/automatic/pistol
 
 
 //Spawn Point
