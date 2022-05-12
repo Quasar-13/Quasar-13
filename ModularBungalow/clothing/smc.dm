@@ -11,10 +11,20 @@
 	name = "warden's uniform"
 	icon_state = "warden"
 
+/obj/item/clothing/under/smc/warden/alt
+	desc = "A black uniform for the military warden"
+	name = "warden's parade uniform"
+	icon_state = "warden_dark"
+
 /obj/item/clothing/under/smc/police
 	desc = "A blue uniform for the military police"
 	name = "military police's uniform"
 	icon_state = "police"
+
+/obj/item/clothing/under/smc/police/alt
+	desc = "A turtleneck uniform for the military police"
+	name = "military police's turtleneck"
+	icon_state = "police_turtle"
 
 /obj/item/clothing/under/smc/recruit
 	desc = "A uniform for new cybersun navy recruits"
@@ -51,6 +61,21 @@
 	name = "logistic officer's jumpsuit"
 	icon_state = "logistics"
 
+/obj/item/clothing/under/smc/research
+	desc = "A white suit for important reserach"
+	name = "research suit"
+	icon_state = "research"
+
+/obj/item/clothing/under/smc/hydro
+	desc = "A jumpsuit for important reserach"
+	name = "xenobotanist suit"
+	icon_state = "researchhydro"
+
+/obj/item/clothing/under/smc/researchxeno
+	desc = "A suit for important reserach"
+	name = "xenobiologist suit"
+	icon_state = "researchxeno"
+
 
 //Armor
 /obj/item/clothing/suit/armor/vest/syndicate
@@ -69,7 +94,7 @@
 	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 40, BOMB = 30, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/suit/armor/labcoat/syndie
-	name = "armored syndicate labcoat"
+	name = "syndicate operations labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
 	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
@@ -77,14 +102,15 @@
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
-/obj/item/clothing/suit/armor/labcoat/triagetech
+/obj/item/clothing/suit/armor/labcoat/syndie/triagetech
 	name = "triage technician's labcoat"
-	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."
-	worn_icon = 'ModularBungalow/clothing/worn/neocoatw.dmi'
-	icon = 'ModularBungalow/clothing/icons/neocoat.dmi'
+	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike. This one is used by shipside triage technicians"
 	icon_state = "triagetech"
-	blood_overlay_type = "armor"
-	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 10, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+
+/obj/item/clothing/suit/armor/labcoat/syndie/research
+	name = "cybersun research labcoat"
+	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike. This one is used by shipside research"
+	icon_state = "labcoat_doc_long"
 
 /obj/item/clothing/suit/armor/medical_officer
 	name = "medical officer's armored labcoat"
@@ -115,6 +141,15 @@
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 10, BULLET = 70, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 30)
 
+
+/obj/item/clothing/suit/armor/research
+	name = "science officer's jacket"
+	desc = "A heavily armored labcoat."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "researcher"
+	blood_overlay_type = "armor"
+	armor = list(MELEE = 5, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 50, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 
 /obj/item/clothing/suit/armor/commandant
@@ -175,12 +210,18 @@
 	desc = "A green beret for those in charge of the marine's health."
 	icon_state = "beret_serv"
 
-
 /obj/item/clothing/head/beret/req
 	name = "requisition officer's beret"
 	desc = "A beret 'requisitioned' from god knows where. Not the most stylish, and looks kinda dirty. But you're always glad to see it."
 	icon_state = "beret_qm"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5)
+
+/obj/item/clothing/head/beret/chem/syndie
+	name = "research beret"
+	desc = "A white beret with an orange insignia finely threaded into it. It smells of blood and rubbing alcohol."
+	icon_state = "beret_chem"
+	armor = list("acid" = 20)
+	strip_delay = 60
 
 
 //Glasses

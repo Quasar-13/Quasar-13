@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/triage_technician
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_MEDICAL)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_MEDICAL)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_MED
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
@@ -32,7 +32,7 @@
 	glasses = /obj/item/clothing/glasses/hud/health/syndicate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex
-	suit = /obj/item/clothing/suit/armor/labcoat/triagetech
+	suit = /obj/item/clothing/suit/armor/labcoat/syndie/triagetech
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	l_hand = /obj/item/storage/firstaid/regular
 

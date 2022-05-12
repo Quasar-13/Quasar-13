@@ -85,8 +85,10 @@
 #define EXP_TYPE_SYNDICATE		"Syndicate Command"
 #define EXP_TYPE_OPERATIONS		"Operations"
 #define EXP_TYPE_LOGISTICS		"Logistics"
-#define EXP_TYPE_TRIAGE		"Triage"
-#define EXP_TYPE_POLICE		"Military Police"
+#define EXP_TYPE_TRIAGE			"Triage"
+#define EXP_TYPE_BIORESEARCH	"Bioresearch"
+#define EXP_TYPE_POLICE			"Military Police"
+#define EXP_TYPE_TRIAGE			"Auxiliary"
 
 //Blacksite
 #define EXP_TYPE_NTMARINE		"NT Marines"

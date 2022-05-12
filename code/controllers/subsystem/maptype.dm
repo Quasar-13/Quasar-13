@@ -8,4 +8,4 @@ SUBSYSTEM_DEF(maptype)
 	var/faction = "nanotrasen"//shit like the starfury
 
 	//all the maps that delete all jobs
-	var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite")
+	var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite", "syndicate-station")

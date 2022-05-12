@@ -16,7 +16,16 @@ GLOBAL_LIST_INIT(command_positions,list(
 	//Nt Marine command
 	"NT Commander",
 	"ERT Commander",
-	"NT Squad Leader"))
+	"NT Squad Leader",
+
+	//syndiestation stuff, so they appear bold and require XP
+	"Commandant",
+	"First Officer",
+	"Medical Officer",
+	"Science Officer",
+	"Logistics Officer",
+	"Military Warden",
+	"Wing Commander"))
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
@@ -84,6 +93,7 @@ GLOBAL_LIST_INIT(syncommand_positions, list(
 	"Commandant",
 	"First Officer",
 	"Medical Officer",
+	"Science Officer",
 	"Military Warden",
 	"Logistics Officer",
 	"Wing Commander"
@@ -93,6 +103,13 @@ GLOBAL_LIST_INIT(triage_positions, list(
 	"Medical Officer",
 	"Triage Technician",
 	"Triage Officer"))
+
+GLOBAL_LIST_INIT(bioresearch_positions, list(
+	"Science Officer",
+	"Xenobiologist",
+	"Xenobotanist",
+	"Bioresearcher",
+	"AI"))
 
 GLOBAL_LIST_INIT(operations_positions, list(
 	"Wing Commander",
@@ -125,6 +142,11 @@ GLOBAL_LIST_INIT(police_positions, list(
 	"Military Warden",
 	"Military Police"))
 
+GLOBAL_LIST_INIT(auxiliary_positions, list(
+	"Scholar",
+	"Mess Sergeant",
+	"Honkmother Representative",
+	"Recruit"))
 
 //NT Blacksite
 GLOBAL_LIST_INIT(ntmarines_positions, list(
@@ -176,6 +198,8 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_TRIAGE = list("jobs" = triage_positions, "color" = "#43ab62"),
 	EXP_TYPE_LOGISTICS = list("jobs" = logistics_positions, "color" = "#e3dc81"),
 	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#7692b0"),
+	EXP_TYPE_BIORESEARCH = list("jobs" = bioresearch_positions, "color" = "#ebebeb"),
+	EXP_TYPE_AUXILIARY = list("jobs" = auxiliary_positions, "color" = "#b0b0b0"),
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("jobs" = solgov_positions, "color" = "#b7edda"),
@@ -198,8 +222,10 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SYNDICATE = list("titles" = syncommand_positions),
 	EXP_TYPE_OPERATIONS = list("titles" = operations_positions),
 	EXP_TYPE_TRIAGE = list("titles" = triage_positions),
+	EXP_TYPE_BIORESEARCH = list("titles" = bioresearch_positions),
 	EXP_TYPE_LOGISTICS = list("titles" = logistics_positions),
 	EXP_TYPE_POLICE = list("titles" = police_positions),
+	EXP_TYPE_AUXILIARY = list("titles" = auxiliary_positions),
 
 //Other Gamemodes
 	EXP_TYPE_SOLGOV = list("titles" = solgov_positions)
