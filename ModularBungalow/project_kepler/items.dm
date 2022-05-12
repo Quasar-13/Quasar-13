@@ -115,15 +115,15 @@
 	name = "command survival box"
 	desc = "fit whatever you need it to."
 /obj/item/storage/box/survival/site_command/PopulateContents()
-	var/mask_type = /obj/item/clothing/mask/gas/sechailer
-	var/internal_type = /obj/item/tank/internals/emergency_oxygen/engi
-	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen/stimpack
-	var/light_type = /obj/item/flashlight/seclite
+	mask_type = /obj/item/clothing/mask/gas/sechailer
+	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 	new /obj/item/crowbar/red(src)
 	new /obj/item/weldingtool/mini(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/reagent_containers/hypospray/medipen/survival
 	new /obj/item/radio/off/security(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpack(src)
 
 
 /obj/item/storage/pouch
