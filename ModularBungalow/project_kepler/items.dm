@@ -357,7 +357,7 @@
 	new /obj/item/grenade/chem_grenade/clf3(src)
 	new /obj/item/grenade/chem_grenade/clf3(src)
 	new /obj/item/grenade/chem_grenade/clf3(src)
-	new /obj/item/melee/classic_baton/telescopic/contractor_baton(src)
+	new /obj/item/melee/classic_baton/telescopic(src)
 	new /obj/item/multitool/abductor/marsoc(src)
 	new /obj/item/construction/rcd/combat(src)
 	new /obj/item/rcd_ammo/large(src)

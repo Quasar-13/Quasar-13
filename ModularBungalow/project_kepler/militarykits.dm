@@ -239,6 +239,8 @@
 	new /obj/item/storage/belt/holster/shoulder(src)
 	new /obj/item/roller(src)
 
+//CAPTAINS KITS
+
 /obj/item/storage/box/commander_classic
 /obj/item/storage/box/commander_classic/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/t12(src)
@@ -257,20 +259,6 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/roller(src)
-
-/obj/item/storage/box/kitsune_ammo
-/obj/item/storage/box/kitsune_ammo/PopulateContents()
-	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/highp(src)
-	new /obj/item/ammo_box/speedloader/a556/highp(src)
-	new /obj/item/ammo_box/speedloader/a556/highp(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
 
 /obj/item/storage/box/commander_ranger
 /obj/item/storage/box/commander_ranger/PopulateContents()
@@ -307,3 +295,35 @@
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
 	new /obj/item/storage/box/grenadier_grenades/lethal(src)
+
+// DO NOT SPAWN THIS IN
+/obj/item/storage/box/kitsune_ammo
+/obj/item/storage/box/kitsune_ammo/PopulateContents()
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+
+//SOLGOV EXTERMINATOR SQUAD
+
+/obj/item/storage/box/standard_marsoc
+/obj/item/storage/box/standard_marsoc/PopulateContents()
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+
