@@ -613,7 +613,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/pen/edagger
 	cost = 2
 
-datum/uplink_item/stealthy_weapons/martialartskarate
+/datum/uplink_item/stealthy_weapons/martialartskarate
 	name = "Karate Scroll"
 	desc = "This scroll contains the secrets of the ancient martial arts technique of Karate. You will learn \
 			various ways to incapacitate and defeat downed foes."
