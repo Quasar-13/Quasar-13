@@ -295,7 +295,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
@@ -556,6 +556,16 @@
 "aJv" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
+	},
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
@@ -1636,7 +1646,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -1800,7 +1810,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -2249,7 +2259,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -3575,7 +3585,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -4040,7 +4050,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -4201,7 +4211,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -5543,7 +5553,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
@@ -5986,6 +5996,9 @@
 /obj/item/ammo_box/shotgun/buckshot,
 /obj/item/ammo_box/shotgun/buckshot,
 /obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/slug,
+/obj/item/ammo_box/shotgun/slug,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "gyA" = (
@@ -6302,7 +6315,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/crew_quarters/heads/hop)
@@ -6318,7 +6331,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -7299,12 +7312,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "hMj" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear,
 /turf/open/floor/plating/dirt/jungle,
 /area/ruin/unpowered)
 "hMs" = (
@@ -7581,7 +7589,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/engine/storage)
@@ -7631,7 +7639,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/medical/medbay)
@@ -7701,6 +7709,8 @@
 	name = "commander's gloves"
 	},
 /obj/item/clothing/head/beret/durathread/kepler,
+/obj/item/storage/pouch/command,
+/obj/item/storage/pouch/pistol_ammo_large,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "ihi" = (
@@ -7863,6 +7873,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ranged/tier1,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "irS" = (
@@ -8453,7 +8464,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/security/brig)
@@ -8560,7 +8571,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/kitchen)
@@ -8602,7 +8613,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -9086,11 +9097,10 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "jMw" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov{
+	aggro_vision_range = 1;
+	anchored = 1;
+	vision_range = 1
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -9401,6 +9411,10 @@
 /obj/structure/sign/kepler/alt,
 /turf/closed/wall/r_wall,
 /area/ruin/powered)
+"keP" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "kfy" = (
 /turf/open/floor/mineral/plastitanium{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
@@ -9903,7 +9917,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
@@ -10044,7 +10058,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/hallway/primary/central)
@@ -10499,7 +10513,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -10707,7 +10721,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -11067,7 +11081,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/engine/storage)
@@ -11421,7 +11435,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
@@ -11713,7 +11727,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/ruin/powered)
@@ -11754,12 +11768,7 @@
 	},
 /area/security/brig)
 "mJA" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
@@ -12296,6 +12305,9 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpack,
 /obj/item/reagent_containers/hypospray/medipen/stimpack,
 /obj/item/reagent_containers/hypospray/medipen/stimpack,
+/obj/item/reagent_containers/hypospray/medipen/stimpack,
+/obj/item/reagent_containers/hypospray/medipen/stimpack,
+/obj/item/reagent_containers/hypospray/medipen/stimpack,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "ndt" = (
@@ -12656,11 +12668,10 @@
 /turf/closed/indestructible/reinforced,
 /area/ruin/powered)
 "nxJ" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov{
+	aggro_vision_range = 1;
+	anchored = 1;
+	vision_range = 1
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -12815,7 +12826,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -12855,6 +12866,8 @@
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov{
 	pixel_x = 4
 	},
+/obj/item/storage/pouch/command,
+/obj/item/storage/pouch/pistol_ammo_large,
 /turf/open/floor/carpet/cyan,
 /area/crew_quarters/heads/hop)
 "nKo" = (
@@ -13138,7 +13151,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -13303,12 +13316,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/bmpship/aft)
 "oiH" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
 /turf/open/floor/plating/asteroid/snow,
 /area/ruin/unpowered)
 "oiL" = (
@@ -13439,7 +13447,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
@@ -14219,6 +14227,16 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
 	},
+/obj/machinery/porta_turret/syndicate/energy/raven{
+	active_power_usage = 1;
+	base_icon_state = "syndie";
+	icon_state = "syndie_off";
+	lethal_projectile = /obj/projectile/bullet/p50;
+	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
+	max_integrity = 800;
+	reqpower = 1;
+	shot_delay = 3
+	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
 "pah" = (
@@ -14453,12 +14471,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "pmo" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
 /turf/open/floor/plating/snowed/smoothed,
 /area/ruin/unpowered)
 "pmy" = (
@@ -14755,7 +14768,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall/rust,
 /area/engine/storage)
@@ -14930,7 +14943,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -15152,6 +15165,10 @@
 	},
 /turf/open/floor/plasteel/white/telecomms,
 /area/ruin/space/has_grav/powered)
+"pUC" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "pUJ" = (
 /obj/effect/turf_decal/mining/survival,
 /turf/closed/wall/mineral/titanium/survival,
@@ -15172,7 +15189,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/space/has_grav/powered)
@@ -15924,7 +15941,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/commons/cryopods)
@@ -15987,7 +16004,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -17196,7 +17213,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/hop)
@@ -17426,7 +17443,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -17454,7 +17471,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/medical/chemistry)
@@ -17529,7 +17546,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -17697,6 +17714,10 @@
 	},
 /turf/open/floor/plating,
 /area/engine/storage)
+"sCE" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
+/turf/open/floor/plating/snowed/icemoon,
+/area/icemoon/surface/outdoors)
 "sDo" = (
 /obj/machinery/vending/modularpc,
 /turf/open/floor/mineral/plastitanium,
@@ -17817,7 +17838,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -18255,7 +18276,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -19018,7 +19039,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
@@ -19330,7 +19351,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/indestructible/reinforced,
 /area/engine/storage)
@@ -20334,6 +20355,8 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
 /obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier1,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
+/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier2,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "vme" = (
@@ -20660,7 +20683,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
@@ -22370,7 +22393,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
@@ -22386,7 +22409,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/hop)
@@ -22631,7 +22654,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/crew_quarters/dorms/barracks)
@@ -22927,7 +22950,7 @@
 	lethal_projectile_sound = 'sound/weapons/gun/l6/shot.ogg';
 	max_integrity = 800;
 	reqpower = 1;
-	shot_delay = 6
+	shot_delay = 3
 	},
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
@@ -23059,12 +23082,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/bmpship/midship)
 "xYi" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	faction = list("russian");
-	icon_living = "solgovpolarbear";
-	icon_state = "solgovpolarbear";
-	name = "solgov K9 unit"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear/solgov,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/powered)
 "xYC" = (
@@ -42673,7 +42691,7 @@ mKM
 mzZ
 mzZ
 mzZ
-nxJ
+pUC
 eoI
 eoI
 gEg
@@ -53844,7 +53862,7 @@ vzW
 vzW
 vzW
 eoI
-eoI
+keP
 mzZ
 eoI
 eoI
@@ -58365,13 +58383,13 @@ vzW
 vzW
 vzW
 vzW
-tcV
-tcV
-tcV
-tcV
-tcV
-tcV
-tcV
+eoI
+eoI
+eoI
+eoI
+eoI
+eoI
+eoI
 uEK
 tgz
 tcV
@@ -58652,7 +58670,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 pBj
 wDW
 wDW
@@ -58939,7 +58957,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 icv
 rAJ
 cnm
@@ -59226,7 +59244,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 icv
 hII
 lSo
@@ -59513,7 +59531,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 icv
 sdE
 gAd
@@ -59800,7 +59818,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 ilN
 okx
 wbK
@@ -60087,7 +60105,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 ilN
 eUS
 lAd
@@ -60374,7 +60392,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 icv
 rHW
 izp
@@ -60661,7 +60679,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 ceS
 vXn
 sWq
@@ -60948,7 +60966,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 ceS
 blU
 oCg
@@ -61235,7 +61253,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 icv
 pBR
 heF
@@ -61522,7 +61540,7 @@ vzW
 vzW
 vzW
 vzW
-tcV
+eoI
 ulY
 veZ
 bzf
@@ -61809,14 +61827,14 @@ vzW
 vzW
 vzW
 vzW
-tcV
-tcV
-tcV
-tcV
-tcV
-tcV
-tcV
-tcV
+eoI
+eoI
+eoI
+eoI
+eoI
+eoI
+eoI
+eoI
 eoI
 eoI
 vzW
@@ -66837,7 +66855,7 @@ eoI
 eoI
 eoI
 eoI
-nxJ
+pUC
 eoI
 eoI
 fTE
@@ -66860,7 +66878,7 @@ mzZ
 avQ
 jDb
 avQ
-jMw
+sCE
 avQ
 ozs
 eoI
@@ -67133,7 +67151,7 @@ eoI
 eoI
 eoI
 eoI
-nxJ
+pUC
 eoI
 eoI
 eoI
@@ -70014,7 +70032,7 @@ vzW
 vzW
 avQ
 mzZ
-jMw
+sCE
 avQ
 vzW
 vzW
@@ -72022,7 +72040,7 @@ avQ
 avQ
 avQ
 avQ
-jMw
+sCE
 avQ
 avQ
 vzW
@@ -85923,7 +85941,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nxJ
 eoI
 eoI
 eoI
@@ -86216,7 +86234,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nxJ
 eoI
 eoI
 eoI
@@ -87938,7 +87956,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nxJ
 eoI
 eoI
 eoI
@@ -93105,7 +93123,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nxJ
 eoI
 eoI
 eoI
@@ -95395,7 +95413,7 @@ eoI
 eoI
 eoI
 eoI
-eoI
+nxJ
 eoI
 eoI
 eoI

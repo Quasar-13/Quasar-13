@@ -84,7 +84,6 @@
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
 
-
 //Special lore variant
 /obj/item/gun/ballistic/automatic/pistol/PL14_nicole
 	name = "bloody PL-14"
@@ -101,6 +100,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
 	projectile_damage_multiplier = 2
+	recoil = 4
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -127,6 +127,16 @@
 	mag_type = /obj/item/ammo_box/magazine/avtomag/akira
 
 /obj/item/ammo_box/magazine/avtomag/akira
+	ammo_type = /obj/item/ammo_casing/a556
+	caliber = CALIBER_A556
+	max_ammo = 12
+
+/obj/item/gun/ballistic/automatic/pistol/m45a1
+	name = "P23 .45"
+	desc = "A pistol used by special kepler operation."
+	icon_state = "m45a1"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/m45
 
 ////////////////////
 //////REVOLVERS////
@@ -137,12 +147,13 @@
 	name = "P14 'Judge'"
 	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom. it hold six shotgun shells, should be more than enough to kill anything that move."
 	icon_state = "judge"
-	icon = 'ModularTegustation/Teguicons/kirie_stuff/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	initial_caliber = CALIBER_SHOTGUN
+	recoil = 3
 	pb_knockback = 3
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
-	initial_caliber = CALIBER_SHOTGUN
+	caliber = CALIBER_SHOTGUN
 	max_ammo = 6
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino
@@ -186,6 +197,7 @@
 	initial_caliber = CALIBER_A4570
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "revolver"
+	recoil = 1
 	pb_knockback = 5
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570

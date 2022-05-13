@@ -35,3 +35,10 @@
 	wound_bonus = 10
 	stamina = 5
 
+/obj/item/ammo_box/magazine/m45/big
+	name = "Double stack .45 ACP Magazine"
+	desc = "Not enough ammo? here's your solution."
+	max_ammo = 14
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	icon_state = "double45"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'

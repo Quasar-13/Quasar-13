@@ -35,11 +35,13 @@
 /obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 12
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/firstaid/tactical/solgov/PopulateContents()
 	if(empty)
 		return
+	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/healthanalyzer/advanced(src)
@@ -75,19 +77,18 @@
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
 		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-		/obj/item/gun/ballistic/shotgun/longcolt,
 		/obj/item/gun/energy/dueling
 		))
 
 /obj/item/storage/belt/holster/shoulder/commander
-	name = "commander's holster"
-	desc = "A holster able to carry handguns and some ammo."
+	name = "heavy duty holster"
+	desc = "A holster able to carry handguns and some ammo. this one is heavy duty"
 
 /obj/item/storage/belt/holster/shoulder/commander/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 4
-	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
@@ -99,11 +100,13 @@
 		/obj/item/ammo_box/a357,
 		/obj/item/ammo_box/a762,
 		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
-		/obj/item/gun/ballistic/shotgun/longcolt,
+		/obj/item/gun/ballistic/shotgun/tracker,
 		/obj/item/gun/ballistic/automatic/toy/pistol,
 		/obj/item/ammo_box/magazine/toy/pistol,
 		/obj/item/gun/energy/e_gun/mini,
 		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
 		/obj/item/gun/energy/dueling
 		))
 
@@ -111,3 +114,338 @@
 	name = "commander's gloves"
 	desc = "the finely tailored gloves of the past site commanders, wonder what happened to them..."
 
+/obj/item/storage/box/survival/site_command
+	name = "command survival box"
+	desc = "fit whatever you need it to."
+/obj/item/storage/box/survival/site_command/PopulateContents()
+	mask_type = /obj/item/clothing/mask/gas/sechailer
+	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
+	new /obj/item/crowbar/red(src)
+	new /obj/item/weldingtool/mini(src)
+	new /obj/item/clothing/glasses/welding(src)
+	new /obj/item/reagent_containers/hypospray/medipen/survival
+	new /obj/item/radio/off/security(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpack(src)
+
+
+/obj/item/storage/pouch
+	name = "general purpose pouch"
+	desc = "fit whatever you need it to. hold normal sized objects"
+	slot_flags = ITEM_SLOT_POCKETS
+	w_class = WEIGHT_CLASS_HUGE
+	icon = 'ModularBungalow/clothing/icons/pouch.dmi'
+	icon_state = "pouch"
+	worn_icon = null
+
+/obj/item/storage/pouch/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/pouch/ammo
+	name = "magazine pouch"
+	desc = "can hold magazines so you don't have to."
+	icon_state = "ammo_pouch"
+
+/obj/item/storage/pouch/ammo/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine
+		))
+
+/obj/item/storage/pouch/ammo/large
+	name = "ammo pouch"
+	desc = "large enough to hold ammoboxes so you don't have to."
+	icon_state = "large_pouch"
+
+/obj/item/storage/pouch/ammo/large/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 4
+	STR.set_holdable(list(
+		/obj/item/ammo_box
+		))
+
+//RWZANIKKI
+/obj/item/storage/pouch/pistol
+	name = "sidearm pouch"
+	desc = "hold a pistol, neat no?."
+	icon_state = "pistol"
+
+/obj/item/storage/pouch/pistol/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/pouch/pistol_ammo
+	name = "pistol ammo pouch"
+	desc = "hold multiple pistol magazines so you don't have to."
+	icon_state = "pistol_mag"
+
+obj/item/storage/pouch/pistol_ammo/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
+		/obj/item/ammo_box/magazine/m9mm_aps,
+		/obj/item/ammo_box/magazine/m45,
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/ammo_box/c38, // Revolver speedloaders.
+		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/pouch/pistol_ammo_large
+	name = "large pistol ammo pouch"
+	desc = "hold many pistol magazines so you can shoot more"
+	icon_state = "pistol_mag_pouch"
+
+obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_box/magazine/m9mm, // Pistol magazines.
+		/obj/item/ammo_box/magazine/m9mm_aps,
+		/obj/item/ammo_box/magazine/m45,
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/ammo_box/c38, // Revolver speedloaders.
+		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/a762,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		))
+
+/obj/item/storage/pouch/rocket
+	name = "rocket pouch"
+	desc = "large enough to hold rockets so you don't have to."
+	icon_state = "rocket_pouch"
+
+/obj/item/storage/pouch/rocket/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 2
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/ammo_casing/caseless/rocket
+		))
+
+/obj/item/storage/pouch/command
+	name = "command pouch"
+	desc = "Oversized pouch meant for commanders. can hold tools, batons, cuffs and grenades sidearm and magazines."
+	icon_state = "command_pouch"
+
+/obj/item/storage/pouch/command/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutters,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable_coil,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/pouch/command/PopulateContents()
+	new /obj/item/binoculars(src)
+
+/obj/item/storage/pouch/marsoc_tools
+	name = "SOC tools pouch"
+	desc = "hold tools and magazine for finishing the job, to kill for your government make you a hero, do you feel like a hero yet?"
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 12
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutters,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable_coil,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/grenade,
+		/obj/item/gun/energy/dueling
+		))
+
+/obj/item/storage/pouch/marsoc_tools/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/m45a1(src)
+	new /obj/item/suppressor(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/multitool/abductor/marsoc(src)
+
+/obj/item/multitool/abductor/marsoc
+	name = "Security Access Tuner"
+	desc = "allows you to get into place and link silo up, built-in AI allow it to determine the purpose of each wires"
+	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
+	icon_state = "kepler_multitool"
+
+/obj/item/storage/pouch/marsoc_ifak
+	name = "SOC IFAK"
+	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
+	icon_state = "socmed"
+
+/obj/item/storage/pouch/marsoc_ifak/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 12
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/storage/firstaid,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/mesh,
+		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/poultice,
+		/obj/item/stack/medical/suture,
+		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/aloe,
+		/obj/item/healthanalyzer,
+		/obj/item/pinpointer,
+		/obj/item/roller,
+		/obj/item/storage/pill_bottle,
+		))
+
+/obj/item/storage/pouch/marsoc_ifak/PopulateContents()
+	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/pill_bottle/synaptizine(src)
+	new /obj/item/storage/pill_bottle/stimulant(src)
+	new /obj/item/storage/pill_bottle/epinephrine(src)
+	new /obj/item/reagent_containers/medipen/survival/luxury(src)
+	new /obj/item/roller(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/combat/nanites(src)
+	new /obj/item/pinpointer/crew(src)
+
+/obj/item/storage/pouch/ifak
+	name = "Individual Firstaid Kit"
+	desc = "Save yourself first then save others."
+	icon_state = "ifak"
+
+/obj/item/storage/pouch/ifak/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/storage/firstaid,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/mesh,
+		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/poultice,
+		/obj/item/stack/medical/suture,
+		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/aloe,
+		/obj/item/healthanalyzer,
+		/obj/item/pinpointer,
+		/obj/item/roller,
+		/obj/item/storage/pill_bottle,
+		))
+
+/obj/item/storage/backpack/marsoc
+	name = "SOC Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon = 'ModularBungalow/clothing/icons/storage.dmi'
+	icon_state = "rucksack"
+	worn_icon = 'ModularBungalow/clothing/icons/worn/backw'
+
+/obj/item/storage/backpack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 35
+
+/obj/item/storage/backpack/marsoc/solgov
+	name = "Solgov Rucksack"
+	desc = "For operating within area that would be highly dangerous."
+	icon_state = "rucksack_green"
+
+/obj/item/storage/backpack/marsoc/desert
+	name = "Dust Raider Rucksack"
+	desc = "a robust backpack primarily used by the Kepler-4 'Dust Raider' for long range expedition."
+	icon_state = "rucksack_tan"
