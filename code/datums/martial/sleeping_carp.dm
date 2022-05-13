@@ -32,7 +32,7 @@
 	var/atk_verb = pick("precisely kick", "brutally chop", "cleanly hit", "viciously slam")
 	D.visible_message("<span class='danger'>[A] [atk_verb]s [D]!</span>", \
 					"<span class='userdanger'>[A] [atk_verb]s you!</span>", null, null, A)
-	to_chat(A, "<span class='danger'>You [atk_verb] [D]!</span6>")
+	to_chat(A, "<span class='danger'>You [atk_verb] [D]!</span>")
 	playsound(get_turf(D), 'sound/weapons/punch1.ogg', 25, TRUE, -1)
 	log_combat(A, D, "strong punched (Sleeping Carp)")
 	D.apply_damage(20, A.get_attack_type(), affecting)
