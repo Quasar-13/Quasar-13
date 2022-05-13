@@ -151,6 +151,7 @@
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
@@ -162,6 +163,7 @@
 	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
 	icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
@@ -172,6 +174,7 @@
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle

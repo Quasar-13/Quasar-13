@@ -1,7 +1,6 @@
 //Outpost Outfits
 /datum/outfit/job/outpostagent
 	name = "Syndicate Outpost Agent"
-
 	id = /obj/item/card/id/black
 	uniform = /obj/item/clothing/under/syndicate/coldres
 	ears = /obj/item/radio/headset/headset_sci
@@ -94,16 +93,16 @@
 /datum/outfit/job/solgov/marsoc
 	name = "Solgov Kepler MARSOC"
 	id = /obj/item/card/id/solgov
-	ears = /obj/item/radio/headset/headset/heads/hos/alt
+	ears = /obj/item/radio/headset/heads/hos/alt
 	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
-	suit = /obj/item/clothing/suit/armor/vest/solgov/heavy
+	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy
 	uniform = /obj/item/clothing/under/solgov/snow
 	mask = /obj/item/clothing/mask/nobreath/marsoc
-	head = /obj/item/clothing/head/helmet/solgov/heavy
+	head = /obj/item/clothing/head/helmet/solgov/snow/heavy
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	l_pocket = /obj/item/storage/pouch/marsoc_tools
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/shotgun/buckshot=3)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/shotgun/buckshot=3)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/meson/night
 	box = /obj/item/storage/box/survival/engineer/radio
