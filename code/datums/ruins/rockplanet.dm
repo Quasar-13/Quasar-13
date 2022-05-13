@@ -109,3 +109,12 @@
 	cost = 0
 	always_place = TRUE
 	allow_duplicates = FALSE
+
+/datum/map_template/ruin/rockplanet/blood_drunk_miner
+	name = "Blood-Drunk Miner (rockplanet)"
+	id = "blooddrunk"
+	description = "A strange arrangement of stone tiles and an insane, beastly miner contemplating them."
+	suffix = "rockplanet_blooddrunk.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
