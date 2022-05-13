@@ -156,9 +156,9 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
-
+//THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
-	name = "\improper SG-GPM21S 'Peacemaker'"
+	name = "\improper K-GPM21S 'Peacemaker'"
 	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
 	icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
