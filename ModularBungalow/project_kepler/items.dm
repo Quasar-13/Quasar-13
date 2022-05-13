@@ -336,7 +336,7 @@
 		/obj/item/gun/energy/pulse/pistol,
 		/obj/item/grenade,
 		/obj/item/gun/energy/dueling,
-		/obj/item/construction/rcd/combat,
+		/obj/item/construction/rcd,
 		/obj/item/rcd_ammo,
 		/obj/item/gps
 		))
@@ -350,9 +350,9 @@
 	new /obj/item/crowbar/power(src)
 	new /obj/item/screwdriver/power(src)
 	new /obj/item/weldingtool/experimental(src)
-	new /obj/item/grenade/c4(src)
-	new /obj/item/grenade/c4(src)
-	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
 	new /obj/item/melee/classic_baton/telescopic/contractor_baton(src)
 	new /obj/item/multitool/abductor/marsoc(src)
 	new /obj/item/construction/rcd/combat(src)
