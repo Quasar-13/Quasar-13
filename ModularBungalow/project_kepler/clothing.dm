@@ -1,0 +1,43 @@
+//Solgov armor
+/obj/item/clothing/suit/armor/vest/solgov
+	name = "solgov combat armor"
+	desc = "A standard Solgov Mk3 combat rig for the Solgov Army and Marines."
+	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
+	icon = 'ModularBungalow/clothing/icons/coat.dmi'
+	icon_state = "sgvarmor"
+	inhand_icon_state = "armor"
+	armor = list(MELEE = 40, BULLET = 40, LASER = 25, ENERGY = 25, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+
+/obj/item/clothing/suit/armor/vest/solgov/snow
+	desc = "A standard Solgov Mk3 combat rig for the Solgov Army in winter operations."
+	icon_state = "sgsarmor"
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/suit/armor/vest/solgov/snow/heavy
+	name = "solgov heavy combat armor"
+	desc = "A heavily padded Solgov Mk4 combat rig for the Solgov Army and Marines."
+	icon_state = "soldier_snow"
+	slowdown = 0.16
+	armor = list(MELEE = 50, BULLET = 60, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+
+//Solgov Helmets
+/obj/item/clothing/head/helmet/solgov
+	name = "solgov helmet"
+	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+	desc = "Standard Mk4 Solgov Military Helmet."
+	icon_state = "sgvhelmet"
+	inhand_icon_state = "helmet"
+	can_flashlight = FALSE
+
+/obj/item/clothing/head/helmet/solgov/snow
+	desc = "Standard Mk4 Solgov Military Helmet. Painted white for better snow camo"
+	icon_state = "sgshelmet"
+
+/obj/item/clothing/head/helmet/solgov/snow/heavy
+	name = "solgov heavy helmet"
+	desc = "Standard Mk5 Solgov Military Helmet. Offers better protection."
+	icon_state = "soldier_snow"
+	slowdown = 0.16
+	armor = list(MELEE = 50, BULLET = 60, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+

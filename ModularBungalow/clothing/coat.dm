@@ -40,6 +40,7 @@
 	armor = list(MELEE = 40, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
+
 //PROJECT KEPLER CONTENTS BELOW
 /obj/item/clothing/suit/armor/ranger/hop
 	name = "Ranger's Trenchcoat"
