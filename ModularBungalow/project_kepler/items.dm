@@ -199,7 +199,7 @@
 	desc = "hold multiple pistol magazines so you don't have to."
 	icon_state = "pistol_mag"
 
-obj/item/storage/pouch/pistol_ammo/ComponentInitialize()
+/obj/item/storage/pouch/pistol_ammo/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 3
@@ -221,7 +221,7 @@ obj/item/storage/pouch/pistol_ammo/ComponentInitialize()
 	desc = "hold many pistol magazines so you can shoot more"
 	icon_state = "pistol_mag_pouch"
 
-obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
+/obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
