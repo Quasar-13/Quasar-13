@@ -287,8 +287,10 @@
 		/obj/item/melee/classic_baton,
 		/obj/item/melee/baton,
 		/obj/item/megaphone,
+		/obj/item/holosign_creator,
 		/obj/item/clothing/glasses/welding,
 		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/extinguisher/mini,
 		/obj/item/gun/energy/pulse/pistol,
 		/obj/item/gun/energy/dueling
 		))
@@ -304,7 +306,7 @@
 /obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 14
+	STR.max_items = 17
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
@@ -335,9 +337,11 @@
 		/obj/item/gun/energy/laser/captain/ntgold/pistol,
 		/obj/item/gun/energy/pulse/pistol,
 		/obj/item/grenade,
+		/obj/item/holosign_creator,
 		/obj/item/gun/energy/dueling,
 		/obj/item/construction/rcd,
 		/obj/item/rcd_ammo,
+		/obj/item/extinguisher,
 		/obj/item/gps
 		))
 
@@ -357,6 +361,8 @@
 	new /obj/item/multitool/abductor/marsoc(src)
 	new /obj/item/construction/rcd/combat(src)
 	new /obj/item/rcd_ammo/large(src)
+	new /obj/item/holosign_creator/atmos(src)
+	new /obj/item/extinguisher/advanced(src)
 
 /obj/item/multitool/abductor/marsoc
 	name = "Security Access Tuner"
