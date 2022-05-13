@@ -55,4 +55,8 @@
 	icon_state = "soldier_snow"
 	slowdown = 0.16
 	armor = list(MELEE = 50, BULLET = 60, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
-
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	flash_protect = FLASH_PROTECTION_WELDER

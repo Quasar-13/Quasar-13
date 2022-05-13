@@ -304,7 +304,7 @@
 /obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 12
+	STR.max_items = 14
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
@@ -335,7 +335,10 @@
 		/obj/item/gun/energy/laser/captain/ntgold/pistol,
 		/obj/item/gun/energy/pulse/pistol,
 		/obj/item/grenade,
-		/obj/item/gun/energy/dueling
+		/obj/item/gun/energy/dueling,
+		/obj/item/construction/rcd/combat,
+		/obj/item/rcd_ammo,
+		/obj/item/gps
 		))
 
 /obj/item/storage/pouch/marsoc_tools/PopulateContents()
@@ -350,8 +353,10 @@
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
-	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/melee/classic_baton/telescopic/contractor_baton(src)
 	new /obj/item/multitool/abductor/marsoc(src)
+	new /obj/item/construction/rcd/combat(src)
+	new /obj/item/rcd_ammo/large(src)
 
 /obj/item/multitool/abductor/marsoc
 	name = "Security Access Tuner"
@@ -428,7 +433,7 @@
 
 /obj/item/storage/backpack/marsoc
 	name = "SOC Rucksack"
-	desc = "For operating within area that would be highly dangerous."
+	desc = "Rucksack used by only the most elite of them all."
 	icon = 'ModularBungalow/clothing/icons/storage.dmi'
 	icon_state = "rucksack"
 	worn_icon = 'ModularBungalow/clothing/worn/backw.dmi'
@@ -441,7 +446,7 @@
 
 /obj/item/storage/backpack/marsoc/solgov
 	name = "Solgov Rucksack"
-	desc = "For operating within area that would be highly dangerous."
+	desc = "A heavy duty rucksack intended for long expedition where the user often do not return."
 	icon_state = "rucksack_green"
 
 /obj/item/storage/backpack/marsoc/desert

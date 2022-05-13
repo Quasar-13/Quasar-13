@@ -79,10 +79,10 @@
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/storage/belt/military/assault
-	suit = /obj/item/clothing/suit/armor/vest/solgov
+	suit = /obj/item/clothing/suit/armor/vest/solgov/snow
 	uniform = /obj/item/clothing/under/syndicate/camo
 	mask = /obj/item/clothing/mask/gas/sechailer
-	head = /obj/item/clothing/head/helmet/solgov
+	head = /obj/item/clothing/head/helmet/solgov/snow
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21
 	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
@@ -90,6 +90,26 @@
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/welding
 	box = /obj/item/storage/box/survival/security/radio
+
+/datum/outfit/job/solgov/marsoc
+	name = "Solgov Kepler MARSOC"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset/heads/hos/alt
+	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
+	suit = /obj/item/clothing/suit/armor/vest/solgov/heavy
+	uniform = /obj/item/clothing/under/solgov/snow
+	mask = /obj/item/clothing/mask/nobreath/marsoc
+	head = /obj/item/clothing/head/helmet/solgov/heavy
+	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	l_pocket = /obj/item/storage/pouch/marsoc_tools
+	r_pocket = /obj/item/storage/pouch/marsoc_ifak
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/shotgun/buckshot=3)
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	glasses = /obj/item/clothing/glasses/meson/night
+	box = /obj/item/storage/box/survival/engineer/radio
+	back = /obj/item/storage/backpack/marsoc
+	suit_store = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+
 //NT outfits
 //Private
 /datum/outfit/job/remnant

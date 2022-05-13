@@ -18,6 +18,7 @@
 	icon_state = "vet"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 60, WOUND = 10)
 	resistance_flags = FIRE_PROOF
+	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 
 //Ranger helmet
 /obj/item/clothing/head/helmet/ranger/snow
@@ -45,10 +46,12 @@
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	icon_state = "snowvetakira"
 	armor = list(MELEE = 35, BULLET = 35, LASER = 15, ENERGY = 35, BOMB = 25, BIO = 35, RAD = 100, FIRE = 100, ACID = 80, WOUND = 60)
+	flash_protect = FLASH_PROTECTION_WELDER
 
 /obj/item/clothing/head/helmet/ranger/hos
 	name = "head of security's ranger helmet"
 	resistance_flags = FIRE_PROOF
+	flash_protect = FLASH_PROTECTION_WELDER
 
 /obj/item/clothing/head/helmet/ranger/hos/snow
 	name = "expedition leader's ranger helmet"
