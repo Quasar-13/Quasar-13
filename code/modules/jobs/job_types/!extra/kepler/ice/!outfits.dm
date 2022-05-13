@@ -95,10 +95,10 @@
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/heads/hos/alt
 	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
-	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy
+	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
 	uniform = /obj/item/clothing/under/solgov/snow
 	mask = /obj/item/clothing/mask/nobreath/marsoc
-	head = /obj/item/clothing/head/helmet/solgov/snow/heavy
+	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	l_pocket = /obj/item/storage/pouch/marsoc_tools
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
