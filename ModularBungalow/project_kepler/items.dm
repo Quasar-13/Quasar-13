@@ -375,7 +375,7 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 		/obj/item/reagent_containers/syringe,
 		/obj/item/stack/medical/gauze,
 		/obj/item/stack/medical/mesh,
-		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/ointment,
 		/obj/item/stack/medical/poultice,
 		/obj/item/stack/medical/suture,
 		/obj/item/stack/medical/bone_gel,
@@ -388,16 +388,15 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 
 /obj/item/storage/pouch/marsoc_ifak/PopulateContents()
 	new /obj/item/storage/firstaid/tactical/solgov(src)
-	new /obj/item/storage/pill_bottle/synaptizine(src)
 	new /obj/item/storage/pill_bottle/stimulant(src)
 	new /obj/item/storage/pill_bottle/epinephrine(src)
-	new /obj/item/reagent_containers/medipen/survival/luxury(src)
+	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
 	new /obj/item/roller(src)
-	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
-	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
-	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
-	new /obj/item/reagent_containers/medipen/gatorade/crystal(src)
-	new /obj/item/reagent_containers/combat/nanites(src)
+	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
+	new /obj/item/reagent_containers/hypospray/combat/nanites(src)
 	new /obj/item/pinpointer/crew(src)
 
 /obj/item/storage/pouch/ifak
@@ -416,7 +415,7 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 		/obj/item/reagent_containers/syringe,
 		/obj/item/stack/medical/gauze,
 		/obj/item/stack/medical/mesh,
-		/obj/item/stack/medical/oiintment,
+		/obj/item/stack/medical/ointment,
 		/obj/item/stack/medical/poultice,
 		/obj/item/stack/medical/suture,
 		/obj/item/stack/medical/bone_gel,
@@ -432,7 +431,7 @@ obj/item/storage/pouch/pistol_ammo_large/ComponentInitialize()
 	desc = "For operating within area that would be highly dangerous."
 	icon = 'ModularBungalow/clothing/icons/storage.dmi'
 	icon_state = "rucksack"
-	worn_icon = 'ModularBungalow/clothing/icons/worn/backw'
+	worn_icon = 'ModularBungalow/clothing/worn/backw.dmi'
 
 /obj/item/storage/backpack/ComponentInitialize()
 	. = ..()
