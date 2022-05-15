@@ -108,6 +108,7 @@
 	box = /obj/item/storage/box/survival/engineer/radio
 	back = /obj/item/storage/backpack/marsoc
 	suit_store = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
 
 //NT outfits
 //Private
