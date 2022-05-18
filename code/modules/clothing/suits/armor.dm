@@ -29,12 +29,6 @@
 	icon_state = "armor"
 	inhand_icon_state = "armor"
 
-/obj/item/clothing/suit/armor/vest/solgov
-	desc = "A standard Solgov Mk3 combat rig for the Solgov Army and Marines."
-	icon_state = "sgvarmor"
-	inhand_icon_state = "armor"
-	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
-
 /obj/item/clothing/suit/armor/vest/old
 	name = "degrading armor vest"
 	desc = "Older generation Type C armored vest. Due to degradation over time the vest is far less maneuverable to move in."
