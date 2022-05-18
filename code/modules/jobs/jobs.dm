@@ -149,8 +149,8 @@ GLOBAL_LIST_INIT(ntmarines_positions, list(
 
 //Other Gamemodes
 GLOBAL_LIST_INIT(solgov_positions, list(
-	"Commander",
-	"Administrator",
+	"Site Commander",
+	"Site Administrator",
 	"Lab Technician",
 	"Medical Technician",
 	"Engineer",
