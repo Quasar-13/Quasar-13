@@ -43,28 +43,69 @@
 	name = ".38 speedloader"
 	desc = "A speedloader full of .38 catridges ready to be used!"
 	icon_state = "slc38"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/c38
 
 /obj/item/ammo_box/speedloader/c38/dumdum
 	name = ".38 dum dum speedloader"
-	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
 	ammo_type = /obj/item/ammo_casing/c38/dumdum
 
 /obj/item/ammo_box/speedloader/a357
 	name = ".357 speedloader"
 	desc = "A speedloader full of .357 catridges ready to be used!"
 	icon_state = "slc357"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
 
 /obj/item/ammo_box/speedloader/a357/match
 	name = ".357 match speedloader"
 	desc = "A speedloader full of .357 match catridges ready to be used!"
 	icon_state = "slc357"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357/match
 
+/obj/item/ammo_box/speedloader/a556
+	name = ".556 speedloader"
+	desc = "A speedloader full of .556 catridges ready to be used!"
+	icon_state = "sla556"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/sk
+	name = ".556 SK speedloader"
+	desc = "A speedloader full of .556 Super-Kitsune catridges ready to be used!"
+	icon_state = "sla556sk"
+	ammo_type = /obj/item/ammo_casing/a556/sk
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/sk/big
+	max_ammo = 12
+	icon_state = "slc38"
+/obj/item/ammo_box/speedloader/a556/pl
+	name = ".556 PL speedloader"
+	desc = "A speedloader full of .556 Police Load catridges ready to be used!"
+	icon_state = "sla556pl"
+	ammo_type = /obj/item/ammo_casing/a556/pl
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/pl/big
+	max_ammo = 12
+	icon_state = "sla357"
+
+/obj/item/ammo_box/speedloader/a556/highp
+	name = ".556 High P speedloader"
+	desc = "A speedloader full of .556 Heavy catridges ready to be used!"
+	icon_state = "sla556highp"
+	ammo_type = /obj/item/ammo_casing/a556/highp
+	max_ammo = 6
+
+/obj/item/ammo_box/speedloader/a556/highp/big
+	max_ammo = 12
+	icon_state = "slt556highp-12"
+
+/obj/item/ammo_box/speedloader/a4570
+	name = ".45-70 Govt speedloader"
+	desc = "A speedloader full of .45-70 Govt catridges ready to be used!"
+	max_ammo = 7
+	icon_state = "4570-7"
+	ammo_type = /obj/item/ammo_casing/a4570
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
@@ -132,12 +173,12 @@
 //Ammoboxe for the armylathe hehe - Akira
 /obj/item/ammo_box/rifle
 	name = ".556 ammo box"
-	desc = "A box full of .556 Cartridges ready to be used, hold 60 casing"
+	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing"
 	icon_state = "riflebox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
 	w_class = WEIGHT_CLASS_NORMAL
-	max_ammo = 60
+	max_ammo = 180
 
 /obj/item/ammo_box/rifle/a762
 	name = ".762 NATO ammo box"
@@ -158,12 +199,12 @@
 //do not make this one printable, mapping purpose and lootdrop.
 /obj/item/ammo_box/rifle/big
 	name = "large .556 ammo box"
-	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing, this one is bulky, what do you need it for exactly?"
+	desc = "A box full of .556 Cartridges ready to be used, hold 300 casing, this one is bulky, what do you need it for exactly?"
 	icon_state = "superriflebox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
 	w_class = WEIGHT_CLASS_BULKY
-	max_ammo = 180
+	max_ammo = 300
 
 /obj/item/ammo_box/ab357
 	name = ".357 ammo packet"
@@ -265,6 +306,7 @@
 	ammo_type = /obj/item/ammo_casing/p50/soporific
 	w_class = WEIGHT_CLASS_SMALL
 	max_ammo = 12
+
 /obj/item/ammo_box/ab20mm
 	name = ".20mm HE grenade box"
 	desc = "A box full of small 20mm grenades"
@@ -274,10 +316,19 @@
 	w_class = WEIGHT_CLASS_BULKY
 	max_ammo = 20
 
+/obj/item/ammo_box/ab40mm
+	name = ".40mm HE grenade box"
+	desc = "A box full of small 40mm grenades"
+	icon_state = "40mmbox"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	ammo_type = /obj/item/ammo_casing/a40mm
+	w_class = WEIGHT_CLASS_BULKY
+	max_ammo = 20
+
 /obj/item/ammo_casing/a20mm
 	name = "20mm HE shell"
 	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher."
 	caliber = CALIBER_20MM
 	icon_state = "20mmHE"
 	projectile_type = /obj/projectile/bullet/a20mm
-
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'

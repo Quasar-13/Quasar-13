@@ -115,8 +115,14 @@
 	update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/xm29
-	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/xm29
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
 	pin = /obj/item/firing_pin
+
+/obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	name = "grenade launcher internal magazine"
+	ammo_type = /obj/item/ammo_casing/a40mm
+	caliber = CALIBER_40MM
+	max_ammo = 5
 
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
@@ -138,22 +144,37 @@
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
 	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
 	slot_flags = 0
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+//THE MARSOC ARE COMING RUN
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	name = "\improper K-GPM21S 'Peacemaker'"
+	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
+	icon_state = "hk21c"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
