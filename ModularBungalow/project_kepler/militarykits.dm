@@ -1,6 +1,6 @@
 
 /obj/item/storage/backpack/duffelbag/solgov_conscription
-	name = "Military Conscription Kit"
+	name = "Military Conscription Bag"
 	desc = "Everything you need in a neat little bag, can be used for storage as well."
 //EVERYTHING BELOW ARE KITS!
 /obj/item/storage/backpack/duffelbag/solgov_conscription/PopulateContents()
@@ -22,7 +22,7 @@
 
 
 /obj/item/storage/box/soldier
-	name = "Military Conscription Box Kit"
+	name = "Assault Military Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier/PopulateContents()
@@ -41,7 +41,9 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-
+/obj/item/storage/box/soldier_marksman
+	name = "Marksman Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
@@ -59,7 +61,7 @@
 
 
 /obj/item/storage/box/soldier_standard
-	name = "Military Conscription Box Kit"
+	name = "Standard Military Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_standard/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/uzi(src)
@@ -76,7 +78,7 @@
 	new /obj/item/storage/belt/holster/shoulder(src)
 
 /obj/item/storage/box/soldier_wildlifehunter
-	name = "Military Conscription Box Kit"
+	name = "Wildlife Hunter Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_wildlifehunter/PopulateContents()
 	new /obj/item/kinetic_crusher(src)
@@ -90,7 +92,7 @@
 
 
 /obj/item/storage/box/soldier_grenadier
-	name = "Military Conscription Box Kit"
+	name = "Grenadier Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_grenadier/PopulateContents()
@@ -109,7 +111,7 @@
 
 
 /obj/item/storage/box/soldier_sar
-	name = "Military Conscription Box Kit"
+	name = "Search and Rescue Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_sar/PopulateContents()
@@ -137,7 +139,7 @@
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
 	new /obj/item/grenade/gas_crystal/healium_crystal(src)
-	new /obj/item/grenade/chem_grenade/metalfoam
+	new /obj/item/grenade/chem_grenade/metalfoam(src)
 	new /obj/item/grenade/chem_grenade/metalfoam(src)
 	new /obj/item/grenade/chem_grenade/metalfoam(src)
 	new /obj/item/grenade/chem_grenade/metalfoam(src)
@@ -145,15 +147,14 @@
 /obj/item/storage/box/grenadier_grenades/lethal
 
 /obj/item/storage/box/grenadier_grenades/lethal/PopulateContents()
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/chem_grenade/clf3(src)
-	new /obj/item/grenade/chem_grenade/clf3(src)
-	new /obj/item/grenade/chem_grenade/clf3(src)
-	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4(src)
@@ -165,20 +166,27 @@
 	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
 	new /obj/item/grenade/spawnergrenade/spesscarp(src)
 	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
+	new /obj/item/grenade/spawnergrenade/spesscarp(src)
+	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
+	new /obj/item/grenade/spawnergrenade/spesscarp(src)
+	new /obj/item/grenade/spawnergrenade/syndiesoap(src)
 	new /obj/item/grenade/chem_grenade/teargas(src)
 	new /obj/item/grenade/chem_grenade/teargas(src)
 	new /obj/item/grenade/chem_grenade/teargas(src)
-	new /obj/item/grenade/stingbang/mega(src)
-	new /obj/item/grenade/stingbang/mega(src)
-	new /obj/item/grenade/stingbang/mega(src)
-	new /obj/item/grenade/stingbang/mega(src)
-	new /obj/item/grenade/stingbang/mega(src)
+	new /obj/item/grenade/stingbang(src)
+	new /obj/item/grenade/stingbang(src)
+	new /obj/item/grenade/stingbang(src)
+	new /obj/item/grenade/stingbang(src)
+	new /obj/item/grenade/stingbang(src)
 	new /obj/item/grenade/empgrenade(src)
 	new /obj/item/grenade/empgrenade(src)
 	new /obj/item/grenade/empgrenade(src)
 
 /obj/item/storage/box/security_marksman
+	name = "Security Marksman Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
 
+/obj/item/storage/box/security_marksman
 /obj/item/storage/box/security_marksman/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
@@ -193,9 +201,11 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
 
-
 /obj/item/storage/box/security_privateer
-/obj/item/storage/box/security_prvivateer/PopulateContents()
+	name = "Standard Military Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/security_privateer
+/obj/item/storage/box/security_privateer/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
@@ -229,6 +239,8 @@
 	new /obj/item/storage/belt/holster/shoulder(src)
 	new /obj/item/roller(src)
 
+//CAPTAINS KITS
+
 /obj/item/storage/box/commander_classic
 /obj/item/storage/box/commander_classic/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/t12(src)
@@ -239,10 +251,10 @@
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/ammo_box/a357(src)
-	new /obj/item/ammo_box/a357(src)
-	new /obj/item/ammo_box/a357(src)
+	new /obj/item/gun/ballistic/revolver/akira(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
@@ -283,3 +295,35 @@
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
 	new /obj/item/storage/box/grenadier_grenades/lethal(src)
+
+// DO NOT SPAWN THIS IN
+/obj/item/storage/box/kitsune_ammo
+/obj/item/storage/box/kitsune_ammo/PopulateContents()
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+
+//SOLGOV EXTERMINATOR SQUAD
+
+/obj/item/storage/box/standard_marsoc
+/obj/item/storage/box/standard_marsoc/PopulateContents()
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/sk(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/ammo_box/speedloader/a556/pl(src)
+
