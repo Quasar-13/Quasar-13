@@ -95,13 +95,7 @@
 	armor = list(MELEE = 15, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 5)
 	can_flashlight = TRUE
 	dog_fashion = null
-	
-/obj/item/clothing/head/helmet/solgov
-	name = "solgov helmet"
-	desc = "Standard Mk4 Solgov Military Helmet."
-	icon_state = "sgvhelmet"
-	inhand_icon_state = "helmet"
-	can_flashlight = FALSE
+
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"

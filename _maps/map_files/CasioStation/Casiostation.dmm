@@ -9555,6 +9555,8 @@
 "hFj" = (
 /obj/item/bedsheet/centcom,
 /obj/structure/bed,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/carpet/green,
 /area/blueshield)
 "hGf" = (
@@ -9562,7 +9564,9 @@
 /turf/open/floor/plasteel/white,
 /area/medical/exam_room)
 "hGr" = (
-/obj/structure/displaycase/blueshield,
+/obj/structure/displaycase/blueshield{
+	req_access = list(111)
+	},
 /turf/open/floor/carpet/green,
 /area/blueshield)
 "hGR" = (
@@ -10087,6 +10091,7 @@
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/green,
 /area/blueshield)
 "iea" = (
@@ -10126,20 +10131,16 @@
 	},
 /obj/item/clothing/head/beret/sec/medical,
 /obj/item/clothing/accessory/armband/medblue,
-/obj/item/clothing/under/rank/security/head_of_security/formal,
 /obj/item/healthanalyzer/chem,
 /obj/item/healthanalyzer/paramed,
 /obj/item/healthanalyzer/viro,
 /obj/item/healthanalyzer/wound,
 /obj/item/storage/firstaid,
-/obj/structure/closet/secure_closet/centcom{
+/obj/structure/closet/secure_closet{
+	icon = 'ModularBungalow/zbungalowicons/secure_locker.dmi';
 	icon_state = "ntmp";
-	locked = 0;
-	name = "\proper marine medic locker";
-	req_access = "0"
+	name = "medical closet"
 	},
-/obj/item/clothing/suit/armor/labcoat/triagetech,
-/obj/item/clothing/head/beret/triage,
 /turf/open/floor/plasteel/white,
 /area/marines/police)
 "ifZ" = (
@@ -10603,6 +10604,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "iBH" = (
@@ -10616,6 +10618,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/blueshield)
 "iBL" = (
@@ -10625,6 +10628,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/green,
 /area/blueshield)
 "iCK" = (
@@ -14757,6 +14761,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+"mlm" = (
+/obj/item/stamp,
+/obj/item/stamp/denied,
+/obj/structure/table,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "mlU" = (
 /obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel/dark,
@@ -26823,6 +26833,10 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating,
 /area/maintenance/department/medical)
+"weH" = (
+/obj/structure/table,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "weO" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -28995,6 +29009,7 @@
 	name = "test chamber blast door"
 	},
 /obj/machinery/atmospherics/pipe/simple/general/visible,
+/obj/structure/cable,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "xLB" = (
@@ -74488,7 +74503,7 @@ rcB
 etq
 pAS
 pWC
-rcB
+xzg
 qUE
 rHD
 qZz
@@ -74745,7 +74760,7 @@ moO
 rtU
 pwa
 pVq
-rcB
+xzg
 qWt
 rHD
 qZz
@@ -75773,8 +75788,8 @@ lEX
 rtU
 pwa
 pVq
-rcB
-qZz
+xzg
+mlm
 rIl
 qZz
 svq
@@ -76030,8 +76045,8 @@ nEf
 pan
 pwa
 pVq
-rcB
-qZz
+xzg
+weH
 rIA
 qZz
 svZ

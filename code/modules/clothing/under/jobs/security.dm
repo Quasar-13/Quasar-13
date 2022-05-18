@@ -24,16 +24,6 @@
 	random_sensor = FALSE
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/security/officer/kepler
-	name = "kepler officer jumpsuit"
-	desc = "A tactical security jumpsuit for officers complete with Solgov belt buckle."
-	icon_state = "keplerundersec"
-
-/obj/item/clothing/under/rank/security/officer/kepler/ranger
-	name = "kepler ranger jumpsuit"
-	desc = "A tactical jumpsuit for the kepler rangers, fairly durable."
-	icon_state = "keplerranger"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5,ENERGY = 5, BOMB = 5, BIO = 10, RAD = 10, FIRE = 30, ACID = 30, WOUND = 15)
 
 /obj/item/clothing/under/rank/security/officer/grey
 	name = "grey security jumpsuit"
