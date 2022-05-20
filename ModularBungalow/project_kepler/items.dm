@@ -312,7 +312,7 @@
 /obj/item/storage/pouch/marsoc_tools/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 17
+	STR.max_items = 25
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
@@ -384,7 +384,7 @@
 /obj/item/storage/pouch/marsoc_ifak/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 12
+	STR.max_items = 20
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.set_holdable(list(
 		/obj/item/storage/firstaid,
@@ -408,12 +408,17 @@
 	new /obj/item/storage/pill_bottle/stimulant(src)
 	new /obj/item/storage/pill_bottle/epinephrine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/stack/medical/bone_gel(src)
+	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/roller(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
 	new /obj/item/reagent_containers/hypospray/combat/nanites(src)
+	new /obj/item/reagent_containers/hypospray/combat/insulin(src)
 	new /obj/item/pinpointer/crew(src)
 
 /obj/item/storage/pouch/ifak
