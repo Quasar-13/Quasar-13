@@ -98,7 +98,7 @@
 	name = "SG-XM29 'Determinator'"
 	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
 	icon_state = "xm29"
-	inhand_icon_state = "hk21"
+	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
@@ -129,6 +129,7 @@
 	name = "SG-P25 'Crow'"
 	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
 	icon_state = "xm25"
+	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
