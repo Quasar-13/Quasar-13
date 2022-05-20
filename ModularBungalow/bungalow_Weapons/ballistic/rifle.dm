@@ -162,6 +162,7 @@
 	name = "\improper K-GPM21S 'Peacemaker'"
 	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
 	icon_state = "hk21c"
+	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 
