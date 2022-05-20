@@ -198,11 +198,21 @@
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
 
 /obj/item/gun/ballistic/automatic/sr25
-	name = "Type 45 Sniper Rifle"
-	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	name = "SR25 Sniper Rifle"
+	desc = "The SR25 is a rifle used by the early kepler expedition force"
 	icon_state = "sr25"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
-	mag_type
+	mag_type = /obj/item/ammo_box/magazine/sr25
+	fire_sound = 'ModularTegustation/Tegusounds/weapons/guns/ak47.ogg'
+
+/obj/item/ammo_box/magazine/sr25
+	name = "7.62 NATO Magazine"
+	desc = "Magazine for the SR25"
+	max_ammo = 15
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak_mag_item"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	caliber = "7.62x39mm"
