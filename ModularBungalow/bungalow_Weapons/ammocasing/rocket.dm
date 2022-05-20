@@ -24,5 +24,6 @@
 /obj/item/gun/ballistic/rocketlauncher/unrestricted/flash
 	name = "SOCOM Type 79"
 	desc = "A reusable rocket propelled grenade launcher. only the most heartless will use this."
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	icon_state = "m90"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/rocket.dmi'
+	icon_state = "flash"
+	inhand_icon_state = "flash"
