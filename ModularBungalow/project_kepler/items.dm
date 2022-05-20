@@ -252,8 +252,8 @@
 /obj/item/storage/pouch/rocket/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 2
-	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.max_items = 8
+	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.set_holdable(list(
 		/obj/item/ammo_casing/caseless/rocket
 		))
@@ -267,7 +267,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 5
-	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/ammo_box/magazine,
@@ -313,7 +313,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 25
-	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.max_combined_w_class = 35
 	STR.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol,
@@ -386,7 +386,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 20
-	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.max_combined_w_class = 50
 	STR.set_holdable(list(
 		/obj/item/storage/firstaid,
