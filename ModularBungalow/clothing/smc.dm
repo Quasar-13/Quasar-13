@@ -38,10 +38,16 @@
 	desc = "A slim Type 1-S armored vest that provides decent protection against most types of damage, created and used by Cybersun."
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
 	icon = 'ModularBungalow/clothing/icons/coat.dmi'
-	icon_state = "hecu_armor"
+	icon_state = "syndicatevest"
 	inhand_icon_state = "armoralt"
 	blood_overlay_type = "armor"
 
+/obj/item/clothing/suit/armor/vest/syndicate/marine
+	name = "syndicate marine vest"
+	desc = "A slightly bulky Type 2-S armored rig that provides decent protection against most types of damage, created and used by Cybersun Marines."
+	icon_state = "syndicatemarine"
+	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 40, BOMB = 30, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	
 /obj/item/clothing/suit/armor/labcoat/syndie
 	name = "armored syndicate labcoat"
 	desc = "A heavily armored labcoat woven to stop attacks and biohazards alike."

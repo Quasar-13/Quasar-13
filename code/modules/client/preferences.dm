@@ -923,19 +923,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		var/datum/job/lastJob
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
+
+			//This lists all the maptypes that are nonstandard, and will delete all jobs.
+
 			//running mapexclude
 			if(SSmaptype.maptype in job.mapexclude)
 				continue
 
-			if(SSmaptype.maptype == "syndicate")
-				if(job.maptype == "none")
-					continue
 
-			if(SSmaptype.maptype == "solgov")
-				if(job.maptype == "none")
-					continue
-
-			if(SSmaptype.maptype == "blacksite")
+			if(SSmaptype.maptype in SSmaptype.clearmaps)
 				if(job.maptype == "none")
 					continue
 

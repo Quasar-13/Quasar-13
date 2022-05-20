@@ -23,6 +23,8 @@
 #define CALIBER_357			".357"
 /// The caliber used by the detective's revolver.
 #define CALIBER_38			".38"
+/// The caliber used by the PPK
+#define CALIBER_380			".380"
 /// The caliber used by the C-20r SMG, the tommygun, and the M1911 pistol.
 #define CALIBER_45			".45"
 /// The caliber used by sniper rifles and the desert eagle.
@@ -57,3 +59,7 @@
 #define CALIBER_TENTACLE	"tentacle"
 /// The caliber used by the Tac Breaching Shotties
 #define CALIBER_BREACHER	"breacher"
+/// The caliber used by XM grenade launcher
+#define CALIBER_20MM		"20mm"
+/// The caliber used by .45-70
+#define CALIBER_A4570		".4570"

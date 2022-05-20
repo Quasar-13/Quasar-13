@@ -64,6 +64,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
 	w_class = WEIGHT_CLASS_HUGE
 
+
 //Dual Feed Shotgun
 
 /obj/item/gun/ballistic/shotgun/automatic/dual_tube
@@ -141,6 +142,8 @@
 
 /obj/item/gun/ballistic/shotgun/bulldog/unrestricted
 	pin = /obj/item/firing_pin
+
+
 /////////////////////////////
 // DOUBLE BARRELED SHOTGUN //
 /////////////////////////////

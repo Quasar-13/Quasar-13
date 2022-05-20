@@ -36,60 +36,7 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
 
-//MAGS
-/obj/item/ammo_box/magazine/ak47
-	name = "AK-47 Magazine (7.62x39mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "ak_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
-	caliber = "7.62x39mm"
-	max_ammo = 30
-
-/obj/item/ammo_box/magazine/ak47/expanded
-	name = "AK-47 Expanded Magazine (7.62x39mm)"
-	icon_state = "ak_mag_large_item"
-	max_ammo = 50
-
-/obj/item/ammo_box/magazine/aks74u
-	name = "AKS-74U Magazine (5.45x39mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "ak_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a545_39
-	caliber = "5.45x39mm"
-	max_ammo = 30
-
-/obj/item/ammo_box/magazine/aks74u/expanded
-	name = "AKS-74U Expanded Magazine (5.45x39mm)"
-	icon_state = "ak_mag_large_item"
-	max_ammo = 50
-
-//CASINGS
-/obj/item/ammo_casing/ballistic/a762_39
-	name = "7.62x39mm bullet casing"
-	desc = "A 7.62x39mm bullet casing."
-	caliber = "7.62x39mm"
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a762_39
-
-/obj/item/ammo_casing/ballistic/a545_39
-	name = "5.45x39mm bullet casing"
-	desc = "A 5.45x39mm bullet casing."
-	caliber = "5.45x39mm"
-	randomspread = TRUE
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a545_39
-
-//BULLETS
-// AK-47 bullet
-/obj/projectile/bullet/a762_39
-	name = "7.62x39mm bullet"
-	damage = 27
-
-// AK-74 bullet
-/obj/projectile/bullet/a545_39
-	name = "5.45x39mm bullet"
-	damage = 34
-
+//T-12
 /obj/item/gun/ballistic/automatic/t12
 	name = "T-12"
 	desc = "A standard assault rifle used by TerraGov military."
@@ -112,23 +59,140 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
-//MAGS
-/obj/item/ammo_box/magazine/t12
-	name = "T12 Magazine (10x24mm)"
-	icon = 'ModularTegustation/Teguicons/magazines.dmi'
-	icon_state = "t12_mag_item"
-	ammo_type = /obj/item/ammo_casing/ballistic/a10_24
-	caliber = "10x24mm"
-	max_ammo = 50
+//Surplus Rifle .45 ACP
+/obj/item/gun/ballistic/automatic/surplus/acp45
+	desc = "A mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
+	fire_delay = 15
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "surplus2"
+	mag_type = /obj/item/ammo_box/magazine/surplusrifle/acp45
 
-/obj/item/ammo_casing/ballistic/a10_24
-	name = "10x24mm bullet casing"
-	desc = "A 10x24mm bullet casing."
-	caliber = "10x24mm"
-	variance = 2
-	projectile_type = /obj/projectile/bullet/a10_24
+/obj/item/gun/ballistic/automatic/laser/burst
+	name = "L-807 Neo Laser Burst Rifle "
+	desc = "The Miracle of the L-804, in it's full burst fire glory."
+	icon_state = "laserburst"
+	burst_size = 3
 
-/obj/projectile/bullet/a10_24
-	name = "10x24mm bullet"
-	damage = 26
-	armour_penetration = 25
+
+
+
+//OORAH SIR YES SIR!
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo
+	name = "MA5C Individual Combat Weapons System"
+	desc = "An air-cooled, gas-operated, magazine fed weapon designed for automatic fire."
+	icon_state = "halo"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin/explorer
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.13 SECONDS)
+
+
+//Kepler guns
+//Sprite by kirie and akira!
+/obj/item/gun/ballistic/automatic/m90/xm29
+	name = "SG-XM29 'Determinator'"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
+	icon_state = "xm29"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 4
+	fire_delay = 0.10
+/obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
+	update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/xm29
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	pin = /obj/item/firing_pin
+
+/obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	name = "grenade launcher internal magazine"
+	ammo_type = /obj/item/ammo_casing/a40mm
+	caliber = CALIBER_40MM
+	max_ammo = 5
+
+//being a rare weapon with decent firerate
+/obj/item/gun/ballistic/automatic/gyropistol/xm25
+	name = "SG-P25 'Crow'"
+	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
+	icon_state = "xm25"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 4
+
+/obj/item/gun/ballistic/automatic/gyropistol/xm25/Initialize()
+	. = ..()
+	fire_delay = 14
+
+
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+//THE MARSOC ARE COMING RUN
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	name = "\improper K-GPM21S 'Peacemaker'"
+	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
+	icon_state = "hk21c"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
+
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov
+	name = "Type 45 Sniper Rifle"
+	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	icon_state = "rifle45"
+	inhand_icon_state = "rifle45"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_display_ammo = 1
+	spawnwithmagazine = 0
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
+	name = "Type 40 Sniper Rifle"
+	desc = "Typically used by Ranger marksman of the past."
+	icon_state = "rifle40"
+	inhand_icon_state = "rifle40"
+	mag_display_ammo = 1
+	spawnwithmagazine = 1
+
+//Used for both of these!
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	max_ammo = 12
+	caliber = CALIBER_50
+
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator
+	name = "sniper rounds (penetrator)"
+	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
+	ammo_type = /obj/item/ammo_casing/p50/penetrator

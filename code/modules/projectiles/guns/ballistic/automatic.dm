@@ -67,7 +67,7 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r
-	name = "/improper C-20r SMG"
+	name = "\improper C-20r SMG"
 	desc = "A bullpup three-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	inhand_icon_state = "c20r"
@@ -377,17 +377,14 @@
 
 /obj/item/gun/ballistic/automatic/surplus
 	name = "Surplus Rifle"
-	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon. Uses 10mm ammo and its bulky frame hinders one-handed firing."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	weapon_weight = WEAPON_HEAVY
-	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
-	fire_delay = 30
+	mag_type = /obj/item/ammo_box/magazine/surplusrifle
+	fire_delay = 10
 	burst_size = 1
-	can_unsuppress = TRUE
-	can_suppress = TRUE
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	mag_display = TRUE
@@ -410,8 +407,3 @@
 	casing_ejector = FALSE
 
 
-/obj/item/gun/ballistic/automatic/laser/burst
-	name = "L-807 Neo Laser Burst Rifle "
-	desc = "The Miracle of the L-804, in it's full burst fire glory."
-	icon_state = "laserburst"
-	burst_size = 3
