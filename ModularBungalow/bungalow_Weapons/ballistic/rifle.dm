@@ -207,6 +207,15 @@
 	spawnwithmagazine = 0
 	mag_type = /obj/item/ammo_box/magazine/sr25
 	fire_sound = 'ModularTegustation/Tegusounds/weapons/guns/ak47.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 4
+
+/obj/item/gun/ballistic/automatic/sr25/Initialize()
+	. = ..()
+	fire_delay = 6
 
 /obj/item/ammo_box/magazine/sr25
 	name = "7.62 NATO Magazine"
