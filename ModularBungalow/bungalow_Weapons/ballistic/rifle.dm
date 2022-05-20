@@ -156,7 +156,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
 
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
@@ -167,7 +167,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 
-/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
 
