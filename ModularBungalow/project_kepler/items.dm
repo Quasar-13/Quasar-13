@@ -33,11 +33,15 @@
 	damagetype_healed = "all"
 /obj/item/reagent_containers/hypospray/combat/insulin
 	name = "improved combat nanites injector"
-	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental nanites for combat use: tihs one will also revert diabetes"
+	desc = "INJECT IF OVERDOSED ON GATORADE. Prefilled with experimental nanites for combat use: tihs one will also revert diabetes"
 	icon_state = "nano_alt"
 	list_reagents = list(/datum/reagent/medicine/omnizine = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 400, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 400,  /datum/reagent/medicine/syndicate_nanites = 400, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/medicine/insulin = 1000, /datum/reagent/medicine/metafactor = 400)
 	amount_per_transfer_from_this = 200
-///datum/reagent/medicine/insulin
+/obj/item/reagent_containers/pill/revival
+	name = "Revival Mixture Pills"
+	icon_state = "pill5"
+	list_reagents = list(/datum/reagent/medicine/synaphydramine = 50,/datum/reagent/medicine/verafore = 1, /datum/reagent/medicine/stimulants = 10, /datum/reagent/medicine/regen_jelly = 50)
+
 /obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
