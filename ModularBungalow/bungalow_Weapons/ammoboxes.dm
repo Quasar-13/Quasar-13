@@ -332,3 +332,13 @@
 	icon_state = "20mmHE"
 	projectile_type = /obj/projectile/bullet/a20mm
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+
+/obj/item/ammo_box/magazine/sr25
+	name = "7.62 NATO Magazine"
+	desc = "Magazine for the SR25"
+	max_ammo = 15
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak_mag_item"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	caliber = "7.62x39mm"
+
