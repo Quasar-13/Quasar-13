@@ -20,10 +20,3 @@
 	else
 		explosion(target, 1, 1, 1, 6, flame_range = 5)
 	return BULLET_ACT_HIT
-
-/obj/item/gun/ballistic/rocketlauncher/unrestricted/flash
-	name = "SOCOM Type 79"
-	desc = "A reusable rocket propelled grenade launcher. only the most heartless will use this."
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/rocket.dmi'
-	icon_state = "flash"
-	inhand_icon_state = "flash"
