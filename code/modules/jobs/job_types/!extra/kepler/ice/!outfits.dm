@@ -90,7 +90,7 @@
 	glasses = /obj/item/clothing/glasses/welding
 	box = /obj/item/storage/box/survival/security/radio
 
-/datum/outfit/job/solgov/marsoc
+/datum/outfit/marsoc
 	name = "Solgov Kepler MARSOC"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/heads/hos/alt
