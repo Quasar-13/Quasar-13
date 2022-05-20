@@ -25,7 +25,7 @@
 	icon_state = "ppk"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
-	
+
 /obj/item/gun/ballistic/automatic/pistol/actualppk
 	name = "K&H PPK"
 	desc = "A modern version of the classic spy gun by Kain and Heinrich. Favored by cheap action movie spies."
@@ -155,6 +155,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	caliber = CALIBER_SHOTGUN
 	max_ammo = 6
+	ammo_type = /obj/item/ammo_casing/shotgun
 //Chiappa Rhino
 /obj/item/gun/ballistic/revolver/rhino
 	name = "Chiappa Rhino"
