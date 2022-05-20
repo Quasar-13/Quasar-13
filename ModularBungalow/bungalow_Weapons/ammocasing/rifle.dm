@@ -77,7 +77,7 @@
 
 /obj/item/ammo_box/magazine/m556/big
 	name = "5.56 expanded magazine"
-	icon_state = "556big"
+	icon_state = "556big-100"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	max_ammo = 50
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
