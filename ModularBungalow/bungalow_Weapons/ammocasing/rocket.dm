@@ -46,3 +46,4 @@
 	name = "SGRL-49 Rocoiless Rifle"
 	desc = "An 84mm High Explosive rocket launcher, this one does not create backblast by utilising all of its propellent forward."
 	pin = /obj/item/firing_pin
+	backblast = FALSE
