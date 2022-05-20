@@ -80,7 +80,7 @@
 	icon_state = "556big-100"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	max_ammo = 50
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_casing/a556/pl
 	projectile_type = /obj/projectile/bullet/a556/pl
