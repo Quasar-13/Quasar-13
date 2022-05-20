@@ -41,3 +41,8 @@
 		explosion(target, 0, 0, 0, 6, flame_range = 3)
 	else
 		explosion(target, 0, 0, 0, 6, flame_range = 3)
+
+/obj/item/gun/ballistic/rocketlauncher/unrestricted/nobackblast
+	name = "SGRL-49 Rocoiless Rifle"
+	desc = "An 84mm High Explosive rocket launcher, this one does not create backblast by utilising all of its propellent forward."
+	pin = /obj/item/firing_pin
