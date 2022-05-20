@@ -196,3 +196,13 @@
 	name = "sniper rounds (penetrator)"
 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
+
+/obj/item/gun/ballistic/automatic/sr25
+	name = "Type 45 Sniper Rifle"
+	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	icon_state = "sr25"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_display_ammo = 1
+	spawnwithmagazine = 0
+	mag_type
