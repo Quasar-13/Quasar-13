@@ -415,6 +415,7 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/pill_bottle/stimulant(src)
 	new /obj/item/storage/pill_bottle/epinephrine(src)
+	new /obj/item/storage/pill_bottle/revival(src)
 	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
 	new /obj/item/stack/medical/mesh(src)
 	new /obj/item/stack/medical/mesh(src)
@@ -428,6 +429,12 @@
 	new /obj/item/reagent_containers/hypospray/combat/nanites(src)
 	new /obj/item/reagent_containers/hypospray/combat/insulin(src)
 	new /obj/item/pinpointer/crew(src)
+
+/obj/item/storage/pill_bottle/revival
+/obj/item/storage/pill_bottle/revival/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/revival(src)
+
 
 /obj/item/storage/pouch/ifak
 	name = "Individual Firstaid Kit"
