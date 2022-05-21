@@ -30,9 +30,9 @@
 	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler
-	name = "\improper Type P45 Uzi"
-	desc = "A lightweight, fully automatic submachinegun, for when you really need someone dead. Uses 9mm rounds."
-	icon_state = "miniuzikepler"
+	name = "\improper Type P23 Submachinegun"
+	desc = "A lightweight, fully automatic submachinegun used by the frontier police forces and certain special units. Uses 9mm rounds."
+	icon_state = "cbj"
 	w_class = WEIGHT_CLASS_NORMAL
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
