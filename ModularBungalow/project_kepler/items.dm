@@ -412,7 +412,7 @@
 
 /obj/item/storage/pouch/marsoc_ifak/PopulateContents()
 	new /obj/item/storage/firstaid/tactical/solgov(src)
-	new /obj/item/storage/firstaid/tactical/solgov(src)
+	new /obj/item/storage/firstaid/tactical(src)
 	new /obj/item/storage/pill_bottle/stimulant(src)
 	new /obj/item/storage/pill_bottle/epinephrine(src)
 	new /obj/item/storage/pill_bottle/revival(src)
