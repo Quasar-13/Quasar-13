@@ -122,10 +122,10 @@
 	mask = /obj/item/clothing/mask/nobreath/marsoc
 	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
-	l_pocket = /obj/item/storage/pouch/marsoc_tools
+	l_pocket = /obj/item/storage/pouch/marsoc_tools_leader
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
 	back = /obj/item/storage/backpack/marsoc
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/sniper_rounds/beowulf=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/defibrillator/compact=1, /obj/item/ammo_box/shotgun/frag=3, /obj/item/gun/ballistic/revolver/akira=1, /obj/item/storage/box/kitsune_ammo=1)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/sniper_rounds/beowulf=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/defibrillator/compact=1, /obj/item/ammo_box/shotgun/frag=3)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/meson/night
 	box = /obj/item/storage/box/survival/engineer/radio

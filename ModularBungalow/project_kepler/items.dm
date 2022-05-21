@@ -309,7 +309,7 @@
 	new /obj/item/binoculars(src)
 
 /obj/item/storage/pouch/marsoc_tools
-	name = "SOC tools pouch"
+	name = "SOC multipurpose pouch"
 	desc = "hold tools and magazine for finishing the job, to kill for your government make you a hero, do you feel like a hero yet?"
 	icon_state = "soctools"
 
@@ -375,6 +375,75 @@
 	new /obj/item/rcd_ammo/large(src)
 	new /obj/item/holosign_creator/atmos(src)
 	new /obj/item/extinguisher/advanced(src)
+
+/obj/item/storage/pouch/marsoc_tools_leader
+	name = "SOC command pouch"
+	desc = "hold tools and magazine for finishing the job, for fortune and fame."
+	icon_state = "soctoolsa"
+
+/obj/item/storage/pouch/marsoc_tools_leader/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 25
+	STR.max_w_class = WEIGHT_CLASS_HUGE
+	STR.max_combined_w_class = 80
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/automatic/pistol/m1911,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutters,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable_coil,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/grenade,
+		/obj/item/holosign_creator,
+		/obj/item/gun/energy/dueling,
+		/obj/item/construction/rcd,
+		/obj/item/rcd_ammo,
+		/obj/item/extinguisher,
+		/obj/item/gps
+		))
+
+/obj/item/storage/pouch/marsoc_tools/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/akira(src)
+	new /obj/item/suppressor(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/ammo_box/speedloader/a556/highp(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/melee/classic_baton/telescopic/contractor(src)
+	new /obj/item/multitool/abductor/marsoc(src)
+	new /obj/item/construction/rcd/combat(src)
+	new /obj/item/rcd_ammo/large(src)
+	new /obj/item/holosign_creator/atmos(src)
+	new /obj/item/extinguisher/advanced(src)
+
 
 /obj/item/multitool/abductor/marsoc
 	name = "Security Access Tuner"
