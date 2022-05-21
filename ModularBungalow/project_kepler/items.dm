@@ -425,7 +425,7 @@
 		/obj/item/gps
 		))
 
-/obj/item/storage/pouch/marsoc_tools/PopulateContents()
+/obj/item/storage/pouch/marsoc_tools_leader/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/akira(src)
 	new /obj/item/suppressor(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
