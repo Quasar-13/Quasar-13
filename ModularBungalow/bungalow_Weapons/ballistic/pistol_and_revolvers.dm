@@ -110,7 +110,7 @@
 
 /obj/item/gun/ballistic/revolver/akira/Initialize()
 	. = ..()
-	fire_delay = 10
+	fire_delay = 6
 //Yet another gun our kitsune would've used
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
