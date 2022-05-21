@@ -158,6 +158,16 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
 
+/obj/item/gun/ballistic/automatic/ar/hk21/beowulf
+	name = "\improper SG-SR45 .50 'Wulfe'"
+	desc = "A heavy duty anti material sporting rifle typically meant for rhino or even wild sharks. it's fearsome power unmatched by anything used anywhere"
+	icon_state = "beowulf"
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/beowulf
+
+/obj/item/ammo_box/magazine/sniper_rounds/beowulf
+	max_ammo = 20
+	caliber = CALIBER_50
+
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	name = "\improper K-GPM21S 'Peacemaker'"
