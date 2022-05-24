@@ -56,7 +56,7 @@
 //Sec Pistols
 /obj/item/gun/ballistic/automatic/pistol/sec
 	name = "NT-MRS 'Venus'"
-	desc = "Older design being modernized and reintroduced. Used by Nanotrasen Security Forces on high-risk stations."
+	desc = "Re-creation of a unique and fancy firearm. Used by lower ranking commissioned officers and high-ranking security staff."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "venus"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
@@ -65,7 +65,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/commander
 	name = "NT-RBY 'Commander'"
-	desc = "A refined pistol used by lower ranking commissioned officers and high-ranking security staff."
+	desc = "A modernised version of the 1911. Feeds 9mm instead of the classic .45 ACP. Sometimes seen in the hands of NT security personnel but more commononly sold on the open market."
 	icon_state = "commander"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
