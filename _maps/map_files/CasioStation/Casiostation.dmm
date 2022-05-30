@@ -4655,12 +4655,14 @@
 	},
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/laser{
-	pixel_y = 6
-	},
-/obj/item/gun/ballistic/automatic/laser{
-	pixel_y = 3
+	pixel_x = -2;
+	pixel_y = 5
 	},
 /obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 2;
+	pixel_y = -5
+	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -5131,6 +5133,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/item/ammo_casing/shotgun,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "enr" = (
@@ -5233,30 +5236,42 @@
 "epT" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
+/obj/item/gun/energy/e_gun/stun{
+	pixel_x = -3;
+	pixel_y = 5
+	},
 /obj/structure/window/reinforced{
 	dir = 1;
 	layer = 2.9
 	},
-/obj/item/weaponcrafting/gunkit/smg{
-	pixel_y = 4
+/obj/item/gun/energy/e_gun/stun{
+	pixel_x = -2
 	},
-/obj/item/weaponcrafting/gunkit/smg,
+/obj/item/gun/energy/e_gun/stun{
+	pixel_x = -1;
+	pixel_y = -5
+	},
+/obj/structure/window/reinforced/spawner/east,
+/obj/effect/decal/remains/human{
+	desc = "Poor Charles...";
+	name = "Charlie"
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "eqi" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/bot,
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weaponcrafting/gunkit/drifle{
-	pixel_y = 4
+/obj/structure/table/reinforced,
+/obj/item/grenade/barrier{
+	pixel_x = 5;
+	pixel_y = -2
 	},
-/obj/item/weaponcrafting/gunkit/drifle,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier{
+	pixel_x = -5;
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "eqw" = (
@@ -5293,19 +5308,13 @@
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "eqT" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/bot,
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
+/obj/structure/table/reinforced,
+/obj/item/storage/box/teargas{
+	pixel_x = 5
 	},
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/item/storage/box/flashbangs{
+	pixel_x = -5
 	},
-/obj/item/weaponcrafting/gunkit/mark2{
-	pixel_y = 4
-	},
-/obj/item/weaponcrafting/gunkit/mark2,
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "eqW" = (
@@ -5373,10 +5382,16 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weaponcrafting/gunkit/shotgun{
-	pixel_y = 4
+/obj/item/gun/energy/laser{
+	pixel_y = 5
 	},
-/obj/item/weaponcrafting/gunkit/shotgun,
+/obj/item/gun/energy/laser{
+	pixel_x = 2
+	},
+/obj/item/gun/energy/laser/fifth{
+	pixel_x = 1;
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "etq" = (
@@ -5787,6 +5802,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/weaponcrafting/gunkit/beam{
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/warden)
 "eGF" = (
@@ -6188,12 +6206,28 @@
 /area/marines/squad_office)
 "eWB" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_y = -5
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 5;
+	pixel_y = 5
+	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -6226,10 +6260,6 @@
 /obj/item/storage/box/firingpins{
 	pixel_y = 4
 	},
-/obj/item/storage/box/firingpins{
-	pixel_y = 2
-	},
-/obj/item/storage/box/firingpins,
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "eZA" = (
@@ -6257,14 +6287,8 @@
 /area/engine/break_room)
 "fas" = (
 /obj/structure/rack,
-/obj/item/storage/box/teargas{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/storage/box/handcuffs,
 /obj/item/storage/box/flashbangs{
-	pixel_x = 3;
-	pixel_y = -3
+	pixel_y = 4
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -6855,10 +6879,15 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weaponcrafting/gunkit/dmr{
-	pixel_y = 4
+/obj/item/gun/ballistic/shotgun/riot{
+	pixel_x = 2;
+	pixel_y = -5
 	},
-/obj/item/weaponcrafting/gunkit/dmr,
+/obj/item/gun/ballistic/shotgun/riot,
+/obj/item/gun/ballistic/shotgun/riot{
+	pixel_x = -2;
+	pixel_y = 5
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "fwo" = (
@@ -6872,10 +6901,21 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/item/weaponcrafting/gunkit/beam{
-	pixel_y = 4
+/obj/item/ammo_box/shotgun/beanbag{
+	pixel_y = 5
 	},
-/obj/item/weaponcrafting/gunkit/beam,
+/obj/item/ammo_box/shotgun/beanbag{
+	pixel_y = 5
+	},
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/buckshot,
+/obj/item/ammo_box/shotgun/rubber{
+	pixel_y = -5
+	},
+/obj/item/ammo_box/shotgun/rubber{
+	pixel_y = -5
+	},
+/obj/item/ammo_casing/shotgun,
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "fwz" = (
@@ -6919,7 +6959,7 @@
 	health = 45;
 	icon_state = "secbot1";
 	idcheck = 1;
-	name = "Sergeant-at-Armsky";
+	name = "Lieutenant Numbnuts";
 	weaponscheck = 1
 	},
 /turf/open/floor/plasteel/dark,
@@ -7568,6 +7608,16 @@
 /obj/structure/table,
 /turf/open/floor/plating,
 /area/vacant_room/commissary)
+"fWP" = (
+/obj/structure/cable,
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/security,
+/obj/machinery/door/window/brigdoor/security{
+	dir = 1;
+	req_access_txt = "3"
+	},
+/turf/open/floor/plasteel/dark,
+/area/marines/police/armory)
 "fXl" = (
 /obj/machinery/door/airlock{
 	name = "Bar";
@@ -7733,16 +7783,7 @@
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
 "geE" = (
-/obj/structure/rack,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
@@ -8855,6 +8896,23 @@
 	pixel_y = -7;
 	req_one_access_txt = "1"
 	},
+/obj/structure/closet/secure_closet{
+	icon_state = "armory";
+	name = "gun parts locker";
+	req_one_access_txt = "3"
+	},
+/obj/item/weaponcrafting/gunkit/smg,
+/obj/item/weaponcrafting/gunkit/shotgun{
+	pixel_y = 4
+	},
+/obj/item/weaponcrafting/gunkit/drifle,
+/obj/item/weaponcrafting/gunkit/mark2{
+	pixel_y = 4
+	},
+/obj/item/weaponcrafting/gunkit/dmr,
+/obj/item/weaponcrafting/gunkit/beam{
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/marines/police/warden)
 "hdM" = (
@@ -9643,6 +9701,15 @@
 /area/marines/police)
 "hJU" = (
 /obj/structure/cable,
+/obj/structure/table,
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 3
+	},
 /turf/open/floor/plasteel,
 /area/marines/police)
 "hKL" = (
@@ -9662,17 +9729,11 @@
 /turf/open/floor/plasteel,
 /area/marines/police)
 "hMd" = (
-/obj/structure/table,
-/obj/machinery/recharger{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/machinery/recharger{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/turf/open/floor/plasteel,
-/area/marines/police)
+/obj/structure/rack,
+/obj/item/gun/energy/e_gun/dragnet,
+/obj/item/gun/energy/e_gun/dragnet,
+/turf/open/floor/plasteel/dark,
+/area/marines/police/armory)
 "hMe" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -11404,8 +11465,6 @@
 /area/medical/medbay/zone2)
 "jnm" = (
 /obj/structure/table,
-/obj/item/storage/box/firingpins,
-/obj/item/storage/box/firingpins,
 /obj/item/key/security,
 /turf/open/floor/plasteel/dark,
 /area/marines/police/armory)
@@ -29491,6 +29550,9 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/item/weaponcrafting/gunkit/beam{
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -77055,11 +77117,11 @@ yaY
 yaY
 epT
 pis
-eYU
+hMd
 fwT
 geE
-ggh
-hMd
+fWP
+gXy
 ijf
 iKy
 jvL
