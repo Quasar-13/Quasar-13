@@ -48,7 +48,7 @@
 	new /obj/item/gun/ballistic/automatic/pistol/PL14(src)
 
 /obj/item/storage/box/captain/gun/revolver
-	name = "Chiappa Rhino."
+	name = "Chiappa Rhino"
 	desc = "The gun for a bombastic captain that loves to shoot to kill. Captain Chiappa and his 6 commandos take no prisoners."
 
 /obj/item/storage/box/captain/gun/revolver/PopulateContents()
@@ -71,12 +71,22 @@
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 
+
 /obj/item/storage/box/captain/gun/shotgun
 	name = "Energy Shotgun"
 	desc = "For the captain that wishes to be a doom marine."
 
 /obj/item/storage/box/captain/gun/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
+
+
+/obj/item/storage/box/captain/gun/melter
+	name = "Melter Rifle"
+	desc = "For the captain that hates others."
+
+/obj/item/storage/box/captain/gun/shotgun/PopulateContents()
+	new /obj/item/gun/energy/laser/hellgun(src)
+
 
 
 
