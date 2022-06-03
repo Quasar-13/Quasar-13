@@ -34,9 +34,9 @@ Let this be a warning to anyone that wants to try this.
 	name = "Heart Restoration"
 	desc = "The virus stimulates the production and replacement of cardiac tissues, causing the host to regenerate the heart when damaged."
 	stealth = 0
-	resistance = 1
+	resistance = 2
 	stage_speed = -2
-	transmittable = 2
+	transmittable = 0
 	level = 4
 	base_message_chance = 7
 	symptom_delay_min = 1
