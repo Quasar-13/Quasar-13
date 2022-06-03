@@ -72,39 +72,3 @@
 /obj/projectile/bullet/a545_39
 	name = "5.45x39mm bullet"
 	damage = 34
-
-//CUSTOM KEPLER STUFF BELOW
-
-/obj/item/ammo_box/magazine/m556/big
-	name = "5.56 expanded magazine"
-	icon_state = "556big-50"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	max_ammo = 50
-	multiple_sprites = AMMO_BOX_PER_BULLET
-
-/obj/item/ammo_casing/a556/pl
-	projectile_type = /obj/projectile/bullet/a556/pl
-/obj/projectile/bullet/a556/pl
-	name = "5.56mm bullet"
-	damage = 20
-	stamina = 59
-	armour_penetration = -30
-	wound_bonus = -20
-
-/obj/item/ammo_casing/a556/sk
-	projectile_type = /obj/projectile/bullet/a556/sk
-/obj/projectile/bullet/a556/sk
-	name = "5.56mm bullet"
-	damage = 22
-	armour_penetration = 17
-	wound_bonus = 5
-	stamina = 20
-
-/obj/item/ammo_casing/a556/highp
-	projectile_type = /obj/projectile/bullet/a556/highp
-/obj/projectile/bullet/a556/highp
-	name = "5.56mm bullet"
-	damage = 45
-	armour_penetration = 40
-	wound_bonus = 20
-	stamina = 30
