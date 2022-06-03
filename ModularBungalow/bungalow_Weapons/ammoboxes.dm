@@ -106,6 +106,14 @@
 	max_ammo = 7
 	icon_state = "4570-7"
 	ammo_type = /obj/item/ammo_casing/a4570
+
+/obj/item/ammo_box/speedloader/a44
+	name = ".44 magnum speedloader"
+	desc = "A speedloader full of .44 magnum catridges ready to be used!"
+	max_ammo = 7
+	icon_state = "4570-7"
+	ammo_type = /obj/item/ammo_casing/a44
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "

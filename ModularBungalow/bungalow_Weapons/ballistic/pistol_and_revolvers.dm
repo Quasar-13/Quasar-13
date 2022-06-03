@@ -171,6 +171,12 @@
 	desc = "A pistol for solgov commander. Engraved on the bottom is 'Thank you for your 20 years of service.'"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+
+/obj/item/ammo_box/magazine/internal/cylinder/rev44
+	ammo_type = /obj/item/ammo_casing/a44
+	caliber = CALIBER_44
+	max_ammo = 7
 
 //Hakita
 /obj/item/gun/ballistic/revolver/hakita

@@ -25,6 +25,8 @@
 #define CALIBER_38			".38"
 /// The caliber used by the PPK
 #define CALIBER_380			".380"
+/// The caliber used by the ranger seqouia and the .44 desert eagle. what more can you ask for?
+#define CALIBER_44			".44"
 /// The caliber used by the C-20r SMG, the tommygun, and the M1911 pistol.
 #define CALIBER_45			".45"
 /// The caliber used by sniper rifles and the desert eagle.
