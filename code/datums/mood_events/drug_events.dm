@@ -86,3 +86,10 @@
 /datum/mood_event/nicotine_withdrawal_severe
 	description = "<span class='boldwarning'>Head pounding. Cold sweating. Feeling anxious. Need a smoke to calm down!</span>\n"
 	mood_change = -8
+
+/datum/mood_event/admiral_halsey
+	description = "<span class='nicegreen'>The cool, calm soothing water is all that I need!</span>"
+	mood_change = 10
+/datum/mood_event/ruler_of_everything
+	description = "<span class='greentext'>I AM ABOVE EVERYONE!! I HAVE ABSOLUTE POWER!! FEAR MEEEEEE!!!!!!!!!!!!</span>"
+	mood_change = 20
