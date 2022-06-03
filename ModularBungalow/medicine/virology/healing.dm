@@ -3,10 +3,10 @@
 /datum/symptom/heal/light
 	name = "Diurnal Regeneration"
 	desc = "The virus is able to mend the host's flesh when in conditions of high light, but skin begins to break down in low light"
-	stealth = 0
-	resistance = 1
+	stealth = -1
+	resistance = -5
 	stage_speed = -3
-	transmittable = 1
+	transmittable = -2
 	level = 6
 	passive_message = "<span class='notice'>You feel tingling on your skin as light passes over it.</span>"
 	var/heal_amt = 0
