@@ -143,7 +143,7 @@
 		var/turf/endloc = get_turf(target)
 		if(!endloc)
 			break
-		var/obj/projectile/P = new /obj/projectile/beam/laser/sniper(startloc)
+		var/obj/projectile/P = new /obj/projectile/energy/taser(startloc)
 		P.preparePixelProjectile(endloc, startloc, null, rand(5))
 		P.firer = src
 		if(target)
