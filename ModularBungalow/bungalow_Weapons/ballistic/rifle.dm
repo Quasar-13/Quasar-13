@@ -151,3 +151,124 @@
 	name = "sniper rounds (penetrator)"
 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
+
+
+
+
+//OORAH SIR YES SIR!
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo
+	name = "MA5C Individual Combat Weapons System"
+	desc = "An air-cooled, gas-operated, magazine fed weapon designed for automatic fire."
+	icon_state = "halo"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	pin = /obj/item/firing_pin/explorer
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.13 SECONDS)
+
+
+//Kepler guns
+//Sprite by kirie and akira!
+@ -98,7 +83,7 @@
+	name = "SG-XM29 'Determinator'"
+	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
+	icon_state = "xm29"
+	inhand_icon_state = "xm"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+@ -108,28 +93,12 @@
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 4
+	fire_delay = 0.10
+/obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
+	update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/xm29
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	pin = /obj/item/firing_pin
+
+/obj/item/ammo_box/magazine/internal/grenadelauncher/cylinder/xm29
+	name = "grenade launcher internal magazine"
+	ammo_type = /obj/item/ammo_casing/a40mm
+	caliber = CALIBER_40MM
+	max_ammo = 5
+
+	fire_delay = 0.14
+//being a rare weapon with decent firerate
+/obj/item/gun/ballistic/automatic/gyropistol/xm25
+	name = "SG-P25 'Crow'"
+	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
+	icon_state = "xm25"
+	inhand_icon_state = "xm"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+@ -145,48 +114,22 @@
+/obj/item/gun/ballistic/automatic/ar/hk21
+	name = "\improper SG-GPM21 'Terminator'"
+	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "hk21"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 1
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+
+/obj/item/gun/ballistic/automatic/ar/hk21/beowulf
+	name = "\improper SG-SR45 .50 'Wulfe'"
+	desc = "A heavy duty anti material sporting rifle typically meant for rhino or even wild sharks. it's fearsome power unmatched by anything used anywhere"
+	icon_state = "beowulf"
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/beowulf
+
+/obj/item/ammo_box/magazine/sniper_rounds/beowulf
+	max_ammo = 20
+	caliber = CALIBER_50
+
+//THE MARSOC ARE COMING RUN
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	name = "\improper K-GPM21S 'Peacemaker'"
+	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
+	icon_state = "hk21c"
+	inhand_icon_state = "hk21c"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+
+/obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+/obj/item/gun/ballistic/automatic/sr25
+	name = "SR25 Sniper Rifle"
+	desc = "The SR25 is a rifle used by the early kepler expedition force"
+	icon_state = "sr25"
+	inhand_icon_state = "hk21"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_display_ammo = 1
+	spawnwithmagazine = 0
+	mag_type = /obj/item/ammo_box/magazine/sr25
+	fire_sound = 'ModularTegustation/Tegusounds/weapons/guns/ak47.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 4
+
+/obj/item/gun/ballistic/automatic/sr25/Initialize()
+	. = ..()
+	fire_delay = 6
