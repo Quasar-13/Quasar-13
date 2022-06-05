@@ -182,7 +182,7 @@
 	icon_state = "winterhood_gen"
 
 /obj/item/clothing/suit/hooded/wintercoat/sec/pris
-	name = "\improper Prisioner's winter coat"
+	name = "\improper Prisoner's winter coat"
 	desc = "Made just for the times when the prison runs out of working space heaters."
 	icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoats_icons.dmi'
 	worn_icon = 'ModularTegustation/Teguicons/Penguins_cove/Winter_Coat_Pile/wintercoats.dmi'
