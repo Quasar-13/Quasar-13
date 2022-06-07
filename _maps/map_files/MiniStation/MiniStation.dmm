@@ -272,6 +272,7 @@
 /area/bridge)
 "aR" = (
 /obj/machinery/power/apc/auto_name/north,
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
 "aT" = (
@@ -1707,6 +1708,7 @@
 	control_area = "/area/ai_monitored/turret_protected/aisat_interior";
 	name = "Antechamber Turret Control";
 	pixel_x = 30;
+	req_access = list(152);
 	req_access_txt = "152"
 	},
 /obj/machinery/ai_slipper{
@@ -5545,6 +5547,7 @@
 	name = "AI Chamber turret control";
 	pixel_x = 3;
 	pixel_y = -23;
+	req_access = list(152);
 	req_access_txt = "152"
 	},
 /obj/machinery/door/window{
@@ -7286,8 +7289,12 @@
 /area/syndiestation/bunks)
 "un" = (
 /obj/structure/table/abductor,
-/obj/item/clothing/suit/space/hardsuit/clown,
 /obj/item/pneumatic_cannon/pie/selfcharge,
+/obj/item/clothing/suit/space/hardsuit/syndi{
+	desc = "A special suit that protects against hazardous, low humor environments. Has radiation shielding. Only a true clown can wear it.";
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/clown;
+	icon_state = "hardsuit-clown"
+	},
 /turf/open/floor/mineral/bananium,
 /area/office/clown)
 "ur" = (
@@ -12222,6 +12229,11 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
+"Jg" = (
+/obj/structure/cable,
+/obj/machinery/light,
+/turf/open/floor/plasteel/dark,
+/area/engine/gravity_generator)
 "Ji" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -16671,7 +16683,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/structure/transit_tube/station/dispenser/flipped,
+/obj/structure/transit_tube/station/dispenser,
 /turf/open/floor/plasteel/white,
 /area/syndiestation/research)
 "Zr" = (
@@ -48610,7 +48622,7 @@ CR
 CR
 CR
 CR
-CR
+Jg
 DS
 bh
 aa
@@ -49381,7 +49393,7 @@ aR
 CT
 CT
 CT
-CR
+Jg
 DS
 bh
 aa
