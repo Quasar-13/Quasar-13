@@ -719,6 +719,7 @@
 		return FALSE
 	var/mob/living/carbon/human/H = M
 	if(H.mind.assigned_role == "Clown")
+	if(H.mind.assigned_role == "Honkmother Chosen")
 		return TRUE
 	else
 		return FALSE
