@@ -8,6 +8,7 @@
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
+	w_class = WEIGHT_CLASS_BULKY
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
@@ -130,6 +131,7 @@
 	name = "medical belt"
 	desc = "Can hold various medical equipment."
 	icon_state = "medical"
+	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "medical"
 	worn_icon_state = "medical"
 
