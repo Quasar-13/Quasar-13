@@ -83,11 +83,11 @@
 	name = "ERT Security - High Alert"
 
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	belt = /obj/item/gun/energy/pulse/carbine/loyalpin
+	l_hand = /obj/item/gun/energy/pulse/carbine/loyalpin
+	belt = /obj/item/storage/belt/security/full
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
 		/obj/item/storage/box/handcuffs=1,\
-		/obj/item/melee/baton/loaded=1,\
-		/obj/item/storage/belt/security/full=1)
+		/obj/item/melee/baton/loaded=1)
 
 
 /datum/outfit/centcom/ert/medic
