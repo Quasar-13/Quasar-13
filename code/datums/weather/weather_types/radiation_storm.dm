@@ -17,7 +17,7 @@
 	end_message = "<span class='notice'>The air seems to be cooling off again.</span>"
 
 	area_type = /area
-	protected_areas = list(/area/maintenance, /area/station/service/kitchen, /area/station/service/cafeteria, /area/station/service/bar, /area/station/service/theater, /area/ai_monitored/turret_protected/ai_upload, /area/ai_monitored/turret_protected/ai_upload_foyer,
+	protected_areas = list(/area/maintenance, /area/crew_quarters/kitchen, /area/crew_quarters/cafeteria, /area/crew_quarters/bar, /area/crew_quarters/theater, /area/ai_monitored/turret_protected/ai_upload, /area/ai_monitored/turret_protected/ai_upload_foyer,
 	/area/ai_monitored/turret_protected/ai, /area/storage/emergency/starboard, /area/storage/emergency/port, /area/shuttle, /area/security/prison/safe, /area/security/prison/toilet)
 	target_trait = ZTRAIT_STATION
 
