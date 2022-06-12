@@ -26,6 +26,8 @@
 
 	var/triggering	//admin cancellation
 
+	var/maptype = "standard"			//does this run on the maptype we want?
+
 /datum/round_event_control/New()
 	if(config && !wizardevent) // Magic is unaffected by configs
 		earliest_start = CEILING(earliest_start * CONFIG_GET(number/events_min_time_mul), 1)
