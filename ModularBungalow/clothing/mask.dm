@@ -4,6 +4,7 @@
 	worn_icon = 'ModularBungalow/clothing/worn/maskw.dmi'
 	icon = 'ModularBungalow/clothing/icons/mask.dmi'
 	icon_state = "sovietkepler"
+<<<<<<< HEAD
 
 /obj/item/clothing/mask/nobreath/marsoc
 	name = "SOC Rebreather"
@@ -12,3 +13,5 @@
 	icon = 'ModularBungalow/clothing/icons/mask.dmi'
 	icon_state = "marsoc"
 	resistance_flags = FIRE_PROOF
+=======
+>>>>>>> master

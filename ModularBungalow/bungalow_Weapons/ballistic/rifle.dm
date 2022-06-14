@@ -76,6 +76,7 @@
 
 
 
+<<<<<<< HEAD
 //OORAH SIR YES SIR!
 /obj/item/gun/ballistic/automatic/m90/unrestricted/auto/halo
 	name = "MA5C Individual Combat Weapons System"
@@ -91,6 +92,8 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.13 SECONDS)
 
+=======
+>>>>>>> master
 
 //Kepler guns
 //Sprite by kirie and akira!
@@ -98,7 +101,11 @@
 	name = "SG-XM29 'Determinator'"
 	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
 	icon_state = "xm29"
+<<<<<<< HEAD
 	inhand_icon_state = "xm"
+=======
+	inhand_icon_state = "hk21"
+>>>>>>> master
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
@@ -108,6 +115,7 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
+<<<<<<< HEAD
 	fire_delay = 0.10
 /obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
 	. = ..()
@@ -124,12 +132,18 @@
 	caliber = CALIBER_40MM
 	max_ammo = 5
 
+=======
+	fire_delay = 0.14
+>>>>>>> master
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
 	name = "SG-P25 'Crow'"
 	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
 	icon_state = "xm25"
+<<<<<<< HEAD
 	inhand_icon_state = "xm"
+=======
+>>>>>>> master
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -145,13 +159,17 @@
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
 	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+<<<<<<< HEAD
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+=======
+>>>>>>> master
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
 	slot_flags = 0
 	burst_size = 1
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+<<<<<<< HEAD
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
@@ -180,13 +198,22 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
+=======
+
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+>>>>>>> master
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
+<<<<<<< HEAD
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+=======
+>>>>>>> master
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
@@ -208,6 +235,7 @@
 	name = "sniper rounds (penetrator)"
 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
+<<<<<<< HEAD
 
 /obj/item/gun/ballistic/automatic/sr25
 	name = "SR25 Sniper Rifle"
@@ -228,3 +256,5 @@
 /obj/item/gun/ballistic/automatic/sr25/Initialize()
 	. = ..()
 	fire_delay = 6
+=======
+>>>>>>> master

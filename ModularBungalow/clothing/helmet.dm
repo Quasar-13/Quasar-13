@@ -35,7 +35,11 @@
 	desc = "Durable helmet survivalist, Originally used by the kepler security force but occasionally finding its way elsewhere"
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
+<<<<<<< HEAD
 	icon_state = "keplermarksman"
+=======
+	icon_state = "kerplermarksman"
+>>>>>>> master
 	armor = list(MELEE = 15, BULLET = 25, LASER = 45, ENERGY = 65, BOMB = 15, BIO = 100, RAD = 60, FIRE = 100, ACID = 10, WOUND = 5)
 
 /obj/item/clothing/head/helmet/ranger/akira
@@ -46,7 +50,10 @@
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	icon_state = "snowvetakira"
 	armor = list(MELEE = 35, BULLET = 35, LASER = 15, ENERGY = 35, BOMB = 25, BIO = 35, RAD = 100, FIRE = 100, ACID = 80, WOUND = 60)
+<<<<<<< HEAD
 	flash_protect = FLASH_PROTECTION_WELDER
+=======
+>>>>>>> master
 
 /obj/item/clothing/head/helmet/ranger/hos
 	name = "head of security's ranger helmet"

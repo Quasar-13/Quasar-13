@@ -1,6 +1,10 @@
 //Outpost Outfits
 /datum/outfit/job/outpostagent
 	name = "Syndicate Outpost Agent"
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 	id = /obj/item/card/id/black
 	uniform = /obj/item/clothing/under/syndicate/coldres
 	ears = /obj/item/radio/headset/headset_sci
@@ -8,6 +12,7 @@
 
 //Solgov outfits
 /datum/outfit/job/solgov
+<<<<<<< HEAD
 	name = "Solgov Colonist"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
@@ -34,7 +39,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	box = /obj/item/storage/box/survival/security/radio
 /datum/outfit/job/solgov/commander
-	name = "Solgov Kepler Site Commander"
+	name = "Solgov Commander"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -45,7 +50,7 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	box = /obj/item/storage/box/survival/site_command
 /datum/outfit/job/solgov/administrator
-	name = "Solgov Kepler Administrator"
+	name = "Solgov Administrator"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -132,6 +137,12 @@
 	suit_store = /obj/item/gun/ballistic/automatic/sr25
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
 
+=======
+	name = "Solgov Survivor"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/headset_srv
+	belt = null
+>>>>>>> master
 
 //NT outfits
 //Private

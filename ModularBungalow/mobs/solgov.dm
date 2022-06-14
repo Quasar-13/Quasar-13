@@ -586,7 +586,10 @@
 	/obj/item/reagent_containers/hypospray/medipen/salacid,
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("russian", "mining")
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 /mob/living/simple_animal/hostile/viscerator/solgov
 	name = "mercenary manhunter"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. this one belong to the kepler group"
@@ -600,3 +603,58 @@
 	limb_destroyer = 0
 	loot = list(/obj/item/stock_parts/cell/high)
 
+<<<<<<< HEAD
+=======
+//it will ignore other wild life aswell
+/obj/item/gun/ballistic/automatic/ar/hk21/nomag
+	spawnwithmagazine = 0
+//THIS MEDIPEN IS A BOSS FIGHT DROP
+/obj/item/reagent_containers/hypospray/medipen/gatorade
+	name = "restorative nanite injector"
+	desc = "extracted from someone spine, what the hell are you doing. Induce temporary pacifism effect on the user, also extremely high in sugar content. ONLY ONE USE EVERY 3 MINUTES, DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
+	icon_state = "gatorade"
+	inhand_icon_state = "atropen"
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/earthsblood = 3, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine= 5, /datum/reagent/medicine/omnizine/godblood = 5)
+	amount_per_transfer_from_this = 500
+//RAIDEN WHAT ARE YOU DOING
+/obj/item/reagent_containers/hypospray/medipen/gatorade/crystal
+	name = "strange crystal container"
+	desc = "it glows with strange power, Do you really want to inject this into yourself?"
+	icon_state = "nanogatorade"
+	inhand_icon_state = null
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/consumable/cream = 10, /datum/reagent/consumable/nutriment/protein = 10, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine = 5, /datum/reagent/medicine/omnizine/godblood = 3, /datum/reagent/medicine/metafactor = 3)
+//Will not make you a pacifist
+//GATORADE CRYSTAL I LOVE IT HOLY SHIT AAA
+/obj/item/reagent_containers/hypospray/combat/gatorade
+	name = "experimental combat nanites injector"
+	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with experimental medical nanites and a stimulant for rapid healing and a combat boost. injection will induce temporary pacifism on the target but quickly heal all damage."
+	volume = 8100
+	icon_state = "nano_alt"
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 400, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 200, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 400, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 200, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 200, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 200, /datum/reagent/consumable/cream = 200, /datum/reagent/consumable/nutriment/protein = 200, /datum/reagent/medicine/c2/hercuri = 100, /datum/reagent/drug/nicotine = 100, /datum/reagent/medicine/potass_iodide = 200, /datum/reagent/medicine/oculine = 200, /datum/reagent/medicine/earthsblood = 100, /datum/reagent/medicine/changelingadrenaline = 100, /datum/reagent/medicine/changelinghaste = 100, /datum/reagent/medicine/granibitaluri = 200, /datum/reagent/medicine/coagulant/seraka_extract = 100, /datum/reagent/medicine/diphenhydramine = 100, /datum/reagent/medicine/omnizine/godblood = 200, /datum/reagent/medicine/metafactor = 100)
+	amount_per_transfer_from_this = 400
+//divided by a lot of fucking numbers idfk but it heals you instantly and if you inject more than one at a time you just die, dont put with atropine either.
+/obj/item/storage/firstaid/tactical/solgov
+	name = "combat medical kit"
+	desc = "I hope you've got insurance."
+	icon_state = "bezerk"
+	damagetype_healed = "all"
+
+/obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/firstaid/tactical/solgov/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/reagent_containers/hypospray/medipen/(src)
+	new /obj/item/reagent_containers/hypospray/medipen/(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/libital(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+	new /obj/item/reagent_containers/pill/patch/aiuri(src)
+>>>>>>> master

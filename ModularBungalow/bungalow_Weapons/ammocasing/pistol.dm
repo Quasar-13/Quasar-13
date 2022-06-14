@@ -7,6 +7,7 @@
 	max_ammo = 10
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	icon_state = "avtomag-10"
+<<<<<<< HEAD
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 
 /obj/item/ammo_box/magazine/avtomag/update_icon()
@@ -54,3 +55,5 @@
 	icon_state = "double45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
+=======
+>>>>>>> master
