@@ -34,7 +34,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	box = /obj/item/storage/box/survival/security/radio
 /datum/outfit/job/solgov/commander
-	name = "Solgov Kepler Site Commander"
+	name = "Solgov Commander"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -45,7 +45,7 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	box = /obj/item/storage/box/survival/site_command
 /datum/outfit/job/solgov/administrator
-	name = "Solgov Kepler Administrator"
+	name = "Solgov Administrator"
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
