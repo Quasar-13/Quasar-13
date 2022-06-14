@@ -53,4 +53,9 @@
 	max_ammo = 14
 	icon_state = "double45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
+/obj/item/ammo_box/magazine/m45/big/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "double45-0"
+	else
+		icon_state = "double45-14"
