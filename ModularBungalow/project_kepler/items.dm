@@ -61,7 +61,6 @@
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
-	new /obj/item/clothing/glasses/hud/health/syndicate(src)
 
 /obj/item/storage/belt/holster/shoulder
 	name = "shoulder's holster"
