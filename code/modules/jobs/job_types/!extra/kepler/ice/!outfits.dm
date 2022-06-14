@@ -104,7 +104,7 @@
 	l_pocket = /obj/item/storage/pouch/marsoc_tools
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
 	back = /obj/item/storage/backpack/marsoc
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/ammo_box/shotgun/buckshot=2, /obj/item/defibrillator/compact=1, /obj/item/ammo_box/shotgun/slug=1)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/ammo_box/shotgun/buckshot=2, /obj/item/ammo_box/shotgun/slug=1)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/meson/night
 	box = /obj/item/storage/box/survival/engineer/radio
@@ -125,7 +125,7 @@
 	l_pocket = /obj/item/storage/pouch/marsoc_tools_leader
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
 	back = /obj/item/storage/backpack/marsoc
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/sniper_rounds/beowulf=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/defibrillator/compact=1, /obj/item/ammo_box/shotgun/frag=3)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/sniper_rounds/beowulf=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/ammo_box/shotgun/frag=3)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/meson/night
 	box = /obj/item/storage/box/survival/engineer/radio
