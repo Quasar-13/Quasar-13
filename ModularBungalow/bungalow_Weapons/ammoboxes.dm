@@ -36,7 +36,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a357
 	w_class = WEIGHT_CLASS_NORMAL
-	max_ammo = 10
+	max_ammo = 12
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/speedloader/c38
@@ -47,10 +47,6 @@
 
 /obj/item/ammo_box/speedloader/c38/dumdum
 	name = ".38 dum dum speedloader"
-<<<<<<< HEAD
-=======
-	desc = "A speedloader full of .38 dum dum catridges ready to be used!"
->>>>>>> master
 	ammo_type = /obj/item/ammo_casing/c38/dumdum
 
 /obj/item/ammo_box/speedloader/a357
@@ -63,7 +59,6 @@
 	name = ".357 match speedloader"
 	desc = "A speedloader full of .357 match catridges ready to be used!"
 	icon_state = "slc357"
-<<<<<<< HEAD
 	ammo_type = /obj/item/ammo_casing/a357/match
 
 /obj/item/ammo_box/speedloader/a556
@@ -119,11 +114,6 @@
 	icon_state = "4570-7"
 	ammo_type = /obj/item/ammo_casing/a44
 
-=======
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	ammo_type = /obj/item/ammo_casing/a357/match
-
->>>>>>> master
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
@@ -191,20 +181,12 @@
 //Ammoboxe for the armylathe hehe - Akira
 /obj/item/ammo_box/rifle
 	name = ".556 ammo box"
-<<<<<<< HEAD
 	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing"
-=======
-	desc = "A box full of .556 Cartridges ready to be used, hold 60 casing"
->>>>>>> master
 	icon_state = "riflebox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
 	w_class = WEIGHT_CLASS_NORMAL
-<<<<<<< HEAD
 	max_ammo = 180
-=======
-	max_ammo = 60
->>>>>>> master
 
 /obj/item/ammo_box/rifle/a762
 	name = ".762 NATO ammo box"
@@ -225,20 +207,12 @@
 //do not make this one printable, mapping purpose and lootdrop.
 /obj/item/ammo_box/rifle/big
 	name = "large .556 ammo box"
-<<<<<<< HEAD
 	desc = "A box full of .556 Cartridges ready to be used, hold 300 casing, this one is bulky, what do you need it for exactly?"
-=======
-	desc = "A box full of .556 Cartridges ready to be used, hold 180 casing, this one is bulky, what do you need it for exactly?"
->>>>>>> master
 	icon_state = "superriflebox"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	ammo_type = /obj/item/ammo_casing/a556
 	w_class = WEIGHT_CLASS_BULKY
-<<<<<<< HEAD
 	max_ammo = 300
-=======
-	max_ammo = 180
->>>>>>> master
 
 /obj/item/ammo_box/ab357
 	name = ".357 ammo packet"
@@ -340,7 +314,6 @@
 	ammo_type = /obj/item/ammo_casing/p50/soporific
 	w_class = WEIGHT_CLASS_SMALL
 	max_ammo = 12
-<<<<<<< HEAD
 
 /obj/item/ammo_box/ab20mm
 	name = ".20mm HE grenade box"
@@ -377,5 +350,3 @@
 	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
 	caliber = "7.62x39mm"
 
-=======
->>>>>>> master

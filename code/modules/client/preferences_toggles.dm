@@ -223,10 +223,6 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/settings/sound, Toggle_Soundscape)()
 	else
 		to_chat(usr, "You will no longer hear ambient sounds.")
 		usr.stop_sound_channel(CHANNEL_AMBIENCE)
-<<<<<<< HEAD
-=======
-		usr.stop_sound_channel(CHANNEL_BUZZ)
->>>>>>> master
 		usr.client.update_ambience_pref()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ambience", "[usr.client.prefs.toggles & SOUND_AMBIENCE ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /datum/verbs/menu/settings/sound/Toggle_Soundscape/Get_checked(client/C)

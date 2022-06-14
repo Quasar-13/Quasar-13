@@ -93,7 +93,6 @@
 
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
-<<<<<<< HEAD
 	name = "Akira's Special"
 	desc = "An ornate special revolver made by the kitsune kepler factory. it has a built in barrel charger system which decrease firerate but immensely increase damage output, made chambered in .556, especially strange that they were also only awarded to very few people that proven exceptional to the expedition efforts by the kitsune personally, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. faint smells of cinnamon and sake and an engraving of a nine tailed fox."
 	icon_state = "akira"
@@ -114,14 +113,6 @@
 	fire_delay = 6
 //Yet another gun our kitsune would've used
 //Albeit less succesfully
-=======
-	name = "Kira's Special"
-	desc = "A special pistol made for the kitsune, chambered in .357. used by the previous site administrator before he passed it along"
-	icon_state = "akira"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-
-//Yet another gun our kitsune would've used
->>>>>>> master
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = ".357 Avtomag"
 	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE."
@@ -129,7 +120,6 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
-<<<<<<< HEAD
 /obj/item/gun/ballistic/automatic/pistol/avtomag/akira
 	name = "\improper Model 35 Avtomag"
 	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive, limited production by the kepler factory, faint smells of cinnamon and sake and an engraving of a nine tailed fox"
@@ -148,8 +138,6 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/m45
 
-=======
->>>>>>> master
 ////////////////////
 //////REVOLVERS////
 ///////////////////
@@ -204,7 +192,6 @@
 	icon_state = "sw500"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 
-<<<<<<< HEAD
 //Single Action Revolver Here
 
 //LONG 45-70
@@ -224,11 +211,3 @@
 	caliber = CALIBER_A4570
 	max_ammo = 7
 
-=======
-//Colt Detective Special Ivory
-/obj/item/gun/ballistic/revolver/akira
-	name = "Kira's Special"
-	desc = "A special pistol made for the kitsune, chambered in .357. Something tell you the owner of this gun is long gone"
-	icon_state = "akira"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
->>>>>>> master

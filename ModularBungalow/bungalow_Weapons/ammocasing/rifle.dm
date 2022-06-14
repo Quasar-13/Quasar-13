@@ -72,7 +72,6 @@
 /obj/projectile/bullet/a545_39
 	name = "5.45x39mm bullet"
 	damage = 34
-<<<<<<< HEAD
 
 //CUSTOM KEPLER STUFF BELOW
 
@@ -109,5 +108,3 @@
 	armour_penetration = 40
 	wound_bonus = 20
 	stamina = 30
-=======
->>>>>>> master
