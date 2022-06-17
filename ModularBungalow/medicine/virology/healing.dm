@@ -3,10 +3,10 @@
 /datum/symptom/heal/light
 	name = "Diurnal Regeneration"
 	desc = "The virus is able to mend the host's flesh when in conditions of high light, but skin begins to break down in low light"
-	stealth = 0
-	resistance = 1
+	stealth = -1
+	resistance = -5
 	stage_speed = -3
-	transmittable = 1
+	transmittable = -2
 	level = 6
 	passive_message = "<span class='notice'>You feel tingling on your skin as light passes over it.</span>"
 	var/heal_amt = 0
@@ -53,9 +53,9 @@
 	name = "Photosynthesis"
 	desc = "The virus is able to convert light into food"
 	stealth = 1
-	resistance = 0
-	stage_speed = 1
-	transmittable = 0
+	resistance = -1
+	stage_speed = 0
+	transmittable = -1
 	level = 3
 	passive_message = "<span class='notice'>You feel rather leafy.</span>"
 	var/canheal = FALSE
@@ -89,8 +89,8 @@
 	name = "Craft Beer Affinity"
 	desc = "This virus takes space beer, and uses it to mend your wounds."
 	stealth = 0
-	resistance = -1
-	stage_speed = 0
+	resistance = -2
+	stage_speed = -1
 	transmittable = 1
 	level = 6
 	passive_message = "<span class='notice'>You are really craving a drink...</span>"
@@ -139,11 +139,12 @@
 		return TRUE
 	return FALSE
 
+
 /datum/symptom/heal/watercoag
 	name = "Automatic Saline Production"
 	desc = "The virus automatically produces saline glucose out of water."
 	stealth = 0
-	resistance = 1
+	resistance = -1
 	stage_speed = 1
 	transmittable = -1
 	level = 6
@@ -171,7 +172,7 @@
 		M.reagents.remove_reagent(/datum/reagent/water, 0.5 * absorption_coeff)
 		. += power * 0.5
 
-/datum/symptom/heal/water/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
+/datum/symptom/heal/watercoag/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
 	var/heal_amt = 2 * actual_power
 	M.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 0.5 * heal_amt)
 	return 1

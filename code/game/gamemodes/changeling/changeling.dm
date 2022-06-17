@@ -30,6 +30,28 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 		message_admins("RANDOM ALERT! Changeling gamemode's job restrictions were removed! Any role can become an antagonist this round!")
 		no_restrictions = TRUE
 
+
+	if(prob(80) && !no_restrictions)
+		restricted_jobs += "Shaft Miner"
+		message_admins("GAMEMODE ALERT! Miners cannot be antagonists this round!")
+
+		/*God I can actually config this but holy shit this is brutal.
+		Admins have been bitching at me for fucking ever to nerf miner antag.
+		I didn't really want to change much aside from minor things but they forced my hand.
+		I am NOT going to go through mining changing every single fucking value,
+		instead I will just make miner antag less rare.
+
+		Miner antag is boring as shit anyways, they just leave the station for like 50 minutes.
+		IF they come back they are a god and if they don't then you lose a traitor.
+		This isn't being removed, nor will it be confined to the usual no job restriction like above
+		Instead I'm cutting it back to 20% of what it was before.
+
+		Will redo later - Kitsunemitsu
+	*/
+
+	else
+		message_admins("GAMEMODE ALERT! Miners can be antagonists this round!")
+
 	if(CONFIG_GET(flag/protect_roles_from_antagonist) && !no_restrictions)
 		restricted_jobs += protected_jobs
 
