@@ -106,6 +106,14 @@
 	max_ammo = 7
 	icon_state = "4570-7"
 	ammo_type = /obj/item/ammo_casing/a4570
+
+/obj/item/ammo_box/speedloader/a44
+	name = ".44 magnum speedloader"
+	desc = "A speedloader full of .44 magnum catridges ready to be used!"
+	max_ammo = 7
+	icon_state = "4570-7"
+	ammo_type = /obj/item/ammo_casing/a44
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
@@ -332,3 +340,13 @@
 	icon_state = "20mmHE"
 	projectile_type = /obj/projectile/bullet/a20mm
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+
+/obj/item/ammo_box/magazine/sr25
+	name = "7.62 NATO Magazine"
+	desc = "Magazine for the SR25"
+	max_ammo = 15
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak_mag_item"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	caliber = "7.62x39mm"
+

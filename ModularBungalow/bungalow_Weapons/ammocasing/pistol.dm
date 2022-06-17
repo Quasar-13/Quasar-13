@@ -35,10 +35,27 @@
 	wound_bonus = 10
 	stamina = 5
 
+/obj/item/ammo_casing/a44
+	name = "44 magnum bullet"
+	desc = "High Power .44 Magnum Round, What, You're not gonna shoot me Amy"
+	projectile_type = /obj/projectile/bullet/a44
+	caliber = CALIBER_44
+
+/obj/projectile/bullet/a44
+	name = "44 Magnum bullet"
+	damage = 45
+	armour_penetration = 15
+	wound_bonus = 25
+
 /obj/item/ammo_box/magazine/m45/big
 	name = "Double stack .45 ACP Magazine"
 	desc = "Not enough ammo? here's your solution."
 	max_ammo = 14
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	icon_state = "double45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+/obj/item/ammo_box/magazine/m45/big/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "double45-0"
+	else
+		icon_state = "double45-14"

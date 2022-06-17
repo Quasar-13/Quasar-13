@@ -76,5 +76,5 @@
 	icon_state = "soldier_marsoc"
 	slowdown = 0.16
 	armor = list(MELEE = 60, BULLET = 65, LASER = 60, ENERGY = 65, BOMB = 56, BIO = 100, RAD = 100, FIRE = 100, ACID = 100, WOUND = 50)
-
-
+	flags_cover = HEADCOVERSEYES
+	flags_inv = HIDEEARS|HIDEHAIR
