@@ -21,12 +21,21 @@
 //atmos tech
 /datum/outfit/job/atmos/firefighter
 	name = "Atmospheric Technician (Firefighter)"
-	uniform = /obj/item/clothing/under/rank/engineering/engineer/hazard
+	uniform = /obj/item/clothing/under/rank/engineering/atmospheric_technician/old
 	head = /obj/item/clothing/head/hardhat/red
 	l_hand = /obj/item/extinguisher
 
+/datum/outfit/job/atmos/fusiontechnician
+	name = "Atmospheric Technician (Fusion Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/atmospheric_technician/green
+
+/datum/outfit/job/atmos/subenginetechnician
+	name = "Atmospheric Technician (Subengine Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/atmospheric_technician/hazard
+
 /datum/outfit/job/atmos/lifesupportspecialist
 	name = "Atmospheric Technician (Life Support Specialist)"
+	uniform = /obj/item/clothing/under/rank/engineering/atmospheric_technician/old
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced=1, /obj/item/storage/box/survival=2)
 
 //cook
@@ -119,13 +128,13 @@
 	head = /obj/item/clothing/head/beret/sec/navyofficer/black
 	uniform = /obj/item/clothing/under/rank/centcom/ert
 	suit = /obj/item/clothing/suit/armor/vest
-	
+
 /datum/outfit/job/security/sergeantofficer
 	name = "Security Officer (Sergeant Officer)"
 	head = /obj/item/clothing/head/beret/sec/navyofficer
 	uniform = /obj/item/clothing/under/rank/security/officer/formal
 	suit = /obj/item/clothing/suit/security/officer
-	
+
 //det
 /datum/outfit/job/detective/intelligenceofficer
 	name = "Detective (Intelligence Officer)"
@@ -145,7 +154,7 @@
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/ltj
 	head = /obj/item/clothing/head/beret/black
 	glasses = /obj/item/clothing/glasses/sunglasses
-	
+
 /datum/outfit/job/secretary/seniorbridgeofficer
 	name = "Secretary (Senior Bridge Officer)"
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/lt
@@ -153,7 +162,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/laceup
-	
+
 //Chief Medical Officer
 /datum/outfit/job/cmo/medicalprofessor
 	name = "Chief Medical Officer (Medical Professor)"
@@ -171,6 +180,10 @@
 /datum/outfit/job/ce/chiefatmosphericstechnician
 	name = "Chief Engineer (Chief Atmospherics Technician)"
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/atmos
+
+/datum/outfit/job/ce/chiefelectricaltechnician
+	name = "Chief Engineer (Chief Electrical Technician)"
+	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer/hazard
 
 //Captain
 /datum/outfit/job/captain/stationcommander
