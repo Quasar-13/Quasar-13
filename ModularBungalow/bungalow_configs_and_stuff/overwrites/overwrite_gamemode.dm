@@ -26,10 +26,10 @@
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
 	protected_jobs += "Commandant"
-	protected_jobs += "Wing Commander"
+	protected_jobs += "Field Commander"
 	protected_jobs += "Marine"
 	protected_jobs += "Pilot Officer"
-	protected_jobs += "Staff Officer"
+	protected_jobs += "Field Officer"
 	. = ..()
 
 /datum/game_mode/cult/New()
@@ -56,10 +56,10 @@
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
 	protected_jobs += "Commandant"
-	protected_jobs += "Wing Commander"
+	protected_jobs += "Field Commander"
 	protected_jobs += "Marine"
 	protected_jobs += "Pilot Officer"
-	protected_jobs += "Staff Officer"
+	protected_jobs += "Field Officer"
 	. = ..()
 
 /datum/game_mode/revolution/New()
@@ -90,10 +90,10 @@
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
 	protected_jobs += "Commandant"
-	protected_jobs += "Wing Commander"
+	protected_jobs += "Field Commander"
 	protected_jobs += "Marine"
 	protected_jobs += "Pilot Officer"
-	protected_jobs += "Staff Officer"
+	protected_jobs += "Field Officer"
 	. = ..()
 
 /datum/game_mode/changeling/New()
@@ -125,10 +125,10 @@
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
 	protected_jobs += "Commandant"
-	protected_jobs += "Wing Commander"
+	protected_jobs += "Field Commander"
 	protected_jobs += "Marine"
 	protected_jobs += "Pilot Officer"
-	protected_jobs += "Staff Officer"
+	protected_jobs += "Field Officer"
 
 	. = ..()
 
@@ -156,9 +156,9 @@
 	protected_jobs += "Military Warden"
 	protected_jobs += "Military Police"
 	protected_jobs += "Commandant"
-	protected_jobs += "Wing Commander"
+	protected_jobs += "Field Commander"
 	protected_jobs += "Marine"
 	protected_jobs += "Pilot Officer"
-	protected_jobs += "Staff Officer"
+	protected_jobs += "Field Officer"
 
 	. = ..()

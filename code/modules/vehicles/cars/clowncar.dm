@@ -29,6 +29,11 @@
 			RegisterSignal(H, COMSIG_MOB_CLICKON, .proc/FireCannon)
 			M.log_message("has entered [src] as a possible driver", LOG_ATTACK)
 			return
+		if(H.mind && H.mind.assigned_role == "Honkmother Chosen") //Ensures only clowns can drive the car. (Including more at once)
+			add_control_flags(H, VEHICLE_CONTROL_DRIVE)
+			RegisterSignal(H, COMSIG_MOB_CLICKON, .proc/FireCannon)
+			M.log_message("has entered [src] as a possible driver", LOG_ATTACK)
+			return
 	add_control_flags(M, VEHICLE_CONTROL_KIDNAPPED)
 
 /obj/vehicle/sealed/car/clowncar/mob_forced_enter(mob/M, silent = FALSE)

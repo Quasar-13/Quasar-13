@@ -109,9 +109,9 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Commandant" = 300,
 		"First Officer" = 310,
 		//Operations
-		"Wing Commander" = 320,
+		"Field Commander" = 320,
 		"Pilot Officer" = 321,
-		"Staff Officer" = 322,
+		"Field Officer" = 322,
 		"Marine" = 323,
 		//Triage
 		"Medical Officer" = 331,

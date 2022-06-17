@@ -12,6 +12,11 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	normal_integrity = 450
 
+/obj/machinery/door/airlock/command/red
+	icon = 'icons/obj/doors/airlocks/station/commandred.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_com
+	normal_integrity = 450
+
 /obj/machinery/door/airlock/security
 	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
@@ -92,6 +97,11 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/command/white/glass
+	opacity = FALSE
+	glass = TRUE
+	normal_integrity = 400
+
+/obj/machinery/door/airlock/command/red/glass
 	opacity = FALSE
 	glass = TRUE
 	normal_integrity = 400

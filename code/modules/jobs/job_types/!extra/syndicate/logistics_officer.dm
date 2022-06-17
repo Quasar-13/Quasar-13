@@ -4,16 +4,16 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the wing commander and staff officer"
-	selection_color = "#BBBB11"
+	supervisors = "the first officer and commandant"
+	selection_color = "#c4c42d"
 	exp_requirements = 60
 	exp_type = EXP_TYPE_LOGISTICS
 	maptype = "syndicate"
 
 	outfit = /datum/outfit/job/logistics_officer
 
-	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND)
-	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_COMMAND, ACCESS_ATMOSPHERICS, ACCESS_ENGINE, ACCESS_SYNDICATE_LOGISTICS)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_OFFICER, ACCESS_SYNDICATE_COMMAND, ACCESS_ATMOSPHERICS, ACCESS_ENGINE, ACCESS_SYNDICATE_LOGISTICS)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_ENG
 
@@ -35,6 +35,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head =/obj/item/clothing/head/hardhat/white
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/PL14
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/logistics
 
 
 //Spawn Point

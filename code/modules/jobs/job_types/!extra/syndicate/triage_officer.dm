@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/triage_officer
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_MEDICAL)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_MEDICAL)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_MED
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
