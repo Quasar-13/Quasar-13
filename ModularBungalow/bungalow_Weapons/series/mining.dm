@@ -9,12 +9,11 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun, /obj/item/ammo_casing/energy/kinetic)
 	w_class = WEIGHT_CLASS_SMALL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
-	pinlocked = TRUE
 	selfcharge = 1
 
 //Miner's Laser Revolver
 /obj/item/gun/energy/e_gun/miner/revolver
-	name = "\improper E-326 Mining Revolver"
+	name = "\improper E-326 Mining Revolve"
 	desc = "A refined, powerful hitscan pistol."
 	icon_state = "mining-revolver"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire, /obj/item/ammo_casing/energy/kinetic)
