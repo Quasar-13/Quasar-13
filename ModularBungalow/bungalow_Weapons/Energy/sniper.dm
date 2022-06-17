@@ -18,7 +18,6 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/sniper/weak)
 	pin = /obj/item/firing_pin/explorer
 	zoomable = FALSE
-	pinlocked = TRUE
 
 /obj/item/gun/energy/sniper/fallout/Initialize()
 	. = ..()
