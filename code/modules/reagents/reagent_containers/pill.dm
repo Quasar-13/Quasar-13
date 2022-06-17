@@ -92,7 +92,6 @@
 	desc = "Highly toxic."
 	icon_state = "pill5"
 	list_reagents = list(/datum/reagent/toxin = 50)
-	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/pill/cyanide
 	name = "cyanide pill"
