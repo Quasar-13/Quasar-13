@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/mechanic
 
-	access = list(ACCESS_SYNDICATE)
-	minimal_access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_ATMOSPHERICS, ACCESS_ENGINE, ACCESS_SYNDICATE_LOGISTICS)
+	minimal_access = list(ACCESS_SYNDICATE, ACCESS_ATMOSPHERICS, ACCESS_ENGINE, ACCESS_SYNDICATE_LOGISTICS)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_ENG
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)

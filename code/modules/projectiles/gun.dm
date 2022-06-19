@@ -43,6 +43,8 @@
 	var/weapon_weight = WEAPON_LIGHT
 	var/dual_wield_spread = 24			//additional spread when dual wielding
 
+	var/pinlocked = FALSE				//can you remove the pin?
+
 	/// Just 'slightly' snowflakey way to modify projectile damage for projectiles fired from this gun.
 	var/projectile_damage_multiplier = 1
 
@@ -76,6 +78,7 @@
 	var/zoom_out_amt = 0
 	var/datum/action/toggle_scope_zoom/azoom
 	var/pb_knockback = 0
+
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -443,15 +446,18 @@
 		return remove_gun_attachment(user, I, bayonet, "unfix")
 
 	else if(pin && user.is_holding(src))
-		user.visible_message("<span class='warning'>[user] attempts to remove [pin] from [src] with [I].</span>",
-		"<span class='notice'>You attempt to remove [pin] from [src]. (It will take [DisplayTimeText(FIRING_PIN_REMOVAL_DELAY)].)</span>", null, 3)
-		if(I.use_tool(src, user, FIRING_PIN_REMOVAL_DELAY, volume = 50))
-			if(!pin) //check to see if the pin is still there, or we can spam messages by clicking multiple times during the tool delay
-				return
-			user.visible_message("<span class='notice'>[pin] is pried out of [src] by [user], destroying the pin in the process.</span>",
-								"<span class='warning'>You pry [pin] out with [I], destroying the pin in the process.</span>", null, 3)
-			QDEL_NULL(pin)
-			return TRUE
+		if(pinlocked == FALSE)
+			user.visible_message("<span class='warning'>[user] attempts to remove [pin] from [src] with [I].</span>",
+			"<span class='notice'>You attempt to remove [pin] from [src]. (It will take [DisplayTimeText(FIRING_PIN_REMOVAL_DELAY)].)</span>", null, 3)
+			if(I.use_tool(src, user, FIRING_PIN_REMOVAL_DELAY, volume = 50))
+				if(!pin) //check to see if the pin is still there, or we can spam messages by clicking multiple times during the tool delay
+					return
+				user.visible_message("<span class='notice'>[pin] is pried out of [src] by [user], destroying the pin in the process.</span>",
+									"<span class='warning'>You pry [pin] out with [I], destroying the pin in the process.</span>", null, 3)
+				QDEL_NULL(pin)
+				return TRUE
+		else
+			user.visible_message("<span class='notice'>You cannot remove the firing pin from this gun.</span>")
 
 /obj/item/gun/welder_act(mob/living/user, obj/item/I)
 	. = ..()

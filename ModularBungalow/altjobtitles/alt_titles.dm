@@ -195,4 +195,4 @@
 
 //Funny role
 /datum/job/staff_officer
-	alt_titles = list("Field Officer")
+	alt_titles = list("Staff Officer")

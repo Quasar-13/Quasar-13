@@ -268,6 +268,16 @@
 			"Logistics" = GLOB.logistics_positions,
 			"Military Police" = GLOB.police_positions)
 
+	if(SSmaptype.maptype == "syndicate-station")
+		departments = list(
+		//Syndiestation
+			"Syndicate Command" = GLOB.syncommand_positions,
+			"Bioresearch" = GLOB.bioresearch_positions,
+			"Triage" = GLOB.triage_positions,
+			"Operations" = GLOB.operations_positions,
+			"Logistics" = GLOB.logistics_positions,
+			"Military Police" = GLOB.police_positions,
+			"Auxiliary" = GLOB.auxiliary_positions)
 
 	if(SSmaptype.maptype == "blacksite")
 		departments = list(

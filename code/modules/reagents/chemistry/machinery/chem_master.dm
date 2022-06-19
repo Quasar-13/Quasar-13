@@ -579,3 +579,16 @@
 	name = "CondiMaster 3000"
 	desc = "Used to create condiments and other cooking supplies."
 	condi = TRUE
+
+//For syndiecorps plant machines
+
+/obj/machinery/chem_master/plant
+	name = "Tabletop Chemmaster"
+	desc = "Used to create condiments and other cooking supplies."
+
+/obj/machinery/chem_master/plant/update_icon_state()
+	if(beaker)
+		icon_state = "genesploicer1"
+	else
+		icon_state = "genesploicer0"
+

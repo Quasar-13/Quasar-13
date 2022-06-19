@@ -425,6 +425,12 @@
 	if(SSmaptype.maptype == "syndicate")
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
 
+	if(SSmaptype.maptype == "syndicate-station")
+		department_categories = list("Syndicate Command", "Bioresearch", "Triage", "Logistics", "Military Police", "Auxiliary")
+
+//Add in Operations when it's done
+//		department_categories = list("Syndicate Command", "Operations", "Triage", "Bioresearch", "Logistics", "Military Police", "Auxiliary")
+
 	if(SSmaptype.maptype == "kepler-ice")
 		department_categories = list("Solgov", "NT Marines", "Operations")
 

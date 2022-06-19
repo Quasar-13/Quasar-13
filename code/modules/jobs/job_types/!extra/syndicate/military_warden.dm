@@ -5,7 +5,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commandant"
-	selection_color = "#335599"
+	selection_color = "#6a96d4"
 	maptype = "syndicate"
 
 	outfit = /datum/outfit/job/military_warden
@@ -24,11 +24,13 @@
 	glasses = /obj/item/clothing/glasses/hud/security/syndicate
 	id = /obj/item/card/id/black
 	ears = /obj/item/radio/headset/syndicate/alt
-	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/armor/vest/warden
+	uniform = /obj/item/clothing/under/smc/warden
+	head = /obj/item/clothing/head/beret/sec/navyofficer
+	suit = /obj/item/clothing/suit/armor/bulletproof
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/sig
+	accessory = /obj/item/clothing/accessory/medal/rank/syndicate/warden
 
 	belt = null
 
