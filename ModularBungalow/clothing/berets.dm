@@ -49,6 +49,12 @@
 	name = "kepler ranger beret"
 	desc = "A beret made from durathread, worn by kepler rangers who preferred style over protection."
 	icon_state = "beretkeplerranger"
+
+/obj/item/clothing/head/beret/durathread/kepler/solgov
+	name = "Solgov Peacekeeping Beret"
+	desc = "A beret made from durathread, worn by solgov peacekeepers who preferred style over protection."
+	icon_state = "beretkeplersolgov"
+
 //civilian departmental berets
 
 /obj/item/clothing/head/beret/grey
