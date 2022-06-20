@@ -236,7 +236,7 @@
 	return FALSE
 
 /mob/living/simple_animal/hostile/solgov/ranged
-	name = "Mercenary Privateer"
+	name = "Solgov Peacekeeper"
 	desc = "Protecting your future, unless you don't speak sol common, Armed with a pistol"
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
@@ -250,7 +250,7 @@
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
-	name = "Mercenary NCO"
+	name = "Solgov NCO"
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
@@ -262,6 +262,23 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
+	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
+
+/mob/living/simple_animal/hostile/solgov/ranged/gunner
+	name = "Solgov NCO"
+	desc = "Armed with Assault Rifle, Ready to fire upon you"
+	icon_state = "solgovrangedassaultrifle"
+	icon_living = "solgovrangedassaultrifle"
+	maxHealth = 135
+	health = 135
+	rapid = 3
+	rapid_fire_delay = 5
+	retreat_distance = 4
+	minimum_distance = 3
+	casingtype = /obj/item/ammo_casing/a556
+	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
@@ -387,17 +404,17 @@
 	set_light(4)
 //So that you can see them and will not get fucked up by them in the dark.
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
-	name = "Mercenary Elite"
+	name = "Solgov Heavy"
 	desc = "Protecting your future, Now stop resisting"
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
-	speed = -0.4
+	speed = -0.8
 	maxHealth = 205
 	health = 205
 	retreat_distance = 3
 	minimum_distance = 2
 	rapid = 3
-	rapid_fire_delay = 2
+	rapid_fire_delay = 5
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/lmg,
@@ -411,7 +428,7 @@
 	say("Tam oni!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
-	name = "Mercenary Heavy Shotgunner"
+	name = "Solgov Heavy Shotgunner"
 	desc = "An absolute unit, he's also running right at you"
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
@@ -420,7 +437,7 @@
 	health = 250
 	minimum_distance = 1
 	rapid = 3
-	rapid_fire_delay = 5
+	rapid_fire_delay = 3
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
