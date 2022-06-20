@@ -86,6 +86,15 @@
 /obj/item/clothing/head/helmet/kepler/nco
 	icon_state = "keplernco"
 
+/obj/item/clothing/head/helmet/kepler/nco/alt
+	icon_state = "keplernco_alt"
+
+/obj/item/clothing/head/helmet/kepler/heavy/solgov
+	icon_state = "keplernco_alt"
+
+/obj/item/clothing/head/helmet/kepler/heavy/shotgunner/solgov
+	icon_state = "keplershotgunner_alt"
+
 /obj/item/clothing/head/helmet/kepler/gunner
 	icon_state = "keplergunner"
 
