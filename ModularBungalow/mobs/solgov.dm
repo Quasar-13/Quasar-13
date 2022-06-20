@@ -1,58 +1,74 @@
 /obj/effect/mob_spawn/human/corpse/solgovgenericcorpse
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovgenericcorpse
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsemarksman
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpselmg
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpselmg
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpseshotgunner
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsecloaker
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpseassault
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpseassault
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsenco
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsenco
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsepilot
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsepilot
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpsegunner
+	name = "Kepler Peacekeeper Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsegunner
+
+/datum/outfit/solgovcorpsegunner
+	name = "Kepler Mercenary Corpse"
+	uniform = /obj/item/clothing/under/solgov/snow
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/kepler/gunner
+	back = /obj/item/storage/backpack/satchel
 
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"
@@ -279,7 +295,7 @@
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/gunner,
 	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
@@ -549,6 +565,18 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("hostile")
 
+/mob/living/simple_animal/hostile/solgov/infected/gunner
+	name = "Infected"
+	desc = "Oh god oh fuck."
+	icon_state = "solgov_infested"
+	icon_living = "solgov_infested"
+	speed = 1.75
+	maxHealth = 200
+	health = 200
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
 /mob/living/simple_animal/hostile/solgov/infected/heavy
 	icon_state = "solgov_infestedh"
 	icon_living = "solgov_infestedh"
@@ -572,12 +600,12 @@
 	maxHealth = 150
 	health = 150
 
-/mob/living/simple_animal/hostile/solgov/infected/corrupted
-	icon_state = "solgov_infestedh"
-	icon_living = "solgov_infestedh"
-	speed = 1
-	maxHealth = 250
-	health = 250
+//mob/living/simple_animal/hostile/solgov/infected/corrupted
+//	icon_state = "solgov_infestedh"
+//	icon_living = "solgov_infestedh"
+//	speed = 1
+//	maxHealth = 250
+//	health = 250
 
 //the mech pilot and hazmat are exception to this and will not spawn an infected variant.
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
