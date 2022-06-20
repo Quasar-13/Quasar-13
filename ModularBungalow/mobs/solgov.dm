@@ -267,24 +267,24 @@
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/gunner
-	name = "Solgov NCO"
+	name = "Solgov Riflemen"
 	desc = "Armed with Assault Rifle, Ready to fire upon you"
 	icon_state = "solgovrangedassaultrifle"
 	icon_living = "solgovrangedassaultrifle"
 	maxHealth = 135
 	health = 135
 	rapid = 3
-	rapid_fire_delay = 5
+	rapid_fire_delay = 3
 	retreat_distance = 4
 	minimum_distance = 3
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/nco,
-	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
+	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
-	name = "Mercenary Hazmat"
+	name = "Solgov Scientist"
 	desc = "Armed with SMG, Ready to enforce to quarantine"
 	icon_state = "solgovhazmat"
 	icon_living = "solgovhazmat"
@@ -305,7 +305,7 @@
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 //HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
-	name = "Mercenary Elite"
+	name = "Spetnaz"
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
@@ -450,7 +450,7 @@
 	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
-	name = "Mercenary Sniper"
+	name = "Solgov Sniper"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
@@ -474,7 +474,7 @@
 	faction = list("russian", "hostile", "mining")
 //so they would ignore the bears and not get attacked by em, and make them ignore infected.
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
-	name = "Mercenary Marksman"
+	name = "Solgov Marksman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedmarksman"
 	icon_living = "solgovrangedmarksman"
@@ -511,7 +511,7 @@
 	say("Tsel obnaruzhena!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault
-	name = "Mercenary Assault"
+	name = "Spetnaz"
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
@@ -581,7 +581,7 @@
 
 //the mech pilot and hazmat are exception to this and will not spawn an infected variant.
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
-	name = "Mercenary Pilot"
+	name = "Spetnaz Pilot"
 	desc = "Unarmed but fast."
 	icon_state = "solgovpilot"
 	icon_living = "solgovpilot"
@@ -605,7 +605,7 @@
 	faction = list("russian", "mining")
 
 /mob/living/simple_animal/hostile/viscerator/solgov
-	name = "mercenary manhunter"
+	name = "solgov manhunter"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. this one belong to the kepler group"
 	icon_state = "viscerator_solgov"
 	icon_living = "viscerator_solgov"
