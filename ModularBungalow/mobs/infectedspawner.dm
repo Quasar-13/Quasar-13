@@ -51,3 +51,9 @@
 		/obj/effect/mob_spawn/human/corpse/solgovcorpseassault = 80,
 		/mob/living/simple_animal/hostile/solgov/infected/assault = 20,
 	)
+
+/obj/effect/spawner/lootdrop/infection_spawner/solgov/gunner
+	loot = list(
+		/obj/effect/mob_spawn/human/corpse/solgovcorpsegunner = 80,
+		/mob/living/simple_animal/hostile/solgov/infected/gunner = 20,
+	)

@@ -1,58 +1,74 @@
 /obj/effect/mob_spawn/human/corpse/solgovgenericcorpse
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovgenericcorpse
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsemarksman
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsemarksman
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpselmg
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpselmg
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpseshotgunner
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpseshotgunner
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsecloaker
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsecloaker
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpseassault
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpseassault
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsenco
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsenco
 
 /obj/effect/mob_spawn/human/corpse/solgovcorpsepilot
-	name = "Kepler Mercenary Operative"
+	name = "Kepler Peacekeeper Operative"
 	id_job = "Operative"
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	outfit = /datum/outfit/solgovcorpsepilot
+
+/obj/effect/mob_spawn/human/corpse/solgovcorpsegunner
+	name = "Kepler Peacekeeper Operative"
+	id_job = "Operative"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/solgovcorpsegunner
+
+/datum/outfit/solgovcorpsegunner
+	name = "Kepler Mercenary Corpse"
+	uniform = /obj/item/clothing/under/solgov/snow
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/kepler/gunner
+	back = /obj/item/storage/backpack/satchel
 
 /datum/outfit/solgovgenericcorpse
 	name = "Kepler Mercenary Corpse"
@@ -236,7 +252,7 @@
 	return FALSE
 
 /mob/living/simple_animal/hostile/solgov/ranged
-	name = "Mercenary Privateer"
+	name = "Solgov Peacekeeper"
 	desc = "Protecting your future, unless you don't speak sol common, Armed with a pistol"
 	icon_state = "solgovranged"
 	icon_living = "solgovranged"
@@ -250,7 +266,7 @@
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg
-	name = "Mercenary NCO"
+	name = "Solgov NCO"
 	desc = "Armed with SMG, Ready to fire upon you"
 	icon_state = "solgovrangedsmg"
 	icon_living = "solgovrangedsmg"
@@ -266,8 +282,25 @@
 	/obj/item/gun/ballistic/automatic/mini_uzi/kepler,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
+/mob/living/simple_animal/hostile/solgov/ranged/gunner
+	name = "Solgov Riflemen"
+	desc = "Armed with Assault Rifle, Ready to fire upon you"
+	icon_state = "solgovrangedassaultrifle"
+	icon_living = "solgovrangedassaultrifle"
+	maxHealth = 135
+	health = 135
+	rapid = 3
+	rapid_fire_delay = 3
+	retreat_distance = 4
+	minimum_distance = 3
+	casingtype = /obj/item/ammo_casing/a556
+	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
+	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/gunner,
+	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
+	/obj/item/reagent_containers/hypospray/medipen/ekit)
+
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
-	name = "Mercenary Hazmat"
+	name = "Solgov Scientist"
 	desc = "Armed with SMG, Ready to enforce to quarantine"
 	icon_state = "solgovhazmat"
 	icon_living = "solgovhazmat"
@@ -288,7 +321,7 @@
 //SPECIAL UNITS!! a slight warning, these guy does a lot of fucking damages and should be placed carefully
 //HEAVY EMPHASIS ON CAREFULLY, THEY CAN BE DEVASTATING TO UNPREPARED PLAYERS
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker
-	name = "Mercenary Elite"
+	name = "Spetnaz"
 	desc = "What the hell is that thing"
 	icon_state = "solgovcloaker"
 	icon_living = "solgovcloaker"
@@ -387,17 +420,17 @@
 	set_light(4)
 //So that you can see them and will not get fucked up by them in the dark.
 /mob/living/simple_animal/hostile/solgov/ranged/heavy
-	name = "Mercenary Elite"
+	name = "Solgov Heavy"
 	desc = "Protecting your future, Now stop resisting"
 	icon_state = "solgovrangedlmg"
 	icon_living = "solgovrangedlmg"
-	speed = -0.4
+	speed = -0.8
 	maxHealth = 205
 	health = 205
 	retreat_distance = 3
 	minimum_distance = 2
 	rapid = 3
-	rapid_fire_delay = 2
+	rapid_fire_delay = 5
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/lmg,
@@ -411,7 +444,7 @@
 	say("Tam oni!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
-	name = "Mercenary Heavy Shotgunner"
+	name = "Solgov Heavy Shotgunner"
 	desc = "An absolute unit, he's also running right at you"
 	icon_state = "solgovrangedshotgun"
 	icon_living = "solgovrangedshotgun"
@@ -420,7 +453,7 @@
 	health = 250
 	minimum_distance = 1
 	rapid = 3
-	rapid_fire_delay = 5
+	rapid_fire_delay = 3
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	projectilesound = 'sound/weapons/gun/shotgun/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
@@ -433,7 +466,7 @@
 	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
-	name = "Mercenary Sniper"
+	name = "Solgov Sniper"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedrifle"
 	icon_living = "solgovrangedrifle"
@@ -457,7 +490,7 @@
 	faction = list("russian", "hostile", "mining")
 //so they would ignore the bears and not get attacked by em, and make them ignore infected.
 /mob/living/simple_animal/hostile/solgov/ranged/rifle/marksman
-	name = "Mercenary Marksman"
+	name = "Solgov Marksman"
 	desc = "A karate master also an excellent marksman, you\'re not supposed to be this close to look at him"
 	icon_state = "solgovrangedmarksman"
 	icon_living = "solgovrangedmarksman"
@@ -494,7 +527,7 @@
 	say("Tsel obnaruzhena!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/assault
-	name = "Mercenary Assault"
+	name = "Spetnaz"
 	desc = "Armed with SG-P29, This absolute unit is here to ruin your day."
 	icon_state = "solgovassault"
 	icon_living = "solgovassault"
@@ -532,6 +565,18 @@
 	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
 	faction = list("hostile")
 
+/mob/living/simple_animal/hostile/solgov/infected/gunner
+	name = "Infected"
+	desc = "Oh god oh fuck."
+	icon_state = "solgov_infested"
+	icon_living = "solgov_infested"
+	speed = 1.75
+	maxHealth = 200
+	health = 200
+	loot = list(/obj/effect/mob_spawn/human/corpse/solgovgenericcorpse,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare,
+	/obj/effect/spawner/lootdrop/medical/firstaid_rare)
+
 /mob/living/simple_animal/hostile/solgov/infected/heavy
 	icon_state = "solgov_infestedh"
 	icon_living = "solgov_infestedh"
@@ -555,16 +600,16 @@
 	maxHealth = 150
 	health = 150
 
-/mob/living/simple_animal/hostile/solgov/infected/corrupted
-	icon_state = "solgov_infestedh"
-	icon_living = "solgov_infestedh"
-	speed = 1
-	maxHealth = 250
-	health = 250
+//mob/living/simple_animal/hostile/solgov/infected/corrupted
+//	icon_state = "solgov_infestedh"
+//	icon_living = "solgov_infestedh"
+//	speed = 1
+//	maxHealth = 250
+//	health = 250
 
 //the mech pilot and hazmat are exception to this and will not spawn an infected variant.
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen/solgov //what the fuck is this file pathing lmao
-	name = "Mercenary Pilot"
+	name = "Spetnaz Pilot"
 	desc = "Unarmed but fast."
 	icon_state = "solgovpilot"
 	icon_living = "solgovpilot"
@@ -588,7 +633,7 @@
 	faction = list("russian", "mining")
 
 /mob/living/simple_animal/hostile/viscerator/solgov
-	name = "mercenary manhunter"
+	name = "solgov manhunter"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. this one belong to the kepler group"
 	icon_state = "viscerator_solgov"
 	icon_living = "viscerator_solgov"

@@ -76,8 +76,8 @@
 	icon_state = "viceadmiral_hat"
 
 /obj/item/clothing/head/helmet/kepler
-	name = "kepler mercenary helmet."
-	desc = "A helmet for some sort of mercenaries."
+	name = "solgov peacekeeping helmet."
+	desc = "A helmet for some sort of coalition force."
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "kepler"
@@ -85,6 +85,18 @@
 
 /obj/item/clothing/head/helmet/kepler/nco
 	icon_state = "keplernco"
+
+/obj/item/clothing/head/helmet/kepler/nco/alt
+	icon_state = "keplernco_alt"
+
+/obj/item/clothing/head/helmet/kepler/heavy/solgov
+	icon_state = "keplernco_alt"
+
+/obj/item/clothing/head/helmet/kepler/heavy/shotgunner/solgov
+	icon_state = "keplershotgunner_alt"
+
+/obj/item/clothing/head/helmet/kepler/gunner
+	icon_state = "keplergunner"
 
 /obj/item/clothing/head/helmet/kepler/assault
 	icon_state = "keplerassault"
