@@ -224,6 +224,10 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
+<<<<<<< Updated upstream
+=======
+	burst_size = 1
+>>>>>>> Stashed changes
 
 /obj/item/gun/ballistic/automatic/sr25/Initialize()
 	. = ..()

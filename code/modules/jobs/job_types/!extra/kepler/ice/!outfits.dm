@@ -15,7 +15,11 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/flashlight/seclite=1)
 	box = /obj/item/storage/box/survival/mining
 /datum/outfit/job/solgov/sec
+<<<<<<< Updated upstream
 	name = "Solgov Kepler Private Security"
+=======
+	name = "Security"
+>>>>>>> Stashed changes
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -24,7 +28,11 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	box = /obj/item/storage/box/survival/security/improved
 /datum/outfit/job/solgov/soldier
+<<<<<<< Updated upstream
 	name = "Solgov Kepler Expedition Soldier"
+=======
+	name = "Soldier"
+>>>>>>> Stashed changes
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -34,7 +42,11 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	box = /obj/item/storage/box/survival/security/radio
 /datum/outfit/job/solgov/commander
+<<<<<<< Updated upstream
 	name = "Solgov Commander"
+=======
+	name = "Commander"
+>>>>>>> Stashed changes
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -45,7 +57,11 @@
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1, /obj/item/weldingtool/mini=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	box = /obj/item/storage/box/survival/site_command
 /datum/outfit/job/solgov/administrator
+<<<<<<< Updated upstream
 	name = "Solgov Administrator"
+=======
+	name = "Administrator"
+>>>>>>> Stashed changes
 	id = /obj/item/card/id/solgov
 	ears = /obj/item/radio/headset/headset_srv
 	belt = /obj/item/melee/classic_baton
@@ -55,6 +71,7 @@
 	head = /obj/item/clothing/head/ushanka
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/weldingtool/hugetank=1, /obj/item/storage/firstaid/tactical/solgov=1, /obj/item/flashlight/seclite=1, /obj/item/clothing/mask/gas/sechailer=1)
 	box = /obj/item/storage/box/survival/site_command
+<<<<<<< Updated upstream
 
 //PRE EQUIPPED
 /datum/outfit/job/solgov/sec_equipped
@@ -133,6 +150,8 @@
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
 
 
+=======
+>>>>>>> Stashed changes
 //NT outfits
 //Private
 /datum/outfit/job/remnant
@@ -162,3 +181,46 @@
 	id = null
 	uniform = /obj/item/clothing/under/vagrant
 	gloves = /obj/item/clothing/gloves/fingerless
+
+/datum/outfit/marsoc
+	name = "Kepler MARSOC"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/heads/hos/alt
+	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
+	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
+	uniform = /obj/item/clothing/under/solgov/snow
+	mask = /obj/item/clothing/mask/nobreath/marsoc
+	shoes = /obj/item/clothing/shoes/jackboots
+	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
+	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
+	l_pocket = /obj/item/storage/pouch/marsoc_tools
+	r_pocket = /obj/item/storage/pouch/marsoc_ifak
+	back = /obj/item/storage/backpack/marsoc
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/m556/big=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/ammo_box/shotgun/buckshot=2, /obj/item/ammo_box/shotgun/slug=1)
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	glasses = /obj/item/clothing/glasses/meson/night
+	box = /obj/item/storage/box/survival/engineer/radio
+	suit_store = /obj/item/gun/ballistic/automatic/sr25
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
+
+/datum/outfit/marsoc_leader
+	name = "Kepler Officer MARSOC"
+	id = /obj/item/card/id/solgov
+	ears = /obj/item/radio/headset/heads/hos/alt
+	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
+	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
+	uniform = /obj/item/clothing/under/solgov/snow
+	shoes = /obj/item/clothing/shoes/jackboots
+	mask = /obj/item/clothing/mask/nobreath/marsoc
+	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
+	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
+	l_pocket = /obj/item/storage/pouch/marsoc_tools_leader
+	r_pocket = /obj/item/storage/pouch/marsoc_ifak
+	back = /obj/item/storage/backpack/marsoc
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/kepler_commander_voucher=1,/obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/sniper_rounds/beowulf=5, /obj/item/ammo_box/magazine/sr25=5, /obj/item/ammo_box/shotgun/frag=3)
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	glasses = /obj/item/clothing/glasses/meson/night
+	box = /obj/item/storage/box/survival/engineer/radio
+	suit_store = /obj/item/gun/ballistic/automatic/sr25
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
+
