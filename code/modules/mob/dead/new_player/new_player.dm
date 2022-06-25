@@ -414,29 +414,7 @@
 
 	var/list/department_categories = list()
 
-	department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
-
-	if(SSmaptype.maptype == "goonlite")
-		department_categories = list("Command", "Service", "Security", "Logistics", "Medical", "Science")
-
-	if(SSmaptype.maptype == "naval")
-		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "NT Marines", "Silicon")
-
-	if(SSmaptype.maptype == "syndicate")
-		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
-
-	if(SSmaptype.maptype == "syndicate-station")
-		department_categories = list("Syndicate Command", "Bioresearch", "Triage", "Logistics", "Military Police", "Auxiliary")
-
-//Add in Operations when it's done
-//		department_categories = list("Syndicate Command", "Operations", "Triage", "Bioresearch", "Logistics", "Military Police", "Auxiliary")
-
-	if(SSmaptype.maptype == "kepler-ice")
-		department_categories = list("Solgov", "NT Marines", "Operations")
-
-	if(SSmaptype.maptype == "blacksite")
-		department_categories = list("NT Marines")
-
+	department_categories = SSmaptype.mapdepartments
 
 
 
