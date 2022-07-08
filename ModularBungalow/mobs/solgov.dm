@@ -285,8 +285,8 @@
 /mob/living/simple_animal/hostile/solgov/ranged/gunner
 	name = "Solgov Riflemen"
 	desc = "Armed with Assault Rifle, Ready to fire upon you"
-	icon_state = "solgovrangedassaultrifle"
-	icon_living = "solgovrangedassaultrifle"
+	icon_state = "solgovrangedgunner"
+	icon_living = "solgovrangedgunner"
 	maxHealth = 135
 	health = 135
 	rapid = 3
