@@ -50,6 +50,7 @@
 /obj/item/ammo_casing/ballistic/a762_39
 	name = "7.62x39mm bullet casing"
 	desc = "A 7.62x39mm bullet casing."
+	icon_state = "762x39-casing"
 	caliber = "7.62x39mm"
 	variance = 2
 	projectile_type = /obj/projectile/bullet/a762_39
@@ -57,6 +58,7 @@
 /obj/item/ammo_casing/ballistic/a545_39
 	name = "5.45x39mm bullet casing"
 	desc = "A 5.45x39mm bullet casing."
+	icon_state = "762-casing"
 	caliber = "5.45x39mm"
 	randomspread = TRUE
 	variance = 2

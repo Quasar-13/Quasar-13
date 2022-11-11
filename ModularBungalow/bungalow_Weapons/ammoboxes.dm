@@ -27,8 +27,33 @@
 	else
 		icon_state = "9x19p-8"
 
-//Lever action
+/obj/item/ammo_box/magazine/m380
+	name = "PPK magazine (.380 ACP)"
+	icon_state = "9x19p-8"
+	ammo_type = /obj/item/ammo_casing/c380
+	caliber = CALIBER_380
+	max_ammo = 7
 
+/obj/item/ammo_box/magazine/m380/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "9x19p-0"
+	else
+		icon_state = "9x19p-8"
+
+/obj/item/ammo_box/magazine/surplusrifle/acp45
+	name = "rifle magazine (.45 ACP)"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/surplusrifle/acp45/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "75-8"
+	else
+		icon_state = "75-0"
+
+//Lever action
 /obj/item/ammo_box/speedloader
 	name = "admin shell box "
 	desc = "If you see this, call a coder!"

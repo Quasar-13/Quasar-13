@@ -373,20 +373,21 @@
 	can_unsuppress = TRUE
 	pin = /obj/item/firing_pin/implant/pindicate
 
-// Old Semi-Auto Rifle //
+// Chad Semi-Auto Rifle //
 
 /obj/item/gun/ballistic/automatic/surplus
 	name = "Surplus Rifle"
-	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon. Uses 10mm ammo and its bulky frame hinders one-handed firing."
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon chambered in 10mm."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	mag_type = /obj/item/ammo_box/magazine/surplusrifle
+	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
 	fire_delay = 10
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
+	bolt_type = BOLT_TYPE_LOCKING
 	mag_display = TRUE
 
 // Laser rifle (rechargeable magazine) //

@@ -66,6 +66,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "surplus2"
 	mag_type = /obj/item/ammo_box/magazine/surplusrifle/acp45
+	bolt_type = BOLT_TYPE_LOCKING
 
 /obj/item/gun/ballistic/automatic/laser/burst
 	name = "L-807 Neo Laser Burst Rifle "
