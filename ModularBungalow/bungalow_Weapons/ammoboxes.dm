@@ -1,4 +1,73 @@
 //MEGAZINES
+/obj/item/ammo_box/magazine/ak47
+	name = "AK-47 Magazine (7.62x39mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak47_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	caliber = "7.62x39mm"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/ak47/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak47_mag"
+	else
+		icon_state = "ak47_mag_full"
+
+/obj/item/ammo_box/magazine/ak47/expanded
+	name = "AK-47 Expanded Magazine (7.62x39mm)"
+	icon_state = "ak47_mag_large"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/ak47/expanded/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak47_mag_large"
+	else
+		icon_state = "ak47_mag_large_full"
+
+/obj/item/ammo_box/magazine/aks74u
+	name = "AKS-74U Magazine (5.45x39mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak74_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a545_39
+	caliber = "5.45x39mm"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/aks74u/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak74_mag"
+	else
+		icon_state = "ak74_mag_full"
+
+/obj/item/ammo_box/magazine/aks74u/expanded
+	name = "AKS-74U Expanded Magazine (5.45x39mm)"
+	icon_state = "ak74_mag_large"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/aks74u/expanded/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak74_mag_large"
+	else
+		icon_state = "ak74_mag_large_full"
+
+/obj/item/ammo_box/magazine/t12
+	name = "T12 Magazine (10x24mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "t12_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a10_24
+	caliber = "10x24mm"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/t12/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "t12_mag_item"
+	else
+		icon_state = "t12_mag_item_full"
+
 /obj/item/ammo_box/magazine/glock
 	name = "pistol magazine (Glock 9mm)"
 	icon_state = "9x19p-8"

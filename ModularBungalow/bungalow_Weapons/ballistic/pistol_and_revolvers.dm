@@ -8,7 +8,8 @@
 	icon_state = "mk23"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/m10mm
-	can_suppress = FALSE
+	can_suppress = TRUE
+	suppressor_x_offset = 7
 
 /obj/item/gun/ballistic/automatic/pistol/sig
 	name = "SIG Sauer P226"
@@ -33,6 +34,18 @@
 	icon_state = "ppk380"
 	mag_type = /obj/item/ammo_box/magazine/m380
 	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/pistol/woodmak
+	name = "wood grip makarov"
+	desc = "A classic soviet piece, wood grip included. Has a threaded barrel for suppressors."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "woodmak"
+
+/obj/item/gun/ballistic/automatic/pistol/aps/wood
+	name = "wood grip stechkin APS"
+	desc = "An ancient 21st century recreation Stechkin APS. It fires quickly, but kicks like a mule. Uses 9mm ammo. Has a threaded barrel for suppressors."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "woodaps"
 
 /obj/item/gun/ballistic/automatic/pistol/glock
 	name = "Glock 17"
