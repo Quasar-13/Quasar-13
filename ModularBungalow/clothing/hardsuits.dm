@@ -64,7 +64,6 @@
 	slowdown = -0.5
 
 
-//ERT hardsuit
 /obj/item/clothing/suit/space/hardsuit/mining/compact
 	name = "compact mining hardsuit"
 	worn_icon = 'ModularBungalow/clothing/worn/coatw.dmi'
@@ -75,13 +74,19 @@
 	armor = list(MELEE = 25, BULLET = 5, LASER = 10, ENERGY = 15, BOMB = 50, BIO = 100, RAD = 40, FIRE = 30, ACID = 75, WOUND = 5)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/mining/compact
 
+/obj/item/clothing/suit/space/hardsuit/mining/compact/Initialize()
+	. = ..()
+
 /obj/item/clothing/head/helmet/space/hardsuit/mining/compact
 	name = "compact mining hardsuit helmet"
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	icon_state = "hardsuit0-mineclassic"
+	hardsuit_type = "mineclassic"
 	armor = list(MELEE = 25, BULLET = 5, LASER = 10, ENERGY = 15, BOMB = 50, BIO = 100, RAD = 40, FIRE = 30, ACID = 75, WOUND = 5)
 
+/obj/item/clothing/head/helmet/space/hardsuit/mining/compact/Initialize()
+	. = ..()
 
 //BNI hardsuit
 /obj/item/clothing/suit/space/hardsuit/ert/bni
