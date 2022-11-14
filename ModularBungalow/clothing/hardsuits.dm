@@ -76,6 +76,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/mining/compact/Initialize()
 	. = ..()
+	UnregisterSignal(src, COMSIG_ARMOR_PLATED, .proc/upgrade_icon)
 
 /obj/item/clothing/head/helmet/space/hardsuit/mining/compact
 	name = "compact mining hardsuit helmet"
@@ -87,6 +88,7 @@
 
 /obj/item/clothing/head/helmet/space/hardsuit/mining/compact/Initialize()
 	. = ..()
+	UnregisterSignal(src, COMSIG_ARMOR_PLATED, .proc/upgrade_icon)
 
 //BNI hardsuit
 /obj/item/clothing/suit/space/hardsuit/ert/bni
@@ -119,6 +121,7 @@
 	icon_state = "hardsuit0-atmospherics"
 	icon = 'ModularBungalow/clothing/icons/helmet.dmi'
 	worn_icon = 'ModularBungalow/clothing/worn/helmetw.dmi'
+	hardsuit_type = "atmospherics"
 
 /obj/item/clothing/suit/space/hardsuit/engine/atmos/old
 	name = "atmospherics hardsuit"
