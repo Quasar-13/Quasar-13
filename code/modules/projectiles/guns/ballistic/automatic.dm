@@ -258,7 +258,7 @@
 
 /obj/item/gun/ballistic/automatic/l6_saw
 	name = "\improper L6 SAW"
-	desc = "A deadly 7.12x82mm light machine gun, designated the 'L6 SAW'. Has 'Scarburough Arms - Mors a Volumine Ignis.' stamped on the receiver."
+	desc = "A deadly 7.12x82mm light machine gun, designated the 'L6 SAW'. Has 'Scarborough Arms - Mors a Volumine Ignis.' stamped on the receiver."
 	icon_state = "l6"
 	inhand_icon_state = "l6"
 	w_class = WEIGHT_CLASS_HUGE
