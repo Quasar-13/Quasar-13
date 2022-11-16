@@ -21,7 +21,7 @@
 /obj/item/gun/energy/laser/fifth/cybersun
 	name = "\improper Cybersun 'Naga' Laser Gun"
 	hitsound = 'sound/weapons/blade1.ogg'
-	desc = "Cybersun's reproduction of Nanotrasen's 5th series laser gun. Given to raiding forces due to it's low upkeep cost. An energy saw has been added to the front for close-quarters slashing combat."
+	desc = "Cybersun's reproduction of NanoTrasen's 5th series laser gun. Given to raiding forces due to it's low upkeep cost. An energy saw has been added to the front for close-quarters slashing combat."
 	icon_state = "naga"
 	force = 20
 	light_system = MOVABLE_LIGHT
