@@ -59,6 +59,39 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
+/obj/item/gun/ballistic/automatic/l6magfed
+	name = "\improper L6-M HAR"
+	desc = "A heavy 5.56 rifle, designated the 'L6-M HAR'. Has 'Scarborough Arms - Opportuna Forore.' stamped on the receiver. Has a threaded barrel for suppressors."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "l6m"
+	inhand_icon_state = "l6m"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = 0
+	mag_type = /obj/item/ammo_box/magazine/m556
+	weapon_weight = WEAPON_HEAVY
+	burst_size = 1
+	can_suppress = TRUE
+	suppressor_x_offset = 9
+	spread = 4
+	pin = /obj/item/firing_pin/implant/pindicate
+	bolt_type = BOLT_TYPE_STANDARD
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	tac_reloads = TRUE
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+
+/obj/item/gun/ballistic/automatic/l6magfed/unrestricted
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/l6magfed/Initialize()
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
 //Surplus Rifle .45 ACP
 /obj/item/gun/ballistic/automatic/surplus/acp45
 	desc = "A mostly obsolete cheap semi-auto rifle chambered in .45 ACP."
