@@ -39,3 +39,29 @@
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+
+/obj/item/gun/ballistic/automatic/wt550/wt572
+	name = "NT-PDW 'WT572'"
+	desc = "A smaller more modern version of the WT550 colloquially known as the 572. Very popular among rich civilians and law enforcement alike."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "wt572"
+	w_class = WEIGHT_CLASS_NORMAL
+	can_suppress = TRUE
+	can_bayonet = FALSE
+	suppressor_x_offset = 4
+
+/obj/item/gun/ballistic/automatic/wt550/wt572/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
+/obj/item/gun/ballistic/automatic/wt550/wt572/military
+	name = "NT-IAW 'Hornet'" //IAW means Infantry Assault Weapon
+	desc = "NT's military version of the 572, named the hornet for it's armor piercing capabilities. Equipped with a red dot sight and foregrip."
+	icon_state = "wt572mili"
+	pin = /obj/item/firing_pin/implant/mindshield
+
+/obj/item/gun/ballistic/automatic/wt550/wt572/spec
+	name = "NT-SPW 'Nightshade'" //SPW means Special Purpose Weapon, as it is a stealthy SMG for special missions
+	desc = "A special version of the 572, only rarely seen used by shady figures in dark blue jackets. Wonder who they are."
+	icon_state = "wt572spec"
+	pin = /obj/item/firing_pin/implant/mindshield

@@ -44,6 +44,7 @@ Contains:
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/deathsquad
 	dog_fashion = /datum/dog_fashion/back/deathsquad
 	cell = /obj/item/stock_parts/cell/bluespace
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT | PLASMAMAN_HELMET_EXEMPT | BLOCKS_SHOVE_KNOCKDOWN
 
 	//NEW SWAT suit
 /obj/item/clothing/suit/space/swat
@@ -55,6 +56,7 @@ Contains:
 	armor = list(MELEE = 40, BULLET = 30, LASER = 30,ENERGY = 40, BOMB = 50, BIO = 90, RAD = 20, FIRE = 100, ACID = 100, WOUND = 15)
 	strip_delay = 120
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT | PLASMAMAN_HELMET_EXEMPT | BLOCKS_SHOVE_KNOCKDOWN
 
 /obj/item/clothing/head/helmet/space/beret
 	name = "BNI officer's beret"

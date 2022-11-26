@@ -443,11 +443,10 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	glasses = /obj/item/clothing/glasses/hud/toggle/thermal
 	back = /obj/item/storage/backpack/security
-	l_pocket = /obj/item/melee/transforming/energy/sword/saber
-	r_pocket = /obj/item/shield/energy
-	suit_store = /obj/item/tank/internals/emergency_oxygen/double
-	belt = /obj/item/gun/ballistic/revolver/mateba
-	l_hand = /obj/item/gun/energy/pulse/loyalpin
+	l_pocket = /obj/item/tank/internals/emergency_oxygen/double
+	r_pocket = /obj/item/flashlight/seclite
+	suit_store = /obj/item/gun/energy/pulse/loyalpin
+	belt = /obj/item/gun/energy/pulse/pistol/loyalpin
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/bnisnr
 	id = /obj/item/card/id/ert/deathsquad
 	ears = /obj/item/radio/headset/headset_cent/alt
@@ -455,10 +454,10 @@
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
 	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
-		/obj/item/ammo_box/a357=1,\
-		/obj/item/storage/firstaid/regular=1,\
+		/obj/item/storage/firstaid/advanced=1,\
 		/obj/item/storage/box/flashbangs=1,\
-		/obj/item/flashlight=1,\
+		/obj/item/melee/transforming/energy/sword/saber=1,\
+		/obj/item/shield/energy=1,\
 		/obj/item/grenade/c4/x4=1)
 
 /datum/outfit/centcom/death_commando/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -481,6 +480,15 @@
 	head = /obj/item/clothing/head/helmet/space/beret
 	uniform = /obj/item/clothing/under/bni/officer
 	accessory = /obj/item/clothing/accessory/medal/rank/nt/cpt
+	belt = /obj/item/gun/ballistic/revolver/mateba
+
+	backpack_contents = list(/obj/item/storage/box/survival/engineer=1,\
+	/obj/item/storage/firstaid/advanced=1,\
+	/obj/item/storage/box/flashbangs=1,\
+	/obj/item/melee/transforming/energy/sword/saber=1,\
+	/obj/item/shield/energy=1,\
+	/obj/item/ammo_box/a357=1,\
+	/obj/item/grenade/c4/x4=1)
 
 /datum/outfit/chrono_agent
 	name = "Timeline Eradication Agent"
