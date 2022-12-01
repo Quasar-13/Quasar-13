@@ -54,7 +54,7 @@
 		icon_state = "ak74_mag_large_full"
 
 /obj/item/ammo_box/magazine/t12
-	name = "T12 Magazine (10x24mm)"
+	name = "T12 Drum (10x24mm)"
 	icon = 'ModularTegustation/Teguicons/magazines.dmi'
 	icon_state = "t12_mag"
 	ammo_type = /obj/item/ammo_casing/ballistic/a10_24
@@ -64,9 +64,33 @@
 /obj/item/ammo_box/magazine/t12/update_icon()
 	..()
 	if (ammo_count() == 0)
-		icon_state = "t12_mag_item"
+		icon_state = "t12_mag"
 	else
-		icon_state = "t12_mag_item_full"
+		icon_state = "t12_mag_full"
+
+/obj/item/ammo_box/magazine/autogun
+	name = "Autogun Magazine (7.62x51)"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	icon_state = "a762magazine"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_51
+	caliber = "7.62x51"
+	max_ammo = 20
+
+/obj/item/ammo_box/magazine/autogun/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "a762magazine_0"
+	else
+		icon_state = "a762magazine_20"
+
+/obj/item/ammo_box/a762_51
+	name = "7.62x51 Box"
+	desc = "A box full of 7.62 SGV (Also known as x51). Standard ammo for all Vrax rifles."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	icon_state = "762x51riflebox"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_51
+	caliber = "7.62x51"
+	max_ammo = 40
 
 /obj/item/ammo_box/magazine/glock
 	name = "pistol magazine (Glock 9mm)"

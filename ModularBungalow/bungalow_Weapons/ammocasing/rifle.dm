@@ -1,6 +1,6 @@
 //BULLETS
-// AK-47 bullet
 
+// AK-47 bullet
 /obj/item/ammo_casing/ballistic/a762_39
 	name = "7.62x39mm bullet casing"
 	desc = "A 7.62x39mm bullet casing."
@@ -25,10 +25,12 @@
 /obj/projectile/bullet/a545_39
 	name = "5.45x39mm bullet"
 	damage = 34
+
 // t-12 bullet
 /obj/item/ammo_casing/ballistic/a10_24
 	name = "10x24mm bullet casing"
 	desc = "A 10x24mm bullet casing."
+	icon_state = "762-casing"
 	caliber = "10x24mm"
 	variance = 2
 	projectile_type = /obj/projectile/bullet/a10_24
@@ -37,6 +39,19 @@
 	name = "10x24mm bullet"
 	damage = 26
 	armour_penetration = 25
+
+// autogun bullet
+/obj/item/ammo_casing/ballistic/a762_51
+	name = "7.62x51mm bullet casing"
+	desc = "A 7.62x51mm bullet casing."
+	icon_state = "762x39-casing"
+	caliber = "7.62x51"
+	variance = 5
+	projectile_type = /obj/projectile/bullet/a762_51
+
+/obj/projectile/bullet/a762_51
+	name = "7.62x51mm bullet"
+	damage = 26
 
 
 //CUSTOM KEPLER STUFF BELOW
