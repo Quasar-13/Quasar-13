@@ -248,6 +248,13 @@
 	max_ammo = 12
 	icon_state = "44tube-12"
 
+/obj/item/ammo_box/speedloader/boxed_44
+	name = ".44 magnum box"
+	desc = "A box full of .44 magnum catridges ready to be used!"
+	max_ammo = 30
+	icon_state = "44box"
+	ammo_type = /obj/item/ammo_casing/a44
+
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun
 	name = "admin shell box "
