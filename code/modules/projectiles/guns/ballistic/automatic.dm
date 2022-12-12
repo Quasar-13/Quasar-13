@@ -96,8 +96,8 @@
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "security PDW"
+	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Personal Defense Weapon."
 	icon_state = "wt550"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "arg"
@@ -119,7 +119,7 @@
 
 /obj/item/gun/ballistic/automatic/plastikov
 	name = "\improper PP-95 SMG"
-	desc = "An ancient 9x19mm submachine gun pattern updated and simplified to lower costs, though perhaps simplified too much."
+	desc = "An ancient Space Russian 9x18mm submachine gun pattern updated and simplified to lower costs, though perhaps simplified too much."
 	icon_state = "plastikov"
 	inhand_icon_state = "plastikov"
 	mag_type = /obj/item/ammo_box/magazine/plastikov9mm
@@ -244,7 +244,7 @@
 
 /obj/item/gun/ballistic/automatic/ar
 	name = "\improper NT-ARG 'Boarder'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces."
+	desc = "A robust assault rifle used by NanoTrasen fighting forces."
 	icon_state = "arg"
 	inhand_icon_state = "arg"
 	slot_flags = 0
@@ -258,7 +258,7 @@
 
 /obj/item/gun/ballistic/automatic/l6_saw
 	name = "\improper L6 SAW"
-	desc = "A heavily modified 7.12x82mm light machine gun, designated 'L6 SAW'. Has 'Aussec Armoury - 2531' engraved on the receiver below the designation."
+	desc = "A deadly 7.12x82mm light machine gun, designated the 'L6 SAW'. Has 'Scarborough Arms - Mors a Volumine Ignis.' stamped on the receiver."
 	icon_state = "l6"
 	inhand_icon_state = "l6"
 	w_class = WEIGHT_CLASS_HUGE
@@ -373,20 +373,21 @@
 	can_unsuppress = TRUE
 	pin = /obj/item/firing_pin/implant/pindicate
 
-// Old Semi-Auto Rifle //
+// Chad Semi-Auto Rifle //
 
 /obj/item/gun/ballistic/automatic/surplus
-	name = "Surplus Rifle"
-	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon. Uses 10mm ammo and its bulky frame hinders one-handed firing."
+	name = "K&H Surplus Rifle"
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon chambered in 10mm."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	mag_type = /obj/item/ammo_box/magazine/surplusrifle
+	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
 	fire_delay = 10
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
+	bolt_type = BOLT_TYPE_LOCKING
 	mag_display = TRUE
 
 // Laser rifle (rechargeable magazine) //

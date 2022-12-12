@@ -215,7 +215,7 @@
 //Deathsquad
 /obj/item/choice_beacon/deathsquad
 	name = "Deathsquad beacon"
-	desc = "A beacon the ert officers use to choose their weapons."
+	desc = "A beacon the deathsquad troopers use to choose their weapons."
 
 /obj/item/choice_beacon/deathsquad/generate_display_names()
 	var/static/list/deathsquad_item_list

@@ -1,4 +1,97 @@
 //MEGAZINES
+/obj/item/ammo_box/magazine/ak47
+	name = "AK-47 Magazine (7.62x39mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak47_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
+	caliber = "7.62x39mm"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/ak47/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak47_mag"
+	else
+		icon_state = "ak47_mag_full"
+
+/obj/item/ammo_box/magazine/ak47/expanded
+	name = "AK-47 Expanded Magazine (7.62x39mm)"
+	icon_state = "ak47_mag_large"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/ak47/expanded/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak47_mag_large"
+	else
+		icon_state = "ak47_mag_large_full"
+
+/obj/item/ammo_box/magazine/aks74u
+	name = "AKS-74U Magazine (5.45x39mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "ak74_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a545_39
+	caliber = "5.45x39mm"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/aks74u/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak74_mag"
+	else
+		icon_state = "ak74_mag_full"
+
+/obj/item/ammo_box/magazine/aks74u/expanded
+	name = "AKS-74U Expanded Magazine (5.45x39mm)"
+	icon_state = "ak74_mag_large"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/aks74u/expanded/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "ak74_mag_large"
+	else
+		icon_state = "ak74_mag_large_full"
+
+/obj/item/ammo_box/magazine/t12
+	name = "T12 Drum (10x24mm)"
+	icon = 'ModularTegustation/Teguicons/magazines.dmi'
+	icon_state = "t12_mag"
+	ammo_type = /obj/item/ammo_casing/ballistic/a10_24
+	caliber = "10x24mm"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/t12/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "t12_mag"
+	else
+		icon_state = "t12_mag_full"
+
+/obj/item/ammo_box/magazine/autogun
+	name = "Autogun Magazine (7.62x51)"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	icon_state = "a762magazine"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_51
+	caliber = "7.62x51"
+	max_ammo = 20
+
+/obj/item/ammo_box/magazine/autogun/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "a762magazine_0"
+	else
+		icon_state = "a762magazine_20"
+
+/obj/item/ammo_box/a762_51
+	name = "7.62x51 Box"
+	desc = "A box full of 7.62 SGV (Also known as x51). Standard ammo for all Vrax rifles."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	icon_state = "762x51riflebox"
+	ammo_type = /obj/item/ammo_casing/ballistic/a762_51
+	caliber = "7.62x51"
+	max_ammo = 40
+
 /obj/item/ammo_box/magazine/glock
 	name = "pistol magazine (Glock 9mm)"
 	icon_state = "9x19p-8"
@@ -27,8 +120,33 @@
 	else
 		icon_state = "9x19p-8"
 
-//Lever action
+/obj/item/ammo_box/magazine/m380
+	name = "PPK magazine (.380 ACP)"
+	icon_state = "9x19p-8"
+	ammo_type = /obj/item/ammo_casing/c380
+	caliber = CALIBER_380
+	max_ammo = 7
 
+/obj/item/ammo_box/magazine/m380/update_icon()
+	..()
+	if (ammo_count() == 0)
+		icon_state = "9x19p-0"
+	else
+		icon_state = "9x19p-8"
+
+/obj/item/ammo_box/magazine/surplusrifle/acp45
+	name = "rifle magazine (.45 ACP)"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/surplusrifle/acp45/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "75-8"
+	else
+		icon_state = "75-0"
+
+//Lever action
 /obj/item/ammo_box/speedloader
 	name = "admin shell box "
 	desc = "If you see this, call a coder!"
