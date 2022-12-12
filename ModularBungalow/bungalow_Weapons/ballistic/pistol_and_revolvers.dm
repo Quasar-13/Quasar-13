@@ -150,11 +150,11 @@
 	max_ammo = 12
 
 /obj/item/gun/ballistic/automatic/pistol/m45a1
-	name = "P23 .45"
-	desc = "A pistol used by special kepler operation."
+	name = "KT-P23 'Dusker'"
+	desc = "A heavy duty pistol chambered in .45 ACP, it's got a rather decieving appearance as it's actually quite powerful, the gun itself is infact an upgraded M1911."
 	icon_state = "m45a1"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/m45
+	mag_type = /obj/item/ammo_box/magazine/m45/big
 
 ////////////////////
 //////REVOLVERS////
@@ -214,7 +214,7 @@
 
 //LONG 45-70
 /obj/item/gun/ballistic/shotgun/tracker
-	name = "KT-BKR31 'Tracker'"
+	name = "SG-R29 'Tracker'"
 	desc = "A horrifyingly powerful single action revolver made specifically for the anti-riot Rangers, fire extremely high powered .45-70 normally meant for fighting heavily armored wildlife in the region."
 	icon_state = "tracker"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
