@@ -207,7 +207,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and fielded by rangers"
+	desc = "A general purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and used by rangers unit
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
@@ -220,6 +220,12 @@
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+
+/obj/item/gun/ballistic/automatic/ar/hk21/m38
+	name = "\improper KT-OS45 'Pertinacious'"
+	desc = "Developed extremely late into the war, the KT-OS45 is a heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete"
+	icon_state = "M38"
+	inhand_icon_state = "M38"
 
 //DO NOT ADMIN ABUSE THIS IN, I WILL ACTUALLY GUT YOU.
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf

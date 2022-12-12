@@ -4,7 +4,7 @@
 	desc = "A lever-action rifle that fires .357. Has to be pumped with every shot."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/leveraction.dmi'
 	icon_state = "leveraction"
-	inhand_icon_state = "musket"
+	inhand_icon_state = "leveraction"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever
 	w_class = WEIGHT_CLASS_BULKY
 	can_be_sawn_off = FALSE
@@ -50,7 +50,7 @@
 	name = "K&H Justice"
 	desc = "A lever-action rifle, fires powerful .44 magnum"
 	icon_state = "leveraction_magnum"
-	inhand_icon_state = "musket"
+	inhand_icon_state = "leveraction_magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever/magnum
 
 /obj/item/ammo_box/magazine/internal/shot/lever/magnum
@@ -64,6 +64,7 @@
 	name = "K&H Avalon"
 	desc = "A rediculously powerful lever-action rifle, fires powerful .45-70 Government. Utilised by the Ranger when in absent of heavy weaponry"
 	icon_state = "brushgun"
+	inhand_icon_state = "brushgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever/brushgun
 
 /obj/item/ammo_box/magazine/internal/shot/lever/brushgun
