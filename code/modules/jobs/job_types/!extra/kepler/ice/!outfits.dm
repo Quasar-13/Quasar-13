@@ -146,7 +146,7 @@
 	l_pocket = /obj/item/storage/pouch/marsoc_tools
 	r_pocket = /obj/item/storage/pouch/marsoc_ifak
 	back = /obj/item/storage/backpack/marsoc
-	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/mm712x82/m38=2, /obj/item/ammo_box/shotgun/frag=7)
+	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1, /obj/item/storage/box/grenadier_grenades/lethal=1,/obj/item/gun/grenadelauncher/marsoc=1, /obj/item/ammo_box/magazine/mm712x82/m38=2, /obj/item/ammo_box/shotgun/frag=4)
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	glasses = /obj/item/clothing/glasses/meson/night
 	box = /obj/item/storage/box/survival/engineer/radio
