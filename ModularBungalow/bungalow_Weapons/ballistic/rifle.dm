@@ -157,8 +157,8 @@
 //Kepler guns
 //Sprite by kirie and akira!
 /obj/item/gun/ballistic/automatic/m90/xm29
-	name = "SG-XM29 'Determinator'"
-	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
+	name = "KT-XM29 'Determinator'"
+	desc = "A grenade launcher with an assault rifle attached to it. Developed alongside the XM25, this weapon was a proposed alternative assault rifle for the specialised unit, however it was never distributed among the armed forces."
 	icon_state = "xm29"
 	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -171,6 +171,7 @@
 	zoom_amt = 8
 	zoom_out_amt = 4
 	fire_delay = 0.10
+
 /obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
 	. = ..()
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
@@ -188,8 +189,8 @@
 
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
-	name = "SG-P25 'Crow'"
-	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
+	name = "KT-XM25 'Crow'"
+	desc = "A gun developed by Kepler Technology. The XM25 is an experimental airburst grenade launcher designed to destroy barricades at long ranges and to weed out targets in cover. It was never officially adopted by Sol Government, but some functional prototypes were used during the occult war. This one has been kept in a good condition."
 	icon_state = "xm25"
 	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -206,7 +207,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	desc = "A general purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and fielded by rangers"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
@@ -221,8 +222,8 @@
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
-	name = "\improper SG-SR45 .50 'Wulfe'"
-	desc = "A heavy duty anti material sporting rifle typically meant for rhino or even wild sharks. it's fearsome power unmatched by anything used anywhere"
+	name = "\improper KT-XM38 .50 'Wulfe'"
+	desc = "A modified FN-FAL made to chamber the .50 Beowulf Cartridges, although intended to be pushed into service by 2138 at the latest, It was never officially adopted by the Solgov Service. Nevertheless, it saw action during the first occult war"
 	icon_state = "beowulf"
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/beowulf
 
@@ -232,8 +233,8 @@
 
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
-	name = "\improper K-GPM21S 'Peacemaker'"
-	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
+	name = "\improper KT-GPM21S 'Peacemaker'"
+	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, developed during the occult war. Foxtrot-1, finish the job!"
 	icon_state = "hk21c"
 	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -241,14 +242,14 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.11 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "Type 45 Sniper Rifle"
 	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_display_ammo = 1
 	spawnwithmagazine = 0
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
