@@ -120,7 +120,7 @@
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
 	lootcount = 2
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 15,
-				/obj/item/gun/ballistic/revolver/sequoia = 10,
+				/obj/item/gun/ballistic/revolver/judge = 10,
 				/obj/item/gun/ballistic/revolver/sw500 = 10,
 				/obj/item/gun/ballistic/shotgun/tracker = 15,
 				/obj/item/gun/ballistic/revolver/mateba = 10,
