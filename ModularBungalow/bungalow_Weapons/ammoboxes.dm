@@ -221,16 +221,32 @@
 /obj/item/ammo_box/speedloader/a4570
 	name = ".45-70 Govt speedloader"
 	desc = "A speedloader full of .45-70 Govt catridges ready to be used!"
-	max_ammo = 7
-	icon_state = "4570-7"
+	max_ammo = 6
+	icon_state = "4570-6"
 	ammo_type = /obj/item/ammo_casing/a4570
+
+/obj/item/ammo_box/speedloader/a4570/tube
+	max_ammo = 10
+	icon_state = "4570tube-10"
+
+/obj/item/ammo_box/ba4570
+	name = ".45-70 Govt box speedloader"
+	desc = "A box full of .45-70 Govt catridges ready to be used!"
+	max_ammo = 30
+	icon_state = "4570box-30"
+	ammo_type = /obj/item/ammo_casing/a4570
+
 
 /obj/item/ammo_box/speedloader/a44
 	name = ".44 magnum speedloader"
 	desc = "A speedloader full of .44 magnum catridges ready to be used!"
-	max_ammo = 7
-	icon_state = "4570-7"
+	max_ammo = 6
+	icon_state = "44-6"
 	ammo_type = /obj/item/ammo_casing/a44
+
+/obj/item/ammo_box/speedloader/a44/tube
+	max_ammo = 12
+	icon_state = "44tube-12"
 
 //SHOTGUN AMMO
 /obj/item/ammo_box/shotgun

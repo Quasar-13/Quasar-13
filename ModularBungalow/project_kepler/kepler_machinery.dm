@@ -86,7 +86,7 @@
 	return ..()
 
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherCommanderKepler(obj/item/kepler_commander_voucher/voucher, mob/redeemer)
-	var/items = list("Classic Kit", "Ranger Kit", "Assault")
+	var/items = list("Classic Kit", "Ranger Kit", "Assault Kit")
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Command Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return

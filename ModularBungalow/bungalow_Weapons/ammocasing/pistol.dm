@@ -31,9 +31,9 @@
 /obj/projectile/bullet/a4570
 	name = "45-70 Govt bullet"
 	damage = 55
-	armour_penetration = 35
-	wound_bonus = 10
-	stamina = 5
+	armour_penetration = 50
+	wound_bonus = 35
+	stamina = 25
 
 /obj/item/ammo_casing/a44
 	name = "44 magnum bullet"
@@ -43,8 +43,8 @@
 
 /obj/projectile/bullet/a44
 	name = "44 Magnum bullet"
-	damage = 45
-	armour_penetration = 15
+	damage = 34
+	armour_penetration = 50
 	wound_bonus = 25
 
 /obj/item/ammo_box/magazine/m45/big

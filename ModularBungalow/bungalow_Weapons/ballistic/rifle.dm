@@ -245,8 +245,8 @@
 	AddComponent(/datum/component/automatic_fire, 0.11 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
-	name = "Type 45 Sniper Rifle"
-	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	name = "KT-SR45 'Divine Wind"
+	desc = "An extremely rare sniper rifle only issued in limited numbers to MARSOC operatives, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
@@ -273,8 +273,8 @@
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
 
 /obj/item/gun/ballistic/automatic/sr25
-	name = "SR25 Sniper Rifle"
-	desc = "The SR25 is a rifle used by the early kepler expedition force"
+	name = "SG-SR25 'Knight'"
+	desc = "The SR25 is a rifle used by the early Sol Government's expedition force, chambered in the 7.62 NATO ammunition. It's well-liked by marksman who were given it, although early model had issues where the gun would occasionally jam up if fired too rapidly. This one has rectified that issues and remains in service."
 	icon_state = "sr25"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -287,6 +287,7 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
+	burst_size = 1
 
 /obj/item/gun/ballistic/automatic/sr25/Initialize()
 	. = ..()

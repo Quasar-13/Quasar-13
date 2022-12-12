@@ -111,9 +111,9 @@
 
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
-	name = "Akira's Special"
-	desc = "An ornate special revolver made by the kitsune kepler factory. it has a built in barrel charger system which decrease firerate but immensely increase damage output, made chambered in .556, especially strange that they were also only awarded to very few people that proven exceptional to the expedition efforts by the kitsune personally, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. faint smells of cinnamon and sake and an engraving of a nine tailed fox."
-	icon_state = "akira"
+	name = "Vixen 31 'Red Right Hand'"
+	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in 5.56, It's especially strange how this gun came into Sol Government's Possession as they were only awarded to very few people that proven exceptional to the expedition efforts by the chief ranger, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. Faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
@@ -128,12 +128,12 @@
 
 /obj/item/gun/ballistic/revolver/akira/Initialize()
 	. = ..()
-	fire_delay = 6
+	fire_delay = 3.5
 //Yet another gun our kitsune would've used
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
-	name = ".357 Avtomag"
-	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. Do you feel lucky? NO I DON'T, NOT ANYMORE."
+	name = "KT-M35 Avtomag"
+	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
@@ -214,8 +214,8 @@
 
 //LONG 45-70
 /obj/item/gun/ballistic/shotgun/tracker
-	name = "Kepler .45-70 Tracker"
-	desc = "horrifyingly powerful single action revolver made specifically for the anti-riot ranger squad, fire extremely high powered .45-70 normally meant for fighting bears."
+	name = "KT-BKR31 'Tracker'"
+	desc = "A horrifyingly powerful single action revolver made specifically for the anti-riot Rangers, fire extremely high powered .45-70 normally meant for fighting heavily armored wildlife in the region."
 	icon_state = "tracker"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
