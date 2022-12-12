@@ -245,33 +245,45 @@
 	AddComponent(/datum/component/automatic_fire, 0.11 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
-	name = "KT-SR45 'Divine Wind"
+	name = "KT-LR45 'Divine Wind"
 	desc = "An extremely rare sniper rifle only issued in limited numbers to MARSOC operatives, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_display_ammo = 1
-	spawnwithmagazine = 0
+	spawnwithmagazine = 1
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	projectile_damage_multiplier = 1.8
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
-	name = "Type 40 Sniper Rifle"
-	desc = "Typically used by Ranger marksman of the past."
+	name = "Prototype Number 40 Long Rifle"
+	desc = "A Sol Government Standard Issues Sniper Rifle Number 40, despite it's name it was actually fielded in 2100s and was one of the first Kepler Technoloy gun."
 	icon_state = "rifle40"
 	inhand_icon_state = "rifle40"
-	mag_display_ammo = 1
-	spawnwithmagazine = 1
+	projectile_damage_multiplier = 1.2
 
 //Used for both of these!
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	name = "long rifle magazine (7.12x82)"
+	desc = "magazine for the long rifle"
 	max_ammo = 12
-	caliber = CALIBER_50
+	caliber = CALIBER_712X82MM
+	ammo_type = /obj/item/ammo_casing/mm712x82
 
-/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator
-	name = "sniper rounds (penetrator)"
-	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
-	ammo_type = /obj/item/ammo_casing/p50/penetrator
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/ap
+	name = "armor piercing long rifle magazine (7.12x82)"
+	desc = "Powerful round capable of piercing armor"
+	ammo_type = /obj/item/ammo_casing/mm712x82/ap
 
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/hp
+	name = "hollow point long rifle magazine (7.12x82)"
+	desc = "Powerful round capable of shredding organic lifeform"
+	ammo_type = /obj/item/ammo_casing/mm712x82/hollow
+
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/incen
+	name = "incendiary long rifle magazine (7.12x82)"
+	desc = "Incendiary munition, Let em burn"
+	ammo_type = /obj/item/ammo_casing/mm712x82/incen
 /obj/item/gun/ballistic/automatic/sr25
 	name = "SG-SR25 'Knight'"
 	desc = "The SR25 is a rifle used by the early Sol Government's expedition force, chambered in the 7.62 NATO ammunition. It's well-liked by marksman who were given it, although early model had issues where the gun would occasionally jam up if fired too rapidly. This one has rectified that issues and remains in service."

@@ -117,7 +117,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
-	projectile_damage_multiplier = 2
+	projectile_damage_multiplier = 1.5
 	recoil = 4
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 
