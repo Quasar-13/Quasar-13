@@ -207,7 +207,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and used by rangers unit
+	desc = "General purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and used by rangers unit
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
@@ -223,9 +223,11 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
-	desc = "Developed extremely late into the war, the KT-OS45 is a heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete"
+	desc = "Developed extremely late into the war, the KT-OS45 is a heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"
 	icon_state = "M38"
 	inhand_icon_state = "M38"
+	spread = 7
+	mag_type = 	mag_type = /obj/item/ammo_box/magazine/mm712x82/m38
 
 //DO NOT ADMIN ABUSE THIS IN, I WILL ACTUALLY GUT YOU.
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
@@ -246,12 +248,12 @@
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	name = "\improper KT-GPM21S 'Peacemaker'"
-	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, developed during the occult war. <b>Foxtrot-1, finish the job!</b>"
+	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, however, that make it inaccurate. Developed during the occult war, <b>Foxtrot-1, finish the job!</b>"
 	icon_state = "hk21c"
 	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
-
+	spread = 5
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.11 SECONDS)

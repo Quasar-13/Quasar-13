@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/automatic/uzi
-	name = "\improper Type U3 Uzi"
+	name = "SG-UZ3 Uzi"
 	desc = "A lightweight, fully automatic submachine gun, for when you really want someone dead. Uses 9mm rounds."
-	icon_state = "uzi"
+	icon_state = "keplerminiuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	bolt_type = BOLT_TYPE_OPEN
 	burst_size = 1
@@ -30,7 +30,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/kepler
-	name = "\improper Type P23 Submachinegun"
+	name = "KT-UZ23 Submachinegun"
 	desc = "A lightweight, fully automatic submachinegun used by the frontier police forces and certain special units. Uses 9mm rounds."
 	icon_state = "cbj"
 	w_class = WEIGHT_CLASS_NORMAL

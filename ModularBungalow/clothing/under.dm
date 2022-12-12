@@ -41,6 +41,8 @@
 	name = "utility snow uniform"
 	desc = "A snow camouflage uniform, what more could you want to know"
 	icon_state = "solgovmerc"
+	armor = list(MELEE = 5, BULLET = 5, LASER = 5,ENERGY = 5, BOMB = 5, BIO = 5, RAD = 5, FIRE = 100, ACID = 100)
+	resistance_flags = FIRE_PROOF
 
 //Samurai outfit. I think it looks really cool, maybe it will?
 /obj/item/clothing/under/syndicate/samurai

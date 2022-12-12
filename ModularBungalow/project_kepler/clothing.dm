@@ -66,15 +66,15 @@
 //MARSOC VARIANT
 
 /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
-	name = "solgov heavy combat armor"
-	desc = "A heavily modified Mk5 combat armour. advanced servo enhance the user movement speed. while offering great protection"
+	name = "SOC Combat Armor"
+	desc = "A heavily modified Mk5 Solgov combat armour. advanced servo enhance the user movement speed. while offering great protection"
 	icon_state = "soldier_marsoc"
 	slowdown = -0.25
 	armor = list(MELEE = 65, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 65, BIO = 100, RAD = 100, FIRE = 100, ACID = 100, WOUND = 90)
 	strip_delay = 140
 
 /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
-	name = "solgov heavy helmet"
+	name = "SOC Helmet"
 	desc = "A heavily modified Mk5 Solgov Military Helmet. Offers better protection."
 	icon_state = "soldier_marsoc"
 	slowdown = -0.25
@@ -82,3 +82,11 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEHAIR
 	strip_delay = 140
+
+/obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc/leader
+	name = "SOC Leader Armor"
+	icon_state = "soldier_marsoc_leader"
+
+/obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc/leader
+	name = "SOC Leader Helmet"
+	icon_state = "soldier_marsoc_leader"

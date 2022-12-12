@@ -491,3 +491,18 @@
 	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
 	caliber = "7.62x39mm"
 
+/obj/item/ammo_box/magazine/mm712x82/m38
+	name = "Ammo Belt (7.12x82)"
+	desc = "A belt for a minigun."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	max_ammo = 300
+	icon_state = "M38belt"
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/magazine/mm712x82/boxreload
+	name = "Ammo Box (7.12x82)"
+	desc = "Jesus christ how did you find this?"
+	max_ammo = 150
+	w_class = WEIGHT_CLASS_BULKY
+	icon_state = "M38Box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
