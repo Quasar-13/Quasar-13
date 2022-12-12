@@ -227,7 +227,7 @@
 	icon_state = "M38"
 	inhand_icon_state = "M38"
 	spread = 7
-	mag_type = 	mag_type = /obj/item/ammo_box/magazine/mm712x82/m38
+	mag_type = /obj/item/ammo_box/magazine/mm712x82/m38
 
 //DO NOT ADMIN ABUSE THIS IN, I WILL ACTUALLY GUT YOU.
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
