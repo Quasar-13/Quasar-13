@@ -240,7 +240,7 @@
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	name = "\improper KT-GPM21S 'Peacemaker'"
-	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, developed during the occult war. Foxtrot-1, finish the job!"
+	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, developed during the occult war. <b>Foxtrot-1, finish the job!</b>"
 	icon_state = "hk21c"
 	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -252,7 +252,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "KT-LR45 'Divine Wind"
-	desc = "An extremely rare sniper rifle only issued in limited numbers to MARSOC operatives, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
+	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
@@ -293,7 +293,7 @@
 	ammo_type = /obj/item/ammo_casing/mm712x82/incen
 /obj/item/gun/ballistic/automatic/sr25
 	name = "SG-SR25 'Knight'"
-	desc = "The SR25 is a rifle used by the early Sol Government's expedition force, chambered in the 7.62 NATO ammunition. It's well-liked by marksman who were given it, although early model had issues where the gun would occasionally jam up if fired too rapidly. This one has rectified that issues and remains in service."
+	desc = "The SR25 is a rifle used by the early Sol Government's expedition force, chambered in the 7.62 NATO ammunition. It's well-liked by marksman who were given it, although early model had issues where the gun would occasionally jam up if fired too rapidly. This one has rectified that issues and remains in service. Additionally it has been often sighted in the hand of US MARSOC"
 	icon_state = "sr25"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
