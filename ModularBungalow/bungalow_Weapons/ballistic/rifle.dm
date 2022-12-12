@@ -221,6 +221,7 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
 
+//DO NOT ADMIN ABUSE THIS IN, I WILL ACTUALLY GUT YOU.
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
 	name = "\improper KT-XM38 .50 'Wulfe'"
 	desc = "A modified FN-FAL made to chamber the .50 Beowulf Cartridges, although intended to be pushed into service by 2138 at the latest, It was never officially adopted by the Solgov Service. Nevertheless, it saw action during the first occult war"
@@ -228,8 +229,13 @@
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/beowulf
 
 /obj/item/ammo_box/magazine/sniper_rounds/beowulf
-	max_ammo = 20
+	name = "beowulf magazine (.50)"
+	max_ammo = 10
 	caliber = CALIBER_50
+
+/obj/item/gun/ballistic/automatic/ar/hk21/beowulfInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.24 SECONDS)
 
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
