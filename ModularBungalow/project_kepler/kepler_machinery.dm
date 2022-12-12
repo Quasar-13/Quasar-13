@@ -105,6 +105,16 @@
 	do_sparks(5, TRUE, src)
 	if(prob(50 / severity) && severity < 3)
 		qdel(src)
+
+//VOUCHERS AND STUFF
+
+/obj/item/kepler_civilian_voucher
+	name = "kepler civilian voucher"
+	desc = "A token to redeem a piece of equipment. Use it on a kepler equipment vendor.this one redeem civilian equipment"
+	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
+	icon_state = "kepler_voucherciv"
+	w_class = WEIGHT_CLASS_TINY
+
 /obj/item/kepler_voucher
 	name = "kepler voucher"
 	desc = "A token to redeem a piece of equipment. Use it on a kepler equipment vendor."
@@ -125,3 +135,7 @@
 	icon = 'ModularBungalow/project_kepler/kepler_machinery.dmi'
 	icon_state = "kepler_voucherc"
 	w_class = WEIGHT_CLASS_TINY
+
+//AMMO BENCH
+
+/obj/machinery/autolathe/armylathe

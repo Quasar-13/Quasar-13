@@ -233,7 +233,7 @@
 	max_ammo = 10
 	caliber = CALIBER_50
 
-/obj/item/gun/ballistic/automatic/ar/hk21/beowulfInitialize()
+/obj/item/gun/ballistic/automatic/ar/hk21/beowulf/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.24 SECONDS)
 

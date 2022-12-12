@@ -49,7 +49,7 @@
 				/obj/item/ammo_box/a357/match = 20,
 				/obj/item/ammo_box/speedloader/a357/match = 15,
 				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle = 5,
-				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator = 1,
+				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/ap = 1,
 				/obj/item/ammo_box/magazine/m12g = 20,
 				/obj/item/ammo_casing/caseless/rocket/weak = 10,
 				/obj/item/ammo_box/magazine/m12g/meteor = 10,
