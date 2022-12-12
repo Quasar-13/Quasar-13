@@ -259,7 +259,7 @@
 	mag_display_ammo = 1
 	spawnwithmagazine = 1
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
-	projectile_damage_multiplier = 1.8
+	projectile_damage_multiplier = 1.6
 
 //Believe it or not this was actually the first gun I made when working on the server
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
@@ -267,7 +267,7 @@
 	desc = "A Sol Government Standard Issues Sniper Rifle Number 40, despite it's name it was actually fielded in 2100s and was one of the first Kepler Technoloy gun ever produced, although it failed to beat other guns in the competition, it was affordable and was utilised by the New Moscow Police Department."
 	icon_state = "rifle40"
 	inhand_icon_state = "rifle40"
-	projectile_damage_multiplier = 1.2
+	projectile_damage_multiplier = 1.4
 
 //Used for both of these!
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
