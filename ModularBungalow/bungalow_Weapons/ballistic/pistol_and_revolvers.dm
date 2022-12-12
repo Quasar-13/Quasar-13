@@ -191,10 +191,19 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 
+
+//SW Model 29
+
+/obj/item/gun/ballistic/revolver/modeltwentynine
+	name = "S&W Model 29"
+	desc = "An interesting rare revolver chambered in .44 magnum, most likely brought in by Sol Government Rangers during the frontier era, or possibly brought in by you. Hope you got an idea on how to get more ammo in this place"
+	icon_state = "magnum"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	ammo_type = /obj/item/ammo_casing/a44
 	caliber = CALIBER_44
-	max_ammo = 7
+	max_ammo = 6
 
 //Hakita
 /obj/item/gun/ballistic/revolver/hakita
