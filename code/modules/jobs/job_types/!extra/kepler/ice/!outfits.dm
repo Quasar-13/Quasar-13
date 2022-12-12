@@ -98,7 +98,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
 	uniform = /obj/item/clothing/under/solgov/snow
 	mask = /obj/item/clothing/mask/nobreath/marsoc
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/combat/swat
 	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	l_pocket = /obj/item/storage/pouch/marsoc_tools
@@ -118,7 +118,7 @@
 	belt = /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc
 	suit = /obj/item/clothing/suit/armor/vest/solgov/snow/heavy/marsoc
 	uniform = /obj/item/clothing/under/solgov/snow
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/combat/swat
 	mask = /obj/item/clothing/mask/nobreath/marsoc
 	head = /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
 	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21/beowulf

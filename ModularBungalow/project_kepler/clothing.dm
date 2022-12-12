@@ -34,6 +34,7 @@
 	icon_state = "soldier_snow"
 	slowdown = 0.16
 	armor = list(MELEE = 50, BULLET = 60, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
+	strip_delay = 40
 
 //Solgov Helmets
 /obj/item/clothing/head/helmet/solgov
@@ -60,6 +61,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	flash_protect = FLASH_PROTECTION_WELDER
+	strip_delay = 40
 
 //MARSOC VARIANT
 
@@ -69,6 +71,7 @@
 	icon_state = "soldier_marsoc"
 	slowdown = -0.25
 	armor = list(MELEE = 65, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 65, BIO = 100, RAD = 100, FIRE = 100, ACID = 100, WOUND = 90)
+	strip_delay = 140
 
 /obj/item/clothing/head/helmet/solgov/snow/heavy/marsoc
 	name = "solgov heavy helmet"
@@ -78,3 +81,4 @@
 	armor = list(MELEE = 60, BULLET = 65, LASER = 60, ENERGY = 65, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100, WOUND = 90)
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEHAIR
+	strip_delay = 140
