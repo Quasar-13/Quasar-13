@@ -170,7 +170,7 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
-	fire_delay = 0.15
+	fire_delay = 0.28
 
 /obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
 	. = ..()
