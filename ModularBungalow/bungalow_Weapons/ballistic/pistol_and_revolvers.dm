@@ -112,7 +112,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in 5.56, It's especially strange how this gun came into Sol Government's Possession as they were only awarded to very few people that proven exceptional to the expedition efforts by the chief ranger, some of these ornate revolvers survived and were used by the previous site administrator before he passed it along, the owner of this gun took care of it well. Faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .556 and should be compatible with most ammo made around that. This gun is a complete mystery to the Sol Government including how it came into the possession of anyone at all, given no blueprint of the gun exist on record, and yet despite this fact there have been many rangers historically using it, although originally intended to be fielded by the New Moscow Police Department in 2131, however, as of 2143, most of the gun has been destroyed or missing.It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -133,7 +133,7 @@
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = "KT-M35 Avtomag"
-	desc = "A special pistol made to fire .357 AMP, Although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
+	desc = "A special pistol made to fire .357 AMP, although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
@@ -162,8 +162,8 @@
 
 //Taurus Judge
 /obj/item/gun/ballistic/revolver/judge
-	name = "P14 'Judge'"
-	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom. it hold six shotgun shells, should be more than enough to kill anything that move."
+	name = "SG-S14 'Judge'"
+	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom outside of it. It hold six shotgun shells, should be more than enough to kill anything that move."
 	icon_state = "judge"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge

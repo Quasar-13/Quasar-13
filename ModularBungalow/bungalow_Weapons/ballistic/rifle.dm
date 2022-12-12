@@ -170,7 +170,7 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
-	fire_delay = 0.10
+	fire_delay = 0.15
 
 /obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
 	. = ..()
@@ -185,7 +185,7 @@
 	name = "grenade launcher internal magazine"
 	ammo_type = /obj/item/ammo_casing/a40mm
 	caliber = CALIBER_40MM
-	max_ammo = 5
+	max_ammo = 1
 
 //being a rare weapon with decent firerate
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
@@ -255,9 +255,10 @@
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
 	projectile_damage_multiplier = 1.8
 
+//Believe it or not this was actually the first gun I made when working on the server
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
 	name = "Prototype Number 40 Long Rifle"
-	desc = "A Sol Government Standard Issues Sniper Rifle Number 40, despite it's name it was actually fielded in 2100s and was one of the first Kepler Technoloy gun."
+	desc = "A Sol Government Standard Issues Sniper Rifle Number 40, despite it's name it was actually fielded in 2100s and was one of the first Kepler Technoloy gun ever produced, although it failed to beat other guns in the competition, it was affordable and was utilised by the New Moscow Police Department."
 	icon_state = "rifle40"
 	inhand_icon_state = "rifle40"
 	projectile_damage_multiplier = 1.2
