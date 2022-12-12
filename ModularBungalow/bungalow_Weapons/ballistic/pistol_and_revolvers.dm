@@ -186,7 +186,7 @@
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "Commander's Sequoia Pistol"
-	desc = "A pistol for solgov commander, chambered in the obsolete .45-70. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them. Engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
+	desc = "A pistol for solgov commander, chambered in the obsolete .45-70. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them.Beautifully decorated in gold with wooden finishes and engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
