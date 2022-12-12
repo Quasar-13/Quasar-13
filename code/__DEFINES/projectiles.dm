@@ -25,7 +25,7 @@
 #define CALIBER_38			".38"
 /// The caliber used by the PPK
 #define CALIBER_380			".380"
-/// The caliber used by the ranger seqouia and the .44 desert eagle. what more can you ask for?
+/// The caliber used by the automag and the .44 desert eagle. what more can you ask for?
 #define CALIBER_44			".44"
 /// The caliber used by the C-20r SMG, the tommygun, and the M1911 pistol.
 #define CALIBER_45			".45"
@@ -65,5 +65,5 @@
 #define CALIBER_BREACHER	"breacher"
 /// The caliber used by XM grenade launcher
 #define CALIBER_20MM		"20mm"
-/// The caliber used by .45-70
+/// The caliber used by .45-70 Brushgun, Ranger Seqouia
 #define CALIBER_A4570		".4570"
