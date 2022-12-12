@@ -723,7 +723,7 @@
 	belt = /obj/item/storage/belt/military/assault
 	id = /obj/item/card/id/syndicate_command/crew_id
 	implants = list(/obj/item/implant/weapons_auth)
-	backpack_contents = list(/obj/item/paper/fluff/ruins/forgottenship/password, /obj/item/storage/box/survival/syndie)
+	backpack_contents = list(/obj/item/storage/box/survival/syndie)
 
 /datum/outfit/syndicatespace/syndicrew/syndicaptain
 	name = "Syndicate Ship Captain"
