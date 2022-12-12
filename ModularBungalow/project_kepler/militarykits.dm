@@ -130,7 +130,7 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/grenadier_grenades
 
