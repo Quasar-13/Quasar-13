@@ -207,7 +207,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
-	desc = "General purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and used by rangers unit
+	desc = "General purpose standard issue battle rifle number 21, typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some are of the gun are locally produced by Kepler Technology and used by rangers unit"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
