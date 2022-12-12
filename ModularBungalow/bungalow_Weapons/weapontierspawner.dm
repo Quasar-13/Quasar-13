@@ -176,6 +176,7 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn = 50)
 
+//has to ATLEAST drop something
 /obj/effect/spawner/lootdrop/tierweapon/ark_guardian
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ammoboxes = 65,
 				/obj/item/melee/powerfist = 5,
