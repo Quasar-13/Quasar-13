@@ -186,10 +186,10 @@
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "Commander's Sequoia Pistol"
-	desc = "A pistol for solgov commander. Engraved on the bottom is 'Thank you for your 20 years of service.'"
+	desc = "A pistol for solgov commander. Engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
 	icon_state = "sequoia"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	ammo_type = /obj/item/ammo_casing/a44
@@ -222,10 +222,11 @@
 	initial_caliber = CALIBER_A4570
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "revolver"
-	recoil = 1
-	pb_knockback = 5
+	recoil = 2
+	pb_knockback = 2
+
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
 	caliber = CALIBER_A4570
-	max_ammo = 7
+	max_ammo = 6
 
