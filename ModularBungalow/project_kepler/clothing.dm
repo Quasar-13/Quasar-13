@@ -51,7 +51,7 @@
 
 /obj/item/clothing/head/helmet/solgov/snow/heavy
 	name = "solgov heavy helmet"
-	desc = "Standard Mk5 Solgov Military Helmet. Offers better protection."
+	desc = "Standard Mk5 Solgov Military Helmet. Offers better protection than the mk4."
 	icon_state = "soldier_snow"
 	slowdown = 0.16
 	armor = list(MELEE = 50, BULLET = 60, LASER = 35, ENERGY = 35, BOMB = 25, BIO = 0, RAD = 0, FIRE = 100, ACID = 90, WOUND = 10)
@@ -74,7 +74,7 @@
 	name = "solgov heavy helmet"
 	desc = "A heavily modified Mk5 Solgov Military Helmet. Offers better protection."
 	icon_state = "soldier_marsoc"
-	slowdown = 0.16
+	slowdown = -0.25
 	armor = list(MELEE = 60, BULLET = 65, LASER = 60, ENERGY = 65, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100, WOUND = 90)
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEHAIR
