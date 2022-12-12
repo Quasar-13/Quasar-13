@@ -453,7 +453,7 @@
 
 /obj/item/storage/pouch/marsoc_ifak
 	name = "SOC IFAK"
-	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
+	desc = "because long term operation requires you to be equipped with various tools, one of them to treat yourself and to save others."
 	icon_state = "socmed"
 
 /obj/item/storage/pouch/marsoc_ifak/ComponentInitialize()
@@ -486,9 +486,10 @@
 	new /obj/item/storage/pill_bottle/epinephrine(src)
 	new /obj/item/storage/pill_bottle/revival(src)
 	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
-	new /obj/item/stack/medical/mesh(src)
-	new /obj/item/stack/medical/mesh(src)
-	new /obj/item/stack/medical/bone_gel(src)
+	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
+	new /obj/item/stack/medical/mesh/advanced(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/suture/medicated(src)
 	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/roller(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
@@ -532,6 +533,13 @@
 		/obj/item/roller,
 		/obj/item/storage/pill_bottle,
 		))
+
+/obj/item/storage/pouch/ifak/PopulateContents()
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/storage/firstaid/regular(src)
+	new /obj/item/roller(src)
 
 /obj/item/storage/backpack/marsoc
 	name = "SOC Rucksack"
