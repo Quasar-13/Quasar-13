@@ -283,7 +283,7 @@
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/gunner
-	name = "Solgov Auto Rifleman"
+	name = "Solgov Rifleman"
 	desc = "Armed with Assault Rifle, Ready to fire upon you"
 	icon_state = "solgovrangedgunner"
 	icon_living = "solgovrangedgunner"
@@ -296,7 +296,7 @@
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/gunner,
-	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
+	/obj/item/gun/ballistic/automatic/ar/m16/nomag,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat

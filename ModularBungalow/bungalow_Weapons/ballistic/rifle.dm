@@ -234,6 +234,8 @@
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 2
+/obj/item/gun/ballistic/automatic/ar/m16/nomag
+	spawnwithmagazine = 0
 
 /obj/item/gun/ballistic/automatic/ar/m16/m4
 	name = "SG-M4A4 'Chopper'"
