@@ -504,5 +504,5 @@
 	desc = "Jesus christ how did you find this?"
 	max_ammo = 150
 	w_class = WEIGHT_CLASS_BULKY
-	icon_state = "M38Box"
+	icon_state = "M38box"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
