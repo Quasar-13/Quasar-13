@@ -112,7 +112,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .556 and should be compatible with most ammo made around that. This gun is a complete mystery to the Sol Government including how it came into the possession of anyone at all, given no blueprint of the gun exist on record, and yet despite this fact there have been many rangers historically using it, although originally intended to be fielded by the New Moscow Police Department in 2131, however, as of 2143, most of the gun has been destroyed or missing.It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .556 and should be compatible with most ammo made around that. A mysterious gun developed prior to the occult war and utilised by New Moscow Police Department. as of 2143, most of the gun has been destroyed or missing. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -138,16 +138,6 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
-/obj/item/gun/ballistic/automatic/pistol/avtomag/akira
-	name = "\improper Model 35 Avtomag"
-	desc = "A special pistol made to fire .357 AMP. the one used by the kitsune of the past, beautifully decorated and coated in chrome, a product of it's time back when it's owner was alive, limited production by the kepler factory, faint smells of cinnamon and sake and an engraving of a nine tailed fox"
-	icon_state = "avtomag_kira"
-	mag_type = /obj/item/ammo_box/magazine/avtomag/akira
-
-/obj/item/ammo_box/magazine/avtomag/akira
-	ammo_type = /obj/item/ammo_casing/a556
-	caliber = CALIBER_A556
-	max_ammo = 12
 
 /obj/item/gun/ballistic/automatic/pistol/m45a1
 	name = "KT-P23 'Dusker'"
@@ -186,7 +176,7 @@
 //Sequoia
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "Commander's Sequoia Pistol"
-	desc = "A pistol for solgov commander, chambered in the obsolete .45-70. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them.Beautifully decorated in gold with wooden finishes and engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
+	desc = "A pistol for solgov commander made in Romulus by Kepler Technology. It has come a long way since then and it's now in your hand, chambered in the obsolete .45-70. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them. Beautifully decorated in gold with wooden finishes and engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570

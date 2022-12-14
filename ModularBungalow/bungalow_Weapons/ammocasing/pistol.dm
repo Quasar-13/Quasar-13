@@ -16,22 +16,16 @@
 	else
 		icon_state = "avtomag-[ammo_count()]"
 
-/obj/item/ammo_box/magazine/avtomag/akira
-	name = ".556 Avtomag Magazine"
-	desc = "a 10 rounds .556 magazine for the Special Avtomag."
-	ammo_type = /obj/item/ammo_casing/a556/highp
-	caliber = CALIBER_A556
-	icon_state = "avtomagakira-10"
-
 /obj/item/ammo_casing/a4570
 	name = "45-70 Govt bullet"
 	desc = "High Power .45-70 Govt Round, intended for taking down bears and whatnot"
 	projectile_type = /obj/projectile/bullet/a4570
 	caliber = CALIBER_A4570
+
 /obj/projectile/bullet/a4570
 	name = "45-70 Govt bullet"
-	damage = 55
-	armour_penetration = 50
+	damage = 40
+	armour_penetration = 45
 	wound_bonus = 35
 	stamina = 25
 
@@ -44,7 +38,7 @@
 /obj/projectile/bullet/a44
 	name = "44 Magnum bullet"
 	damage = 34
-	armour_penetration = 50
+	armour_penetration = 30
 	wound_bonus = 25
 
 /obj/item/ammo_box/magazine/m45/big

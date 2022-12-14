@@ -219,7 +219,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
@@ -256,7 +256,7 @@
 	spread = 5
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.11 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "KT-LR45 'Divine Wind"
