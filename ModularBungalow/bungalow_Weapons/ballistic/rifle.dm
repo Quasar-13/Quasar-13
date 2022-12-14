@@ -223,7 +223,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
-	desc = "Developed extremely late into the war, the KT-OS45 is a heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"
+	desc = "Developed extremely late into the war, the KT-OS45 is a belt-fed heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"
 	icon_state = "M38"
 	inhand_icon_state = "M38"
 	spread = 7
@@ -260,7 +260,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "KT-LR45 'Divine Wind"
-	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
+	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
