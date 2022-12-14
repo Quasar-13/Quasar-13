@@ -237,7 +237,7 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 //CAPTAINS KITS
 
@@ -258,7 +258,7 @@
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/commander_ranger
 /obj/item/storage/box/commander_ranger/PopulateContents()
@@ -275,7 +275,7 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/commander_assault
 /obj/item/storage/box/commander_assault/PopulateContents()
@@ -295,7 +295,7 @@
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/storage/box/grenadier_grenades/lethal(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 // DO NOT SPAWN THIS IN
 /obj/item/storage/box/kitsune_ammo
