@@ -248,7 +248,7 @@
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
 	name = "\improper KT-GPM21S 'Peacemaker'"
-	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, however, that make it inaccurate. Developed during the occult war, <b>Foxtrot-1, finish the job!</b>"
+	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, however, that makes it very inaccurate. Developed during the occult war, <b>Foxtrot-1, finish the job!</b>"
 	icon_state = "hk21c"
 	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
