@@ -495,14 +495,14 @@
 	name = "Ammo Belt (7.12x82)"
 	desc = "A belt for a minigun."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
-	max_ammo = 300
+	max_ammo = 100
 	icon_state = "M38belt"
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_box/magazine/mm712x82/boxreload
 	name = "Ammo Box (7.12x82)"
 	desc = "Jesus christ how did you find this?"
-	max_ammo = 150
+	max_ammo = 80
 	w_class = WEIGHT_CLASS_BULKY
 	icon_state = "M38box"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
