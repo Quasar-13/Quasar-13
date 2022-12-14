@@ -260,7 +260,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "KT-LR45 'Divine Wind"
-	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger, although some has been given out as prizes for veteran of the occult war. It saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by other countries in Sol. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage. Well-liked for it's high accuracy even in the worst of condition, it's built in high-magnification scope makes it unmatched by most rifle of it's time, alongside it's extremely light weight nature. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
+	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger,  it saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by others. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage. Well-liked for it's high accuracy even in the worst of condition. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
