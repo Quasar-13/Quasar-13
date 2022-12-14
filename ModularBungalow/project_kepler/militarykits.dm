@@ -221,7 +221,7 @@
 	new /obj/item/storage/belt/holster/shoulder(src)
 
 /obj/item/storage/box/security_sar
-/obj/item/storage/box_security_sar/PopulateContents()
+/obj/item/storage/box/security_sar/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
