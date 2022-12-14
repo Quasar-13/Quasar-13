@@ -723,6 +723,7 @@
 	belt = /obj/item/storage/belt/military/assault
 	id = /obj/item/card/id/syndicate_command/crew_id
 	implants = list(/obj/item/implant/weapons_auth)
+	backpack_contents = list(/obj/item/storage/box/survival/syndie)
 
 /datum/outfit/syndicatespace/syndicrew/syndicaptain
 	name = "Syndicate Ship Captain"
@@ -733,7 +734,7 @@
 	l_pocket = /obj/item/door_remote/syndicate
 	r_pocket = /obj/item/kitchen/knife/combat/survival
 	id = /obj/item/card/id/syndicate_command/captain_id
-	backpack_contents = list(/obj/item/documents/syndicate, /obj/item/paper/fluff/ruins/forgottenship/password, /obj/item/gun/ballistic/automatic/pistol/aps)
+	backpack_contents = list(/obj/item/documents/syndicate, /obj/item/paper/fluff/ruins/forgottenship/password, /obj/item/gun/ballistic/automatic/pistol/aps, /obj/item/storage/box/survival/syndie)
 
 /obj/effect/mob_spawn/human/beach/alive
 	death = FALSE
