@@ -29,7 +29,7 @@
 	new /obj/item/clothing/under/syndicate/camo/snow(src)
 	new /obj/item/clothing/suit/armor/vest/solgov(src)
 	new /obj/item/clothing/head/helmet/solgov(src)
-	new /obj/item/gun/ballistic/automatic/ar/hk21(src)
+	new /obj/item/gun/ballistic/automatic/ar/m16/m4(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)

@@ -221,6 +221,30 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
+//I hate file path shit but im lzy so w/e
+/obj/item/gun/ballistic/automatic/ar/m16
+	name = "SG-M16A2 'Clicker'"
+	desc = "An old world assault rifle based on the AR15, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire only."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "m16"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	burst_size = 3
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 2
+
+/obj/item/gun/ballistic/automatic/ar/m16/m4
+	name = "SG-M4A4 'Chopper'"
+	desc = "An old world assault rifle based on the AR15, full auto. Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
+	icon_state = "m4"
+	burst_size = 1
+	spread = 2
+/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.21 SECONDS)
+
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
 	desc = "Developed extremely late into the war, the KT-OS45 is a belt-fed heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"

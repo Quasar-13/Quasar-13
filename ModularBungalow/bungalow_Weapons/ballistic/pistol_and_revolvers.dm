@@ -160,6 +160,7 @@
 	initial_caliber = CALIBER_SHOTGUN
 	recoil = 3
 	pb_knockback = 3
+	fire_delay = 1.5
 /obj/item/ammo_box/magazine/internal/cylinder/revjudge
 	caliber = CALIBER_SHOTGUN
 	max_ammo = 6
@@ -187,6 +188,7 @@
 /obj/item/gun/ballistic/revolver/modeltwentynine
 	name = "S&W Model 29"
 	desc = "An interesting rare revolver chambered in .44 magnum, most likely brought in by Sol Government Rangers during the frontier era, or possibly brought in by you. Hope you got an idea on how to get more ammo in this place"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 
