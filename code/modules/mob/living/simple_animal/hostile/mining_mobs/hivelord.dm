@@ -403,6 +403,7 @@
 	icon_aggro = "snowlegion_alive"
 	icon_dead = "snowlegion"
 	environment_smash = ENVIRONMENT_SMASH_NONE
+	weather_immunities = list("snow")
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
 	loot = list(/obj/item/organ/regenerative_core/legion)
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/snow
