@@ -71,6 +71,7 @@
 	icon_state = "syndicate"
 	strip_delay = 60
 	w_class = WEIGHT_CLASS_SMALL
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/mask/gas/clown_hat
 	name = "clown wig and mask"
