@@ -229,7 +229,6 @@
 	icon_state = "m16"
 	inhand_icon_state = "hk21"
 	slot_flags = 0
-	burst_size = 3
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	weapon_weight = WEAPON_HEAVY
@@ -255,13 +254,21 @@
 /obj/item/gun/ballistic/automatic/ar/m16/nomag
 	spawnwithmagazine = 0
 
-/obj/item/gun/ballistic/automatic/ar/m16/m4
+/obj/item/gun/ballistic/automatic/ar/m4
 	name = "K&H Chopper"
 	desc = "An old world assault rifle based on the M4A4, full auto capable. Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "m4"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 2
 	burst_size = 1
 	spread = 2.4
-/obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
+
+/obj/item/gun/ballistic/automatic/ar/m4/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
 
