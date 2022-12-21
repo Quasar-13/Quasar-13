@@ -383,6 +383,7 @@
 	zoom_amt = 9
 	zoom_out_amt = 6
 	burst_size = 1
+	projectile_damage_multiplier = 1.5
 
 /obj/item/gun/ballistic/automatic/sr25/Initialize()
 	. = ..()
