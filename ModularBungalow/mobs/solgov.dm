@@ -411,10 +411,6 @@
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
 
-	..()
-	summon_backup(15)
-	say("UBIRAYSYA OTSYUDA STALKER!")
-
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
 	. = ..()
 	set_light(4)
