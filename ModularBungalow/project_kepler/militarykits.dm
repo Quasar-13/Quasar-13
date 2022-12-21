@@ -228,10 +228,8 @@
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/security_privateer
 /obj/item/storage/box/security_privateer/PopulateContents()
-	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
+	new /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/ammo_box/shotgun/slug(src)
-	new /obj/item/ammo_box/shotgun/slug(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
 	new /obj/item/ammo_box/shotgun/buckshot(src)
 	new /obj/item/ammo_box/shotgun/buckshot(src)
@@ -241,6 +239,10 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/construction/rcd/combat(src)
 
 /obj/item/storage/box/security_sar
 /obj/item/storage/box/security_sar/PopulateContents()
