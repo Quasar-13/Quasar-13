@@ -26,7 +26,7 @@
 //holy fucking sex!! redeem my voucher please!
 //This took me 2 hours pls help
 /obj/machinery/kepler_equipment_voucher/proc/RedeemVoucherKepler(obj/item/kepler_voucher/voucher, mob/redeemer)
-	var/items = list("Marksman Kit", "Standard Privateer Kit", "Wildlife Extermination Kit", "Soldier Conscription Kit")
+	var/items = list("Marksman Kit", "Standard Privateer Kit", "Wildlife Extermination Kit", "Soldier Conscription Kit", "Assault Kit")
 
 	var/selection = input(redeemer, "Pick your equipment", "Equipment Voucher Redemption") as null|anything in sortList(items)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
@@ -45,6 +45,8 @@
 			new /obj/item/storage/box/soldier_sar(drop_location)
 		if("Soldier Conscription Kit")
 			new /obj/item/storage/backpack/duffelbag/solgov_conscription(drop_location)
+		if("Assault Kit")
+			new /obj/item/storage/box/soldier(drop_location)
 
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
