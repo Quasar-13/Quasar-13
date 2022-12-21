@@ -224,7 +224,7 @@
 //I hate file path shit but im lzy so w/e
 /obj/item/gun/ballistic/automatic/ar/m16
 	name = "K&H Clicker"
-	desc = "An old world assault rifle based on the M16A4, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire only."
+	desc = "An old world assault rifle based on the M16A4, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire capable."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "m16"
 	inhand_icon_state = "hk21"

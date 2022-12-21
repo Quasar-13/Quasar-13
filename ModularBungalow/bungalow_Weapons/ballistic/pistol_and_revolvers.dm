@@ -145,7 +145,8 @@
 	icon_state = "m45a1"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/m45/big
-
+	projectile_damage_multiplier = 1.15
+	fire_delay = 2
 ////////////////////
 //////REVOLVERS////
 ///////////////////
