@@ -29,7 +29,7 @@
 	new /obj/item/clothing/under/syndicate/camo/snow(src)
 	new /obj/item/clothing/suit/armor/vest/solgov(src)
 	new /obj/item/clothing/head/helmet/solgov(src)
-	new /obj/item/gun/ballistic/automatic/ar/m16/m4(src)
+	new /obj/item/gun/ballistic/automatic/ar/m16(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
@@ -41,9 +41,11 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
+
 /obj/item/storage/box/soldier_marksman
 	name = "Marksman Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
+
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
@@ -92,11 +94,11 @@
 
 
 /obj/item/storage/box/soldier_grenadier
-	name = "Grenadier Box Kit"
+	name = "Grenade Specialist Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_grenadier/PopulateContents()
-	new /obj/item/gun/grenadelauncher(src)
+	new /obj/item/gun/grenadelauncher/marsoc(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/head/bio_hood/security(src)
 	new /obj/item/clothing/suit/bio_suit/security(src)
@@ -111,12 +113,13 @@
 
 
 /obj/item/storage/box/soldier_sar
-	name = "Search and Rescue Box Kit"
+	name = "Search & Rescue Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_sar/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
