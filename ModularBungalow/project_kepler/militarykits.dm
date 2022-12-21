@@ -48,13 +48,11 @@
 
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
-	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/gun/ballistic/automatic/sniper_rifle/borrifle(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/ammo_box/speedloader/a357/match(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
 	new /obj/item/ammo_box/magazine/m45(src)

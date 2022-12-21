@@ -334,7 +334,6 @@
 	description = "A Sniper rifle chambered in 7.62x38, very powerful and it's non specialised ammo makes it easier to maintain unlike the gun developed after it. Developed in the middle of the war it was a direct continuation from the Rifle 40, it saw great use amongst the rangers and was officially adopted by Sol Government In May 2136."
 	icon_state = "riflebor"
 	inhand_icon_state = "rifle40"
-	projectile_damage_multiplier = 1.15
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762
 	fire_delay = 12
 
@@ -342,7 +341,7 @@
 	name = "Bor Rifle Magazie (7.62x38)"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = CALIBER_A762
-	max_ammo = 10
+	max_ammo = 5
 	multiload = TRUE
 
 //Used for both of these!
