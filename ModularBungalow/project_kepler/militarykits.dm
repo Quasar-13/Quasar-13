@@ -194,7 +194,7 @@
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/speedloader/a357/match(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
@@ -206,6 +206,25 @@
 
 /obj/item/storage/box/security_privateer
 	name = "Standard Military Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/security_privateer
+/obj/item/storage/box/security_privateer/PopulateContents()
+	new /obj/item/gun/ballistic/shotgun/automatic/combat(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/shotgun/slug(src)
+	new /obj/item/ammo_box/shotgun/slug(src)
+	new /obj/item/ammo_box/shotgun/slug(src)
+	new /obj/item/ammo_box/shotgun/buckshot(src)
+	new /obj/item/ammo_box/shotgun/buckshot(src)
+	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/storage/belt/bandolier(src)
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+
+/obj/item/storage/box/security_engineer
+	name = "Privateer Engineer Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/security_privateer
 /obj/item/storage/box/security_privateer/PopulateContents()
