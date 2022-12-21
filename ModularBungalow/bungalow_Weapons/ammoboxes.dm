@@ -502,7 +502,7 @@
 /obj/item/ammo_box/magazine/mm712x82/boxreload
 	name = "Ammo Box (7.12x82)"
 	desc = "Jesus christ how did you find this?"
-	max_ammo = 80
+	max_ammo = 300
 	w_class = WEIGHT_CLASS_BULKY
 	icon_state = "M38box"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'

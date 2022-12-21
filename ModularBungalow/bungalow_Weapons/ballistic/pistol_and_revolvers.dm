@@ -227,6 +227,7 @@
 	inhand_icon_state = "revolver"
 	recoil = 2
 	pb_knockback = 5
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
