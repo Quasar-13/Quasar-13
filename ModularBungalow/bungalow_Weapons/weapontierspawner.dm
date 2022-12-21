@@ -127,7 +127,7 @@
 				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
 				/obj/item/gun/grenadelauncher = 15,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 5,
-				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
+				/obj/item/gun/ballistic/automatic/ar/m4 = 15,
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier3,
 				/obj/item/gun/ballistic/automatic/pistol/avtomag = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)

@@ -331,7 +331,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/borrifle
 	name = "SG-LR36 'Bor'"
-	description = "A Sniper rifle chambered in 7.62x38, very powerful and it's non specialised ammo makes it easier to maintain unlike the gun developed after it. Developed in the middle of the war it was a direct continuation from the Rifle 40, it saw great use amongst the rangers and was officially adopted by Sol Government In May 2136."
+	desc = "A Sniper rifle chambered in 7.62x38, very powerful and it's non specialised ammo makes it easier to maintain unlike the gun developed after it. Developed in the middle of the war it was a direct continuation from the Rifle 40, it saw great use amongst the rangers and was officially adopted by Sol Government In May 2136."
 	icon_state = "riflebor"
 	inhand_icon_state = "rifle40"
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762

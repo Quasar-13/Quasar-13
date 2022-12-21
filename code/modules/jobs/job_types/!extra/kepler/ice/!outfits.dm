@@ -66,7 +66,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	mask = /obj/item/clothing/mask/gas/sechailer
 	head = /obj/item/clothing/head/helmet/solgov
-	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21
+	l_hand = /obj/item/gun/ballistic/automatic/ar/m4
 	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1,/obj/item/melee/classic_baton=1, /obj/item/kepler_sec_voucher=1, /obj/item/weldingtool/hugetank=1, /obj/item/flashlight/seclite=1, /obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556=5)
@@ -82,7 +82,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	mask = /obj/item/clothing/mask/gas/sechailer
 	head = /obj/item/clothing/head/helmet/solgov/snow
-	l_hand = /obj/item/gun/ballistic/automatic/ar/hk21
+	l_hand = /obj/item/gun/ballistic/automatic/ar/m4
 	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
 	backpack_contents = list(/obj/item/kitchen/knife/combat/survival=1,/obj/item/melee/classic_baton=1, /obj/item/kepler_voucher=1, /obj/item/weldingtool/hugetank=1, /obj/item/flashlight/seclite=1, /obj/item/storage/box/grenadier_grenades/lethal=1, /obj/item/ammo_box/magazine/m556=5)
