@@ -63,7 +63,7 @@
 
 
 /obj/item/storage/box/soldier_standard
-	name = "Standard Military Kit"
+	name = "Standard Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_standard/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/uzi(src)

@@ -181,7 +181,9 @@
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-
+	fire_delay = 6
+	recoil = 2
+	pb_knockback = 5
 
 //SW Model 29
 
@@ -224,7 +226,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "revolver"
 	recoil = 2
-	pb_knockback = 2
+	pb_knockback = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	ammo_type = /obj/item/ammo_casing/a4570
