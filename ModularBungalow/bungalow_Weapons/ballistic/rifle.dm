@@ -223,8 +223,8 @@
 
 //I hate file path shit but im lzy so w/e
 /obj/item/gun/ballistic/automatic/ar/m16
-	name = "SG-M16A2 'Clicker'"
-	desc = "An old world assault rifle based on the AR15, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire only."
+	name = "K&H Clicker"
+	desc = "An old world assault rifle based on the M16A4, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire only."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "m16"
 	inhand_icon_state = "hk21"
@@ -234,18 +234,36 @@
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 2
+
+/obj/item/gun/ballistic/automatic/ar/m16/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 1.8
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
 /obj/item/gun/ballistic/automatic/ar/m16/nomag
 	spawnwithmagazine = 0
 
 /obj/item/gun/ballistic/automatic/ar/m16/m4
-	name = "SG-M4A4 'Chopper'"
-	desc = "An old world assault rifle based on the AR15, full auto. Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
+	name = "K&H Chopper"
+	desc = "An old world assault rifle based on the M4A4, full auto capable. Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
 	icon_state = "m4"
 	burst_size = 1
-	spread = 2
+	spread = 2.4
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.21 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
@@ -286,7 +304,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
 	name = "KT-LR45 'Divine Wind"
-	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger,  it saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by others. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage. Well-liked for it's high accuracy even in the worst of condition. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
+	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger,  it saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by others. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage but at the cost of heavily reduced firerate. Well-liked for it's high accuracy even in the worst of condition. The rifle was deemed too expensive to replace the existing SR25 and was rejected in the finale."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
@@ -294,6 +312,7 @@
 	spawnwithmagazine = 1
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
 	projectile_damage_multiplier = 1.6
+	fire_delay = 6
 
 //Believe it or not this was actually the first gun I made when working on the server
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
@@ -338,8 +357,8 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	zoomable = TRUE
-	zoom_amt = 8
-	zoom_out_amt = 4
+	zoom_amt = 9
+	zoom_out_amt = 6
 	burst_size = 1
 
 /obj/item/gun/ballistic/automatic/sr25/Initialize()
