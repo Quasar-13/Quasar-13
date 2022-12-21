@@ -1,6 +1,6 @@
 /obj/item/gun/grenadelauncher/marsoc
 	name = "SG-M44"
-	desc = "a rare grenade launcher typically used by SOC"
+	desc = "a rare grenade launcher typically used by MARSOC"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/rocket.dmi'
 	icon_state = "compactgl"
 	w_class = WEIGHT_CLASS_NORMAL
