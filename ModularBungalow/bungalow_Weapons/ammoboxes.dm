@@ -483,7 +483,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 
 /obj/item/ammo_box/magazine/sr25
-	name = "7.62 NATO Magazine"
+	name = "SR25 Magazine (7.62x39)"
 	desc = "Magazine for the SR25"
 	max_ammo = 15
 	icon = 'ModularTegustation/Teguicons/magazines.dmi'

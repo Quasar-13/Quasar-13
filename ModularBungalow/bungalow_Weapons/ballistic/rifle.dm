@@ -336,6 +336,7 @@
 	inhand_icon_state = "rifle40"
 	projectile_damage_multiplier = 1.15
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762
+	fire_delay = 12
 
 /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762
 	name = "Bor Rifle Magazie (7.62x38)"
