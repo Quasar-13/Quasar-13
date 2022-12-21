@@ -365,7 +365,7 @@
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 4
-	maxHealth = 185
+	maxHealth = 195
 	health = 195
 	ranged = 0
 	minimum_distance = 0
@@ -410,7 +410,7 @@
 	vision_range = 22
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
+
 	..()
 	summon_backup(15)
 	say("UBIRAYSYA OTSYUDA STALKER!")
@@ -440,7 +440,7 @@
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
-	summon_backup(15)
+	summon_backup(35)
 	say("Tam oni!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
@@ -459,11 +459,6 @@
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
-
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
-	..()
-	summon_backup(15)
-	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
 	name = "Solgov Sniper"
