@@ -101,8 +101,8 @@
 					final_attack()
 				else
 					telegraph()
-					say("Judgment")
-					visible_message("<span class='colossus'>\"<b>Judgment</b>\"</span>")
+					say("Judgement")
+					visible_message("<span class='colossus'>\"<b>Judgement</b>\"</span>")
 					select_spiral_attack()
 					ranged_cooldown = world.time + 30
 			if(2)
@@ -152,8 +152,8 @@
 		visible_message("<span class='colossus'>\"<b>Die..</b>\"</span>")
 		random_attack_num = 5
 	else if(prob(20+anger_modifier))			//If more than 10% HP, determine next attack randomly
-		say("Judgment")
-		visible_message("<span class='colossus'>\"<b>Judgment</b>\"</span>")
+		say("Judgement")
+		visible_message("<span class='colossus'>\"<b>Judgement</b>\"</span>")
 		random_attack_num = 1
 	else
 		switch(rand(1, 3))
