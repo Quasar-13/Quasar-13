@@ -54,6 +54,8 @@
 	var/list/attack_action_types = list()
 	/// If there is a small sprite icon for players controlling the megafauna to use
 	var/small_sprite_type
+	/// Determines what a megafauna will say or do to telegraph its next attack. (Currently only used by Colossus). Set to 1 by default so the opening attack will always be the same. 
+	var/random_attack_num = 1
 
 /mob/living/simple_animal/hostile/megafauna/Initialize(mapload)
 	. = ..()
