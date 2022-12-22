@@ -112,7 +112,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver made by Kepler Technology. The poorly documented built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that. A mysterious gun developed prior to the occult war and utilised by New Moscow Police Department. as of 2143, most of the gun has been destroyed or missing. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver produced by Kepler Technology. The strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -120,6 +120,7 @@
 	projectile_damage_multiplier = 1.5
 	recoil = 4
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	ammo_type = /obj/item/ammo_casing/a556
@@ -185,6 +186,7 @@
 	fire_delay = 6
 	recoil = 2
 	pb_knockback = 5
+	initial_caliber = CALIBER_A4570
 
 //SW Model 29
 
@@ -194,6 +196,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	initial_caliber = CALIBER_44
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	ammo_type = /obj/item/ammo_casing/a44
