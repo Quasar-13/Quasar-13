@@ -1,5 +1,5 @@
 /obj/item/gun/ballistic/automatic/uzi
-	name = "SG-UZ3 Uzi"
+	name = "SG-US1 'Uzi'"
 	desc = "A lightweight, fully automatic submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "keplerminiuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -12,7 +12,7 @@
 
 /obj/item/gun/ballistic/automatic/uzi/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.26 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.24 SECONDS)
 
 /obj/item/gun/ballistic/automatic/vector
 	name = "\improper NT-VEK Vector Submachinegun"
