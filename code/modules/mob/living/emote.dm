@@ -193,6 +193,11 @@
 	message = "jumps!"
 	hands_use_check = TRUE
 
+/datum/emote/living/tilt
+	key = "tilt"
+	key_third_person = "tilts"
+	message = "tilts their head to the side."
+
 /datum/emote/living/kiss
 	key = "kiss"
 	key_third_person = "kisses"
@@ -223,12 +228,8 @@
 				return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
 
 		if(H.dna.species.id == "felinid" && (!H.mind || !H.mind.miming))
-			if(user.gender == FEMALE)
-				return pick('ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyaha.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha1.ogg',
-					'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha2.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahehe.ogg')
-			else
-				return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
-
+			return pick('ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyaha.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha1.ogg',
+				'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahaha2.ogg', 'ModularBungalow/zbungalowsounds/felinid/sound_voice_catpeople_nyahehe.ogg')
 
 /datum/emote/living/look
 	key = "look"
