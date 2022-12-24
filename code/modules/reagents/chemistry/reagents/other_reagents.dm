@@ -1850,7 +1850,7 @@
 	to_chat(exposed_human, "<span class='notice'>Hair starts sprouting from your scalp.</span>")
 	exposed_human.hairstyle = picked_hair
 	exposed_human.facial_hairstyle = picked_beard
-	exposed_human.update_hair()
+	exposed_human.update_hair(is_creating = TRUE)
 
 /datum/reagent/concentrated_barbers_aid
 	name = "Concentrated Barber's Aid"
@@ -1869,7 +1869,29 @@
 	to_chat(exposed_human, "<span class='notice'>Your hair starts growing at an incredible speed!</span>")
 	exposed_human.hairstyle = "Very Long Hair"
 	exposed_human.facial_hairstyle = "Beard (Very Long)"
-	exposed_human.update_hair()
+	exposed_human.update_hair(is_creating = TRUE)
+
+/datum/reagent/concentrated_barbers_aid/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	. = ..()
+	if(current_cycle > 20)
+		if(!ishuman(M))
+			return
+		var/mob/living/carbon/human/human_mob = M
+		if(human_mob.has_quirk(/datum/quirk/bald))
+			human_mob.remove_quirk(/datum/quirk/bald)
+		var/datum/species/species_datum = human_mob.dna?.species
+		if(!species_datum)
+			return
+		if(species_datum.species_traits.Find(HAIR))
+			return
+		species_datum.species_traits |= HAIR
+		var/message
+		if(HAS_TRAIT(M, TRAIT_BALD))
+			message = span_warning("You feel your scalp mutate, but you are still hopelessly bald.")
+		else
+			message = span_notice("Your scalp mutates, a full head of hair sprouting from it.")
+		to_chat(M, message)
+		human_mob.update_body_parts()
 
 /datum/reagent/baldium
 	name = "Baldium"
@@ -1888,7 +1910,7 @@
 	to_chat(exposed_human, "<span class='danger'>Your hair is falling out in clumps!</span>")
 	exposed_human.hairstyle = "Bald"
 	exposed_human.facial_hairstyle = "Shaved"
-	exposed_human.update_hair()
+	exposed_human.update_hair(is_creating = TRUE)
 
 /datum/reagent/saltpetre
 	name = "Saltpetre"

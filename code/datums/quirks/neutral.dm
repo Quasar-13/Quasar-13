@@ -222,14 +222,14 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	old_hair = H.hairstyle
 	H.hairstyle = "Bald"
-	H.update_hair()
+	H.update_hair(is_creating = TRUE)
 	RegisterSignal(H, COMSIG_CARBON_EQUIP_HAT, .proc/equip_hat)
 	RegisterSignal(H, COMSIG_CARBON_UNEQUIP_HAT, .proc/unequip_hat)
 
-/datum/quirk/bald/remove()
+/datum/quirk/bald/remove(is_creating = TRUE)
 	var/mob/living/carbon/human/H = quirk_holder
 	H.hairstyle = old_hair
-	H.update_hair()
+	H.update_hair(is_creating = TRUE)
 	UnregisterSignal(H, list(COMSIG_CARBON_EQUIP_HAT, COMSIG_CARBON_UNEQUIP_HAT))
 	SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "bad_hair_day")
 

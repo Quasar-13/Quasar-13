@@ -52,4 +52,4 @@ BONUS
 		H.hairstyle = "Bald"
 	else
 		H.hairstyle = "Balding Hair"
-	H.update_hair()
+	H.update_hair(is_creating = TRUE)
