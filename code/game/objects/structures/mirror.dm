@@ -199,7 +199,7 @@
 					else
 						to_chat(H, "<span class='notice'>Invalid color. Your color is not bright enough.</span>")
 
-			H.update_body(is_creating = TRUE)
+			H.update_body()
 			H.update_mutations_overlay() // no hulk lizard
 
 		if("gender")

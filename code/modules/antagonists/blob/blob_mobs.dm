@@ -173,7 +173,7 @@
 	icon = H.icon
 	icon_state = "zombie"
 	H.hairstyle = null
-	H.update_hair(is_creating = TRUE)
+	H.update_hair()
 	H.forceMove(src)
 	oldguy = H
 	update_icons()

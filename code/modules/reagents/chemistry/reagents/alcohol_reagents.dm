@@ -2141,12 +2141,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 			if(N.age > 70)
 				N.facial_hair_color = "ccc"
 				N.hair_color = "ccc"
-				N.update_hair(is_creating = TRUE)
+				N.update_hair()
 				if(N.age > 100)
 					N.become_nearsighted(type)
 					if(N.gender == MALE)
 						N.facial_hairstyle = "Beard (Very Long)"
-						N.update_hair(is_creating = TRUE)
+						N.update_hair()
 
 				if(N.age > 969) //Best not let people get older than this or i might incur G-ds wrath
 					M.visible_message("<span class='notice'>[M] becomes older than any man should be.. and crumbles into dust!</span>")
