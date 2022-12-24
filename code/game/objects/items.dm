@@ -218,6 +218,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 			hitsound = 'sound/items/welder.ogg'
 		if(damtype == BRUTE)
 			hitsound = "swing_hit"
+
 	add_weapon_description()
 
 /obj/item/Destroy()

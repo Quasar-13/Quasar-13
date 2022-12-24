@@ -1,3 +1,4 @@
+#define HITS_TO_CRIT(damage) round(100 / damage, 0.1)
 /**
  *
  * The purpose of this element is to widely provide the ability to examine an object and determine its stats, with the ability to add
@@ -42,7 +43,7 @@
 /datum/element/weapon_description/proc/warning_label(obj/item/item, mob/user, list/examine_texts)
 	SIGNAL_HANDLER
 
-	if(item.force >= 5 || item.throwforce >= 5 || item.override_notes || i	tem.offensive_notes || attached_proc) /// Only show this tag for items that could feasibly be weapons, shields, or those that have special notes
+	if(item.force >= 5 || item.throwforce >= 5 || item.override_notes || item.offensive_notes || attached_proc) /// Only show this tag for items that could feasibly be weapons, shields, or those that have special notes
 		examine_texts += "<span class='notice'>It appears to have an ever-updating bluespace <a href='?src=[REF(item)];examine=1'>warning label.</a></span>"
 
 /**
@@ -83,10 +84,12 @@
 		// Make sure not to divide by 0 on accident
 		if(source.force > 0)
 			readout += "Our extensive research has shown that it takes a mere [span_warning("[HITS_TO_CRIT(source.force)] hit\s")] to beat down [victims[rand(1, victims.len)]] with no armor."
+		else
 			readout += "Our extensive research found that you couldn't beat anyone to death with this if you tried."
 
 		if(source.throwforce > 0)
 			readout += "If you decide to throw this object instead, one will take [span_warning("[HITS_TO_CRIT(source.throwforce)] hit\s")] before collapsing."
+		else
 			readout += "If you decide to throw this object instead, then you will have trouble damaging anything."
 		if(source.armour_penetration > 0 || source.block_chance > 0)
 			readout += "This item has proven itself <span class='warning'>[weapon_tag_convert(source.armour_penetration)]</span> of piercing armor and <span class='warning'>[weapon_tag_convert(source.block_chance)]</span> of blocking attacks."
