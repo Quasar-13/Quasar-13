@@ -29,3 +29,5 @@ GLOBAL_LIST_EMPTY(poll_options)
 GLOBAL_PROTECT(poll_options)
 
 GLOBAL_VAR_INIT(internal_tick_usage, 0.2 * world.tick_lag)
+
+GLOBAL_LIST_EMPTY_TYPED(proj_by_path_key, /obj/projectile) // A list of projectile objects, which are keyed by their path
