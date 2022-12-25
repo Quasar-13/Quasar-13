@@ -579,6 +579,17 @@
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 500, /datum/material/silver=500)
 	build_path = /obj/item/organ/heart/cybernetic/tier3
 
+/datum/design/nanite_heart
+	name = "Nanite Heart"
+	desc = "A heart that improves the functions of nanites"
+	id = "nanite_heart"
+	build_type = PROTOLATHE | MECHFAB
+	construction_time = 80
+	materials = list(/datum/material/iron = 200, /datum/material/glass = 500, /datum/material/silver=300, /datum/material/gold=300)
+	build_path = /obj/item/organ/heart/nanite
+	category = list("Misc", "Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
+
 /datum/design/cybernetic_lungs
 	name = "Basic Cybernetic Lungs"
 	desc = "A basic pair of cybernetic lungs."
