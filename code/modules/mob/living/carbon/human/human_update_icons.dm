@@ -73,7 +73,6 @@ There are several things that need to be remembered:
 	if(!..())
 		icon_render_key = null //invalidate bodyparts cache
 		update_body()
-		update_hair()
 		update_inv_w_uniform()
 		update_inv_wear_id()
 		update_inv_gloves()

@@ -640,7 +640,6 @@
 		druggy_dna.species.species_traits += NOBLOODOVERLAY
 
 	invisible_man.update_body()
-	invisible_man.update_hair()
 	invisible_man.remove_from_all_data_huds()
 	invisible_man.sound_environment_override = SOUND_ENVIROMENT_PHASED
 
