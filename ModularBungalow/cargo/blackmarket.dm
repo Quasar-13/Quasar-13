@@ -242,7 +242,7 @@
 /datum/market_item/treasure/homepistol
 	name = "E-220 Home Defender"
 	desc = "The bastard child from a disabler and an ion gun. Self rechargeable. When you don't like any kind of intruders at your place."
-	item = /obj/item/gun/ballistic/shotgun/doublebarrel/svet_shotgun
+	item = /obj/item/gun/energy/e_gun/homedef
 	price_min = 5000
 	price_max = 10000
 	stock_max = 1
