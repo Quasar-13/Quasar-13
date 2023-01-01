@@ -84,7 +84,7 @@
 	name = "Melter Rifle"
 	desc = "For the captain that hates others."
 
-/obj/item/storage/box/captain/gun/shotgun/PopulateContents()
+/obj/item/storage/box/captain/gun/melter/PopulateContents()
 	new /obj/item/gun/energy/laser/hellgun(src)
 
 
