@@ -513,7 +513,7 @@
 			T.audible_message("<span class='warning'>\The [defib] lets out an urgent beep and lets out a steadily rising hum...</span>")
 		else
 			user.audible_message("<span class='warning'>[src] let out an urgent beep.</span>")
-		if(do_after(user, 1.5 SECONDS, H)) //Takes longer due to overcharging
+		if(do_after(user, 5 SECONDS, H)) //Takes longer due to overcharging
 			if(!H)
 				busy = FALSE
 				update_icon()
