@@ -55,7 +55,7 @@
 	return FALSE
 
 /datum/objective_item/steal/lamarr // Might require maintaining if Xeno rework is merged
-	name = "Lamarr The subject of study by the research director."
+	name = "Lamarr, the subject of study by the research director."
 	targetitem = /obj/item/clothing/mask/facehugger/lamarr
 	difficulty = 40
 	excludefromjob = list("Research Director")
