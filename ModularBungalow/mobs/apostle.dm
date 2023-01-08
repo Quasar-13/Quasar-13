@@ -19,7 +19,12 @@ GLOBAL_LIST_EMPTY(apostles)
 	armour_penetration = 20
 	melee_damage_lower = 24
 	melee_damage_upper = 24
-	speed = 0
+	move_force = MOVE_FORCE_STRONG
+	move_resist = MOVE_FORCE_STRONG
+	pull_force = MOVE_FORCE_STRONG
+	environment_smash = ENVIRONMENT_SMASH_WALLS // Reinforced walls can stop them.
+	obj_damage = 80 // As funny as it is, they shouldn't be able to annihilate structures in 0.001 seconds
+	speed = 2
 	ranged = TRUE
 	pixel_x = -16
 	base_pixel_x = -16
@@ -36,9 +41,11 @@ GLOBAL_LIST_EMPTY(apostles)
 							   /datum/action/innate/megafauna_attack/deafening_scream,
 							   /datum/action/innate/megafauna_attack/holy_blink)
 	small_sprite_type = /datum/action/small_sprite/megafauna/tegu/angel
-	var/holy_revival_cooldown = 10 SECONDS
-	var/holy_revival_cooldown_base = 10 SECONDS
+	var/holy_revival_cooldown = 14 SECONDS
+	var/holy_revival_cooldown_base = 14 SECONDS
 	var/holy_revival_damage = 18 // Amount of damage OR heal, depending on target.
+	var/holy_revival_range = 4
+	var/last_revival_time // To prevent multiple conversions per one action
 	var/fire_field_cooldown = 20 SECONDS
 	var/fire_field_cooldown_base = 20 SECONDS
 	var/field_range = 4
@@ -60,6 +67,7 @@ GLOBAL_LIST_EMPTY(apostles)
 		visible_message("<span class='warning'>[src] absorbs [P]!</span>")
 		qdel(P)
 		return
+	. = ..()
 
 /datum/action/small_sprite/megafauna/tegu
 	small_icon = 'ModularTegustation/Teguicons/megafauna.dmi'
@@ -153,107 +161,122 @@ GLOBAL_LIST_EMPTY(apostles)
 	if(holy_revival_cooldown > world.time)
 		return
 	holy_revival_cooldown = (world.time + holy_revival_cooldown_base)
-	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_spell.ogg', 150, 1)
-	for(var/i in range(3, src))
-		if(isturf(i))
-			new /obj/effect/temp_visual/cult/sparks(i)
-			continue
-		if(ishuman(i))
-			var/mob/living/carbon/human/H = i
-			if(!("apostle" in H.faction))
-				if(apostle_num < 13 && H.stat == DEAD && H.mind)
-					if(!H.client)
-						var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
-						if(!ghost?.can_reenter_corpse) // If there is nobody able to control it - skip.
-							continue
-						else // If it can reenter - do it.
-							H.grab_ghost(force = TRUE)
-					H.regenerate_limbs()
-					H.regenerate_organs()
-					H.dna.species.GiveSpeciesFlight(H)
-					H.revive(full_heal = TRUE, admin_revive = FALSE)
-					// Giving the fancy stuff to new apostle
-					H.faction |= "apostle"
-					ADD_TRAIT(H, TRAIT_BOMBIMMUNE, SPECIES_TRAIT)
-					ADD_TRAIT(H, TRAIT_NOFIRE, SPECIES_TRAIT)
-					ADD_TRAIT(H, TRAIT_NOBREATH, SPECIES_TRAIT)
-					ADD_TRAIT(H, TRAIT_RESISTLOWPRESSURE, SPECIES_TRAIT)
-					ADD_TRAIT(H, TRAIT_RESISTCOLD, SPECIES_TRAIT)
-					ADD_TRAIT(H, TRAIT_NODISMEMBER, SPECIES_TRAIT)
-					to_chat(H, "<span class='notice'>You are protected by the holy light!</span>")
-					if(apostle_num < 12)
-						H.set_light_color(COLOR_VERY_SOFT_YELLOW)
-						H.set_light(4)
-						H.add_overlay(mutable_appearance('icons/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER))
-						var/mutable_appearance/apostle_halo = mutable_appearance('ModularTegustation/Teguicons/32x64.dmi', "halo", -HALO_LAYER)
-						H.overlays_standing[HALO_LAYER] = apostle_halo
-						H.apply_overlay(HALO_LAYER)
-					SLEEP_CHECK_DEATH(20)
-					// Executing rapture scenario
-					switch(apostle_num)
-						if(1)
-							apostle_line = "And I tell you, you are [H.real_name] the apostle, and on this rock I will build my church, and the gates of hell shall not prevail against it."
-						if(2)
-							apostle_line = "Tell us, when will this happen, and what will be the sign of your coming and of the end of the age?"
-						if(3)
-							apostle_line = "Do you want us to call fire down from heaven to destroy them?"
-							apostle_prev = H.real_name
-						if(4)
-							apostle_line = "[apostle_prev] the apostle and [H.real_name] the apostle, to them he gave the name Boanerges, which means \"sons of thunder\""
-						if(5)
-							apostle_line = "[H.real_name] the apostle said, \"Show us the Father and that will be enough for us.\""
-						if(6)
-							apostle_line = "He saw a human named [H.real_name] the apostle. \"Follow me.\" he told him, and [H.real_name] got up and followed him."
-						if(7)
-							apostle_line = "Now for some time [H.real_name] the apostle had practiced sorcery and amazed all the people."
-						if(8)
-							apostle_line = "Then [H.real_name] the apostle said to the rest of disciples, \"Let us also go, that we may die with him.\""
-						if(9)
-							apostle_line = "Then [H.real_name] the apostle declared, \"You are the son of him, you are the king.\""
-						if(10)
-							apostle_line = "Then [H.real_name] the apostle said, \"But why do you intend to show yourself to us and not to the world?\""
-						if(11)
-							apostle_line = "From now on, let no one cause me trouble, for I bear on my body the marks of him."
-						if(12) //Here we go sicko mode
-							apostle_line = "Have I not chosen you, the Twelve? Yet one of you is a devil."
-							rapture_skill.Grant(src)
-					for(var/mob/M in GLOB.player_list)
-						if(M.z == z && M.client)
-							to_chat(M, "<span class='userdanger'>[apostle_line]</span>")
-							SEND_SOUND(M, 'ModularTegustation/Tegusounds/apostle/mob/apostle_bell.ogg')
-							flash_color(M, flash_color = "#FF4400", flash_time = 50)
-					var/datum/antagonist/apostle/new_apostle = new /datum/antagonist/apostle
-					new_apostle.number = apostle_num
-					H.mind.add_antag_datum(new_apostle)
-					apostle_num += 1
-					armour_penetration += 5
-					melee_damage_lower += 2
-					melee_damage_upper += 2
-					maxHealth += 50
-					health = maxHealth
-					holy_revival_damage += 2 // More damage and healing from AOE spell.
-					scream_power += 1 // Deafen them all. Destroy their ears.
-					light_range += 1 // More light, because why not.
-				else
-					playsound(H.loc, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE, -1)
-					H.adjustFireLoss(holy_revival_damage)
-					H.emote("scream")
-					to_chat(H, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
-			else
-				if(H.stat == DEAD && H.mind)
-					H.regenerate_limbs()
-					H.regenerate_organs()
-					H.dna.species.GiveSpeciesFlight(H)
-					H.revive(full_heal = TRUE, admin_revive = FALSE)
+	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_spell.ogg', 75, 1, holy_revival_range)
+	var/turf/target_c = get_turf(src)
+	var/list/turf_list = list()
+	for(var/i = 1 to holy_revival_range)
+		turf_list = spiral_range_turfs(i, target_c) - spiral_range_turfs(i-1, target_c)
+		for(var/turf/open/T in turf_list)
+			new /obj/effect/temp_visual/cult/sparks(T)
+			for(var/mob/living/L in T.contents)
+				if(ishuman(L))
+					var/mob/living/carbon/human/H = L
+					new /obj/effect/temp_visual/dir_setting/cult/phase(T, H.dir)
+					addtimer(CALLBACK(src, .proc/revive_target, H, i))
+				else if(!("apostle" in L.faction))
+					playsound(L.loc, 'sound/machines/clockcult/ark_damage.ogg', 50, TRUE, -1)
+					L.adjustFireLoss(holy_revival_damage)
+					to_chat(L, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
+		SLEEP_CHECK_DEATH(1.5)
+
+/mob/living/simple_animal/hostile/megafauna/apostle/proc/revive_target(mob/living/carbon/human/H, attack_range = 1)
+	if(!("apostle" in H.faction))
+		if(apostle_num < 13 && H.stat == DEAD && H.mind && world.time > last_revival_time + 5 SECONDS)
+			if(!H.client)
+				var/mob/dead/observer/ghost = H.get_ghost(TRUE, TRUE)
+				if(!ghost?.can_reenter_corpse) // If there is nobody able to control it - skip.
+					return
+				else // If it can reenter - do it.
 					H.grab_ghost(force = TRUE)
-					to_chat(H, "<span class='notice'>The holy light compels you to live!</span>")
-				else
-					H.adjustStaminaLoss(-200)
-					H.adjustBruteLoss(-holy_revival_damage)
-					H.adjustFireLoss(-holy_revival_damage)
-					H.regenerate_limbs()
-					H.regenerate_organs()
-					to_chat(H, "<span class='notice'>The holy light heals you!</span>")
+			H.regenerate_limbs()
+			H.regenerate_organs()
+			H.dna.species.GiveSpeciesFlight(H)
+			H.revive(full_heal = TRUE, admin_revive = FALSE)
+			// Giving the fancy stuff to new apostle
+			H.faction |= "apostle"
+			ADD_TRAIT(H, TRAIT_BOMBIMMUNE, SPECIES_TRAIT)
+			ADD_TRAIT(H, TRAIT_NOFIRE, SPECIES_TRAIT)
+			ADD_TRAIT(H, TRAIT_NOBREATH, SPECIES_TRAIT)
+			ADD_TRAIT(H, TRAIT_RESISTLOWPRESSURE, SPECIES_TRAIT)
+			ADD_TRAIT(H, TRAIT_RESISTCOLD, SPECIES_TRAIT)
+			ADD_TRAIT(H, TRAIT_NODISMEMBER, SPECIES_TRAIT)
+			to_chat(H, "<span class='notice'>You are protected by the holy light!</span>")
+			if(apostle_num < 12)
+				H.set_light_color(COLOR_VERY_SOFT_YELLOW)
+				H.set_light(4)
+				H.add_overlay(mutable_appearance('icons/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER))
+				var/mutable_appearance/apostle_halo = mutable_appearance('ModularTegustation/Teguicons/32x64.dmi', "halo", -HALO_LAYER)
+				H.overlays_standing[HALO_LAYER] = apostle_halo
+				H.apply_overlay(HALO_LAYER)
+			last_revival_time = world.time
+			SLEEP_CHECK_DEATH(20)
+			// Executing rapture scenario
+			switch(apostle_num)
+				if(1)
+					apostle_line = "And I tell you, you are [H.real_name] the apostle, and on this rock I will build my church, and the gates of hell shall not prevail against it."
+				if(2)
+					apostle_line = "Tell us, when will this happen, and what will be the sign of your coming and of the end of the age?"
+				if(3)
+					apostle_line = "Do you want us to call fire down from heaven to destroy them?"
+					apostle_prev = H.real_name
+				if(4)
+					apostle_line = "[apostle_prev] the apostle and [H.real_name] the apostle, to them he gave the name Boanerges, which means \"sons of thunder\""
+				if(5)
+					apostle_line = "[H.real_name] the apostle said, \"Show us the Father and that will be enough for us.\""
+				if(6)
+					apostle_line = "He saw a human named [H.real_name] the apostle. \"Follow me.\" he told him, and [H.real_name] got up and followed him."
+				if(7)
+					apostle_line = "Now for some time [H.real_name] the apostle had practiced sorcery and amazed all the people."
+				if(8)
+					apostle_line = "Then [H.real_name] the apostle said to the rest of disciples, \"Let us also go, that we may die with him.\""
+				if(9)
+					apostle_line = "Then [H.real_name] the apostle declared, \"You are the son of him, you are the king.\""
+				if(10)
+					apostle_line = "Then [H.real_name] the apostle said, \"But why do you intend to show yourself to us and not to the world?\""
+				if(11)
+					apostle_line = "From now on, let no one cause me trouble, for I bear on my body the marks of him."
+				if(12) //Here we go sicko mode
+					apostle_line = "Have I not chosen you, the Twelve? Yet one of you is a devil."
+					rapture_skill.Grant(src)
+			for(var/mob/M in GLOB.player_list)
+				if(M.z == z && M.client)
+					to_chat(M, "<span class='userdanger'>[apostle_line]</span>")
+					SEND_SOUND(M, 'ModularTegustation/Tegusounds/apostle/mob/apostle_bell.ogg')
+					flash_color(M, flash_color = "#FF4400", flash_time = 50)
+			var/datum/antagonist/apostle/new_apostle = new /datum/antagonist/apostle
+			new_apostle.number = apostle_num
+			H.mind.add_antag_datum(new_apostle)
+			apostle_num += 1
+			armour_penetration += 5
+			melee_damage_lower += 2
+			melee_damage_upper += 2
+			maxHealth += 50
+			health = maxHealth
+			holy_revival_damage += 1 // More damage and healing from AOE spell.
+			scream_power += 1 // Deafen them all. Destroy their ears.
+			light_range += 1 // More light, because why not.
+		else if((holy_revival_damage - attack_range) >= 1)
+			playsound(H.loc, 'sound/machines/clockcult/ark_damage.ogg', 50 - attack_range, TRUE, -1)
+			// The farther you are from white night - the less damage it deals
+			H.adjustFireLoss(holy_revival_damage - attack_range)
+			if((holy_revival_damage - attack_range) > 15)
+				H.emote("scream")
+			to_chat(H, "<span class='userdanger'>The holy light... IT BURNS!!</span>")
+	else
+		if(H.stat == DEAD && H.mind)
+			H.regenerate_limbs()
+			H.regenerate_organs()
+			H.dna.species.GiveSpeciesFlight(H)
+			H.revive(full_heal = TRUE, admin_revive = FALSE)
+			H.grab_ghost(force = TRUE)
+			to_chat(H, "<span class='notice'>The holy light compels you to live!</span>")
+		else
+			H.adjustStaminaLoss(-200)
+			H.adjustBruteLoss(-holy_revival_damage)
+			H.adjustFireLoss(-holy_revival_damage)
+			H.regenerate_limbs()
+			H.regenerate_organs()
+			to_chat(H, "<span class='notice'>The holy light heals you!</span>")
 
 /mob/living/simple_animal/hostile/megafauna/apostle/proc/fire_field()
 	if(fire_field_cooldown > world.time)
@@ -270,7 +293,7 @@ GLOBAL_LIST_EMPTY(apostles)
 	SLEEP_CHECK_DEATH(3)
 	for(var/i = 1 to field_range)
 		fire_zone = spiral_range_turfs(i, target_c) - spiral_range_turfs(i-1, target_c)
-		playsound(target_c, "explosion", 80, TRUE)
+		playsound(target_c, "explosion", 50, TRUE)
 		for(var/turf/open/T in fire_zone)
 			new /obj/effect/hotspot(T)
 			T.hotspot_expose(400, 30, 1)
@@ -285,7 +308,7 @@ GLOBAL_LIST_EMPTY(apostles)
 	if(scream_cooldown > world.time)
 		return
 	scream_cooldown = (world.time + scream_cooldown_base)
-	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_shout.ogg', 70, 1)
+	playsound(src, 'ModularTegustation/Tegusounds/apostle/mob/apostle_shout.ogg', 30, 1)
 	for(var/mob/living/carbon/C in get_hearers_in_view(6, src))
 		to_chat(C, "<span class='danger'>[src] shouts incredibly loud!</span>")
 		if("apostle" in C.faction)
@@ -293,7 +316,7 @@ GLOBAL_LIST_EMPTY(apostles)
 		shake_camera(C, 1, 2)
 		C.soundbang_act(1, scream_power, 4)
 		C.jitteriness += (scream_power * 0.5)
-		C.do_jitter_animation(jitteriness)
+		C.do_jitter_animation(C.jitteriness)
 		C.blur_eyes(scream_power * 0.3, 0.6)
 		C.stuttering += (scream_power)
 	if(apostle_num == 666)
@@ -301,7 +324,6 @@ GLOBAL_LIST_EMPTY(apostles)
 			L.on = TRUE
 			L.break_light_tube()
 			L.on = FALSE
-			stoplag()
 
 /mob/living/simple_animal/hostile/megafauna/apostle/proc/holy_blink(target)
 	if(blink_cooldown > world.time)
@@ -333,9 +355,6 @@ GLOBAL_LIST_EMPTY(apostles)
 	apostle_num = 666 // This is for special stuff in attacks
 	chosen_attack = 1 // To avoid rapture spam
 	to_chat(src, "<span class='userdanger'>You begin the final ritual...</span>")
-	holy_revival_cooldown_base = 8 SECONDS
-	fire_field_cooldown_base = 16 SECONDS
-	field_range += 1 // Powercrepe
 	for(var/mob/M in GLOB.player_list)
 		if(M.client) // Send it to every player currently active, not just everyone on Z-level
 			SEND_SOUND(M, 'ModularTegustation/Tegusounds/apostle/antagonist/rapture.ogg')
@@ -382,7 +401,11 @@ GLOBAL_LIST_EMPTY(apostles)
 		SLEEP_CHECK_DEATH(60)
 	SSshuttle.emergency.request(null, set_coefficient = 1) // People still can recall, if they think they can kill it.
 	SLEEP_CHECK_DEATH(300)
+	to_chat(src, "<span class='userdanger'>You feel stronger than ever...</span>")
+	holy_revival_range = 20 // Get fucked
+	fire_field_cooldown_base = 16 SECONDS
+	field_range += 1 // Powercrepe
 	add_filter("apostle", 1, rays_filter(size = 64, color = "#FFFF00", offset = 6, density = 16, threshold = 0.05))
 	for(var/mob/M in GLOB.player_list)
 		if(M.z == z && M.client)
-			SEND_SOUND(M, 'ModularTegustation/Tegusounds/apostle/antagonist/rapture2.ogg')
+			M.playsound_local(get_turf(M), 'ModularTegustation/Tegusounds/apostle/antagonist/rapture2.ogg', 50, 0)
