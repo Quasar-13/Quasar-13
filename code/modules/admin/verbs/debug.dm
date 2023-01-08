@@ -810,6 +810,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		return
 	if(alert(usr, "Are you absolutely sure you want to reload the configuration from the default path on the disk, wiping any in-round modificatoins?", "Really reset?", "No", "Yes") == "Yes")
 		config.admin_reload()
+		reset_badges()
 
 /// A debug verb to check the sources of currently running timers
 /client/proc/check_timer_sources()
