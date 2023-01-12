@@ -350,9 +350,8 @@
 
 
 /datum/antagonist/changeling/proc/create_initial_profile()
-	var/mob/living/carbon/C = owner.current	//only carbons have dna now, so we have to typecaste
-	if(ishuman(C))
-		add_new_profile(C)
+	if(ishuman(owner.current))
+		add_new_profile(owner.current, TRUE)
 
 /datum/antagonist/changeling/apply_innate_effects(mob/living/mob_override)
 	//Brains optional.

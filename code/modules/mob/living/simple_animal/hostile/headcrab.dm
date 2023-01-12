@@ -65,23 +65,24 @@
 		qdel(src)
 
 /obj/item/organ/body_egg/changeling_egg/proc/Pop()
-	var/mob/living/carbon/human/species/monkey/M = new(owner)
+	var/mob/living/carbon/human/spawned_monkey = new(owner)
+	spawned_monkey.set_species(/datum/species/monkey)
 
 	for(var/obj/item/organ/I in src)
-		I.Insert(M, 1)
+		I.Insert(spawned_monkey, 1)
 
 	if(origin && (origin.current ? (origin.current.stat == DEAD) : origin.get_ghost()))
-		origin.transfer_to(M)
+		origin.transfer_to(spawned_monkey)
 		var/datum/antagonist/changeling/C = origin.has_antag_datum(/datum/antagonist/changeling)
 		if(!C)
 			C = origin.add_antag_datum(/datum/antagonist/changeling/xenobio)
 		if(C.can_absorb_dna(owner))
-			C.add_new_profile(owner)
+			C.add_new_profile(owner, TRUE)
 
 		var/datum/action/changeling/humanform/hf = new
 		C.purchasedpowers += hf
 		C.regain_powers()
-		M.key = origin.key
+		spawned_monkey.key = origin.key
 	owner.gib()
 
 #undef EGG_INCUBATION_TIME
