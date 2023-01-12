@@ -14,7 +14,7 @@
 
 /obj/structure/closet/crate/necropolis/tendril/PopulateContents()
 
-	var/loot = rand(1,21)
+	var/loot = rand(1,22)
 	switch(loot)
 		if(1)
 			new /obj/item/shared_storage/red(src)
@@ -68,6 +68,39 @@
 			new /obj/item/bedsheet/cult(src)
 		if(21)
 			new /obj/item/clothing/neck/necklace/memento_mori(src)
+		if(22)
+			new /obj/item/clothing/suit/hooded/techpriest/armor/initiate
+			new /obj/item/clothing/head/hooded/techpriest/armor/initiate
+			new /obj/item/mechandrites
+
+//Techpriest Gear for Explorer
+/obj/item/clothing/suit/hooded/techpriest/armor/initiate
+	name = "initiate techpriest's robes"
+	desc = "The whirrs of gears call to you initate"
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/organ/regenerative_core/legion, /obj/item/kitchen/knife/combat/bone, /obj/item/kitchen/knife/combat/survival, /obj/item/gun/energy)
+	armor = list("melee" = 30, "bullet" = 10, "laser" = 20, "energy" = 30, "bomb" = 30, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 60)
+	hoodtype = /obj/item/clothing/head/hooded/techpriest/armor/plate
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/suit/hooded/techpriest/armor/initiate/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/hooded/techpriest/armor/initiate
+	name = "initiate techpriest's hood"
+	desc = "Let the Omnissiah grant you wisdom"
+	armor = list("melee" = 30, "bullet" = 10, "laser" = 20, "energy" = 30, "bomb" = 30, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 60)
+	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
+
+/obj/item/clothing/head/hooded/techpriest/armor/initiate/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 
 //KA modkit design discs
 /obj/item/disk/design_disk/modkit_disc

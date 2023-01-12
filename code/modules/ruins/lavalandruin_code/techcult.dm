@@ -157,6 +157,7 @@
 	l_pocket = /obj/item/kitchen/knife/combat/survival
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
 	id = /obj/item/card/id/away/techcult
+	backpack_contents = list(/obj/item/mechandrites)
 
 /obj/effect/mob_spawn/human/techcult/leader
 	name = "Leader of the Machine Cult"
@@ -187,7 +188,7 @@
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/night
 	r_hand = /obj/item/gun/energy/sniper
 	back = /obj/item/storage/backpack/cultpack
-	backpack_contents = list(/obj/item/storage/book/bible/omnissiah, /obj/item/book/granter/spell/omnissiah, /obj/item/organ/heart/cybernetic/tier4)
+	backpack_contents = list(/obj/item/storage/book/bible/omnissiah, /obj/item/book/granter/spell/omnissiah, /obj/item/organ/heart/cybernetic/tier4, /obj/item/mechandrites)
 
 /***************** Credo Omnissiah *****************/
 
@@ -572,3 +573,26 @@
 		reagent_names["[initial(reagent.name)] (Has Side-Effects)"] = reagent
 	else
 		reagent_names[initial(reagent.name)] = reagent
+
+//Mechandrites for the Mechanicus
+
+/obj/item/mechandrites
+	name = "\improper Mechandrite Implanter"
+	desc = "An implanter for mechandrites, allowing a follower of the Omnissiah to gain newly found dexterity and handiness"
+	icon = 'icons/obj/device.dmi'
+	icon_state = "autoimplanter"
+	var/uses = 1
+
+/obj/item/mechandrites/attack_self(mob/user)
+	if(!uses)
+		to_chat(user, "<span class='alert'>[src] has already been used. The tools are dull and won't reactivate.</span>")
+		return
+	var/limbs = user.held_items.len
+	user.change_number_of_hands(limbs+1)
+	user.visible_message("<span class='notice'>[user] presses a button on [src], and you hear a short mechanical noise.</span>", "<span class='notice'>You feel a sharp sting as [src] plunges into your body.</span>")
+	to_chat(user, "Your mechandrites whirr with life")
+	playsound(get_turf(user), 'sound/weapons/circsawhit.ogg', 50, TRUE)
+	if(uses == 1)
+		uses--
+	if(!uses)
+		desc = "[initial(desc)] Looks like it's been used up."
