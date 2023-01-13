@@ -383,6 +383,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["age"], age)
 	READ_FILE(S["hair_color"], hair_color)
 	READ_FILE(S["facial_hair_color"], facial_hair_color)
+	READ_FILE(S["grad_style"], grad_style)
+	READ_FILE(S["grad_color"], grad_color)
 	READ_FILE(S["eye_color"], eye_color)
 	READ_FILE(S["skin_tone"], skin_tone)
 	READ_FILE(S["hairstyle_name"], hairstyle)
@@ -516,6 +518,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["bee_wings"]	= sanitize_inlist(features["bee_wings"], GLOB.bee_wings_list)
 	features["tail_bee"]	= sanitize_inlist(features["tail_bee"], GLOB.bee_tails_list)
 	features["bee_antennae"] = sanitize_inlist(features["bee_antennae"], GLOB.bee_antennae_list)
+	grad_style	= sanitize_inlist(grad_style, GLOB.hair_gradients_list)
+	grad_color	= sanitize_hexcolor(grad_color, 6, FALSE)
 
 	persistent_scars = sanitize_integer(persistent_scars)
 
@@ -551,6 +555,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["skin_tone"]			, skin_tone)
 	WRITE_FILE(S["hairstyle_name"]			, hairstyle)
 	WRITE_FILE(S["facial_style_name"]			, facial_hairstyle)
+	WRITE_FILE(S["grad_style"]				, grad_style)
+	WRITE_FILE(S["grad_color"]				, grad_color)
 	WRITE_FILE(S["underwear"]			, underwear)
 	WRITE_FILE(S["underwear_color"]			, underwear_color)
 	WRITE_FILE(S["undershirt"]			, undershirt)

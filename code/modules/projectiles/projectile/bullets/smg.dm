@@ -38,6 +38,6 @@
 
 // 9x19mm (PP-95)
 
-/obj/projectile/bullet/c9x19mm
-	name = "9x19mm bullet"
-	damage = 10
+/obj/projectile/bullet/c9x18mm
+	name = "9x18mm bullet"
+	damage = 15

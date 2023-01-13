@@ -39,25 +39,86 @@
 //T-12
 /obj/item/gun/ballistic/automatic/t12
 	name = "T-12"
-	desc = "A standard assault rifle used by TerraGov military."
-	icon = 'ModularTegustation/Teguicons/48x32_guns.dmi'
+	desc = "A heavily modified version of the Vrax that is being used as SolGov's main LMG."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	lefthand_file = 'ModularTegustation/Teguicons/teguitems_hold_left.dmi'
 	righthand_file = 'ModularTegustation/Teguicons/teguitems_hold_right.dmi'
 	icon_state = "t12"
 	inhand_icon_state = "t12"
 	fire_sound = "gun_t12"
+	lock_back_sound = 'sound/weapons/gun/general/chunkyrack.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
 	base_pixel_x = -8
 	burst_size = 1
 	force = 14
 	actions_types = list()
 	mag_display = TRUE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
+	bolt_type = BOLT_TYPE_LOCKING
 	mag_type = /obj/item/ammo_box/magazine/t12
 
 /obj/item/gun/ballistic/automatic/t12/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
+/obj/item/gun/ballistic/automatic/autogun
+	name = "Vrax Battle Rifle"
+	desc = "A standard battle rifle used by the SolGov military."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "autogun"
+	inhand_icon_state = "l6m"
+	fire_sound = "gun_t12"
+	lock_back_sound = 'sound/weapons/gun/general/bolt_rack.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	base_pixel_x = -8
+	burst_size = 1
+	force = 12
+	actions_types = list()
+	mag_display = TRUE
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+	bolt_type = BOLT_TYPE_LOCKING
+	mag_type = /obj/item/ammo_box/magazine/autogun
+
+/obj/item/gun/ballistic/automatic/autogun/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
+/obj/item/gun/ballistic/automatic/l6magfed
+	name = "\improper L6-M HAR"
+	desc = "A heavy 5.56 rifle, designated the 'L6-M HAR'. Has 'Scarborough Arms - Opportuna Forore.' stamped on the receiver. Has a threaded barrel for suppressors."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "l6m"
+	inhand_icon_state = "l6m"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = 0
+	mag_type = /obj/item/ammo_box/magazine/m556
+	weapon_weight = WEAPON_HEAVY
+	burst_size = 1
+	can_suppress = TRUE
+	suppressor_x_offset = 9
+	spread = 4
+	pin = /obj/item/firing_pin/implant/pindicate
+	bolt_type = BOLT_TYPE_STANDARD
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	tac_reloads = TRUE
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+
+/obj/item/gun/ballistic/automatic/l6magfed/unrestricted
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/l6magfed/Initialize()
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
 
 //Surplus Rifle .45 ACP
 /obj/item/gun/ballistic/automatic/surplus/acp45
@@ -66,6 +127,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "surplus2"
 	mag_type = /obj/item/ammo_box/magazine/surplusrifle/acp45
+	bolt_type = BOLT_TYPE_LOCKING
 
 /obj/item/gun/ballistic/automatic/laser/burst
 	name = "L-807 Neo Laser Burst Rifle "

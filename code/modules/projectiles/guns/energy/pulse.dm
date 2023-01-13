@@ -3,7 +3,7 @@
 	desc = "A heavy-duty, multifaceted energy rifle with three modes. Preferred by front-line combat personnel."
 	icon_state = "pulse"
 	inhand_icon_state = null
-	worn_icon_state = null
+	worn_icon_state = "gun"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	modifystate = TRUE
@@ -11,6 +11,9 @@
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse, /obj/item/ammo_casing/energy/taser, /obj/item/ammo_casing/energy/laser)
 	cell_type = "/obj/item/stock_parts/cell/pulse"
+	can_flashlight = TRUE
+	flight_x_offset = 18
+	flight_y_offset = 12
 
 /obj/item/gun/energy/pulse/emp_act(severity)
 	return
@@ -32,15 +35,13 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/energy/pulse/carbine
-	name = "P-05 Pulse Rifle"
+	name = "P-05 Pulse Carbine"
 	desc = "A compact variant of the pulse rifle with less firepower but easier storage."
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
 	icon_state = "pulse_carbine"
-	worn_icon_state = "gun"
 	inhand_icon_state = null
 	cell_type = "/obj/item/stock_parts/cell/pulse/carbine"
-	can_flashlight = TRUE
 	flight_x_offset = 18
 	flight_y_offset = 12
 

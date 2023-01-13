@@ -2,24 +2,16 @@
 ////////PISTOLS////////
 ///////////////////////
 
-/obj/item/gun/ballistic/automatic/pistol/mk23
-	name = "Mark 23 SOCOM"
-	desc = "A pistol used by special forces across the galaxy."
-	icon_state = "mk23"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_type = /obj/item/ammo_box/magazine/m10mm
-	can_suppress = FALSE
-
 /obj/item/gun/ballistic/automatic/pistol/sig
-	name = "SIG Sauer P226"
-	desc = "A classic handgun that packs a slightly larger punch. Syndicate have modified this gun to fire a custom .38 cartridge, modified from the .357 SIG."
+	name = "K&H P337"
+	desc = "A modern version of the classic P226. Chambered in .38 to be more accessible to poor colonies."
 	icon_state = "sig"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/sig
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/ppk
-	name = "Type 64"
+	name = "MZ Type 64"
 	desc = "The classic Chinese handgun. Chambered in .38."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "ppk"
@@ -34,17 +26,27 @@
 	mag_type = /obj/item/ammo_box/magazine/m380
 	can_suppress = TRUE
 
-/obj/item/gun/ballistic/automatic/pistol/glock
-	name = "Glock 17"
-	desc = "The well known austrian pistol. Commonly used by law enforcement."
+/obj/item/gun/ballistic/automatic/pistol/woodmak
+	name = "wood grip makarov"
+	desc = "A classic soviet piece, wood grip included. Has a threaded barrel for suppressors."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	icon_state = "glock"
-	mag_type = /obj/item/ammo_box/magazine/glock
-	can_suppress = FALSE
+	icon_state = "woodmak"
+
+/obj/item/gun/ballistic/automatic/pistol/aps/wood
+	name = "wood grip stechkin APS"
+	desc = "An ancient 21st century recreation Stechkin APS. It fires quickly, but kicks like a mule. Uses 9mm ammo. Has a threaded barrel for suppressors."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "woodaps"
+
+//Syndie Pistols
+/obj/item/gun/ballistic/automatic/pistol/sig/syndie
+	name = "CSN C38-S"
+	desc = "A classic handgun that packs a nice punch. Cybersun have modified this gun to suit their needs."
+	icon_state = "sigs"
 
 /obj/item/gun/ballistic/automatic/pistol/glock/fullauto
-	name = "Glock 18"
-	desc = "The well known austrian pistol. This one is fully automatic, and may break your hand."
+	name = "CSN A18"
+	desc = "A Cybersun version of an 80s classic. This one is fully automatic, and may break your hand."
 	burst_size = 1
 	spread = 30
 	fire_delay = 0.5
@@ -53,7 +55,7 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
-//Sec Pistols
+//NT Pistols
 /obj/item/gun/ballistic/automatic/pistol/sec
 	name = "NT-MRS 'Venus'"
 	desc = "Re-creation of a unique and fancy firearm. Used by lower ranking commissioned officers and high-ranking security staff."
@@ -62,12 +64,28 @@
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_suppress = FALSE
 
-
 /obj/item/gun/ballistic/automatic/pistol/commander
-	name = "NT-RBY 'Commander'"
+	name = "NT-RBY 'Ruby'"
 	desc = "A modernised version of the 1911. Feeds 9mm instead of the classic .45 ACP. Sometimes seen in the hands of NT security personnel but more commononly sold on the open market."
 	icon_state = "commander"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/mk23
+	name = "NT-SCM 'SOCOM'"
+	desc = "A pistol used by NT special forces and occasionally marines."
+	icon_state = "mk23"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	mag_type = /obj/item/ammo_box/magazine/m10mm
+	can_suppress = TRUE
+	suppressor_x_offset = 7
+
+/obj/item/gun/ballistic/automatic/pistol/glock
+	name = "NT-GLK 'Glock'"
+	desc = "An NT version of an 80s classic. Commonly used by SolGov law enforcement."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "glock"
+	mag_type = /obj/item/ammo_box/magazine/glock
 	can_suppress = FALSE
 
 //PL-14
