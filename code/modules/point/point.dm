@@ -32,6 +32,7 @@
 		"thought_bubble",
 		layer = POINT_LAYER,
 	)
+	thought_bubble.appearance_flags = KEEP_APART
 
 	var/mutable_appearance/pointed_atom_appearance = new(pointed_atom.appearance)
 	pointed_atom_appearance.blend_mode = BLEND_INSET_OVERLAY
