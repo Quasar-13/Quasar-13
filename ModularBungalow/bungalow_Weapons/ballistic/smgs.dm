@@ -12,7 +12,7 @@
 
 /obj/item/gun/ballistic/automatic/uzi/kepler
 	name = "SG-US1 'Uzi'"
-	desc = "A lightweight, fully automatic submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	desc = "A lightweight, fully automatic submachine gun used by the Kepler Security Forces."
 	icon_state = "keplerminiuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	bolt_type = BOLT_TYPE_OPEN
