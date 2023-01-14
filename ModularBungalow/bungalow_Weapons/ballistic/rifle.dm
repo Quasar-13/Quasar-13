@@ -256,7 +256,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/m4
 	name = "K&H Chopper"
-	desc = "An old world assault rifle based on the M4A4, full auto capable. Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
+	desc = "An old world assault rifle based on the M4A4, Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "m4"
 	inhand_icon_state = "hk21"
@@ -264,13 +264,9 @@
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 2
-	burst_size = 1
+	fire_delay = 0.8
+	burst_size = 2
 	spread = 2.4
-
-/obj/item/gun/ballistic/automatic/ar/m4/Initialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar/m4/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -280,11 +276,9 @@
 			burst_size = initial(burst_size)
 			fire_delay = initial(fire_delay)
 			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
-			AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
 		if(1)
 			select = 0
-			fire_delay = 0.8
-			RemoveComponent(/datum/component/automatic_fire)
+			fire_delay = 0.5
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
