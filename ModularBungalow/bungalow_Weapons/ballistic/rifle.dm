@@ -245,7 +245,7 @@
 		if(1)
 			select = 0
 			burst_size = 1
-			fire_delay = 1.8
+			fire_delay = 0.8
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
