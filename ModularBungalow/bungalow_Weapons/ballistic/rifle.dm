@@ -272,6 +272,24 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
 
+/obj/item/gun/ballistic/automatic/ar/m4/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
+			AddComponent(/datum/component/automatic_fire, 0.22 SECONDS)
+		if(1)
+			select = 0
+			fire_delay = 0.8
+			RemoveComponent(/datum/component/automatic_fire)
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
 /obj/item/gun/ballistic/automatic/ar/hk21/m38
 	name = "\improper KT-OS45 'Pertinacious'"
 	desc = "Developed extremely late into the war, the KT-OS45 is a belt-fed heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"
