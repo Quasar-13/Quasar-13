@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/automatic/uzi
-	name = "SG-US1 'Uzi'"
+	name = "Uzi"
 	desc = "A lightweight, fully automatic submachine gun, for when you really want someone dead. Uses 9mm rounds."
-	icon_state = "keplerminiuzi"
+	icon_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	bolt_type = BOLT_TYPE_OPEN
 	burst_size = 1
