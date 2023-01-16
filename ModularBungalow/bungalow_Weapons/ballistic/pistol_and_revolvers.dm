@@ -135,6 +135,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	fire_delay = 1.6
 	burst_size = 3
+	mag_type = /obj/item/ammo_box/magazine/m9mm_aps
 
 /obj/item/gun/ballistic/automatic/pistol/m93r/burst_select()
 	var/mob/living/carbon/human/user = usr
