@@ -112,29 +112,37 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver produced by Kepler Technology. The strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver produced by Kepler Technology. There's a safety mechanism preventing you from firing it one handed, the strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	initial_caliber = CALIBER_A556
 	projectile_damage_multiplier = 1.5
-	recoil = 4
+	recoil = 6
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
+	fire_delay = 3.5
+
+//Your short barreled
+/obj/item/gun/ballistic/revolver/akira/specop
+	name = "SG-V35 'Law Left hand'"
+	desc = "A sol gov reproduction of the rare Vixen-31 handgun, much shorter barrel allows ease of storage and concealment. Less muzzle velocity but it maintains lethality nonetheless. Still chambered in the .223 Remington and should be compatible with most ammo made afterward."
+	icon_state = "redgrip"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	projectile_damage_multiplier = 1.2
+	recoil = 2
+	weapon_weight = WEAPON_LIGHT
+	fire_delay = 0 //FIRE AT WILL MOTHERFUCKER
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_A556
 	max_ammo = 6
 
-/obj/item/gun/ballistic/revolver/akira/Initialize()
-	. = ..()
-	fire_delay = 3.5
-//Yet another gun our kitsune would've used
 //Albeit less succesfully
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = "KT-M35 Avtomag"
-	desc = "A special pistol made to fire .357 AMP, although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
+	desc = "A special pistol made to fire .44 AMP, although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
 	icon_state = "avtomag"
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
@@ -155,7 +163,7 @@
 //Taurus Judge
 /obj/item/gun/ballistic/revolver/judge
 	name = "SG-S14 'Judge'"
-	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon in courtroom outside of it. It hold six shotgun shells, should be more than enough to kill anything that move."
+	desc = "The classic high-powered revolver made in brazil, Typically used by judges as personal defenses weapon both courtroom and outside of it. It hold six shotgun shells, should be more than enough to kill anything that move."
 	icon_state = "judge"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revjudge
@@ -176,10 +184,10 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	initial_caliber = CALIBER_38
 
-//Sequoia
+//Magnum Research Sequoia from New Vegas
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "Commander's Sequoia Pistol"
-	desc = "A pistol for solgov commander made in Romulus by Kepler Technology. It has come a long way since then and it's now in your hand, chambered in the obsolete .45-70. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them. Beautifully decorated in gold with wooden finishes and engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
+	desc = "A pistol for solgov commander made in Romulus by Kepler Technology, fighting against all tyrant it has come a long way since then and it's now in your hand, chambered in the obsolete .45-70 Government. Extremely overpowered and would easily shred anything that dares piss you off, don't waste your ammo. Only 20000 of these were ever made and you are lucky to have one of them. Beautifully decorated in gold with wooden finishes and engraved on the bottom is <b>'Thank you for your 20 years of service'</b>"
 	icon_state = "sequoia"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
@@ -188,11 +196,11 @@
 	pb_knockback = 5
 	initial_caliber = CALIBER_A4570
 
-//SW Model 29
+//Smith and Wesson Model 29
 
 /obj/item/gun/ballistic/revolver/modeltwentynine
 	name = "S&W Model 29"
-	desc = "An interesting rare revolver chambered in .44 magnum, most likely brought in by Sol Government Rangers during the frontier era, or possibly brought in by you. Hope you got an idea on how to get more ammo in this place"
+	desc = "An interesting rare revolver chambered in .44 magnum, the most powerful handgun cartridges available to the colonist, Do you feel lucky?"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
@@ -219,7 +227,7 @@
 
 //Single Action Revolver Here
 
-//LONG 45-70
+//Magnum Research BFR
 /obj/item/gun/ballistic/shotgun/tracker
 	name = "SG-R29 'Tracker'"
 	desc = "A horrifyingly powerful single action revolver made specifically for the anti-riot Rangers, fire extremely high powered .45-70 normally meant for fighting heavily armored wildlife in the region."
