@@ -18,6 +18,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 
 /obj/item/gun/ballistic/automatic/uzi/Initialize()
 	. = ..()

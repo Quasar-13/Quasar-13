@@ -210,14 +210,16 @@
 	switch(select)
 		if(0)
 			select = 1
-			burst_size = initial(burst_size)
+			spread = initial(spread)
 			fire_delay = initial(fire_delay)
+			projectile_damage_multiplier = initial(projectile_damage_multiplier)
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 		if(1)
 			select = 0
-			burst_size = 3
-			fire_delay = 2.5
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd fan fire.</span>")
+			spread = 30
+			fire_delay = 1.5
+			projectile_damage_multiplier = 1.15 //fanfiring it obviously reducethe damage due to you forcing the gun to fire faster than it should
+			to_chat(user, "<span class='notice'>You switch to fan fire.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
 	return

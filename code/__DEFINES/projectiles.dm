@@ -15,7 +15,7 @@
 #define CALIBER_46X30MM		"4.6x30mm"
 /// The caliber used by the [plastikov SMG][/obj/item/gun/ballistic/automatic/plastikov].
 #define CALIBER_9X18MM		"9x18mm"
-/// The caliber used by the Nanotrasen Saber SMG, and Type U3 Uzi. Also used as the default caliber for pistols but only the stechkin APS machine pistol doesn't override it.
+/// The caliber used by the Nanotrasen Saber SMG, and Uzi. Also used as the default caliber for pistols but only the stechkin APS machine pistol doesn't override it.
 #define CALIBER_9MM			"9mm"
 /// The caliber used as the default for ballistic guns. Only not overridden for the [surplus rifle][/obj/item/gun/ballistic/automatic/surplus].
 #define CALIBER_10MM		"10mm"
