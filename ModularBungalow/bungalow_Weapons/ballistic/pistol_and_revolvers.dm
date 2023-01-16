@@ -112,7 +112,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver produced by Kepler Technology. There's a safety mechanism preventing you from firing it one handed, the strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver produced by Colt. There's a safety mechanism preventing you from firing it one handed, the strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
@@ -124,14 +124,25 @@
 	fire_delay = 3.5
 
 //Your short barreled
-/obj/item/gun/ballistic/revolver/akira/specop
-	name = "SG-V35 'Law Left hand'"
-	desc = "A sol gov reproduction of the rare Vixen-31 handgun, much shorter barrel allows ease of storage and concealment. Less muzzle velocity but it maintains lethality nonetheless. Still chambered in the .223 Remington and should be compatible with most ammo made afterward."
+/obj/item/gun/ballistic/revolver/akira/snub
+	name = "colt detective special redgrip"
+	desc = "What a nice looking gun I hope it will not get used for genocide, chambered in 5.56x45 NATO  for some odd reason"
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	initial_caliber = CALIBER_A556
 	projectile_damage_multiplier = 1.2
-	recoil = 2
+	recoil = 3
+	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 	weapon_weight = WEAPON_LIGHT
+	fire_delay = 1
+
+//Marsoc Variant
+/obj/item/gun/ballistic/revolver/akira/snub/specop
+	name = "SG-V35 'Law Left hand'"
+	desc = "A sol gov reproduction of the rare Vixen-31 handgun, much shorter barrel allows ease of storage and concealment. Less muzzle velocity but it maintains lethality nonetheless. Still chambered in the .223 Remington and should be compatible with most ammo made afterward."
+	icon_state = "redgripspecop"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	projectile_damage_multiplier = 1.3
 	fire_delay = 0 //FIRE AT WILL MOTHERFUCKER
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
