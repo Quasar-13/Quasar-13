@@ -150,7 +150,7 @@
 	caliber = CALIBER_A556
 	max_ammo = 6
 
-//Albeit less succesfully
+//Albeit less succesfully heres the AUTOMAG
 /obj/item/gun/ballistic/automatic/pistol/avtomag
 	name = "KT-M35 Avtomag"
 	desc = "A special pistol made to fire .44 AMP, although the gun ceased production a long time ago, a certain factory still produce it, Now seen in the hands of certain high ranking kepler officer and solgov officers alike. <b>Do you feel lucky? NO I DON'T, NOT ANYMORE</b>."
@@ -158,7 +158,7 @@
 	icon = 'ModularTegustation/Teguicons/kirie_stuff/kiriepistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/avtomag
 
-
+//Delta M1911
 /obj/item/gun/ballistic/automatic/pistol/m45a1
 	name = "KT-P23 'Dusker'"
 	desc = "A heavy duty pistol chambered in .45 ACP, it's got a rather decieving appearance as it's actually quite powerful, the gun itself is infact an upgraded M1911."
@@ -167,6 +167,34 @@
 	mag_type = /obj/item/ammo_box/magazine/m45/big
 	projectile_damage_multiplier = 1.15
 	fire_delay = 2
+
+//M93R and AJM9 Here
+/obj/item/gun/ballistic/automatic/pistol/m93r
+	name = "M93R"
+	desc = "an Italian selective-fire machine pistol, designed and manufactured by Beretta in the late 1970s for police and military use."
+	icon_state = "M93R"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	fire_delay = 1.6
+	burst_size = 3
+
+/obj/item/gun/ballistic/automatic/pistol/m93r/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 0.8
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
+
 ////////////////////
 //////REVOLVERS////
 ///////////////////
