@@ -121,7 +121,42 @@
 	recoil = 6
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
-	fire_delay = 3.5
+	fire_delay = 3
+	var/select = 1
+	var/selector_switch_icon = FALSE
+
+/obj/item/gun/ballistic/revolver/akira/update_overlays()
+	. = ..()
+	if(!selector_switch_icon)
+		return
+	if(!select)
+		. += "[initial(icon_state)]_semi"
+	if(select == 1)
+		. += "[initial(icon_state)]_burst"
+
+/obj/item/gun/ballistic/revolver/akira/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_firemode))
+		burst_select()
+	else
+		..()
+
+/obj/item/gun/ballistic/revolver/akira/proc/burst_select()
+	var/mob/living/carbon/human/user = usr
+	select = !select
+	if(!select)
+		burst_size = 2
+		fire_delay = 2.5
+		to_chat(user, "<span class='notice'>You switch to [burst_size]-round fan fire.</span>")
+	else
+		burst_size = initial(burst_size)
+		fire_delay = initial(fire_delay)
+		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub
