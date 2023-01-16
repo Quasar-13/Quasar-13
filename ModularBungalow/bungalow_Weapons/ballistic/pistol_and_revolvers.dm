@@ -123,6 +123,23 @@
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
 	fire_delay = 3.5
 
+/obj/item/gun/ballistic/automatic/ar/m16/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd fan-fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 6
+			fire_delay = 2
+			to_chat(user, "<span class='notice'>You switch to aimed shot.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub
 	name = "colt detective special redgrip"
