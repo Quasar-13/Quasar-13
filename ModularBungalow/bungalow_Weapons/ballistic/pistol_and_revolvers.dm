@@ -141,6 +141,21 @@
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
 
+/obj/item/gun/ballistic/revolver/akira/update_overlays()
+	. = ..()
+	if(!selector_switch_icon)
+		return
+	if(!select)
+		. += "[initial(icon_state)]_semi"
+	if(select == 1)
+		. += "[initial(icon_state)]_burst"
+
+/obj/item/gun/ballistic/revolver/akira/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_firemode))
+		burst_select()
+	else
+		..()
+
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub
 	name = "colt detective special redgrip"
