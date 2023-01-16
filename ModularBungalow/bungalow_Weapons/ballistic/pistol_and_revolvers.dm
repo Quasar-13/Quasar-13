@@ -123,46 +123,6 @@
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
 	fire_delay = 3.5
 
-/obj/item/gun/ballistic/revolver/akira/proc/burst_select()
-	var/mob/living/carbon/human/user = usr
-	select = !select
-	if(!select)
-		burst_size = 1
-		fire_delay = 0
-		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
-	else
-		burst_size = initial(burst_size)
-		fire_delay = initial(fire_delay)
-		to_chat(user, "<span class='notice'>You switch to [burst_size]-round burst.</span>")
-
-	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
-	update_icon()
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.UpdateButtonIcon()
-
-/obj/item/gun/ballistic/revolver/akira/burst_select()
-	var/mob/living/carbon/human/user = usr
-	switch(select)
-		if(0)
-			select = 1
-			burst_size = initial(burst_size)
-			fire_delay = initial(fire_delay)
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd fan-fire.</span>")
-		if(1)
-			select = 2
-			burst_size = 2
-			fire_delay = 2
-			to_chat(user, "<span class='notice'>You switch to full cylinder fan-fire.</span>")
-		if(2)
-			select = 0
-			burst_size = 6
-			fire_delay = 2
-			to_chat(user, "<span class='notice'>You switch to single shot.</span>")
-	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
-	update_icon()
-	return
-
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub
 	name = "colt detective special redgrip"
