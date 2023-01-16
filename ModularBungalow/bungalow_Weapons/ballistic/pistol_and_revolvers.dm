@@ -177,13 +177,13 @@
 	var/mob/living/carbon/human/user = usr
 	select = !select
 	if(!select)
-		burst_size = 2
-		fire_delay = 2.5
-		to_chat(user, "<span class='notice'>You switch to [burst_size]-round fan fire.</span>")
+		burst_size = 1
+		fire_delay = 0
+		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	else
 		burst_size = initial(burst_size)
 		fire_delay = initial(fire_delay)
-		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+		to_chat(user, "<span class='notice'>You switch to [burst_size]-round fan fire.</span>")
 
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
@@ -204,8 +204,23 @@
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
 	fire_delay = 3
-	var/select = 1
-	var/selector_switch_icon = FALSE
+
+/obj/item/gun/ballistic/revolver/akira/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+		if(1)
+			select = 0
+			burst_size = 3
+			fire_delay = 2.5
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd fan fire.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
 
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub

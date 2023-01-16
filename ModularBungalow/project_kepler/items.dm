@@ -495,7 +495,7 @@
 		))
 
 /obj/item/storage/pouch/marsoc_tools_command/PopulateContents()
-	new /obj/item/gun/ballistic/(src)
+	new /obj/item/gun/ballistic/pistol(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
