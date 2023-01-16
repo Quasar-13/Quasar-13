@@ -205,6 +205,7 @@
 	fire_sound = 'sound/weapons/gun/revolver/shot_altp.ogg'
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
 	fire_delay = 3
+	inhand_icon_state = "redgrip"
 
 /obj/item/gun/ballistic/revolver/akira/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -296,8 +297,26 @@
 	desc = "An interesting rare revolver chambered in .44 magnum, the most powerful handgun cartridges available to the colonist, Do you feel lucky?"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "magnum"
+	fire_delay = 2
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	initial_caliber = CALIBER_44
+
+/obj/item/gun/ballistic/revolver/modeltwentynine/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			spread = initial(spread)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+		if(1)
+			select = 0
+			spread = 30
+			fire_delay = 1
+			to_chat(user, "<span class='notice'>You switch to fan fire.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	ammo_type = /obj/item/ammo_casing/a44
