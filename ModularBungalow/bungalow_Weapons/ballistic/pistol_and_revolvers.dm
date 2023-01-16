@@ -123,6 +123,8 @@
 	weapon_weight = WEAPON_HEAVY //Balance reason, you can actually fire a .45-70 revolver one handed and hit a target up to 100 meters just fine.
 	fire_delay = 3.5
 
+
+
 //Your short barreled
 /obj/item/gun/ballistic/revolver/akira/snub
 	name = "colt detective special redgrip"
