@@ -129,14 +129,14 @@
 
 //M93R and AJM9 Here
 /obj/item/gun/ballistic/automatic/pistol/m93r
-	name = "M93R"
+	name = "m93r"
 	desc = "an Italian selective-fire machine pistol, designed and manufactured by Beretta in the late 1970s for police and military use."
-	icon_state = "M93R"
+	icon_state = "m93r"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	fire_delay = 1.6
 	burst_size = 3
 
-/obj/item/gun/ballistic/automatic/pistol/m39r/burst_select()
+/obj/item/gun/ballistic/automatic/pistol/m93r/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)

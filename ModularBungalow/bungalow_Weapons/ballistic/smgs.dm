@@ -13,12 +13,13 @@
 /obj/item/gun/ballistic/automatic/uzi/kepler
 	name = "SG-US1 'Uzi'"
 	desc = "A lightweight, fully automatic submachine gun used by the Kepler Security Forces."
-	icon_state = "keplerminiuzi"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "miniuzikepler"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	bolt_type = BOLT_TYPE_OPEN
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+
 
 /obj/item/gun/ballistic/automatic/uzi/Initialize()
 	. = ..()
