@@ -200,7 +200,7 @@
 	fire_delay = 1.6
 	burst_size = 3
 
-/obj/item/gun/ballistic/automatic/pistol/m93r/burst_select()
+/obj/item/gun/ballistic/automatic/pistol/m39r/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)
@@ -211,7 +211,7 @@
 		if(1)
 			select = 0
 			burst_size = 1
-			fire_delay = 0.8
+			fire_delay = 0
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
