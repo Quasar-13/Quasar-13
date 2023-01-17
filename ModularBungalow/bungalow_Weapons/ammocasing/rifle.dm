@@ -122,9 +122,10 @@
 /obj/projectile/bullet/a50bwf
 	name =".50 beowulf bullet"
 	speed = 0.4
-	damage = 45
-	paralyze = 10
+	damage = 50
+	paralyze = 5
 	armour_penetration = 25
+	knockdown = 5
 	var/breakthings = TRUE
 
 /obj/projectile/bullet/a50bwf/on_hit(atom/target, blocked = FALSE)
