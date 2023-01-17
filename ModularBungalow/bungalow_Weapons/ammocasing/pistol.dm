@@ -42,7 +42,7 @@
 	wound_bonus = -70
 	ricochets_max = 5
 	ricochet_chance = 100
-	ricochet_auto_aim_angle = 50
+	ricochet_auto_aim_angle = 60
 	ricochet_auto_aim_range = 6
 	ricochet_incidence_leeway = 80
 	ricochet_decay_chance = 1
