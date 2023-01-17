@@ -215,7 +215,7 @@
 			spread = initial(spread)
 			fire_delay = initial(fire_delay)
 			projectile_damage_multiplier = initial(projectile_damage_multiplier)
-			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+			to_chat(user, "<span class='notice'>You switch to charged shot.</span>")
 		if(1)
 			select = 0
 			spread = 30

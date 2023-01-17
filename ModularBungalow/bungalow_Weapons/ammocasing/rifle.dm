@@ -102,7 +102,7 @@
 		var/mob/living/carbon/human/targetHuman = target
 		targetHuman.reagents.add_reagent(/datum/reagent/toxin, 10)
 	else
-	damage = 50
+		damage = 50
 
 /obj/item/ammo_casing/a556/highp
 	projectile_type = /obj/projectile/bullet/a556/highp
