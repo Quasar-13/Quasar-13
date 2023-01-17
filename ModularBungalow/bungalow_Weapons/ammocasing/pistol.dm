@@ -80,3 +80,4 @@
 		icon_state = "double45-0"
 	else
 		icon_state = "double45-14"
+

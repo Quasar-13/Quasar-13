@@ -17,7 +17,7 @@
 
 /obj/projectile/bullet/a762
 	name = "7.62 bullet"
-	damage = 60
+	damage = 50
 	armour_penetration = 10
 	wound_bonus = -45
 	wound_falloff_tile = 0

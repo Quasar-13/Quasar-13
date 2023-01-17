@@ -112,3 +112,24 @@
 	armour_penetration = 40
 	wound_bonus = 20
 	stamina = 30
+
+/obj/item/ammo_casing/a50bwf
+	name = ".50 beowulf bullet casing"
+	desc = "A .50 beowulfe bullet casing."
+	caliber = CALIBER_50
+	projectile_type = /obj/projectile/bullet/a50bwf
+
+/obj/projectile/bullet/a50bwf
+	name =".50 beowulf bullet"
+	speed = 0.4
+	damage = 45
+	paralyze = 10
+	armour_penetration = 25
+	var/breakthings = TRUE
+
+/obj/projectile/bullet/a50bwf/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(ismovable(target))
+		var/atom/movable/M = target
+		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
+		M.safe_throw_at(throw_target, 2, 1)
