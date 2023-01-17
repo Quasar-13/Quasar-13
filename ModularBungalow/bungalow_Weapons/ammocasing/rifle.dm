@@ -71,7 +71,7 @@
 /obj/item/ammo_casing/a556/pl
 	projectile_type = /obj/projectile/bullet/a556/pl
 /obj/projectile/bullet/a556/pl
-	name = "5.56mm bullet"
+	name = "5.56mm police load bullet"
 	damage = 20
 	stamina = 50
 	armour_penetration = -30
@@ -88,7 +88,7 @@
 /obj/item/ammo_casing/a556/sk
 	projectile_type = /obj/projectile/bullet/a556/sk
 /obj/projectile/bullet/a556/sk
-	name = "5.56mm bullet"
+	name = "5.56mm silent killer bullet"
 	damage = 13
 	armour_penetration = 10
 	wound_bonus = -70
@@ -107,7 +107,7 @@
 /obj/item/ammo_casing/a556/highp
 	projectile_type = /obj/projectile/bullet/a556/highp
 /obj/projectile/bullet/a556/highp
-	name = "5.56mm bullet"
+	name = "5.56mm high power bullet"
 	damage = 45
 	armour_penetration = 40
 	wound_bonus = 20

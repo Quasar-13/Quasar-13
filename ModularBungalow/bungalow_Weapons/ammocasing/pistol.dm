@@ -38,7 +38,7 @@
 /obj/projectile/bullet/a44
 	name = "44 Magnum bullet"
 	damage = 44 //because funny
-	armour_penetration = 60
+	armour_penetration = 80
 	wound_bonus = -70
 	ricochets_max = 5
 	ricochet_chance = 100
@@ -46,6 +46,27 @@
 	ricochet_auto_aim_range = 6
 	ricochet_incidence_leeway = 80
 	ricochet_decay_chance = 1
+
+/obj/item/ammo_casing/a44/heavy
+	name = "44 heavy magnum bullet"
+	desc = "High Power heavy .44 Magnum Round, will knock target back"
+	projectile_type = /obj/projectile/bullet/a44/heavy
+
+/obj/projectile/bullet/a44/heavy
+	name = "44 Magnum bullet"
+	damage = 33
+	armour_penetration = 100
+	wound_bonus = 60
+	paralyze = 15
+	knockdown = 80
+	hitsound = 'sound/effects/meteorimpact.ogg'
+
+/obj/projectile/bullet/a44/heavy/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(ismovable(target))
+		var/atom/movable/M = target
+		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
+		M.safe_throw_at(throw_target, 3, 2)
 
 /obj/item/ammo_box/magazine/m45/big
 	name = "Double stack .45 ACP Magazine"
