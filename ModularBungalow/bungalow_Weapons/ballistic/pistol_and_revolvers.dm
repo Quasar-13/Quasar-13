@@ -180,7 +180,7 @@
 	if(!select)
 		burst_size = 1
 		fire_delay = 0
-		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+		to_chat(user, "<span class='notice'>You switch to single shot.</span>")
 	else
 		burst_size = initial(burst_size)
 		fire_delay = initial(fire_delay)
@@ -195,7 +195,7 @@
 //Colt Detective Special Ivory. a gun used by the kitsune
 /obj/item/gun/ballistic/revolver/akira
 	name = "Vixen 31 'Red Right Hand'"
-	desc = "An ornate special revolver produced by Colt. There's a safety mechanism preventing you from firing it one handed, the strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
+	desc = "An ornate special revolver produced by Colt. There's a safety mechanism preventing you from firing it one handed but you might be able to fan fire it, the strange built in barrel charger decreases firerate and accuracy but immensely increase damage output. Chambered in .223 Remington and should be compatible with most ammo made around that, requires two hand to fire as a safety precaution. A mysterious gun developed prior to the occult war and used by New Moscow Snow Ranger Department. It faintly smells of cinnamon and sake. There's an engraving of a nine tailed fox curled up and resting."
 	icon_state = "redgrip"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556

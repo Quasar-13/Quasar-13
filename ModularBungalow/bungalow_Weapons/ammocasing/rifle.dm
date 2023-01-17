@@ -57,7 +57,7 @@
 //CUSTOM KEPLER STUFF BELOW
 
 /obj/item/ammo_box/magazine/m556/big
-	name = "5.56 expanded magazine"
+	name = "5.56 50 round box magazine"
 	icon_state = "556big-50"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 	max_ammo = 50
@@ -73,18 +73,36 @@
 /obj/projectile/bullet/a556/pl
 	name = "5.56mm bullet"
 	damage = 20
-	stamina = 59
+	stamina = 50
 	armour_penetration = -30
 	wound_bonus = -20
+	armour_penetration = 60
+	wound_bonus = -70
+	ricochets_max = 5
+	ricochet_chance = 140
+	ricochet_auto_aim_angle = 50
+	ricochet_auto_aim_range = 6
+	ricochet_incidence_leeway = 80
+	ricochet_decay_chance = 1
 
 /obj/item/ammo_casing/a556/sk
 	projectile_type = /obj/projectile/bullet/a556/sk
 /obj/projectile/bullet/a556/sk
 	name = "5.56mm bullet"
-	damage = 22
-	armour_penetration = 17
-	wound_bonus = 5
-	stamina = 20
+	damage = 13
+	armour_penetration = 10
+	wound_bonus = -70
+	eyeblur = 20
+	knockdown = 5
+	slur = 50
+
+/obj/projectile/bullet/a556/sk/on_hit(atom/target, blocked)
+	. = ..()
+	if(ishuman(target))
+		var/mob/living/carbon/human/targetHuman = target
+		targetHuman.reagents.add_reagent(/datum/reagent/toxin, 10)
+	else
+	damage = 50
 
 /obj/item/ammo_casing/a556/highp
 	projectile_type = /obj/projectile/bullet/a556/highp

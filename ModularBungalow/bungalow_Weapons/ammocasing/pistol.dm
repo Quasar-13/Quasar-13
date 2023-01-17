@@ -24,10 +24,10 @@
 
 /obj/projectile/bullet/a4570
 	name = "45-70 Govt bullet"
-	damage = 40
-	armour_penetration = 45
-	wound_bonus = 35
-	stamina = 25
+	damage = 43
+	armour_penetration = 80
+	wound_bonus = 50
+	stamina = 50
 
 /obj/item/ammo_casing/a44
 	name = "44 magnum bullet"
@@ -37,9 +37,15 @@
 
 /obj/projectile/bullet/a44
 	name = "44 Magnum bullet"
-	damage = 34
-	armour_penetration = 30
-	wound_bonus = 25
+	damage = 44 //because funny
+	armour_penetration = 60
+	wound_bonus = -70
+	ricochets_max = 5
+	ricochet_chance = 100
+	ricochet_auto_aim_angle = 50
+	ricochet_auto_aim_range = 6
+	ricochet_incidence_leeway = 80
+	ricochet_decay_chance = 1
 
 /obj/item/ammo_box/magazine/m45/big
 	name = "Double stack .45 ACP Magazine"
