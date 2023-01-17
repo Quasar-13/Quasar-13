@@ -29,7 +29,7 @@
 	new /obj/item/clothing/under/syndicate/camo/snow(src)
 	new /obj/item/clothing/suit/armor/vest/solgov(src)
 	new /obj/item/clothing/head/helmet/solgov(src)
-	new /obj/item/gun/ballistic/automatic/ar/hk21(src)
+	new /obj/item/gun/ballistic/automatic/ar/m16(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
@@ -41,18 +41,18 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
+
 /obj/item/storage/box/soldier_marksman
 	name = "Marksman Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
+
 /obj/item/storage/box/soldier_marksman
 /obj/item/storage/box/soldier_marksman/PopulateContents()
-	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/gun/ballistic/automatic/sniper_rifle/borrifle(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/ammo_box/speedloader/a357/match(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
 	new /obj/item/ammo_box/magazine/m45(src)
@@ -61,7 +61,7 @@
 
 
 /obj/item/storage/box/soldier_standard
-	name = "Standard Military Kit"
+	name = "Standard Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 /obj/item/storage/box/soldier_standard/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/uzi(src)
@@ -92,11 +92,11 @@
 
 
 /obj/item/storage/box/soldier_grenadier
-	name = "Grenadier Box Kit"
+	name = "Grenade Specialist Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_grenadier/PopulateContents()
-	new /obj/item/gun/grenadelauncher(src)
+	new /obj/item/gun/grenadelauncher/marsoc(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/head/bio_hood/security(src)
 	new /obj/item/clothing/suit/bio_suit/security(src)
@@ -111,12 +111,13 @@
 
 
 /obj/item/storage/box/soldier_sar
-	name = "Search and Rescue Box Kit"
+	name = "Search & Rescue Box Kit"
 	desc = "Everything you need in a neat little box, fold after usage."
 
 /obj/item/storage/box/soldier_sar/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
 	new /obj/item/ammo_box/magazine/smgm9mm(src)
@@ -130,7 +131,7 @@
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/ammo_box/magazine/m45(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/grenadier_grenades
 
@@ -191,7 +192,7 @@
 	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/speedloader/a357/match(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
+	new /obj/item/ammo_box/speedloader/a357/match(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
 	new /obj/item/ammo_box/speedloader/a357(src)
@@ -220,8 +221,29 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
 
+/obj/item/storage/box/security_engineer
+	name = "Privateer Engineer Kit"
+	desc = "Everything you need in a neat little box, fold after usage."
+/obj/item/storage/box/security_privateer
+/obj/item/storage/box/security_privateer/PopulateContents()
+	new /obj/item/gun/ballistic/shotgun/automatic/combat/marsoc(src)
+	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/ammo_box/shotgun/slug(src)
+	new /obj/item/ammo_box/shotgun/buckshot(src)
+	new /obj/item/ammo_box/shotgun/buckshot(src)
+	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/storage/belt/bandolier(src)
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/ammo_box/magazine/sig(src)
+	new /obj/item/storage/belt/holster/shoulder(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/construction/rcd/combat(src)
+
 /obj/item/storage/box/security_sar
-/obj/item/storage/box_security_sar/PopulateContents()
+/obj/item/storage/box/security_sar/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/proto/unrestricted(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/ammo_box/magazine/smgm9mm/ap(src)
@@ -237,7 +259,7 @@
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/ammo_box/magazine/sig(src)
 	new /obj/item/storage/belt/holster/shoulder(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 //CAPTAINS KITS
 
@@ -251,33 +273,31 @@
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/ammo_box/magazine/t12(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/gun/ballistic/revolver/akira(src)
-	new /obj/item/ammo_box/speedloader/a556/sk(src)
-	new /obj/item/ammo_box/speedloader/a556/highp(src)
-	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/gun/ballistic/revolver/sequoia(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/commander_ranger
 /obj/item/storage/box/commander_ranger/PopulateContents()
-	new /obj/item/gun/ballistic/shotgun/lever_action/scope(src)
+	new /obj/item/gun/ballistic/shotgun/lever_action/brushgun(src)
 	new /obj/item/clothing/shoes/winterboots/ice_boots(src)
-	new /obj/item/ammo_box/speedloader/a357/match(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/ammo_box/speedloader/a357(src)
-	new /obj/item/gun/ballistic/revolver/sequoia(src)
-	new /obj/item/ammo_box/speedloader/a44(src)
-	new /obj/item/ammo_box/speedloader/a44(src)
-	new /obj/item/ammo_box/speedloader/a44(src)
+	new /obj/item/gun/ballistic/revolver/sw500(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
+	new /obj/item/ammo_box/speedloader/a4570/tube(src)
+	new /obj/item/ammo_box/ab357(src)
+	new /obj/item/ammo_box/ab357(src)
+	new /obj/item/ammo_box/ba4570(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/roller(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 /obj/item/storage/box/commander_assault
 /obj/item/storage/box/commander_assault/PopulateContents()
@@ -288,16 +308,16 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
-	new /obj/item/gun/ballistic/automatic/pistol/PL14(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
-	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m45a1(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
+	new /obj/item/ammo_box/magazine/m45/big(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/storage/belt/utility/full/engi(src)
 	new /obj/item/storage/firstaid/tactical/solgov(src)
 	new /obj/item/storage/firstaid/advanced(src)
 	new /obj/item/storage/belt/holster/shoulder/commander(src)
-	new /obj/item/storage/box/grenadier_grenades/lethal(src)
+	new /obj/item/storage/pouch/ifak(src)
 
 // DO NOT SPAWN THIS IN
 /obj/item/storage/box/kitsune_ammo

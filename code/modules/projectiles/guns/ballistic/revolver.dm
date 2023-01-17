@@ -15,6 +15,8 @@
 	tac_reloads = FALSE
 	var/spin_delay = 10
 	var/recent_spin = 0
+	var/select = 1
+	var/selector_switch_icon = FALSE
 
 /obj/item/gun/ballistic/revolver/chamber_round(keep_bullet, spin_cylinder = TRUE, replace_new_round)
 	if(!magazine) //if it mag was qdel'd somehow.

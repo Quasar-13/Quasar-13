@@ -7,7 +7,7 @@
 	desc = "extracted from someone spine, what the hell are you doing. Induce temporary pacifism effect on the user, also extremely high in sugar content. ONLY ONE USE EVERY 3 MINUTES, DO NOT INJECT WITH EPINEPHRINE OR ATROPINE OR YOU WILL DIE"
 	icon_state = "gatorade"
 	inhand_icon_state = "atropen"
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 20, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 20, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 3, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/cream = 3, /datum/reagent/consumable/nutriment/protein = 3, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 20, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/earthsblood = 3, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine= 5, /datum/reagent/medicine/omnizine/godblood = 5)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 5, /datum/reagent/medicine/stimulants = 5, /datum/reagent/consumable/coffee = 20, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 25, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 20, /datum/reagent/medicine/neurine = 15, /datum/reagent/medicine/mannitol = 15, /datum/reagent/medicine/syndicate_nanites = 20, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 3, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/cream = 2, /datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/toxin/formaldehyde = 15, /datum/reagent/medicine/c2/hercuri = 10, /datum/reagent/drug/nicotine = 13, /datum/reagent/medicine/potass_iodide = 50, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/earthsblood = 5, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine= 5, /datum/reagent/medicine/omnizine/godblood = 5)
 	amount_per_transfer_from_this = 500
 //RAIDEN WHAT ARE YOU DOING
 /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal
@@ -15,7 +15,7 @@
 	desc = "it glows with strange power, Do you really want to inject this into yourself?"
 	icon_state = "nanogatorade"
 	inhand_icon_state = null
-	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/consumable/coffee = 20, /datum/reagent/medicine/adminordrazine/quantum_heal = 10, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 20, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 10, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/consumable/honey = 3, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/cream = 3, /datum/reagent/consumable/nutriment/protein = 3, /datum/reagent/toxin/formaldehyde = 2, /datum/reagent/medicine/c2/hercuri = 20, /datum/reagent/drug/nicotine = 3, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine = 5, /datum/reagent/medicine/omnizine/godblood = 3, /datum/reagent/medicine/metafactor = 3)
+	list_reagents = list(/datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/c2/libital = 10, /datum/reagent/medicine/ephedrine = 10 , /datum/reagent/medicine/c2/aiuri = 10, /datum/reagent/medicine/coagulant = 10, /datum/reagent/iron = 10, /datum/reagent/medicine/salglu_solution = 10, /datum/reagent/medicine/salbutamol = 10, /datum/reagent/medicine/sal_acid = 10 ,/datum/reagent/medicine/omnizine = 10 ,/datum/reagent/medicine/leporazine = 10, /datum/reagent/medicine/stimulants = 10, /datum/reagent/medicine/adminordrazine/quantum_heal = 20, /datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/regen_jelly = 25, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/medicine/omnizine/protozine = 10, /datum/reagent/medicine/neurine = 10, /datum/reagent/medicine/mannitol = 30, /datum/reagent/medicine/syndicate_nanites = 10, /datum/reagent/medicine/coagulant/banana_peel = 10, /datum/reagent/medicine/muscle_stimulant = 10, /datum/reagent/medicine/inacusiate = 10, /datum/reagent/medicine/rezadone = 10, /datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/consumable/cream = 3, /datum/reagent/consumable/nutriment/protein = 3, /datum/reagent/toxin/formaldehyde = 20, /datum/reagent/medicine/c2/hercuri = 5, /datum/reagent/medicine/potass_iodide = 100, /datum/reagent/medicine/oculine = 10, /datum/reagent/medicine/changelingadrenaline = 3, /datum/reagent/medicine/changelinghaste = 3, /datum/reagent/medicine/granibitaluri = 5, /datum/reagent/medicine/coagulant/seraka_extract = 9, /datum/reagent/medicine/modafinil = 10, /datum/reagent/medicine/diphenhydramine = 5, /datum/reagent/medicine/omnizine/godblood = 1, /datum/reagent/medicine/metafactor = 3)
 //Will not make you a pacifist
 //GATORADE CRYSTAL I LOVE IT HOLY SHIT AAA
 /obj/item/reagent_containers/hypospray/combat/gatorade
@@ -24,7 +24,7 @@
 	volume = 8600
 	icon_state = "nano_alt"
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 200,/datum/reagent/medicine/c2/libital = 200, /datum/reagent/medicine/ephedrine = 200 , /datum/reagent/medicine/c2/aiuri = 200, /datum/reagent/medicine/coagulant = 200, /datum/reagent/iron = 200, /datum/reagent/medicine/salglu_solution = 400, /datum/reagent/medicine/salbutamol = 200, /datum/reagent/medicine/sal_acid = 200 ,/datum/reagent/medicine/omnizine = 200 ,/datum/reagent/medicine/leporazine = 200, /datum/reagent/medicine/stimulants = 200, /datum/reagent/consumable/coffee = 200, /datum/reagent/medicine/adminordrazine/quantum_heal = 400, /datum/reagent/medicine/synaptizine = 200, /datum/reagent/medicine/regen_jelly = 200, /datum/reagent/medicine/spaceacillin = 200, /datum/reagent/medicine/omnizine/protozine = 400, /datum/reagent/medicine/neurine = 200, /datum/reagent/medicine/mannitol = 200, /datum/reagent/medicine/syndicate_nanites = 400, /datum/reagent/medicine/coagulant/banana_peel = 200, /datum/reagent/consumable/honey = 100, /datum/reagent/medicine/muscle_stimulant = 200, /datum/reagent/medicine/inacusiate = 200, /datum/reagent/medicine/rezadone = 200, /datum/reagent/consumable/nutriment/vitamin = 100, /datum/reagent/consumable/cream = 100, /datum/reagent/consumable/nutriment/protein = 100, /datum/reagent/medicine/c2/hercuri = 200, /datum/reagent/drug/nicotine = 200, /datum/reagent/medicine/potass_iodide = 200, /datum/reagent/medicine/oculine = 200, /datum/reagent/medicine/earthsblood = 100, /datum/reagent/medicine/changelingadrenaline = 100, /datum/reagent/medicine/changelinghaste = 100, /datum/reagent/medicine/granibitaluri = 200, /datum/reagent/medicine/coagulant/seraka_extract = 100, /datum/reagent/medicine/diphenhydramine = 100, /datum/reagent/medicine/omnizine/godblood = 200, /datum/reagent/medicine/metafactor = 400)
-	amount_per_transfer_from_this = 400
+	amount_per_transfer_from_this = 100
 //divided by a lot of fucking numbers idfk but it heals you instantly and if you inject more than one at a time you just die, dont put with atropine either.
 /obj/item/storage/firstaid/tactical/solgov
 	name = "combat medical kit"
@@ -45,7 +45,7 @@
 /obj/item/storage/firstaid/tactical/solgov/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 12
+	STR.max_items = 18
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/firstaid/tactical/solgov/PopulateContents()
@@ -150,7 +150,7 @@
 /obj/item/storage/pouch/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 3
+	STR.max_items = 4
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/pouch/ammo
@@ -425,12 +425,82 @@
 		))
 
 /obj/item/storage/pouch/marsoc_tools_leader/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/akira(src)
+	new /obj/item/gun/ballistic/revolver/akira/snub/specop(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/highp(src)
 	new /obj/item/ammo_box/speedloader/a556/pl(src)
 	new /obj/item/ammo_box/speedloader/a556/pl(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/grenade/chem_grenade/clf3(src)
+	new /obj/item/melee/classic_baton/telescopic/contractor_baton(src)
+	new /obj/item/multitool/abductor/marsoc(src)
+	new /obj/item/construction/rcd/combat(src)
+	new /obj/item/rcd_ammo/large(src)
+	new /obj/item/holosign_creator/atmos(src)
+	new /obj/item/extinguisher/advanced(src)
+
+
+/obj/item/storage/pouch/marsoc_tools_command
+	name = "SOC command pouch"
+	desc = "hold tools and magazine for finishing the job, for fortune and fame."
+	icon_state = "soctoolsa"
+
+/obj/item/storage/pouch/marsoc_tools_command/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 25
+	STR.max_w_class = WEIGHT_CLASS_HUGE
+	STR.max_combined_w_class = 80
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/automatic/pistol/m1911,
+		/obj/item/ammo_box/magazine,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/stopgap,
+		/obj/item/gun/ballistic/shotgun/tracker,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/ammo_box/magazine/toy/pistol,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/energy/disabler,
+		/obj/item/ammo_box/speedloader/a4570,
+		/obj/item/ammo_box/speedloader/a556,
+		/obj/item/radio,
+		/obj/item/weldingtool,
+		/obj/item/crowbar,
+		/obj/item/multitool,
+		/obj/item/wirecutters,
+		/obj/item/screwdriver,
+		/obj/item/wrench,
+		/obj/item/stack/cable_coil,
+		/obj/item/grenade,
+		/obj/item/binoculars,
+		/obj/item/melee/classic_baton,
+		/obj/item/melee/baton,
+		/obj/item/megaphone,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/gun/energy/laser/captain/ntgold/pistol,
+		/obj/item/gun/energy/pulse/pistol,
+		/obj/item/grenade,
+		/obj/item/holosign_creator,
+		/obj/item/gun/energy/dueling,
+		/obj/item/construction/rcd,
+		/obj/item/rcd_ammo,
+		/obj/item/extinguisher,
+		/obj/item/gps
+		))
+
+/obj/item/storage/pouch/marsoc_tools_command/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/m93r(src)
+	new /obj/item/ammo_box/magazine/m9mm_aps/hp(src)
+	new /obj/item/ammo_box/magazine/m9mm_aps/hp(src)
+	new /obj/item/ammo_box/magazine/m9mm_aps/ap(src)
+	new /obj/item/ammo_box/magazine/m9mm_aps/ap(src)
+	new /obj/item/ammo_box/magazine/m9mm_aps/ap(src)
 	new /obj/item/crowbar/power(src)
 	new /obj/item/screwdriver/power(src)
 	new /obj/item/weldingtool/experimental(src)
@@ -453,7 +523,7 @@
 
 /obj/item/storage/pouch/marsoc_ifak
 	name = "SOC IFAK"
-	desc = "for long term operation require you to be equipped with various tools, one of them to treat yourself and to save others."
+	desc = "because long term operation requires you to be equipped with various tools, one of them to treat yourself and to save others."
 	icon_state = "socmed"
 
 /obj/item/storage/pouch/marsoc_ifak/ComponentInitialize()
@@ -486,9 +556,10 @@
 	new /obj/item/storage/pill_bottle/epinephrine(src)
 	new /obj/item/storage/pill_bottle/revival(src)
 	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
-	new /obj/item/stack/medical/mesh(src)
-	new /obj/item/stack/medical/mesh(src)
-	new /obj/item/stack/medical/bone_gel(src)
+	new /obj/item/reagent_containers/hypospray/medipen/survival/luxury(src)
+	new /obj/item/stack/medical/mesh/advanced(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/suture/medicated(src)
 	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/roller(src)
 	new /obj/item/reagent_containers/hypospray/medipen/gatorade/crystal(src)
@@ -532,6 +603,13 @@
 		/obj/item/roller,
 		/obj/item/storage/pill_bottle,
 		))
+
+/obj/item/storage/pouch/ifak/PopulateContents()
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/storage/firstaid/regular(src)
+	new /obj/item/roller(src)
 
 /obj/item/storage/backpack/marsoc
 	name = "SOC Rucksack"

@@ -1,6 +1,6 @@
 //Syndicate Outpost roles
 
-//Outpost agent, general bums
+//They exist
 /datum/job/outpost
 	title = "Syndicate Agent"
 	department_head = list("Outpost Leader")

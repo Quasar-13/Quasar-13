@@ -49,7 +49,7 @@
 				/obj/item/ammo_box/a357/match = 20,
 				/obj/item/ammo_box/speedloader/a357/match = 15,
 				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle = 5,
-				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator = 1,
+				/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/ap = 1,
 				/obj/item/ammo_box/magazine/m12g = 20,
 				/obj/item/ammo_casing/caseless/rocket/weak = 10,
 				/obj/item/ammo_box/magazine/m12g/meteor = 10,
@@ -120,14 +120,14 @@
 /obj/effect/spawner/lootdrop/tierweapon/ranged/tier3
 	lootcount = 2
 	loot = list(/obj/item/gun/ballistic/automatic/m90/xm29 = 15,
-				/obj/item/gun/ballistic/revolver/sequoia = 10,
+				/obj/item/gun/ballistic/revolver/judge = 10,
 				/obj/item/gun/ballistic/revolver/sw500 = 10,
 				/obj/item/gun/ballistic/shotgun/tracker = 15,
 				/obj/item/gun/ballistic/revolver/mateba = 10,
 				/obj/item/gun/ballistic/shotgun/lever_action/scope = 25,
 				/obj/item/gun/grenadelauncher = 15,
 				/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger = 5,
-				/obj/item/gun/ballistic/automatic/ar/hk21 = 15,
+				/obj/item/gun/ballistic/automatic/ar/m4 = 15,
 				/obj/effect/spawner/lootdrop/tierweapon/ammoboxes/tier3,
 				/obj/item/gun/ballistic/automatic/pistol/avtomag = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 10)
@@ -176,6 +176,7 @@
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/tier3,
 				/obj/effect/spawner/lootdrop/tierweapon/ranged/rare_spawn = 50)
 
+//has to ATLEAST drop something
 /obj/effect/spawner/lootdrop/tierweapon/ark_guardian
 	loot = list(/obj/effect/spawner/lootdrop/tierweapon/ammoboxes = 65,
 				/obj/item/melee/powerfist = 5,

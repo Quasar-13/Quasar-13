@@ -221,15 +221,38 @@
 /obj/item/ammo_box/speedloader/a4570
 	name = ".45-70 Govt speedloader"
 	desc = "A speedloader full of .45-70 Govt catridges ready to be used!"
-	max_ammo = 7
-	icon_state = "4570-7"
+	max_ammo = 6
+	icon_state = "4570-6"
 	ammo_type = /obj/item/ammo_casing/a4570
+
+/obj/item/ammo_box/speedloader/a4570/tube
+	max_ammo = 10
+	icon_state = "4570tube-10"
+
+/obj/item/ammo_box/ba4570
+	name = ".45-70 Govt box speedloader"
+	desc = "A box full of .45-70 Govt catridges ready to be used!"
+	max_ammo = 30
+	icon_state = "4570box-30"
+	ammo_type = /obj/item/ammo_casing/a4570
+
 
 /obj/item/ammo_box/speedloader/a44
 	name = ".44 magnum speedloader"
 	desc = "A speedloader full of .44 magnum catridges ready to be used!"
-	max_ammo = 7
-	icon_state = "4570-7"
+	max_ammo = 6
+	icon_state = "44-6"
+	ammo_type = /obj/item/ammo_casing/a44
+
+/obj/item/ammo_box/speedloader/a44/tube
+	max_ammo = 12
+	icon_state = "44tube-12"
+
+/obj/item/ammo_box/speedloader/boxed_44
+	name = ".44 magnum box"
+	desc = "A box full of .44 magnum catridges ready to be used!"
+	max_ammo = 30
+	icon_state = "44box"
 	ammo_type = /obj/item/ammo_casing/a44
 
 //SHOTGUN AMMO
@@ -460,7 +483,7 @@
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
 
 /obj/item/ammo_box/magazine/sr25
-	name = "7.62 NATO Magazine"
+	name = "SR25 Magazine (7.62x39)"
 	desc = "Magazine for the SR25"
 	max_ammo = 15
 	icon = 'ModularTegustation/Teguicons/magazines.dmi'
@@ -468,3 +491,18 @@
 	ammo_type = /obj/item/ammo_casing/ballistic/a762_39
 	caliber = "7.62x39mm"
 
+/obj/item/ammo_box/magazine/mm712x82/m38
+	name = "Ammo Belt (7.12x82)"
+	desc = "A belt for a minigun."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'
+	max_ammo = 100
+	icon_state = "M38belt"
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/magazine/mm712x82/boxreload
+	name = "Ammo Box (7.12x82)"
+	desc = "Jesus christ how did you find this?"
+	max_ammo = 300
+	w_class = WEIGHT_CLASS_BULKY
+	icon_state = "M38box"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ammo_box.dmi'

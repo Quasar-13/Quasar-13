@@ -1,5 +1,5 @@
 /obj/item/gun/ballistic/automatic/uzi
-	name = "\improper Type U3 Uzi"
+	name = "Uzi"
 	desc = "A lightweight, fully automatic submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -10,9 +10,20 @@
 	mag_display = TRUE
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 
+/obj/item/gun/ballistic/automatic/uzi/kepler
+	name = "SG-US1 'Uzi'"
+	desc = "A lightweight, fully automatic submachine gun used by the Kepler Security Forces."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "miniuzikepler"
+	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	bolt_type = BOLT_TYPE_OPEN
+	burst_size = 1
+	w_class = WEIGHT_CLASS_BULKY
+
+
 /obj/item/gun/ballistic/automatic/uzi/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.26 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.24 SECONDS)
 
 /obj/item/gun/ballistic/automatic/vector
 	name = "\improper NT-VEK Vector Submachinegun"
@@ -29,8 +40,8 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS)
 
-/obj/item/gun/ballistic/automatic/mini_uzi/kepler
-	name = "\improper Type P23 Submachinegun"
+/obj/item/gun/ballistic/automatic/mini_uzi/kepler/light
+	name = "KT-UZ23 Submachinegun"
 	desc = "A lightweight, fully automatic submachinegun used by the frontier police forces and certain special units. Uses 9mm rounds."
 	icon_state = "cbj"
 	w_class = WEIGHT_CLASS_NORMAL

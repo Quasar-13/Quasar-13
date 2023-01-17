@@ -15,7 +15,7 @@
 #define CALIBER_46X30MM		"4.6x30mm"
 /// The caliber used by the [plastikov SMG][/obj/item/gun/ballistic/automatic/plastikov].
 #define CALIBER_9X18MM		"9x18mm"
-/// The caliber used by the Nanotrasen Saber SMG, and Type U3 Uzi. Also used as the default caliber for pistols but only the stechkin APS machine pistol doesn't override it.
+/// The caliber used by the Nanotrasen Saber SMG, and Uzi. Also used as the default caliber for pistols but only the stechkin APS machine pistol doesn't override it.
 #define CALIBER_9MM			"9mm"
 /// The caliber used as the default for ballistic guns. Only not overridden for the [surplus rifle][/obj/item/gun/ballistic/automatic/surplus].
 #define CALIBER_10MM		"10mm"
@@ -25,7 +25,7 @@
 #define CALIBER_38			".38"
 /// The caliber used by the PPK
 #define CALIBER_380			".380"
-/// The caliber used by the ranger seqouia and the .44 desert eagle. what more can you ask for?
+/// The caliber used by the automag and the .44 desert eagle. what more can you ask for?
 #define CALIBER_44			".44"
 /// The caliber used by the C-20r SMG, the tommygun, and the M1911 pistol.
 #define CALIBER_45			".45"
@@ -65,5 +65,5 @@
 #define CALIBER_BREACHER	"breacher"
 /// The caliber used by XM grenade launcher
 #define CALIBER_20MM		"20mm"
-/// The caliber used by .45-70
-#define CALIBER_A4570		".4570"
+/// The caliber used by .45-70 Brushgun, Ranger Sequoia
+#define CALIBER_A4570		"A4570"

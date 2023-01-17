@@ -283,10 +283,10 @@
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/gunner
-	name = "Solgov Riflemen"
+	name = "Solgov Rifleman"
 	desc = "Armed with Assault Rifle, Ready to fire upon you"
-	icon_state = "solgovrangedassaultrifle"
-	icon_living = "solgovrangedassaultrifle"
+	icon_state = "solgovrangedgunner"
+	icon_living = "solgovrangedgunner"
 	maxHealth = 135
 	health = 135
 	rapid = 3
@@ -296,7 +296,7 @@
 	casingtype = /obj/item/ammo_casing/a556
 	projectilesound = 'sound/weapons/gun/l6/shot.ogg'
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/gunner,
-	/obj/item/gun/ballistic/automatic/ar/hk21/nomag,
+	/obj/item/gun/ballistic/automatic/ar/m16/nomag,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
 
 /mob/living/simple_animal/hostile/solgov/ranged/smg/hazmat
@@ -365,7 +365,7 @@
 	icon_state = "solgovcloakerg"
 	icon_living = "solgovcloakerg"
 	speed = 4
-	maxHealth = 185
+	maxHealth = 195
 	health = 195
 	ranged = 0
 	minimum_distance = 0
@@ -410,10 +410,6 @@
 	vision_range = 22
 //despite using the cloaker pathfile these guys are meant to melee attack only
 //being able to teleport so that if you try to escape them by running away, they will get to you no matter what
-/mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Aggro()
-	..()
-	summon_backup(15)
-	say("UBIRAYSYA OTSYUDA STALKER!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/cloaker/ark_guardian/Initialize()
 	. = ..()
@@ -440,7 +436,7 @@
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/Aggro()
 	..()
-	summon_backup(15)
+	summon_backup(35)
 	say("Tam oni!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun
@@ -459,11 +455,6 @@
 	loot = list(/obj/effect/spawner/lootdrop/infection_spawner/solgov/shotgunner,
 	/obj/item/gun/ballistic/shotgun/riot/shortie,
 	/obj/item/reagent_containers/hypospray/medipen/ekit)
-
-/mob/living/simple_animal/hostile/solgov/ranged/heavy/shotgun/Aggro()
-	..()
-	summon_backup(15)
-	say("Vyyezzhaya!")
 
 /mob/living/simple_animal/hostile/solgov/ranged/rifle
 	name = "Solgov Sniper"

@@ -157,8 +157,8 @@
 //Kepler guns
 //Sprite by kirie and akira!
 /obj/item/gun/ballistic/automatic/m90/xm29
-	name = "SG-XM29 'Determinator'"
-	desc = "It's a grenade launcher with a rifle attached to it.. used by Solgov fighting forces. Although It was never officially adopted, it was typically seen used by kepler group mercenaries and in hand of some heavy rangers"
+	name = "KT-XM29 'Determinator'"
+	desc = "A grenade launcher with an assault rifle attached to it. Developed alongside the XM25, this weapon was a proposed alternative assault rifle for the specialised unit, however it was never distributed among the armed forces."
 	icon_state = "xm29"
 	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -170,7 +170,8 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 4
-	fire_delay = 0.10
+	fire_delay = 0.28
+
 /obj/item/gun/ballistic/automatic/m90/xm29/Initialize()
 	. = ..()
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/xm29(src)
@@ -184,12 +185,12 @@
 	name = "grenade launcher internal magazine"
 	ammo_type = /obj/item/ammo_casing/a40mm
 	caliber = CALIBER_40MM
-	max_ammo = 5
+	max_ammo = 1
 
-//being a rare weapon with decent firerate
+//being a rare weapon with decent firerate, also very cool in general :)
 /obj/item/gun/ballistic/automatic/gyropistol/xm25
-	name = "SG-P25 'Crow'"
-	desc = "A prototype grenade launcher designed to fire magazine fed grenades. Although It was never officially adopted, some were used by heavy rangers due to their increased range"
+	name = "KT-XM25 'Crow'"
+	desc = "A gun developed by Kepler Technology. The XM25 is an experimental airburst grenade launcher designed to destroy barricades at long ranges and to weed out targets in cover. It was never officially adopted by Sol Government, but some functional prototypes were used during the occult war. This one has been kept in a good condition."
 	icon_state = "xm25"
 	inhand_icon_state = "xm"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -204,9 +205,10 @@
 	fire_delay = 14
 
 
+//Originally it was just called the Hk21 but we gotta keep the name fancy
 /obj/item/gun/ballistic/automatic/ar/hk21
 	name = "\improper SG-GPM21 'Terminator'"
-	desc = "A general purpose machine gun used by Solgov fighting forces.Typically seen in the kepler colony and in hand of some heavy rangers"
+	desc = "General purpose standard issue battle rifle number 21, infamous for it's ability to cut through group of protestors with ease. Typically used by standard peacekeeping force for off-world colonies where advanced laser weaponry are not available. Some of the gun are locally produced by Kepler Technology and used by rangers unit"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
 	icon_state = "hk21"
 	inhand_icon_state = "hk21"
@@ -218,62 +220,177 @@
 
 /obj/item/gun/ballistic/automatic/ar/hk21/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.16 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS)
 
+//I hate file path shit but im lzy so w/e
+//m16
+/obj/item/gun/ballistic/automatic/ar/m16
+	name = "K&H Clicker"
+	desc = "An old world assault rifle based on the M16A4, it's tendency to jam is not as prevelant here without the muds and dusts that can get stuck in it. Burst fire capable."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "m16"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 2
+
+/obj/item/gun/ballistic/automatic/ar/m16/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 0.8
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
+/obj/item/gun/ballistic/automatic/ar/m16/nomag
+	spawnwithmagazine = 0
+
+//M4A4
+/obj/item/gun/ballistic/automatic/ar/m4
+	name = "K&H Chopper"
+	desc = "An old world assault rifle based on the M4A4, Quite powerful and can shred anything that moves, Shorter barrel compared to the SG-GPM21 making it not as accurate on long range."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
+	icon_state = "m4"
+	inhand_icon_state = "hk21"
+	slot_flags = 0
+	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 0.8
+	burst_size = 2
+	spread = 2.4
+
+/obj/item/gun/ballistic/automatic/ar/m4/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			fire_delay = 0.5
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_icon()
+	return
+
+//Not based on any specific gun
+
+/obj/item/gun/ballistic/automatic/ar/hk21/m38
+	name = "\improper KT-OS45 'Pertinacious'"
+	desc = "Developed extremely late into the war, the KT-OS45 is a belt-fed heavy machinegun utilised by the US MARSOC and Kepler Heavy Troopers, extremely rare and chambers in the 7.12x82. Though by the time it was developed, the war was already over and the weapon was obsolete. Despite this, this still remains one of the most devastating weapon available to the Ranger Armory"
+	icon_state = "M38"
+	inhand_icon_state = "M38"
+	spread = 7
+	mag_type = /obj/item/ammo_box/magazine/mm712x82/m38
+
+//DO NOT ADMIN ABUSE THIS IN, I WILL ACTUALLY GUT YOU.
+//.50 Beowulf FN FAL Conversion
 /obj/item/gun/ballistic/automatic/ar/hk21/beowulf
-	name = "\improper SG-SR45 .50 'Wulfe'"
-	desc = "A heavy duty anti material sporting rifle typically meant for rhino or even wild sharks. it's fearsome power unmatched by anything used anywhere"
+	name = "\improper KT-XM38 .50 'Wulfe'"
+	desc = "A modified FN-FAL made to chamber the .50 Beowulf Cartridges, although intended to be pushed into service by 2138 at the latest, It was never officially adopted by the Solgov Service. Nevertheless, it saw action during the first occult war"
 	icon_state = "beowulf"
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/beowulf
 
 /obj/item/ammo_box/magazine/sniper_rounds/beowulf
-	max_ammo = 20
+	name = "beowulf magazine (.50)"
+	max_ammo = 10
 	caliber = CALIBER_50
+
+/obj/item/gun/ballistic/automatic/ar/hk21/beowulf/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.24 SECONDS)
 
 //THE MARSOC ARE COMING RUN
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc
-	name = "\improper K-GPM21S 'Peacemaker'"
-	desc = "A modified machinegun with its stock and barrel shortened for close quarter combat, Foxtrot-1, Finish the job."
+	name = "\improper KT-GPM21S 'Peacemaker'"
+	desc = "A variant of the Sol Government Standard Issue Rifle Number 21 modified with a shortened stock and barrel for close quarter combat, however, that makes it very inaccurate. Developed during the occult war, <b>Foxtrot-1, finish the job!</b>"
 	icon_state = "hk21c"
 	inhand_icon_state = "hk21c"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
-
+	spread = 5
 /obj/item/gun/ballistic/automatic/ar/hk21/marsoc/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.12 SECONDS)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/solgov
-	name = "Type 45 Sniper Rifle"
-	desc = "Typically used by Solgov marksman, combat technician or in this case, found in the hand of mercenary snipers."
+	name = "KT-XM45 'Divine Wind"
+	desc = "A rare sniper rifle only issued in limited numbers to Kepler Ranger,  it saw extremely limited service and only 200 of these rifle were ever produced, it still received an official military designation by the US Military but was never adopted by others. It make usages of the rare muzzle charger utilised in the captured Vixen 31 handgun to increases it's potential damage but at the cost of heavily reduced firerate. Extremely expensive to replace."
 	icon_state = "rifle45"
 	inhand_icon_state = "rifle45"
-	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
-	mag_display_ammo = 1
-	spawnwithmagazine = 0
-	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
-
-/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
-	name = "Type 40 Sniper Rifle"
-	desc = "Typically used by Ranger marksman of the past."
-	icon_state = "rifle40"
-	inhand_icon_state = "rifle40"
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
 	mag_display_ammo = 1
 	spawnwithmagazine = 1
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	projectile_damage_multiplier = 1.6
+	fire_delay = 6
+
+//Believe it or not this was actually the first gun I made when working on the server
+/obj/item/gun/ballistic/automatic/sniper_rifle/solgov/ranger
+	name = "Prototype Number 40 Long Rifle"
+	desc = "A Sol Government Standard Issues Sniper Rifle Number 40, despite it's name it was actually fielded in 2100s and was one of the first Kepler Technoloy gun ever produced, although it failed to beat other guns in the competition, it was affordable and was utilised by the New Moscow Police Department."
+	icon_state = "rifle40"
+	inhand_icon_state = "rifle40"
+	projectile_damage_multiplier = 1.4
+
+//Bor Rifle
+/obj/item/gun/ballistic/automatic/sniper_rifle/borrifle
+	name = "SG-LR36 'Bor'"
+	desc = "A Sniper rifle chambered in 7.62x38, very powerful and it's non specialised ammo makes it easier to maintain unlike the gun developed after it. Developed in the middle of the war it was a direct continuation from the Rifle 40, it saw great use amongst the rangers and was officially adopted by Sol Government In May 2136."
+	icon = 'ModularBungalow/bungalow_Weapons/_icon/48x32sprites.dmi'
+	icon_state = "riflebor"
+	inhand_icon_state = "rifle40"
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/borrifle_762
+	fire_delay = 12
+
+/obj/item/ammo_box/magazine/sniper_rounds/borrifle_762
+	name = "Bor Rifle Magazie (7.62x38)"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = CALIBER_A762
+	max_ammo = 5
+	multiload = TRUE
 
 //Used for both of these!
 /obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle
+	name = "long rifle magazine (7.12x82)"
+	desc = "magazine for the long rifle"
 	max_ammo = 12
-	caliber = CALIBER_50
+	caliber = CALIBER_712X82MM
+	ammo_type = /obj/item/ammo_casing/mm712x82
 
-/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/penetrator
-	name = "sniper rounds (penetrator)"
-	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
-	ammo_type = /obj/item/ammo_casing/p50/penetrator
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/ap
+	name = "armor piercing long rifle magazine (7.12x82)"
+	desc = "Powerful round capable of piercing armor"
+	ammo_type = /obj/item/ammo_casing/mm712x82/ap
 
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/hp
+	name = "hollow point long rifle magazine (7.12x82)"
+	desc = "Powerful round capable of shredding organic lifeform"
+	ammo_type = /obj/item/ammo_casing/mm712x82/hollow
+
+/obj/item/ammo_box/magazine/sniper_rounds/solgov_longrifle/incen
+	name = "incendiary long rifle magazine (7.12x82)"
+	desc = "Incendiary munition, Let em burn"
+	ammo_type = /obj/item/ammo_casing/mm712x82/incen
+
+//Knight Armament Stoner Rifle 25
 /obj/item/gun/ballistic/automatic/sr25
-	name = "SR25 Sniper Rifle"
-	desc = "The SR25 is a rifle used by the early kepler expedition force"
+	name = "SG-SR25 'Knight'"
+	desc = "The SR25 is a rifle used by the early Sol Government's expedition force, chambered in the 7.62 NATO ammunition. It's well-liked by marksman who were given it, although early model had issues where the gun would occasionally jam up if fired too rapidly. This one has rectified that issues and remains in service."
 	icon_state = "sr25"
 	inhand_icon_state = "hk21"
 	icon = 'ModularBungalow/bungalow_Weapons/_icon/ballistics.dmi'
@@ -284,9 +401,8 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	zoomable = TRUE
-	zoom_amt = 8
-	zoom_out_amt = 4
-
-/obj/item/gun/ballistic/automatic/sr25/Initialize()
-	. = ..()
+	zoom_amt = 9
+	zoom_out_amt = 6
+	burst_size = 1
+	projectile_damage_multiplier = 1.3
 	fire_delay = 6
