@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Button, Dropdown, Input, Section, Stack, TextArea } from '../components';
+import { Button, Dropdown, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
 
 export const FakeCommandReport = (props, context) => {

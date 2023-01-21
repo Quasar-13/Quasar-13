@@ -1,8 +1,8 @@
-import { sortBy, map, filter } from 'common/collections';
+import { sortBy, filter } from 'common/collections';
 import { flow } from 'common/fp';
 import { toFixed } from 'common/math';
 import { useBackend } from '../backend';
-import { AnimatedNumber, Button, Flex, Input, LabeledList, ProgressBar, Section, Table, NumberInput } from '../components';
+import { Button, Flex, LabeledList, ProgressBar, Section, NumberInput } from '../components';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
 import { formatSiUnit, formatSiBaseTenUnit } from '../format';

@@ -1,6 +1,5 @@
 import { useBackend } from '../backend';
-import { Box, Button, Section, LabeledList } from '../components';
-import { GridColumn } from '../components/Grid';
+import { Button, Section, LabeledList } from '../components';
 import { Window } from '../layouts';
 
 export const DestinationTagger = (props, context) => {
