@@ -15,7 +15,6 @@ type ExplorationEventData = {
 type FullEventData = {
   image: string,
   description: string,
-  coordinates: string,
   action_enabled: boolean,
   action_text: string,
   skippable: boolean,
@@ -119,7 +118,7 @@ export const ExodroneConsole = (props, context) => {
   ] = useLocalState(context, 'choosingTools', false);
 
   return (
-    <Window width={750} height={600}>
+    <Window width={650} height={500}>
       {!!signal_lost && <SignalLostModal />}
       {!!choosingTools && <ToolSelectionModal />}
       <Window.Content>
@@ -205,7 +204,8 @@ const DroneSelectionSection = (props, context) => {
           </Fragment>
         ))}
       </Stack>
-    </Section>);
+    </Section>
+  );
 };
 
 
@@ -299,7 +299,8 @@ const EquipmentBox = (props, context) => {
                   tooltip="Remove Tool" />
               </Stack.Item>
             )}
-          </Stack>);
+          </Stack>
+        );
       case "cargo":// Jettison button.
         return (
           <Stack direction="column">
@@ -844,7 +845,7 @@ const ExodroneConsoleContent = (props, context) => {
         <Section title="Drone Log" fill scrollable>
           <LabeledList>
             {drone_log.map((log_line, ix) => (
-              <LabeledList.Item key={log_line} label={`Entry ${ix + 1 }`}>
+              <LabeledList.Item key={log_line} label={`Entry ${ix + 1}`}>
                 {log_line}
               </LabeledList.Item>
             ))}
