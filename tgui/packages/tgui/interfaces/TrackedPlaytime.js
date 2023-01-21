@@ -10,14 +10,19 @@ const sortByPlaytime = sortBy(([_, playtime]) => -playtime);
 
 const PlaytimeSection = props => {
   const { playtimes } = props;
-  const sortedPlaytimes = sortByPlaytime(Object.entries(playtimes));
-  const mostPlayed = sortedPlaytimes[0][1];
 
+  const sortedPlaytimes = sortByPlaytime(Object.entries(playtimes))
+    .filter(entry => entry[1]);
+
+  if (!sortedPlaytimes.length) {
+    return "No recorded playtime hours for this section.";
+  }
+
+  const mostPlayed = sortedPlaytimes[0][1];
   return (
     <Table>
       {sortedPlaytimes.map(([jobName, playtime]) => {
         const ratio = playtime / mostPlayed;
-
         return (
           <Table.Row key={jobName}>
             <Table.Cell collapsing p={0.5} style={{
@@ -25,14 +30,12 @@ const PlaytimeSection = props => {
             }}>
               <Box align="right">{jobName}</Box>
             </Table.Cell>
-
             <Table.Cell>
               <ProgressBar
                 maxValue={mostPlayed}
                 value={playtime}>
                 <Flex>
                   <Flex.Item width={`${ratio * 100}%`} />
-
                   <Flex.Item>
                     {(playtime / 60).toLocaleString(undefined, {
                       "minimumFractionDigits": 1,
@@ -59,8 +62,8 @@ export const TrackedPlaytime = (props, context) => {
     isAdmin,
     livingTime,
     ghostTime,
+    adminTime,
   } = data;
-
   return (
     <Window
       title="Tracked Playtime"
@@ -79,10 +82,10 @@ export const TrackedPlaytime = (props, context) => {
                 playtimes={{
                   "Ghost": ghostTime,
                   "Living": livingTime,
+                  "Admin": adminTime,
                 }}
               />
             </Section>
-
             <Section
               title="Jobs"
               buttons={!!isAdmin && (
@@ -97,9 +100,7 @@ export const TrackedPlaytime = (props, context) => {
               />
             </Section>
             <Section title="Special">
-              <PlaytimeSection
-                playtimes={specialPlaytimes}
-              />
+              <PlaytimeSection playtimes={specialPlaytimes} />
             </Section>
           </Box>
         )}

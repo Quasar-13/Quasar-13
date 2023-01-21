@@ -1,4 +1,3 @@
-import { toArray } from 'common/collections';
 import { useBackend, useSharedState } from '../backend';
 import { AnimatedNumber, Box, Button, Flex, LabeledList, NoticeBox, Section, Table, Tabs } from '../components';
 import { formatMoney } from '../format';
@@ -49,8 +48,8 @@ export const CargoContent = (props, context) => {
               <Tabs.Tab
                 icon="shopping-cart"
                 textColor={tab !== 'cart'
-                && cart.length > 0
-                && 'yellow'}
+                  && cart.length > 0
+                  && 'yellow'}
                 selected={tab === 'cart'}
                 onClick={() => setTab('cart')}>
                 Checkout ({cart.length})
@@ -84,6 +83,7 @@ export const CargoContent = (props, context) => {
 const CargoStatus = (props, context) => {
   const { act, data } = useBackend(context);
   const {
+    grocery,
     away,
     docked,
     loan,
@@ -109,7 +109,10 @@ const CargoStatus = (props, context) => {
         <LabeledList.Item label="Shuttle">
           {docked && !requestonly && can_send &&(
             <Button
+              color={grocery && "orange" || "green"}
               content={location}
+              tooltip={grocery && "The chef is waiting on their grocery supplies." || ""}
+              tooltipPosition="right"
               onClick={() => act('send')} />
           ) || location}
         </LabeledList.Item>
@@ -142,7 +145,7 @@ export const CargoCatalog = (props, context) => {
     self_paid,
     app_cost,
   } = data;
-  const supplies = toArray(data.supplies);
+  const supplies = Object.values(data.supplies);
   const [
     activeSupplyName,
     setActiveSupplyName,
@@ -362,18 +365,28 @@ const CargoCart = (props, context) => {
                   <b>[Paid Privately]</b>
                 )}
               </Table.Cell>
-              <Table.Cell collapsing textAlign="right">
-                {formatMoney(entry.cost)} cr
-              </Table.Cell>
-              <Table.Cell collapsing>
-                {can_send &&(
-                  <Button
-                    icon="minus"
-                    onClick={() => act('remove', {
-                      id: entry.id,
-                    })} />
-                )}
-              </Table.Cell>
+              {entry.dep_order && (
+                <Table.Cell collapsing textAlign="right">
+                  {formatMoney(entry.cost)} cr earned on delivery
+                </Table.Cell>
+              ) || (
+                <>
+                  <Table.Cell collapsing textAlign="right">
+                    {formatMoney(entry.cost)} cr
+                  </Table.Cell>
+                  <Table.Cell collapsing>
+                    {can_send &&(
+                      <Button
+                        icon="minus"
+                        onClick={() => act('remove', {
+                          id: entry.id,
+                        })} />
+                    )}
+                  </Table.Cell>
+                </>
+              )}
+
+
             </Table.Row>
           ))}
         </Table>
@@ -403,6 +416,21 @@ const CargoCart = (props, context) => {
 const CargoHelp = (props, context) => {
   return (
     <>
+      <Section title="Department Orders">
+        Each department on the station will order crates from their own personal
+        consoles. These orders are ENTIRELY FREE! They do not come out of
+        cargo&apos;s budget, and rather put the consoles on cooldown. So
+        here&apos;s where you come in: The ordered crates will show up on your
+        supply console, and you need to deliver the crates to the orderers.
+        You&apos;ll actually be paid the full value of the department crate on
+        delivery if the crate was not tampered with, making the system a good
+        source of income.
+        <br />
+        <b>
+          Examine a department order crate to get specific details about where
+          the crate needs to go.
+        </b>
+      </Section>
       <Section title="MULEbots">
         MULEbots are slow but loyal delivery bots that will get crates delivered
         with minimal technician effort required. It is slow, though, and can be
