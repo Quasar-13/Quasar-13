@@ -53,6 +53,9 @@
 
 /obj/item/melee/baton/Initialize()
 	. = ..()
+	// Adding an extra break for the sake of presentation
+	if(stamina_loss_amt != 0)
+		offensive_notes = "\nVarious interviewed security forces report being able to beat criminals into exhaustion with only <span class='warning'>[round(100 / stamina_loss_amt, 0.1)] hit\s!</span>"
 	if(preload_cell_type)
 		if(!ispath(preload_cell_type,/obj/item/stock_parts/cell))
 			log_mapping("[src] at [AREACOORD(src)] had an invalid preload_cell_type: [preload_cell_type].")
@@ -342,6 +345,13 @@
 	throw_stun_chance = 99  //Have you prayed today?
 	convertible = FALSE
 	custom_materials = list(/datum/material/iron = 10000, /datum/material/glass = 4000, /datum/material/silver = 10000, /datum/material/gold = 2000)
+
+/obj/item/melee/baton/boomerang/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force, gentle = FALSE, quickstart = TRUE)
+	if(turned_on)
+		if(ishuman(thrower))
+			var/mob/living/carbon/human/H = thrower
+			H.throw_mode_off(THROW_MODE_TOGGLE) //so they can catch it on the return.
+	return ..()
 
 /obj/item/melee/baton/boomerang/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(turned_on)

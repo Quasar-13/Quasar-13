@@ -10,7 +10,7 @@
 	obj_damage = 400
 	light_range = 3
 	faction = list("mining", "boss")
-	weather_immunities = list("lava","ash")
+	weather_immunities = list("lava","ash","general")
 	is_flying_animal = TRUE
 	robust_searching = TRUE
 	ranged_ignores_vision = TRUE
@@ -54,6 +54,8 @@
 	var/list/attack_action_types = list()
 	/// If there is a small sprite icon for players controlling the megafauna to use
 	var/small_sprite_type
+	/// Determines what a megafauna will say or do to telegraph its next attack. (Currently only used by Colossus). Set to 1 by default so the opening attack will always be the same. 
+	var/random_attack_num = 1
 
 /mob/living/simple_animal/hostile/megafauna/Initialize(mapload)
 	. = ..()

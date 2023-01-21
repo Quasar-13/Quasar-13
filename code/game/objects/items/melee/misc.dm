@@ -206,6 +206,12 @@
 
 	wound_bonus = 15
 
+/obj/item/melee/classic_baton/Initialize()
+	. = ..()
+	// Adding an extra break for the sake of presentation
+	if(stamina_damage != 0)
+		offensive_notes = "\nVarious interviewed security forces report being able to beat criminals into exhaustion with only <span class='warning'>[round(100 / stamina_damage, 0.1)] hit\s!</span>"
+
 // Description for trying to stun when still on cooldown.
 /obj/item/melee/classic_baton/proc/get_wait_description()
 	return
@@ -599,10 +605,12 @@
 	if(!user) // There is no user holding a weapon; Probably thrown, so don't do all the funny stuff.
 		return
 
-	var/mob/living/carbon/H = target
+	var/mob/living/carbon/human/H = target
 	var/selected_bodypart_area = check_zone(user.zone_selected) // For stuff like eyes, mouth, etc.
 	var/target_limb = H.get_bodypart(selected_bodypart_area)
 	if(!target_limb) // Does this limb exist at all?
+		return
+	if(H.check_shields(src, 0, "[user]'s [name]", MELEE_ATTACK))
 		return
 	var/armor_v = H.getarmor(target_limb, type = "melee")
 	H.apply_damage(force, STAMINA, selected_bodypart_area, armor_v) // Regardless of limb, you get some stamina damage

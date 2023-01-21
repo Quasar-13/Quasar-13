@@ -392,8 +392,9 @@
 	return get_all_jobs() + list("Emergency Response Team Commander", "Security Response Officer", "Engineering Response Officer", "Medical Response Officer", "Entertainment Response Officer", "Religious Response Officer", "Janitorial Response Officer", "Death Commando", "Syndicate Captain", "Syndicate Medical Doctor", "Syndicate Assault Operative", "Syndicate Engineer", "Syndicate Operative", "TerraGov Official", "Commodore", "Marshal",
 
 				//Bungalow Station Marine Corps
-				"Commandant", "First Officer", "Marine", "Staff Officer", "Pilot Officer", "Wing Commander", "Mechanic", "Deckhand", "Logistics Officer",
-				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden",
+				"Commandant", "First Officer", "Marine", "Field Officer", "Pilot Officer", "Field Commander", "Mechanic", "Deckhand", "Logistics Officer",
+				"Medical Officer", "Triage Officer", "Triage Technician", "Military Police", "Military Warden", "Mess Sergeant", "Biotech Engineer", "Xenobiologist",
+				"Xenobotanist", "Science Officer", "Recruit", "Honkmother Chosen", "Scholar",
 
 				//Solgov
 				"Commander", "Administrator", "Engineer", "Bunker Crew", "Lab Technician", "Medical Technician", "Soldier", "Security", "Civilian",

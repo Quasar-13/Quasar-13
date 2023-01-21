@@ -83,3 +83,4 @@
 	caliber = CALIBER_50
 	max_ammo = 7
 	multiple_sprites = AMMO_BOX_PER_BULLET
+

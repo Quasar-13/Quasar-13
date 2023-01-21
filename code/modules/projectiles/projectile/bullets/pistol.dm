@@ -43,3 +43,8 @@
 	name = "10mm incendiary bullet"
 	damage = 20
 	fire_stacks = 2
+
+/obj/projectile/bullet/c380
+	name = "380 ACP bullet"
+	damage = 35
+	armour_penetration = -50

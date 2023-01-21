@@ -288,6 +288,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 				add_verb(src, /client/proc/play_web_sound)
 		if(rights & R_SPAWN)
 			add_verb(src, GLOB.admin_verbs_spawn)
+	reset_badges()
 
 /client/proc/remove_admin_verbs()
 	remove_verb(src, list(
@@ -310,6 +311,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		/client/proc/disable_debug_verbs,
 		/client/proc/readmin
 		))
+	reset_badges()
 
 /client/proc/hide_verbs()
 	set name = "Adminverbs - Hide All"
@@ -444,6 +446,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	if(holder)
 		if(holder.fakekey)
 			holder.fakekey = null
+			reset_badges()
 			if(isobserver(mob))
 				mob.invisibility = initial(mob.invisibility)
 				mob.alpha = initial(mob.alpha)
@@ -460,6 +463,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 			if(!new_key)
 				return
 			holder.fakekey = new_key
+			reset_badges()
 			createStealthKey()
 			if(isobserver(mob))
 				mob.invisibility = INVISIBILITY_MAXIMUM //JUST IN CASE

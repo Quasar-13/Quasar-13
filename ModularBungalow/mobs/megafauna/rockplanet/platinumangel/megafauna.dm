@@ -8,6 +8,8 @@
 	icon_living = "angel_wings"
 	icon_dead = "angel_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	sentience_type = SENTIENCE_BOSS
+	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	gender = FEMALE
 	speak_chance = 0
 	turns_per_move = 5
@@ -22,6 +24,8 @@
 	stat_attack = HARD_CRIT
 	robust_searching = 1
 	loot = list(/obj/item/clothing/suit/space/hardsuit/platinum)
+	deathmessage = "disintegrates."
+	del_on_death = 1
 	var/intro = 0
 
 	harm_intent_damage = 25
@@ -35,13 +39,13 @@
 	minbodytemp = 0
 
 	faction = list("platinum")
-	gold_core_spawnable = HOSTILE_SPAWN
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/platinum/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
+	AddComponent(/datum/component/gps, "Platinum Signal")
 
 /mob/living/simple_animal/hostile/platinum/AttackingTarget()
 	. = ..()
@@ -65,4 +69,3 @@
 		sleep(5)
 		say("Let us fight unto death.")
 		intro = 1
-

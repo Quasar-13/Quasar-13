@@ -75,6 +75,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/jumpsuit_style = PREF_SUIT //suit/skirt
 	var/hairstyle = "Bald" //Hair type
 	var/hair_color = "000" //Hair color
+	var/grad_style	//Hair gradient style
+	var/grad_color = "FFFFFF"	//Hair gradient color
 	var/facial_hairstyle = "Shaved" //Face hair type
 	var/facial_hair_color = "000" //Facial hair color
 	var/skin_tone = "caucasian1" //Skin color
@@ -383,6 +385,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<br><span style='border: 1px solid #161616; background-color: #[facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=facial;task=input'>Change</a>"
 				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_FACIAL_HAIR_COLOR]'>[(randomise[RANDOM_FACIAL_HAIR_COLOR]) ? "Lock" : "Unlock"]</A>"
+				
+				dat += "<h3>Hair Gradient</h3>"
+
+				dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=grad_style;task=input'>[grad_style]</a>"
+				dat += "<a href='?_src_=prefs;preference=previous_grad_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_grad_style;task=input'>&gt;</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[grad_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=grad_color;task=input'>Change</a><BR>"
+				
 				dat += "<br></td>"
 
 			//Mutant stuff
@@ -923,19 +932,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		var/datum/job/lastJob
 
 		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
+
+			//This lists all the maptypes that are nonstandard, and will delete all jobs.
+
 			//running mapexclude
 			if(SSmaptype.maptype in job.mapexclude)
 				continue
 
-			if(SSmaptype.maptype == "syndicate")
-				if(job.maptype == "none")
-					continue
 
-			if(SSmaptype.maptype == "solgov")
-				if(job.maptype == "none")
-					continue
-
-			if(SSmaptype.maptype == "blacksite")
+			if(SSmaptype.maptype in SSmaptype.clearmaps)
 				if(job.maptype == "none")
 					continue
 
@@ -1435,6 +1440,23 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_female_list)
 					else
 						facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_list)
+
+				if("grad_color")
+					var/new_grad_color = input(user, "Choose your character's gradient colour:", "Character Preference","#"+grad_color) as color|null
+					if(new_grad_color)
+						grad_color = sanitize_hexcolor(new_grad_color, 6)
+
+				if("grad_style")
+					var/new_grad_style
+					new_grad_style = input(user, "Choose your character's hair gradient style:", "Character Preference") as null|anything in GLOB.hair_gradients_list
+					if(new_grad_style)
+						grad_style = new_grad_style
+
+				if("next_grad_style")
+					grad_style = next_list_item(grad_style, GLOB.hair_gradients_list)
+
+				if("previous_grad_style")
+					grad_style = previous_list_item(grad_style, GLOB.hair_gradients_list)
 
 				if("underwear")
 					var/new_underwear
@@ -2046,6 +2068,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.skin_tone = skin_tone
 	character.hairstyle = hairstyle
 	character.facial_hairstyle = facial_hairstyle
+	character.grad_style = grad_style
+	character.grad_color = grad_color
 	character.underwear = underwear
 	character.underwear_color = underwear_color
 	character.undershirt = undershirt

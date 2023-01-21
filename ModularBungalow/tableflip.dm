@@ -84,3 +84,15 @@
 
 /obj/structure/table/optable
 	can_flip = FALSE
+
+/obj/structure/table/reinforced/plasmarglass //All of these glass tables are just reinforced table but with glass ontop
+	can_flip = FALSE
+
+/obj/structure/table/reinforced/rglass
+	can_flip = FALSE
+
+/obj/structure/table/reinforced/titaniumglass
+	can_flip = FALSE
+
+/obj/structure/table/reinforced/plastitaniumglass
+	can_flip = FALSE

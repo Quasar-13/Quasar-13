@@ -126,7 +126,7 @@
 	ultra_senior_title = list("CO2 Machine")
 
 /datum/job/officer
-	alt_titles = list("Security Guard", "Hazardous Device Technician", "NT Military Police")
+	alt_titles = list("Security Guard", "Hazardous Device Technician", "Reserve Military Police")
 	senior_title = list("Man-at-Arms", "Sergeant Officer")
 	ultra_senior_title = list("Harmbatoner")
 
@@ -195,4 +195,4 @@
 
 //Funny role
 /datum/job/staff_officer
-	alt_titles = list("Field Officer")
+	alt_titles = list("Staff Officer")

@@ -14,7 +14,7 @@
 /datum/map_template/ruin/rockplanet/heirophant
 	name = "Ancient Heirophant"
 	id = "rockheiro"
-	description = "something dangerous"
+	description = "a dangerous entity"
 	suffix = "rockplanet_heirophant.dmm"
 
 /datum/map_template/ruin/rockplanet/clock
@@ -83,6 +83,38 @@
 	always_place = TRUE
 	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/claw
+	name = "Claw"
+	id = "claw"
+	description = "a ruined cubicle office. And someone who found what they were looking for"
+	suffix = "rockplanet_claw.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/sif
+	name = "Great Wolf Sif"
+	id = "sif"
+	description = "The abyssal wolf sif"
+	suffix = "rockplanet_sif.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/arlem
+	name = "Captain Arlem"
+	id = "arlem"
+	description = "The old captain arlem"
+	suffix = "rockplanet_arlem.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE
 
+/datum/map_template/ruin/rockplanet/blood_drunk_miner
+	name = "Blood-Drunk Miner (rockplanet)"
+	id = "blooddrunk"
+	description = "A strange arrangement of stone tiles and an insane, beastly miner contemplating them."
+	suffix = "rockplanet_blooddrunk.dmm"
+	cost = 0
+	always_place = TRUE
+	allow_duplicates = FALSE

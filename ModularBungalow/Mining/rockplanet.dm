@@ -52,17 +52,16 @@
 	open_turf_types = list(/turf/open/floor/plating/asteroid = 1)
 	closed_turf_types = list(/turf/closed/mineral/random/stationside/asteroid/rockplanet = 1)
 
-	mob_spawn_chance = 3
+	mob_spawn_chance = 4
 
-	mob_spawn_list = list(/mob/living/simple_animal/hostile/asteroid/goliath = 20,
-		/mob/living/simple_animal/hostile/netherworld/asteroid = 10,
-		/mob/living/simple_animal/hostile/ooze/grapes/asteroid = 20,
-		/mob/living/simple_animal/hostile/asteroid/fugu = 30,
-		/mob/living/simple_animal/hostile/asteroid/basilisk = 40,
-		/mob/living/simple_animal/hostile/asteroid/hivelord = 50,
-		/mob/living/simple_animal/hostile/netherworld/migo/asteroid = 10,
-		/mob/living/simple_animal/hostile/alien/asteroid = 20,
-		/mob/living/simple_animal/hostile/asteroid/goldgrub = 10)
+	mob_spawn_list = list(
+		/mob/living/simple_animal/hostile/hivebot = 5,
+		/mob/living/simple_animal/hostile/hivebot/strong = 1,
+		/mob/living/simple_animal/hostile/hivebot/range = 4,
+		/mob/living/simple_animal/hostile/hivebot/rapid = 2,
+		/mob/living/simple_animal/hostile/hivebot/mechanic = 3,
+		/mob/living/simple_animal/hostile/asteroid/goliath = 2,
+		/mob/living/simple_animal/hostile/asteroid/hivelord = 1)
 	flora_spawn_list = list(
 		/obj/structure/flora/rock/jungle = 2,
 		/obj/structure/flora/junglebush = 2,

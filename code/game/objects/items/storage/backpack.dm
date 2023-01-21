@@ -664,6 +664,15 @@
 	new /obj/item/ammo_box/magazine/m12g(src)
 	new /obj/item/clothing/glasses/thermal/syndi(src)
 
+/obj/item/storage/backpack/duffelbag/syndie/bulldogbundle/automatic
+	desc = "A large duffel bag containing an automatic Bulldog, some drums, and a pair of thermal imaging glasses."
+
+/obj/item/storage/backpack/duffelbag/syndie/bulldogbundle/PopulateContents()
+	new /obj/item/gun/ballistic/shotgun/bulldog/automatic(src)
+	new /obj/item/ammo_box/magazine/m12g(src)
+	new /obj/item/ammo_box/magazine/m12g(src)
+	new /obj/item/clothing/glasses/thermal/syndi(src)
+
 /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
 	desc = "A large duffel bag containing a medical equipment, a Donksoft LMG, a big jumbo box of riot darts, and a knock-off pair of magboots."
 

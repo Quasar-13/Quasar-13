@@ -69,6 +69,11 @@
 	inhand_icon_state = "g_suit"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/syndicate/camo/snow
+	name = "snow camouflage fatigues"
+	desc = "A white military camouflage uniform."
+	icon_state = "camosnow"
+
 /obj/item/clothing/under/syndicate/soviet
 	name = "Ratnik 5 tracksuit"
 	desc = "Badly translated labels tell you to clean this in Vodka. Great for squatting in."

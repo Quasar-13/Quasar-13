@@ -22,6 +22,8 @@
 	strip_delay = 50
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
+	can_adjust = FALSE
+
 
 /obj/item/clothing/under/rank/security/officer/grey
 	name = "grey security jumpsuit"

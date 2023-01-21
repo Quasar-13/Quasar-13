@@ -26,19 +26,19 @@
 	return ..()
 
 /datum/objective_item/steal/caplaser
-	name = "the captain's X-00 antique laser gun."
+	name = "the Captain's E-000 Self-Charging Laser Rifle."
 	targetitem = /obj/item/gun/energy/laser/captain
 	difficulty = 5
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/hoslaser
-	name = "the head of security's X-01 multiphase laser gun."
+	name = "the Head of Security's X-01 MultiPhase Energy Gun."
 	targetitem = /obj/item/gun/energy/e_gun/hos
 	difficulty = 10
 	excludefromjob = list("Head Of Security")
 
 /datum/objective_item/steal/hoplaser
-	name = "the head of personnel's X-02 disabler shotgun."
+	name = "the Head of Personnel's X-41 Disabler Beam Rifle."
 	targetitem = /obj/item/gun/energy/e_gun/hop
 	difficulty = 10
 	excludefromjob = list("Head Of Personnel")
@@ -56,7 +56,7 @@
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/magboots
-	name = "the chief engineer's advanced magnetic boots."
+	name = "the Chief Engineer's advanced magnetic boots."
 	targetitem =  /obj/item/clothing/shoes/magboots/advance
 	difficulty = 5
 	excludefromjob = list("Chief Engineer")
@@ -68,7 +68,7 @@
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/hypo
-	name = "the quartermaster's stamp."
+	name = "the Quartermaster's stamp."
 	targetitem = /obj/item/stamp/qm
 	difficulty = 5
 	excludefromjob = list("Quartermaster")

@@ -95,13 +95,7 @@
 	armor = list(MELEE = 15, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 5)
 	can_flashlight = TRUE
 	dog_fashion = null
-	
-/obj/item/clothing/head/helmet/solgov
-	name = "solgov helmet"
-	desc = "Standard Mk4 Solgov Military Helmet."
-	icon_state = "sgvhelmet"
-	inhand_icon_state = "helmet"
-	can_flashlight = FALSE
+
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"
@@ -379,11 +373,11 @@
 	strip_delay = 80
 
 /obj/item/clothing/head/helmet/elder_atmosian
-	name = "Elder Atmosian Helmet"
+	name = "\improper Elder Atmosian Helmet"
 	desc = "A superb helmet made with the toughest and rarest materials available to man."
-	icon_state = "knight_greyscale"
-	inhand_icon_state = "knight_greyscale"
-	armor = list(MELEE = 15, BULLET = 10, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 10, RAD = 20, FIRE = 65, ACID = 40, WOUND = 15)
+	icon_state = "h2helmet"
+	inhand_icon_state = "h2helmet"
+	armor = list(MELEE = 25, BULLET = 20, LASER = 30, ENERGY = 30, BOMB = 85, BIO = 10, RAD = 50, FIRE = 65, ACID = 40, WOUND = 15)
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS //Can change color and add prefix
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH

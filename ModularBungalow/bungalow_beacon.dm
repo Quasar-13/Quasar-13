@@ -6,24 +6,6 @@
  That was the plan, but this does not work. I am manually going back in to fix
  */
 
-/obj/item/choice_beacon/bungalow
-	name = "bungalow beacon"
-	desc = "A debug beacon, if you see this, welcome to Bungalow!"
-	///The typesof item this choice beacon will allow you to choose from.
-	var/typesof_options
-	///The message played after selecting something with this beacon.
-	var/selection_message = "<span class='hear'>Get out there!</span>"
-
-/obj/item/choice_beacon/bungalow/generate_display_names()
-	var/static/list/item_list = list()
-	for(var/obj/typesof_option as anything in typesof(typesof_options))
-		item_list[initial(typesof_option.name)] = typesof_option
-	return item_list
-
-/obj/item/choice_beacon/bungalow/spawn_option(obj/choice, mob/living/gifted_person)
-	new choice(get_turf(gifted_person))
-	to_chat(gifted_person, selection_message)
-
 //Captain blade beacon
 /obj/item/choice_beacon/gun
 	name = "captain's gun beacon"
@@ -66,7 +48,7 @@
 	new /obj/item/gun/ballistic/automatic/pistol/PL14(src)
 
 /obj/item/storage/box/captain/gun/revolver
-	name = "Chiappa Rhino."
+	name = "Chiappa Rhino"
 	desc = "The gun for a bombastic captain that loves to shoot to kill. Captain Chiappa and his 6 commandos take no prisoners."
 
 /obj/item/storage/box/captain/gun/revolver/PopulateContents()
@@ -89,12 +71,22 @@
 	new /obj/item/ammo_box/a762(src)
 	new /obj/item/ammo_box/a762(src)
 
+
 /obj/item/storage/box/captain/gun/shotgun
 	name = "Energy Shotgun"
 	desc = "For the captain that wishes to be a doom marine."
 
 /obj/item/storage/box/captain/gun/shotgun/PopulateContents()
 	new /obj/item/gun/energy/laser/scatter(src)
+
+
+/obj/item/storage/box/captain/gun/melter
+	name = "Melter Rifle"
+	desc = "For the captain that hates others."
+
+/obj/item/storage/box/captain/gun/melter/PopulateContents()
+	new /obj/item/gun/energy/laser/hellgun(src)
+
 
 
 
@@ -112,12 +104,6 @@
 			var/atom/A = V
 			cap_item_list[initial(A.name)] = A
 	return cap_item_list
-
-//Captain blade beacon
-/obj/item/choice_beacon/bungalow/captain/sabre
-	name = "captain's blade beacon"
-	desc = "A beacon the captain uses to select his weapon of choice."
-	typesof_options = /obj/item/storage/box/sabre
 
 /obj/item/storage/box/sabre
 	name = "Sabre, Standard Issues"
@@ -184,23 +170,9 @@
 	new /obj/item/clothing/neck/cloak/simone(src)
 	new /obj/item/clothing/glasses/sunglasses/gar(src)
 
-//BLACKSITE
-/obj/item/choice_beacon/bungalow/combat/deathsquad
-	name = "NT Death Commando beacon"
-	desc = "A beacon the Death Commando uses to choose their weapons."
-	typesof_options = /obj/item/storage/backpack/duffelbag/deathsquad
-	selection_message = "<span class='hear'>Get out there!</span>"
-
-//BLACKSITE ERT
-/obj/item/choice_beacon/bungalow/combat/ert
-	name = "ERT Officer beacon"
-	desc = "A beacon the ERT officers use to choose their weapons."
-	typesof_options = /obj/item/storage/backpack/duffelbag/ert
 
 /*
- * # Marine ERT beacon BALCKSITE
-
- * This is a subtype of the ERT beacon, to avoid needless copypaste.
+ * # Marine ERT beacon BLACKSITE
  */
 /obj/item/choice_beacon/combat/marine
 	name = "NT marine beacon"
@@ -220,23 +192,42 @@
 	new choice(get_turf(M))
 	to_chat(M, "<span class='hear'>Get out there!</span>")
 
-/*
- * # Turret ERT beacon BLACKSITE
 
- * This is a subtype of the ERT beacon, to avoid needless copypaste.
- */
-/obj/item/choice_beacon/bungalow/turret
-	name = "turret beacon"
-	desc = "A beacon to be used to call down a turret for engineering use."
-	typesof_options = /obj/machinery/manned_turret/scatter
-	selection_message = "<span class='hear'>Stand by for titanfall.</span>"
+//ERT
+/obj/item/choice_beacon/ert
+	name = "ERT beacon"
+	desc = "A beacon the ert officers use to choose their weapons."
 
-/*
- * # HEAVY Turret ERT beacon BLACKSITE
+/obj/item/choice_beacon/ert/generate_display_names()
+	var/static/list/ert_item_list
+	if(!ert_item_list)
+		ert_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/ert) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			ert_item_list[initial(A.name)] = A
+	return ert_item_list
 
- * Kirie Note - I hate using these beacons, especially without shit. but a capsule is arguably more shit
- */
-/obj/item/choice_beacon/bungalow/turret/heavy
-	name = "heavy turret beacon"
-	desc = "A beacon to be used to call down a turret for heavy use."
-	typesof_options = /obj/machinery/manned_turret/laser
+/obj/item/choice_beacon/ert/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Get out there!</span>")
+
+//Deathsquad
+/obj/item/choice_beacon/deathsquad
+	name = "Deathsquad beacon"
+	desc = "A beacon the deathsquad troopers use to choose their weapons."
+
+/obj/item/choice_beacon/deathsquad/generate_display_names()
+	var/static/list/deathsquad_item_list
+	if(!deathsquad_item_list)
+		deathsquad_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/backpack/duffelbag/deathsquad) //we have to convert type = name to name = type, how lovely!
+		for(var/V in templist)
+			var/atom/A = V
+			deathsquad_item_list[initial(A.name)] = A
+	return deathsquad_item_list
+
+/obj/item/choice_beacon/deathsquad/spawn_option(obj/choice,mob/living/M)
+	new choice(get_turf(M))
+	to_chat(M, "<span class='hear'>Get out there!</span>")
+

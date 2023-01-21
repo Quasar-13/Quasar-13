@@ -178,6 +178,12 @@
 	inhand_icon_state = "witch"
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/maidheadband
+	name = "maid headband"
+	desc = "Just like from one of those chinese cartoons!"
+	icon_state = "maid_headband"
+	dynamic_hair_suffix = ""
+
 /obj/item/clothing/head/chicken
 	name = "chicken suit head"
 	desc = "Bkaw!"

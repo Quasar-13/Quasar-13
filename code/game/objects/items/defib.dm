@@ -469,6 +469,11 @@
 		return
 	if(!req_defib && !combat)
 		return
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	if(H.check_shields(src, 0, "[user]'s [name]", MELEE_ATTACK))
+		return
 	busy = TRUE
 	M.visible_message("<span class='danger'>[user] touches [M] with [src]!</span>", \
 			"<span class='userdanger'>[user] touches [M] with [src]!</span>")
@@ -508,7 +513,7 @@
 			T.audible_message("<span class='warning'>\The [defib] lets out an urgent beep and lets out a steadily rising hum...</span>")
 		else
 			user.audible_message("<span class='warning'>[src] let out an urgent beep.</span>")
-		if(do_after(user, 1.5 SECONDS, H)) //Takes longer due to overcharging
+		if(do_after(user, 5 SECONDS, H)) //Takes longer due to overcharging
 			if(!H)
 				busy = FALSE
 				update_icon()

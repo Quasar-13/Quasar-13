@@ -47,7 +47,7 @@
 		A.UpdateButtonIcon()
 
 /obj/item/gun/ballistic/automatic/proto
-	name = "\improper Nanotrasen Saber SMG"
+	name = "NT-SBR 'Saber'"
 	desc = "A prototype full auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon_state = "saber"
 	burst_size = 1
@@ -96,8 +96,8 @@
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "security PDW"
+	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Personal Defense Weapon."
 	icon_state = "wt550"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "arg"
@@ -119,7 +119,7 @@
 
 /obj/item/gun/ballistic/automatic/plastikov
 	name = "\improper PP-95 SMG"
-	desc = "An ancient 9x19mm submachine gun pattern updated and simplified to lower costs, though perhaps simplified too much."
+	desc = "An ancient Space Russian 9x18mm submachine gun pattern updated and simplified to lower costs, though perhaps simplified too much."
 	icon_state = "plastikov"
 	inhand_icon_state = "plastikov"
 	mag_type = /obj/item/ammo_box/magazine/plastikov9mm
@@ -136,11 +136,15 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "miniuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+
+/obj/item/gun/ballistic/automatic/mini_uzi/Initialize()
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -236,11 +240,11 @@
 
 /obj/item/gun/ballistic/automatic/tommygun/Initialize()
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 /obj/item/gun/ballistic/automatic/ar
 	name = "\improper NT-ARG 'Boarder'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces."
+	desc = "A robust assault rifle used by NanoTrasen fighting forces."
 	icon_state = "arg"
 	inhand_icon_state = "arg"
 	slot_flags = 0
@@ -249,21 +253,12 @@
 	burst_size = 3
 	fire_delay = 1
 
-/obj/item/gun/ballistic/automatic/ar/semi
-	name = "\improper NT-ARS 'Sweeper'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces. This one is modified to be semi-automatic"
-	w_class = WEIGHT_CLASS_BULKY
-	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
-	slowdown = 0.7
-	burst_size = 1
-	fire_delay = 3
-
 
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw
 	name = "\improper L6 SAW"
-	desc = "A heavily modified 7.12x82mm light machine gun, designated 'L6 SAW'. Has 'Aussec Armoury - 2531' engraved on the receiver below the designation."
+	desc = "A deadly 7.12x82mm light machine gun, designated the 'L6 SAW'. Has 'Scarborough Arms - Mors a Volumine Ignis.' stamped on the receiver."
 	icon_state = "l6"
 	inhand_icon_state = "l6"
 	w_class = WEIGHT_CLASS_HUGE
@@ -378,23 +373,21 @@
 	can_unsuppress = TRUE
 	pin = /obj/item/firing_pin/implant/pindicate
 
-// Old Semi-Auto Rifle //
+// Chad Semi-Auto Rifle //
 
 /obj/item/gun/ballistic/automatic/surplus
-	name = "Surplus Rifle"
-	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
+	name = "K&H Surplus Rifle"
+	desc = "A mostly obsolete cheap ballistic rifle that might see use as a hunting or self defense weapon chambered in 10mm."
 	icon_state = "surplus"
 	inhand_icon_state = "moistnugget"
 	worn_icon_state = null
-	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
-	fire_delay = 30
+	fire_delay = 10
 	burst_size = 1
-	can_unsuppress = TRUE
-	can_suppress = TRUE
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
+	bolt_type = BOLT_TYPE_LOCKING
 	mag_display = TRUE
 
 // Laser rifle (rechargeable magazine) //
@@ -415,8 +408,3 @@
 	casing_ejector = FALSE
 
 
-/obj/item/gun/ballistic/automatic/laser/burst
-	name = "L-807 Neo Laser Burst Rifle "
-	desc = "The Miracle of the L-804, in it's full burst fire glory."
-	icon_state = "laserburst"
-	burst_size = 3

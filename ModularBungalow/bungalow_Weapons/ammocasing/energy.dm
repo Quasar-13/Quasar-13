@@ -57,3 +57,11 @@
 
 /obj/projectile/beam/disabler/beam/heavy
 	damage = 40
+
+
+//hitscan laser rifle
+/obj/item/ammo_casing/energy/sniper/weak
+	projectile_type = /obj/projectile/beam/laser/sniper/weak
+
+/obj/projectile/beam/laser/sniper/weak
+	damage = 36

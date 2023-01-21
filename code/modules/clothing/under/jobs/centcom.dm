@@ -17,7 +17,7 @@
 
 /obj/item/clothing/under/rank/centcom/officer
 	name = "\improper CentCom officer's jumpsuit"
-	desc = "It's a jumpsuit worn by the ERTs. Used by CentCom ERTs."
+	desc = "A casual, yet refined green polo shirt and grey trousers, used by CentCom Officials. It has a fragrance of aloe." 
 	icon_state = "officer"
 	inhand_icon_state = "g_suit"
 	alt_covers_chest = TRUE
@@ -28,7 +28,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert
 	name = "\improper CentCom turtleneck suit"
-	desc = "A casual, yet refined green turtleneck, used by CentCom Officials. It has a fragrance of aloe."
+	desc = "It's a jumpsuit worn by NT Naval Personnel. Used by CentCom ERTs."
 	icon_state = "ert"
 	inhand_icon_state = "dg_suit"
 	alt_covers_chest = TRUE

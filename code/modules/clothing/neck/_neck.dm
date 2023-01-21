@@ -51,6 +51,13 @@
 	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
 	icon_state = "stethoscope"
 
+/obj/item/clothing/neck/maid
+	name = "maid neck cover"
+	desc = "A neckpiece for a maid costume, it smells faintly of disappointment."
+	icon_state = "maid_neck"
+
+
+
 /obj/item/clothing/neck/stethoscope/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] puts \the [src] to [user.p_their()] chest! It looks like [user.p_they()] won't hear much!</span>")
 	return OXYLOSS
@@ -172,11 +179,6 @@
 	desc = "It's for pets."
 	icon_state = "petcollar"
 	var/tagname = null
-
-/obj/item/clothing/neck/petcollar/mob_can_equip(mob/M, mob/equipper, slot, disable_warning = 0)
-	if(ishuman(M))
-		return FALSE
-	return ..()
 
 /obj/item/clothing/neck/petcollar/attack_self(mob/user)
 	tagname = sanitize_name(stripped_input(user, "Would you like to change the name on the tag?", "Name your new pet", "Spot", MAX_NAME_LEN))

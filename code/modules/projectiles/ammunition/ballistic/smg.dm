@@ -36,8 +36,8 @@
 
 // 9x19mm (PP-95)
 
-/obj/item/ammo_casing/c9x19mm
-	name = "9x19mm bullet casing"
-	desc = "A 9.19mm bullet casing."
-	caliber = CALIBER_9X19MM
-	projectile_type = /obj/projectile/bullet/c9x19mm
+/obj/item/ammo_casing/c9x18mm
+	name = "9x18mm bullet casing"
+	desc = "A 9x18mm bullet casing."
+	caliber = CALIBER_9X18MM
+	projectile_type = /obj/projectile/bullet/c9x18mm

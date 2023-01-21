@@ -414,14 +414,7 @@
 
 	var/list/department_categories = list()
 
-	if(SSmaptype.maptype == "station" || SSmaptype.maptype == "galaxy"|| SSmaptype.maptype == "vagabond")
-		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
-
-	if(SSmaptype.maptype == "ship")
-		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
-
-	if(SSmaptype.maptype == "planetary")
-		department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
+	department_categories = list("Command", "Service", "Supply", "Engineering", "Medical", "Science", "Security", "Silicon")
 
 	if(SSmaptype.maptype == "goonlite")
 		department_categories = list("Command", "Service", "Security", "Logistics", "Medical", "Science")
@@ -432,7 +425,13 @@
 	if(SSmaptype.maptype == "syndicate")
 		department_categories = list("Syndicate Command", "Operations", "Triage", "Logistics", "Military Police")
 
-	if(SSmaptype.maptype == "solgov")
+	if(SSmaptype.maptype == "syndicate-station")
+		department_categories = list("Syndicate Command", "Bioresearch", "Triage", "Logistics", "Military Police", "Auxiliary")
+
+//Add in Operations when it's done
+//		department_categories = list("Syndicate Command", "Operations", "Triage", "Bioresearch", "Logistics", "Military Police", "Auxiliary")
+
+	if(SSmaptype.maptype == "kepler-ice")
 		department_categories = list("Solgov", "NT Marines", "Operations")
 
 	if(SSmaptype.maptype == "blacksite")

@@ -40,6 +40,7 @@ require only minor tweaks.
 //Bungalow Extra mining
 #define ZTRAIT_JUNGLE_RUINS "Jungle Ruins"
 #define ZTRAIT_ROCK_RUINS "Rock Ruins"
+#define ZTRAIT_ASTEROID_RUINS "Asteroid Ruins"
 
 
 #define ZTRAIT_ISOLATED_RUINS "Isolated Ruins" //Placing ruins on z levels with this trait will use turf reservation instead of usual placement.
@@ -49,6 +50,10 @@ require only minor tweaks.
 #define ZTRAIT_ASHSTORM "Weather_Ashstorm"
 #define ZTRAIT_ACIDRAIN "Weather_Acidrain"
 #define ZTRAIT_VOIDSTORM "Weather_Voidstorm"
+#define ZTRAIT_VOIDSTORMSPACE "Weather_Spacevoidstorm"
+#define ZTRAIT_SPACEWIND "Weather_Heavywind"
+#define ZTRAIT_DIAMONDSTORM "Weather_Diamondstorm"
+#define ZTRAIT_COLDSNOW "Weather_Coldsnow"
 
 // number - bombcap is multiplied by this before being applied to bombs
 #define ZTRAIT_BOMBCAP_MULTIPLIER "Bombcap Multiplier"
@@ -104,7 +109,9 @@ require only minor tweaks.
 #define ZTRAITS_ROCKPLANET list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_ROCK_RUINS = TRUE, \
-	ZTRAIT_VOIDSTORM = TRUE, \
+	ZTRAIT_VOIDSTORMSPACE = TRUE, \
+	ZTRAIT_SPACEWIND = TRUE, \
+	ZTRAIT_DIAMONDSTORM = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 4, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
 
@@ -115,6 +122,14 @@ require only minor tweaks.
 	ZTRAIT_ICE_RUINS_UNDERGROUND = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid)
+
+//Bungalow extra mining
+#define ZTRAITS_ASTEROIDBELT list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_ASTEROID_RUINS = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_VOIDSTORMSPACE = TRUE, \
+	ZTRAIT_BASETURF = /turf/open/space)
 
 //SMC Missions
 #define ZTRAITS_MISSION list(\

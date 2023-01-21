@@ -663,6 +663,37 @@
 
 	SEND_SIGNAL(src, COMSIG_ATOM_UPDATED_ICON, signalOut, .)
 
+/**
+ * Updates the appearence of the icon
+ *
+ * Mostly delegates to update_name, update_desc, and update_icon
+ *
+ * Arguments:
+ * - updates: A set of bitflags dictating what should be updated. Defaults to [ALL]
+ */
+/atom/proc/update_appearance(updates=ALL)
+	SHOULD_NOT_SLEEP(TRUE)
+	SHOULD_CALL_PARENT(TRUE)
+
+	. = NONE
+	updates &= ~SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_APPEARANCE, updates)
+	if(updates & UPDATE_NAME)
+		. |= update_name(updates)
+	if(updates & UPDATE_DESC)
+		. |= update_desc(updates)
+	if(updates & UPDATE_ICON)
+		. |= update_icon(updates)
+
+/// Updates the name of the atom
+/atom/proc/update_name(updates=ALL)
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_NAME, updates)
+
+/// Updates the description of the atom
+/atom/proc/update_desc(updates=ALL)
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_DESC, updates)
+
 /// Updates the icon state of the atom
 /atom/proc/update_icon_state()
 
@@ -1562,6 +1593,11 @@
 	if(filter_data && filter_data[name])
 		return filters[filter_data.Find(name)]
 
+/// Returns the indice in filters of the given filter name.
+/// If it is not found, returns null.
+/atom/proc/get_filter_index(name)
+	return filter_data?.Find(name)
+
 /atom/proc/remove_filter(name_or_names)
 	if(!filter_data)
 		return
@@ -1850,27 +1886,7 @@
 	if(ispath(ai_controller))
 		ai_controller = new ai_controller(src)
 
-/**
- * Point at an atom
- *
- * Intended to enable and standardise the pointing animation for all atoms
- *
- * Not intended as a replacement for the mob verb
- */
-/atom/movable/proc/point_at(atom/A)
-	if(!isturf(loc))
-		return FALSE
 
-	var/turf/tile = get_turf(A)
-	if (!tile)
-		return FALSE
-
-	var/turf/our_tile = get_turf(src)
-	var/obj/visual = new /obj/effect/temp_visual/point(our_tile, invisibility)
-
-	animate(visual, pixel_x = (tile.x - our_tile.x) * world.icon_size + A.pixel_x, pixel_y = (tile.y - our_tile.y) * world.icon_size + A.pixel_y, time = 1.7, easing = EASE_OUT)
-
-	return TRUE
 //Update the screentip to reflect what we're hoverin over
 /atom/MouseEntered(location, control, params)
 	. = ..()

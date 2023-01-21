@@ -157,6 +157,14 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 13 // normally 16
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/bundles_tc/bulldog/automatic
+	name = "Auto-Bulldog bundle"
+	desc = "Lean and mean: Optimized for people that want to get up close and personal. Contains the popular \
+			Bulldog shotgun, two 12g buckshot drums, and a pair of Thermal imaging goggles."
+	item = /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle/automatic
+	cost = 13 // normally 16
+	include_modes = list(/datum/game_mode/nuclear)
+
 /datum/uplink_item/bundles_tc/c20r
 	name = "C-20r bundle"
 	desc = "Old Faithful: The classic C-20r, bundled with two magazines and a (surplus) suppressor at discount price."
@@ -393,6 +401,15 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A fully-loaded semi-automatic drum-fed shotgun. Compatible with all 12g rounds. Designed for close \
 			quarter anti-personnel engagements."
 	item = /obj/item/gun/ballistic/shotgun/bulldog
+	cost = 8
+	surplus = 40
+	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/dangerous/shotgun/automatic
+	name = "Auto-Bulldog Shotgun"
+	desc = "A fully-loaded automatic drum-fed shotgun. Compatible with all 12g rounds. Designed for close \
+			quarter anti-personnel engagements."
+	item = /obj/item/gun/ballistic/shotgun/bulldog/automatic
 	cost = 8
 	surplus = 40
 	include_modes = list(/datum/game_mode/nuclear)

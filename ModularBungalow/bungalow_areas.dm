@@ -153,3 +153,38 @@
 	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
 	icon_state = "secretary"
 	sound_environment = SOUND_AREA_WOODFLOOR
+
+//NT remnant base
+/area/ntremnant
+	name = "Nanotrasen Remnant Base"
+	icon_state = "blue"
+
+//Syndicate maps
+/area/syndiestation
+	name = "Operations"
+	icon = 'ModularBungalow/zbungalowicons/areasb.dmi'
+	icon_state = "operations"
+
+/area/syndiestation/hangar
+	name = "Hangar"
+	icon_state = "hangar"
+
+/area/syndiestation/research
+	name = "Bio Research"
+	icon_state = "research"
+
+/area/syndiestation/logistics
+	name = "Logistics"
+	icon_state = "logistics"
+
+/area/syndiestation/requisitions
+	name = "Requisitions"
+	icon_state = "req"
+
+/area/syndiestation/triage
+	name = "Triage"
+	icon_state = "triage"
+
+/area/syndiestation/bunks
+	name = "Senior Officer Bunks"
+	icon_state = "officer"

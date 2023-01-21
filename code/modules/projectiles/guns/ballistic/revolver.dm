@@ -87,7 +87,7 @@
 	can_modify_ammo = TRUE
 	alternative_ammo_misfires = TRUE
 	can_misfire = FALSE
-	misfire_probability = 0 
+	misfire_probability = 0
 	misfire_percentage_increment = 25 //about 1 in 4 rounds, which increases rapidly every shot
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Default" = "detective",
@@ -102,8 +102,8 @@
 						)
 
 /obj/item/gun/ballistic/revolver/mateba
-	name = "\improper Unica 6 auto-revolver"
-	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
+	name = "\improper Unica 7 auto-revolver"
+	desc = "A retro high-powered autorevolver typically used by officers of every faction. Uses .357 ammo."
 	icon_state = "mateba"
 
 /obj/item/gun/ballistic/revolver/golden

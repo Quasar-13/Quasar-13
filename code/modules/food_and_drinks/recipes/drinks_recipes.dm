@@ -622,3 +622,24 @@
 	results = list(/datum/reagent/consumable/ethanol/triumphal_arch = 10)
 	required_reagents = list(/datum/reagent/consumable/ethanol/mushi_kombucha = 5, /datum/reagent/consumable/ethanol/grappa = 2, /datum/reagent/consumable/lemonjuice = 2, /datum/reagent/gold = 1)
 	mix_message = "The mixture turns a deep golden hue."
+
+////////                  LITERAL DRINKS
+/datum/chemical_reaction/drink/total_overreaction
+	results = list(/datum/reagent/consumable/ethanol/total_overreaction = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/syndicatebomb = 1, /datum/reagent/consumable/watermelonjuice = 1, /datum/reagent/consumable/tomatojuice = 1)
+	mix_message = "The mixure begins growing an angry red energy"
+	
+/datum/chemical_reaction/drink/obscure_reference
+	results = list(/datum/reagent/consumable/ethanol/obscure_reference = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/beer = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/consumable/berryjuice = 1)
+	required_temp = 305
+	
+/datum/chemical_reaction/drink/recurring_gag
+	results = list(/datum/reagent/consumable/ethanol/recurring_gag = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 1, /datum/reagent/consumable/spacemountainwind = 1, /datum/reagent/consumable/lemonade = 1)
+	mix_message = "The mixture begins emitting a disgusting aura around the room... you have messed up!"
+	
+/datum/chemical_reaction/drink/dub
+	results = list(/datum/reagent/consumable/ethanol/dub = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/recurring_gag = 1, /datum/reagent/consumable/ethanol/creme_de_cacao = 1, /datum/reagent/consumable/carrotjuice = 1)
+	mix_message = "You can hear the faint buzzing of moths from this mixture..."
