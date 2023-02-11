@@ -310,6 +310,23 @@
 	if(CL)
 		CL.reagents.add_reagent(/datum/reagent/lube, 2 * coeff)
 
+/obj/item/robot_model/janitor/be_transformed_to(obj/item/robot_model/old_model)
+	var/mob/living/silicon/robot/cyborg = loc
+	var/list/janitor_icons = list(
+		"Janitor" = image(icon = 'icons/mob/robots.dmi', icon_state = "janitor"),
+		"Maid" = image(icon = 'icons/mob/robots.dmi', icon_state = "maidbot"),
+		)
+	var/janitor_robot_icon = show_radial_menu(cyborg, cyborg, janitor_icons, custom_check = CALLBACK(src, .proc/check_menu, cyborg, old_model), radius = 38, require_near = TRUE)
+	switch(janitor_robot_icon)
+		if("Janitor")
+			cyborg_base_icon = "janitor"
+		if("Maid")
+			cyborg_base_icon = "maidbot"
+			hat_offset = -5
+		else
+			return FALSE
+	return ..()
+
 // --------------------- Medical
 /obj/item/robot_model/medical
 	name = "Medical"
