@@ -283,9 +283,6 @@
 	playsound(src, 'sound/magic/clockwork/narsie_attack.ogg', 200, TRUE)
 
 
-/mob/living/simple_animal/hostile/megafauna/colossus/devour(mob/living/L)
-	visible_message("<span class='colossus'>[src] rips [L] apart!</span>")
-	L.gib()
 
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"

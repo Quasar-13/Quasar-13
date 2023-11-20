@@ -229,7 +229,7 @@
 				var/mob/living/L = a
 				if(!QDELETED(L) && L.client)
 					return FALSE
-			return TRUE 
+			return TRUE
 		for(var/turf/T in turfs)
 			if(!(T in empty))
 				new /obj/effect/temp_visual/lava_warning(T)
@@ -368,18 +368,14 @@
 	icon_state = "dragon"
 	playsound(loc, 'sound/effects/meteorimpact.ogg', 200, TRUE)
 	for(var/mob/living/L in orange(1, src))
-		if(L.stat)
-			visible_message("<span class='warning'>[src] slams down on [L], crushing [L.p_them()]!</span>")
-			L.gib()
-		else
-			L.adjustBruteLoss(75)
-			if(L && !QDELETED(L)) // Some mobs are deleted on death
-				var/throw_dir = get_dir(src, L)
-				if(L.loc == loc)
-					throw_dir = pick(GLOB.alldirs)
-				var/throwtarget = get_edge_target_turf(src, throw_dir)
-				L.throw_at(throwtarget, 3)
-				visible_message("<span class='warning'>[L] is thrown clear of [src]!</span>")
+		L.adjustBruteLoss(75)
+		if(L && !QDELETED(L)) // Some mobs are deleted on death
+			var/throw_dir = get_dir(src, L)
+			if(L.loc == loc)
+				throw_dir = pick(GLOB.alldirs)
+			var/throwtarget = get_edge_target_turf(src, throw_dir)
+			L.throw_at(throwtarget, 3)
+			visible_message("<span class='warning'>[L] is thrown clear of [src]!</span>")
 	for(var/obj/vehicle/sealed/mecha/M in orange(1, src))
 		M.take_damage(75, BRUTE, MELEE, 1)
 
