@@ -1,5 +1,4 @@
 @echo off
-set NODE_SKIP_PLATFORM_CHECK=1
 where node.exe >nul 2>nul
 if %errorlevel% == 0 (
 	echo | set /p printed_str="Using system-wide Node "
